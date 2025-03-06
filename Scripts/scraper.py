@@ -32,6 +32,8 @@ for url in START_URLS:
     soup = BeautifulSoup(response.text, 'lxml')
     # print(response.status_code) # 200 = valid
     # print(response.text)
-    print(soup.find('title').get_text())
+    # print(soup.find('title').get_text())
+    for link in soup.find_all('a')[:-5]:
+        print(link.get('href'))
 
 # fetch all articles, go to next page
