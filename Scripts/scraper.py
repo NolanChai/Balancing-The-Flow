@@ -22,3 +22,4 @@ def is_valid(url):
     valid_connect = bool(parsed.netloc)
     valid_scheme = bool(parsed.scheme)
     return valid_connect and valid_scheme
+
