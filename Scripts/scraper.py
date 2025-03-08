@@ -9,6 +9,7 @@ import scrapy # may or may not try with this
 import pandas
 import json
 from urllib.parse import urljoin, urlparse
+from utils import *
 
 
 START_URLS = [
@@ -17,12 +18,6 @@ START_URLS = [
 
 MAX_ARTICLES = 300 # temporary limit
 OUTPUT_CSV = "articles.csv"
-
-def is_valid(url):
-    parsed = urlparse(url)
-    valid_connect = bool(parsed.netloc)
-    valid_scheme = bool(parsed.scheme)
-    return valid_connect and valid_scheme
 
 # PSEUDOCODE
 # for each url we have, locate subdomains and articles
