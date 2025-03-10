@@ -24,7 +24,6 @@ def get_title(article):
     return article.find('h2', class_="headline").text
 
 def get_first_sentence(article):
-    first_para = article.find('p', class_="paragraph--lite").text
-    first_para = first_para.strip()
-    sentences = sent_tokenize(first_para)  # Tokenizes text into sentences
-    return sentences[0] if sentences else first_para
+    article = article.strip()
+    sentences = sent_tokenize(article)
+    return sentences[0] if sentences else article
