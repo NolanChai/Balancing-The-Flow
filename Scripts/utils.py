@@ -32,16 +32,17 @@ def get_first_sentence(article):
 # Code written by Dr. Alex Warstadt
 def to_tokens_and_logprobs(model, tokenizer, input_texts):
     # move model to GPU if available
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device)
+    # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # model.to(device)
 
-    input_ids = tokenizer(input_texts, truncation=True, padding="max_length", return_tensors="pt").input_ids.to(device)
+    input_ids = tokenizer(input_texts, padding="max_length", truncation=True, return_tensors="pt").input_ids#.to(device)
     outputs = model(input_ids)
-
-    probs = torch.softmax(outputs.logits, dim=-1).cpu().detach()
+    probs = torch.softmax(outputs.logits, dim=-1).detach()
+    # probs = torch.softmax(outputs.logits, dim=-1).cpu().detach()
     surprisals = -1 * np.log2(probs)
 
     # collect the probability of the generated token -- probability at index 0 corresponds to the token at index 1
+    # input_ids.cpu().detach()
     surprisals = surprisals[:, :-1, :]
     input_ids = input_ids[:, 1:]
     gen_surprisals = torch.gather(surprisals, 2, input_ids[:, :, None]).squeeze(-1)
