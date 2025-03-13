@@ -1,4 +1,5 @@
-from prompter import generate
+from prompter import *
+from scraper import *
 
 def main():
     print("Hello from scripts!")
