@@ -1,3 +1,5 @@
+from prompter import generate
+
 def main():
     print("Hello from scripts!")
 

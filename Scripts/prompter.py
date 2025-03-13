@@ -45,28 +45,28 @@ MODEL = "model-identifier"
 
 def generate(host, client, article_urls, path, prompt):
   for i, url in enumerate(article_urls):
-  if not is_valid(url):
-    continue
-  response = requests.get(url)
-  soup = BeautifulSoup(response.text, 'lxml')
-  title = get_title(soup)
-  first_sentence = get_first_sentence(soup)
-  # print(title)
-  # print(first_sentence)
+    if not is_valid(url):
+      continue
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'lxml')
+    title = get_title(soup)
+    first_sentence = get_first_sentence(soup)
+    # print(title)
+    # print(first_sentence)
 
-  # Engineer prompt
-  suggested_article_length = 500 # TODO: replace this with num. words in article
+    # Engineer prompt
+    suggested_article_length = 500 # TODO: replace this with num. words in article
 
-  completion = client.chat.completions.create(
-    model=model,
-    messages=[
-      {"role": "user", "content": prompt}
-    ],
-    temperature=0.7,
-  )
-  
-  out_path = path
-  with open(out_path, "w") as file:
-    file.write(completion.choices[0].message.content)
+    completion = client.chat.completions.create(
+      model=model,
+      messages=[
+        {"role": "user", "content": prompt}
+      ],
+      temperature=0.7,
+    )
+    
+    out_path = path
+    with open(out_path, "w") as file:
+      file.write(completion.choices[0].message.content)
 
 generate(HOST, CLIENT, ARTICLE_URLS, PATH, PROMPT)
