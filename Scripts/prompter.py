@@ -76,12 +76,12 @@ import logging
 
 # generate(HOST, CLIENT, ARTICLE_URLS, PATH, PROMPT)
 
-def generate(host, client, prompt, temperature):
-  completion = client.chat.completions.create(
-    model=model,
-    messages=[
-      {"role": "user", "content": PROMPT}
-    ],
-    temperature=temperature
-  )
-  return completion.choices[0].message.content
+# def generate(host, client, prompt, temperature):
+#   completion = client.chat.completions.create(
+#     model=model,
+#     messages=[
+#       {"role": "user", "content": PROMPT}
+#     ],
+#     temperature=temperature
+#   )
+#   return completion.choices[0].message.content
