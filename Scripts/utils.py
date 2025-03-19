@@ -11,8 +11,9 @@ import json
 import torch
 from urllib.parse import urljoin, urlparse
 import nltk
+from tqdm import tqdm
 
-nltk.download('punkt_tab')
+# nltk.download('punkt_tab')
 from nltk.tokenize import sent_tokenize
 
 def is_valid(url):
@@ -29,14 +30,19 @@ def get_first_sentence(article):
     sentences = sent_tokenize(article)
     return sentences[0] if sentences else article
 
-# Code written by Dr. Alex Warstadt
+# Code borrowed from Dr. Alex Warstadt
 def to_tokens_and_logprobs(model, tokenizer, input_texts):
     # move model to GPU if available
     # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # model.to(device)
 
     input_ids = tokenizer(input_texts, padding="max_length", truncation=True, return_tensors="pt").input_ids#.to(device)
+    print("Running through model:")
+    t0 = time.time()
     outputs = model(input_ids)
+    t1 = time.time()
+    print(f"Total time: {t1 - t0}")
+    print("Calculating surprisals")
     probs = torch.softmax(outputs.logits, dim=-1).detach()
     # probs = torch.softmax(outputs.logits, dim=-1).cpu().detach()
     surprisals = -1 * np.log2(probs)
@@ -48,11 +54,14 @@ def to_tokens_and_logprobs(model, tokenizer, input_texts):
     gen_surprisals = torch.gather(surprisals, 2, input_ids[:, :, None]).squeeze(-1)
 
     # gather all the surprisals for the sequences into a neat table
+    print("Creating surprisal tables:")
     batch = []
     sentence_id = 0
-    for input_sentence, input_surprisals in zip(input_ids, gen_surprisals):
+    for i, id_surp in enumerate(zip(input_ids, gen_surprisals)):
         sentence = []
-        for token, p in zip(input_sentence, input_surprisals):
+        input_sentence, input_surprisals = id_surp
+        print(f"Processing document {i}")
+        for token, p in tqdm(zip(input_sentence, input_surprisals)):
             if token not in tokenizer.all_special_ids:
                 sentence.append({
                     # "sentence_id": sentence_id,
