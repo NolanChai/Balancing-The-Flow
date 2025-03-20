@@ -9,12 +9,13 @@ import scrapy # may or may not try with this
 import pandas as pd
 import json
 import torch
+from datasets import load_dataset
 from urllib.parse import urljoin, urlparse
 import nltk
 from tqdm import tqdm
 from pathlib import Path
 
-# nltk.download('punkt_tab')
+nltk.download('punkt_tab')
 from nltk.tokenize import sent_tokenize
 
 def is_valid(url):
@@ -97,11 +98,29 @@ def scrape(article_urls):
             pot.add(soup)
     return pot
 
-def generate(host, client, prompt, temperature):
+def prompt_hfds(num_articles,client, temperature, model_name, 
+                model_output_dir="../Generations", human_output_dir="../Sources", write_source=True):
+    data = load_dataset("abisee/cnn_dailymail", "1.0.0", trust_remote_code=True)['train']
+    shuffled_data = data.shuffle()
+    if num_articles < 0:
+        num_articles = 10_000
+    for i in tqdm(range(num_articles)):
+        article = data[i]
+        first_sent = get_first_sentence(article['article'])
+        generation = generate(client=client, prompt=first_sent, temperature=temperature, model=model_name)
+        with open(Path(model_output_dir) / Path(f"{model_name}_{i}.txt"), "w") as outfile:
+            outfile.write(generation)
+        source_output_path = Path(human_output_dir) / Path(f"human_{i}.txt")
+        if not source_output_path.exists() and write_source:
+            with open(source_output_path, "w") as outfile:
+                outfile.write(article['article'])
+
+
+def generate(client, prompt, temperature, model):
   completion = client.chat.completions.create(
     model=model,
     messages=[
-      {"role": "user", "content": PROMPT}
+      {"role": "user", "content": prompt}
     ],
     temperature=temperature
   )
