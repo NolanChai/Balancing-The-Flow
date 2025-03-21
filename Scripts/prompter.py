@@ -12,4 +12,4 @@ import logging
 if __name__ == "__main__":
     HOST = "http://localhost:1234/v1"
     CLIENT = OpenAI(base_url=HOST, api_key="lm-studio")
-    prompt_hfds(5, client=CLIENT, temperature=0.7, model_name="mistral-7b-v0.1")
+    prompt_hfds(300, client=CLIENT, temperature=0.7, model_name="mistral-7b-v0.1", regenerate=False)
