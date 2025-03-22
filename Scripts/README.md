@@ -1,10 +1,40 @@
 # :cyclone: Scripts
-This is our collection of scripts used to scrape and gather data for our study. Namely, we search for:
-- News Articles
-- Interviews
+This is our collection of scripts used to scrape and gather data for our study. Currently, we only use data taken from the [Daily Mail](https://www.dailymail.co.uk/ushome/index.html)
+site due to our limited scope as a class project to test for examples. 
 
-comparing our tests between data collected before the training/release of llama 2, after, and a point after that. We do this because:
+For base models, we're generating article completions by only providing the title and first sentence of each article. For each model, we have different configurations based on
+the recommended default values given by their respective teams.
 
-- Any data we are able to scrape or find before the training/release of Llama 2 is likely already present in the Llama 2 dataset
-- The data collected after may be new to the model.
-- However, the data at a certain, recent point may not be very useful, as we surmise the possibility of, with the prevalence of ChatGPT & other language models, the majority of articles today to be written with the assistance or influence of LLMs and thus potentially having a similar UID to the model. 
+Llama 2 7B:
+```
+temperature=0.9
+top_p=0.6
+```
+
+Mistral 7B:
+```
+temperature=0.7
+```
+
+Our environment and project is configured by the Astral [uv](https://github.com/astral-sh/uv) project manager, with all dependencies stored in `pyproject.toml`.
+You can install the package through
+```
+pip install uv
+```
+Followed by
+```
+cd [scripts directory]
+uv sync
+```
+to install all dependencies. We used the following command-line argument to run our experiments:
+```
+uv run prompter.py llama-2-7b@q8_0 -g 2000 verbose=True
+```
+If there are any missing dependencies, please let us know! You can also use `uv add [package]` for an update to the dependencies and PR.
+
+Each 2000 generations took approximately 4 hours.
+
+After generating on the test articles, we run tests on the RLHF'd instruct models by using the following system prompt:
+```
+Provided the following article title and first sentence, generate the rest of the article:
+```
