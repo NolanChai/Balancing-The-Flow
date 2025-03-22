@@ -100,7 +100,8 @@ def scrape(article_urls):
 
 def prompt_hfds(num_articles,client, temperature, model_name, 
                 model_output_dir="../Generations", human_output_dir="../Sources", 
-                write_source=True, regenerate=True):
+                write_source=True, regenerate=True, max_tokens=2048, top_p=1.0, 
+                system_prompt=None, max_retries=3):
     """Prompts an LM using articles from the cnn_dailymail dataset
 
     Args:
@@ -112,6 +113,8 @@ def prompt_hfds(num_articles,client, temperature, model_name,
         human_output_dir (str, optional): output directory for human articles. Defaults to "../Sources".
         write_source (bool, optional): if True, write the human articles to .txt files in human_output_dir. Defaults to True.
         regenerate (bool, optional): if True, regenerate articles that already exist. Defaults to True.
+        max_tokens (int, optional): maximum tokens for generation. Defaults to 2048.
+        max_retries (int, optional): maximum number of retries for failed generations. Defaults to 3.
     """
 
     # handling for missing paths
@@ -123,15 +126,16 @@ def prompt_hfds(num_articles,client, temperature, model_name,
         human_output_path.mkdir(parents=True, exist_ok=True)
 
     data = load_dataset("abisee/cnn_dailymail", "1.0.0", trust_remote_code=True)['train']
-    shuffled_data = data.shuffle()
+    shuffled_data = data.shuffle(seed=42)  # Use consistent seed for reproducibility
 
     # setting articles to generate
     if num_articles < 0:
         num_articles = 10_000
 
-    # make sure it doesnt exist dataset size
+    # make sure it doesn't exceed dataset size
     num_articles = min(num_articles, len(shuffled_data))
-
+    
+    # Configure progress bar with better settings
     pbar = tqdm(
         total=num_articles,
         desc=f"Generating with {model_name}",
@@ -139,8 +143,11 @@ def prompt_hfds(num_articles,client, temperature, model_name,
         position=0,
         leave=True
     )
-
+    
     generated_count = 0
+    retry_count = 0
+    skip_count = 0
+    error_count = 0
 
     for i in range(num_articles):
         # output paths
@@ -150,60 +157,112 @@ def prompt_hfds(num_articles,client, temperature, model_name,
         # skip if exists
         if not regenerate and generation_output_path.exists():
             pbar.update(1)
-            generated_count += 1
+            skip_count += 1
             continue
 
-        try:
-            # article and first sentence
-            article = shuffled_data[i]
-            first_sent = get_first_sentence(article['article'])
-
-            # generate w prompt
-            generation = generate(client=client, prompt=first_sent, temperature=temperature, model=model_name)
-
-            # write to path
-            with open(generation_output_path, "w", encoding="utf-8") as outfile:
-                outfile.write(generation)
-            
-            # write source article if needed
-            if (not source_output_path.exists() or regenerate) and write_source:
-                with open(source_output_path, "w", encoding="utf-8") as outfile:
-                    outfile.write(article['article'])
-            
-            generated_count += 1
-            
-        except Exception as e:
-            print(f"\nError processing article {i}: {e}", file=sys.stderr)
-        finally:
-            # always update bar
-            pbar.update(1)
+        # try up to max retries
+        for retry in range(max_retries):
+            try:
+                # get article & first sentence
+                article = shuffled_data[i]
+                first_sent = get_first_sentence(article['article'])
+                
+                if len(first_sent.strip()) < 10:
+                    first_sent = article['article'][:200]  # Take first 200 chars if first sentence is too short
+                
+                # generate text
+                generation = generate(
+                    client=client, 
+                    prompt=first_sent, 
+                    temperature=temperature, 
+                    model=model_name,
+                    max_tokens=max_tokens,
+                    top_p=top_p,
+                    system_prompt=system_prompt
+                )
+                
+                # validate generation length
+                if len(generation.strip()) < 20:
+                    if retry < max_retries - 1:
+                        retry_count += 1
+                        time.sleep(1)  # Wait briefly before retry
+                        continue
+                    else:
+                        # Last retry, use what we got
+                        generation = f"[Warning: Short generation] {generation}"
+                
+                # write to path
+                with open(generation_output_path, "w", encoding="utf-8") as outfile:
+                    outfile.write(generation)
+                
+                # write source article if needed
+                if (not source_output_path.exists() or regenerate) and write_source:
+                    with open(source_output_path, "w", encoding="utf-8") as outfile:
+                        outfile.write(article['article'])
+                
+                generated_count += 1
+                break  # success!
+                
+            except Exception as e:
+                error_msg = str(e)
+                if retry < max_retries - 1:
+                    retry_count += 1
+                    time.sleep(1)  # wait a bit before trying again
+                else:
+                    # retry failed
+                    error_count += 1
+                    print(f"\nError processing article {i} after {max_retries} attempts: {error_msg[:100]}...", file=sys.stderr)
+                    
+                    # error placeholder
+                    try:
+                        with open(generation_output_path, "w", encoding="utf-8") as outfile:
+                            outfile.write(f"[ERROR] Generation failed after {max_retries} attempts: {error_msg[:100]}...")
+                    except:
+                        pass
+        pbar.update(1)
+        
+        if i % 50 == 0 and i > 0:
+            pbar.set_description(f"Gen: {generated_count}, Skip: {skip_count}, Retry: {retry_count}, Err: {error_count}")
     
-    # close progress bar
     pbar.close()
     
-    print(f"Successfully generated {generated_count} articles using {model_name}")
-    return
+    print(f"Generation complete: {generated_count} new, {skip_count} skipped, {error_count} errors, {retry_count} retries")
+    return generated_count, skip_count, error_count, retry_count
 
 
-def generate(client, prompt, temperature, model):
-    """Generate a completion using the given API client, model and temperature parameter
+def generate(client, prompt, temperature, model, max_tokens=2048, top_p=1.0, system_prompt=None):
+    """Generate a completion using the given API client, model and parameters
 
     Args:
         client : API client used for model prompting
         prompt (str): prompt to give the model
         temperature (float): temperature parameter for the model
         model (str): name of the model
+        max_tokens (int, optional): maximum number of tokens to generate. Defaults to 2048.
+        top_p (float, optional): nucleus sampling parameter. Defaults to 1.0.
+        system_prompt (str, optional): system prompt to prepend. Defaults to None.
 
     Returns:
         str: generated completion
     """
+    # message list
+    messages = []
+    
+    # add prompts
+    if system_prompt:
+        messages.append({"role": "system", "content": system_prompt})
+    
+    # add user prompt
+    messages.append({"role": "user", "content": prompt})
+    
     completion = client.chat.completions.create(
         model=model,
-        messages=[
-        {"role": "user", "content": prompt}
-        ],
-        temperature=temperature
+        messages=messages,
+        temperature=temperature,
+        max_tokens=max_tokens,
+        top_p=top_p
     )
+    
     return completion.choices[0].message.content
 
 def split_batches(lst, batch_size):
