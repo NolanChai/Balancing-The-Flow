@@ -107,9 +107,12 @@ def main():
     parser = argparse.ArgumentParser(description='Generate text using language models via LM Studio API')
     parser.add_argument('model', type=str, help='Model name to use for generation')
     parser.add_argument('-g', '--generate', type=int, default=300, help='Number of examples to generate')
-    parser.add_argument('-t', '--temperature', type=float, default=0.7, help='Temperature for generation')
+    parser.add_argument('-t', '--temperature', type=float, default=0.9, help='Temperature for generation')
+    parser.add_argument('-p', '--top-p', type=float, default=1.0, help='Top-p (nucleus sampling) parameter')
     parser.add_argument('-r', '--regenerate', action='store_true', help='Regenerate existing outputs')
     parser.add_argument('-v', '--verbose', action='store_true', help='Print verbose information')
+    parser.add_argument('--max-tokens', type=int, default=2048, help='Maximum tokens for generation')
+    parser.add_argument('--max-retries', type=int, default=3, help='Maximum retries for failed generations')
 
     # parse known
     args, unknown = parser.parse_known_args()
@@ -132,6 +135,8 @@ def main():
                 extra_args[key] = value
     verbose = extra_args.get('verbose', args.verbose)
 
+    top_p = extra_args.get('top_p', args.top_p)
+
     HOST = "http://localhost:1234/v1"
     CLIENT = OpenAI(base_url=HOST, api_key="lm-studio")
 
@@ -139,18 +144,24 @@ def main():
         print(f"Using model: {args.model}")
         print(f"Generating {args.generate} examples")
         print(f"Temperature: {args.temperature}")
+        print(f"Top-p: {top_p}")
         print(f"Regenerate: {args.regenerate}")
+        print(f"Max tokens: {args.max_tokens}")
+        print(f"Max retries: {args.max_retries}")
         print(f"Starting generation at: {time.strftime('%Y-%m-%d %H:%M:%S')}")
 
     start_time = time.time()
 
     try:
-        prompt_hfds(
+        generated, skipped, errors, retries = prompt_hfds(
             num_articles=args.generate, 
             client=CLIENT, 
             temperature=args.temperature, 
+            top_p=top_p,
             model_name=args.model, 
-            regenerate=args.regenerate
+            regenerate=args.regenerate,
+            max_tokens=args.max_tokens,
+            max_retries=args.max_retries
         )
     except Exception as e:
         print(f"Error during generation: {e}")
@@ -168,7 +179,10 @@ def main():
         
         print("\nSummary:")
         print(f"- Model: {args.model}")
-        print(f"- Generated {args.generate} examples")
+        print(f"- Generated: {generated} new examples")
+        print(f"- Skipped: {skipped} existing examples")
+        print(f"- Errors: {errors} failed generations")
+        print(f"- Retries: {retries} retried generations")
         print(f"- Generation time: {generation_time:.2f} seconds")
         print(f"- Surprisal calculation time: {surprisal_time:.2f} seconds")
         if avg_surprisal is not None:
@@ -182,7 +196,10 @@ def main():
             summary_file = summary_dir / f"{args.model}_summary.txt"
             with open(summary_file, "w") as f:
                 f.write(f"Model: {args.model}\n")
-                f.write(f"Generated: {args.generate} examples\n")
+                f.write(f"Generated: {generated} new examples\n")
+                f.write(f"Skipped: {skipped} existing examples\n")
+                f.write(f"Errors: {errors} failed generations\n")
+                f.write(f"Retries: {retries} retried generations\n")
                 f.write(f"Temperature: {args.temperature}\n")
                 f.write(f"Generation time: {generation_time:.2f} seconds\n")
                 f.write(f"Surprisal calculation time: {surprisal_time:.2f} seconds\n")
