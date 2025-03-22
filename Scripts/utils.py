@@ -100,7 +100,8 @@ def scrape(article_urls):
 
 def prompt_hfds(num_articles,client, temperature, model_name, 
                 model_output_dir="../Generations", human_output_dir="../Sources", 
-                write_source=True, regenerate=True, max_tokens=2048, top_p=1.0, max_retries=3):
+                write_source=True, regenerate=True, max_tokens=2048, top_p=1.0, 
+                system_prompt=None, max_retries=3):
     """Prompts an LM using articles from the cnn_dailymail dataset
 
     Args:
@@ -176,7 +177,8 @@ def prompt_hfds(num_articles,client, temperature, model_name,
                     temperature=temperature, 
                     model=model_name,
                     max_tokens=max_tokens,
-                    top_p=top_p  # Pass the top_p parameter
+                    top_p=top_p,
+                    system_prompt=system_prompt
                 )
                 
                 # validate generation length
@@ -228,9 +230,8 @@ def prompt_hfds(num_articles,client, temperature, model_name,
     return generated_count, skip_count, error_count, retry_count
 
 
-def generate(client, prompt, temperature=0.9, model="llama-2-7b@q8_0", max_tokens=2048, top_p=0.6):
-    """Generate a completion using the given API client, model and temperature parameter
-    with additional validation to prevent abnormal outputs.
+def generate(client, prompt, temperature, model, max_tokens=2048, top_p=1.0, system_prompt=None):
+    """Generate a completion using the given API client, model and parameters
 
     Args:
         client : API client used for model prompting
@@ -238,20 +239,30 @@ def generate(client, prompt, temperature=0.9, model="llama-2-7b@q8_0", max_token
         temperature (float): temperature parameter for the model
         model (str): name of the model
         max_tokens (int, optional): maximum number of tokens to generate. Defaults to 2048.
-        max_length (int, optional): maximum length of output in characters. Defaults to 5000.
-        max_newlines (int, optional): maximum number of consecutive newlines allowed. Defaults to 20.
+        top_p (float, optional): nucleus sampling parameter. Defaults to 1.0.
+        system_prompt (str, optional): system prompt to prepend. Defaults to None.
 
     Returns:
-        str: generated completion, sanitized and validated
+        str: generated completion
     """
+    # message list
+    messages = []
+    
+    # add prompts
+    if system_prompt:
+        messages.append({"role": "system", "content": system_prompt})
+    
+    # add user prompt
+    messages.append({"role": "user", "content": prompt})
+    
     completion = client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "user", "content": prompt}
-            ],
-            temperature=temperature,
-            max_tokens=max_tokens
+        model=model,
+        messages=messages,
+        temperature=temperature,
+        max_tokens=max_tokens,
+        top_p=top_p
     )
+    
     return completion.choices[0].message.content
 
 def split_batches(lst, batch_size):

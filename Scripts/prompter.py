@@ -109,6 +109,7 @@ def main():
     parser.add_argument('-g', '--generate', type=int, default=300, help='Number of examples to generate')
     parser.add_argument('-t', '--temperature', type=float, default=0.9, help='Temperature for generation')
     parser.add_argument('-p', '--top-p', type=float, default=1.0, help='Top-p (nucleus sampling) parameter')
+    parser.add_argument('-s', '--system-prompt', type=str, help='System prompt to prepend to each generation')
     parser.add_argument('-r', '--regenerate', action='store_true', help='Regenerate existing outputs')
     parser.add_argument('-v', '--verbose', action='store_true', help='Print verbose information')
     parser.add_argument('--max-tokens', type=int, default=2048, help='Maximum tokens for generation')
@@ -137,6 +138,14 @@ def main():
 
     top_p = extra_args.get('top_p', args.top_p)
 
+    system_prompt = None
+
+    if 'system_prompt' in extra_args:
+        system_prompt = extra_args['system_prompt']
+    elif args.system_prompt:
+        system_prompt = args.system_prompt
+    
+
     HOST = "http://localhost:1234/v1"
     CLIENT = OpenAI(base_url=HOST, api_key="lm-studio")
 
@@ -148,6 +157,8 @@ def main():
         print(f"Regenerate: {args.regenerate}")
         print(f"Max tokens: {args.max_tokens}")
         print(f"Max retries: {args.max_retries}")
+        if system_prompt:
+            print(f"System prompt: {system_prompt}")
         print(f"Starting generation at: {time.strftime('%Y-%m-%d %H:%M:%S')}")
 
     start_time = time.time()
@@ -183,6 +194,10 @@ def main():
         print(f"- Skipped: {skipped} existing examples")
         print(f"- Errors: {errors} failed generations")
         print(f"- Retries: {retries} retried generations")
+        print(f"- Temperature: {args.temperature}")
+        print(f"- Top-p: {top_p}")
+        if system_prompt:
+            print(f"- System prompt: {system_prompt}")
         print(f"- Generation time: {generation_time:.2f} seconds")
         print(f"- Surprisal calculation time: {surprisal_time:.2f} seconds")
         if avg_surprisal is not None:
@@ -194,13 +209,17 @@ def main():
             summary_dir.mkdir(parents=True, exist_ok=True)
             
             summary_file = summary_dir / f"{args.model}_summary.txt"
-            with open(summary_file, "w") as f:
+            with open(summary_file, "w", encoding='utf-8') as f:
                 f.write(f"Model: {args.model}\n")
                 f.write(f"Generated: {generated} new examples\n")
                 f.write(f"Skipped: {skipped} existing examples\n")
                 f.write(f"Errors: {errors} failed generations\n")
                 f.write(f"Retries: {retries} retried generations\n")
                 f.write(f"Temperature: {args.temperature}\n")
+                f.write(f"Top-p: {top_p}\n")
+                if system_prompt:
+                    f.write(f"System prompt: {system_prompt}\n")
+                f.write(f"Max tokens: {args.max_tokens}\n")
                 f.write(f"Generation time: {generation_time:.2f} seconds\n")
                 f.write(f"Surprisal calculation time: {surprisal_time:.2f} seconds\n")
                 if avg_surprisal is not None:
