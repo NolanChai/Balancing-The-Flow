@@ -14,6 +14,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from tqdm import tqdm
 import pandas as pd
+import time
 
 def setup_directories(model_name):
     """
@@ -31,7 +32,7 @@ def setup_directories(model_name):
     
     return dirs
 
-def calculate_average_surprisal(model_name, num_files):
+def calculate_average_surprisal(model_name, num_files, verbose=False):
     """
     Calculate average surprisal across generated files
     """
@@ -102,13 +103,13 @@ def calculate_average_surprisal(model_name, num_files):
         print(f"Error in average surprisal calculation: {e}")
         return None
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description='Generate text using language models via LM Studio API')
     parser.add_argument('model', type=str, help='Model name to use for generation')
     parser.add_argument('-g', '--generate', type=int, default=300, help='Number of examples to generate')
     parser.add_argument('-t', '--temperature', type=float, default=0.7, help='Temperature for generation')
     parser.add_argument('-r', '--regenerate', action='store_true', help='Regenerate existing outputs')
-    parser.add_argument('--verbose', type=bool, default=False, help='Print surprisal information')
+    parser.add_argument('-v', '--verbose', action='store_true', help='Print verbose information')
 
     # parse known
     args, unknown = parser.parse_known_args()
@@ -139,15 +140,60 @@ if __name__ == "__main__":
         print(f"Generating {args.generate} examples")
         print(f"Temperature: {args.temperature}")
         print(f"Regenerate: {args.regenerate}")
+        print(f"Starting generation at: {time.strftime('%Y-%m-%d %H:%M:%S')}")
 
-    prompt_hfds(
-        num_articles=args.generate, 
-        client=CLIENT, 
-        temperature=args.temperature, 
-        model_name=args.model, 
-        regenerate=args.regenerate
-    )
+    start_time = time.time()
+
+    try:
+        prompt_hfds(
+            num_articles=args.generate, 
+            client=CLIENT, 
+            temperature=args.temperature, 
+            model_name=args.model, 
+            regenerate=args.regenerate
+        )
+    except Exception as e:
+        print(f"Error during generation: {e}")
+        return
+    
+    generation_time = time.time() - start_time
+    if verbose:
+        print(f"Generation completed in {generation_time:.2f} seconds")
 
     if verbose:
-        avg_surprisal = calculate_average_surprisal(args.model, args.generate)
-        print(f"Generation complete. Average surprisal: {avg_surprisal}")
+        print("Calculating surprisal statistics...")
+        surprisal_start = time.time()
+        avg_surprisal = calculate_average_surprisal(args.model, args.generate, verbose)
+        surprisal_time = time.time() - surprisal_start
+        
+        print("\nSummary:")
+        print(f"- Model: {args.model}")
+        print(f"- Generated {args.generate} examples")
+        print(f"- Generation time: {generation_time:.2f} seconds")
+        print(f"- Surprisal calculation time: {surprisal_time:.2f} seconds")
+        if avg_surprisal is not None:
+            print(f"- Average surprisal: {avg_surprisal:.4f}")
+        print(f"Total runtime: {time.time() - start_time:.2f} seconds")
+
+        try:
+            summary_dir = Path("../Summary")
+            summary_dir.mkdir(parents=True, exist_ok=True)
+            
+            summary_file = summary_dir / f"{args.model}_summary.txt"
+            with open(summary_file, "w") as f:
+                f.write(f"Model: {args.model}\n")
+                f.write(f"Generated: {args.generate} examples\n")
+                f.write(f"Temperature: {args.temperature}\n")
+                f.write(f"Generation time: {generation_time:.2f} seconds\n")
+                f.write(f"Surprisal calculation time: {surprisal_time:.2f} seconds\n")
+                if avg_surprisal is not None:
+                    f.write(f"Average surprisal: {avg_surprisal:.4f}\n")
+                f.write(f"Total runtime: {time.time() - start_time:.2f} seconds\n")
+                f.write(f"Date: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+            
+            print(f"Summary saved to {summary_file}")
+        except Exception as e:
+            print(f"Error saving summary: {e}")
+
+if __name__ == "__main__":
+    main()
