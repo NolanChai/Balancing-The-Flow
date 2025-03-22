@@ -186,14 +186,6 @@ def generate(client, prompt, temperature, model):
         temperature=temperature
     )
     return completion.choices[0].message.content
-    completion = client.chat.completions.create(
-        model=model,
-        messages=[
-        {"role": "user", "content": prompt}
-        ],
-        temperature=temperature
-    )
-    return completion.choices[0].message.content
 
 def split_batches(lst, batch_size):
     """splits a given list into batches of a given size
@@ -224,12 +216,6 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_
         num_files (int, optional): number of files to analyze. Passing -1 will analyze all files in the directory.
         batch_size (int, optional): batch size for surprisal calculation input. Defaults to 20.
     """
-    import os
-    from pathlib import Path
-    import pandas as pd
-    import numpy as np
-    import time
-    from tqdm import tqdm
     
     # create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)

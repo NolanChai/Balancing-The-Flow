@@ -48,6 +48,13 @@ def calculate_average_surprisal(model_name, num_files):
         # load model
         try:
             tokenizer = AutoTokenizer.from_pretrained("gpt2")
+
+            # padding issue fix? if missing padding, set to eos token if dne
+            if tokenizer.pad_token is None:
+                tokenizer.pad_token = tokenizer.eos_token
+                if verbose:
+                    print("Set padding token to end-of-sequence token")
+
             model = AutoModelForCausalLM.from_pretrained("gpt2")
             
             # calc
