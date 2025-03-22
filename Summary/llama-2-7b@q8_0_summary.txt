@@ -1,8 +1,13 @@
 Model: llama-2-7b@q8_0
-Generated: 1 examples
-Temperature: 0.7
-Generation time: 3.59 seconds
-Surprisal calculation time: 0.01 seconds
-Average surprisal: 4.0417
-Total runtime: 3.60 seconds
-Date: 2025-03-21 23:55:40
+Generated: 663 new examples
+Skipped: 1337 existing examples
+Errors: 0 failed generations
+Retries: 40 retried generations
+Temperature: 0.9
+Top-p: 1.0
+Max tokens: 2048
+Generation time: 7173.84 seconds
+Surprisal calculation time: 716.34 seconds
+Average surprisal: 3.5343
+Total runtime: 7890.18 seconds
+Date: 2025-03-22 04:14:26
