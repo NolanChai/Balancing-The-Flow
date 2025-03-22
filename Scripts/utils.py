@@ -207,3 +207,14 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_
         for fp, text in zip(paths, output):
             output_fp = output_root / fp.with_suffix(".csv").name
             text.to_csv(output_fp)
+
+def UID_variance(text):
+    N = text.shape[0]
+    mu = text['surprisal'].mean()
+    surprisals = text['surprisal']
+    return ((surprisals - mu) ** 2).sum() / N
+
+def UID_pairwise(text):
+    N = text.shape[0]
+    surprisals = text['surprisal']
+    return (surprisals.diff() ** 2).sum() / (N - 1)
