@@ -186,6 +186,14 @@ def generate(client, prompt, temperature, model):
         temperature=temperature
     )
     return completion.choices[0].message.content
+    completion = client.chat.completions.create(
+        model=model,
+        messages=[
+        {"role": "user", "content": prompt}
+        ],
+        temperature=temperature
+    )
+    return completion.choices[0].message.content
 
 def split_batches(lst, batch_size):
     """splits a given list into batches of a given size
@@ -270,25 +278,14 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_
 
     # batches for processing
     batched_texts = split_batches(all_texts, batch_size=batch_size)
-    batched_filepaths = split_batches(file_paths_to_use, batch_size=batch_size)
-    
-    output_root = Path(output_dir)
-    output_root.mkdir(parents=True, exist_ok=True)
-    
-    for batch_idx, (texts, paths) in enumerate(tqdm(zip(batched_texts, batched_filepaths), total=len(batched_texts))):
-        try:
-            print(f"Processing batch {batch_idx+1}/{len(batched_texts)} with {len(texts)} files")
-            output = to_tokens_and_logprobs(model, tokenizer, texts)
-            
-            # write
-            for fp, df in zip(paths, output):
-                try:
-                    output_fp = output_root / f"{fp.stem}.csv"
-                    df.to_csv(output_fp, index=False)
-                except Exception as e:
-                    print(f"Error writing file {fp.name}: {e}")
-        except Exception as e:
-            print(f"Error processing batch {batch_idx+1}: {e}")
-            continue
-            
-    print(f"Surprisal calculation complete. Results saved to {output_dir}")
+    batched_filepaths = split_batches(text_filepaths, batch_size=batch_size)
+
+    # calculating surprisals with model
+    for texts, paths in tqdm(zip(batched_texts, batched_filepaths)):
+        output = to_tokens_and_logprobs(model, tokenizer, texts)
+
+        # writing ouput files
+        output_root = Path(output_dir)
+        for fp, text in zip(paths, output):
+            output_fp = output_root / fp.with_suffix(".csv").name
+            text.to_csv(output_fp)
