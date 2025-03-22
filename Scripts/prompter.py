@@ -1,7 +1,7 @@
 from openai import OpenAI
 from pathlib import Path
 from bs4 import BeautifulSoup
-from utils import prompt_hfds, generate, calc_surprisal, get_first_sentence
+from utils import prompt_hfds, generate, calc_surprisal, get_first_sentence, calculate_surprisals_for_existing_texts
 import requests
 from datasets import load_dataset
 import argparse
@@ -114,6 +114,9 @@ def main():
     parser.add_argument('-v', '--verbose', action='store_true', help='Print verbose information')
     parser.add_argument('--max-tokens', type=int, default=2048, help='Maximum tokens for generation')
     parser.add_argument('--max-retries', type=int, default=3, help='Maximum retries for failed generations')
+    parser.add_argument('--analyze-human', action='store_true', help='Analyze human texts instead of generating new ones')
+    parser.add_argument('--human-dir', type=str, default='../Sources', help='Directory containing human texts to analyze')
+    parser.add_argument('--analyze-only', action='store_true', help='Only analyze surprisals without generating new texts')
 
     # parse known
     args, unknown = parser.parse_known_args()
@@ -144,7 +147,59 @@ def main():
         system_prompt = extra_args['system_prompt']
     elif args.system_prompt:
         system_prompt = args.system_prompt
+
+    if args.analyze_human:
+        print("Analyzing human texts...")
+        
+        human_surprisal_dir = Path(f"../Surprisals/human_texts")
+        human_surprisal_dir.mkdir(parents=True, exist_ok=True)
+        
+        tokenizer = AutoTokenizer.from_pretrained("gpt2")
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
+            if verbose:
+                print("Set padding token to end-of-sequence token")
+        
+        model = AutoModelForCausalLM.from_pretrained("gpt2")
+        
+        start_time = time.time()
+        try:
+            calculate_surprisals_for_existing_texts(
+                input_dir=args.human_dir,
+                output_dir=str(human_surprisal_dir),
+                model=model,
+                tokenizer=tokenizer,
+                verbose=verbose
+            )
+            print(f"Human text analysis completed in {time.time() - start_time:.2f} seconds")
+            
+            # print command
+            print("\nTo analyze UID metrics for these human texts, run:")
+            print(f"uv run analyze_uid.py --input-dir '../Surprisals/human_texts' --output-dir '../UID_Analysis/human_texts'")
+        except Exception as e:
+            print(f"Error analyzing human texts: {e}")
+        
+        return
     
+    if args.analyze_only:
+        print(f"Analyzing existing generated texts for model: {args.model}")
+        
+        # setup directories
+        setup_directories(args.model)
+        
+        # calculate surprisals
+        start_time = time.time()
+        avg_surprisal = calculate_average_surprisal(args.model, args.generate, verbose)
+        
+        if verbose:
+            print(f"Analysis completed in {time.time() - start_time:.2f} seconds")
+            if avg_surprisal is not None:
+                print(f"Average surprisal: {avg_surprisal:.4f}")
+            
+            print("\nTo analyze UID metrics for these texts, run:")
+            print(f"uv run analyze_uid.py --input-dir '../Surprisals/{args.model}' --output-dir '../UID_Analysis/{args.model}'")
+        
+        return
 
     HOST = "http://localhost:1234/v1"
     CLIENT = OpenAI(base_url=HOST, api_key="lm-studio")
