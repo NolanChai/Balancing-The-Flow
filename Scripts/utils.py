@@ -100,6 +100,18 @@ def scrape(article_urls):
 def prompt_hfds(num_articles,client, temperature, model_name, 
                 model_output_dir="../Generations", human_output_dir="../Sources", 
                 write_source=True, regenerate=True):
+    """Prompts an LM using articles from the cnn_dailymail dataset
+
+    Args:
+        num_articles (int): number of articles to generate
+        client : API client used for model prompting
+        temperature (float): temperature parameter for the model
+        model_name (str): name of the model
+        model_output_dir (str, optional): output directory for generations. Defaults to "../Generations".
+        human_output_dir (str, optional): output directory for human articles. Defaults to "../Sources".
+        write_source (bool, optional): if True, write the human articles to .txt files in human_output_dir. Defaults to True.
+        regenerate (bool, optional): if True, regenerate articles that already exist. Defaults to True.
+    """
     data = load_dataset("abisee/cnn_dailymail", "1.0.0", trust_remote_code=True)['train']
     shuffled_data = data.shuffle()
     if num_articles < 0:
@@ -114,12 +126,23 @@ def prompt_hfds(num_articles,client, temperature, model_name,
         generation = generate(client=client, prompt=first_sent, temperature=temperature, model=model_name)
         with open(generation_output_path, "w") as outfile:
             outfile.write(generation)
-        if not source_output_path.exists() and write_source:
+        if (not source_output_path.exists() or regenerate) and write_source:
             with open(source_output_path, "w") as outfile:
                 outfile.write(article['article'])
 
 
 def generate(client, prompt, temperature, model):
+    """Generate a completion using the given API client, model and temperature parameter
+
+    Args:
+        client : API client used for model prompting
+        prompt (str): prompt to give the model
+        temperature (float): temperature parameter for the model
+        model (str): name of the model
+
+    Returns:
+        str: generated completion
+    """
   completion = client.chat.completions.create(
     model=model,
     messages=[
@@ -130,6 +153,15 @@ def generate(client, prompt, temperature, model):
   return completion.choices[0].message.content
 
 def split_batches(lst, batch_size):
+    """splits a given list into batches of a given size
+
+    Args:
+        lst (list): list to batch
+        batch_size (int): size of batches
+
+    Returns:
+        list: list of batches of size batch_size
+    """
     num_batches = int(np.ceil(len(lst) / batch_size))
     batched = []
     for i in range(num_batches):
@@ -139,6 +171,16 @@ def split_batches(lst, batch_size):
     return batched
 
 def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_size=20):
+    """Calculate surprisal for each token of a corpus of texts
+
+    Args:
+        model (GPT2LMHeadModel): pretrained language model to use for probability calculation
+        tokenizer (GPT2Tokenizer): tokenizer associated with the model
+        input_dir (str/path): path to directory containing corpus
+        output_dir (str/path): desired output directory for csv files
+        num_files (int, optional): number of files to analyze. Passing -1 will analyze all files in the directory.
+        batch_size (int, optional): batch size for surprisal calculation input. Defaults to 20.
+    """
     # Setting up files
     root = Path(input_dir)
     text_filepaths = list(root.iterdir())
