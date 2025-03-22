@@ -143,14 +143,14 @@ def generate(client, prompt, temperature, model):
     Returns:
         str: generated completion
     """
-  completion = client.chat.completions.create(
-    model=model,
-    messages=[
-      {"role": "user", "content": prompt}
-    ],
-    temperature=temperature
-  )
-  return completion.choices[0].message.content
+    completion = client.chat.completions.create(
+        model=model,
+        messages=[
+        {"role": "user", "content": prompt}
+        ],
+        temperature=temperature
+    )
+    return completion.choices[0].message.content
 
 def split_batches(lst, batch_size):
     """splits a given list into batches of a given size
