@@ -1,0 +1,14 @@
+Model: llama-2-7b-32k-instruct
+Generated: 275 new examples
+Skipped: 25 existing examples
+Errors: 0 failed generations
+Retries: 6 retried generations
+Temperature: 0.9
+Top-p: 1.0
+System prompt: Provided the following article title and first sentence, generate the rest of the article:
+Max tokens: 2048
+Generation time: 3939.57 seconds
+Surprisal calculation time: 212.12 seconds
+Average surprisal: 2.6966
+Total runtime: 4151.69 seconds
+Date: 2025-03-22 14:49:07
