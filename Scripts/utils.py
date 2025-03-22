@@ -132,37 +132,56 @@ def prompt_hfds(num_articles,client, temperature, model_name,
     # make sure it doesnt exist dataset size
     num_articles = min(num_articles, len(shuffled_data))
 
-    for i in tqdm(range(num_articles)):
+    pbar = tqdm(
+        total=num_articles,
+        desc=f"Generating with {model_name}",
+        unit="articles",
+        position=0,
+        leave=True
+    )
+
+    generated_count = 0
+
+    for i in range(num_articles):
         # output paths
-        generation_output_path = Path(model_output_dir) / Path(f"{model_name}_{i}.txt")
-        source_output_path = Path(human_output_dir) / Path(f"human_{i}.txt")
+        generation_output_path = model_output_path / f"{model_name}_{i}.txt"
+        source_output_path = human_output_path / f"human_{i}.txt"
 
         # skip if exists
         if not regenerate and generation_output_path.exists():
+            pbar.update(1)
+            generated_count += 1
             continue
 
         try:
             # article and first sentence
-            article = data[i]
+            article = shuffled_data[i]
             first_sent = get_first_sentence(article['article'])
 
             # generate w prompt
             generation = generate(client=client, prompt=first_sent, temperature=temperature, model=model_name)
 
             # write to path
-            with open(generation_output_path, "w") as outfile:
+            with open(generation_output_path, "w", encoding="utf-8") as outfile:
                 outfile.write(generation)
             
             # write source article if needed
             if (not source_output_path.exists() or regenerate) and write_source:
-                with open(source_output_path, "w") as outfile:
+                with open(source_output_path, "w", encoding="utf-8") as outfile:
                     outfile.write(article['article'])
-        
+            
+            generated_count += 1
+            
         except Exception as e:
-            print(f"Error processing article {i}: {e}")
-            continue
-
-        print(f"Successfully generated {num_articles} articles using {model_name}")
+            print(f"\nError processing article {i}: {e}", file=sys.stderr)
+        finally:
+            # always update bar
+            pbar.update(1)
+    
+    # close progress bar
+    pbar.close()
+    
+    print(f"Successfully generated {generated_count} articles using {model_name}")
     return
 
 
@@ -246,8 +265,17 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_
     # read in
     all_texts = []
     file_paths_to_use = []
+
+    file_pbar = tqdm(
+        total=len(absolute_filepaths),
+        desc="Reading files",
+        unit="files",
+        position=0,
+        leave=True,
+        disable=not verbose
+    )
     
-    for filepath in tqdm(absolute_filepaths):
+    for filepath in absolute_filepaths:
         try:
             with open(filepath, 'r', encoding='utf-8') as file:
                 text = file.read()
@@ -255,8 +283,12 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_
                 all_texts.append(text)
                 file_paths_to_use.append(filepath)
         except Exception as e:
-            print(f"Error reading file {filepath.name}: {e}")
-    
+            if verbose:
+                print(f"\nError reading file {filepath.name}: {e}", file=sys.stderr)
+        finally:
+            file_pbar.update(1)
+    file_pbar.close()
+
     if not all_texts:
         print("No valid text content found to analyze")
         return
@@ -271,16 +303,25 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_
     output_root = Path(output_dir)
     output_root.mkdir(parents=True, exist_ok=True)
     
-    for batch_idx, (texts, paths) in enumerate(tqdm(zip(batched_texts, batched_filepaths), total=len(batched_texts))):
+    batch_pbar = tqdm(
+        total=len(batched_texts),
+        desc="Processing batches",
+        unit="batch",
+        position=0,
+        leave=True
+    )
+
+    for batch_idx, (texts, paths) in enumerate(zip(batched_texts, batched_filepaths)):
         try:
             if verbose:
-                print(f"Processing batch {batch_idx+1}/{len(batched_texts)} with {len(texts)} files")
+                print(f"\nProcessing batch {batch_idx+1}/{len(batched_texts)} with {len(texts)} files")
             
             # custom version of to_tokens_and_logprobs with better error handling
             try:
                 output = modified_to_tokens_and_logprobs(model, tokenizer, texts, verbose)
             except Exception as e:
                 print(f"Error in token processing: {e}")
+                batch_pbar.update(1)
                 continue
             
             # try catch for csvs
@@ -289,13 +330,18 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_
                     output_fp = output_root / f"{fp.stem}.csv"
                     df.to_csv(output_fp, index=False)
                 except Exception as e:
-                    print(f"Error writing file {fp.name}: {e}")
+                    if verbose:
+                        print(f"Error writing file {fp.name}: {e}")
         except Exception as e:
             print(f"Error processing batch {batch_idx+1}: {e}")
-            continue
+        finally:
+            batch_pbar.update(1)
+    # Close batch processing progress bar
+    batch_pbar.close()
             
     if verbose:
         print(f"Surprisal calculation complete. Results saved to {output_dir}")
+    return
 
 # trying this out
 def modified_to_tokens_and_logprobs(model, tokenizer, input_texts, verbose=False):
