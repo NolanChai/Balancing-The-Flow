@@ -40,17 +40,14 @@ def calculate_average_surprisal(model_name, num_files, verbose=False):
     surprisal_dir = Path(f"../Surprisals/{model_name}")
     surprisal_dir.mkdir(parents=True, exist_ok=True)
 
-    # check for surprisals
     existing_csvs = list(surprisal_dir.glob("*.csv"))
     if len(existing_csvs) < num_files:
         if verbose:
             print(f"Calculating surprisals for {model_name}...")
         
-        # load model
         try:
             tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
-            # padding issue fix? if missing padding, set to eos token if dne
             if tokenizer.pad_token is None:
                 tokenizer.pad_token = tokenizer.eos_token
                 if verbose:
@@ -58,23 +55,23 @@ def calculate_average_surprisal(model_name, num_files, verbose=False):
 
             model = AutoModelForCausalLM.from_pretrained("gpt2")
             
-            # calc
             calc_surprisal(
                 model=model,
                 tokenizer=tokenizer,
                 input_dir=f"../Generations",
                 output_dir=str(surprisal_dir),
-                num_files=num_files
+                model_name=model_name,
+                num_files=num_files,
+                verbose=verbose
             )
         except Exception as e:
             print(f"Error calculating surprisals: {e}")
             return None
     
-    # try from csv files
     try:
         surprisal_files = list(surprisal_dir.glob("*.csv"))
         if not surprisal_files:
-            print("No surprisal files found")
+            print(f"No surprisal files found for {model_name}")
             return None
             
         total_surprisal = 0
@@ -82,7 +79,7 @@ def calculate_average_surprisal(model_name, num_files, verbose=False):
         
         if verbose:
             print(f"Calculating average surprisal from {len(surprisal_files)} files...")
-            file_iter = tqdm(surprisal_files)
+            file_iter = tqdm(surprisal_files, desc=f"Processing {model_name} CSVs")
         else:
             file_iter = surprisal_files
         
@@ -94,13 +91,13 @@ def calculate_average_surprisal(model_name, num_files, verbose=False):
         
         avg_surprisal = total_surprisal / total_tokens if total_tokens > 0 else 0
         if verbose:
-            print(f"Average surprisal across {len(surprisal_files)} files: {avg_surprisal:.4f}")
+            print(f"Average surprisal for {model_name} across {len(surprisal_files)} files: {avg_surprisal:.4f}")
             print(f"Total tokens processed: {total_tokens}")
         
         return avg_surprisal
     
     except Exception as e:
-        print(f"Error in average surprisal calculation: {e}")
+        print(f"Error in average surprisal calculation for {model_name}: {e}")
         return None
 
 def main():
@@ -169,6 +166,8 @@ def main():
                 output_dir=str(human_surprisal_dir),
                 model=model,
                 tokenizer=tokenizer,
+                model_name="human",  # use "human" as the model name
+                pattern="human_*.txt",  # specific pattern for human files
                 verbose=verbose
             )
             print(f"Human text analysis completed in {time.time() - start_time:.2f} seconds")
@@ -224,6 +223,7 @@ def main():
             client=CLIENT, 
             temperature=args.temperature, 
             top_p=top_p,
+            system_prompt=system_prompt,
             model_name=args.model, 
             regenerate=args.regenerate,
             max_tokens=args.max_tokens,

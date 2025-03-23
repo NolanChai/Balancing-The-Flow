@@ -303,7 +303,7 @@ def split_batches(lst, batch_size):
         batched.append(batch)
     return batched
 
-def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_size=20, verbose=False):
+def calc_surprisal(model, tokenizer, input_dir, output_dir, model_name, num_files=-1, batch_size=20, verbose=False):
     """Calculate surprisal for each token of a corpus of texts
 
     Args:
@@ -311,52 +311,61 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_
         tokenizer (GPT2Tokenizer): tokenizer associated with the model
         input_dir (str/path): path to directory containing corpus
         output_dir (str/path): desired output directory for csv files
+        model_name (str): name of the model to filter files for
         num_files (int, optional): number of files to analyze. Passing -1 will analyze all files in the directory.
         batch_size (int, optional): batch size for surprisal calculation input. Defaults to 20.
         verbose (bool, optional): Whether to print verbose output. Defaults to False.
     """
-    
-    # create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
     
     root = Path(input_dir)
     
-    # file handling
     if not root.exists() or not root.is_dir():
         raise ValueError(f"Input directory not found: {input_dir}")
-        
-    text_filepaths = list(root.glob("*.txt"))
+    
+    file_pattern = f"{model_name}_*.txt"
+    text_filepaths = list(root.glob(file_pattern))
+    
     if not text_filepaths:
-        raise ValueError(f"No text files found in {input_dir}")
-        
+        raise ValueError(f"No text files found in {input_dir} matching pattern {file_pattern}")
+    
+    text_filepaths.sort()
+    
     absolute_filepaths = [file.resolve() for file in text_filepaths]
-
-    # more file handling
+    
     if num_files > 0:
         absolute_filepaths = absolute_filepaths[:min(num_files, len(absolute_filepaths))]
     
     if not absolute_filepaths:
-        print(f"No files to process in {input_dir}")
+        print(f"No files to process in {input_dir} matching {file_pattern}")
         return
     
     if verbose:
-        print(f"Reading {len(absolute_filepaths)} files from {input_dir}")
-
-    # read in
+        print(f"Reading {len(absolute_filepaths)} files from {input_dir} for model {model_name}")
+    
     all_texts = []
     file_paths_to_use = []
     
-    # Read all files first with a clean progress bar
-    for filepath in tqdm(absolute_filepaths, desc="Reading files", disable=not verbose):
+    file_pbar = tqdm(
+        absolute_filepaths,
+        desc=f"Reading {model_name} files",
+        unit="file",
+        disable=not verbose,
+        position=0,
+        leave=True
+    )
+    
+    for filepath in file_pbar:
         try:
             with open(filepath, 'r', encoding='utf-8') as file:
                 text = file.read()
-            if text.strip():  # non-empty files
+            if text.strip():
                 all_texts.append(text)
                 file_paths_to_use.append(filepath)
         except Exception as e:
-            if verbose:
-                print(f"Error reading file {filepath.name}: {e}")
+            print(f"Error reading file {filepath.name}: {e}")
+    
+    file_pbar.close()
     
     if not all_texts:
         print("No valid text content found to analyze")
@@ -364,52 +373,44 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, num_files=-1, batch_
     
     if verbose:
         print(f"Successfully read {len(all_texts)} files")
-
-    # batches for processing
+    
     batched_texts = split_batches(all_texts, batch_size=batch_size)
     batched_filepaths = split_batches(file_paths_to_use, batch_size=batch_size)
-
+    
     output_root = Path(output_dir)
     output_root.mkdir(parents=True, exist_ok=True)
     
-    # Track processing stats
-    total_processed = 0
-    total_batches = len(batched_texts)
+    batch_pbar = tqdm(
+        total=len(batched_texts),
+        desc=f"Processing {model_name} batches",
+        unit="batch",
+        disable=not verbose,
+        position=0,
+        leave=True
+    )
     
-    # Process batches with a clean progress bar using context manager
-    with tqdm(total=total_batches, desc="Processing batches", disable=not verbose) as pbar:
-        for batch_idx, (texts, paths) in enumerate(zip(batched_texts, batched_filepaths)):
-            try:
-                # Use quiet mode to prevent output during batch processing
-                outputs = to_tokens_and_logprobs(model, tokenizer, texts, quiet=True)
-                
-                # Save CSV files
-                success_count = 0
-                for fp, df in zip(paths, outputs):
-                    try:
-                        output_fp = output_root / f"{fp.stem}.csv"
-                        df.to_csv(output_fp, index=False)
-                        success_count += 1
-                    except Exception as e:
-                        if verbose:
-                            pbar.write(f"Error writing file {fp.name}: {e}")
-                
-                total_processed += success_count
-                
-                # Update progress bar description
-                if verbose:
-                    pbar.set_description(f"Batch {batch_idx+1}/{total_batches} ({total_processed}/{len(all_texts)} files)")
-                
-            except Exception as e:
-                if verbose:
-                    pbar.write(f"Error processing batch {batch_idx+1}: {e}")
+    for batch_idx, (texts, paths) in enumerate(zip(batched_texts, batched_filepaths)):
+        try:
+            if verbose:
+                print(f"\nProcessing batch {batch_idx+1}/{len(batched_texts)} with {len(texts)} files")
             
-            # Update progress bar
-            pbar.update(1)
+            outputs = to_tokens_and_logprobs(model, tokenizer, texts, disable_progress=True, quiet=True)
+            
+            for fp, df in zip(paths, outputs):
+                try:
+                    output_fp = output_root / f"{fp.stem}.csv"
+                    df.to_csv(output_fp, index=False)
+                except Exception as e:
+                    print(f"Error writing file {fp.name}: {e}")
+        except Exception as e:
+            print(f"Error processing batch {batch_idx+1}: {e}")
+        finally:
+            batch_pbar.update(1)
     
+    batch_pbar.close()
+            
     if verbose:
-        print(f"Surprisal calculation complete. Results saved to {output_dir}")
-        print(f"Successfully processed {total_processed} files")
+        print(f"Surprisal calculation complete for {model_name}. Results saved to {output_dir}")
 
 # trying this out
 def modified_to_tokens_and_logprobs(model, tokenizer, input_texts, verbose=False):
@@ -483,7 +484,7 @@ def modified_to_tokens_and_logprobs(model, tokenizer, input_texts, verbose=False
     
     return batch_results
 
-def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokenizer, pattern="*.txt", verbose=False):
+def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokenizer, model_name="human", pattern=None, verbose=False):
     """Calculate surprisals for existing text files
     
     Args:
@@ -491,34 +492,44 @@ def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokeni
         output_dir (str): Directory to save surprisal CSVs
         model: The language model to use
         tokenizer: The tokenizer for the model
-        pattern (str): Pattern to match files (default: "*.txt")
+        model_name (str): Name to identify the source (e.g., "human" or model name)
+        pattern (str): Pattern to match files. If None, uses "{model_name}_*.txt"
         verbose (bool): Whether to print detailed output
     """
     
     # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
     
-    # Get all text files
-    text_files = glob.glob(os.path.join(input_dir, pattern))
+    # Set up file pattern for matching
+    if pattern is None:
+        pattern = f"{model_name}_*.txt"
+    
+    # Get all text files matching the pattern
+    input_path = Path(input_dir)
+    text_files = list(input_path.glob(pattern))
+    
     if len(text_files) == 0:
         print(f"No text files found in {input_dir} matching pattern {pattern}")
         return
         
     if verbose:
-        print(f"Found {len(text_files)} text files in {input_dir}")
+        print(f"Found {len(text_files)} files in {input_dir} matching {pattern}")
+    
+    # Sort files to ensure consistent processing
+    text_files.sort()
     
     # Process files
     all_texts = []
     filepaths = []
     
     # Read all files first
-    for filepath in tqdm(text_files, desc="Reading files", disable=not verbose):
+    for filepath in tqdm(text_files, desc=f"Reading {model_name} files", disable=not verbose):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 text = f.read()
             if text.strip():
                 all_texts.append(text)
-                filepaths.append(Path(filepath))
+                filepaths.append(filepath)
         except Exception as e:
             if verbose:
                 print(f"Error reading {filepath}: {e}")
@@ -528,7 +539,7 @@ def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokeni
         return
         
     if verbose:
-        print(f"Successfully read {len(all_texts)} files")
+        print(f"Successfully read {len(all_texts)} files for {model_name}")
     
     # Process in batches
     batch_size = 20
@@ -543,7 +554,7 @@ def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokeni
     total_batches = len(batched_texts)
     
     # Use tqdm.auto for better terminal compatibility
-    with tqdm(total=total_batches, desc="Processing batches", disable=not verbose) as pbar:
+    with tqdm(total=total_batches, desc=f"Processing {model_name} batches", disable=not verbose) as pbar:
         for batch_idx, (texts, paths) in enumerate(zip(batched_texts, batched_filepaths)):
             try:
                 # Use quiet mode to prevent output during batch processing
@@ -558,7 +569,7 @@ def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokeni
                 
                 # Update progress bar description with counters
                 if verbose:
-                    pbar.set_description(f"Processing batch {batch_idx+1}/{total_batches} ({total_processed}/{len(all_texts)} files)")
+                    pbar.set_description(f"Processing {model_name} batch {batch_idx+1}/{total_batches} ({total_processed}/{len(all_texts)} files)")
                 
             except Exception as e:
                 if verbose:
@@ -569,9 +580,9 @@ def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokeni
     
     # Output final stats
     if verbose:
-        print(f"Surprisal calculation complete. Results saved to {output_dir}")
+        print(f"Surprisal calculation complete for {model_name}. Results saved to {output_dir}")
         print(f"Processed {total_processed} files")
         
         # Count actual output files
         output_files = list(output_root.glob("*.csv"))
-        print(f"Generated {len(output_files)} surprisal CSV files")
+        print(f"Generated {len(output_files)} surprisal CSV files for {model_name}")
