@@ -1,0 +1,87 @@
+=== UID Metrics Comparison Report ===
+
+== Source: mistral-7b-v0.1 ==
+Number of texts: 300
+
+tokens:
+  Mean:   398.2767
+  Median: 124.5000
+  StdDev: 428.6033
+  Min:    6.0000
+  Max:    1023.0000
+
+mean_surprisal:
+  Mean:   3.9935
+  Median: 4.0988
+  StdDev: 1.5878
+  Min:    0.3504
+  Max:    11.9522
+
+uid_variance:
+  Mean:   13.7221
+  Median: 12.6440
+  StdDev: 6.0923
+  Min:    2.4781
+  Max:    73.4710
+
+uid_pairwise:
+  Mean:   26.0766
+  Median: 23.3685
+  StdDev: 16.4677
+  Min:    1.6518
+  Max:    215.2110
+
+== Source: mistral-7b-instruct-v0.3 ==
+Number of texts: 300
+
+tokens:
+  Mean:   398.2767
+  Median: 124.5000
+  StdDev: 428.6033
+  Min:    6.0000
+  Max:    1023.0000
+
+mean_surprisal:
+  Mean:   3.9935
+  Median: 4.0988
+  StdDev: 1.5878
+  Min:    0.3504
+  Max:    11.9522
+
+uid_variance:
+  Mean:   13.7221
+  Median: 12.6440
+  StdDev: 6.0923
+  Min:    2.4781
+  Max:    73.4710
+
+uid_pairwise:
+  Mean:   26.0766
+  Median: 23.3685
+  StdDev: 16.4677
+  Min:    1.6518
+  Max:    215.2110
+
+
+=== Statistical Comparison ===
+
+
+== tokens Comparisons ==
+mistral-7b-v0.1 vs mistral-7b-instruct-v0.3:
+  Mann-Whitney U test: p-value = 1.000000 (no significant difference)
+  Effect size (Cohen's d): 0.0000 (negligible effect)
+
+== mean_surprisal Comparisons ==
+mistral-7b-v0.1 vs mistral-7b-instruct-v0.3:
+  Mann-Whitney U test: p-value = 1.000000 (no significant difference)
+  Effect size (Cohen's d): 0.0000 (negligible effect)
+
+== uid_variance Comparisons ==
+mistral-7b-v0.1 vs mistral-7b-instruct-v0.3:
+  Mann-Whitney U test: p-value = 1.000000 (no significant difference)
+  Effect size (Cohen's d): 0.0000 (negligible effect)
+
+== uid_pairwise Comparisons ==
+mistral-7b-v0.1 vs mistral-7b-instruct-v0.3:
+  Mann-Whitney U test: p-value = 1.000000 (no significant difference)
+  Effect size (Cohen's d): 0.0000 (negligible effect)
