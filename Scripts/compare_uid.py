@@ -488,6 +488,233 @@ def plot_token_length_vs_metrics(metrics_df, output_dir):
     except Exception as e:
         print(f"Error in binned analysis: {e}")
 
+def add_distribution_tests(metrics_df, output_dir):
+    """
+    Add Kolmogorov-Smirnov tests to compare distributions between models.
+    
+    Args:
+        metrics_df: DataFrame containing metrics for all models
+        output_dir: Directory to save the results
+    """
+    
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Get unique models
+    models = metrics_df['model'].unique()
+    
+    # Define metrics to compare
+    metrics_to_compare = [
+        'mean_surprisal', 
+        'uid_variance', 
+        'uid_pairwise'
+    ]
+    
+    # Skip if there's only one model
+    if len(models) < 2:
+        print("Need at least two models for distribution comparison tests")
+        return
+    
+    # Create a text file for the results
+    results_file = os.path.join(output_dir, 'distribution_test_results.txt')
+    
+    # Create a dataframe to store all results for plotting
+    test_results = []
+    
+    with open(results_file, 'w') as f:
+        f.write("=== Distribution Comparison Tests ===\n\n")
+        f.write("Kolmogorov-Smirnov tests compare if two distributions are different.\n")
+        f.write("Null hypothesis: The two samples come from the same distribution.\n")
+        f.write("Small p-values indicate the distributions are significantly different.\n\n")
+        
+        # For each metric, compare each pair of models
+        for metric in metrics_to_compare:
+            f.write(f"\n== {metric} Distribution Tests ==\n\n")
+            
+            # Create a plot for this metric
+            plt.figure(figsize=(10, 6))
+            
+            # Create a grid for pairwise comparisons
+            comparison_grid = np.zeros((len(models), len(models)))
+            p_values = np.ones((len(models), len(models)))
+            
+            for i, model1 in enumerate(models):
+                for j, model2 in enumerate(models):
+                    if i >= j:  # Skip diagonal and duplicates
+                        continue
+                        
+                    try:
+                        data1 = metrics_df[metrics_df['model'] == model1][metric].dropna()
+                        data2 = metrics_df[metrics_df['model'] == model2][metric].dropna()
+                        
+                        if len(data1) == 0 or len(data2) == 0:
+                            f.write(f"{model1} vs {model2}: Insufficient data for comparison\n")
+                            continue
+                        
+                        # Perform Kolmogorov-Smirnov test
+                        ks_stat, p_value = stats.ks_2samp(data1, data2)
+                        
+                        # Store test statistic in grid
+                        comparison_grid[i, j] = ks_stat
+                        comparison_grid[j, i] = ks_stat  # Symmetric
+                        
+                        # Store p-value in grid
+                        p_values[i, j] = p_value
+                        p_values[j, i] = p_value  # Symmetric
+                        
+                        # Write results to file
+                        f.write(f"{model1} vs {model2}:\n")
+                        f.write(f"  KS statistic: {ks_stat:.4f}\n")
+                        f.write(f"  p-value: {p_value:.8f}")
+                        
+                        # Add significance markers
+                        if p_value < 0.001:
+                            f.write(" (*** highly significant difference)\n")
+                        elif p_value < 0.01:
+                            f.write(" (** very significant difference)\n")
+                        elif p_value < 0.05:
+                            f.write(" (* significant difference)\n")
+                        else:
+                            f.write(" (not significant)\n")
+                        
+                        # Add info on which distribution has higher values
+                        mean1 = data1.mean()
+                        mean2 = data2.mean()
+                        median1 = data1.median()
+                        median2 = data2.median()
+                        
+                        f.write(f"  {model1}: mean={mean1:.4f}, median={median1:.4f}\n")
+                        f.write(f"  {model2}: mean={mean2:.4f}, median={median2:.4f}\n")
+                        
+                        if mean1 > mean2:
+                            f.write(f"  {model1} has higher average values than {model2}\n")
+                        else:
+                            f.write(f"  {model2} has higher average values than {model1}\n")
+                        f.write("\n")
+                        
+                        # Store results for plotting
+                        test_results.append({
+                            'metric': metric,
+                            'model1': model1,
+                            'model2': model2,
+                            'ks_statistic': ks_stat,
+                            'p_value': p_value,
+                            'significant': p_value < 0.05
+                        })
+                        
+                    except Exception as e:
+                        f.write(f"  Error comparing {model1} vs {model2}: {str(e)}\n\n")
+            
+            # Plot heatmap of test statistics
+            plt.figure(figsize=(10, 8))
+            mask = np.zeros_like(comparison_grid, dtype=bool)
+            mask[np.tril_indices_from(mask)] = True  # Mask lower triangle including diagonal
+            
+            sns.heatmap(
+                comparison_grid, 
+                annot=True, 
+                cmap='viridis', 
+                xticklabels=models,
+                yticklabels=models,
+                mask=mask,
+                fmt='.3f',
+                vmin=0
+            )
+            
+            plt.title(f'Kolmogorov-Smirnov Test Statistic for {metric}')
+            plt.tight_layout()
+            plt.savefig(os.path.join(output_dir, f'ks_test_{metric}.png'), dpi=300)
+            plt.close()
+            
+            # Plot heatmap of p-values with significance highlighting
+            plt.figure(figsize=(10, 8))
+            
+            # Log transform p-values for better visualization (and handle zeros)
+            log_p = -np.log10(np.maximum(p_values, 1e-10))  # -log10(p), with minimum p of 1e-10
+            
+            sns.heatmap(
+                log_p, 
+                annot=p_values,  # Show actual p-values
+                cmap='YlOrRd', 
+                xticklabels=models,
+                yticklabels=models,
+                mask=mask,
+                fmt='.3g',  # Scientific notation for small values
+                vmin=0
+            )
+            
+            plt.title(f'p-values for {metric} (Kolmogorov-Smirnov Test)\n-log10(p) color scale: darker = more significant')
+            plt.tight_layout()
+            plt.savefig(os.path.join(output_dir, f'ks_pvalue_{metric}.png'), dpi=300)
+            plt.close()
+        
+        # Summary section
+        f.write("\n\n=== Summary of Significant Differences ===\n\n")
+        for metric in metrics_to_compare:
+            sig_tests = [t for t in test_results if t['metric'] == metric and t['significant']]
+            if sig_tests:
+                f.write(f"{metric}: {len(sig_tests)} significant differences found\n")
+                for test in sig_tests:
+                    f.write(f"  {test['model1']} vs {test['model2']}: p={test['p_value']:.6f}\n")
+            else:
+                f.write(f"{metric}: No significant differences found\n")
+            f.write("\n")
+    
+    print(f"Distribution tests completed and saved to {results_file}")
+    
+    # Create distribution comparison plots with overlay of KS test p-values
+    for metric in metrics_to_compare:
+        plt.figure(figsize=(12, 8))
+        
+        # Create a distplot for each model
+        metric_data = []
+        for model in models:
+            data = metrics_df[metrics_df['model'] == model][metric].dropna()
+            sns.kdeplot(data, label=f"{model}", fill=True, alpha=0.3)
+            metric_data.append((model, data))
+        
+        # Add KS test p-values as annotations
+        for i in range(len(metric_data)):
+            for j in range(i+1, len(metric_data)):
+                model1, data1 = metric_data[i]
+                model2, data2 = metric_data[j]
+                
+                try:
+                    _, p_value = stats.ks_2samp(data1, data2)
+                    
+                    # Determine y position for annotation
+                    y_pos = 0.95 - 0.05 * (i * len(metric_data) + j)
+                    
+                    # Add significance markers
+                    sig_markers = ""
+                    if p_value < 0.001:
+                        sig_markers = "***"
+                    elif p_value < 0.01:
+                        sig_markers = "**"
+                    elif p_value < 0.05:
+                        sig_markers = "*"
+                    
+                    plt.annotate(
+                        f"{model1} vs {model2}: p={p_value:.4g} {sig_markers}",
+                        xy=(0.05, y_pos),
+                        xycoords='axes fraction',
+                        fontsize=8,
+                        bbox=dict(boxstyle="round,pad=0.3", fc="white", alpha=0.8)
+                    )
+                except:
+                    pass
+        
+        plt.title(f'Distribution of {metric} with KS Test Results')
+        plt.xlabel(metric)
+        plt.ylabel('Density')
+        plt.legend(title='Source')
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, f'distribution_{metric}_with_ks.png'), dpi=300)
+        plt.close()
+    
+    return results_file
+
 def main():
     parser = argparse.ArgumentParser(description='Compare UID metrics across different models and human texts')
     parser.add_argument('--directories', type=str, nargs='+', required=True, 
@@ -511,6 +738,11 @@ def main():
         create_correlation_heatmap(metrics_df, plots_dir)
         
         plot_token_length_vs_metrics(metrics_df, plots_dir)
+        
+        if len(metrics_df['model'].unique()) >= 2:
+            print("Performing distribution comparison tests...")
+            results_file = add_distribution_tests(metrics_df, plots_dir)
+            print(f"Distribution test results saved to {results_file}")
         
         print(f"Analysis complete. Results saved to {args.output_dir}")
         

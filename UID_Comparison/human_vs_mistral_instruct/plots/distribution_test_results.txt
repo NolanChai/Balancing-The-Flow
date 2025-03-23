@@ -1,0 +1,31 @@
+=== Distribution Comparison Tests ===
+
+Kolmogorov-Smirnov tests compare if two distributions are different.
+Null hypothesis: The two samples come from the same distribution.
+Small p-values indicate the distributions are significantly different.
+
+
+== mean_surprisal Distribution Tests ==
+
+  Error comparing human_texts vs mistral-7b-instruct-v0.3: name 'stats' is not defined
+
+
+== uid_variance Distribution Tests ==
+
+  Error comparing human_texts vs mistral-7b-instruct-v0.3: name 'stats' is not defined
+
+
+== uid_pairwise Distribution Tests ==
+
+  Error comparing human_texts vs mistral-7b-instruct-v0.3: name 'stats' is not defined
+
+
+
+=== Summary of Significant Differences ===
+
+mean_surprisal: No significant differences found
+
+uid_variance: No significant differences found
+
+uid_pairwise: No significant differences found
+
