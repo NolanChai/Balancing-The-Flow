@@ -59,13 +59,26 @@ def plot_distributions_comparison(metrics_df, output_dir):
         'uid_pairwise': 'UID Pairwise'
     }
     
+    # x-axis limits for each metric
+    x_limits = {
+        'mean_surprisal': None,
+        'uid_variance': (0, 100),
+        'uid_pairwise': (0, 100)
+    }
+    
     for metric in metrics_to_compare:
         plt.figure(figsize=(12, 6))
         
         for model in models:
             model_data = metrics_df[metrics_df['model'] == model]
+            
+            if metric in ['uid_variance', 'uid_pairwise']:
+                plot_data = model_data[model_data[metric] <= 100][metric].dropna()
+            else:
+                plot_data = model_data[metric].dropna()
+                
             sns.kdeplot(
-                model_data[metric].dropna(),
+                plot_data,
                 label=model,
                 color=color_dict[model],
                 fill=True,
@@ -77,6 +90,10 @@ def plot_distributions_comparison(metrics_df, output_dir):
         plt.ylabel('Density')
         plt.legend(title='Source')
         plt.grid(True, alpha=0.3)
+        
+        if x_limits[metric]:
+            plt.xlim(x_limits[metric])
+            
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, f'comparison_{metric}_density.png'), dpi=300)
         plt.close()
@@ -84,18 +101,23 @@ def plot_distributions_comparison(metrics_df, output_dir):
     for metric in metrics_to_compare:
         plt.figure(figsize=(10, 6))
         
+        if metric in ['uid_variance', 'uid_pairwise']:
+            plot_df = metrics_df[metrics_df[metric] <= 100].copy()
+        else:
+            plot_df = metrics_df.copy()
+        
         sns.boxplot(
             x='model', 
             y=metric, 
-            data=metrics_df,
-            hue='model',
+            data=plot_df,
+            hue='model',  
             width=0.6
         )
         
         sns.stripplot(
             x='model', 
             y=metric, 
-            data=metrics_df,
+            data=plot_df,
             size=3, 
             color='black',
             alpha=0.3,
@@ -107,6 +129,12 @@ def plot_distributions_comparison(metrics_df, output_dir):
         plt.ylabel(metric_labels[metric])
         plt.xticks(rotation=45, ha='right')
         plt.grid(True, alpha=0.3, axis='y')
+        
+        # set axis limits if this is uid_variance or uid_pairwise
+        if metric in ['uid_variance', 'uid_pairwise']:
+            plt.ylim(0, 100)
+            
+        # remove duplicate legend
         plt.legend([],[], frameon=False)
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, f'comparison_{metric}_boxplot.png'), dpi=300)
@@ -121,9 +149,16 @@ def plot_distributions_comparison(metrics_df, output_dir):
     for m1, m2 in metric_pairs:
         plt.figure(figsize=(10, 8))
         
+        # create scatterplot with regression lines for each model
         for i, model in enumerate(models):
             try:
-                model_data = metrics_df[metrics_df['model'] == model].dropna(subset=[m1, m2])
+                model_data = metrics_df[metrics_df['model'] == model].copy()
+                if m1 in ['uid_variance', 'uid_pairwise']:
+                    model_data = model_data[model_data[m1] <= 100]
+                if m2 in ['uid_variance', 'uid_pairwise']:
+                    model_data = model_data[model_data[m2] <= 100]
+                
+                model_data = model_data.dropna(subset=[m1, m2])
                 
                 plt.scatter(
                     model_data[m1],
@@ -148,6 +183,12 @@ def plot_distributions_comparison(metrics_df, output_dir):
         plt.title(f'Relationship Between {metric_labels[m1]} and {metric_labels[m2]}')
         plt.xlabel(metric_labels[m1])
         plt.ylabel(metric_labels[m2])
+        
+        if m1 in ['uid_variance', 'uid_pairwise']:
+            plt.xlim(0, 100)
+        if m2 in ['uid_variance', 'uid_pairwise']:
+            plt.ylim(0, 100)
+            
         plt.legend(title='Source')
         plt.grid(True, alpha=0.3)
         plt.tight_layout()
@@ -157,10 +198,15 @@ def plot_distributions_comparison(metrics_df, output_dir):
     for metric in metrics_to_compare:
         plt.figure(figsize=(12, 7))
         
+        if metric in ['uid_variance', 'uid_pairwise']:
+            plot_df = metrics_df[metrics_df[metric] <= 100].copy()
+        else:
+            plot_df = metrics_df.copy()
+        
         sns.violinplot(
             x='model',
             y=metric,
-            data=metrics_df,
+            data=plot_df,
             hue='model',
             inner='quartile',
             cut=0
@@ -171,6 +217,10 @@ def plot_distributions_comparison(metrics_df, output_dir):
         plt.ylabel(metric_labels[metric])
         plt.xticks(rotation=45, ha='right')
         plt.grid(True, alpha=0.3, axis='y')
+        
+        if metric in ['uid_variance', 'uid_pairwise']:
+            plt.ylim(0, 100)
+            
         plt.legend([],[], frameon=False)
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, f'comparison_{metric}_violin.png'), dpi=300)
