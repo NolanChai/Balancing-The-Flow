@@ -8,6 +8,7 @@ import seaborn as sns
 from pathlib import Path
 from tqdm import tqdm
 import matplotlib
+import sys
 matplotlib.use('Agg')
 
 def UID_variance(text):

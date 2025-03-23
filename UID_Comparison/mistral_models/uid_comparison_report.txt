@@ -62,6 +62,37 @@ uid_pairwise:
   Min:    5.3446
   Max:    1266.6540
 
+== Source: mistral-instruct-01 ==
+Number of texts: 300
+
+tokens:
+  Mean:   170.8600
+  Median: 147.0000
+  StdDev: 131.2398
+  Min:    4.0000
+  Max:    1023.0000
+
+mean_surprisal:
+  Mean:   3.7560
+  Median: 3.5511
+  StdDev: 1.0314
+  Min:    0.0984
+  Max:    13.0611
+
+uid_variance:
+  Mean:   10.9123
+  Median: 10.4217
+  StdDev: 3.3880
+  Min:    1.3136
+  Max:    29.3974
+
+uid_pairwise:
+  Mean:   22.4881
+  Median: 21.0395
+  StdDev: 9.7524
+  Min:    1.3757
+  Max:    119.5539
+
 
 === Statistical Comparison ===
 
@@ -70,18 +101,42 @@ uid_pairwise:
 mistral-7b-instruct-v0.3 vs mistral-7b-v0.1:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.6197 (medium effect)
+mistral-7b-instruct-v0.3 vs mistral-instruct-01:
+  Mann-Whitney U test: p-value = 0.083873 (no significant difference)
+  Effect size (Cohen's d): 0.0881 (negligible effect)
+mistral-7b-v0.1 vs mistral-instruct-01:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.6662 (medium effect)
 
 == mean_surprisal Comparisons ==
 mistral-7b-instruct-v0.3 vs mistral-7b-v0.1:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.4066 (small effect)
+mistral-7b-instruct-v0.3 vs mistral-instruct-01:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.4184 (small effect)
+mistral-7b-v0.1 vs mistral-instruct-01:
+  Mann-Whitney U test: p-value = 0.322717 (no significant difference)
+  Effect size (Cohen's d): 0.0407 (negligible effect)
 
 == uid_variance Comparisons ==
 mistral-7b-instruct-v0.3 vs mistral-7b-v0.1:
   Mann-Whitney U test: p-value = 0.000058 (highly significant difference)
   Effect size (Cohen's d): 0.2458 (small effect)
+mistral-7b-instruct-v0.3 vs mistral-instruct-01:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.6779 (medium effect)
+mistral-7b-v0.1 vs mistral-instruct-01:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.3137 (small effect)
 
 == uid_pairwise Comparisons ==
 mistral-7b-instruct-v0.3 vs mistral-7b-v0.1:
   Mann-Whitney U test: p-value = 0.850375 (no significant difference)
   Effect size (Cohen's d): 0.2009 (small effect)
+mistral-7b-instruct-v0.3 vs mistral-instruct-01:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.5189 (medium effect)
+mistral-7b-v0.1 vs mistral-instruct-01:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.2693 (small effect)

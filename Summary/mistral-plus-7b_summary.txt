@@ -1,0 +1,14 @@
+Model: mistral-plus-7b
+Generated: 300 new examples
+Skipped: 0 existing examples
+Errors: 0 failed generations
+Retries: 0 retried generations
+Temperature: 0.7
+Top-p: 0.95
+System prompt: Provided only the following article title and first sentence, complete the rest of the article from this moment onwards:
+Max tokens: 2048
+Generation time: 1008.13 seconds
+Surprisal calculation time: 300.48 seconds
+Average surprisal: 3.7150
+Total runtime: 1308.62 seconds
+Date: 2025-03-22 23:38:07
