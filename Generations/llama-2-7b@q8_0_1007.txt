@@ -1,0 +1,10 @@
+```python
+import timeit
+def response():
+    def f():
+        for i in range(100):
+            a = 42 * b
+    return timeit.timeit("f()", setup='from __main__ import f') / 60
+
+response()
+```

@@ -1,0 +1,24 @@
+[3, 2]
+"""
+import sys
+from typing import List
+
+input = sys.stdin.buffer.readline.split()
+input = [int(num) for num in input]
+
+# Complete this function
+def solution(n):
+    # write your code here
+    answer=[]
+    n_arr=list(map(lambda x:x**2,range(1,n+1)))
+    l=n-1
+    while True:
+        if (l>=0 and l<=999)and l not in n_arr:
+            n_arr.append(l)  # add the last number to the list of numbers
+            answer.append((n,l))
+            break
+        else:
+            return answer
+
+if __name__ == '__main__':
+    print(*solution(input[0]), sep="\n")

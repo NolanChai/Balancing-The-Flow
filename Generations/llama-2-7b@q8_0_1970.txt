@@ -1,0 +1,27 @@
+
+I tried to write the solution without any comments but I couldn't do it, so here we go:
+
+1. There are 6 characters in the first part that make 2^3 of them:
+    * A
+    * B
+    * C
+    * D
+    * E
+    * F
+    
+2. There are 7 characters in the second part that make 2^5 of them:
+    * G
+    * H
+    * I
+    * J
+    * K
+    * L
+    * M
+    
+3. I created a boolean array and fill it up with the characters from step 2, if it's true then there is one character that has the same value as in step 1:
+`int mask = new int[7]; for (int i=0;i<6;++i) mask[i]=i&mask[i];`
+
+4. After filling up `mask`, I created a `char[]` with all possible values of the characters from both parts and then checked if there is at least one character from first part that has the same value as in second part:
+    * `char[] mask1={'A','B','C','D','E','F'};`
+    * `char[] mask2={'G','H','I','J','K','L','M';}`
+    * `boolean match = false; for(int i=0;i<7;++i){if (mask1[i]==mask2[i]){match=true;} }`

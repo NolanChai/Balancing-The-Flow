@@ -1,0 +1,5 @@
+
+1. By using the given list of numbers we can calculate each number in the sequence using modulus.
+2. We know that the next number is 4375 - 5000 = -625. Because the list has a start value (4375) and an end value (14650).
+3. Therefore, if we take away 625 from the next number in sequence it will give us 375, which is then added to our result by using modulus.
+4. Then, once this has been done for all numbers in the list we have the sequence: 1000, -225, -500, 195, 265, 300 and finally 375.

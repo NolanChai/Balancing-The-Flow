@@ -1,0 +1,23 @@
+
+```py
+def get_subway(s):
+    l = list()
+    for i in range(len(s)):
+        if s[i] == 'D':
+            l += [3]
+        elif s[i] == 'A':
+            l += [1, 2, -1, -2]
+        else:
+            l += [-1,-2,-3]
+    return l
+    
+def is_valid(s):
+    if len(s) <= 0 or len(s) > 28 or len([i for i in s if i != 'A'] + [i for i in s if i != 'D']) != 2:
+        return False
+    return True
+    
+def subway_instruction():
+    s = input()
+    l = get_subway(s)
+    print(l[0])
+```

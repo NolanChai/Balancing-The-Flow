@@ -1,0 +1,7 @@
+(The first method is the most common, and is used in the video.)
+```python
+a = 5
+b = a // 2
+```
+### Explanation:
+The output of `a//2` is 2 because we divide `a`, which has value of `5`, by two (which equals to 1) and then the resultant integer is stored in b.

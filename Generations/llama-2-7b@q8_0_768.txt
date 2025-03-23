@@ -1,0 +1,16 @@
+
+```json
+{ "result": true }
+```
+
+### Description:
+
+Add a user with the same username, password and email as an existing user.
+
+### Parameters:
+
+| Parameter | Type   | Required  | Default | Description                     | Example                        |
+| -------- | ------ | ---------- | ------- | ------------------------------- | ------------------------------ |
+| userName | string | true       |         | User's name.                    | `john`                        |
+| password | string | true       |         | Password for the new user.      | `mySecretPassword`            |
+| email    | string | false      |         | Email address for the new user.  | `john@example.com`           |

@@ -1,0 +1,59 @@
+```javascript
+function createRainbow(image) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(image, 0, 0);
+
+  // get the image data as an array of pixels
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+  // convert RGB to HSL using the following formulas:
+  // H = 60 * (R - G) / Math.abs(R - G) + Math.max(R, G, B) % 6
+  // S = Math.max(R, G, B) - Math.min(R, G, B);
+  // L = Math.max(R, G, B) / 255;
+
+  for (let i = 0; i < imageData.data.length; i += 4) {
+    const r = imageData.data[i];
+    const g = imageData.data[i + 1];
+    const b = imageData.data[i + 2];
+    const hsl = [0, 0, 0]; // initialize HSL array
+
+    if (r === g && g === b) {
+      // grayscale pixel
+      hsl[1] = 0;
+      hsl[2] = r / 255;
+    } else {
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      const delta = max - min;
+
+      // handle saturation and lightness
+      hsl[1] = max === 0 ? 0 : delta / max;
+      hsl[2] = max / 255;
+
+      // calculate Hue value
+      if (r === max) {
+        hsl[0] = (g - b + 360) % 360;
+      } else if (g === max) {
+        hsl[0] = (b - r + 120) % 360;
+      } else {
+        hsl[0] = (r - g + 240) % 360;
+      }
+    }
+
+    // convert HSL to RGB using the following formulas:
+    // R = Math.min(1, hue + (lightness * (1 - saturation)));
+    // G = Math.min(1, hue + (lightness - (255 - saturation)) / 6);
+    // B = Math.min(1, hue + (lightness - (435 - saturation) / 6));
+
+    imageData.data[i] = Math.round(hsl[0] + (hsl[2] * (1 - hsl[1]))); // R
+    imageData.data[i + 1] = Math.round(hsl[0] + ((hsl[2] - (255 - hsl[1])) / 6)); // G
+    imageData.data[i + 2] = Math.round(hsl[0] + ((hsl[2] - (435 - hsl[1])) / 6)); // B
+
+    // set the new pixel data to the canvas context
+    ctx.putImageData(imageData, 0, 0);
+  }
+
+  return canvas;
+}
+```

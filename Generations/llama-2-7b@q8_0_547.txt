@@ -1,0 +1,22 @@
+1. Write a program that takes input from standard input. It should read in the lines below, which are the words spoken by Obama at his first inaugural address.
+```
+You can put it in your own file if you like.
+
+"Today we affirm a new era of responsibility."
+"Our journey is not complete until our gay brothers and sisters are treated like anyone else under the law - for if we are truly created equal, then surely the love we commit to one another must be equal as well."
+```
+
+2. The program should store this input in an array of strings named "words". This array must be created before any other operations are performed.
+3. Each word (e.g. 'equality') should have a counter (i.e. count) assigned to it which keeps track how often that word has been found in the array. These counters are initialized to 0 before processing begins.
+4. Your program should also print out, for each line of input, the following information:
+- The number of words spoken during this line.
+- How many times this word has occurred previously (i.e. its count).
+5. Your program should print a header row (not part of your output) showing how many lines in total there were. This is useful for keeping track of the program's progress.
+6. The array should be sorted, with words printed out in descending order by their counts, so that all words with the same count appear together.
+7. If there are no two words that have equal frequencies, print 'No words occur more than once.'
+8. Otherwise, output each word and its frequency together with a newline.
+```
+"America, in the face of our common dangers..."
+"For if we fail to meet this challenge - as nations and as a global community - we will surely regret it."
+```
+9. Create another array named "duplicate". This is an array of indexes that indicates where words occur more than once, e.g. [10, 26] would indicate the first two occurrences of 'equality' are at indices 10 and 26. If there are no duplicate words, your program should output a message to this effect (e.g. "No duplicate words found")

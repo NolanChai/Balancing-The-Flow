@@ -1,0 +1,14 @@
+I'm sorry to say that this is just sad.
+
+### Explanation:
+### Hints:
+- We need the word count of a string. The string can have spaces but we don’t want to check if it contains any symbols or punctuation (‘ ‘, , :)
+```python
+def word_count(string):
+    return len(string.split())
+```
+### Tests:
+```python
+assert word_count('  I LOVE MY GIRLFRIEND!') == 3
+assert word_count('THIS IS A TEST SENTENCE WITH LOTS OF WORDS AND SENTENCES IN IT. IT'S REALLY BAD AT MAKING POINTS. THANKS FOR YOUR TIME.') == 20
+```

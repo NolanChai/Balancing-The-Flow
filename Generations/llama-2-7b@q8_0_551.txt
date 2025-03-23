@@ -1,0 +1,11 @@
+```python
+from sklearn import tree_model
+tree_model = tree_model.DecisionTreeClassifier()
+
+# predict
+label = 1 if 0 < x <= 3 else 2
+print(tree_model.predict([x])[0]) # print the predicted result
+```
+
+### Reference:
+[https://github.com/christianperrin/cnn-practice](https://github.com/christianperrin/cnn-practice)

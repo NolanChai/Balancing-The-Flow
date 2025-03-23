@@ -1,0 +1,7 @@
+<table style="width:100%;">
+  <tr>
+    <td>
+      <button onclick="clickFunction()" id="click1" type="button" name="click1" class="button">Click</button>
+    </td>
+  </tr>
+</table>

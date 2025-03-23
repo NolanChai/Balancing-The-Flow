@@ -1,0 +1,1 @@
+In order to get rid of all the brackets and extra spaces we use `strip()` which is used for removing whitespaces from the string. And then we remove any empty strings by using `[-1]` to slice the last character of the array, this will not cause an error if there are no empty strings in the list, so it's a very safe approach.

@@ -1,0 +1,23 @@
+```javascript
+
+// Solution to https://www.codewars.com/kata/54fcd86cae3f19c7d00021ff/python
+# -*- coding: utf-8 -*-
+
+from io import open as io_open # To support Python 2.x and 3.x
+from collections import defaultdict # To support Python 2.x only
+import sys
+sys.path.append('.')
+
+def main():
+    f = io_open('../input/day01.txt', 'r', encoding='utf-8').read().splitlines()
+    n_cases = int(f[0].strip())
+    for case in range(n_cases):
+        instructions, n_instructions = [int(i) for i in f[case+1:][::2]] # The second instruction is ignored!
+        for _ in range(instructions): # The first instruction is the base case (1110)
+            print("".join(['0' if a == 0 else '1' for a in int2str(f[case], 2)])) # 10,100,0...00,01,10
+        break
+    return 0
+    
+if __name__ == "__main__":
+    sys.exit(main())
+```

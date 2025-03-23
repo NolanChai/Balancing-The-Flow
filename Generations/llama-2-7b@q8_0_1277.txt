@@ -1,0 +1,4 @@
+The solution will be the first argument of the lambda function. The body of the lambda function will be the following:
+```
+if (x % 2 == 0) return x*x; else return x-1;
+```

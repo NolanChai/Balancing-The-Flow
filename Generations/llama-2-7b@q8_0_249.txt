@@ -1,0 +1,13 @@
+```python
+def solution(num_sharks):
+    """
+        :type num_sharks: int
+        :rtype: List[int]
+    """
+    ret = []
+    for i in range(0, num_sharks+1):
+        # for i < j, i and j will never be zero
+        if i > 0:
+            # for i != j, they can never be equal
+            ret.append((i-1, i-1))
+    return ret

@@ -1,0 +1,37 @@
+```java
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        for (int i = 0; i < t; i++) {
+            String s1 = sc.nextLine();
+            String s2 = sc.nextLine();
+            char[] a = s1.toCharArray();
+            char[] b = s2.toCharArray();
+            int m = a.length;
+            int n = b.length;
+            int dp[][] = new int[m + 1][n + 1];
+            for (int i = 0; i <= m; i++) {
+                for (int j = 0; j <= n; j++) {
+                    if(i==0 || j == 0)
+                        dp[i][j] = 0;
+                    else if(a[i-1] == b[j-1])
+                        dp[i][j] = dp[i - 1][j - 1] + 1;
+                    else
+                        dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+                }
+            }
+            System.out.println(dp[m][n]);
+        }
+        sc.close();
+    }
+}
+```
+### Explanation:
+This program solves the Longest Common Subsequence problem using dynamic programming. The input is two strings, and we use a 2D array (`dp[][]`) to store the results of all possible subproblems. We iterate through the 2D array starting from the bottom right corner, filling in values based on whether the current characters are equal or not.
+
+In each iteration, we compare the current character of both strings and if they are equal, we increase the value by 1 to represent the longest common subsequence. If they are not equal, we take the maximum of either subtracting one from the current row or column, as those values represent the longest common subsequence for the previous row or column respectively.
+
+After filling in all possible subproblems, the value at the bottom left corner of the 2D array represents the length of the longest common subsequence.

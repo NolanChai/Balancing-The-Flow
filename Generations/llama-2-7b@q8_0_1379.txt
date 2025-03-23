@@ -1,0 +1,10 @@
+```python
+import json
+from collections import Counter
+
+data = open('PSG_score.json', 'r').read()  # Open file and read content as string
+result = json.loads(data)
+print result['scores']
+count = Counter(result['scores'])
+print count
+```

@@ -1,0 +1,37 @@
+*BINGO!*
+
+#### 0
+```python
+import pandas as pd
+from sklearn import linear_model
+
+data = [['A', '1'], ['B', '2']]
+X = data[:,0].values
+y = data[:,1].values
+
+linear_model.LinearRegression().fit(X, y)
+```
+
+#### 1
+```python
+import pandas as pd
+from sklearn import linear_model
+
+data = [['A', '1'], ['B', '2']]
+X = data[:,0].values
+y = data[:,1].values
+
+linear_model.LinearRegression().fit(pd.DataFrame([[X], y]).T).predict()
+```
+
+#### 2
+```python
+import pandas as pd
+from sklearn import linear_model
+
+data = [['A', '1'], ['B', '2']]
+X = data[:,0].values
+y = data[:,1].values
+
+linear_model.LinearRegression().fit(pd.DataFrame([[X]]).T).predict()
+```

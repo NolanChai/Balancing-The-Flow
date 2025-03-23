@@ -1,0 +1,16 @@
+This is a sample solution that you can submit as it is or use parts of it for your own submission.
+
+---
+
+- [ ] Code to create an array with all of the test cases in it and the expected output.
+  - [ ] The output should include the initial call input (first argument) followed by a newline character and then a new line for each expected test case.
+    - [X] You can use any console utilities that you want to help with this (e.g., `console.log()`).
+- [ ] Code to create a function called `sumTwoNumbers` that accepts two numbers as input, adds them together, and returns the sum of the two numbers.
+  - [ ] Your function should accept both the two numbers as parameters, but it must return the sum of these numbers.
+    - [X] You can use any console utilities that you want to help with this (e.g., `console.log()`).
+- [ ] Code to create a function called `double` that accepts one number and returns the doubled value of the input.
+  - [ ] Your function should accept a single number as the argument and return double of what the user has input.
+    - [X] You can use any console utilities that you want to help with this (e.g., `console.log()`).
+- [ ] Code to create a function called `squareroot` that accepts one number and returns the square root of the input.
+  - [ ] Your function should accept a single number as the argument and return square root of what the user has input.
+    - [X] You can use any console utilities that you want to help with this (e.g., `console.log()`).

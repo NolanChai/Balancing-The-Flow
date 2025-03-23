@@ -1,0 +1,30 @@
+```
+$ whoami
+root
+```
+### Task:
+
+* Find the IP address of the victim and report it to police.
+
+### Solution:
+
+* The IP address is 10.245.79.128
+
+```
+$ nmap -sS 10.10.10.132 -p- --min-rate 1000 -oG allports | grep "Nmap scan report for"
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-04-15 18:28 CDT
+Nmap scan report for 10.10.10.132
+Host is up (0.023s latency).
+Not shown: 65534 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.9p1 Debian 10+deb9u6 (protocol 2.0)
+| ssh-hostkey:
+|   2048 ff:d3:f0:88:5e:c2:0c:a2:be:47:9b:8d:d3:13:97:61 (RSA)
+|   256 27:4c:02:1f:26:32:f6:f4:21:d8:91:a7:cf:2e:7b:bf (ECDSA)
+|_  256 cf:c6:fb:a4:ee:6b:70:a4:be:3b:fe:7f:10:24:4d:93 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.29 ((Debian))
+|_http-server-header: Apache/2.4.29 (Debian)
+|_http-title: Welcome to nginx!
+
+Nmap done: 1 IP address (1 host up) scanned in 23.86 seconds
+```

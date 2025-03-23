@@ -1,0 +1,21 @@
+
+```python
+import re
+import sys, os
+
+def main():
+    for line in sys.stdin:
+        if "A United Airlines flight" in line:
+            line = re.split("[^a-zA-Z0-9]+", line)
+            for word in line[::2]:
+                print(word, end=" ")
+            print()
+            
+main()
+```
+### Output:
+
+```python
+A United Airlines flight
+from Nashville to Houston was forced to turn around on Sunday after a 43-year-old woman threatened another passenger who asked her to turn her cell phone off.
+```

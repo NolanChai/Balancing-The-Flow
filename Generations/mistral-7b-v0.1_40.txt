@@ -1,0 +1,19 @@
+```python
+def solution(x):
+    if x>0:
+        return 1
+    elif x<0:
+        return -1
+    else:
+        return 0
+```
+
+### Result:
+```python
+solution(1)
+1
+solution(-1)
+-1
+solution(0)
+0
+```

@@ -1,0 +1,15 @@
+<iframe src="https://public.tableau.com/views/RomanticCityUK/Dashboard1?:embed=y&amp;:showVizHome=no" style="width: 0px; height: 0px; border: none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+
+<p>The data is a list of the most romantic cities in the UK, as voted for by the British public. The graph shows the 10 most and least romantic cities in the UK.</p>
+
+<p>To create this graph I first created an if statement to create 2 lists: <b>'most-romantic'</b> and <b>'least-romantic'</b>. These lists are then used as sources for the graph, with <b>'most-romantic'</b> being the source list for the bars at the top of the chart, and <b>'least-romantic'</b> being the source list for the bars at the bottom of the graph. The x-axis is a list of city names and is sourced from the data.</p>
+
+<p>The colour of each bar represents how many votes the city has received, with red representing 1 vote, orange representing 2 votes etc.</p>
+
+### Conclusion:
+<p>As a conclusion I can say that it is clear to see which cities are considered romantic and which aren't. London was considered the most romantic in the UK and Hull the least. It is interesting to see that Leeds, where I live, came second last as the most romantic city in the UK.</p>
+
+### Further Development:
+<p>A good next step for this would be to add more information about each of the cities on the graph, such as the number of votes each city has received. This could be done by adding a tooltip to each bar to show the amount of votes and maybe the percentage of the total votes that each city has received.</p>
+
+<p>I would also like to add a map of the UK with a colour scale so you can see where the most romantic cities are and compare it to the graph.</p>

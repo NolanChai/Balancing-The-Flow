@@ -1,0 +1,44 @@
+
+This is the solution that I came up with (I didn't think about it for too long and this was my first attempt):
+
+```py
+class Solution(object):
+    def findHiddenShoppingMall(self, locations):
+        """
+        :type locations: List[List[int]]
+        :rtype: int
+        """
+        n = len(locations)
+        dp = [[0 for _ in range(n)] for _ in range(n+1)]
+        
+        for i, l in enumerate(locations):
+            # left 
+            if locations[i-1][0] == 1:
+                dp[i][0]=dp[i-1][0]+l[0]+1
+            
+            # right
+            if locations[i+1][0] == 0:
+                dp[i][0]=dp[i-1][0]+(1+locations[i][0])
+                
+        for j in range(n):
+            if not (j < i or j > n - i):
+                continue
+            
+            for i, l in enumerate(locations[:j]):
+                # left 
+                if locations[i+1-j][0] == 1:
+                    dp[i+j][j]=dp[i][j]+l[0]+1
+                
+            for i, l in enumerate(locations[j:]):
+                # right 
+                if locations[i-j][0] == 0:
+                    dp[i][j]=dp[i][j]+(1+locations[i][0])
+        
+        return min(dp)
+```
+
+### Explain:
+
+The idea is to maintain a two dimensional array with the current location and its 4 directions (up, down left, right). If one of those locations has `1`, it means that there is another shopping mall in that direction. We start from the first location and check each row (`i`) in the second dimension (`j`).
+
+The first step would be to check if we are in the same row as the previous location (`left` or `right`), so we update the value accordingly. If we are not in the same row, then we need to find the direction that has a `1`. We start from the right side and go down.

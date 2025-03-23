@@ -1,0 +1,14 @@
+```python
+import numpy as np
+from datetime import date, timedelta
+
+# Create a numpy array for dates (in format yyyymmdd)
+date_array = pd.date_range('2017-02-05', periods=10)
+
+# Convert to days
+day_array = np.asarray([d - date(2017, 2, 5) for d in date_array])
+
+# Convert to weeks
+week_array = np.round(np.diff(day_array)/7, decimals=3)
+print(type(week_array)) # <class 'numpy.integer'>
+```

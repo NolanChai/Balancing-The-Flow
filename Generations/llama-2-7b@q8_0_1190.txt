@@ -1,0 +1,11 @@
+
+```python
+from collections import Counter
+
+def solution(s):
+    count = Counter([int(word[:-2]) for word in s.split(" ") if len(word) > 1])
+    
+    # print("Count: {}".format(count))
+    return sorted([(value, count[key]["count"])
+                   for key, value, _ in count.items()])
+```

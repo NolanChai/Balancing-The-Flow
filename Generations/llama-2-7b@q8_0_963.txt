@@ -1,0 +1,29 @@
+```py3
+from collections import defaultdict
+def solution():
+    tank_numbers = set()
+    
+    # Read and store the list of tanks
+    for line in open('input/04'):
+        # Get the tank number
+        tank, number = map(int,line.split())
+        
+        # Add the tank number to the set
+        tank_numbers.add(tank)
+    
+    # Map the tanks to their tank number
+    tanks = defaultdict(list)
+    
+    # Go through all lines of input and add each numbered tank
+    for line in open('input/05'):
+        
+        # Get the tank number
+        tank, number = map(int,line.split())
+        
+        # Add it to the list of tanks that tank is in
+        tanks[tank].append(number)
+    
+    # Print each line of input twice (once for each tank)
+    for line in open('input/06'):
+        print(*[tank_numbers.get(n, "?")+tank for n,tank in tanks.items()], sep=" ")
+```

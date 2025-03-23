@@ -1,0 +1,15 @@
+```python
+def solution(words):
+    words_dict = dict()
+    for w in words:
+        if (w not in words_dict) and (w[0] != '-'): # If it's not an article or preposition, put it in the dictionary.
+            words_dict[w] = 1
+            
+    def recur(w): # Recursive function to help you count occurrences of a word in a list:
+        if (w in words_dict):
+            return words_dict[w] + recur(words[len(words) - 1]) # Get the last word and recursively add that number to our count. 
+        else:
+            return 0
+    
+    return sum(recur(w) for w in words if len(w) == 1) # Sum all occurrences of single-letter words (except articles or prepositions).
+```

@@ -1,0 +1,14 @@
+
+The best way to answer this question is by giving two reasons for doing something that can be classified as "good". For example:
+
+```python
+def main():
+    print("Hello")
+main()
+```
+
+This will not pass because we have only one argument in our function, which is the print statement. The above code can be changed to this:
+
+```python
+print(3 + 5) # prints 8
+```

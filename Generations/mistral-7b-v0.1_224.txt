@@ -1,0 +1,43 @@
+The question is not about the location of the castle but how many rooms are in the castle.
+I have written a program that will take a number from the user and give them the result of the calculation.
+The program is designed to be used with a terminal such as VSCode or Windows PowerShell.
+
+### Inputs:
+The user enters a number between 1-4294967295 (inclusive) and presses enter.
+
+### Outputs:
+The program will output the result of the calculation to the console window in the terminal.
+It will also display a message if the input was not valid or if an error occurred during execution.
+
+### Example Usage:
+```
+Please enter the number of rooms (between 1 and 4294967295): 3000000
+The castle has 3000000 rooms.
+Press any key to continue...
+```
+### Execution:
+You can run the program by navigating to the project directory using your terminal and running the following command:
+
+```
+python3 main.py
+```
+The program will ask for a number of rooms, perform the calculation and output the result to the console window in the terminal.
+
+### Limitations:
+The program has been tested on Python 3.9.12 on Windows 11 and should work with other versions of Python and operating systems as long as they support the required modules.
+However, it has not been extensively tested on all platforms so there may be some minor differences in behavior depending on your setup.
+
+### Requirements:
+The program requires Python 3.9 or higher to run.
+It also depends on the following modules being installed:
+```
+math
+os
+sys
+```
+If you do not have these modules installed, you can install them using pip by running the following command in your terminal:
+```
+pip install math
+pip install os
+pip install sys
+```

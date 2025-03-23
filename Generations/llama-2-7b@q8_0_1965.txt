@@ -1,0 +1,36 @@
+
+```
+import java.io.*;
+import java.util.*;
+
+class Solution {
+    public int maxProfit(String[] orders) {
+        HashMap<Integer, List<Integer>> hashMap = new HashMap<>();
+        for (int i = 0; i < orders.length - 1; ++i) {
+            String s = orders[i];
+            if (!s.equals("")) {
+                int k = Integer.parseInt(orders[i].split(" ")[0]);
+                int v = Integer.parseInt(orders[i].split(" ")[1]);
+                if (hashMap.containsKey(k)) {
+                    hashMap.get(k).add(v);
+                } else {
+                    List<Integer> list = new ArrayList<>();
+                    list.add(v);
+                    hashMap.put(k, list);
+                }
+            }
+        }
+        
+        int res = 0;
+        for (List<Integer> temp : hashMap.values()) {
+            if (temp != null) {
+                for (int i = 1; i < temp.size(); ++i) {
+                    res += Math.min(temp.get(i - 1), temp.get(i));
+                }
+            }
+        }
+        
+        return res;
+    }
+}
+```

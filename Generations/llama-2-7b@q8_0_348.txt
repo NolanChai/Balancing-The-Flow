@@ -1,0 +1,10 @@
+
+Give the sentence you think fits this scenario:
+
+```python
+from string import lowercase
+def rape(woman, men):
+    return "Rape" + lowercase((woman, men)) # or what?
+
+print(rape("Jane", ["John", "Jim"]))
+```

@@ -1,0 +1,8 @@
+```python
+import nltk
+from nltk import word_tokenize, pos_tag
+
+sentences = [line.strip() for line in open('input.txt', 'r').readlines()]
+words = [w for sent in sentences for w in word_tokenize(sent)]
+tags = [p for sent in sentences for p in pos_tag(word_tokenize(sent))]
+```

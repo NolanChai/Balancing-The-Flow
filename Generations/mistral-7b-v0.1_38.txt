@@ -1,0 +1,30 @@
+[This is a sample response](http://www.cnn.com/2011/CRIME/10/28/ohio.death.sentence/)
+
+
+#### Instructions:
+- Create a [conditional statement](https://docs.python.org/3/tutorial/controlflow.html#if-statements) to check if the value of `response` is in the `True` or `False`.
+- If the response is `True`, print out "The CNN article has a response" and then print out the URL that we got from the API call.
+- If the response is `False`, print out "No response found for CNN."
+
+#### Hint:
+- You may want to use `response` in the conditional statement, but you will also need to compare it to a literal value.
+- You can use `print()` to output to the terminal.
+
+#### Bonus Challenge:
+- How would you have to modify your code if we wanted to get responses for multiple sites?
+- If the response is `False`, print out "No response found for CNN and NYT" instead of just "No response found for CNN."
+
+#### Solution:
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=1865302e9a9d4d89b47f163cbd5164c9"
+response = requests.get(url).json()['articles'][0]['url']
+
+if response:
+    print('The CNN article has a response')
+    print(response)
+else:
+    print("No response found for CNN")
+```

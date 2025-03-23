@@ -1,0 +1,17 @@
+```sh
+$ python3 same_sex_marriage.py
+
+--------------------
+Step 1: Reading input
+--------------------
+Reading from stdin...
+True -> True, False -> False
+--------------------
+Step 2: Calculation
+--------------------
+(True and True) or (False and True) = True
+--------------------
+Step 3: Print output
+--------------------
+You are a supporter of same-sex marriage.
+```

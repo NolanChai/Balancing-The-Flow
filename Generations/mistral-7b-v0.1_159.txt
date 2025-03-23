@@ -1,0 +1,24 @@
+```python
+import geopy
+from geopy.geocoders import Nominatim
+
+location = input('Enter a location: ')
+geolocator = Nominatim(user_agent="myGeocoder")
+place = geolocator.geocode(location)
+lat = place.latitude
+lon = place.longitude
+print("Latitude:", lat)
+print("Longitude:", lon)
+```
+
+### Output:
+```python
+Enter a location: uxbridge
+Latitude: 51.56320899999999
+Longitude: -0.475611
+```
+
+### Explanation:
+The code imports the geopy and Nominatim modules. It then prompts the user to enter a location, which is stored in the `location` variable. The geolocator is initialized with the Nominatim geocoder and used to find the location of the input using the `geocode()` method.
+
+The latitude and longitude of the location are extracted from the `place` object and printed to the console.

@@ -1,0 +1,24 @@
+- In your solution, print out the first and last name of each person (if you can get that information).
+
+### Part 1 - Find the missing person's name.
+![](img/01.png)
+
+**Part One Solution**
+```python
+name = ["Sara", "Megan", "Sarah", "Gretchen"]
+[print(a), print(b)] for a, b in zip(name, [0]*len(name)):
+    if b == 4:
+        name.remove(b)
+```
+
+### Part 2 - Find the missing person's age.
+![](img/01_age.png)
+
+**Part Two Solution**
+```python
+name = ["Sara", "Megan", "Sarah", "Gretchen"]
+[print(a), print(b)] for a, b in zip(name, [0]*len(name)):
+    if b == 4:
+        age = input("What is the missing person's age? ")
+        break
+```

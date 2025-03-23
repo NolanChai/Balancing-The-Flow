@@ -1,0 +1,41 @@
+> "I know I could just use a regular black pen but what if I wanted to make a blood red heart?" - Bella Swan
+
+# 707: Coolest T-shirt Design Contest
+
+## Description
+The principal of the high school is holding a contest for the coolest design on a t-shirt. You are asked to draw a few ideas, and the one with the most votes wins!
+
+## Input Format
+You will be given 2 lines in which the first line contains two integers: `n` (the number of designs) and `k`. The second line will contain the `k` designs (each design is separated by a single space). The `i-th` design will begin with an integer, `d[i]`, indicating how many different colours should be used on the t-shirt. This value will be followed by a newline and then the remaining part of the line, consisting only of spaces.
+
+## Output Format:
+Print the name of the student who won!
+
+### Sample Input:
+```
+7 2
+1 3
+5 0
+4 2
+6 4
+8 2
+10 0
+9 8
+7 2
+6 1
+5 4
+4 2
+1 3
+3 5
+2 4
+9 0
+1 0
+1 7
+9 0
+6 8
+4 3
+10 9
+3 8
+```
+### Sample Output:
+> "Bella Swan"

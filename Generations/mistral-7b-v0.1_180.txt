@@ -1,0 +1,62 @@
+
+
+
+
+
+```python
+import nltk
+from nltk import word_tokenize, pos_tag, ne_chunk
+from nltk.corpus import brown
+
+sentence = "The senate approved a same-sex marriage measure, leaving just one more key step -- the president's signature -- before such couples can wed in the South American country."
+tokens = word_tokenize(sentence)
+tagged = pos_tag(tokens)
+chunked = ne_chunk(tagged)
+print chunked
+```
+
+    (S (NP (DT The) (NN senate)) (VP (VBD approved) (PP (IN of) (NP (DT a) (JJ same-sex marriage measure)))) (, ,) (CC leaving) (NP (JJ just) (CD one) (JJ more) (JJ key) (NN step) (-- (IN --)) (NP (JJ the) (NN president's signature))) (, ,) (VP (VBD before) (PP (IN such) (NP (DT couples) (VBN can) (VBG wed) (NN in) (DT the) (NN South) (JJ American) (JJ country))))
+
+
+
+```python
+from nltk.chunk import ChunkParserI, ConllChunker
+from nltk.parse import DependencyGraph
+
+parser = ConllChunker()
+graph = parser.parse(tokens, tagged)
+print graph.draw_svg('conll_chunker')
+```
+
+![png](output_2_1.svg)
+
+
+
+```python
+from nltk.tag import StanfordNERTagger
+ner_tagger = StanfordNERTagger(r'C:\Users\Lee\Desktop\stanford-corenlp-full-2018-02-27\stanford-ner.jar', r'C:\Users\Lee\Desktop\stanford-corenlp-full-2018-02-27\classifiers')
+print ner_tagger.tag(tokens)
+```
+
+    [('The', 'NNP'), ('senate', 'NNP'), ('approved', 'RB'), ('a', 'DT'), ('same-sex marriage measure', 'NR'), (',', ','), ('leaving', 'RB'), ('just', 'RB'), ('one', 'CD'), ('more', 'JJ'), ('key', 'JJ'), ('step', 'NN'), (',', ','), ('the', 'DT'), ('president\'s signature', 'NP'), (',', ',')]
+
+
+
+```python
+from nltk.chunk import ChunkParserI, ConllChunker
+conll_tagger = StanfordNERTagger(r'C:\Users\Lee\Desktop\stanford-corenlp-full-2018-02-27\stanford-ner.jar', r'C:\Users\Lee\Desktop\stanford-corenlp-full-2018-02-27\classifiers')
+chunks = conll_tagger.tag(tokens)
+print chunks
+```
+
+    [('The', 'NNP'), ('senate', 'NNP'), ('approved', 'RB'), ('a', 'DT'), ('same-sex marriage measure', 'NR'), (',', ','), ('leaving', 'RB'), ('just', 'RB'), ('one', 'CD'), ('more', 'JJ'), ('key', 'JJ'), ('step', 'NN'), (',', ','), ('the', 'DT'), ('president\'s signature', 'NP'), (',', ',')]
+
+
+
+```python
+parser = ConllChunker()
+graph = parser.parse(chunks)
+print graph.draw_svg('conll_ner')
+```
+
+![png](output_6_0.svg)

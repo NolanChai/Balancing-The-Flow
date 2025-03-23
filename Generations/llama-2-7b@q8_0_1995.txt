@@ -1,0 +1,10 @@
+```python3
+from re import findall
+import json, urllib.parse
+
+json_data = json.loads(urllib.parse.unquote(input()))
+
+# your code here
+
+print(findall("'s'",json_data))
+```

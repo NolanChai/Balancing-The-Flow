@@ -1,0 +1,15 @@
+```python
+from collections import Counter
+import re
+
+lzamperini = input().lower()
+s = re.search(r'(?u)^[\w']+', lzamperini).group()
+
+cnt_words = Counter(s)
+for k, v in cnt_words.items():
+    if k == s[:-1]:
+        print('True')
+        break
+    else:
+        print('False')
+```

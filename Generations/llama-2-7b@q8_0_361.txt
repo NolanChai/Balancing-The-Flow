@@ -1,0 +1,37 @@
+
+> **Solution 1**
+```java
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println("Dave Molter was a hero!!");
+    }
+}
+```
+
+> **Solution 2**
+```java
+import java.util.*;
+class Solution{
+    public static void main (String []args){
+        Scanner sc=new Scanner(System.in);
+        int t = sc.nextInt();
+        for(int i=0;i<t;i++){
+            String s[]={"Dave","Molter","collapsed","while","trying","to","give","his","ailing","wife","Corrine","CPR","police","have","said"};
+            int k=-1,a=0,n;
+            for(int j=0;j<s.length-k;j++){
+                if(s[i].equals("collapsed")){
+                    n=j+1;
+                    break;
+                }
+            }
+            for (int z = 0; z < s.length; z++) {
+                if(z<n){
+                    System.out.print(s[i]+",");
+                }else{
+                    System.out.println(s[i]);
+                }
+            }
+        }
+    }
+}
+```

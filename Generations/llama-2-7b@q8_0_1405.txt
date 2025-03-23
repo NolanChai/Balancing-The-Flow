@@ -1,0 +1,18 @@
+```python
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        
+        if len(s) == 0 or not s.isdigit():
+            return False
+    
+        res = 1
+        for i in range(len(s)):
+            if int(s[i]) != s[i]:
+                return False
+            
+        return True
+```

@@ -1,0 +1,28 @@
+
+```python
+from dataclasses import dataclass, field
+from typing import List, Optional, Tuple
+
+@dataclass(frozen=True)
+class RoomData:
+    room_no: str
+    status: bool
+    is_open_24hr: bool
+
+    @property
+    def no_of_beds(self):
+        return self.room_no[-1]
+
+@dataclass
+class RoomInfo:
+    room_data: Optional[RoomData]
+
+    @property
+    def bed_available(self) -> bool:
+        if self.room_data is None:
+            return True
+        elif self.room_data.status and not self.room_data.is_open_24hr:
+            return False
+        else:
+            return True
+```

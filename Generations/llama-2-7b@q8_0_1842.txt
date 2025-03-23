@@ -1,0 +1,22 @@
+```python
+import re
+
+class Solution:
+    def getPermutation(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: List[str]
+        """
+        if len(s) == 1:
+            return ["".join([str(x) for x in t])]
+        
+        res = []
+        for i, v in enumerate(t):
+            if s[0] != '[' and s[-2:] != "[..":
+                break
+            r = self.getPermutation(s[:i]+s[i:], t[:i]) + [v] + \
+                    self.getPermutation(s[i+1:], t[i:])
+            res += r
+        return res
+```

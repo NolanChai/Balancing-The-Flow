@@ -1,0 +1,23 @@
+```javascript
+const response = {
+  id: '123',
+  name: 'John Doe',
+  address: '123 Main St',
+  city: 'Los Angeles',
+  state: 'CA'
+};
+```
+
+### Questions:
+
+1. What does the `response` variable represent in this code?
+- The `response` variable is an object that contains various properties related to a person, such as their ID, name, address, city, and state.
+
+2. How many properties are there in the `response` object?
+- There are five properties in the `response` object: `id`, `name`, `address`, `city`, and `state`.
+
+3. What is the value of `response.id`?
+- The value of `response.id` is '123'.
+
+4. What is the value of `response['state']`?
+- The value of `response['state']` is 'CA'.

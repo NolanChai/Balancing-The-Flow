@@ -1,0 +1,10 @@
+
+```ruby
+require 'ap_diff'
+
+res = APDiff::Response.new
+res << "The band <u>The Kills</u> celebrated the 10th anniversary of their first live gig with a concert/blowout party in New York this past weekend."
+
+# 2. diff it with current document
+res << APDiff::Document.load('document').diff(APDiff::Document.from_string(res.to_s))
+```

@@ -1,0 +1,16 @@
+```python
+
+def solution(n):
+    def helper(n, i, j, arr, m):
+        if n == 0:
+            return 0
+        
+        left = helper(n - 1, i + 1, j, arr[i:], m)
+        
+        right = helper(n - 1, i - 1, j, arr[i:], m)
+    
+    left = helper(n, i, j, [], m)
+    return max(left, right) + m * sum(arr[i:])
+
+print(solution(36))
+```

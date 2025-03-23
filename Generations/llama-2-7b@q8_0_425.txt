@@ -1,0 +1,14 @@
+```ruby
+#!/usr/bin/env ruby
+# coding: utf-8
+puts "7" * 4 + "\n"
+puts 101 # 101
+puts 1_01
+puts 1e2 # 10.0
+puts 1e3 # 100.0
+puts 1e5 # 1_000_000.0
+puts "4" * 9 + "\n"
+puts (1..10).to_a.join
+puts 222.to_f
+puts -987654321
+```

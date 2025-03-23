@@ -1,0 +1,27 @@
+```python
+import nltk
+from nltk import word_tokenize
+from nltk.corpus import stopwords
+from nltk import FreqDist
+from textblob import TextBlob
+import re
+
+# Load in the text and tokenise it
+text = open('wayne-rooney.txt').read()
+tokens = word_tokenize(text)
+
+# Remove punctuation
+tokens = [t for t in tokens if t.isalpha()]
+
+# Create a list of stop words from the nltk library and remove them
+stoplist = set(stopwords.words('english'))
+
+tokens = [w for w in tokens if not w.lower() in stoplist]
+
+# Remove any numbers, digits etc
+tokens = [re.sub('[0-9]+', '', t) for t in tokens]
+
+# Count the words and print them out in descending order
+word_counts = FreqDist(tokens)
+print(word_counts.most_common(20))
+```

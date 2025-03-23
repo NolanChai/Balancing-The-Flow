@@ -1,0 +1,8 @@
+```python
+import re
+
+def f(s):
+    t = re.findall('Instruction: By (.+) Sara Nathan UPDATED:', s)
+    
+    return ', '.join(t)
+```

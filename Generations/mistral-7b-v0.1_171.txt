@@ -1,0 +1,89 @@
+#### 0. Setup environment
+
+	- Install Python3 and pip3
+	- Install Django
+
+#### 1. Create an app named Instruction.
+
+	- python manage.py startapp instruction
+
+#### 2. Add 'instruction' to INSTALLED_APPS in settings.py.
+
+	- INSTALLED_APPS = [
+	...
+	'django.contrib.admin',
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.messages',
+	'django.contrib.staticfiles',
+	'instruction', # new added item
+	]
+
+#### 3. Run 'python manage.py makemigrations instruction' and then 'python manage.py migrate'.
+
+	- python manage.py makemigrations instruction
+	- python manage.py migrate
+
+#### 4. Add the following code in urls.py (the default one):
+
+	- from django.urls import path, include
+	# ...
+	urlpatterns = [
+	    # ...
+	    path('instruction/', include('instruction.urls')),
+	]
+
+#### 5. Create a views.py file in the instruction app directory.
+
+	- touch instruction/views.py
+
+#### 6. Add the following code in instruction/urls.py:
+
+	- from django.urls import path
+	from . import views
+
+	# ...
+	urlpatterns = [
+	    # ...
+	    path('', views.index, name='instruction'),
+	]
+
+#### 7. Add the following code in instruction/views.py:
+
+	- from django.shortcuts import render
+
+	def index(request):
+	    return render(request,'instruction/index.html')
+
+#### 8. Create an index.html file in instruction/templates directory and add the following html code:
+
+	- <!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>Instruction</title>
+	</head>
+	<body>
+
+	    <!--
+	        <div class="jumbotron jumbotron-fluid">
+	            <div class="container">
+	                <h1 class="display-4">Instructions</h1>
+	                <p class="lead">
+	                    Instruction: BMW is recalling more than 1.6million cars worldwide - amid fears over the safety of airbags in the vehicles.
+	                </p>
+	            </div>
+	        </div>
+	    -->
+	    <h1 class="display-4">Instructions</h1>
+	    <p class="lead">
+	        Instruction: BMW is recalling more than 1.6million cars worldwide - amid fears over the safety of airbags in the vehicles.
+	    </p>
+
+	</body>
+	</html>
+
+#### 9. Run 'python manage.py runserver' to start server and access http://localhost:8000/instruction/.
+
+	- python manage.py runserver

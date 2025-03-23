@@ -1,0 +1,16 @@
+
+<details><summary>Click to Show</summary><div markdown="1">
+
+```python
+from pprint import pprint
+import numpy as np
+
+n_points = 584907
+n_nodes = 25369
+n_features = 83 # (28 x 2) + 3
+n_train = n_points - n_test // 10
+n_test = n_points - n_train // 5
+n_classes = 4
+```
+
+</details>

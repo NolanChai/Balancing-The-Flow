@@ -1,0 +1,4 @@
+
+<div>
+{% include shared/answer_box.html answer_text=page.content %}
+</div>

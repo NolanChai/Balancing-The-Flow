@@ -1,0 +1,12 @@
+```python
+def solution(s):
+    lis = []
+    for i in range(len(s)):
+        if s[i] == '-':
+            return 0
+        if len(lis) != 0 and lis[-1] == '+':
+            lis.pop()
+        elif i > 0:
+            lis.append('-')
+    return -len(lis) + sum(lis)
+```

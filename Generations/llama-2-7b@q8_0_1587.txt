@@ -1,0 +1,2 @@
+*[255, 64] - We can use the fact that "just" is singular to disambiguate between the plural seeds and the singular seed. Since it's clear from context that both are being referred to in the sentence (since "cannot stop tumbling"), we should apply [BNF-98] LS123123 to this sentence, which is:
+*LS123123: A PP modifies a VP, and there exist one or more S of S of the VP.

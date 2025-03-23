@@ -1,0 +1,28 @@
+<img src="https://github.com/Harry-Faithfull/LSTM-Sentiment-Analysis/blob/master/images/image1.png" width=50% height=50%>
+<img src="https://github.com/Harry-Faithfull/LSTM-Sentiment-Analysis/blob/master/images/image2.png" width=50% height=50%>
+<img src="https://github.com/Harry-Faithfull/LSTM-Sentiment-Analysis/blob/master/images/image3.png" width=50% height=50%>
+<img src="https://github.com/Harry-Faithfull/LSTM-Sentiment-Analysis/blob/master/images/image4.png" width=50% height=50%>
+
+### Conclusion:
+The CNN news report is negative, but it isn't a strong negative as only 2 out of the 3 keywords were negative, with the third being neutral.
+
+### Background:
+This is part of my project on LSTM sentiment analysis. This network is trained on the CNN news database using the Stanford NLP package. The goal is to predict whether a given piece of text is positive or negative.
+
+### Requirements:
+Python 3.5+, Keras 2.1.0, Tensorflow 1.4.0 (GPU), Numpy and Scipy.
+
+### Installation:
+```bash
+pip install -r requirements.txt
+```
+
+### Run:
+To run the program with a particular news article as an input, run it as follows:
+```bash
+python CNN_Sentiment_Analysis.py [News Article]
+```
+For example:
+```bash
+python CNN_Sentiment_Analysis.py "This is a test"
+```

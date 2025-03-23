@@ -1,0 +1,21 @@
+[![img](https://user-images.githubusercontent.com/49628731/105920164-cbfac300-5eab-11eb-9cfd-23ba9f9bafbe.jpg)](https://media.giphy.com/media/l3GpzH8oIHwAQS7uEW/giphy.gif)
+
+### Solution:
+
+```java
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputLine = scanner.nextLine();
+    
+        String[] lineParts = inputLine.split(" ");
+        
+        if (lineParts[0].equals("no")){
+            System.out.println(lineParts[1]+" "+lineParts[2] + " "+ lineParts[3]);
+            
+        }else {
+            System.out.println(lineParts[1]);
+        }
+        
+    }
+}
+```

@@ -1,0 +1,6 @@
+The depth is 1092 meters.
+
+### Explanation:
+First, note that the distance from the surface to the bottom is $500$ meters. So if we want to find the depth at some other point between the surface and the bottom, we can just subtract half of the distance. For example, when the plane was $250$ meters below the surface, it was $\frac{1}{2}\times 250 = 125$ meters above the bottom.
+
+In this case, we know that the plane is at an elevation of $-683$ meters. So we can calculate the depth as $1092 - (-683) = 1775$ meters deep.

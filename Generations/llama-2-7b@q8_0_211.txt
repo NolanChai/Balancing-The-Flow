@@ -1,0 +1,32 @@
+```python
+from pprint import pformat
+import re
+from collections import defaultdict
+
+import numpy as np
+from IPython.display import display, Image
+import math
+import random
+
+import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+sns.set()
+
+pd.options.display.max_rows = 50
+pd.options.display.max_columns = None
+
+np.random.seed(2018)
+```
+### Input:
+```python
+def run():
+    pass
+```
+### Output:
+```python
+run()
+```

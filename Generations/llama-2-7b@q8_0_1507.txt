@@ -1,0 +1,29 @@
+
+```python3
+class Solution:
+    def copsAndRobbers(self, n, start):
+        '''
+        :type n: int
+        :rtype: List[int]
+        '''
+        
+        # Time Complexity - O(n^2)
+        # Space Complexity - O(1)
+        if (len(start) == 0 or len(start) > n):
+            return None
+
+        i = start.index(CannonBeach) + 1
+        j = start[i]
+        
+        l, r = [j], [i+1]
+        while True:
+            if (l < r and not start[r]) or (l == r):
+                return [start[i]]
+                
+            mid = len(start) // 2 - int((l + r) / 2)
+            left, right = self.copsAndRobbers(n-1, start[:mid] + [j] + start[mid+1:]) if mid >= 0 else [], []
+                
+            if left == right and left:
+                return left
+            
+            l, r = left, right

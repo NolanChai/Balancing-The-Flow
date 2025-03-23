@@ -1,0 +1,35 @@
+##### Step 1:
+Create a python file called `Dingos.py` to do all your code manipulation work and save it in the same folder as the `data.csv`.
+
+##### Step 2:
+Read data from the csv file (Note: The file does not need to be separated into columns or rows, just read in as a whole)
+
+##### Step 3:
+Find the total number of tourists on Fraser Island over the last 10 years (Hint: 4.5 million visitors)
+
+##### Step 4:
+Find the total number of dingoes that have been euthanized over the last 10 years
+
+##### Step 5:
+Work out what percentage of tourists killed a dingo
+
+##### Step 6:
+Create a function that takes in two arguments, the first being a list of numbers and the second being a number. This function should return an integer value which is the index of the item in the list that is closest to the passed argument. If there are two values with the same distance from the passed argument, use the smallest index. For example, if you passed the list `[1, 3, 5]` and a number `4`, this function should return the value `3`.
+
+##### Step 7:
+Create a dictionary that maps each year to the closest integer value of the total number of dingoes on Fraser Island for that year. (Hint: use your function from step 6)
+
+##### Step 8:
+Make a bar graph of your data, and save this image in `pictures/DingoAttacks_BarGraph.png`. This should include the bars for each year, with the total number of dingoes that were euthanized on Fraser Island for that year as well as the total number of tourists over all of those years.
+
+##### Step 9:
+Create a list that contains every year in your data set, and sort it from oldest to newest (Hint: use `sorted()`)
+
+##### Step 10:
+Create a line graph showing the dingo population on Fraser Island over time. The x axis should be the years, and the y axis should be the number of dingoes on Fraser Island for that year. Save this image in `pictures/DingoAttacks_LineGraph.png`.
+
+##### Step 11:
+Create a list that contains all of the years where at least one dingo was euthanized, and sort it from oldest to newest (Hint: use `sorted()`)
+
+##### Step 12:
+Make a table that shows the number of tourists killed by a dingo each year for every single year in your dataset. Save this image as `pictures/DingoAttacks_Table.png`.

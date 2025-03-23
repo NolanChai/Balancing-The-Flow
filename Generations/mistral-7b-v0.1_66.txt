@@ -1,0 +1,90 @@
+- The first thing I did was create a new database called 'football_team' and then imported the data from the csv file.
+
+```
+sqlite> CREATE DATABASE football_team;
+sqlite> .databases
+main    /Users/andrewtaylor/.sqliterc.db
+football_team /Users/andrewtaylor/Downloads/football-teams/football_team.db
+test    /Users/andrewtaylor/.sqliterc.test.db
+```
+
+```
+sqlite> .open football_team
+sqlite> CREATE TABLE FootballTeam(
+id INTEGER PRIMARY KEY,
+name TEXT NOT NULL,
+age INT,
+cost INT,
+goals INT
+);
+sqlite> .mode csv
+sqlite> .import data.csv FootballTeam
+```
+
+- I then created a view called 'football_players' that included only the players who played for Tottenham and also included their cost, age and goals scored in the season.
+
+```
+sqlite> CREATE VIEW football_players AS SELECT * FROM FootballTeam WHERE name = 'Tottenham';
+```
+
+- I then created a table called 'Soldado' that only included the Tottenham player Soldado.
+
+```
+sqlite> CREATE TABLE Soldado(
+id INTEGER PRIMARY KEY,
+name TEXT NOT NULL,
+age INT,
+cost INT,
+goals INT
+);
+sqlite> .mode csv
+sqlite> .import data.csv Soldado;
+```
+
+- I then created a view called 'Tottenham_Soldado' that included all the information of the Tottenham player Soldado.
+
+```
+sqlite> CREATE VIEW Tottenham_Soldado AS SELECT * FROM Soldado WHERE name = 'Roberto Soldado';
+```
+
+- I then created a table called 'Tottenham_Players' that included all the information of the Tottenham players.
+
+```
+sqlite> CREATE TABLE Tottenham_Players(
+id INTEGER PRIMARY KEY,
+name TEXT NOT NULL,
+age INT,
+cost INT,
+goals INT
+);
+```
+
+- I then created a view called 'Tottenham_Soldado_Goals' that included the cost and goals scored by Roberto Soldado in the season.
+
+```
+sqlite> CREATE VIEW Tottenham_Soldado_Goals AS SELECT cost, goals FROM Tottenham_Soldado;
+```
+
+- I then created a view called 'Tottenham_Players_Cost' that included the cost of all the Tottenham players.
+
+```
+sqlite> CREATE VIEW Tottenham_Players_Cost AS SELECT cost FROM FootballTeam WHERE name = 'Tottenham';
+```
+
+- I then created a view called 'Average_Tottenham_Player_Goals' that included the average goals scored by all the players at Tottenham.
+
+```
+sqlite> CREATE VIEW Average_Tottenham_Player_Goals AS SELECT AVG(goals) FROM Tottenham_Players;
+```
+
+- I then created a view called 'Average_Soldado_Goals' that included the average goals scored by Roberto Soldado.
+
+```
+sqlite> CREATE VIEW Average_Soldado_Goals AS SELECT AVG(goals) FROM Tottenham_Soldado;
+```
+
+- I then created a view called 'Percentage' that included the percentage of goals scored by Roberto Soldado.
+
+```
+sqlite> CREATE VIEW Percentage AS SELECT (Average_Soldado_Goals/Average_Tottenham_Player_Goals) * 100 FROM Average_Soldado_Goals, Average_Tottenham_Player_Goals;
+```

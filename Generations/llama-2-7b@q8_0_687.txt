@@ -1,0 +1,20 @@
+
+```json
+{ 
+    "status": true, 
+    "message": "Post created successfully." 
+}
+```
+
+### Request:
+
+POST https://localhost/api/v1.0.0/posts  
+
+#### Example:
+
+```shell
+curl -X POST --request POST \
+--header 'Content-Type: application/json' \
+--data-raw '{ "title": "My first post" }' \
+http://localhost:8082/api/v1.0.0/posts 
+```

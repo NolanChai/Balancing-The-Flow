@@ -1,0 +1,10 @@
+```
+def response(string, s):
+    if "Nigel" in string or "Tyrone" in string:
+        return "They're all black."
+    else:
+        return ""
+    
+print("Response:", response("Steve","David"))
+print("Response:", response("James","John"))
+```

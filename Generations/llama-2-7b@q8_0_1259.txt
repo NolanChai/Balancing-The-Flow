@@ -1,0 +1,16 @@
+```python
+    def print_instructions(text):
+        for char in text:
+            if char.upper() == char:
+                sys.stdout.write('%s' % char)
+            else:
+                sys.stdout.write('%c ' % char)
+        sys.stdout.flush()
+```
+
+### Expected Output:
+```
+      D R I V E
+    S L O W A S Y,
+   H U G O .
+```

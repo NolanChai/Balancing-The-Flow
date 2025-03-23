@@ -1,0 +1,9 @@
+The code below is a simple twitter bot written in python. This code will retweet any tweet that contains the word "python" and also replies to anyone who mentions the account name @pythonbot. The code is organized into several functions, which are called at the end of the script. The first function, `get_tweets`, gets a list of all the tweets from the user's timeline. The second function, `retweet_tweet`, takes in a list of tweets and retweets any tweet that contains the word "python". The third function, `reply_to_mention`, takes in a list of tweets and replies to anyone who mentions the account name @pythonbot. Finally, the fourth function, `main`, calls each of these functions to execute the program.
+### Output:
+![Twitter Bot](https://github.com/haydar-sirkeci/twitter_bot/blob/main/output.PNG)
+
+### Notes:
+This code is just for fun and it doesn't do anything important, but it can be modified to perform more complex tasks such as following users who mention a certain keyword or hashtag.
+
+### Conclusion:
+In conclusion, this simple python script shows how easy it is to create a twitter bot using the Twitter API. With just a few lines of code, you can automate any task on the social network and make your account more interactive.

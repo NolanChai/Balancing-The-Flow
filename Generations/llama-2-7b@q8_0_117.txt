@@ -1,0 +1,21 @@
+```javascript
+// Code in comments
+
+// Step 1
+console.log(
+  "The first step is to find the position of the text block, relative to its containing element"
+);
+
+// Step 2
+console.log(
+  "The second step is to replace it with a div"
+);
+
+// Step 3
+console.log("The third step is to change the contents of our div");
+
+// Step 4
+console.log(
+  "The fourth step is to apply an offset from top to bottom and left to right, in pixels"
+);
+```

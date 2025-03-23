@@ -1,0 +1,13 @@
+It took a total of 25 minutes for all emails to arrive.
+
+### Result:
+It took 11 minutes less time for all emails to arrive than it did for the first email to arrive.
+
+### Conclusion:
+There are two possible explanations as to why it took more time for the first email to arrive than it did for all of the other emails to arrive. It could be because the first email was delayed, or it could be because the subsequent emails were sent in a batch.
+
+### Discussion:
+If the first email was delayed, then the total time it took for all of the emails to arrive would be less than 25 minutes. If the subsequent emails were sent in a batch, then the total time it took for all of the emails to arrive would be more than 25 minutes.
+
+### Solution:
+To determine which explanation is correct, we can look at the email headers for each email. If the first email has a "delayed" header, then it was delayed. If none of the emails have a "delayed" header, then they were all sent in a batch.

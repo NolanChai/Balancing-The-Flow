@@ -1,0 +1,78 @@
+* [1](https://leetcode.com/problems/palindrome-linked-list/)
+```python
+class Solution(object):
+    def isPalindromicLinkedList(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        
+        if not head or not head.next: return True  # 如果为空返回真
+        
+        cur = head
+        while cur and cur.next:
+            if self._isPalindrome(cur):
+                break
+            
+            tmp = cur.val
+            cur = cur.next
+            prev = None
+            for i in range(0, len(head)):  # 循环头节点下标为i，判断是否为链表的最后一个节点
+                if head[i].val == tmp:
+                    break
+                        
+                else:
+                    prev = cur
+                    cur = head.next
+                    
+            cur.prev = prev  # 如果是链表的最后一个节点，则为None
+            
+        return True if self._isPalindrome(head) else False
+        
+    def _isPalindrome(self, cur):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        while cur and (cur.prev or cur.next):
+            if not self._isPalindrome(cur.prev) or not self._isPalindrome(cur.next):  # 如果前后链表中不是链表，则返回false
+                return False
+            
+        return True
+```
+* [2](https://leetcode.com/problems/palindrome-linked-list/)
+```python
+class Solution(object):
+    def isPalindromeLinkedList(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        
+        if not head or not head.next: return True  # 如果为空返回真
+        
+        cur = head
+        while cur and cur.next:  # 循环链表中的头节点，直到当前节点是最后一个节点的时候才退出循环
+            if self._isPalindrome(cur): break
+            
+            tmp = cur.val
+            prev = None  # 用None代替prev，因为self._isPalindrome可能会更改prev的值
+            for i in range(0, len(head)):  # 循环头节点下标为i，判断是否为链表的最后一个节点
+                if head[i].val == tmp: break
+                        
+                else:  # 如果不等于当前值则更改prev的指向
+                    prev = cur
+                    cur = head.next
+            cur.prev = prev
+            
+        return True if self._isPalindrome(head) else False
+        
+    def _isPalindrome(self, cur):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        while cur and (cur.prev or cur.next):
+            if not self._isPalindrome(cur.prev) or not self._isPalindrome(cur.next): return False
+            
+        return True

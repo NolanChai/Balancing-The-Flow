@@ -1,0 +1,9 @@
+> This is the second time I have worked on this challenge and, as with my last attempt, I used the `grep` and `sed` commands. The only difference between this attempt and the last was that I had to amend the command in order to ensure that the output was correctly formatted for the submission process.
+
+```bash
+> grep "start" data.txt | sed 's/\(.*\) start: \(.*\)\n/\2, \1/g'
+Best 1998-99, Worst 2015-16
+```
+
+### Notes:
+I still need to find a more efficient way of removing the first line from the output.

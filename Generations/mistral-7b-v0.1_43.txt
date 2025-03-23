@@ -1,0 +1,36 @@
+In this project, I’m going to analyze a specific topic about Kevin Pietersen from his autobiography. In the extract of his book, it is clear that he is very afraid of being dropped out of the team for not performing well enough. He was thinking about how to make sure he could perform better and stay in the team, even if it means breaking some rules to make this happen.
+
+### Data Preprocessing:
+I’ve cleaned up all the stop words and punctuation marks from the text and then I used a stemmer to convert all the words into their root forms. After that, I built my own dictionary using the terms in the text as well as some other related terms.
+
+### Text Mining:
+After preprocessing, the next step is to apply text mining techniques to analyze the data and extract information from it. I used the TF-IDF (Term Frequency–Inverse Document Frequency) algorithm to find out which words are most relevant in my corpus of texts. The top 10 words with highest TF-IDF scores are:
+
+![image](https://user-images.githubusercontent.com/92637498/234518470-a68f5c50-d7f8-457f-b87d-e4864a917da5.png)
+
+The top 10 words with highest TF-IDF scores are:
+
+**1.** **dropped:** This word is used to describe how Kevin Pietersen was dropped from the team after not performing well enough in a match.
+
+**2.** **perform:** This word is used to describe how Kevin Pietersen needs to perform better if he wants to stay in the team.
+
+**3.** **rules:** This word is used to describe how Kevin Pietersen might break some rules if it means that he can perform better and stay in the team.
+
+**4.** **tournament:** This word is used to describe how Kevin Pietersen was dropped from the team after not performing well enough in a tournament.
+
+**5.** **team:** This word is used to describe how Kevin Pietersen needs to stay in the team if he wants to continue playing cricket professionally.
+
+**6.** **playing:** This word is used to describe how Kevin Pietersen was dropped from the team after not playing well enough in a match or tournament.
+
+**7.** **performance:** This word is used to describe how Kevin Pietersen needs to improve his performance if he wants to stay in the team.
+
+**8.** **stay:** This word is used to describe how Kevin Pietersen wants to stay in the team so that he can continue playing cricket professionally.
+
+**9.** **well:** This word is used to describe how Kevin Pietersen needs to perform well if he wants to stay in the team.
+
+**10.** **better:** This word is used to describe how Kevin Pietersen needs to perform better if he wants to stay in the team.
+
+### Visualization:
+I created a word cloud using the top 25 most frequent words in my corpus of texts. The size of each word corresponds to its frequency, so you can see that words like "dropped", "team" and "rules" are more important than others.
+
+![image](https://user-images.githubusercontent.com/92637498/234518490-0c9b0d4f-066a-45d0-b6ca-4e3e5e84daed.png)

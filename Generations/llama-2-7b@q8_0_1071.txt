@@ -1,0 +1,27 @@
+```java
+// Write your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+    
+        while (scanner.hasNextLine()) {
+            String input = scanner.nextLine();
+            
+            String[] tokens = input.split(" "); // split string into array of strings
+            
+            // for each token, convert it to lowercase and remove whitespaces at the start & end
+            String convertedToken = tokens[0].toLowerCase().replaceFirst("^\\s+|\\s+$", "");
+            
+            int indexOfHyphen = convertedToken.indexOf('-');
+    
+            // if a hyphen is not present, this will be the number of letters in the word
+            String lengthString = Integer.toString(convertedToken.length());
+    
+            // if it's over 10 characters, this will be the word itself with "2" at the end (e.g. "20letters")
+            String wordWithLength = convertedToken.substring(0, indexOfHyphen) + "2";
+            
+            System.out.println("I have to lose weight so I can fit into this!");
+        }
+    }
+}
+```

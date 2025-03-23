@@ -1,0 +1,44 @@
+
+```
+"success": true, "message": "", "data": { "code": 0 }
+```
+
+### Request:
+
+### API:
+POST /auth/google-oauth2
+### Form:
+
+### Example:
+<pre><code class="yaml">---
+info:
+  email: alex@example.com
+  password: secret
+---
+</code></pre>
+
+### Response:
+
+```
+"success": true, "message": "", "data": { "code": 0 }
+```
+
+### Request:
+
+### API:
+POST /auth/google-oauth2/signin
+### Form:
+
+### Example:
+<pre><code class="yaml">---
+info:
+  email: alex@example.com
+  password: secret
+---
+</code></pre>
+
+### Response:
+
+```
+"success": true, "message": "", "data": { "code": 0 }
+```

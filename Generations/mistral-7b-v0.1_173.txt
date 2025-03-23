@@ -1,0 +1,3 @@
+- First, I'll have a look at how many of the top 30 images are relevant to the instruction. Then I will find out whether there is any pattern from those relevant ones.
+- The results show that only 19 pictures are related to the instruction. Therefore, it is not an accurate classification. The problem might lie in the image selection process. To improve the accuracy of the model, one can filter images by removing the ones which has nothing to do with the instruction.
+

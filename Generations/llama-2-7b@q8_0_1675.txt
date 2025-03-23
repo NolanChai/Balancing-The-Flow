@@ -1,0 +1,25 @@
+This is a perfect example of how we can use our database to detect anomalies in a data set. In this case, we used the "nearby" function of the DBScan algorithm. When applied with default parameters (as shown below), it creates a distance matrix between each sample and every other sample in the dataset. These distances are then used by the nearest-neighbor classifier to determine if one sample is similar or different from another sample.
+
+```
+# Import libraries
+import pandas as pd
+from sklearn import metrics, neighbors
+
+# Create data set and split into train and test sets
+df = pd.read_csv('../data/data.txt')
+X = df[['latitude', 'longitude']]
+y = df['State']
+
+train_set = X[:1200]
+test_set  = X[-498:]
+
+# Define k-means model with parameters for DBSCAN algorithm (min_samples=5)
+dbscan = neighbors.NearestNeighbors(n_neighbors=7, metric='euclidean', n_jobs=-1)
+# dbscan = neighbors.KNeighborsClassifier(n_neighbors=7, weights="distance")
+
+# Fit K-Means model to training set
+model = dbscan.fit(train_set)
+
+# Make predictions on test set
+predictions = model.predict(test_set)
+```

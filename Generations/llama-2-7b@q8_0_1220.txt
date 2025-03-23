@@ -1,0 +1,77 @@
+
+```python
+import re
+from collections import Counter
+import csv
+
+def process_instruction(line):
+    data = line.split(' By ')[1]
+    data = data.strip()
+    if not data or len(data) < 50:
+        return ''
+    
+    print(f"Processing {data}...")
+    instruction, body_of_instruction = data[1:-2].split(' By ')[::-1]
+    for line in body_of_instruction.split('\n'):
+        if re.match('By.*\d+',line):
+            print(f"Processing {instruction}...")
+    
+    with open('data/raw/instructions.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for index, line in enumerate(reader):
+            if re.search(line[0], instruction):
+                if index + 1 > len(reader):
+                    return ''
+                line = list(line)[1:]
+                for line_number, line_data in enumerate(line):
+                    if not line_data:
+                        return ''
+                    
+                    print(f'Processing {instruction}... Line {line_number + 2}')
+                    process_line(instruction, line_data)
+                break
+            
+            if re.search('By.*\d+', line[0]):
+                if index + 1 > len(reader):
+                    return ''
+                reader = csvfile.read()
+                for line in reader:
+                    line[0] = re.sub(' By \d+\..*', ' By ', line[0])
+                print(f'Processing {instruction}... Line {index + 2}')
+                process_line(instruction, line)
+        return ''
+    
+def process_line(instruction, line):
+    if not re.match('By .*', instruction):
+        return ''
+    
+    try:
+        data = line.split('\n')[0].strip()
+        
+        count = Counter(data)
+        for letter in set(count) - {' '}:
+            print(f'Processing {instruction}... Line {line_number + 1}.')
+            process_letter(letter, count[letter])
+    except:
+        return ''
+    
+def process_letter(letter, number):
+    if not letter:
+        return
+
+    with open('data/raw/{0}.txt'.format(letter)) as csvfile:
+        reader = csv.reader(csvfile)
+
+        for index, line in enumerate(reader):
+            if index == 2 and len(line[1].split()) > 1:
+                print(f'Processing {instruction}... Line {line_number + 2}.')
+                process_line(letter, line)
+    
+def process():
+    while True:
+        instruction = input('Enter the full instruction (in case it spans more than one line): ')
+        if not re.match("By\s*\d+\..*",instruction):
+            break
+        
+        print(process_instruction(instruction))
+```

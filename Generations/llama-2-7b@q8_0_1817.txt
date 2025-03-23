@@ -1,0 +1,41 @@
+- [ ] I don't think you're supposed to put a newline at the end of your file. That could cause the script to fail because the newline character is not allowed in the file name (and it should be treated like any other space character.)
+- [x] You also don't need the newline characters between "//" and the first line. They are optional, and I don't think they do anything good. Just remove them.
+- [ ] The "\" at the end of your file name doesn't belong there either. Remove it too.
+- [x] You should probably just change `echo` to `printf`. You can use any of these two commands for writing things out.
+- [ ] You also shouldn't start your variable names with a dollar sign (`$`) or an underscore (`_`). Instead, use lower case letters and numbers. The first line of your program looks like this: `$name`
+  - [x] You should change it to just `name`.
+- [ ] I don't think you need the quote around "$1" when you read in the file name using `$1`.
+  - [x] Remove the quotes.
+- [ ] Don't use lower case for your variable names. Instead, use all uppercase letters (like `VAR_NAME`).
+  - [x] Rename all of your variables to be all upper case letters (`FILE`, not `file`) and give them descriptive names that tell what they are doing in the program. For example: `$name` is a variable holding the user's name; `$year` holds the year. You should change these to look like this: `USERNAME` and `YEAR`.
+  - [ ] You need to change all of your lower case variables to be all uppercase (and give them descriptive names). I don't think it will hurt anything, but it makes the program more readable for you.
+- [x] Remember that you can use any of these commands to read in values: `$1`, `$2` and `$3`. If your file has four lines of text, you can use all three. In this case, however, since your file only contains two lines, use the `read -r line` command from the `bash` manual page (man bash).
+  - [ ] The `read` command reads a single line and assigns it to the variable `$line`. You can read in an entire file using this: `$(< file)`.
+- [x] In your loop, use the `for` command. You need to do the same thing that you're doing (using `i`, `$i`) but change your `while` to a `for` so it looks like this:
+```bash
+while read -r line ; do
+	#do something with the variable $line, e.g., echo "$line"
+done < file
+```
+  - [ ] The `done` command is important for `bash`, but not required in your script since you're using an `exec` command instead of a `for`. You don't need to do anything with the variable `$i` because that is a built-in variable in `bash`.
+- [x] Your file contains only two lines so you can use all three arguments for the `read` command, but it looks like you only used one. I think that if you want to echo out both of them you should be able to do this:
+```bash
+echo "$1" | xargs -n1 bash ./executor_albino_hedgehogs
+```
+  - [x] You can use `$(< file)` as the first argument instead of `file` if you want. I don't think it matters, but it seems a bit redundant to pass in both arguments. (It also might be easier to understand what is happening.)
+- [ ] You need to add an `if` statement that checks the command output for a non-zero exit code and then use `exit 0`. This way if it fails, the script will exit before it does any damage. You can do this like so:
+```bash
+if [[ $? -ne 0 ]]; then
+	echo "An error occured! I'll fix that for you."
+fi
+exit 0
+```
+- [x] I think `exec` is a function in `bash`, but it's not an external program. So if you want to use an `if` statement and `exit` like before, then replace all the references to `exec` with your new line above (the `if`) or do this:
+```bash
+if [[ $? -ne 0 ]]; then
+	echo "An error occured! I'll fix that for you.";
+	exec /bin/bash ./executor_albino_hedgehogs;
+fi
+exit 0
+```
+- [x] You can use `$(< file)` instead of `file`, if you prefer. Just make sure the first argument is a space separated list of files and not just one.

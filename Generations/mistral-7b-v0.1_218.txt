@@ -1,0 +1,33 @@
+```python
+from datetime import date
+import matplotlib.pyplot as plt
+import requests
+import json
+
+def get_data(url):
+    r = requests.get(url)
+    data = r.json()
+
+    return data["records"]
+
+def main():
+    url = "https://api-cms.purestorage.com/api/v2/articles?filters={}&sort=date_published:DESC&limit=10"
+    data = get_data(url)
+
+    dates = [d["date_published"] for d in data]
+    titles = [d["title"] for d in data]
+    years = [d[:4] for d in dates]
+
+    plt.figure(figsize=(10, 6))
+
+    plt.bar(years, dates)
+    plt.xticks(rotation=90)
+    plt.xlabel("Year")
+    plt.ylabel("Date Published (UTC)")
+    plt.title("Latest Blog Posts")
+
+    plt.show()
+
+if __name__ == "__main__":
+    main()
+```

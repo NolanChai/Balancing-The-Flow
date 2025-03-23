@@ -1,0 +1,23 @@
+
+```sql
+SELECT
+  COUNT(id) AS "Total number of articles",
+  SUM(word_count) AS "Total word count",
+  ROUND(AVG(word_count),1) AS "Average word count"
+FROM `articles`;
+```
+### Result:
+<img src="./assets/question2.png">
+
+
+```sql
+SELECT
+  id,
+  article_title,
+  word_count,
+  SUM(word_count) OVER (PARTITION BY id ORDER BY id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS "Total word count",
+  ROUND(AVG(word_count),1) OVER (PARTITION BY id ORDER BY id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS "Average word count"
+FROM `articles`;
+```
+### Result:
+<img src="./assets/question3.png">

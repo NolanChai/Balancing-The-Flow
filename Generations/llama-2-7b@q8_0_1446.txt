@@ -1,0 +1,22 @@
+```python
+import os
+from typing import List, Tuple
+
+class Solution(object):
+    def solution(self, s, t: str) -> int:
+        """
+        :type s: str
+        :type t: str
+        :rtype: int
+        """
+
+        m = len(s)
+        n = len(t)
+        cost = 0
+
+        for i in range(m-n+1):
+            for j in range(n-i+1):
+                if s[i:i+n] == t[j:j+i]:
+                    cost += min(i, j) + 1
+
+        return cost

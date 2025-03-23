@@ -1,0 +1,46 @@
+
+**This is not my favourite question type, but I did enjoy this one!**
+
+My solution was to use some clever string formatting techniques to check if a given string had the same pattern as each line in the file (after replacing "X" with "A", "B", etc).
+
+##### String Formatting:
+
+```bash
+printf "\t%s\n" "$1"
+printf "%-${#string}s" "$string"
+printf "%-$((length - 2))s" "$string"
+```
+
+For the first argument to `printf`, we can use `\t` to print a tab character, which is a good way of aligning things horizontally.
+
+We can also use `$(command)` to evaluate what's inside a command and then substitute it into our string when printing with `printf`.
+
+I like this technique for formatting strings in Bash scripts, so I have a function that does the same thing as above:
+```bash
+#!/bin/bash
+printf "\t%-${#1}s\n" "$@"
+format() {
+    local str="$*"
+    local indent="${#str}"
+    printf "\t$("
+    for ((i = 0; i < indent - 1 ; i++)); do
+        printf "\\t";
+    done
+    printf "%s\n" "$@"
+}
+```
+
+##### My Code:
+
+```bash
+read input
+for line in $(cat file.txt); do
+    if [[ $input =~ ^$line ]]; then
+        echo $i + 1
+        i=$((i + 1))
+        break # when we find the right one, don't keep iterating over all of them
+    fi
+done
+```
+
+In this solution I didn't use any Bash functions for string formatting. This was deliberate in order to test my understanding of the problem and to try out some different solutions. I also thought it would be a good exercise to see how many ways we can solve this question with just plain old string formatting!

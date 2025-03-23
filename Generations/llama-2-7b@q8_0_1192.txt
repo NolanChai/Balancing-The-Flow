@@ -1,0 +1,11 @@
+```python
+import re
+
+a = "Beck's fluorescent peroxide blond hairstyle from 2007 was voted his biggest style shocker in a poll"
+
+def f(x):
+    x = re.search('\w+ fluorescent peroxide blond hairstyle',x)
+    return True if x else False
+
+print(f(a))
+```

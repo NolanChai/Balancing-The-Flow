@@ -1,0 +1,10 @@
+```python
+import numpy as np
+from sklearn import datasets
+from sklearn.preprocessing import label_binarize
+
+data = datasets.load_iris()
+X, y = data.data, data.target
+
+Y = label_binarize(y)
+```

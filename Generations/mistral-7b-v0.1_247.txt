@@ -1,0 +1,10 @@
+```js
+function checkForDomain(domain) {
+  if (domain === "example") {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+

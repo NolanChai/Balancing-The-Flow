@@ -1,0 +1,43 @@
+```python
+import requests
+from bs4 import BeautifulSoup
+from pymongo import MongoClient
+
+# Connect to the MongoDB database
+client = MongoClient("mongodb://localhost:27017/")
+db = client["news_database"]
+collection = db["articles"]
+
+def scrape_article(url):
+    try:
+        # Make a GET request to the URL
+        response = requests.get(url)
+        html_content = response.text
+
+        # Parse the HTML content using BeautifulSoup
+        soup = BeautifulSoup(html_content, "lxml")
+
+        title = soup.select_one(".story-title").text
+        date_published = soup.select_one("time").get("datetime")
+        content = soup.select_one(".story-body").text
+
+        # Save the article data to the MongoDB database
+        collection.insert_one({"url": url, "title": title, "date_published": date_published, "content": content})
+    except Exception as e:
+        print(f"Error occurred while scraping {url}: {str(e)}")
+
+# Get the URLs of articles to scrape from the MongoDB database
+urls = collection.find({}, {"url": 1})
+
+# Scrape each article and save it to the MongoDB database
+for url in urls:
+    scrape_article(url["url"])
+```
+### Result:
+```python
+{'_id': ObjectId('63b04525f1a7e8c29e84d4af'), 'title': 'Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson.', 'date_published': '2000-10-16T12:35:00.000Z', 'url': 'https://www.dailymail.co.uk/news/article-184767/Soviet-spies-admitted-using-bugging-devices-Royal-Family-British-Prime-Minister-Harold-Wilson.html', 'content': 'By . Daily Mail Reporter . Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson. Secret agents from the KGB targeted Princess Margaret i'}
+{'_id': ObjectId('63b0452af1a7e8c29e84d4b1'), 'title': 'Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson.', 'date_published': '2000-10-16T12:35:00.000Z', 'url': 'https://www.dailymail.co.uk/news/article-184767/Soviet-spies-admitted-using-bugging-devices-Royal-Family-British-Prime-Minister-Harold-Wilson.html', 'content': 'By . Daily Mail Reporter . Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson. Secret agents from the KGB targeted Princess Margaret i'}
+{'_id': ObjectId('63b0452ef1a7e8c29e84d4c3'), 'title': 'Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson.', 'date_published': '2000-10-16T12:35:00.000Z', 'url': 'https://www.dailymail.co.uk/news/article-184767/Soviet-spies-admitted-using-bugging-devices-Royal-Family-British-Prime-Minister-Harold-Wilson.html', 'content': 'By . Daily Mail Reporter . Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson. Secret agents from the KGB targeted Princess Margaret i'}
+{'_id': ObjectId('63b04537f1a7e8c29e84d4d5'), 'title': 'Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson.', 'date_published': '2000-10-16T12:35:00.000Z', 'url': 'https://www.dailymail.co.uk/news/article-184767/Soviet-spies-admitted-using-bugging-devices-Royal-Family-British-Prime-Minister-Harold-Wilson.html', 'content': 'By . Daily Mail Reporter . Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson. Secret agents from the KGB targeted Princess Margaret i'}
+{'_id': ObjectId('63b0453cf1a7e8c29e84d4e7'), 'title': 'Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson.', 'date_published': '2000-10-16T12:35:00.000Z', 'url': 'https://www.dailymail.co.uk/news/article-184767/Soviet-spies-admitted-using-bugging-devices-Royal-Family-British-Prime-Minister-Harold-Wilson.html', 'content': 'By . Daily Mail Reporter . Soviet spies have admitted using bugging devices on the Royal Family and former British Prime Minister Harold Wilson. Secret agents from the KGB targeted Princess Margaret i'}
+```

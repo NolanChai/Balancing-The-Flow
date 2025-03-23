@@ -1,0 +1,25 @@
+```python
+def workers_garage(d):
+    if d > 5 and d <= 25:
+        return "dig"
+    elif d == 30:
+        return "oh my!"
+    else:
+        return "stop digging"
+```
+### Test cases:
+##### Case 1
+Input: `workers_garage(7)`
+Output: `dig`
+
+##### Case 2
+Input: `workers_garage(20)`
+Output: `oh my!`
+
+##### Case 3
+Input: `workers_garage(40)`
+Output: `stop digging`
+
+### Explanation:
+The code defines a function called `workers_garage`, which takes an argument d. The function checks if the value of d is greater than 5 and less than or equal to 25. If this condition is met, it returns the string "dig".
+If the value of d is equal to 30, the function returns the string "oh my!". Otherwise, it returns the string "stop digging".

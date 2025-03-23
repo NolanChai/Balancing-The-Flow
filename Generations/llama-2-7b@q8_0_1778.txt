@@ -1,0 +1,11 @@
+
+**Note:** In the event of an unexpected error during template parsing or rendering we will not attempt to display a generic HTML error page. Instead, you should see a detailed error log entry with information about the issue that occurred during processing. **Note:** In the event of an unexpected error during template parsing or rendering we will not attempt to display a generic HTML error page. Instead, you should see a detailed error log entry with information about the issue that occurred during processing.
+
+### Note:
+This document is intended as a reference for developers and should be treated as such. It does **not** provide an end user manual or tutorial on how to use the template system. If you're not familiar with PHP and your own server configuration, you may want to consult with someone who has more experience with this stuff before using any of these features on a production site.
+
+### Note:
+In most cases, we recommend that you **not** modify anything in your `php.ini` or similar files. If you need access to these settings please contact the [Web Hosting Support Team](https://help.website-planet.com/hc/en-us) for assistance.
+
+### Note:
+This documentation is currently under development and may not be complete. We will work diligently to ensure it provides comprehensive coverage of all template features as soon as possible. In the meantime, you can always consult our [documentation wiki](https://github.com/website-planet-webhosting-support/docs/wiki) for more information on specific topics and solutions.

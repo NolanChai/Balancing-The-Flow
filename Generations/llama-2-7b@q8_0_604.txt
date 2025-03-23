@@ -1,0 +1,11 @@
+By . Deborah Arthurs . UPDATED: . 16:21 EST, 8 November 2011 . It's cause for celebration for us norms when the celebrity fashion pack adopt a trend that happens to be comfortable as well as cool. And
+\end{code}
+
+How can I avoid these characters?
+I tried removing the \n character but then it starts breaking the paragraphs on every line.
+
+Comment: Try using some library like [htmlparser](http://github.com/krausest/python-htmlparser) to parse html as a string and extract only content from that string.
+
+Comment: @krause: You should post an answer, not comment it. I can't tell if you mean extracting all text or just removing the unwanted characters
+
+Answer: You could try using something like [HTMLParser](http://github.com/krausest/python-htmlparser) to parse html as a string and extract only content from that string.

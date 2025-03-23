@@ -1,0 +1,34 @@
+In the year 2015, there were $93.7 billion dollars worth of auto related damage.
+
+### Explanation:
+The solution is just to make a sentence that is a little more complicated than necessary and then you can easily get this answer out of it. I'll take a stab at the whole thing and see if you like my response.
+
+First we have:
+```
+In 2015, there were $93.7 billion dollars worth of auto related damage
+```
+This tells me that in 2015 the total amount of money spent on automobile damages is about \$94 billion. So far, so good!
+
+Then we have:
+```
+...thanks to policies designed to create alternatives to driving
+```
+So, something must be done to help get people out of their cars and on bikes? Well, there's no mention of anything about how many bike accidents are happening in this article so I don't know. The only thing we can do is take a guess at the total cost for these bike accidents and hope it fits with the given information. So, we have
+```
+...there were $93.7 billion dollars worth of auto related damage
+```
+And now we need to figure out what portion of this is bicycle-related. We can't use the whole \$94 billion because we don't know how many bike accidents there are per year so let's take an average and assume 20% (50% seems a bit high, but maybe they have really good policies to cut down on car accidents). So our new total for auto related damage is now:
+```
+$93.7 billion dollars worth of auto related damages/100 = $937 million
+```
+We need to figure out how many bicycle accidents there are per year and then we can make an estimate on the cost associated with these accidents (since it's probably going to be a small fraction of \$937 million). In Washington State, they have around 1024 fatalities in automobile accidents every year. We don't know how many bike accidents there are so we can just use this number and assume that half as much is caused by bicycle related deaths (again, we can't go to high because then we would have way too many people on bikes).
+
+So now we need to figure out what the average cost of a bike accident in 2015 is. We have:
+```
+$937 million worth of damage caused by car accidents/50,000 = \$18.7 million
+```
+Now that we know this number, let's just use it! I don't think there are any other factors that we need to consider in order to get the correct answer for this question. So, here goes:
+```
+For the fifth year straight, Washington ranked as the country's most bicycle-friendly state, thanks to policies designed to create alternatives to driving, according to the League of American Bicyclists.
+The total cost of damage caused by automobile accidents in 2015 was about \$937 million. Of this amount, we can assume that approximately \$18.7 million is bike related (we're using the average number from Washington State). This means that there were $937 \times 100 = $93700 bicycle-related accidents in 2015 and the total cost of these incidents was about \$18.7 million, or about \$0.002 per accident (so you're probably safe from a bike accident unless you are really unlucky).
+```

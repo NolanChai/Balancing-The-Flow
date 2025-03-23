@@ -1,0 +1,78 @@
+```json
+{
+  "text": [
+    {
+      "value": "Yes."
+    }
+  ],
+  "entities": {
+    "house": {
+      "value": "9876543210",
+      "type": "postal_address"
+    }
+  },
+  "language": "en-US"
+}
+```
+### Response:
+```json
+{
+  "text": [
+    {
+      "value": "Yes."
+    }
+  ],
+  "entities": {
+    "house": [
+      {
+        "address": {
+          "street": "9876543210",
+          "city": "New York",
+          "state": "NY"
+        },
+        "type": "postal_address"
+      }
+    ],
+    "phone number": [
+      {
+        "number": "+19876543210",
+        "type": "phone"
+      }
+    ]
+  },
+  "language": "en-US"
+}
+```
+### Response:
+```json
+{
+  "text": [
+    {
+      "value": "Yes."
+    }
+  ],
+  "entities": [
+    {
+      "address": {
+        "street": "9876543210",
+        "city": "New York",
+        "state": "NY"
+      },
+      "type": "postal_address"
+    }
+  ],
+  "language": "en-US"
+}
+```
+### Response:
+```json
+{
+  "text": [
+    {
+      "value": "Yes."
+    }
+  ],
+  "entities": [],
+  "language": "en-US"
+}
+```

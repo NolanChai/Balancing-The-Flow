@@ -1,0 +1,15 @@
+
+### Hints:
+
+## Solution:
+```python3
+import collections, re
+
+def main():
+    with open("input.txt") as f:
+        instructions = f.read().split("\n")
+    instructions = [(instruction[0], instruction[-1]) for instruction in instructions]
+    instructions = sorted(instructions, key=lambda x: -len(x))
+    
+    print(*instructions[:45])
+```

@@ -1,0 +1,22 @@
+
+| 0 | 1 | 2 | 3 |  4 | 5 |
+
+| 6 | 7 | 8 | 9 | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z |
+| a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z |
+| aaaa | bbbb | cccc | dddd | eeee | ffff | gggg | hhhh | iiiii | jjjj | kkkk | llll | mmmm | nnnn | oooo | pppp | qqqq | rrrr | ssss | tttt | uuuu | vvvv | wwww | xxxx | yyyyy | zzzz |
+| AAAAA | BBBBB | CCCCC | DDDDD | EEEEE | FFFFG | HHHHH | IIIIIDDJ | KKKK | LLLL | MMMMNOP | OOOO | PPPP | QQQQ | RRRRSTU | VVVVWX | YYYY | ZZZZ
+| 1 | 2 | 3 |  4 | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z
+| aaaa | bbbb | cccc | dddd | eeee | ffff | gggg | hhhh | iiiii | jjjj | kkkk | llll | mmmm | nnnn | oooo | pppp | qqqq | rrrr | ssss | tttt | uuuu | vvvv | wwww | xxxx | yyyyy | zzzz
+| AAAAA | BBBBB | CCCCC | DDDDD | EEEEE | FFFFG | HHHHH | IIIIIDDJ | KKKK | LLLL | MMMMNOP | OOOO | PPPP | QQQQ | RRRRSTU | VVVVWX | YYYY | ZZZZ
+| aaaaa | bbbbbb | cccccc | dddddd | eeeeef | gggg | hhhhjj | kkkkkl | llllllll | mmmmnoop | ooooqqqqrsssutttvwwwwwxxxxyyyyzzzzz
+| 0123456789aabbbcccdddeeffggghhijjkkkllllmmmnnopqqqrrrrsttuuuwwwwwxxxyyyyzzzz
+
+### Input:
+
+| 0 | 1 | 2 | 3 |  4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z |
+| aaaa | bbbb | cccc | dddd | eeee | ffff | gggg | hhhh | iiiii | jjjj | kkkk | llll | mmmm | nnnn | oooo | pppp | qqqq | rrrr | ssss | tttt | uuuu | vvvv | wwww | xxxx | yyyyy | zzzz |
+| AAAAA | BBBBB | CCCCC | DDDDD | EEEEE | FFFFG | HHHHH | IIIIIDDJ | KKKK | LLLL | MMMMNOP | OOOO | PPPP | QQQQ | RRRRSTU | VVVVWX | YYYY | ZZZZ
+| aaaa | bbbbb | cccc | dddd | eeee | ffff | gggg | hhhh | iiiiii | jjjjjj | kkkkkl | llllmmnop | oooooqqqrrssstttuuwwwwxxxxyyyzzzz
+| 0123456789aabbbcccdddeeffggghhhhiiiijjkkklmnmnooppqqqrruwxxxyyyyyzzzzzzz
+
+### Output:

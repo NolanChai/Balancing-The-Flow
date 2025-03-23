@@ -1,0 +1,21 @@
+```python
+import json
+from pathlib import Path
+
+with open('data/instructions.json') as file:
+    instructions = json.load(file)
+
+with open('data/responses.json') as file:
+    responses = json.load(file)
+
+response_id = 5
+
+print(f"The response to the instruction {instructions[response_id]['text']} is:")
+print(f"{responses[response_id]['text']}")
+```
+
+### Output:
+```bash
+The response to the instruction The Kremlin was accused yesterday of faking video footage of an alleged Ukrainian missile attack on pro-Russian separatists. is:
+I have no information about this particular incident, but I can tell you that Russia has denied any wrongdoing in the past when it comes to such allegations.
+```

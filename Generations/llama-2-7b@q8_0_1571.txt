@@ -1,0 +1,7 @@
+```python
+answer = input()
+if answer == "pitbull":
+    print("Victory!")
+else :
+    print("No victory")
+```

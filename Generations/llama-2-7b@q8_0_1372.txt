@@ -1,0 +1,15 @@
+1) Explain why this is true or false:
+```python
+if "and" in line[:30]
+```
+
+2) Fill in the missing value:
+```python
+line = line[:29] + "and"
+```
+
+### Hint:
+The problem statement contains a piece of information that is useful to solving your question.
+
+---
+© 2018 Trilogy Education Services, LLC., a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

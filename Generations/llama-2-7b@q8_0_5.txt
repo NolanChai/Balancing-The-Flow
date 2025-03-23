@@ -1,0 +1,2 @@
+
+There are two ways to solve this problem. You can use the `replace_with` method to replace each character in the sentence with an emoji (or another string). Or you can split it into sentences and then check whether the first word of each sentence is a verb and remove that.

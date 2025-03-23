@@ -1,0 +1,33 @@
+
+[**1.**](https://github.com/JeremyLS/leetcode-solution/tree/master/Python/204-range-of-values) **Range of values.**
+
+I.e., a range of values is `[min,max]`, and the input `nums` can be represented by one or multiple ranges in an array `[arr]`, where each element is a range of numbers. If there are multiple ranges, they should be merged into one single range.
+
+```Python
+class Solution:
+    def findRange(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int[]
+        """
+        # Time complexity: O(n)
+        # Space complexity: O(1), constant space
+        ans = []
+        
+        for i in range(len(nums)):
+            if (i == 0):
+                ans.append((min(nums[i]), max(nums[i])))
+                
+            else:
+                for j in nums:
+                    # Merge ranges if necessary
+                    if ans[-1][0] > j - 2 and ans[-1][1] < j + 1:
+                        continue
+                    
+                    # Append a new range to the list, except when it overlaps with previous ones.
+                    elif ans[-1][1] == j-1:
+                         ans = [ans[-1]]
+            
+            ans.append((min(nums[i]), max(nums[i])))
+        return ans
+```

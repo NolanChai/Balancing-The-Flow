@@ -1,0 +1,18 @@
+
+**You're hired!**
+
+```html
+<p>Would you like to coach Australia in Europe?</p>
+<button class="button">Yes, I'd love that!</button>
+```
+
+**No thanks...**
+
+```html
+<p>Thanks for the offer, but no.</p>
+<button class="button" onclick="return false;">No, thanks...</button>
+```
+
+### Explanation:
+
+This example illustrates that when we use `onclick` to attach an event handler, the return statement prevents our function from actually running. You can find out more about why this happens here: <https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener>

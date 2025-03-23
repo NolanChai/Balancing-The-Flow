@@ -1,0 +1,4 @@
+[10/10](https://leetcode.com/problems/roman-to-integer/)
+
+#### Solution:
+`def romanToInt(self, s): # O(N) N = len(s)`

@@ -1,0 +1,62 @@
+```python
+from collections import namedtuple
+
+def main():
+    Instruction = namedtuple('Instruction', ['direction','address'])
+    
+    # Part 1: 
+    with open( 'input.txt' ) as f: 
+        for instruction in f.read().splitlines():
+            print (Instruction.__name__, instruction)
+            
+    # Part 2: 
+    with open( 'input.txt' ) as f:
+        for instruction in f.read().splitlines():
+            address = [ int(n) if n != '.' else 0 for n in instruction[2:] ]
+            direction = instruction[:1].lower()
+            
+            # Part 2a:
+            if (instruction[3] == 'R'):
+                new_address = []
+                
+                for i, n in enumerate( address[::-1] ):
+                    new_address.append( n )
+                    i += len(new_address)
+            
+                print('{0} -> {1}'.format(direction, ' '.join(str(n) if n != '.' else '0' for n in new_address)))
+            # Part 2b:
+            elif (instruction[3] == 'L'):
+                new_address = []
+                
+                for i, n in enumerate( address[:-1]):
+                    new_address.append( n )
+                    i += len(new_address)
+            
+                print('{0} -> {1}'.format(direction, ' '.join(str(n) if n != '.' else '0' for n in address[::-1])))    
+            # Part 2c:
+            elif (instruction[3] == 'F'):
+                new_address = []
+                
+                for i, n in enumerate( address[:-1]):
+                    if (n + .5) >= .9 or n + .5 <= -.9:
+                        new_address.append('0')
+                        
+                    else:
+                        new_address.append( n )
+                        i += len(new_address)
+            
+                print('{0} -> {1}'.format(direction, ' '.join(str(n) if n != '.' else '0' for n in address[:-1])))    
+            # Part 2d:
+            elif (instruction[3] == 'B'):
+                new_address = []
+                
+                for i, n in enumerate( address):
+                    if (n + .5) >= .9 or n + .5 <= -.9:
+                        new_address.append('0')
+                        
+                    else:
+                        new_address.append( n )
+                        i += len(new_address)
+            
+                print('{0} -> {1}'.format(direction, ' '.join(str(n) if n != '.' else '0' for n in address)))    
+```

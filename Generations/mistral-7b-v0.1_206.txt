@@ -1,0 +1,18 @@
+![](https://media1.giphy.com/media/3o6Zt9MmRfUJl0KdWw/giphy.gif)
+
+### Explanation:
+This is a gif from the movie *The Edge*. The main character of the film (played by Anthony Hopkins) was stuck out in the wilderness with another man, and they were being stalked by a bear. The second man was shot by an arrow through the head, but not before he managed to throw his camera at the bear, which was then mauled by the animal.
+
+### Code:
+```
+import io
+import requests
+from PIL import Image
+
+image_url = "https://i.ytimg.com/vi/3o6Zt9MmRfU/maxresdefault.jpg"
+response = requests.get(image_url)
+image = Image.open(io.BytesIO(response.content))
+image.save("bear_photo.gif")
+```
+### Author:
+Nicole Wong

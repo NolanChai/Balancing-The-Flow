@@ -1,0 +1,15 @@
+Iraq's population in 2013 was 6,047,695 with an average age of 19.9 years and a median age of 17.9 years. The estimated population in 2018 is 4,551,635 with an average age of 22.8 years and a median age of 22.4 years.
+
+### Solution:
+```python
+import math
+
+def main(age):
+    if (age < 18 or age >= 70) :
+        print "You are too young, or you are too old to serve."
+    else:
+        if (age % 2 == 0) and (age > 3):
+            print "Your age is a perfect number between 4 and 68"
+        else:
+            print("Your age is an odd number.")
+```

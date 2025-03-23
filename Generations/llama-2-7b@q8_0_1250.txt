@@ -1,0 +1,18 @@
+
+```java
+class Solution {
+    public static boolean isValid(String s) {
+        if (s == null || s.length() < 3) return false;
+        int len = s.length();
+        for (int i = 1, j = 0; i < len - 1 && j < len - 2; ) {
+            if (s.charAt(i) == s.charAt(j + 1)) i++;
+            else {
+                int mx = j >= 3 ? i - j : 3 - j;
+                if (mx > 0 && isValid(s.substring(j, j + mx))) return true;
+                break;
+            }
+        }
+        return false;
+    }
+}
+```

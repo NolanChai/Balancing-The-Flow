@@ -1,0 +1,15 @@
+
++1
+```python
+from util.string import StringUtil
+
+import pandas as pd
+import numpy as np
+
+
+df = pd.DataFrame(columns=['A','B'])
+
+df.A = ['a','b','c']
+df.B = [2,3,4]
+df
+```

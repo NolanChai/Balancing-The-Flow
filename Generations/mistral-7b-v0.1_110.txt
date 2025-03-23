@@ -1,0 +1,20 @@
+```python
+import sys
+def find(s):
+    if s == '':
+        return 0
+    elif s[0] != s[-1]:
+        return find(s[:-1]) + find(s[1:-1])
+    else:
+        return find(s[:-1]) + 1
+
+print(find(sys.argv[1]))
+```
+
+### Flag:
+```
+flag{4_b4d_r3dd_h4nd}
+```
+
+### Reference:
+https://www.hackthebox.eu/home/machines/profile/206

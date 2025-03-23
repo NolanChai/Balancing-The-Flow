@@ -1,0 +1,10 @@
+
+```javascript
+function Solution(array) {
+    if (array[0] === 'L') return 'E';
+    
+    else return array.reduce((prev, current) => {
+      return prev + current.toLowerCase()
+    });
+  }
+```

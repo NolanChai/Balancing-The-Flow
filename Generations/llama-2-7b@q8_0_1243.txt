@@ -1,0 +1,14 @@
+
+| Type    | Description                        |
+| :----- | :--------------------------------- |
+| Add     | Add new line to file               |
+| Replace | Replace current line by another one |
+| Keep    | Keep current line and do not replace |
+### Pattern:
+`\w+(?:[\s\S]+?)(?:(?:<.*?>)?|\d+:\d{2}:\d{2})+\.`)
+
+### Lookup:
+- \w: [a-zA-Z0-9_]
+
+### Replace Patterns:
+- \1: \3

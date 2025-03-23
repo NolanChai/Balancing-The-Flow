@@ -1,0 +1,20 @@
+
+```javascript
+
+class Faker {
+
+    constructor(a, b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    ice() {
+        return 'patch of black ice';
+    }
+}
+
+const faker = new Faker('Brian', 'Byers');
+console.log(faker.ice());
+
+```
+

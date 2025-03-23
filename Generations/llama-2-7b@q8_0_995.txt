@@ -1,0 +1,25 @@
+
+### Input
+
+### Output
+
+### Code:
+```python
+from __future__ import print_function
+import os, sys
+
+
+def main():
+    fptr = open(os.environ['OUTPUT_PATH'], "w")
+
+    s = input()
+
+    fptr.write("%s\n" % s)
+
+    fptr.close()
+
+if __name__ == '__main__':
+    main()
+```
+### Ref: 1
+The [refence](https://leetcode.com/problems/find-peak-element/) is : https://leetcode.com/problems/find-peak-element/

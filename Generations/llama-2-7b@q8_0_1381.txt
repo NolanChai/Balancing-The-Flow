@@ -1,0 +1,20 @@
+* The first line is:
+```ruby
+#!/usr/bin/env ruby -I.
+require 'test_helper'
+```
+
+* Then it executes this:
+```ruby
+class Test < ActiveSupport::TestCase
+	include Warden::Test::Helpers
+
+    test "should be able to create a new user" do
+        visit signup_path
+    	fill_in 'user[name]', with: 'testuser'
+    	fill_in 'user[email]', with: 'test@example.com'
+    	fill_in 'user[password]', with: '123456789'
+    	click_button "Sign up"
+    end
+end
+```

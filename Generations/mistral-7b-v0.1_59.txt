@@ -1,0 +1,68 @@
+I have created a python script using the openCV library to detect vehicles in a video. The script is able to successfully detect vehicles in the video, however it has difficulty with low-contrast areas. In this instance, the vehicle was difficult to detect due to the low contrast between the white car and the background of the tunnel.
+
+### Video:
+
+https://user-images.githubusercontent.com/86159447/235353174-f0ffe08b-d40c-4a4e-ac71-edf7ebe871ce.mp4
+
+
+### Code:
+```python
+import cv2
+import numpy as np
+
+# Load the video file
+cap = cv2.VideoCapture('video.mp4')
+
+# Initialize some variables
+frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+fps = cap.get(cv2.CAP_PROP_FPS)
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+output_video = cv2.VideoWriter('output.mp4', fourcc, fps, (frame_width, frame_height))
+
+# Define the color of the vehicle to detect
+blue_lower = np.array([100, 50, 50])
+blue_upper = np.array([123, 255, 255])
+
+# Initialize some variables
+left_lane_found = False
+right_lane_found = False
+count = 0
+while True:
+    # Read a frame from the video file
+    ret, frame = cap.read()
+
+    # Convert the frame to grayscale and blur it
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    gray = cv2.GaussianBlur(gray, (3, 3), 0)
+
+    # Create a binary image using Otsu's thresholding method
+    ret, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
+    # Find the contours in the binary image
+    contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    # Iterate through each contour and check if it's a vehicle
+    for cnt in contours:
+        x, y, w, h = cv2.boundingRect(cnt)
+        area = w * h
+        if area > 100 and area < 5000:
+            # Draw a rectangle around the vehicle
+            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        else:
+            continue
+
+    # Write the frame to the output video file
+    output_video.write(frame)
+
+    # Show the frame with the detected vehicle
+    cv2.imshow('Frame', frame)
+
+    # Check for ESC key press
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Release the video capture and close all windows
+cap.release()
+output_video.release()
+cv2.destroyAllWindows()

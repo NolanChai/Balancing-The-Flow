@@ -1,0 +1,21 @@
+
+**Bonus:**
+How long would it take you to write a function that converts a string into the number associated with the characters in that string?
+
+**Answer 1:**
+```java
+public static void main(String[] args) {
+    String word = "NOTTINGHAM";
+    int num = getNumberForWord(word);
+    System.out.println("The number is: " + num);
+}
+public static int getNumberForWord(String word){
+    StringBuilder builder = new StringBuilder();
+    for (char c : word.toCharArray()) {
+        if (Character.isLetter(c)) {
+            builder.append((int) c - 96);
+        }
+    }
+    return Integer.parseInt(builder.toString());
+}
+```

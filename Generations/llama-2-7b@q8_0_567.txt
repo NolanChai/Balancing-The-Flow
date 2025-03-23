@@ -1,0 +1,13 @@
+* You should be able to identify what the instruction is.
+* What does `instruction` refer? It refers a keyword of the Python language and you should find it at line 12.
+* What type of instruction is that?
+* Is it valid? If not, why not?
+* In general, how would you tell whether an instruction is valid or invalid in this context?
+* Why would `instruction` be considered a keyword in the first place?
+* Does `instruction` look like a variable name to you? It does. Why it’s not? Because it's not allowed by the Python language specification for a variable name, so it is invalid as an identifier and thus not valid as an instruction either.
+### Example:
+```python
+from os import system
+
+system('git checkout -f main')
+```

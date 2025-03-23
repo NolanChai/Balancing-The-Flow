@@ -1,0 +1,48 @@
+```
+def solution():
+  x, y = [int(i) for i in input().split()]
+  grid = [[0]*x+[1]*y]*3 + [0]*x + [1]*y #
+  
+  def get_nums(grid, row):
+    retval = []
+    for col in range(len(row)):
+      if grid[col][row] == 0: # no digit to the left of current char
+        retval.append((row, col))
+        
+      elif grid[col-1][row] == 0 and (row, col) != retval[-1]: 
+        retval.insert(0, (row, col))
+      
+    return retval
+  
+  def check_solution(nums):
+    for i in nums:
+      if grid[i][2] == 0: # no digit to the right of current char
+        return False
+    
+    for i in range(len(grid)-3, -1, -1):
+      for j in range(len(nums)):
+        if nums[j] != grid[i][j+3]: # not a valid path
+          return False
+      
+      if grid[i-2][j+3] == 0: # no digit above current char
+        break
+    
+    for j in range(len(nums)-1):
+      for i in range(len(grid)):
+        if nums[j] != grid[i][j]: # not a valid path
+          return False
+      
+    return True
+  
+  while True:
+    print(get_nums(grid, [0]*x+[1]*y))
+    
+    try:
+      retval = input().split()
+    except EOFError:
+      break
+    
+    if check_solution(retval):
+      print("Yes")
+      break
+```

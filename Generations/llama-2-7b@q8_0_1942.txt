@@ -1,0 +1,10 @@
+```python
+>>> import numpy as np # import the numpy library 
+>>> from sklearn import datasets, svm
+>>> # load iris dataset using the sklearn package and make sure it is in a pandas dataframe form
+>>> (iris = datasets.load_iris())
+>>> X = iris.data # load X (features) into X 
+>>> y = iris.target 
+>>> df = pd.DataFrame(X, columns=iris.feature_names)
+>>> print("Original Features", df.columns)
+```

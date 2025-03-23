@@ -1,0 +1,16 @@
+The paper has a very interesting layout and I would like to try to mimic it by creating something similar on my website.
+
+### Requirements:
+
+* The main layout should be the same as the original, but with an extra page at the end that shows all of the pages in chronological order.
+
+#### HTML
+
+- Include a title (e.g. "Thierry Henry") and a byline (e.g. L'Equipe) on each of the five pages.
+  - Make sure to use correct spelling and punctuation!
+- Each page should be laid out identically: header, picture, article text, photo caption and source information, footer.
+- The extra page should include all of the headers (title, byline), but only show a thumbnail image for each page on which to click through to see them in order.
+  - The first page should be the top right corner of the original paper (so that it looks like you have turned over and seen all five pages)
+
+#### CSS
+- Use a media query for small screens so that the thumbnails display as well as the text.

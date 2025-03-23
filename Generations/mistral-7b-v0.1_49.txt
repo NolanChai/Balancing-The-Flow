@@ -1,0 +1,20 @@
+<img src="https://i.imgur.com/WxQ4K3u.png">
+
+### Explanation:
+- I used the `re.sub(pattern, repl, string[, count])` function. It searches for all occurrences of a pattern in the string and replaces it with another specified string.
+- Here we are replacing the word 'mother' with 'dead'.
+- The regex is `\b(?i:mother)\b`.
+- We made the search case insensitive using the `re.I` flag.
+- The `\b` (boundary) word character matches at a word boundary, that is, between a letter and something else (or vice versa), or at the beginning or end of the string.
+
+### Code:
+```python
+import re
+string = 'A devastated son whose father was beheaded and his mother abducted a week ago today said he now hopes she is dead to \'ease her suffering\' as it is too unbearable to think of her in pain.'
+print(re.sub(r'\b(?i:mother)\b', 'dead', string))
+```
+
+### Output:
+```
+A devastated son whose father was beheaded and his dead abducted a week ago today said he now hopes she is dead to ease her suffering as it is too unbearable to think of her in pain.
+```

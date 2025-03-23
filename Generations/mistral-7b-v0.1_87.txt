@@ -1,0 +1,31 @@
+```python
+from aoc_2020 import *
+
+data = [int(line) for line in open('input_files/day7.txt').read().splitlines()]
+
+def part1():
+    while len([x for x in data if x < 9]) > 0:
+        for i, value in enumerate(data):
+            data[i] += 1
+            if data[i] == 10:
+                data[i] = 6
+                data.append(8)
+            else:
+                break
+    return sum([x for x in data if x < 9])
+
+def part2():
+    while len([x for x in data if x == 9 or x > 9]) > 0:
+        for i, value in enumerate(data):
+            data[i] += 1
+            if data[i] == 10:
+                data[i] = 6
+                data.append(8)
+            else:
+                break
+    return sum([x for x in data if x < 9])
+
+if __name__ == '__main__':
+    print('Day 7, part 1:', part1())
+    print('Day 7, part 2:', part2())
+```

@@ -1,0 +1,25 @@
+```python
+import re
+def solution(s): #s=flight route
+    m = re.search(r'(\d+)', s) #[1]
+    if not m: return []  #if no match found, return empty list
+    
+    airlines = dict() #dictionary of airline codes to their abbreviation in alphabetical order
+    for code in airlines: airlines[code]=airlines.get(code,'') + ',' #append all codes to list that are not already in the dictionary
+    
+    m = re.search('(\d+)',s) #[1]  #find next match for airline code, which may or may not be the same as last time
+    if not m: return []  #if no match found, return empty list
+    
+    d = {'code':m.group(1), 'abbrev':airlines[m.group(1)], 'length':len(airlines)} 
+    while len(s)>0:  #loop until there is nothing left in string
+        m = re.search('(\w+)',s, re.I) #[0]
+        if not m: return d #if no match found, return dictionary
+        
+        #find index of m[1] in airlines
+        i=airlines.index(m.group(1))
+        s = s[:i]+' '+s[(i):]+'\n' #remove the matched code from string and replace it with a space character
+        if (len(d['abbrev'])+len(' (')+len(': '))>30: break  #if there is too much text, stop the loop
+        
+        d = {'code':m.group(1), 'abbrev':airlines[m.group(1)], 'length':len(airlines)} 
+    return d
+```

@@ -1,0 +1,12 @@
+The sun had yet to rise and a thin layer of frost covered the path he planned on walking that day. In any other scenario this would be unremarkable; however, the fact that Hari Chaudhary was trekking in one of Nepal’s most remote mountain districts made the scene extraordinary.
+The 40-year-old had been planning this trip for more than a year. He was on his way to Dolakha, a district located high up in the Himalayas and home to roughly 57,000 people. The trek would take him through the district’s two main villages: Charikot (population 26,384) and Sidding (population 30,591).
+It was here in these remote villages that Chaudhary hoped to make his mark as an artist — a goal he had set himself on after leaving his home town of Dhangadhi. He wanted to become known as “the best painter from Dolakha,” and this trip would be his first step toward achieving it.
+“I knew I was going to walk in the mountains with my family and friends, but what we didn’t expect is that I would also find some of Nepal’s most spectacular scenery along the way.”
+Chaudhary’s journey began in early September 2017 as he made his way from Charikot to Sidding on foot. He took with him a small backpack containing supplies like water and food for the six-hour trek ahead of him. His family followed behind, carrying all their belongings — including clothes and sleeping bags — in larger sacks strapped to their backs or shoulders by rope.
+As he walked along the narrow mountain path, Chaudhary noticed something strange about it: It didn’t seem as if anyone had walked there before him! This was unusual for someone who normally treks alone because it meant that there were no footprints left behind; just a blank canvas waiting to be painted.
+### Data:
+I’ve been working with the dataset provided by [DataCamp](https://www.datacamp.com/courses/hands-on-python) for this exercise and have made some changes to make it work in Python 3 instead of Python 2 (there are a few differences between these two versions).
+### Results:
+The code below will return a list containing all of the numbers that were found in the data set. For example, if your dataset had five entries, it would return `[1, 2, 3, 4, 5]`.
+
+import numpy as np # imports the NumPy package from scipy import stats # imports the statistics library from sklearn # imports the scikit-learn module from pdb import set_trace # prints debug information about your program's execution if __name__ == '__main__': # do something else here! print(np.mean([1, 2, 3]))

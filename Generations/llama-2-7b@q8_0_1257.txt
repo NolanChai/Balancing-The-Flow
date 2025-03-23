@@ -1,0 +1,54 @@
+```python3
+import numpy as np
+from matplotlib import pyplot as plt
+import pandas as pd
+
+df = pd.read_csv('data/instruction.txt')
+
+
+def f(i):
+    if i == 0:
+        return 1
+    elif (i >= 1) and (i <=49356):
+        return int((i - 1)/1024)*1024+1
+    
+def g(x):
+    return x+1
+
+df['size'] = df[df.index % 10 == 1].size # Get the number of elements in each block to calculate the avg
+df['size_num'] = np.array(list(df['size'].values)).astype('int64') 
+df['block_size'] = (np.round(df['size_num']/3)/2)*3 # Block size is 3/2
+
+def cnt(x):
+    return sum([1 for y in x if y!=0]) # Count number of elements with nonzero values
+cnt = df[df.index % 10 == 1].apply(lambda x: cnt(x)) # Get the total number of blocks that have at least one element with a value greater than zero
+
+def main():
+    f_idx = np.array([i for i in range(5) if df[df.index % 10 == 4].loc[:, 'size'][i] == 1]) # Get index of each block that has one element with a value greater than zero
+    g_idx = np.array([i for i in range(5) if df[df.index % 10 == 6].loc[:, 'size'][i] == 1])
+
+    print(f'There is {cnt} block that contains a nonzero element')
+    print('Block 1: {}'.format(df['index'].values[f_idx])) # Print out the indices of those blocks that have at least one nonzero value
+    
+    for i in range(5):
+        f_block = df.loc[:, 'size'] == 1
+        block_counts = [cnt(i) if df.loc[:, 'index'].values[f_idx]==i else cnt(df.loc[:, 'index'].values[i]) for i in range(len(f_block))] # Get the number of blocks that contain a nonzero value
+        df['sum1'] = block_counts[0]+block_counts[1]+block_counts[2] + block_counts[3]+block_counts[4] 
+    
+    for i in range(5):
+        g_block = df.loc[:, 'size'] == 1
+        block_counts = [cnt(i) if df.loc[:, 'index'].values[g_idx]==i else cnt(df.loc[:, 'index'].values[i]) for i in range(len(g_block))] # Get the number of blocks that contain a nonzero value
+        df['sum2'] = block_counts[0]+block_counts[1]+block_counts[2] + block_counts[3]+block_counts[4] 
+    
+    print(df) # Print the data frame
+    plt.plot(df['index'].values, df['sum1']*2/len(f_block), label='Sum 1')
+    plt.plot(df['index'].values, df['sum2']*2/len(g_block), label='Sum 2')
+    
+    plt.ylabel('Number of blocks with nonzero values', color='red')
+    plt.xlabel('Block Index', color='blue')
+    plt.legend()
+    plt.show() # Plot the results
+
+if __name__ == '__main__':
+    main()
+```

@@ -1,0 +1,8 @@
+```sql
+SELECT SUM(amount) as total_sold_to_ebay FROM seizure s
+INNER JOIN (
+	SELECT e.ebay_id, sum(e.amount) as total_sale
+	FROM ebay_sale e
+	GROUP BY e.ebay_id
+) AS e ON e.ebay_id = s.ebay_id;
+```

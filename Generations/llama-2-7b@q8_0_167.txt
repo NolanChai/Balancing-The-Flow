@@ -1,0 +1,17 @@
+
+Answers (with explanations):
+
+```python
+# A1. What is the probability that the OAS will vote to lift Cuba’s suspension?
+# To calculate this, we use the fact that there are 20 votes among 34 members of the organization and the null hypothesis that they all have identical probabilities of voting for or against.
+# We can use Bayes’ Theorem to compute the probability that each country will vote for lifting Cuba's suspension:
+probability_vote = (1/(34*20)) * (20/20) # 75% probability that Cuba will be lifted from its suspension
+print(probability_vote)
+```
+
+```python
+# A2. What is the probability that no country votes to lift Cuba’s suspension?
+# This question is easier because there are only two possible outcomes: Cuba is not lifted and Cuba is lifted. So we can use the binomial distribution:
+probability_vote = (1/(34*20)) * ((20 - 1)/(20)) # 75% probability that Cuba will be lifted from its suspension
+print(probability_vote)
+```
