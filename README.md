@@ -1,7 +1,7 @@
 # Balancing-The-Flow
 Code for Balancing the Flow: An Information-Theoretic Study of RLHF-Induced Uniformity in Language Model Outputs
 
-All code is available in the [Scripts Folder](https://github.com/NolanChai/Balancing-The-Flow/tree/main/Scripts).
+All code is available in the [Scripts Folder](https://github.com/NolanChai/Balancing-The-Flow/tree/main/Scripts). Alternative to running scripts, there are a few Python Jupyter notebooks to explore our results.
 
 For base models, we're generating article completions by only providing the title and first sentence of each article. For each model, we have different configurations based on
 the recommended default values given by their respective teams.
