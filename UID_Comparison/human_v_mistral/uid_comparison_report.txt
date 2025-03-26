@@ -155,99 +155,6 @@ uid_pairwise:
   Min:    9.5856
   Max:    51.5916
 
-== Source: llama-2-7b ==
-Number of texts: 2000
-
-tokens:
-  Mean:   128.3690
-  Median: 62.0000
-  StdDev: 188.9392
-  Min:    5.0000
-  Max:    1023.0000
-
-mean_surprisal:
-  Mean:   4.6240
-  Median: 4.5581
-  StdDev: 1.4711
-  Min:    0.3762
-  Max:    12.2542
-
-uid_variance:
-  Mean:   20.3507
-  Median: 16.9876
-  StdDev: 25.8673
-  Min:    2.5455
-  Max:    634.4446
-
-uid_pairwise:
-  Mean:   38.1357
-  Median: 30.0061
-  StdDev: 49.2345
-  Min:    1.6850
-  Max:    1140.6866
-
-== Source: llama-2-7b-32k-instruct ==
-Number of texts: 300
-
-tokens:
-  Mean:   398.2767
-  Median: 124.5000
-  StdDev: 428.6033
-  Min:    6.0000
-  Max:    1023.0000
-
-mean_surprisal:
-  Mean:   3.9935
-  Median: 4.0988
-  StdDev: 1.5878
-  Min:    0.3504
-  Max:    11.9522
-
-uid_variance:
-  Mean:   13.7221
-  Median: 12.6440
-  StdDev: 6.0923
-  Min:    2.4781
-  Max:    73.4710
-
-uid_pairwise:
-  Mean:   26.0766
-  Median: 23.3685
-  StdDev: 16.4677
-  Min:    1.6518
-  Max:    215.2110
-
-== Source: llama-2-7b-chat ==
-Number of texts: 300
-
-tokens:
-  Mean:   114.8600
-  Median: 88.5000
-  StdDev: 93.8729
-  Min:    20.0000
-  Max:    742.0000
-
-mean_surprisal:
-  Mean:   3.8894
-  Median: 3.8253
-  StdDev: 0.6499
-  Min:    2.1769
-  Max:    6.0588
-
-uid_variance:
-  Mean:   12.9377
-  Median: 12.2739
-  StdDev: 3.7886
-  Min:    4.5314
-  Max:    34.0093
-
-uid_pairwise:
-  Mean:   25.6518
-  Median: 24.8329
-  StdDev: 7.9113
-  Min:    7.6751
-  Max:    79.0006
-
 
 === Statistical Comparison ===
 
@@ -265,15 +172,6 @@ human_texts vs mistral-7b-instruct-v0.3:
 human_texts vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 2.5863 (large effect)
-human_texts vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 2.8092 (large effect)
-human_texts vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.2630 (large effect)
-human_texts vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 2.6942 (large effect)
 mistral-instruct-01 vs mistral-7b-v0.1:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.6662 (medium effect)
@@ -283,60 +181,15 @@ mistral-instruct-01 vs mistral-7b-instruct-v0.3:
 mistral-instruct-01 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.408840 (no significant difference)
   Effect size (Cohen's d): 0.2621 (small effect)
-mistral-instruct-01 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.2329 (small effect)
-mistral-instruct-01 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.093722 (no significant difference)
-  Effect size (Cohen's d): 0.7175 (medium effect)
-mistral-instruct-01 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.4908 (small effect)
 mistral-7b-v0.1 vs mistral-7b-instruct-v0.3:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.6197 (medium effect)
 mistral-7b-v0.1 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.8507 (large effect)
-mistral-7b-v0.1 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.9269 (large effect)
-mistral-7b-v0.1 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.113236 (no significant difference)
-  Effect size (Cohen's d): 0.2252 (small effect)
-mistral-7b-v0.1 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.9653 (large effect)
 mistral-7b-instruct-v0.3 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.019318 (significant difference)
   Effect size (Cohen's d): 0.3867 (small effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.2957 (small effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.763450 (no significant difference)
-  Effect size (Cohen's d): 0.6845 (medium effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.6082 (medium effect)
-mistral-plus-7b vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.0878 (negligible effect)
-mistral-plus-7b vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.954859 (no significant difference)
-  Effect size (Cohen's d): 0.8305 (large effect)
-mistral-plus-7b vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.3659 (small effect)
-llama-2-7b vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.1514 (large effect)
-llama-2-7b vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.0753 (negligible effect)
-llama-2-7b-32k-instruct vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000001 (highly significant difference)
-  Effect size (Cohen's d): 0.9135 (large effect)
 
 == mean_surprisal Comparisons ==
 human_texts vs mistral-instruct-01:
@@ -351,15 +204,6 @@ human_texts vs mistral-7b-instruct-v0.3:
 human_texts vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 1.5190 (large effect)
-human_texts vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000008 (highly significant difference)
-  Effect size (Cohen's d): 0.1660 (negligible effect)
-human_texts vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.6520 (medium effect)
-human_texts vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.2244 (large effect)
 mistral-instruct-01 vs mistral-7b-v0.1:
   Mann-Whitney U test: p-value = 0.322717 (no significant difference)
   Effect size (Cohen's d): 0.0407 (negligible effect)
@@ -369,60 +213,15 @@ mistral-instruct-01 vs mistral-7b-instruct-v0.3:
 mistral-instruct-01 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000431 (highly significant difference)
   Effect size (Cohen's d): 0.0416 (negligible effect)
-mistral-instruct-01 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.6105 (medium effect)
-mistral-instruct-01 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000006 (highly significant difference)
-  Effect size (Cohen's d): 0.1774 (negligible effect)
-mistral-instruct-01 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000006 (highly significant difference)
-  Effect size (Cohen's d): 0.1548 (negligible effect)
 mistral-7b-v0.1 vs mistral-7b-instruct-v0.3:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.4066 (small effect)
 mistral-7b-v0.1 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.230177 (no significant difference)
   Effect size (Cohen's d): 0.0842 (negligible effect)
-mistral-7b-v0.1 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.6332 (medium effect)
-mistral-7b-v0.1 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000780 (highly significant difference)
-  Effect size (Cohen's d): 0.1988 (negligible effect)
-mistral-7b-v0.1 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.019541 (significant difference)
-  Effect size (Cohen's d): 0.1807 (negligible effect)
 mistral-7b-instruct-v0.3 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.5787 (medium effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.3749 (small effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.610142 (no significant difference)
-  Effect size (Cohen's d): 0.0927 (negligible effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000002 (highly significant difference)
-  Effect size (Cohen's d): 0.3523 (small effect)
-mistral-plus-7b vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.6022 (medium effect)
-mistral-plus-7b vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000499 (highly significant difference)
-  Effect size (Cohen's d): 0.1723 (negligible effect)
-mistral-plus-7b vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.114862 (no significant difference)
-  Effect size (Cohen's d): 0.1691 (negligible effect)
-llama-2-7b vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.4240 (small effect)
-llama-2-7b vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.5277 (medium effect)
-llama-2-7b-32k-instruct vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.028663 (significant difference)
-  Effect size (Cohen's d): 0.0858 (negligible effect)
 
 == uid_variance Comparisons ==
 human_texts vs mistral-instruct-01:
@@ -437,15 +236,6 @@ human_texts vs mistral-7b-instruct-v0.3:
 human_texts vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 1.6084 (large effect)
-human_texts vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.001026 (very significant difference)
-  Effect size (Cohen's d): 0.2074 (small effect)
-human_texts vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.9662 (large effect)
-human_texts vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.5277 (large effect)
 mistral-instruct-01 vs mistral-7b-v0.1:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.3137 (small effect)
@@ -455,60 +245,15 @@ mistral-instruct-01 vs mistral-7b-instruct-v0.3:
 mistral-instruct-01 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.5244 (medium effect)
-mistral-instruct-01 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.3907 (small effect)
-mistral-instruct-01 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.5700 (medium effect)
-mistral-instruct-01 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.5636 (medium effect)
 mistral-7b-v0.1 vs mistral-7b-instruct-v0.3:
   Mann-Whitney U test: p-value = 0.000058 (highly significant difference)
   Effect size (Cohen's d): 0.2458 (small effect)
 mistral-7b-v0.1 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000001 (highly significant difference)
   Effect size (Cohen's d): 0.2529 (small effect)
-mistral-7b-v0.1 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.0066 (negligible effect)
-mistral-7b-v0.1 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000190 (highly significant difference)
-  Effect size (Cohen's d): 0.2206 (small effect)
-mistral-7b-v0.1 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000005 (highly significant difference)
-  Effect size (Cohen's d): 0.2475 (small effect)
 mistral-7b-instruct-v0.3 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.133508 (no significant difference)
   Effect size (Cohen's d): 0.0701 (negligible effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.3043 (small effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.703691 (no significant difference)
-  Effect size (Cohen's d): 0.1522 (negligible effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.156609 (no significant difference)
-  Effect size (Cohen's d): 0.0198 (negligible effect)
-mistral-plus-7b vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.3135 (small effect)
-mistral-plus-7b vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.262184 (no significant difference)
-  Effect size (Cohen's d): 0.1879 (negligible effect)
-mistral-plus-7b vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.773328 (no significant difference)
-  Effect size (Cohen's d): 0.0436 (negligible effect)
-llama-2-7b vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.2736 (small effect)
-llama-2-7b vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.3068 (small effect)
-llama-2-7b-32k-instruct vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.438032 (no significant difference)
-  Effect size (Cohen's d): 0.1546 (negligible effect)
 
 == uid_pairwise Comparisons ==
 human_texts vs mistral-instruct-01:
@@ -523,15 +268,6 @@ human_texts vs mistral-7b-instruct-v0.3:
 human_texts vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 1.6293 (large effect)
-human_texts vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.1743 (negligible effect)
-human_texts vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.8302 (large effect)
-human_texts vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.2906 (large effect)
 mistral-instruct-01 vs mistral-7b-v0.1:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
   Effect size (Cohen's d): 0.2693 (small effect)
@@ -541,57 +277,12 @@ mistral-instruct-01 vs mistral-7b-instruct-v0.3:
 mistral-instruct-01 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000008 (highly significant difference)
   Effect size (Cohen's d): 0.2111 (small effect)
-mistral-instruct-01 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.3398 (small effect)
-mistral-instruct-01 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000134 (highly significant difference)
-  Effect size (Cohen's d): 0.2652 (small effect)
-mistral-instruct-01 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.3563 (small effect)
 mistral-7b-v0.1 vs mistral-7b-instruct-v0.3:
   Mann-Whitney U test: p-value = 0.850375 (no significant difference)
   Effect size (Cohen's d): 0.2009 (small effect)
 mistral-7b-v0.1 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000916 (highly significant difference)
   Effect size (Cohen's d): 0.2416 (small effect)
-mistral-7b-v0.1 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000035 (highly significant difference)
-  Effect size (Cohen's d): 0.0233 (negligible effect)
-mistral-7b-v0.1 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.002335 (very significant difference)
-  Effect size (Cohen's d): 0.2100 (small effect)
-mistral-7b-v0.1 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.066671 (no significant difference)
-  Effect size (Cohen's d): 0.2195 (small effect)
 mistral-7b-instruct-v0.3 vs mistral-plus-7b:
   Mann-Whitney U test: p-value = 0.000002 (highly significant difference)
   Effect size (Cohen's d): 0.3731 (small effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.2459 (small effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000077 (highly significant difference)
-  Effect size (Cohen's d): 0.0600 (negligible effect)
-mistral-7b-instruct-v0.3 vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.006691 (very significant difference)
-  Effect size (Cohen's d): 0.1607 (negligible effect)
-mistral-plus-7b vs llama-2-7b:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.3013 (small effect)
-mistral-plus-7b vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.915039 (no significant difference)
-  Effect size (Cohen's d): 0.1422 (negligible effect)
-mistral-plus-7b vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.038465 (significant difference)
-  Effect size (Cohen's d): 0.1842 (negligible effect)
-llama-2-7b vs llama-2-7b-32k-instruct:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.2604 (small effect)
-llama-2-7b vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.2713 (small effect)
-llama-2-7b-32k-instruct vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.094367 (no significant difference)
-  Effect size (Cohen's d): 0.0329 (negligible effect)
