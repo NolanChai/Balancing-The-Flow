@@ -89,9 +89,9 @@ def format_for_text(date, version, title, author, description):
     txt_entry.append(f"Version: {version}  |  Date: {date}")
     txt_entry.append(f"Change: {title}")
     txt_entry.append(f"Author: {author}")
-    txt_entry.append("-" * 60)
     if description:
         txt_entry.append(description)
+    txt_entry.append("-" * 60)
     # separator / blank line
     txt_entry.append("")
     return "\n".join(txt_entry)

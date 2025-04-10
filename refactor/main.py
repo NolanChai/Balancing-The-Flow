@@ -5,9 +5,10 @@ By: Nolan
 This is an overhaul of the existing scripting system. 
 The previous version was a bit too convoluted, and not consolidated.
 """
+from log import run_log
 
 def main():
-    print("")
+    run_log()
 
 if __name__ == "__main__":
     main()
