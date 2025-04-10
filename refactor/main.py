@@ -8,6 +8,7 @@ The previous version was a bit too convoluted, and not consolidated.
 from log import run_log
 
 def main():
+    # auto log
     run_log()
 
 if __name__ == "__main__":

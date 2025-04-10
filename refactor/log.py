@@ -96,7 +96,7 @@ def format_for_text(date, version, title, author, description):
     txt_entry.append("")
     return "\n".join(txt_entry)
 
-def append_to_files(md_entry, txt_entry, md_file="changelog.md", txt_file="changelog.txt"):
+def append_to_files(md_entry, txt_entry, md_file="changelog/README.md", txt_file="changelog/changelog.txt"):
     """
     Appends entries to Markdown and text files.
     If the files don't exist, create one.
@@ -110,9 +110,9 @@ def append_to_files(md_entry, txt_entry, md_file="changelog.md", txt_file="chang
         f_txt.write(txt_entry)
 
 def run_log():
-    local_path = "current.txt"
+    local_path = "changelog/current.txt"
     date, version, title, author, description = parse_file(local_path)
     md_entry = format_for_markdown(date, version, title, author, description)
     txt_entry = format_for_text(date, version, title, author, description)
     append_to_files(md_entry, txt_entry)
-    print(f"Appended changes for version {version} to changelog.md and changelog.txt")
+    print(f"Appended changes for version {version} to changelog/README.md and changelog/changelog.txt")
