@@ -71,7 +71,7 @@ def format_for_markdown(date, version, title, author, description):
     """
     md_entry = []
     md_entry.append(f"## **Version [{version}]** - {date}")
-    md_entry.append(f"**Change:** {title}\n")
+    md_entry.append(f"**Change:** {title}")
     md_entry.append(f"**Author:** {author}")
     md_entry.append("")
     if description:
