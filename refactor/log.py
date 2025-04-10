@@ -76,9 +76,6 @@ def format_for_markdown(date, version, title, author, description):
     md_entry.append("")
     if description:
         md_entry.append(description)
-
-    # blank line for spacing
-    md_entry.append("")
     return "\n".join(md_entry)
 
 def format_for_text(date, version, title, author, description):
