@@ -119,10 +119,10 @@ def scrape(article_urls):
             pot.add(soup)
     return pot
 
-def prompt_hfds(num_articles,client, temperature, model_name, 
+def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                 model_output_dir="../Generations", human_output_dir="../Sources", 
                 write_source=True, regenerate=True, max_tokens=2048, top_p=1.0, 
-                system_prompt=None, max_retries=3):
+                system_prompt=None, max_retries=3, dataset_config=""):
     """Prompts an LM using articles from the cnn_dailymail dataset
 
     Args:
@@ -130,28 +130,33 @@ def prompt_hfds(num_articles,client, temperature, model_name,
         client : API client used for model prompting
         temperature (float): temperature parameter for the model
         model_name (str): name of the model
+        dataset_name (str): name of the dataset to prompt from
         model_output_dir (str, optional): output directory for generations. Defaults to "../Generations".
         human_output_dir (str, optional): output directory for human articles. Defaults to "../Sources".
         write_source (bool, optional): if True, write the human articles to .txt files in human_output_dir. Defaults to True.
         regenerate (bool, optional): if True, regenerate articles that already exist. Defaults to True.
         max_tokens (int, optional): maximum tokens for generation. Defaults to 2048.
         max_retries (int, optional): maximum number of retries for failed generations. Defaults to 3.
+        dataset_config (str, optional): configuration for dataset
     """
 
     # handling for missing paths
-    model_output_path = Path(model_output_dir)
-    human_output_path = Path(human_output_dir)
+    model_output_path = Path(model_output_dir) / Path(model_name) / Path(dataset_name.split("/")[-1])
+    human_output_path = Path(human_output_dir) / Path(dataset_name.split("/")[-1])
 
     model_output_path.mkdir(parents=True, exist_ok=True)
     if write_source:
         human_output_path.mkdir(parents=True, exist_ok=True)
 
-    data = load_dataset("abisee/cnn_dailymail", "1.0.0", trust_remote_code=True)['train']
+    dataset_params = (dataset_name,)
+    if dataset_config:
+        dataset_params += (dataset_config,)
+    data = load_dataset(*dataset_params, trust_remote_code=True)['train']
     shuffled_data = data.shuffle(seed=42)  # Use consistent seed for reproducibility
 
     # setting articles to generate
     if num_articles < 0:
-        num_articles = 10_000
+        num_articles = len(shuffled_data)
 
     # make sure it doesn't exceed dataset size
     num_articles = min(num_articles, len(shuffled_data))
@@ -184,17 +189,14 @@ def prompt_hfds(num_articles,client, temperature, model_name,
         # try up to max retries
         for retry in range(max_retries):
             try:
-                # get article & first sentence
-                article = shuffled_data[i]
-                first_sent = get_first_sentence(article['article'])
-                
-                if len(first_sent.strip()) < 10:
-                    first_sent = article['article'][:200]  # Take first 200 chars if first sentence is too short
-                
+                prompt = get_prompt(
+                    dataset=dataset_name, 
+                    item=shuffled_data[i])
+                # print("Prompt:", prompt)
                 # generate text
                 generation = generate(
                     client=client, 
-                    prompt=first_sent, 
+                    prompt=prompt, 
                     temperature=temperature, 
                     model=model_name,
                     max_tokens=max_tokens,
@@ -219,7 +221,7 @@ def prompt_hfds(num_articles,client, temperature, model_name,
                 # write source article if needed
                 if (not source_output_path.exists() or regenerate) and write_source:
                     with open(source_output_path, "w", encoding="utf-8") as outfile:
-                        outfile.write(article['article'])
+                        outfile.write(get_text(dataset=dataset_name, item=shuffled_data[i]))
                 
                 generated_count += 1
                 break  # success!
@@ -232,7 +234,7 @@ def prompt_hfds(num_articles,client, temperature, model_name,
                 else:
                     # retry failed
                     error_count += 1
-                    print(f"\nError processing article {i} after {max_retries} attempts: {error_msg[:100]}...", file=sys.stderr)
+                    print(f"\nError processing text {i} after {max_retries} attempts: {error_msg[:100]}...", file=sys.stderr)
                     
                     # error placeholder
                     try:
@@ -250,7 +252,28 @@ def prompt_hfds(num_articles,client, temperature, model_name,
     print(f"Generation complete: {generated_count} new, {skip_count} skipped, {error_count} errors, {retry_count} retries")
     return generated_count, skip_count, error_count, retry_count
 
+def get_text(dataset, item):
+    if dataset == "abisee/cnn_dailymail":
+        text = item['article']
+    elif dataset == "euclaise/writingprompts":
+        text = item['story']
+    else:
+        raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
+    return text
 
+def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500):
+    text = get_text(dataset, item)
+    if dataset in ["abisee/cnn_dailymail",
+                   "euclaise/writingprompts",
+                   ]:
+        # use first sentence as prompt
+        prompt = get_first_sentence(text)
+    else:
+        raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
+    if (len(prompt.strip()) < min_prompt_len) or (len(prompt.strip()) > max_prompt_len):
+            prompt = text[:min_prompt_len]  # Take first 200 chars if prompt is too short/long
+    return prompt
+    
 def generate(client, prompt, temperature, model, max_tokens=2048, top_p=1.0, system_prompt=None):
     """Generate a completion using the given API client, model and parameters
 

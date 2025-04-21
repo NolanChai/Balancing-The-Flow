@@ -15,6 +15,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from tqdm import tqdm
 import pandas as pd
 import time
+import ast
 
 def setup_directories(model_name):
     """
@@ -103,6 +104,7 @@ def calculate_average_surprisal(model_name, num_files, verbose=False):
 def main():
     parser = argparse.ArgumentParser(description='Generate text using language models via LM Studio API')
     parser.add_argument('model', type=str, help='Model name to use for generation')
+    parser.add_argument('dataset', type=str, help='Name of text dataset to read from')
     parser.add_argument('-g', '--generate', type=int, default=300, help='Number of examples to generate')
     parser.add_argument('-t', '--temperature', type=float, default=0.9, help='Temperature for generation')
     parser.add_argument('-p', '--top-p', type=float, default=1.0, help='Top-p (nucleus sampling) parameter')
@@ -114,6 +116,7 @@ def main():
     parser.add_argument('--analyze-human', action='store_true', help='Analyze human texts instead of generating new ones')
     parser.add_argument('--human-dir', type=str, default='../Sources', help='Directory containing human texts to analyze')
     parser.add_argument('--analyze-only', action='store_true', help='Only analyze surprisals without generating new texts')
+    parser.add_argument('--dataset-config', type=str, default="", help='additional arguments for loading the dataset')
 
     # parse known
     args, unknown = parser.parse_known_args()
@@ -225,9 +228,11 @@ def main():
             top_p=top_p,
             system_prompt=system_prompt,
             model_name=args.model, 
+            dataset_name=args.dataset,
             regenerate=args.regenerate,
             max_tokens=args.max_tokens,
-            max_retries=args.max_retries
+            max_retries=args.max_retries,
+            dataset_config=args.dataset_config
         )
     except Exception as e:
         print(f"Error during generation: {e}")
