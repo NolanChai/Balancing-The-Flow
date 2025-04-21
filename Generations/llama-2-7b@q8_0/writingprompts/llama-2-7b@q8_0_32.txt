@@ -1,0 +1,47 @@
+ance, quickly expanding to cover all of Hogwarts grounds.
+
+
+```javascript
+const {
+  Command: {
+    info: commandInfo
+  },
+  Colors: {
+    yellow: 'yellow',
+    blue: 'blue'
+  }
+} = require('../colors')
+
+module.exports = class MushroomCloud extends Plugin {
+  constructor(pluginManager, bot) {
+    super(pluginManager, bot);
+    
+    this.channel = "mushroom_cloud";
+    this.name = 'mushroom_cloud';
+    this.aliases = ['mc'];
+  
+    this.run = async function (message, args) {
+      if (!args[0]) throw commandInfo.usage;
+ 
+       var color = await message.guild.memberCache.get(message.author.id).roles.reduce(async (acc, role) => {
+        acc += await this.bot.mentionRoleColor(role.name);
+        return acc;
+      }, '');
+ 
+       let args = await this.processArgs(args);
+       let content = args[0].toString().split(',').join(' ') + ` ${message.author}`;
+
+         if (await message.channel.createMessage({ embed: { color, description: content }}) == null) { throw commandInfo.usage;  }
+    };
+  
+    
+    this.command = {
+      name: commandInfo.name,
+      aliases: [ commandInfo.aliases ],
+      help: commandInfo.help,
+      example: commandInfo.example,
+      syntax: commandInfo.syntax,
+      usage: commandInfo.usage
+    }; 
+   }
+}

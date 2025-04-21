@@ -1,0 +1,27 @@
+pper line, or maybe you shouldn’t!
+ 
+ It seems like just yesterday that we all met up for this conference; and now, after our time together, there are a few things I want to share with you. 
+ 
+ First, I want to thank you for being here today. The fact that you all showed up means that you really care about our work – and about the lives of the people we serve every day! You all inspire me, and I know it will be a long time before I forget the experience. So keep those cards and letters coming!
+ 
+ Second, I want to thank my boss, the Prime Minister, for his support, both personal and political. Without it, I wouldn’t have had the courage or confidence to do this. And finally, I want to thank you all – because without your help and support we would not have been able to accomplish what we did. 
+`
+
+# A new approach
+
+```ruby
+def good_morning!
+  puts "Good morning!" # Good morning! Let me start with a joke ...
+  puts "Hey, I never said it was a good one!" # Just some abattoir humour ...
+  puts "It seems like just yesterday that we all met up for this conference." # It was just yesterday!
+  puts "First, I want to thank you all for being here today." # Thank you, everybody! You really care about our work ...
+  puts "Second, I want to thank my boss for his support." # Thanks again! Without your personal and political support we wouldn't have been able to accomplish what we did ...
+  puts "Finally, I want to thank you all" # Thanks, everybody!" without your help and support we wouldn't be here today ...
+end
+```
+
+# Use it for real
+
+```ruby
+good_morning!
+```
