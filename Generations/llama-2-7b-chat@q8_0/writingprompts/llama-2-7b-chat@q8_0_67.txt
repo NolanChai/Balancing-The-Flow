@@ -1,0 +1,21 @@
+ none as special as the moment we shared our first kiss underneath the stars. The memory of which has kept me going through these long and grueling months away from you. 
+How I wish I could be there now to watch the snow fall on your face and see the smile light up your eyes again, but alas, I fear that time may soon run out for me here. I know in my heart it will soon be over, and I can only hope that I have done enough to make you remember this old soldier with fondness and love. 
+Please know that I love you more than life itself and that I will carry you and our memories deep within my heart until we meet again.  
+Yours always,  
+John   ``.format(Steph, Afghanistan)
+def greeting_message(name):
+  message = (`Hello {name}, `
+    `I am writing to you from the mountains of Afghanistan where I find myself in the final stages of my life. `
+    `I want you to know that I have thought of you constantly since we last parted ways and that your smile has been the only thing keeping me going through these long months away from home. `
+    `Do you remember that first kiss underneath the stars on the mountain in Maine? Those moments are forever etched in my heart and have given me strength to carry on despite the hardships of war. `
+    `I wish I could be there now to watch the snow fall on your face, but alas, I fear that time may soon run out for me here. `
+    `Please know that I love you more than life itself and that I will carry you and our memories deep within my heart until we meet again. `
+    `Yours always, `
+     John)`
+def main():
+  # Create a random name between 20 and 30 characters
+  name = random.choice(string.ascii_letters + string.digits)[:20]
+  # Generate the message using the function above
+  greeting_message(name)
+if __name__ == "__main__":
+  main()
