@@ -1,5 +1,0 @@
-1) You should use a subroutine, which is called `get_sibling(char, char, char)` and returns an array.
-2) Inside this function you should do the following:
-- Store all siblings of the requested person in the array
-- Check if there are any siblings that have the same names as the one you're searching for (using `!=` operator)
-3) Afterwards, just call `show_sibling()` which will print out everything inside the `sibling` variable.

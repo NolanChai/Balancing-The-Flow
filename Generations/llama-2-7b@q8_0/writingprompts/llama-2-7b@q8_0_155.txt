@@ -1,4 +1,44 @@
- you are a person who is born here you have to use your cup everyday. There are different kind of cups: for women, men or children. But they all are equally important. At any occasion everyone drink from their own cup.
-If the clay cup breaks it has to be repaired again. It doesn't matter how many times the cup is broken and fixed again. Only when the clay breaks, is it thrown away and replaced with a new one. There are no exceptions for anybody: even a rich person gets his new cup.
-The clay cups have also another important function beside the drinking ritual. If you need to find out who has done something bad or wrong in this community, you can simply throw your cup away and replace it with a new one. That is enough for everyone to know that there is no forgiveness anymore and everybody understands what happened.
-The clay cups are symbolic of the connection of everyone living here with each other. In case you want to take a close look at this very unique and beautiful place, then I have to warn you: it's only open from September till May!
+`,
+        text: 'This was just one of my friends.'
+    }, {
+        type: 'image',
+        url: './images/dress3.jpg',
+        alt: 'Donna had a beautiful dress on, and it was made out of something I've never seen before.',
+        caption: ''
+    }],
+    user: {
+        name: 'donna'
+    },
+    userName: 'donna',
+    datePublished: 1508969257437,
+});
+```
+
+###### Expected result:
+
+![](./images/result.png)
+
+### 2. Captions
+
+**Usage:**
+
+```javascript
+    const { caption, image, imageURL } = await galleryService.getImage(id); // or use this.galleryService
+
+    image.caption = 'Hello world!';
+
+```
+
+**Possible values:**
+
+- text - 0-450 character string
+
+**Example:**
+
+```javascript
+    const caption = await galleryService.getCaption(id); // or use this.galleryService
+```
+
+**Expected result:**
+
+![](./images/result_caption1.png)

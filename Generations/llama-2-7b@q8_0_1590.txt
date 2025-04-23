@@ -1,5 +1,0 @@
-```python
-def main():
-    result = "".join("A" if x else "B" for x in input())
-    print(result)
-```

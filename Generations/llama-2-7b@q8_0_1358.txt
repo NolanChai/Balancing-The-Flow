@@ -1,5 +1,0 @@
-```ruby
-CNN::NewsArticle.find_by(title: 'The tornado-ravaged city of Joplin, Missouri, is an authentic American crossroads') do |news|
-  news.update_attribute(:score, score) if score < 0 || score > 100
-end
-```

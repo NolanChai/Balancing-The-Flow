@@ -1,6 +1,0 @@
-
-This one is a bit of an inversion. We are given a two-dimensional array that will contain the indices of every person who likes and dislikes someone, or alternatively, that will contain indices of those people who dislike someone but not necessarily like them too (since they may be mutual friends). The key is to start with each person being an empty set.
-
-Then for every pairwise comparison, we add both people in the two sets if and only if one or more members of their respective sets like the other, but _not_ if they are already mutually liked or mutually disliked.
-
-To see that this is correct, think about what would happen with a graph-based representation instead - each person is an edge node, and then for every comparison we add an edge from one to the other iff they like each other. This way, two people who are not in different sets cannot be connected by multiple edges.

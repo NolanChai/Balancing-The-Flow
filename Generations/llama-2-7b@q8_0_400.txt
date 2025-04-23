@@ -1,7 +1,0 @@
-The following lines will be displayed in red if the stepmother is found guilty and sentenced to time served.
-The stepmother is found NOT GUILTY and released from police custody.
-The stepmother is found GUILTY but not of murder, and is sentenced to 6 months behind bars.
-### Explanation:
-In the above example we can use the following algorithm to solve for the stepmom's sentence.
-1. If the stepmother is guilty then the police will arrest her (sentence is to be served in prison) otherwise she will be released.
-2. The police are NOT able to find the body and as a result will return the stepmother to prison for 6 months to serve the time already accrued, as per the sentence given by the court.

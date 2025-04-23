@@ -1,4 +1,0 @@
-```
-#!/bin/bash
-for (( i=0; i<${#}; i++)); do read line && echo "$i) $line" ; done |sort > result.txt
-```

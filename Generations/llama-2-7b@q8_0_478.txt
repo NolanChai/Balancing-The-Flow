@@ -1,9 +1,0 @@
-```python
-from __future__ import print_function
-from future.builtins import *  # NOQA
-import sys
-if (sys.version_info < (3, 0)):
-    from io import BytesIO as BlobIO
-else:
-    from io import StringIO as BlobIO
-```

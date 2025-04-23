@@ -1,8 +1,0 @@
-```python3
-if __name__ == '__main__':
-    spider = 10
-    def count(x):
-        return x*2
-    print(count(spider)) # 20
-    print(count(2)+count(-5)) # 7
-```

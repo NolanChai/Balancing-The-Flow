@@ -122,7 +122,7 @@ def scrape(article_urls):
 def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                 model_output_dir="../Generations", human_output_dir="../Sources", 
                 write_source=True, regenerate=True, max_tokens=2048, top_p=1.0, 
-                system_prompt=None, max_retries=3, dataset_config=""):
+                system_prompt=None, max_retries=3, dataset_config="", source_only=False):
     """Prompts an LM using articles from the cnn_dailymail dataset
 
     Args:
@@ -138,8 +138,9 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
         max_tokens (int, optional): maximum tokens for generation. Defaults to 2048.
         max_retries (int, optional): maximum number of retries for failed generations. Defaults to 3.
         dataset_config (str, optional): configuration for dataset
+        source_only (bool, optional): if True, skip generation and only write source files
     """
-
+    MIN_GENERATION_LENGTH = 200
     # handling for missing paths
     model_output_path = Path(model_output_dir) / Path(model_name) / Path(dataset_name.split("/")[-1])
     human_output_path = Path(human_output_dir) / Path(dataset_name.split("/")[-1])
@@ -151,7 +152,7 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
     dataset_params = (dataset_name,)
     if dataset_config:
         dataset_params += (dataset_config,)
-    data = load_dataset(*dataset_params, trust_remote_code=True)['train']
+    data = load_dataset(*dataset_params, trust_remote_code=True)['test']
     shuffled_data = data.shuffle(seed=42)  # Use consistent seed for reproducibility
 
     # setting articles to generate
@@ -185,9 +186,17 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
             pbar.update(1)
             skip_count += 1
             continue
+                        
+        # write source article if needed
+        if (not source_output_path.exists() or regenerate) and write_source:
+            with open(source_output_path, "w", encoding="utf-8") as outfile:
+                outfile.write(get_text(dataset=dataset_name, item=shuffled_data[i]))
 
         # try up to max retries
         for retry in range(max_retries):
+            # skip generation if source only
+            if source_only:
+                break
             try:
                 prompt = get_prompt(
                     dataset=dataset_name, 
@@ -205,7 +214,7 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                 )
                 
                 # validate generation length
-                if len(generation.strip()) < 20:
+                if len(generation.strip()) < MIN_GENERATION_LENGTH:
                     if retry < max_retries - 1:
                         retry_count += 1
                         time.sleep(1)  # Wait briefly before retry
@@ -217,11 +226,6 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                 # write to path
                 with open(generation_output_path, "w", encoding="utf-8") as outfile:
                     outfile.write(generation)
-                
-                # write source article if needed
-                if (not source_output_path.exists() or regenerate) and write_source:
-                    with open(source_output_path, "w", encoding="utf-8") as outfile:
-                        outfile.write(get_text(dataset=dataset_name, item=shuffled_data[i]))
                 
                 generated_count += 1
                 break  # success!
