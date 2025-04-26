@@ -241,10 +241,9 @@ def main():
         return
     
     generation_time = time.time() - start_time
+    print(f"Total runtime: {time.strftime('%H:%M:%S', time.gmtime(generation_time))} seconds")
     if verbose:
         print(f"Generation completed in {generation_time:.2f} seconds")
-
-    if verbose:
         print("Calculating surprisal statistics...")
         surprisal_start = time.time()
         avg_surprisal = calculate_average_surprisal(args.model, args.generate, verbose)
@@ -264,34 +263,36 @@ def main():
         print(f"- Surprisal calculation time: {surprisal_time:.2f} seconds")
         if avg_surprisal is not None:
             print(f"- Average surprisal: {avg_surprisal:.4f}")
-        print(f"Total runtime: {time.time() - start_time:.2f} seconds")
+        total_time = time.time() - start_time
+        print(f"Total runtime: {time.strftime('%H:%M:%S', time.gmtime(total_time))} seconds")
 
-        try:
-            summary_dir = Path("../Summary")
-            summary_dir.mkdir(parents=True, exist_ok=True)
-            
-            summary_file = summary_dir / f"{args.model}_summary.txt"
-            with open(summary_file, "w", encoding='utf-8') as f:
-                f.write(f"Model: {args.model}\n")
-                f.write(f"Generated: {generated} new examples\n")
-                f.write(f"Skipped: {skipped} existing examples\n")
-                f.write(f"Errors: {errors} failed generations\n")
-                f.write(f"Retries: {retries} retried generations\n")
-                f.write(f"Temperature: {args.temperature}\n")
-                f.write(f"Top-p: {top_p}\n")
-                if system_prompt:
-                    f.write(f"System prompt: {system_prompt}\n")
-                f.write(f"Max tokens: {args.max_tokens}\n")
-                f.write(f"Generation time: {generation_time:.2f} seconds\n")
-                f.write(f"Surprisal calculation time: {surprisal_time:.2f} seconds\n")
-                if avg_surprisal is not None:
-                    f.write(f"Average surprisal: {avg_surprisal:.4f}\n")
-                f.write(f"Total runtime: {time.time() - start_time:.2f} seconds\n")
-                f.write(f"Date: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
-            
-            print(f"Summary saved to {summary_file}")
-        except Exception as e:
-            print(f"Error saving summary: {e}")
+    try:
+        summary_dir = Path(f"../Summary/{args.model}/{args.dataset}")
+        summary_dir.mkdir(parents=True, exist_ok=True)
+        
+        summary_file = summary_dir / f"{args.model}_{args.dataset}_summary.txt"
+        with open(summary_file, "w", encoding='utf-8') as f:
+            f.write(f"Model: {args.model}\n")
+            f.write(f"Dataset: {args.dataset} {args.dataset_config}".strip())
+            f.write(f"Generated: {generated} new examples\n")
+            f.write(f"Skipped: {skipped} existing examples\n")
+            f.write(f"Errors: {errors} failed generations\n")
+            f.write(f"Retries: {retries} retried generations\n")
+            f.write(f"Temperature: {args.temperature}\n")
+            f.write(f"Top-p: {top_p}\n")
+            if system_prompt:
+                f.write(f"System prompt: {system_prompt}\n")
+            f.write(f"Max tokens: {args.max_tokens}\n")
+            f.write(f"Generation time: {generation_time:.2f} seconds\n")
+            f.write(f"Surprisal calculation time: {surprisal_time:.2f} seconds\n")
+            if avg_surprisal is not None:
+                f.write(f"Average surprisal: {avg_surprisal:.4f}\n")
+            f.write(f"Total runtime: {time.time() - start_time:.2f} seconds\n")
+            f.write(f"Date: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        
+        print(f"Summary saved to {summary_file}")
+    except Exception as e:
+        print(f"Error saving summary: {e}")
 
 if __name__ == "__main__":
     main()
