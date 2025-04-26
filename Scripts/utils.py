@@ -141,6 +141,7 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
         source_only (bool, optional): if True, skip generation and only write source files
     """
     MIN_GENERATION_LENGTH = 200
+    DIALOG_DATASETS = ["li2017dailydialog/daily_dialog"]
     # handling for missing paths
     model_output_path = Path(model_output_dir) / Path(model_name) / Path(dataset_name.split("/")[-1])
     human_output_path = Path(human_output_dir) / Path(dataset_name.split("/")[-1])
@@ -192,60 +193,71 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
             with open(source_output_path, "w", encoding="utf-8") as outfile:
                 outfile.write(get_text(dataset=dataset_name, item=shuffled_data[i]))
 
-        # try up to max retries
-        for retry in range(max_retries):
-            # skip generation if source only
-            if source_only:
-                break
-            try:
-                prompt = get_prompt(
-                    dataset=dataset_name, 
-                    item=shuffled_data[i])
-                # print("Prompt:", prompt)
-                # generate text
-                generation = generate(
-                    client=client, 
-                    prompt=prompt, 
-                    temperature=temperature, 
-                    model=model_name,
-                    max_tokens=max_tokens,
-                    top_p=top_p,
-                    system_prompt=system_prompt
-                )
+        item = shuffled_data[i]
+        text = get_text(dataset_name, item)
+        if dataset_name in DIALOG_DATASETS:
+            num_completions = len(text) // 2 - 3
+        else:
+            num_completions = 1
+        all_generations = []
+
+        for completion_idx in range(num_completions):  # <- number of completions you want
+            for retry in range(max_retries):
+                if source_only:
+                    break
                 
-                # validate generation length
-                if len(generation.strip()) < MIN_GENERATION_LENGTH:
+                try:
+                    prompt = get_prompt(
+                        dataset=dataset_name, 
+                        item=item
+                    )
+                    
+                    generation = generate(
+                        client=client, 
+                        prompt=prompt, 
+                        temperature=temperature, 
+                        model=model_name,
+                        max_tokens=max_tokens,
+                        top_p=top_p,
+                        system_prompt=system_prompt
+                    )
+                    
+                    if len(generation.strip()) < MIN_GENERATION_LENGTH:
+                        if retry < max_retries - 1:
+                            retry_count += 1
+                            time.sleep(1)
+                            continue
+                        else:
+                            generation = f"[Warning: Short generation] {generation}"
+                    
+                    # Instead of writing here, collect the generation
+                    all_generations.append(generation.strip())
+                    generated_count += 1
+                    break  # success!
+                
+                except NotImplementedError as e:
+                    raise e
+                except Exception as e:
+                    error_msg = str(e)
                     if retry < max_retries - 1:
                         retry_count += 1
-                        time.sleep(1)  # Wait briefly before retry
-                        continue
+                        time.sleep(1)
                     else:
-                        # Last retry, use what we got
-                        generation = f"[Warning: Short generation] {generation}"
-                
-                # write to path
-                with open(generation_output_path, "w", encoding="utf-8") as outfile:
-                    outfile.write(generation)
-                
-                generated_count += 1
-                break  # success!
-                
-            except Exception as e:
-                error_msg = str(e)
-                if retry < max_retries - 1:
-                    retry_count += 1
-                    time.sleep(1)  # wait a bit before trying again
-                else:
-                    # retry failed
-                    error_count += 1
-                    print(f"\nError processing text {i} after {max_retries} attempts: {error_msg[:100]}...", file=sys.stderr)
-                    
-                    # error placeholder
-                    try:
-                        with open(generation_output_path, "w", encoding="utf-8") as outfile:
-                            outfile.write(f"[ERROR] Generation failed after {max_retries} attempts: {error_msg[:100]}...")
-                    except:
-                        pass
+                        error_count += 1
+                        print(f"\nError processing text {i} after {max_retries} attempts: {error_msg[:100]}...", file=sys.stderr)
+                        
+                        # Append error placeholder
+                        all_generations.append(f"[ERROR] Generation failed after {max_retries} attempts: {error_msg[:100]}...")
+                        break
+
+        # AFTER generating all completions:
+        # Concatenate generations with newlines (or customize separator)
+        final_output = "\n\n".join(all_generations)
+
+        # Write once to file
+        with open(generation_output_path, "w", encoding="utf-8") as outfile:
+            outfile.write(final_output)
+
         pbar.update(1)
         
         if i % 50 == 0 and i > 0:
@@ -256,26 +268,30 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
     print(f"Generation complete: {generated_count} new, {skip_count} skipped, {error_count} errors, {retry_count} retries")
     return generated_count, skip_count, error_count, retry_count
 
-def get_text(dataset, item):
+def get_text(dataset, item, turn=0):
     if dataset == "abisee/cnn_dailymail":
         text = item['article']
     elif dataset == "euclaise/writingprompts":
         text = item['story']
+    elif dataset == "li2017dailydialog/daily_dialog":
+        text = item['dialog'][:turn]
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
     return text
 
-def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500):
-    text = get_text(dataset, item)
+def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500, turn=0):
+    text = get_text(dataset, item, turn=turn)
     if dataset in ["abisee/cnn_dailymail",
                    "euclaise/writingprompts",
                    ]:
         # use first sentence as prompt
         prompt = get_first_sentence(text)
+        if (len(prompt.strip()) < min_prompt_len) or (len(prompt.strip()) > max_prompt_len):
+            prompt = text[:min_prompt_len]  # Take first 200 chars if prompt is too short/long
+    elif dataset in ["li2017dailydialog/daily_dialog"]:
+        prompt = text
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
-    if (len(prompt.strip()) < min_prompt_len) or (len(prompt.strip()) > max_prompt_len):
-            prompt = text[:min_prompt_len]  # Take first 200 chars if prompt is too short/long
     return prompt
     
 def generate(client, prompt, temperature, model, max_tokens=2048, top_p=1.0, system_prompt=None):
