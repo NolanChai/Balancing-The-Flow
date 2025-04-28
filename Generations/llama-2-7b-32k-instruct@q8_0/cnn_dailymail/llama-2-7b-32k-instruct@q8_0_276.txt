@@ -1,0 +1,191 @@
+​researchers at Reading University . The findings show that peanuts have more potential as an antimicrobial than previously thought, with benefits in treating diarrhoea, Crohn's disease, irritable bowel syndrome and stomach ulcers.
+
+"The results of the study showed a remarkable increase of bacteria-killing effect of peanuts on E.coli, suggesting that peanut consumption might have anti-bacterial potential to improve gut health,"​ said lead researcher Dr Jens Walter, lecturer in microbiology at Reading University's School of Agriculture, Policy and Development.
+
+Dr Walter added: "The results also suggest a possible application for peanuts as part of the dietary management of Crohn’s disease or Irritable Bowel Syndrome."​
+
+Peanuts have previously been linked to healthy gut bacteria but the Reading study is one of the first to show they have an antimicrobial effect on harmful bugs that cause food poisoning. ​
+
+The research, published in Food Research International, found that peanuts are rich in monounsaturated fatty acids (MUFAs), which may be key to their ability to kill E.coli cells . When tested against E.coli bacteria with and without skins, the nuts were found to have a higher antimicrobial effect when eaten whole.
+
+In fact, peanut skin was also shown to have an anti-E.coli effect that could be enhanced through cooking. The researchers believe this could help to combat food poisoning and other gut health issues in the future. ​
+
+Dr Walter said: "The results of this study suggest peanuts can act as a natural antibiotic against E.coli, which is important for public health."​
+
+Peanut consumption has been linked to lower risk of heart disease due to their MUFA content. But researchers are now calling for more studies on the impact of peanuts on gut bacteria and if they could be used as a natural therapy to prevent disease in the future. ​
+
+Source: https://www.foodmanufacture.co.uk/Article/1463742/Peanuts-can-kill-Ecoli-says-research.aspx<s> <|endoftext|> Q:
+
+How to implement a single select list from two select lists?
+
+I am trying to get the best of both worlds for my single select list.  I want it to accept values from a drop down list and also be able to type in the value directly, without having to pick it off another list first.  Is this possible?
+Currently I have the following code: 
+<select name="mydropdown" id="mydropdown">
+    <option selected="selected" value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+</select>
+
+I would like it to act similar to this example: 
+<input type="text" id="myinput">
+<div id="dropdown"></div>
+
+When the user clicks on "myinput" a drop down list appears with "First", "Second", and "Third". If the user types in a value, like "456", it should be converted into an option to add to the dropdown. 
+Is this possible?  
+
+A:
+
+You can achieve that using a combination of JavaScript and CSS, here's a sample code :
+HTML:
+<select name="mydropdown" id="mydropdown">
+    <option selected="selected" value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+</select>
+
+CSS:
+#myinput{
+    width: 100px;
+    padding: 5px;
+}
+
+#dropdown {
+    position: absolute;
+    z-index: 999;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+JS:
+$('#myinput').keyup(function(){
+    var value = $(this).val();
+    //Get the dropdown element
+    var dropdown = $('#dropdown');
+    
+    //Check if a value is present in the dropdown
+    if (value != ''){
+        //Remove any existing options
+        dropdown.find('option').remove();
+        
+        //Add new option with the value and selected attribute set to true
+        var opt = document.createElement('option');
+        opt.value = value;
+        opt.innerHTML = value;
+        dropdown.append(opt);
+    }    
+});
+
+Check this fiddle for a demo
+Note:
+* You should use the id of your input and dropdown element as you provided in your question
+* Also make sure to include the script at the end of your page
+
+This way when user types something on "myinput", the dropdown will appear with the selected value set to true. 
+Also you can remove this code from your HTML:
+<select name="mydropdown" id="mydropdown">
+    <option selected="selected" value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+</select>
+
+This code will be added dynamically by the script.  
+
+A:
+
+You can try this : 
+<input type="text" id="myinput" onkeyup="showDropdown()">
+<div id="dropdown"></div>
+
+In your JavaScript, create a function to show dropdown when input value is changed and remove it when user clicks outside the dropdown. Also make sure you are using jQuery:
+function showDropdown() {
+   var val = $("#myinput").val();
+   if (val != '') {
+     // Create options from array of values and add them to dropdown
+     $("<option selected>")
+       .attr("value", val)
+       .text(val)
+       .appendTo("#dropdown");
+   }
+}
+
+$('#myinput').keyup(function() {
+   showDropdown();
+});
+
+$('body').click(function() {
+   $("#dropdown").remove();
+});
+
+Here's a working Fiddle. 
+This way when user clicks on "myinput" a dropdown list appears with the value entered by user and if user types something in input field without clicking anywhere, the dropdown list disappears automatically.   
+
+A:
+
+You can achieve this using CSS flexbox
+<div class="container">
+    <select name="mydropdown" id="mydropdown">
+        <option selected="selected" value="1">First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+    </select>
+    <input type="text" class="flex-item" id="myinput" onkeyup="showDropdown()">
+    <div class="dropdown flex-grow"></div>
+</div>
+<script>
+function showDropdown() {
+  var val = $("#myinput").val();
+  if (val != '') {
+    // Create options from array of values and add them to dropdown
+    $("<option selected>")
+      .attr("value", val)
+      .text(val)
+      .appendTo("#dropdown");
+  }
+}
+$('#myinput').keyup(function() {
+  showDropdown();
+});
+</script>
+
+This way the dropdown will appear below the textfield on input focus and will disappear when you click anywhere else. You can customize its appearance by adding a style to .dropdown
+<style>.dropdown {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}</style>
+You can also customize the dropdown style using CSS.
+<style>.dropdown {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.dropdown {
+  width: 400px;
+  max-height: 500px;
+  overflow-y: auto;
+  cursor: pointer;
+}
+</style>
+Here's a working Fiddle
+
+A:
+
+You can use a combination of CSS and JavaScript to achieve this. Here is an example:
+HTML:
+<select name="mydropdown" id="mydropdown">
+    <option selected="selected" value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+</

@@ -1,0 +1,35 @@
+her for taking up two spots, she said she would never dream of doing anything to another driver that they might do to her.
+
+The woman says the person in question is disabled and doesn't even realize it. The parking spot isn't an actual designated handicapped spot as far as we know, just a regular parking spot that happened to be taken by someone using a wheelchair.
+
+The woman has started a GoFundMe campaign for the person who keeps taking notes on her windshield and calls them "notes of anger." The goal is to raise $200 from people to buy the person in question some flowers or something nice that will help them forgive the woman for taking up two spots.
+
+We're not sure if we can get behind this one, but we can respect the good intentions and hope the GoFundMe campaign raises enough money to make someone smile. You can donate to it here.
+
+If you want to keep the parking lot drama out of your life, check out these 15 rules for sharing a parking lot with others.
+
+Featured Image Credit: GoFundMe<s> <|endoftext|> Q:
+
+How to find all tables that have at least one index in SQL Server
+
+I want to list all the tables of a database that have indexes defined on them using T-SQL.  I am aware that you can use DBCC CHECKDB to get this information, but that would require that the server be up and running.  Is there any way to do it without requiring the server to be up?
+
+A:
+
+You can find tables with indexes defined on them using a SQL Server Management Studio query like this one:
+
+    SELECT name FROM sys.objects WHERE is_index = 'I';
+
+This assumes that you have the sys.objects catalog view enabled, and that the object name column in the catalog view has an alias of name .
+
+The syntax I_S_O_B_J__S is short for SYSOBJECTS, which returns a rowset containing one row per database object (such as a table). The parameter is_index = 'I' filters the rows to tables that have indexes defined on them.
+
+A:
+
+Here's another way using SQL Server Management Studio query 
+
+    SELECT OBJECT_NAME(object_id) FROM INFORMATION_SCHEMA.TABLES WHERE index_id IS NOT NULL;
+
+This assumes that the information schema views have been created with the appropriate permissions on your database and that the object name column has an alias of name . You can replace information schema with sys if you want to use sys tables instead.
+
+<s>

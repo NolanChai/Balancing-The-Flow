@@ -1,0 +1,99 @@
+...
+
+The official advert for Floyd Mayweather vs Manny Pacquiao has been released with less than a month until the two meet in Las Vegas.
+
+The marketing team for both Mayweather and Pacquiao put together this slick advert which you can watch above to promote their upcoming fight on 2 May. The theme is "Together We Are Invincible", which clearly hints at the fighters joining forces as a tag team to take down each other in the ring.
+
+The fights are shaping up nicely and if they put in a good showing, then this could be one of the best pay-per-view events of 2015.<s> <|endoftext|> Q:
+
+How to select specific rows from SQL table
+
+I have a list of objects and I need to query for the most recent data. How do I get only the most recent row, starting at the bottom? If there's more than one result with that ID, then I need all of them. 
+The example code below doesn't work:
+select top 1 * from MyTable where Id = '3' order by CreatedAt desc
+
+How can I do this? Thanks!
+
+A:
+
+You can use a subquery to get the most recent row, then join that result with your original query.
+SELECT TOP 1 MyTable.* FROM MyTable LEFT JOIN (
+    SELECT Id, CreatedAt DESC
+) AS MostRecent ON MyTable.Id = MostRecent.Id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+
+This will get you the most recent row with an ID of 3, and then join that result to your original query. This will give you all the rows with an ID of 3 in MyTable.  If there is more than one record with this id, it will return them all.
+
+A:
+
+You can also use a subquery to get only the most recent row:
+SELECT TOP 1 * FROM MyTable WHERE Id = '3' AND CreatedAt > (SELECT Min(CreatedAt) FROM MyTable);
+
+This will get you the most recent row with an ID of 3. If there is more than one record with this id, it will return them all. You can also use a join to get all rows with that id:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.Id AND MyTable.CreatedAt > MostRecent.CreatedAt;
+
+This will also give you the most recent row for each ID.
+
+You can also use a window function to get the most recent row, by using ROW_NUMBER() and ordering by CreatedAt DESC:
+SELECT TOP 1 * FROM MyTable WHERE Id = '3' AND ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) = 1;
+
+This will give you the most recent row for each ID. You can also use a subquery to get the top N rows, starting at the bottom:
+SELECT TOP 1 * FROM MyTable WHERE Id = '3' AND ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) BETWEEN 0 AND 1;
+
+This will give you the most recent row for each ID, starting at the bottom.
+
+You can also use a combination of these methods to get the most recent rows for each ID:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.Id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+WHERE ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) BETWEEN 0 AND N;
+
+This will get you the most recent rows for each ID, starting at the bottom, and limiting the number of rows to N. You can also use a join with a subquery to get the most recent rows for each ID:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.Id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+WHERE ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) = 1;
+
+This will give you the most recent rows for each ID, starting at the bottom.
+
+You can also use a combination of these methods to get the most recent rows for each ID:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+WHERE ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) BETWEEN 0 AND N;
+
+This will give you the most recent rows for each ID, starting at the bottom, and limiting the number of rows to N.
+
+You can also use a combination of these methods to get the most recent rows for each ID:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+WHERE ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) BETWEEN 0 AND N;
+
+This will give you the most recent rows for each ID, starting at the bottom, and limiting the number of rows to N.
+
+You can also use a combination of these methods to get the most recent rows for each ID:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+WHERE ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) BETWEEN 0 AND N;
+
+This will give you the most recent rows for each ID, starting at the bottom, and limiting the number of rows to N.
+
+You can also use a combination of these methods to get the most recent rows for each ID:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.id AND MyTable.CreatedAt < MostRecent.Cre
+
+A:
+
+You can use a subquery to get the most recent row, then join that result with your original query.
+SELECT TOP 1 * FROM MyTable LEFT JOIN (
+    SELECT Id, CreatedAt DESC
+) AS MostRecent ON MyTable.Id = MostRecent.Id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+
+This will get you the most recent row with an ID of 3, and then join that result to your original query. This will give you all the rows with an ID of 3 in MyTable.  If there is more than one record with this id, it will return them all.
+
+You can also use a window function to get the most recent row, by using ROW_NUMBER() and ordering by CreatedAt DESC:
+SELECT TOP 1 * FROM MyTable WHERE Id = '3' AND ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) = 1;
+
+This will give you the most recent row for each ID. You can also use a subquery to get the top N rows, starting at the bottom:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+WHERE ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) BETWEEN 0 AND N;
+
+This will give you the most recent rows for each ID, starting at the bottom, and limiting the number of rows to N. You can also use a join with a subquery to get the most recent rows for each ID:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+WHERE ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) = 1;
+
+This will give you the most recent rows for each ID, starting at the bottom. You can also use a combination of these methods to get the most recent rows for each ID:
+SELECT TOP 1 * FROM MyTable JOIN (SELECT Id, CreatedAt DESC) AS MostRecent ON MyTable.Id = MostRecent.id AND MyTable.CreatedAt < MostRecent.CreatedAt;
+WHERE ROW_NUMBER() OVER (PARTITION BY Id ORDER BY CreatedAt DESC) BETWEEN 0 AND N;
+
+This will give you the most recent rows for each ID, starting at the bottom, and limiting the number of rows to N. You can also use a combination of these methods to get the most recent

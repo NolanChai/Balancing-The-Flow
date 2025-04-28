@@ -1,0 +1,95 @@
+has to do with them rather than them having problems of their own making.
+
+"The pressure is more on those below us," he told getwestlondon .
+
+"We've had our issues but we haven't really played badly, so we can't complain about that, and the manager hasn't complained either.
+
+"It's just one of those things where there are other teams in a worse position than us."
+
+Ramsey was appointed caretaker manager earlier this season following Chris Powell's exit and he has now been given an extension until the end of the campaign, with former Queens Park Rangers boss Mark Hughes taking over as manager.
+
+The defender insists it is important to keep a cool head throughout this relegation battle and says the club are still confident they can pull away from danger.
+
+"I think it's important that we stay calm," he said. "We can be positive about our situation, which isn't as bad as some people make out.
+
+"It's not great but it's not terrible either and we're in a better position than most of the teams around us."
+
+The former Sheffield United defender also added that Ramsey has been positive in his approach to managing the team, something which could be vital at Loftus Road as they battle against the odds.
+
+"I think Mark Hughes will bring his own style and he's going to put his own stamp on things," he said.
+
+"We know how good a manager he is and we have full confidence that it won't be too different for him at this club, but whether he comes in from scratch or he takes over where Ramsey left off, I think the important thing will be to keep a positive atmosphere."
+
+QPR are away at Bournemouth on Saturday before facing Fulham in the derby clash next Tuesday.<s> <|endoftext|> Q:
+
+How to get only date format using JavaScript?
+
+I'm trying to convert this text string 2014-05-18T09:00:00Z into a JavaScript date object:
+const dateString = "2014-05-18T09:00:00Z";
+
+I'm using moment.js to parse this text string but I can't seem to get it working, the resulting object is of type number and not a Date object, what am I missing?
+const date = moment(dateString).format();
+console.log(date); 
+
+A:
+
+You could use .toISOString() function instead of .format(). It will return ISO string for your date in the format yyyy-mm-ddTHH:mm:ss.Z and then convert it to Date object using new Date(string).
+const date = moment("2014-05-18T09:00:00Z").toISOString();
+new Date(date);  // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+
+Also, you can use .toString() instead of .format(). It will also return ISO string.
+const date = moment("2014-05-18T09:00:00Z").toString();  // "2014-05-18T09:00:00Z"
+new Date(date);     // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+
+You can also use new Date() function to convert any string to a date object. In this case you need to specify the format, in your case yyyy-mm-ddTHH:mm:ss.Z 
+const date = new Date("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+
+And then you can use .toISOString() function to convert the date object to ISO string.
+const date = new Date("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+date.toISOString();   // "2014-05-18T09:00:00Z"
+
+And you can also use Date.parse() function to convert the string into a date object directly, this way you don't need moment.js at all.
+const date = Date.parse("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+
+Note that Date.parse() function is not supported by all browsers, check the documentation of the date object to make sure it's supported in your target environment.
+
+A:
+
+You are missing the T in the format string. You should use ISO_8601 instead of yyyy-mm-ddTHH:mm:ss.Z for that. 
+const date = moment("2014-05-18T09:00:00Z").toISOString(); // "2014-05-18T09:00:00Z"
+new Date(date);     // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+
+const date = new Date("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+date.toISOString();   // "2014-05-18T09:00:00Z"
+
+const date = Date.parse("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+
+The ISO_8601 format specifies the format for a date in RFC 3339, and it's supported by all modern browsers. 
+
+A:
+
+You should use the toISOString() method from momentJS library. It will return an ISO string for your date in the format yyyy-mm-ddTHH:mm:ss.Z.
+const date = moment("2014-05-18T09:00:00Z").toISOString(); // "2014-05-18T09:00:00Z"
+
+Then you can convert it to a Date object using new Date().
+const date = new Date(date); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+
+You can also use the toString() method from momentJS library. It will return an ISO string for your date in the format yyyy-mm-ddTHH:mm:ss.Z.
+const date = moment("2014-05-18T09:00:00Z").toString(); // "2014-05-18T09:00:00Z"
+
+Then you can convert it to a Date object using new Date().
+const date = new Date(date); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+
+It's important to note that the momentJS library is not supported by all browsers, so you may need to fall back to using Date.parse() or another library if needed.
+
+A:
+
+You can also use Date.parse() function to convert the string into a date object directly, this way you don't need moment.js at all.
+const date = Date.parse("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+
+Note that Date.parse() function is not supported by all browsers, check the documentation of the date object to make sure it's supported in your target environment.
+
+A:
+
+You can also use `new Date()` function to convert any string to a date object. In this case you need to specify the format, in your case yyyy-mm-ddTHH:mm:ss.Z 
+const date = new Date("2014-05-18T09:00:00Z"); // Sun May 18

@@ -1,0 +1,169 @@
+12 miles away from where they're sitting.
+
+The concept was started by Twitter user @jankyJared who posted a picture of the button in question to his account and wrote: "Imagine being told not to press that button but being able to see it." He then shared a link to Reddit where users were encouraged to sign up for notifications about when the button was pushed.
+
+When the first person signed up, Jared sent him a notification asking if he could resist the temptation and the challenge was on. The first user successfully avoided the button by simply not looking at his phone for an entire minute - this is what it looks like:
+
+As of writing this article, 42 people have signed up to be notified when the button has been pushed and 10 people have resisted the temptation thus far. If you want in on the fun, sign-up here.
+
+The question is, how long can YOU go without pressing that darned button? Let us know in the comments below!<s> <|endoftext|> Q:
+
+Adding a class to an image inside div
+
+I have some images, lets call it "image1", and I want to add some CSS classes to this image. 
+So far, what I have tried is:
+    .class1 {
+       //some css
+    }
+    <img src="path/to/image" class="class1">
+
+But the CSS doesn't seem to be applied to this element.
+Another solution I thought of is:
+    var img = document.getElementById('image');
+    var cssClasses = 'class2';
+    var style = document.createElement("style");
+    style.appendChild(document.createTextNode(".class1 {") + cssClasses + " {"));
+    document.head.appendChild(style);
+    style.textContent += ".class2";
+
+This method works, but I'm not sure if it is the right way to do this and also seems kinda hacky. Is there a better approach? 
+Also, how would you apply css to an element with dynamic class names?
+Thanks!
+
+A:
+
+You could use CSS selectors that include wildcards (i.e., asterisks). In your case:
+    .class1 {
+        // some css
+    }
+    <img src="path/to/image" class="*">
+
+This will apply the styles to any images with classes ending in "".
+If you need to target specific classes, you can use a more specific selector. For example:
+    .class1 {
+        // some css
+    }
+    <img src="path/to/image" class="*class1">
+
+This will apply the styles to any images with classes that start with "class".
+
+Alternatively, you could use JavaScript to add the CSS class to the image element. Here's an example:
+
+var img = document.getElementById('image');
+img.className += ' class2';
+
+This will add the CSS class "class2" to the image element. You can also use string manipulation methods like `+`, `-` or ` space +` instead of concatenating strings manually.
+
+If you need to apply a CSS rule that depends on the dynamic class name, you could use a JavaScript library like jQuery and bind an event handler to the class change. Here's an example:
+
+$('#image').on('classchange', function() {
+    // get the new class name
+    var newClass = $(this).attr('class');
+    // apply CSS rule using the new class name
+});
+
+This way, you can dynamically add or remove CSS classes from the image element and apply the corresponding CSS rules.
+
+A:
+
+You can use CSS selectors with wildcard character `*`. Here is an example:
+
+    .class1 { /* styles for elements with class "class1" */ }
+    <img src="path/to/image" class="*"> {/* styles for all images */}
+
+This will apply the styles to any image element that has a class. You can also use more specific selectors, like `.class1` or `div img`, if you need to target only certain elements with certain classes.
+
+You can also use JavaScript to add the CSS class to the image element. Here's an example:
+
+    var img = document.getElementById('image');
+    img.className += ' class2';
+
+This will add the CSS class "class2" to the image element. You can also use string manipulation methods like `+`, `-` or ` space +` instead of concatenating strings manually.
+
+If you need to apply a CSS rule that depends on the dynamic class name, you could use a JavaScript library like jQuery and bind an event handler to the class change. Here's an example:
+
+$('#image').on('classchange', function() {
+    // get the new class name
+    var newClass = $(this).attr('class');
+    // apply CSS rule using the new class name
+});
+
+This way, you can dynamically add or remove CSS classes from the image element and apply the corresponding CSS rules.
+
+A:
+
+You can use css selectors with wildcard character `*`. Here is an example:
+
+.class1 { /* styles for elements with class "class1" */ }
+<img src="path/to/image" class="*"> {/* styles for all images */}
+
+This will apply the styles to any image element that has a class. You can also use more specific selectors, like `.class1` or `div img`, if you need to target only certain elements with certain classes.
+
+You can also use JavaScript to add the CSS class to the image element. Here's an example:
+
+var img = document.getElementById('image');
+img.className += ' class2';
+
+This will add the CSS class "class2" to the image element. You can also use string manipulation methods like `+`, `-` or ` space +` instead of concatenating strings manually.
+
+If you need to apply a CSS rule that depends on the dynamic class name, you could use a JavaScript library like jQuery and bind an event handler to the class change. Here's an example:
+
+$('#image').on('classchange', function() {
+    // get the new class name
+    var newClass = $(this).attr('class');
+    // apply CSS rule using the new class name
+});
+
+This way, you can dynamically add or remove CSS classes from the image element and apply the corresponding CSS rules.
+
+A:
+
+You can use CSS selectors with wildcard character `*`. Here is an example:
+
+.class1 { /* styles for elements with class "class1" */ }
+<img src="path/to/image" class="*"> {/* styles for all images */}
+
+This will apply the styles to any image element that has a class. You can also use more specific selectors, like `.class1` or `div img`, if you need to target only certain elements with certain classes.
+
+You can also use JavaScript to add the CSS class to the image element. Here's an example:
+
+var img = document.getElementById('image');
+img.className += ' class2';
+
+This will add the CSS class "class2" to the image element. You can also use string manipulation methods like `+`, `-` or ` space +` instead of concatenating strings manually.
+
+If you need to apply a CSS rule that depends on the dynamic class name, you could use a JavaScript library like jQuery and bind an event handler to the class change. Here's an example:
+
+$('#image').on('classchange', function() {
+    // get the new class name
+    var newClass = $(this).attr('class');
+    // apply CSS rule using the new class name
+});
+
+This way, you can dynamically add or remove CSS classes from the image element and apply the corresponding CSS rules.
+
+A:
+
+You can use CSS selectors with wildcard character `*`. Here is an example:
+
+.class1 { /* styles for elements with class "class1" */ }
+<img src="path/to/image" class="*"> {/* styles for all images */}
+
+This will apply the styles to any image element that has a class. You can also use more specific selectors, like `.class1` or `div img`, if you need to target only certain elements with certain classes.
+
+You can also use JavaScript to add the CSS class to the image element. Here's an example:
+
+var img = document.getElementById('image');
+img.className += ' class2';
+
+This will add the CSS class "class2" to the image element. You can also use string manipulation methods like `+`, `-` or ` space +` instead of concatenating strings manually.
+
+If you need to apply a CSS rule that depends on the dynamic class name, you could use a JavaScript library like jQuery and bind an event handler to the class change. Here's an example:
+
+$('#image').on('classchange', function() {
+    // get the new class name
+    var newClass = $(this).attr('class');
+    // apply CSS rule using the new class name
+});
+
+This way, you can
