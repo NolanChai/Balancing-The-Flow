@@ -141,7 +141,6 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
         source_only (bool, optional): if True, skip generation and only write source files
     """
     MIN_GENERATION_LENGTH = 200
-    DIALOG_DATASETS = ["li2017dailydialog/daily_dialog"]
     # handling for missing paths
     model_output_path = Path(model_output_dir) / Path(model_name) / Path(dataset_name.split("/")[-1])
     human_output_path = Path(human_output_dir) / Path(dataset_name.split("/")[-1])
@@ -194,24 +193,17 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                 outfile.write(get_text(dataset=dataset_name, item=shuffled_data[i]))
 
         item = shuffled_data[i]
-        text = get_text(dataset_name, item)
-        if dataset_name in DIALOG_DATASETS:
-            num_completions = len(text) // 2 - 3
-        else:
-            num_completions = 1
+        prompts = get_prompt(
+                        dataset=dataset_name, 
+                        item=item
+                    )
         all_generations = []
-
-        for completion_idx in range(num_completions):  # <- number of completions you want
+        for prompt in prompts:
             for retry in range(max_retries):
                 if source_only:
                     break
                 
                 try:
-                    prompt = get_prompt(
-                        dataset=dataset_name, 
-                        item=item
-                    )
-                    
                     generation = generate(
                         client=client, 
                         prompt=prompt, 
@@ -230,7 +222,6 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                         else:
                             generation = f"[Warning: Short generation] {generation}"
                     
-                    # Instead of writing here, collect the generation
                     all_generations.append(generation.strip())
                     generated_count += 1
                     break  # success!
@@ -274,7 +265,7 @@ def get_text(dataset, item, turn=0):
     elif dataset == "euclaise/writingprompts":
         text = item['story']
     elif dataset == "li2017dailydialog/daily_dialog":
-        text = item['dialog'][:turn]
+        text = item['dialog']
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
     return text
@@ -288,11 +279,12 @@ def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500, turn=0):
         prompt = get_first_sentence(text)
         if (len(prompt.strip()) < min_prompt_len) or (len(prompt.strip()) > max_prompt_len):
             prompt = text[:min_prompt_len]  # Take first 200 chars if prompt is too short/long
+        prompts = [prompt]
     elif dataset in ["li2017dailydialog/daily_dialog"]:
-        prompt = text
+        prompts = ["\n\n".join(text[:i]) for i in range(1, len(text), 2)]
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
-    return prompt
+    return prompts
     
 def generate(client, prompt, temperature, model, max_tokens=2048, top_p=1.0, system_prompt=None):
     """Generate a completion using the given API client, model and parameters

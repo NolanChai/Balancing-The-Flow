@@ -241,9 +241,8 @@ def main():
         return
     
     generation_time = time.time() - start_time
-    print(f"Total runtime: {time.strftime('%H:%M:%S', time.gmtime(generation_time))} seconds")
     if verbose:
-        print(f"Generation completed in {generation_time:.2f} seconds")
+        print(f"Generation completed in (HH:MM:SS): {time.strftime('%H:%M:%S', time.gmtime(generation_time))}")
         print("Calculating surprisal statistics...")
         surprisal_start = time.time()
         avg_surprisal = calculate_average_surprisal(args.model, args.generate, verbose)
@@ -264,16 +263,17 @@ def main():
         if avg_surprisal is not None:
             print(f"- Average surprisal: {avg_surprisal:.4f}")
         total_time = time.time() - start_time
-        print(f"Total runtime: {time.strftime('%H:%M:%S', time.gmtime(total_time))} seconds")
+        print(f"Total runtime (HH:MM:SS): {time.strftime('%H:%M:%S', time.gmtime(total_time))}")
 
     try:
-        summary_dir = Path(f"../Summary/{args.model}/{args.dataset}")
+        dataset_name = args.dataset.split("/")[-1]
+        summary_dir = Path(f"../Summary/{args.model}/{dataset_name}")
         summary_dir.mkdir(parents=True, exist_ok=True)
         
-        summary_file = summary_dir / f"{args.model}_{args.dataset}_summary.txt"
+        summary_file = summary_dir / f"{args.model}_{dataset_name}_summary.txt"
         with open(summary_file, "w", encoding='utf-8') as f:
             f.write(f"Model: {args.model}\n")
-            f.write(f"Dataset: {args.dataset} {args.dataset_config}".strip())
+            f.write(f"Dataset: {dataset_name} {args.dataset_config}".strip())
             f.write(f"Generated: {generated} new examples\n")
             f.write(f"Skipped: {skipped} existing examples\n")
             f.write(f"Errors: {errors} failed generations\n")
