@@ -1,0 +1,14 @@
+Model: llama-2-7b-32k-instruct@q8_0
+Dataset: daily_dialogGenerated: 8 new examples
+Skipped: 0 existing examples
+Errors: 0 failed generations
+Retries: 2 retried generations
+Temperature: 0.9
+Top-p: 1.0
+System prompt: Write the next turn in this dialogue without any additional explanations or format changes
+Max tokens: 2048
+Generation time: 213.33 seconds
+Surprisal calculation time: 0.05 seconds
+Average surprisal: 2.3925
+Total runtime: 213.38 seconds
+Date: 2025-04-30 14:48:58

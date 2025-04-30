@@ -1,0 +1,45 @@
+Great ! I'll try to make it ... 
+
+ All right, see you then . 
+
+ See ya !
+
+> #### The above dialogue is represented in the following format. 
+> [<dialogue-name>](https://github.com/GaneshKumar1908/BotGuru/blob/master/docs/source_files/src/main/java/com/botguru/nlp/grammar/PennDialogues.java#L27)
+
+## Conversational Patterns 
+The following patterns are used to represent conversations between two or more participants in the Penn Treebank dialogues. 
+
+|Pattern|Example|
+|-------|---------|
+|Question-Answer Dialogue|Q: What's up ?A: Nothing much , what's going on ?|
+|Reply-Response Dialogue|R: I'm having a party this Friday .|A: Great ! I'll try to make it ...|
+|Polite Dialogue|P: All right, see you then.|A: See ya !|
+
+[Warning: Short generation] 
+
+ Sure, why not ? 
+
+ Great ! See you then.
+
+I don't want to ruin your fun but... 
+
+ You can come as my plus one . 
+
+ What !? Really ? Oh , I didn't expect you would actually show up . 
+
+ Thank you so much for the invitation ! 
+
+ See you Friday at seven o'clock. Bye.
+
+[Warning: Short generation] 
+
+ Well , maybe another time . 
+
+ OK , bye .
+
+[Warning: Short generation] 
+
+ Okay . See ya later . 
+
+ Bye !

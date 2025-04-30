@@ -242,7 +242,7 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                         break
 
         # AFTER generating all completions:
-        # Concatenate generations with newlines (or customize separator)
+        # Concatenate generations with newlines
         final_output = "\n\n".join(all_generations)
 
         # Write once to file
@@ -265,7 +265,7 @@ def get_text(dataset, item, turn=0):
     elif dataset == "euclaise/writingprompts":
         text = item['story']
     elif dataset == "li2017dailydialog/daily_dialog":
-        text = item['dialog']
+        text = "\n\n".join(item['dialog'])
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
     return text
@@ -274,14 +274,23 @@ def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500, turn=0):
     text = get_text(dataset, item, turn=turn)
     if dataset in ["abisee/cnn_dailymail",
                    "euclaise/writingprompts",
-                   ]:
+                   ]: # single prompts
         # use first sentence as prompt
         prompt = get_first_sentence(text)
         if (len(prompt.strip()) < min_prompt_len) or (len(prompt.strip()) > max_prompt_len):
             prompt = text[:min_prompt_len]  # Take first 200 chars if prompt is too short/long
         prompts = [prompt]
-    elif dataset in ["li2017dailydialog/daily_dialog"]:
-        prompts = ["\n\n".join(text[:i]) for i in range(1, len(text), 2)]
+    elif dataset in ["li2017dailydialog/daily_dialog"]: # multi-prompts for dialog
+        dialog = text.split("\n\n")
+        
+        # Get all dialog stubs of 3 turns or longer
+        if len(dialog) <= 3:
+            prompts = ["\n\n".join(dialog)]
+        else:
+            prompts = ["\n\n".join(dialog[:i]) for i in range(3, len(dialog), 2)]
+
+        prompts = [f"Continue the following dialogue without any additional explanations or format changes.\n\n{prompt}" 
+                   for prompt in prompts]
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
     return prompts

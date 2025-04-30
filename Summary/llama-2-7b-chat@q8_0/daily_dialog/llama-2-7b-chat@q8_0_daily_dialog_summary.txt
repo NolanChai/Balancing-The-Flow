@@ -1,0 +1,13 @@
+Model: llama-2-7b-chat@q8_0
+Dataset: daily_dialogGenerated: 378 new examples
+Skipped: 0 existing examples
+Errors: 0 failed generations
+Retries: 354 retried generations
+Temperature: 0.9
+Top-p: 1.0
+Max tokens: 2048
+Generation time: 1184.92 seconds
+Surprisal calculation time: 344.97 seconds
+Average surprisal: 4.0022
+Total runtime: 1529.89 seconds
+Date: 2025-04-30 15:17:00

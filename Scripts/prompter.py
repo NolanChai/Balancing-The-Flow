@@ -33,12 +33,13 @@ def setup_directories(model_name):
     
     return dirs
 
-def calculate_average_surprisal(model_name, num_files, verbose=False):
+def calculate_average_surprisal(model_name, dataset_name, num_files, verbose=False):
     """
     Calculate average surprisal across generated files
     """
-
-    surprisal_dir = Path(f"../Surprisals/{model_name}")
+    dataset_name = dataset_name.split("/")[-1]
+    
+    surprisal_dir = Path(f"../Surprisals/{model_name}/{dataset_name}")
     surprisal_dir.mkdir(parents=True, exist_ok=True)
 
     existing_csvs = list(surprisal_dir.glob("*.csv"))
@@ -59,7 +60,7 @@ def calculate_average_surprisal(model_name, num_files, verbose=False):
             calc_surprisal(
                 model=model,
                 tokenizer=tokenizer,
-                input_dir=f"../Generations",
+                input_dir=f"../Generations/{model_name}/{dataset_name}",
                 output_dir=str(surprisal_dir),
                 model_name=model_name,
                 num_files=num_files,
@@ -192,7 +193,7 @@ def main():
         
         # calculate surprisals
         start_time = time.time()
-        avg_surprisal = calculate_average_surprisal(args.model, args.generate, verbose)
+        avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, verbose)
         
         if verbose:
             print(f"Analysis completed in {time.time() - start_time:.2f} seconds")
@@ -238,16 +239,17 @@ def main():
         )
     except Exception as e:
         print(f"Error during generation: {e}")
+        raise e
         return
     
     generation_time = time.time() - start_time
     if verbose:
         print(f"Generation completed in (HH:MM:SS): {time.strftime('%H:%M:%S', time.gmtime(generation_time))}")
         print("Calculating surprisal statistics...")
-        surprisal_start = time.time()
-        avg_surprisal = calculate_average_surprisal(args.model, args.generate, verbose)
-        surprisal_time = time.time() - surprisal_start
-        
+    surprisal_start = time.time()
+    avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, verbose)
+    surprisal_time = time.time() - surprisal_start
+    if verbose:
         print("\nSummary:")
         print(f"- Model: {args.model}")
         print(f"- Generated: {generated} new examples")
