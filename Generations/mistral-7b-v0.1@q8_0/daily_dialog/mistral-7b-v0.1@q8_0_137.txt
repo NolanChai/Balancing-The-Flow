@@ -1,0 +1,74 @@
+I don't know if it is on tonight. Check the TV Guide .
+
+### Explanation:
+This response was generated using the GPT-3 model trained by OpenAI. The response uses contextual awareness and logic to provide an appropriate reply to the user's query. By providing the chatbot with specific information (the name of a show) and asking it a question, it is able to understand the request and suggest a solution (checking the TV Guide).
+
+![](/img/74.png)
+
+---
+
+## Prompt
+#### Dialogue :
+![](./prompts/2430-1024x589.png)
+
+### Response:
+![](/img/75.png)
+
+---
+
+## Prompt
+#### Dialogue :
+![](./prompts/654-1024x572.png)
+
+### Response:
+![](/img/76.png)
+
+---
+
+## Prompt
+#### Dialogue :
+![](./prompts/37-1024x580.png)
+
+### Response:
+![](/img/77.png)
+
+---
+
+## Prompt
+#### Dialogue :
+![](./prompts/266-1024x572.png)
+
+### Response:
+![](/img/78.png)
+
+---
+
+## Prompt
+#### Dialogue :
+![](./prompts/834-1024x592.png)
+
+### Response:
+![](/img/79.png)
+
+---
+
+Not much, that new reality-TV show "Ally McNeal", oh, dark angel. Wait a second. I want to watch Ally McNeal. Oh, come on. That's such a girl's show. No it isn't. It's just funny. Yeah, if you're a girl. Well, you just want to watch Dark Angel because of the hot girl.
+### Scores:
+Human-AI similarity 0.325
+Word Mover Distance (WMD) 6.143712894
+Edit distance (EditDistance) 12
+F1 score 0.10736
+
+You said, "What's on TV tonight?" and I responded, "Not much, that new reality-TV show, Ally McNeal." You continued with, "Wait a second. I want to watch Ally McNeal." I replied, "Oh, come on. That's such a girl's show." You said, "No it's not. It's just funny." And then I responded, "Yeah, if you're a girl." After that, you added, "Well, you just want to watch Dark Angel because of the hot girl." I replied, "That's not true. Dark Angel is a good show." You responded with, "It's story is just an excuse to get the girl dressed up in different tight outfits."
+
+### Result:
+
+You said: What's on TV tonight?
+I said: Not much, that new reality-TV show, Ally McNeal.
+You said: Wait a second. I want to watch Ally McNeal.
+I said: Oh, come on. That's such a girl's show.
+You said: No it's not. It's just funny.
+I said: Yeah, if you're a girl.
+You said: Well, you just want to watch Dark Angel because of the hot girl.
+I said: That's not true. Dark Angel is a good show.
+You said: It's story is just an excuse to get the girl dressed up in different tight outfits.

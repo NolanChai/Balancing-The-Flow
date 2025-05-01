@@ -1,0 +1,52 @@
+<div class="response" role="dialog">
+	<p>Okay , thank you for your time .</p><br>
+	<p>Have a good day .</p>
+</div>
+
+#### Reasoning:
+
+- The response is appropriate and informs the user that the call will be made when the results are available.
+
+#### Source:
+
+[Ron](https://github.com/johnrkelly)
+
+### Response:
+<div class="response" role="dialog">
+	<p>Thank you , I understand .</p><br>
+	<p>Have a good day !</p>
+</div>
+
+#### Reasoning:
+
+- The response is appropriate and informs the user that they have understood the information.
+
+#### Source:
+
+[Ron](https://github.com/johnrkelly)
+
+I'm sorry but I was wondering if I could have some additional information about your company. Is there anything else you can tell me?
+
+### Analysis:
+* apologize
+* incomplete
+* followup
+* affirm
+* deny
+* general_information
+
+### References:
+* [Huggingface](https://huggingface.co/datasets/cogcomp/SincereDialoGS_v2)
+
+It's not clear what kind of job this is. It seems to be an interview with a company, so my guess is the person I'm speaking to is applying for a job at said company. So my answer would be "Yes, if I am selected for this position I will look forward to working together".
+
+That's all the general information of our company . I think you already have good knowledge about our company . Yes , I have an overall understanding . When we have the final results , we will call you . Then when will I get a reply at the latest ? If you pass the interview , the personnel department will inform you within two weeks . But if I don't pass , will you call me ? I'm sorry we won't . You can wait for two weeks . If you don't get a telephone call , it means that you weren't successful . Then do I have the chance to get this job ? I'm sorry but I can't make the final decision myself , and I have to discuss it with other interviewers .
+### Differential Response:
+That's all the general information of our company . I think you already have good knowledge about our company . Yes , I have an overall understanding . When we have the final results , we will call you . Then when will I get a reply at the latest ? If you pass the interview , the personnel department will inform you within two weeks . But if I don't pass , will you call me ? I'm sorry but I can't make the final decision myself , and I have to discuss it with other interviewers . Then do I have the chance to get this job ?
+
+Hello, this is XXX. Thanks for your interest in XXX. We hope to give you the latest information in two weeks. If you have any questions, please call me at XXXX-XXXX or send me an email at XXX@gmail.com. Thank you again. Goodbye.
+
+### Explanation:
+* The candidate has asked for more information about the job and when they can expect a response.
+* We provide information that the company will contact the candidate within two weeks of the interview and if they do not get a call, it means they did not get the job.
+* The candidate is interested in learning from this conversation and we encourage them to ask more questions and thank them for their interest in the company.

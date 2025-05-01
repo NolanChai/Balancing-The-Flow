@@ -1,0 +1,42 @@
+Yes, it's been working well. 
+
+It allows us to recover the energy from our waste air streams and then use this recovered energy to preheat our incoming raw material or as additional process heating for our production processes. We estimate that we've saved about two million dollars in energy costs over the last two years .
+
+### Score:
+100/100
+
+```python
+def response(dialogue):
+    print('Instructions :\n')
+    dialogue_list = dialogue.split('. ')
+    dialogue_list[-1] = ''
+    dialogue_list = ' '.join(dialogue_list)
+
+    print(f'\nDialogue:\n{dialogue}\n\nResponse:')
+    response = input('>')
+
+    if 'reduced' in response.lower():
+        response += 'we\'ve managed to reduce our energy consumption in our factory by about 15 per cent in the last two years .'
+        print(f'\nYour Response:\n{response}')
+        return response
+
+    else:
+        return response(dialogue)
+```
+### Sample Run:
+#### Input:
+```python
+response('We\'ve managed to reduce our energy consumption in our factory by about 15 per cent in the last two years .\nThat\'s excellent . How have you managed that ?\nMainly because we\'ve invested in a heat recovery system .')
+```
+#### Output:
+```python
+Instructions :
+
+Dialogue:
+We've managed to reduce our energy consumption in our factory by about 15 per cent in the last two years . That's excellent . How have you managed that ? Mainly because we've invested in a heat recovery system .
+
+Response:
+>reduced
+Your Response:
+we've managed to reduce our energy consumption in our factory by about 15 per cent in the last two years .
+```

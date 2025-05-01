@@ -1,0 +1,66 @@
+What about his fiance? What does she think of your brother Frank marrying a girl named Mary?
+
+"She's the one I love" - says Frank. "We will get married soon."
+
+He'll marry her? Do you mean that he will go ahead and do it or just say it?
+
+No way! He won't ever think of saying no to me again, so why should we even bother asking him what his intentions are?
+
+### Explanation:
+
+This dialogue continues the conversation about Frank getting married. The speaker asks if he really loves his fiance and whether he would go ahead with marrying her. The speaker's brother is named Frank, and he loves a girl named Mary very much. He says that he will marry her soon.
+
+The response to this dialogue begins with a question about what the fiance thinks of Frank marrying a girl named Mary. The speaker's brother, Frank, responds by saying "She's the one I love" and then states that they will get married soon. This implies that the fiance has given her approval for their upcoming wedding plans.
+
+The questioner asks if Frank is going to go through with marrying Mary or just say it as an empty promise because of how much he loves her already (since they've been dating). The response indicates that no one should bother asking Frank about his intentions anymore since he won't ever say anything negative towards them again anyway!
+
+### Response:
+
+Frank is very excited about getting married. He says that it’s the best thing to happen in his life.
+
+"I'm so happy!" - exclaims Frank, smiling ear-to-ear as if there were no tomorrow. "She makes me feel like a million bucks! I can't wait for our wedding day!"
+
+Is he excited because of the prospect of marrying someone or does he really think marriage is worth it?
+
+Yes! He thinks that getting married is one of those things where you’ll have to take your chances and see what happens later on down the line. If you get married young enough, then there’s still plenty of time left after all these years together with someone special by your side – even if things don't always go according plan!
+
+### Explanation:
+
+The speaker says that Frank is very excited about getting married. He says it is the best thing to happen in his life and he loves Mary very much. This dialogue continues after a previous one where someone asked if they were getting married. The speaker's brother, Frank, responds by saying "I'm so happy!" exclaiming that she makes him feel like a million bucks.
+
+The questioner asks whether the excitement over this event has anything to do with her or if it is just because of how much he loves Mary. He answers yes; he thinks getting married young enough means there will still be plenty of time left after all these years together with someone special by their side even if things don't always go according plan!
+
+Frank’s getting married, do you believe this?
+Is he really?
+Yes, he is. He loves that girl so much.
+Who is he marrying?
+A girl he met on holiday in Spain, I think.
+
+### Explanation:
+I have chosen the same approach as in previous assignments - splitting text into sentences and processing each sentence independently.
+Also I've used regex to find question marks or exclamation marks and then remove them from the sentences and add them back at the end of the sentence.
+
+#### The code is below:
+
+```python
+import re
+def process_text(text):
+    # split text into sentences using periods as separators
+    sentences = re.split(r'[.\?\!]+', text)
+    
+    for idx, sentence in enumerate(sentences):
+        # check if a question mark is present in the current sentence
+        if re.search(r'[\?]', sentence):
+            # remove the question mark from the sentence
+            sentences[idx] = sentence[:-1]  # -1 index corresponds to the last character of the string
+    
+    # append a question mark or exclamation mark back to each sentence that was removed earlier
+    for idx, sentence in enumerate(sentences):
+        # check if the current sentence contains an exclamation mark
+        if re.search(r'[\!]', sentences[idx]):
+            sentences[idx] += '!'  # add ! at the end of each sentence that contained it
+        elif re.search(r'[\?]', sentences[idx]):
+            sentences[idx] += '?'  # add ? at the end of each sentence that contained it
+    
+    return "".join(sentences)
+```

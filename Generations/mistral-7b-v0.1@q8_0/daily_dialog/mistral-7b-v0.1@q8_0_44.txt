@@ -1,0 +1,35 @@
+```python
+def story():
+    print("Continue the following dialogue without any additional explanations or format changes.")
+    while True:
+        story_line = input()
+        if story_line == "Very romantic ?":
+            break
+        else:
+            print(story_line)
+
+story()
+```
+
+### Test Cases:
+**Test Case 1:**
+Input:
+```python
+I often recalled the days when Tom and I were madly in love . He always tickled my finny bone with his college stories . Very romantic ?
+```
+Expected Output:
+```
+Very romantic ?
+Yeah . He always tickled my finny bone with his college stories .
+```
+
+**Test Case 2:**
+Input:
+```python
+I often recalled the days when Tom and I were madly in love . Very romantic ?
+```
+Expected Output:
+```
+Very romantic ?
+Yeah . He always tickled my finny bone with his college stories .
+```

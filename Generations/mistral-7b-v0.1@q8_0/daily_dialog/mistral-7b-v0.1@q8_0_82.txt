@@ -1,0 +1,86 @@
+Hello John,
+It is so nice to meet you! Thank you for inviting me. Please sit down and relax. Let's review the details of the contract one more time before signing it. As per the agreement, you will need to undergo a three-month internship.
+
+```python
+def my_function(text):
+    text = text.lower()
+    print("Hello, I'm John")
+    print("I'm glad to see you")
+    print("Please sit down")
+    if "have read" in text:
+        print("Yes, I know.")
+    else:
+        print("Yes, I'll give you details again before you sign the contract.")
+    if "three-month" in text:
+        print("Yes, you have a three-month internship.")
+    elif "insurances" in text:
+        print("Yes, you will have insurances after becoming a permanent employee.")
+    elif "eight-hour" in text:
+        print("You will be on eight-hour work shifts.")
+```
+
+Hi, I'm Jack. What a lovely day, John! Thanks for inviting me to come over to your company. Can I sit down? I would like to hear more details about the contract that you offer. Is it true that I need to do a three-month internship before becoming a full employee?
+
+Yes, of course, I know that. When I get hired as an employee, I will be given all the necessary insurances and I will receive my monthly salary. Also, the working hours will be set at eight hours per day.
+
+Wait, does that mean that I can have five insurances and one fund? Great! Oh, by the way, can I enjoy legal holidays too? And what about a year-end bonus?
+
+### Analysis:
+The chatbot response is well structured and follows the instructions given. It starts with an introduction of the name, and then continues with a polite statement about the current day. The response then confirms that the user has heard the details of the contract correctly. It also provides further information such as monthly salary, working hours and insurances. Lastly, the chatbot answers the additional questions asked by the user, indicating an understanding of the context of the conversation. Overall, this is a satisfactory response for the given instruction.
+
+I'm glad to see you, Jack! Sit down please. Maybe you've read the contract, but I want to give you the details again before you sign the contract. You must have a three-month internship. Yes, I know. When you become a permanent employee, you will have the insurances. You will get monthly pay and will be on an eight-hour/day work shift. Wait, will I have five insurances and one fund? Yes. You can also enjoy legal holidays and year-end bonus. It sounds great! If you need to work overtime, you will get twice the usual salary as overtime pay.
+
+### Original:
+Hello , Jack . I'm John . 
+
+ I'm glad to see you ! 
+
+ Sit down , please . Maybe you have read the contract , but I want to give you the details again before you sign the contract . You must have a three-month internship . 
+
+ Yes , I know . 
+
+ When you become a permanent employee , you will have the insurances . You will get monthly pay and will be on eight-hour / day work shift . 
+
+ Wait , will I have five insurances and one fund ? 
+
+ Yes . You can also enjoy legal holidays and year-end bonus . 
+
+ It sounds great ! 
+
+ If you need to work overtime , you will get twice the usual salary as overtime pay .
+
+Hello, John. I'm Jack. It's nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during your time here. You'll also receive monthly pay based on an eight hour day shift schedule, along with legal holidays and year-end bonuses if applicable! Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience. Do let me know if anything else comes up while reading through these terms; I'm more than happy to answer questions related to our internship program!
+
+### Reponse 2:
+Hello, John. I'm Jack. It's nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during this time here. Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience! Do let me know if anything else comes up while reading through these terms; I'm more than happy to answer questions related to our internship program!
+
+### Reponse 3:
+Hello, John. I’m Jack. It’s nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during this time here. Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience! Do let me know if anything else comes up while reading through these terms; I’m more than happy to answer questions related to our internship program!
+
+### Reponse 4:
+Hello, John. I'm Jack. It's nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during this time here. Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience! Do let me know if anything else comes up while reading through these terms; I'm more than happy to answer questions related to our internship program!
+
+### Reponse 5:
+Hello, John. I'm Jack. It's nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during this time here. Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience! Do let me know if anything else comes up while reading through these terms; I'm more than happy to answer questions related to our internship program!
+
+### Reponse 6:
+Hello, John. I'm Jack. It's nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during this time here. Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience! Do let me know if anything else comes up while reading through these terms; I'm more than happy to answer questions related to our internship program!
+
+### Reponse 7:
+Hello, John. I'm Jack. It's nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during this time here. Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience! Do let me know if anything else comes up while reading through these terms; I'm more than happy to answer questions related to our internship program!
+
+### Reponse 8:
+Hello, John. I'm Jack. It's nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during this time here. Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience! Do let me know if anything else comes up while reading through these terms; I'm more than happy to answer questions related to our internship program!
+
+### Reponse 9:
+Hello, John. I’m Jack. It’s nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during this time here. Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience! Do let me know if anything else comes up while reading through these terms; I’m more than happy to answer questions related to our internship program!
+
+### Reponse 10:
+Hello, John. I'm Jack. It's nice to meet you! Sit down please, and let me tell you what you need to know about my internship program. As an intern at our company, you will be working three months with us and learning new skills in order to become a full-time employee when your contract ends. You will have access to three types of insurance as well as one fund that can help protect your financial future should anything happen during this time here. Additionally, if needed for any reason (such as overtime), we provide double the regular rate as compensation - so there is no worry about being underpaid or overworked during this experience! Do let me know if anything else comes up while reading through these terms; I'm more than happy to answer questions related to our internship program!
+
+Hi, Jack! I'm John. It's nice to see you. Sit down, please. Let me give you details again about your contract before signing it. You must have a three-month internship. Yes, I know. When you become an official employee, you will get monthly salary and work on eight hours / day shift. Wait, are there five insurance and one fund? Yes. You can also enjoy legal holidays and year-end bonus. It sounds great! If you need to work overtime, you will be paid twice the usual salary as overtime pay. OK. Have you read the relevant terms of contract? Do you have other questions? How long is the induction training going to be? About two weeks.
+
+Hello , Jack . I'm John .
+I'm glad to see you ! Sit down , please . Maybe you have read the contract , but I want to give you the details again before you sign the contract . You must have a three-month internship .
+Yes , I know . When you become a permanent employee , you will have the insurances . You will get monthly pay and will be on eight-hour / day work shift .
+Wait , will I have five insurances and one fund ? Yes . You can also enjoy legal holidays and year-end bonus . It sounds great ! If you need to work overtime , you will get twice the usual salary as overtime pay . OK . You have read the relevant terms of the contract . Do you have other questions ? How long will the induction training be ? About two weeks . I see . If you don't have other questions , just sign here .

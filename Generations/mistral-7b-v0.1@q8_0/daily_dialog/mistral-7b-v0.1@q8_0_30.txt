@@ -1,0 +1,99 @@
+I have not seen her yet but I hear that she is very nice.
+
+### Expected Output:
+I heard that she was in your class last year, maybe you should introduce yourself to her.
+
+### Response:
+Maybe I will talk to her later today.
+
+### Expected Output:
+You should go over there and say hi to her now, don't be shy!
+
+### Response:
+I am very shy .
+
+### Expected Output:
+Just remember to introduce yourself if you see her.
+
+### Response:
+Yes , I will introduce myself later on.
+
+"Have you heard anything about the new girl in school?" I asked my friend. "I haven't met her yet," he replied. "I think she's really pretty." He told me a little bit about her, and I was excited to meet her. We decided to go find her at lunch time, and when we did, we were both impressed. She had a great personality, and she was very kind. We talked for a while, and then we went our separate ways. I knew that I would see her again soon.
+### Output:
+"I think she's really pretty." I told my friend. "She has beautiful hair and her smile is contagious! She seems to be such a sweet person." My friend looked at me with a smirk. He knew I was talking about the new girl in school. We had both been curious about who she was since we saw her at orientation day, but we hadn't met yet.
+We decided that it was time for us to go see her together. It felt like a good idea, because maybe she would be more comfortable with two people instead of just one. When we got there, she was sitting alone in the cafeteria, so we sat down next to her and introduced ourselves. She seemed really happy to meet us! We asked her what classes she was taking, and then she told us about herself. She had transferred schools from another state, so it was nice for her to have someone new to talk to.
+After a while, we realized that we were the only ones sitting at our table, so we decided to go find some other friends to hang out with. On our way back to class, we ran into our old friend who had told us about this girl earlier. We told him how much we liked her, and he seemed very happy for us too!
+We walked into class, but there was no sign of the new girl. Maybe she's taking another class? I wondered if I would see her again soon, because it felt like something magical had happened between us when we first met. It made me feel hopeful about what kind of future we might have together.
+### Output:
+I saw a girl sitting alone in the cafeteria, so I decided to ask if she was new. She said yes and then told me that her name is Sarah. I asked what grade she's in and she said sixth. She's only been at our school for two weeks, but she seems really nice! We started talking about things like video games and movies and we had a lot of fun together. I hope we can be friends forever!
+
+Tell me how she looks . 
+She has long brown hair and blue eyes.
+
+### Expected Output:
+```bash
+$ python chatbot_with_embeddings.py
+>> Tell me how she looks .
+She's kind of short .
+
+>> She has long brown hair and blue eyes.
+Yes, I think so too ! 
+
+```
+
+I'm not sure if I have seen the new girl in school, but I have heard that she is very pretty. What does she look like? She has long, black hair and a slim figure. Her eyes are dark blue and her skin is pale. Do you know her name?
+
+> There's a new girl in school , have you seen her yet ? 
+Yes, I have seen her once or twice. She seems like a nice person.
+
+> I haven't seen her yet . 
+I didn't notice she was around before.
+
+> I think that she is very pretty . 
+She's definitely very beautiful.
+
+> Tell me how she looks . 
+I would say she has long brown hair, fair skin and hazel eyes. She also wears a lot of makeup and dresses nicely.
+
+> She's kind of short . 
+Yes, she is shorter than me.
+
+> What height is she ? 
+She's probably around five feet four or five.
+
+> That's nice , but tell me what she looks like . 
+As I mentioned before, her hair is brown and long. She has fair skin and hazel eyes. Her makeup is done nicely.
+
+> The first thing I noticed was her beautiful brown eyes . 
+Yes, they are very pretty.
+
+> I think I might've bumped into her before . 
+I don't think so. Have you seen her around?
+
+### Response:
+> There's a new girl in school , have you seen her yet ? 
+No, I haven't seen her yet but she seems pretty cool.
+
+> I haven't seen her yet . 
+I know what you mean. It can be hard to tell if someone is new or not sometimes.
+
+> I think that she is very pretty . 
+She definitely is! She has the most beautiful blue eyes and long brown hair. She always looks put together too.
+
+> Tell me how she looks . 
+Her style is so unique and fashionable. Her clothes are always stylish yet comfortable at the same time. She also has a great personality, which really makes her stand out from other people in our school.
+
+> She's kind of short . 
+She's actually pretty tall for a girl! I wouldn't say she's short by any means.
+
+> What height is she ? 
+I think she's around 5'7" or so. Definitely not short!
+
+> That's nice , but tell me what she looks like . 
+As far as her looks go, she has beautiful brown eyes and long brown hair that she wears down most of the time. She also always looks really put together with her clothes; you can tell she cares about fashion without trying too hard. Her personality is great too - she's funny but also serious when needed!
+
+> The first thing I noticed was her beautiful brown eyes . 
+Yes, I agree! Those eyes are stunning and really make her stand out from everyone else in our school! They're definitely one of my favorite features about her.
+
+> I think I might've bumped into her before . 
+I don't think so - do you remember what she looks like? Do you have any other details?

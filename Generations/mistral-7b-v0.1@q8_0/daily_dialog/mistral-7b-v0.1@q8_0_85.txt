@@ -1,0 +1,29 @@
+Yes, we have experienced significant disruption in the availability and pricing of raw materials due to government regulations and supply chain issues. Our manufacturing team is continuously working with suppliers to ensure that we can obtain high-quality and compliant materials for our products. To mitigate any potential impact on production, we've implemented contingency plans such as diversifying supplier bases and implementing alternative sourcing strategies. 
+
+### Code:
+```json
+{
+    "dialog": [
+        {
+            "role": "user",
+            "content": "Has your company been affected much by government legislation ?"
+        },
+        {
+            "role": "assistant",
+            "content": "Yes , we have . We've had to clean up our production process a lot to meet tough government standards ."
+        },
+        {
+            "role": "user",
+            "content": "What about your use of raw materials ?"
+        }
+    ],
+    "response_text": [
+        "Yes, we have experienced significant disruption in the availability and pricing of raw materials due to government regulations and supply chain issues. Our manufacturing team is continuously working with suppliers to ensure that we can obtain high-quality and compliant materials for our products. To mitigate any potential impact on production, we've implemented contingency plans such as diversifying supplier bases and implementing alternative sourcing strategies."
+    ]
+}
+```
+
+Yes, we have. We’ve had to clean up our production process a lot to meet tough government standards. 
+What about your use of raw materials? 
+We’ve had to cut down the amount of solvents we use and we ‘re not allowed to use lead in our products any more.
+What happens if you exceed the limits ?

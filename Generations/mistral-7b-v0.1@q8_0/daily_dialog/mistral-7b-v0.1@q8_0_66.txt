@@ -1,0 +1,18 @@
+Well, I know you always loved the idea of having a few more bucks in your pocket , but that was not my intention. However, it is not often that I am able to take advantage of such a lucrative offer. Therefore, this was an opportunity to invest my savings into something else .
+
+I could get my money back, so that would be enough.
+
+#### Code:
+```js
+let response = {
+  "dialogid": "480227763",
+  "response": {
+    "dialog_action": "message_received",
+    "response_text": [
+      "I could get my money back, so that would be enough."
+    ],
+    "response_type": "",
+    "api_version": ""
+  }
+}
+```

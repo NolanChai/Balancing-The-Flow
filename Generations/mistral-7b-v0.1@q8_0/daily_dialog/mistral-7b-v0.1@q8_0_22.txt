@@ -1,0 +1,171 @@
+Very nice. Thank you.
+
+### Explanation:
+The response is a simple acknowledgement of the customer's satisfaction with the meal and gratitude for the service provided by the server. It follows the same format as the dialogue, using "Very nice" and "Thank you" as the responses to the question, "How was everything?".
+
+>I am sorry, but we only have paper bags at the moment.
+
+---
+[<<](../README.md) | [Table of Contents](../README.md) | [>>](../1_instructions.md)
+---
+### Additional Resources:
+- [Rasa Docs](https://rasa.com/docs/)
+- [Python 3 Basics](https://www.codecademy.com/learn/learn-python-3)
+- [Python Data Types](http://www.dummies.com/programming/python/python-data-types/)
+
+```
+Ok, how was your meal?
+```
+
+### Explanation:
+The bot's response is a simple question that asks how the customer liked their meal. This is a typical response that many restaurants or food service businesses would use to gauge customer satisfaction and gain feedback on their products. By asking this question, the bot can help the restaurant improve its offerings and provide better service in the future.
+
+```python
+# importing the required libraries.
+import pyttsx3
+import speech_recognition as sr
+import datetime
+import wikipedia
+import webbrowser as wb
+import os
+import smtplib
+import json
+
+
+# initializing text to speech library.
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id) 
+
+# taking user name and saving it in variable.
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+
+def wishme():
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        speak("Good Morning")
+    elif hour>=12 and hour<18:
+        speak("Good Afternoon")
+    else:
+        speak("Good Evening")
+    speak("I am Jarvis. Please tell me how may I help you")
+
+
+# defining function for speech recognition.
+def takeCommand():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print("Listening...")
+        audio = r.listen(source)
+
+    try:
+        print("Recognizing...")
+        query = r.recognize_google(audio, language='en-in')
+        print(f"User said: {query}\n")
+
+    except Exception as e:
+        # print(e)
+        print("Say that again please...")
+        return "None"
+    return query
+
+# defining function for wikipedia.
+def search(query):
+    try:
+        speak('Searching Wikipedia...')
+        url = 'https://en.wikipedia.org/w/api.php'
+        params = {'format': 'json', 'action': 'query','prop':'extracts','exintro':'&explaintext':'&titles':query}
+        response = requests.get(url, params=params)
+        data = json.loads(response.text)
+        links = []
+        if data['query']['pages']:
+            pageid = list(data['query']['pages'].keys())[0]
+            print(pageid)
+            summary = data['query']['pages'][pageid]['extract']
+            speak("According to Wikipedia")
+            speak(summary)
+        else:
+            speak("No such results found on wikipedia. Please try again.")
+    except Exception as e:
+        print(e)
+
+# defining function for opening browser.
+def openBrowser():
+    search = takeCommand()
+    url = 'https://google.com/search?q=' + search
+    wb.open(url, new=2)
+
+
+if __name__ == '__main__':
+    wishme()
+    while True:
+        query = takeCommand().lower() 
+
+        # for opening browser
+        if 'open browser' in query:
+            openBrowser()
+            continue
+
+        # for playing music
+        if 'play' in query:
+            speak('Sure. What do you want to listen?')
+            song = takeCommand().lower() 
+            filepath=os.path.join(r"C:\Users\Mohit Jha", "Downloads/Music/"+song+".mp3")
+            wb.get(filepath)
+
+        # for searching on wikipedia
+        elif 'wikipedia' in query:
+            speak('Searching Wikipedia...')
+            search(query) 
+
+        # for sending email
+        elif 'email to' in query:
+            try:
+                speak("What should I say?")
+                content = takeCommand()
+                to = "mohit.jha@capgemini.com"
+                sendEmail(to, content)
+            except Exception as e:
+                print(e)
+                pass
+        continue
+```
+
+Excuse me. Check please.
+
+Sure. How was everything?
+
+Very nice. Thank you.
+
+Would you like this to-go?
+
+Yes, can you put it in a plastic bag?
+
+Sure, no problem. Here you are. That'll be $25.
+
+Do you take credit cards?
+
+Yes, we accept Visa and MasterCard.
+
+OK, here you are. I'll be right back.
+
+OK.
+
+```
+Excuse me . Check please . 
+OK, how was everything ? 
+Very nice. Thank you. 
+Would you like this to-go ? 
+Yes, can you put it in a plastic bag? 
+Sure, no problem. Here you are. That'll be $25.00. 
+Do you take credit cards? 
+Yes, we accept Visa and MasterCard. 
+OK, here you are. 
+Thanks. I'll be right back. 
+OK. 
+Here's your receipt. 
+Thank you.
+```

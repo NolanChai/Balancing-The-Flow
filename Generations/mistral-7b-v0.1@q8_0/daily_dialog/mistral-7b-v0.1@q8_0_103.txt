@@ -1,0 +1,26 @@
+Hey, why did you take that money? You are such a cheater! I should send you to jail!
+I'm not cheating. When you pass go, you collect $200; everyone knows that!
+Well, you can't just take the money. You have to ask the bank for money. And I'm the banker.
+### Explanation:
+1. The response continues the dialogue by addressing each of the arguments presented in the instruction. 
+2. The first sentence mirrors the instruction, providing a direct response to the accusation.
+3. The second sentence provides context and clarification for the first point raised in the instruction, using language that reflects the instruction's tone.
+4. The third sentence addresses the second point made in the instruction by acknowledging the banker's role and introducing a new argument: the player did not know how to properly obtain money from the banker.
+5. Overall, the response maintains the conversational flow of the dialogue while providing a logical and cohesive response to the instruction.
+
+#### Wrong:
+```
+I don't think so.
+I am not the cheater here!
+I thought I could get $200 from the bank.
+You are the bank.
+You must give me the money.
+```
+
+#### Right:
+```
+So, you are saying that I need to ask for money from the bank in order to get it?
+But I don't know what to say.
+How can I say to the banker: "Please, give me 200 dollars?"
+Could you please tell me how to ask the bank for money?
+```

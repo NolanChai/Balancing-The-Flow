@@ -1,0 +1,343 @@
+Your heart has been beating far too much, and it needs to rest.
+
+### Explanation:
+We need to use `re` library to parse and understand the dialogue format. Then we can extract the information and match with some rules in a tree like structure. Based on that, we generate a response. The following code implements this idea.
+
+```python
+import re
+from pprint import pprint
+
+class Dialogue:
+    def __init__(self):
+        self._tree = None
+        self._words = []
+        self._text = ''
+
+    def parse(self, text):
+        if self._text != '':
+            self._text += " "+text
+        else:
+            self._text = text
+
+    def set_tree(self, tree):
+        self._tree = tree
+
+    def get_words(self):
+        return self._words
+
+    def get_text(self):
+        return self._text
+
+class TreeNode:
+    def __init__(self, left, right, response, words=[]):
+        self.left = None
+        self.right = None
+        self.response = response
+        self.words = words
+        if left is not None:
+            self.left = left
+        if right is not None:
+            self.right = right
+
+    def match_words(self, words):
+        return all([word in self.words for word in words])
+
+def parse_dialogue():
+    dialogue = Dialogue()
+    print('Enter \'q\' to stop inputting dialogue.')
+    while True:
+        response = input("Enter your response (either 'q', '.', or '?'): ").lower()
+        if response == 'q':
+            break
+        if re.match('\.\s|\?\s|\!\s|,(\s)?$', response, flags=re.MULTILINE) is None:
+            dialogue.parse(response)
+    words = dialogue.get_words()
+    # print('Dialogue content:')
+    # pprint(dialogue.get_text())
+    return DialogueTree(words)
+
+def match_node(node, response):
+    if node is not None and node.match_words(response):
+        return True, node.response
+    else:
+        return False, None
+
+class DialogueTree:
+    def __init__(self, words=[]):
+        self.root = TreeNode(None, None, None, words)
+
+def parse_tree():
+    root = DialogueTree()
+    while True:
+        # print('Enter "q" to stop creating a tree')
+        response = input("Enter your response (either 'q', or '.'): ")
+        if re.match('\.\s|\?\s|\!\s|,(\s)?$', response) is None:
+            dialogue = parse_dialogue()
+            root.root.left = parse_tree_node(dialogue)
+            # print("Dialogue content:", dialogue.get_text())
+        else:
+            if response == 'q':
+                break
+    return root
+
+def parse_tree_node(dialogue):
+    root = TreeNode(None, None, None, [])
+    tree = dialogue.set_tree(root)
+    if len(tree.get_words()) != 0:
+        left_response = input("Enter the response for this line (either 'q' or '.'): ")
+        if re.match('\.\s|\?\s|\!\s|,(\s)?$', left_response) is None and left_response != "q":
+            tree.left = parse_tree_node(Dialogue())
+    return root
+
+def match(response, node):
+    if node is None:
+        return False
+    response = response.replace(' ', '')
+    while True:
+        if not re.match(r'\[.*?\]', node.left.response) and response in node.left.words:
+            if match_node(node.left, response):
+                return True, node.left.response
+        if response == node.right.response:
+            if match_node(node.right, response):
+                return True, node.right.response
+        response = input('Enter your response (either \'.\', or \'?\'): ')
+        if re.match('\.\s|\?\s|\!\s|,(\s)?$', response) is None:
+            tree = parse_tree()
+            for word in response.split():
+                node = match_node(node, word)[0]
+                if not node:
+                    return False, None
+        else:
+            return True, None
+
+if __name__ == '__main__':
+    tree = parse_tree()
+    # print("Dialogue content:", tree.root.left.get_text())
+    response = input('Enter your response (either \'.\', or \'?\'): ')
+    while True:
+        if re.match('\.\s|\?\s|\!\s|,(\s)?$', response) is None and response != "q":
+            tree = parse_tree()
+            for word in response.split():
+                node = match_node(tree.root.left, word)[0]
+                if not node:
+                    break
+        else:
+            print("Bye")
+            break
+```
+
+You need to slow down, you can't keep working so much. You are overworking and it is causing your blood pressure to rise. You need to find some ways to relax and reduce your stress levels. It might be helpful for you to take up some hobbies or activities that you enjoy and can do in your spare time. I would also recommend trying out some relaxation techniques, such as meditation, yoga, or deep breathing exercises. These can help to calm your mind and body. Additionally, it may be worth talking with a therapist or counselor about finding ways to manage stress more effectively. If you are able to find ways to reduce your stress levels, this should help lower your blood pressure.
+
+You ' Ve got to stop eating so much sugar and white flour and get more exercise , said the doctor . 
+
+ Oh no , said the patient . My wife wouldn't stand for that ! 
+
+
+
+```python
+from gensim.models import Doc2Vec
+import numpy as np
+import pandas as pd
+import nltk
+nltk.download('punkt')
+nltk.download("stopwords")
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from collections import defaultdict
+```
+
+
+```python
+df=pd.read_csv(r'C:\Users\Hemendra Singh\Documents\Deblurring\Dialogue Generation\TextSum\train-clean-1500000.txt',sep='|')
+```
+
+
+```python
+df['Dialogue'].head()
+```
+
+
+
+
+    0                        what's the matter with me , Doctor ? I feel...
+    1                                is your blood pressure , I'm afraid . It's far ...
+    2                                         And what's the cause of that ?
+    3                                      Overwork-amongst other things . You ca...
+    4    And what ' s the cause of that ? Overwork-amongst other things . You ca...
+    Name: Dialogue, dtype: object
+
+
+
+
+```python
+df['Dialogue_split']=df.apply(lambda x: word_tokenize(x['Dialogue'].lower().replace('.', '').replace('?', '')))
+```
+
+
+```python
+df.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Speaker1</th>
+      <th>Speaker2</th>
+      <th>Dialogue</th>
+      <th>Dialogue_split</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>what's the matter with me , Doctor ? I feel so tired these days .</td>
+      <td>['what', 's', 'the', 'matter', 'with', 'me,', 'doctor', ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>1</td>
+      <td>is your blood pressure , I'm afraid . It's far too high .</td>
+      <td>['is', 'your', 'blood', 'pressure,', ',', 'I''m', 'afraid.', ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>1</td>
+      <td>And what's the cause of that ?</td>
+      <td>['and', 'what''s', 'the', 'cause', 'of', 'that', '?']</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>1</td>
+      <td>Overwork-amongst other things . You can't work 24 hours a day .</td>
+      <td>['overwork', '-', 'amongst', 'other', 'things', '.', 'you', ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>1</td>
+      <td>You've got to slow down .</td>
+      <td>['you''ve', 'got', 'to', 'slow', 'down', '.']</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df=df.sample(100)
+```
+
+
+```python
+df_stopword = df[['Dialogue','Dialogue_split']].applymap(lambda x: " ".join([s for s in x if s not in stopwords.words('english')]))
+```
+
+
+```python
+print(df_stopword)
+```
+
+    Speaker1   Speaker2                       Dialogue                                                          \
+    0            1  what's the matter with me, doctor ? I feel so tired these days
+    4            1                            is your blood pressure , i'm afraid . it's far too high
+    5            1    and what's the cause of that ?
+    9            1   overwork-amongst other things . you can't work 24 hours a day
+    6            1        you've got to slow down
+    3            1         and what ' s the cause of that ? overwork-amongst other things . you ca...
+    8            1    i feel so tired these days , doctor . there are many people who feel thi...
+    7            1                       but I can't just slow down .
+    2            1              and what ' s the cause of that ? overwork-amongst other things ...
+    1            1  is your blood pressure , i'm afraid . it's far too high
+
+                                                              Dialogue_split
+    0   [what's, the, matter, with, me, doctor?, I, feel, so, tired...
+    4    [is, your, blood, pressure, , i'm, afraid, ., it's, far, too...
+    5           [and, what's, the, cause, of, that ?
+    9   [overwork-amongst, other, things, ., you, can't, work, 24, hour...
+    6                [you've, got, to, slow, down, ]
+    3         [and, what ' s, the, cause, of, that ? overwork-amongst, other, things...
+    8            [i, feel, so, tired, these, days, , doctor, ., there, are, ma...
+    7                    [but, I, can't, just, slow, down, .]
+    2             [and, what ' s, the, cause, of, that ? overwork-amongst, other, thing...
+    1            [is, your, blood, pressure, , i'm, afraid, ., it's, far, too...
+
+
+
+```python
+def tokenizer(x):
+    return word_tokenize(x)
+```
+
+
+```python
+df['Dialogue'].apply(lambda x: tokenizer(x)).head()
+```
+
+
+
+
+    0                        [what's, the, matter, with, me?, doctor?]
+    1                              [is, your, blood, pressure, , i'm, afraid?]
+    2                                           [and, what's, the, cause, of, that?]
+    3    [overwork-amongst, other, things, ., you, can't, work, 24, hours]
+    4                [you've, got, to, slow, down, ]                        
+       Name: Dialogue, dtype: object
+
+
+
+
+```python
+train=df.head(100)
+valid=df.tail(100)
+test=df[df['Dialogue'].str.contains('doctor')]
+```
+
+
+```python
+tokenizer_words=defaultdict(int)
+for i in range(len(train)):
+    for j in train.loc[i,'Dialogue_split']:
+        tokenizer_words[j]+=1
+
+max_word=sorted(tokenizer_words.items(),key = lambda x :x[1],reverse=True)[0][0]
+```
+
+
+```python
+print("Max Word",max_word,"Count:",tokenizer_words[max_word])
+```
+
+    Max Word and Count: 32719
+
+
+
+```python
+embedding_size=50
+min_count=1
+alpha=0.025
+window=

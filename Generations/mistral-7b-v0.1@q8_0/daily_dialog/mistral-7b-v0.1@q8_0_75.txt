@@ -1,0 +1,56 @@
+```
+No problem. We will send another form right away and your claim should be processed very soon. Is there anything else I can do for you?
+```
+### Code:
+```py
+#!/usr/bin/python
+from gtts import gTTS
+import os
+
+input = "No problem. We will send another form right away and your claim should be processed very soon. Is there anything else I can do for you?"
+language = 'en'
+myobj = gTTS(text=input, lang=language, slow=False)
+myobj.save("output.mp3")
+print("File saved! Check it out.")
+os.system("mpg123 output.mp3")
+```
+### Output:
+```py
+No problem. We will send another form right away and your claim should be processed very soon. Is there anything else I can do for you?
+```
+
+> **Please resend your continued claim form and call back later**
+
+I didn ’ t fill out the form yet ! 
+
+ It needs to be filled out , signed , and returned before you can receive any more benefits . 
+
+ I don ’ t understand what you mean ! 
+
+ You need to fill it in with your information . 
+
+ I have been filling them in every two weeks since I first got my check ! 
+
+ The form has changed a few times , so it is possible that you sent the last one in late or filled it out incorrectly .
+
+Yes. We can accept your form up to fourteen days past its due date . After that , the form is invalid and we won ’ t be able to process your payment . So yes , if you send it in now , you will still get paid for this week . If you mail it in next time , you should make sure you do it at least two weeks before the due date so we can pay you on time .
+
+Continue the following dialogue without any additional explanations or format changes.
+
+I am calling to find out why I didn’t receive an unemployment check this week.
+
+Did you send in your Continued Claim Form for the last period?
+
+I think I forgot to send it in!
+
+You need to be very careful to send that form in every two weeks if you want to get paid.
+
+Can I send it in now?
+
+You should look at your claim form and see if it has been more than fourteen days since it was due. If it hasn’t been, we will still accept it.
+
+Can I mail it in early next time so it isn’t late?
+
+Actually, you cannot mail it in early, as it needs to reflect all of the information up to the due date.
+
+Will my paycheck come right away now?

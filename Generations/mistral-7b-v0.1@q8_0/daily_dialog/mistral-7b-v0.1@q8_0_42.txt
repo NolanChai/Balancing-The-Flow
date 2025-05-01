@@ -1,0 +1,17 @@
+<div data-dialog="response">
+	<p>You think he can handle it?</p>
+</div>
+
+### Followup:
+<div data-dialog="followup">
+	<p>He is not a child anymore.</p>
+</div>
+
+### Logic:
+```javascript
+// Your code here.
+```
+
+---
+
+This dialogue was created by [GPT-2](https://github.com/openai/gpt-2) using a 774M parameter model. This is not an official release of the GPT-2 project, and has been slightly modified to fit the format of our challenge.

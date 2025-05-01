@@ -1,0 +1,20 @@
+Our flight to Los Angeles is scheduled to leave at 8:00 AM. I just checked with the airline and they said our connecting flight to Miami will be at 11:35 AM, which means we have a layover of 2 hours and 25 minutes. The gate for our connecting flight is B-7.
+
+```js
+let answer = [
+    "I'm sorry, I can't find any information about your flight.",
+    "Let me check. Oh, oh! It’s at 3:25. Wow, that's cutting it close! That means we only have 25 minutes to make the connection! What gate is it at?"
+  ];
+
+  let randomIndex = Math.floor(Math.random() * answer.length);
+  return answer[randomIndex];
+```
+
+### Explanation:
+
+This code defines an array `answer` that contains a response to the user's inquiry about their flight information and time. The `randomIndex` is generated using the Math.floor method and is assigned to the response variable. Finally, the response variable is returned to be displayed on the screen.
+### Code Explanation:
+
+- `let answer = [ "I'm sorry, I can't find any information about your flight.", "Let me check. Oh, oh! It’s at 3:25. Wow, that's cutting it close! That means we only have 25 minutes to make the connection! What gate is it at?" ];` This code defines an array called `answer` which contains two different possible responses to the user's question regarding flight time.
+- `let randomIndex = Math.floor(Math.random() * answer.length);` This line generates a random number between 0 and the length of the `answer` array by using the `Math.floor` method and then multiplying it with the `Math.random` function. The result is assigned to the variable `randomIndex`.
+- `return answer[randomIndex];` Finally, this line returns the corresponding element from the `answer` array at index position `randomIndex` (the generated random number). This will display a random response from the array on the screen.

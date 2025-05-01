@@ -1,0 +1,23 @@
+```jsx
+
+let coffee = "cafe au lait, cafe latte, cappuccino, cafe mocha";
+console.log(coffee); // cafe au lait, cafe latte, cappuccino, cafe mocha;
+
+coffee = coffee.split(",");
+console.log(coffee); // ["cafe au lait", " cafe latte", "cappuccino", " cafe mocha"]
+
+coffee = coffee.filter((item) => item !== " cafe latte" && item !== " cafe mocha");
+console.log(coffee); // ["cafe au lait", "cappuccino"];
+
+```
+
+### Result:
+```jsx
+
+["cafe au lait, cafe latte, cappuccino, cafe mocha"]
+
+["cafe au lait", " cafe latte", "cappuccino", " cafe mocha"]
+
+["cafe au lait", "cappuccino"]
+
+```

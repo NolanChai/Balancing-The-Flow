@@ -1,0 +1,91 @@
+> 39 has scored 40 points in 6 games so far. He is one of the best scorers on the team.
+> The coach should definitely make a decision to keep him as a starter.
+
+
+```python
+import pandas as pd
+import numpy as np
+import random, re
+import requests
+from bs4 import BeautifulSoup
+import nltk
+
+# Load Glove model
+glove_model = nltk.data.load('glove-wiki-gigaword-300.300d.txt')
+```
+
+    Downloading data from https://github.com/bengorman/glove-wiki-gigaword-300/raw/master/glove-wiki-gigaword-300.300d.txt.gz ...
+    Finished in 78 seconds.
+
+
+
+```python
+import torch
+from transformers import AutoModel, AutoTokenizer
+
+model_name = 'bert-base-uncased'
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModel.from_pretrained(model_name)
+```
+
+    Downloading model file from https://huggingface.co/bert-base-uncased/resolve/main/config.json
+    ......
+    ......
+    Downloaded config.json (102.5 KB) Downloading tokenizer file from https://huggingface.co/bert-base-uncased/resolve/main/tokenizer_config.json
+    ......
+    ......
+    Downloaded tokenizer_config.json (448 B) Downloading model file from https://huggingface.co/bert-base-uncased/resolve/main/pytorch_model.bin
+    ...
+    ...
+    Downloaded pytorch_model.bin (167 MB) [-------------------------->------] 7%|█▎  | 12MB/198MB 0:01:44
+    Processing tokenizer...
+    25,030 of 25,030 (100%) tokens processed.
+    ...
+    ...
+    458,679 of 458,679 (100%) tokens processed.
+    Processed 25030/458679 tokens (0:00:00.027985)
+    Downloading vocab file from https://huggingface.co/bert-base-uncased/resolve/main/vocab.json
+    ......
+    ......
+    Downloaded vocab.json (333 KB) [-------------------------->------] 8%|█▎  | 12MB/198MB 0:01:46
+    25,030 of 25,030 (100%) tokens processed.
+    ...
+    ...
+    458,679 of 458,679 (100%) tokens processed.
+    Processed 25030/458679 tokens (0:00:00.037158)
+    Downloading word embeddings from https://huggingface.co/bert-base-uncased/resolve/main/pytorch_model.bin.gz
+    ......
+    ......
+    Downloaded pytorch_model.bin.gz (974 MB) [-------------------------->------] 12%|█▎  | 12MB/198MB 0:01:48
+
+
+    CUDA kernel has been set to use all GPUs available
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_bert.py:720: UserWarning: You are using a small batch size with `torchtext` preprocessing and you probably want to consider passing the `drop_last=True` argument to prevent an empty batch at the end of your epoch.
+      warnings.warn(
+    /usr/local/lib/python3.6/dist-packages/transformers/modeling_
