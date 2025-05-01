@@ -1,0 +1,43 @@
+=== Uniform Information Density (UID) Analysis Report ===
+
+Total files analyzed: 157
+Total tokens processed: 71581
+Average tokens per file: 455.93
+
+=== Surprisal Statistics ===
+Mean surprisal across all texts: 4.5472
+
+=== UID Metrics ===
+UID Variance (mean): 16.2873
+UID Variance (median): 13.9890
+UID Variance (std): 6.9569
+
+UID Pairwise (mean): 31.3068
+UID Pairwise (median): 26.4431
+UID Pairwise (std): 18.6692
+
+=== Correlations ===
+Correlation between UID Variance and UID Pairwise: 0.9068
+Correlation between Mean Surprisal and UID Variance: 0.8146
+Correlation between Mean Surprisal and UID Pairwise: 0.9034
+
+=== Top 5 Files by UID Variance (most uniform) ===
+llama-2-7b@q8_0_6.csv: 7.5298
+llama-2-7b@q8_0_143.csv: 7.8173
+llama-2-7b@q8_0_125.csv: 8.0151
+llama-2-7b@q8_0_174.csv: 8.3230
+llama-2-7b@q8_0_8.csv: 8.3574
+
+=== Top 5 Files by UID Pairwise (most uniform) ===
+llama-2-7b@q8_0_202.csv: 9.6170
+llama-2-7b@q8_0_195.csv: 10.5974
+llama-2-7b@q8_0_172.csv: 11.9272
+llama-2-7b@q8_0_203.csv: 12.2633
+llama-2-7b@q8_0_125.csv: 13.8665
+
+=== Analysis Notes ===
+Lower values of UID metrics indicate more uniform information density.
+Higher correlation between metrics suggests consistency in measuring uniformity.
+
+The high correlation between UID Variance and Pairwise suggests both metrics
+are capturing similar aspects of information uniformity.
