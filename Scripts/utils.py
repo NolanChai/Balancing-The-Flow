@@ -529,7 +529,7 @@ def modified_to_tokens_and_logprobs(model, tokenizer, input_texts, verbose=False
     
     return batch_results
 
-def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokenizer, model_name="human", pattern=None, verbose=False):
+def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokenizer, model_name="human", pattern=None, batch_size=20, verbose=False):
     """Calculate surprisals for existing text files
     
     Args:
@@ -585,9 +585,6 @@ def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokeni
         
     if verbose:
         print(f"Successfully read {len(all_texts)} files for {model_name}")
-    
-    # Process in batches
-    batch_size = 20
     
     # Split into batches
     batched_texts = split_batches(all_texts, batch_size)

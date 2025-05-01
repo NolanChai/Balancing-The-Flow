@@ -33,7 +33,7 @@ def setup_directories(model_name):
     
     return dirs
 
-def calculate_average_surprisal(model_name, dataset_name, num_files, verbose=False):
+def calculate_average_surprisal(model_name, dataset_name, num_files, batch_size=20, verbose=False):
     """
     Calculate average surprisal across generated files
     """
@@ -46,7 +46,7 @@ def calculate_average_surprisal(model_name, dataset_name, num_files, verbose=Fal
     if len(existing_csvs) < num_files:
         if verbose:
             print(f"Calculating surprisals for {model_name}...")
-        
+            print(f"Batch size: {batch_size}")
         try:
             tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
@@ -64,6 +64,7 @@ def calculate_average_surprisal(model_name, dataset_name, num_files, verbose=Fal
                 output_dir=str(surprisal_dir),
                 model_name=model_name,
                 num_files=num_files,
+                batch_size=batch_size,
                 verbose=verbose
             )
         except Exception as e:
@@ -112,6 +113,7 @@ def main():
     parser.add_argument('-s', '--system-prompt', type=str, help='System prompt to prepend to each generation')
     parser.add_argument('-r', '--regenerate', action='store_true', help='Regenerate existing outputs')
     parser.add_argument('-v', '--verbose', action='store_true', help='Print verbose information')
+    parser.add_argument('-b', '--batch-size', type=int, default=20, help='Batch size for surprisal calculation.')
     parser.add_argument('--max-tokens', type=int, default=2048, help='Maximum tokens for generation')
     parser.add_argument('--max-retries', type=int, default=3, help='Maximum retries for failed generations')
     parser.add_argument('--analyze-human', action='store_true', help='Analyze human texts instead of generating new ones')
@@ -122,6 +124,7 @@ def main():
 
     # parse known
     args, unknown = parser.parse_known_args()
+    dataset_name = args.dataset.split("/")[-1]
 
     extra_args = {}
     for arg in unknown:
@@ -153,8 +156,10 @@ def main():
     if args.analyze_human:
         print("Analyzing human texts...")
         
-        human_surprisal_dir = Path(f"../Surprisals/human_texts")
+        human_surprisal_dir = Path(f"../Surprisals/human_texts/{dataset_name}")
         human_surprisal_dir.mkdir(parents=True, exist_ok=True)
+
+        human_input_dir = Path(args.human_dir) / f"{dataset_name}"
         
         tokenizer = AutoTokenizer.from_pretrained("gpt2")
         if tokenizer.pad_token is None:
@@ -167,12 +172,13 @@ def main():
         start_time = time.time()
         try:
             calculate_surprisals_for_existing_texts(
-                input_dir=args.human_dir,
+                input_dir=str(human_input_dir),
                 output_dir=str(human_surprisal_dir),
                 model=model,
                 tokenizer=tokenizer,
                 model_name="human",  # use "human" as the model name
                 pattern="human_*.txt",  # specific pattern for human files
+                batch_size=args.batch_size,
                 verbose=verbose
             )
             print(f"Human text analysis completed in {time.time() - start_time:.2f} seconds")
@@ -247,7 +253,7 @@ def main():
         print(f"Generation completed in (HH:MM:SS): {time.strftime('%H:%M:%S', time.gmtime(generation_time))}")
         print("Calculating surprisal statistics...")
     surprisal_start = time.time()
-    avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, verbose)
+    avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, args.batch_size, verbose)
     surprisal_time = time.time() - surprisal_start
     if verbose:
         print("\nSummary:")
@@ -268,7 +274,6 @@ def main():
         print(f"Total runtime (HH:MM:SS): {time.strftime('%H:%M:%S', time.gmtime(total_time))}")
 
     try:
-        dataset_name = args.dataset.split("/")[-1]
         summary_dir = Path(f"../Summary/{args.model}/{dataset_name}")
         summary_dir.mkdir(parents=True, exist_ok=True)
         
