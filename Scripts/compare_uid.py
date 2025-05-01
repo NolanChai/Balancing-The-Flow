@@ -18,19 +18,25 @@ def load_metrics_files(directories):
     
     for directory in directories:
         dir_path = Path(directory)
-        metrics_file = dir_path / "uid_metrics.csv"
-        
-        if metrics_file.exists():
-            try:
-                model_name = dir_path.name
-                df = pd.read_csv(metrics_file)
-                df['model'] = model_name
-                all_metrics.append(df)
-                print(f"Loaded metrics from {model_name}: {len(df)} texts")
-            except Exception as e:
-                print(f"Error loading {metrics_file}: {e}")
-        else:
-            print(f"No metrics file found in {directory}")
+        for dataset_dir in dir_path.iterdir():
+            if not dataset_dir.is_dir(): # skip non-dir files
+                continue
+            metrics_file = dataset_dir / "uid_metrics.csv"
+            
+            if metrics_file.exists():
+                try:
+                    model_name = dir_path.name
+                    dataset_name = dataset_dir.name
+                    df = pd.read_csv(metrics_file)
+                    df['model'] = model_name
+                    df['dataset'] = dataset_name
+                    all_metrics.append(df)
+                    print(f"Loaded metrics from {model_name}/{dataset_name}: {len(df)} texts")
+                except Exception as e:
+                    print(f"Error loading {metrics_file}: {e}")
+            else:
+                print(f"No metrics file found in {directory}")
+        print(f"Total files loaded: {len(all_metrics)}")
     
     if not all_metrics:
         raise ValueError("No valid metrics files found in the provided directories")

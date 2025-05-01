@@ -263,29 +263,37 @@ def main():
     parser.add_argument('--sample-size', type=int, default=5, help='Number of texts to sample for trend plots')
     args = parser.parse_args()
     
-    os.makedirs(args.output_dir, exist_ok=True)
-    
-    try:
-        data, filenames = load_surprisal_files(args.input_dir)
-        print(f"Loaded {len(data)} valid surprisal files")
-        
-        metrics_df = analyze_uid_metrics(data, filenames)
-        
-        plot_dir = os.path.join(args.output_dir, 'plots')
-        plot_distributions(metrics_df, plot_dir)
-        
-        trends_dir = os.path.join(args.output_dir, 'trends')
-        plot_surprisal_trends(data, filenames, trends_dir, args.sample_size)
-        
-        generate_report(metrics_df, args.output_dir)
-        
-        print(f"Analysis complete. Results saved to {args.output_dir}")
-        
-    except Exception as e:
-        print(f"Error during analysis: {e}")
-        return 1
-    
-    return 0
+    input_dir = Path(args.input_dir)
+    if args.output_dir == "infer":
+        output_dir = Path('../UID_Analysis') / input_dir.name
+    else:
+        output_dir = Path(args.output_dir)
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+    for dataset_dir in input_dir.iterdir():
+        try:
+            if not dataset_dir.is_dir():
+                print(f"Skipping {dataset_dir}: Not a directory")
+                continue
+            dataset_output_dir = output_dir / dataset_dir.name
+            data, filenames = load_surprisal_files(dataset_dir)
+            print(f"Loaded {len(data)} valid surprisal files")
+            
+            metrics_df = analyze_uid_metrics(data, filenames)
+            
+            plot_dir = dataset_output_dir / 'plots'
+            plot_distributions(metrics_df, plot_dir)
+            
+            trends_dir = dataset_output_dir / 'trends'
+            plot_surprisal_trends(data, filenames, trends_dir, args.sample_size)
+            
+            generate_report(metrics_df, dataset_output_dir)
+            
+            print(f"Analysis complete for {dataset_dir}. Results saved to {dataset_output_dir}")
+            
+        except Exception as e:
+            print(f"Error during analysis of {dataset_dir}: {e}")
+            continue
 
 if __name__ == "__main__":
     exit(main())
