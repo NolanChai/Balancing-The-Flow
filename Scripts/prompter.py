@@ -120,6 +120,7 @@ def main():
     parser.add_argument('--human-dir', type=str, default='../Sources', help='Directory containing human texts to analyze')
     parser.add_argument('--analyze-only', action='store_true', help='Only analyze surprisals without generating new texts')
     parser.add_argument('--dataset-config', type=str, default="", help='additional arguments for loading the dataset')
+    parser.add_argument('--dataset-split', type=str, default="test", help='split of dataset to generate from')
     parser.add_argument('--source-only', action='store_true', help='Only write sources-g without generating')
 
     # parse known
@@ -241,6 +242,7 @@ def main():
             max_tokens=args.max_tokens,
             max_retries=args.max_retries,
             dataset_config=args.dataset_config,
+            split=args.dataset_split,
             source_only=args.source_only
         )
     except Exception as e:

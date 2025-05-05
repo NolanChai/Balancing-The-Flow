@@ -122,7 +122,8 @@ def scrape(article_urls):
 def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                 model_output_dir="../Generations", human_output_dir="../Sources", 
                 write_source=True, regenerate=True, max_tokens=2048, top_p=1.0, 
-                system_prompt=None, max_retries=3, dataset_config="", source_only=False):
+                system_prompt=None, max_retries=3, dataset_config="", split='test',
+                source_only=False):
     """Prompts an LM using articles from the cnn_dailymail dataset
 
     Args:
@@ -152,7 +153,7 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
     dataset_params = (dataset_name,)
     if dataset_config:
         dataset_params += (dataset_config,)
-    data = load_dataset(*dataset_params, trust_remote_code=True)['test']
+    data = load_dataset(*dataset_params, trust_remote_code=True, split=split)
     shuffled_data = data.shuffle(seed=42)  # Use consistent seed for reproducibility
 
     # setting articles to generate
@@ -266,12 +267,17 @@ def get_text(dataset, item, turn=0):
         text = item['story']
     elif dataset == "li2017dailydialog/daily_dialog":
         text = "\n\n".join(item['dialog'])
+    elif dataset == "allenai/WildChat":
+        convo = item['conversation']
+        # return only assistant responses
+        text = "\n\n".join([turn['content'] for turn in convo if turn['role'] == 'assistant'])
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
     return text
 
 def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500, turn=0):
     text = get_text(dataset, item, turn=turn)
+    prompts = []
     if dataset in ["abisee/cnn_dailymail",
                    "euclaise/writingprompts",
                    ]: # single prompts
@@ -282,15 +288,22 @@ def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500, turn=0):
         prompts = [prompt]
     elif dataset in ["li2017dailydialog/daily_dialog"]: # multi-prompts for dialog
         dialog = text.split("\n\n")
+        dialog = [f"\"{turn}\"" for turn in dialog] # surround each turn in quotes
         
-        # Get all dialog stubs of 3 turns or longer
-        if len(dialog) <= 3:
-            prompts = ["\n\n".join(dialog)]
+        # Get all dialog stubs of MIN_TURNS turns or longer
+        MIN_TURNS = 5
+        if len(dialog) <= MIN_TURNS:
+            prompts = ["\n\n".join(dialog)] # prompts must be a list
         else:
-            prompts = ["\n\n".join(dialog[:i]) for i in range(3, len(dialog), 2)]
+            prompts = ["\n\n".join(dialog[:i]) for i in range(MIN_TURNS, len(dialog), 2)]
 
-        prompts = [f"Continue the following dialogue without any additional explanations or format changes.\n\n{prompt}" 
+        prompts = [f"Give the next turn in this dialog with no explanation or format changes. \n\n{prompt}" 
                    for prompt in prompts]
+    elif dataset in ["allenai/WildChat"]:
+        convo = item['conversation']
+        for turn in convo:
+            if (turn['role'] == 'user') and (turn['language'] == 'English'): # Only support english texts for now
+                prompts.append(turn['content'])
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
     return prompts
