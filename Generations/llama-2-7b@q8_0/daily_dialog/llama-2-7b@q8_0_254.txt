@@ -1,61 +1,195 @@
-Four people . 
+"No . I thought we might share the restaurant with other customers. "
 
- That sounds very nice . We have one table that will be perfect for your group . It can seat up to six people . Will all four of the guests be dining with us ? 
+"Well , if that's what you want , I suppose we can do it ... but it may not be the best decision. "
 
- No , only three . Do you still have it available ? 
+" Why is that? "
 
- Of course , we do . How many weeks from now would you like to make a reservation for ? 
+" Well , because you seem to have some very odd ideas about how restaurants work . "
 
- May I help you again ?
+" Oh ! Well . yes . It's . ummm . "
 
- Yes ! How long has your restaurant been in business ? 
+" I'm sorry. Couldn't quite catch that , Sir . "
 
- We've been open since early December of last year . 
+" Oh ! Yes . Of course . My name is . ummm ... "
 
- Do you have any live entertainment at the restaurant ? 
+" How do you spell that ? "
 
- We do not . Are you sure that you're still interested in reserving a table for dinner with us ? 
+" Well , it isn't very unusual . It's just that... well, never mind ... it's Smith. J-o-e."
 
- I am , thank you ! 
+" One moment please . Let me get your reservation into the computer . "
 
- Very good . We will make it so. Now , let me ask you this question one more time : Is there anything else I can help you with today ? 
+( Clicking noises )
 
- No thanks ! I think that's all . Thank you again for your assistance .
+" I show six couples in room 325 for seven thirty. Is that correct ? "
 
-No thank you . 
+" That's perfect ! Thank you ! "
 
- Are there any other special requests ? 
+( click again )
 
- The food is always wonderful here and the service is good. 
+" The reservations are now confirmed , Sir . If you would give me your credit card number ... "
 
- Thank you for your time and I hope you enjoy your stay with us . 
+" I know... I forgot my wallet."
 
-### Sample Output
+" It doesn't matter. Just a moment . I'll have someone bring your card out to the table for you. Do you know how long you will be staying ? "
 
-```
-pompous: How may I help you?
-Yes, I'd like to reserve a table for dinner.
-How large a group are you expecting?
-Six couples.
-Would you like to reserve a private dining room?
-No thank you.
-Are there any other special requests?
-The food is always wonderful here and the service is good.
-Thank you for your time and I hope you enjoy your stay with us.
-```
+" Yes. Until about ten o'clock. "
 
-Certainly . My name is Tom Smith . 
+( click again )
 
- And what's yours , Madam ?
+" Thank you , Sir . If you would hang up now, our computer will automatically call you a taxi service. Is that all right ? "
 
-My name's Elizabeth Jones and these are my friends. 
+" That's fine."
 
- I see . Would you like a table in the main dining room or out on the terrace? 
+( click again )
 
- Out on the terrace would be nice because it looks over the lake.
+" Good evening. You have ordered six tables for seven thirty in room 325 . Would you like me to connect you with a taxi service ? "
 
-All right then , we have two tables available outside . Is that all right with you ? 
+" No . I think we can make it on our own, thanks . "
 
-Perfect! Thank you so much for reserving them for us, I'll see you in a few hours.
+" Very well , Sir . If you should change your mind ... "
 
- Bye .
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ? This is Joe Smith from room 325. I forgot my wallet."
+
+( click again )
+
+" Mr . Smith? Your credit card has been charged the full amount. If you would like your receipt mailed to you ... "
+
+( click )
+
+" Thank you for calling the Ridgeway Hotel. If you would like to speak with someone about room availability , please press 1 ; or, if you are ready to make a reservation , just press 2 at any time . "
+
+" Hello ?

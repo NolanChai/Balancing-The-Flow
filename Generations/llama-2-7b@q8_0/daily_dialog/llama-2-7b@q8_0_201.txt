@@ -1,45 +1,63 @@
-Great ! I'll try to make it ... 
+" Oh , no, sorry . "
 
- All right, see you then . 
+" Okay . Anyway, take care. "
 
- See ya !
+" You too ! See ya around."
 
-> #### The above dialogue is represented in the following format. 
-> [<dialogue-name>](https://github.com/GaneshKumar1908/BotGuru/blob/master/docs/source_files/src/main/java/com/botguru/nlp/grammar/PennDialogues.java#L27)
+### 30. You have an accident
 
-## Conversational Patterns 
-The following patterns are used to represent conversations between two or more participants in the Penn Treebank dialogues. 
+"Hi , what happened ? "
 
-|Pattern|Example|
-|-------|---------|
-|Question-Answer Dialogue|Q: What's up ?A: Nothing much , what's going on ?|
-|Reply-Response Dialogue|R: I'm having a party this Friday .|A: Great ! I'll try to make it ...|
-|Polite Dialogue|P: All right, see you then.|A: See ya !|
+" I had an accident today . "
 
-[Warning: Short generation] 
+" What kind of accident ? "
 
- Sure, why not ? 
+" The motorbike skidded on the wet road and hit a tree . "
 
- Great ! See you then.
+" Oh my God, are you all right ? "
 
-I don't want to ruin your fun but... 
+" Yeah, it hurt but nothing serious . "
 
- You can come as my plus one . 
+" Let me drive to your place , I'll call an ambulance."
 
- What !? Really ? Oh , I didn't expect you would actually show up . 
+" Okay. Thanks . "
 
- Thank you so much for the invitation ! 
+" Nothing much, just hanging out with friends . "
 
- See you Friday at seven o'clock. Bye.
+" Can we hang out later? It's a party after all. "
 
-[Warning: Short generation] 
+" Later ? Maybe next week. "
 
- Well , maybe another time . 
+" Next week?! Why so far in the future? Don't you want to have fun?"
 
- OK , bye .
+"Sure I do , but my schedule is full this week."
 
-[Warning: Short generation] 
+"So, you don't want to spend time with me because of your busy schedule?"
 
- Okay . See ya later . 
+"No no . I'd love to hang out, just not tonight. "
 
- Bye !
+"If it wasn't for your stupid scheduling habits , we could hang out every night ! "
+
+"I didn't realize that was a problem."
+
+" I'm so sorry . Can you forgive me?"
+
+"Why should I forgive you? You have to be more considerate of my time if you want us to spend it together. "
+
+"I guess this means we won't hang out tonight ? "
+
+"Well, maybe next week."
+
+"Next week? I don't know when I can go. "
+
+"Well, why not tomorrow night?"
+
+"I'm sorry , but I have plans with someone else."
+
+"Who are you hanging out with ? "
+
+"I guess you'll never find out ."
+
+" It's fine . See ya later. Bye. "
+
+" You will be missed ! Bye ! "

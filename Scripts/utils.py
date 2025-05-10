@@ -221,7 +221,9 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                             time.sleep(1)
                             continue
                         else:
-                            generation = f"[Warning: Short generation] {generation}"
+                            # generation = f"[Warning: Short generation] {generation}" 
+                            print("Short generation")
+                            error_count += 1
                     
                     all_generations.append(generation.strip())
                     generated_count += 1
@@ -297,7 +299,7 @@ def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500, turn=0):
         else:
             prompts = ["\n\n".join(dialog[:i]) for i in range(MIN_TURNS, len(dialog), 2)]
 
-        prompts = [f"Give the next turn in this dialog with no explanation or format changes. \n\n{prompt}" 
+        prompts = [f"Help me write the next turn in this dialog with no explanation or format changes. \n\n{prompt}" 
                    for prompt in prompts]
     elif dataset in ["allenai/WildChat"]:
         convo = item['conversation']
