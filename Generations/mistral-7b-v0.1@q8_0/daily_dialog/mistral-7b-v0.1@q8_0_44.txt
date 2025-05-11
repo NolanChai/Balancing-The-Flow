@@ -1,35 +1,7 @@
-```python
-def story():
-    print("Continue the following dialogue without any additional explanations or format changes.")
-    while True:
-        story_line = input()
-        if story_line == "Very romantic ?":
-            break
-        else:
-            print(story_line)
+" What happened ? "
 
-story()
-```
+" A few years later he started going out at night and staying away from home for a couple of days , without telling me what he was up to . "
 
-### Test Cases:
-**Test Case 1:**
-Input:
-```python
-I often recalled the days when Tom and I were madly in love . He always tickled my finny bone with his college stories . Very romantic ?
-```
-Expected Output:
-```
-Very romantic ?
-Yeah . He always tickled my finny bone with his college stories .
-```
+" Were you afraid he had another woman ? "
 
-**Test Case 2:**
-Input:
-```python
-I often recalled the days when Tom and I were madly in love . Very romantic ?
-```
-Expected Output:
-```
-Very romantic ?
-Yeah . He always tickled my finny bone with his college stories .
-```
+" Of course not . We were just so in love with each other . But I got upset when he didn't return my calls . "

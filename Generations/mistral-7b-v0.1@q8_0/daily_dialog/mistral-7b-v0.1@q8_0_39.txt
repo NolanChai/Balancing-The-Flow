@@ -1,100 +1,16 @@
-```
-Hi. We’ll have to cancel your original reservation first. Then we will rebook you on the new date and time. Would you like to proceed?
-```
+" J u d y W a n g. "
 
-### Evaluation:
-This response is concise, clear, and easy to understand. It provides a clear instruction on how to proceed with the cancellation process without any unnecessary explanations or format changes. The use of contractions such as "we'll" makes it sound more natural and friendly. Overall, this response demonstrates good communication skills and effective customer service.
+" Miss Wang , I have the following information in our system : For July 19 Taipei to Minneapolis , First Class , $3400 . You want me to make it for August 2 instead of July 19 ? "
 
-Good afternoon ! This is Trans Pacific Airlines customer service, how may I help you?
+" Yes , please . "
 
-I am calling to cancel my reservation for Trans Pacific Flight 8 on July 19 from Taipei to Minneapolis. Could you please change it to the same flight on August 2 instead of July 19?
 
-What is your name?
 
-My name is Judy Wang.
+" Thank you very much . Good bye ! "
 
-How do you spell your name?
+© BrainMass Inc. brainmass.com October 10, 2019, 3:08 am ad1c9bdddf
+https://brainmass.com/english-language-and-literature/english-grammar-and-usage/dialogue-writing-help-577762
+$2.19
 
-Thank you very much for using Trans Pacific Airline, Ms. Wang ! The new reservation number for your flight on August 2 is 8354903173 , which will be confirmed in the email that we sent to your address [your email] . If you have any further question , please call our customer service at (650) 555-3308 .
 
-### Comments:
-We used a regular expression to extract Ms. Wang 's name and then we extracted her phone number from the string containing her flight information. The email address was also extracted with a regex. Then the flight reservation number was assigned to the customer using the function `get_reservation_number()` . Finally, all the important information is printed out in a more concise form.
 
-### Code:
-```python3
-import re
-
-# Get input from user
-name = input("Hello ! Trans Pacific Airline.\nHow can I help you? ")
-reservation_flight = input("I'm calling to cancel my reservation for Trans Pacific Flight " + name + " on July 19 from Taipei to Minneapolis . Could you please make it for the same flight on August 2 instead of July 19 ? \n")
-firstname = re.findall("\b[a-zA-Z0-9]{3,}\b", name)[0]
-lastname = re.findall("(?<=Flight )\w+(?= on)", reservation_flight)
-fullname = firstname + ' ' + lastname[0]
-email = re.findall("(?<=@)\S+", name)
-phone = input("What's your phone number, please ? ")
-reservation_number = get_reservation_number()
-email_message = "Dear Ms." + fullname + ",\n\nPlease note that this ticket has a penalty of $75 for any change or cancellation.\n\nThank you for using Trans Pacific Airline.\n\nTrans Pacific Airline"
-
-print("Thank you very much for using Trans Pacific Airline, Ms. Wang !")
-print("\nThe new reservation number for your flight on August 2 is " + reservation_number + " , which will be confirmed in the email that we sent to your address " + email[0] + " . If you have any further question, please call our customer service at (650) 555-3308 .")
-```
-
-```
-Good afternoon ! Trans Pacific Airline. How can I help you ?
-I'm calling to change my reservation for Trans Pacific flight 8 on July 19 from Taipei to Minneapolis. Can you please make it for the same flight on August 2 instead of July 19?
-What is your name, please?
-My name is Judy Wang.
-How do you spell your name, please?
-My first name is J-U-D-Y and my last name is W-A-N-G.
-Please note that this ticket has a penalty of $75 for any change or cancellation.
-It's OK. Where should I pay for the penalty?
-At the airport. Ok, Miss Wang. Your flight 8 on July 19 from Taipei to Minneapolis is canceled. Your new reservation is Trans Pacific Flight 8 from Taipei to Minneapolis at 9:30 a.m. on August 2.
-```
-
-Hello! Trans Pacific Airlines. How can I help you?
-
-I want to cancel my reservation for Trans Pacific flight 8 on July 19 from Taipei to Minneapolis. Can you please make it for the same flight on August 2 instead of July 19?
-
-What’s your name, please?
-
-My name is Judy Wang.
-
-How do you spell your name, please?
-
-My first name is J-U-D-Y, and my last name is W-A-N-G.
-
-Please note that this ticket has a penalty of $75 for any change or cancellation.
-
-It’s okay. Where should I pay for the penalty?
-
-At the airport. Okay, Miss. Wang, your Flight 8 on July 19 from Taipei to Minneapolis is canceled. Your new reservation is Trans Pacific Flight 8 from Taipei to Minneapolis at 9:30 am on August 2.
-
-That’s 1POJ7403.
-
-That’s correct.
-
->Good afternoon ! Trans Pacific Airline. How can I help you?
-
-Hello, how are you today?
-
->I’m calling to cancel my reservation for Trans Pacific Flight 8 on July 19 from Taipei to Minneapolis. Could you please make it for the same flight on August 2 instead of July 19?
-
-Sure, I can change your ticket to another date. Can I have a minute to retrieve your account information first?
-
->What’s your name, please?
-
-My name is Judy Wang.
-
->How do you spell your name, please?
-
-My first name is J-U-D-Y, and my last name is W-A-N-G.
-
-Sure, no problem! Your new reservation is Trans Pacific Flight 8 from Taipei to Minneapolis at 9:30 a.m. on August 2.
-
->That’s 1POJ7403.
-
-That’s right! Let me see if I can change that for you. One moment, please.
-
->Thank you!
-
-You’re welcome! Is there anything else I can help you with today?

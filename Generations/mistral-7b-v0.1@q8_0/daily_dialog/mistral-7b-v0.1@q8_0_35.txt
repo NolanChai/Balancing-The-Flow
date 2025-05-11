@@ -1,17 +1,11 @@
-No! I have a good news! You just won $1 million in a lottery! Congratulations!
+" I got hit by a car. "
 
-### Explanation:
-The system tries to match the input with the first two words of the dialogue and fails, so it continues the dialogue by generating a random response that fits the context. The generated response is positive and has nothing to do with the accident, which was mentioned in the initial sentence.
+" Oh no, are you hurt ? "
 
-## Instruction:
-Continue the following dialogue without any additional explanations or format changes.
+Turn:
 
-I had an accident . 
+"No, but my car is all messed up."
 
- That's terrible ! 
+###### 08-13-2019
 
-### Response:
-Yes! I have a good news! You just won $1 million in a lottery! Congratulations!
-
-### Explanation:
-The system tries to match the input with the first two words of the dialogue and fails, so it continues the dialogue by generating a random response that fits the context. The generated response is positive and has nothing to do with the accident, which was mentioned in the initial sentence.
+You know what? It's kind of a shame that you didn't get hurt in the accident. At least then you would be able to claim damages from the driver and use that money to fix your car. Maybe you should consider getting a lawyer to see if you can get some sort of compensation for your car being totaled. Good luck!

@@ -1,72 +1,21 @@
-```
-Yes, please give me the book. 
+" Well , yes , it is. There must be a reason for that , don't you think so ? "
 
-No, it is not my turn. 
+" Oh , what do you mean by that ? "
 
-Sorry, this book is too heavy for me.
+" Well, take me for example , I was born in the Spring . You know, May 10th. It must have been quite warm then, don't you think so ? "
 
-I am afraid this book is too old for you. 
+" Sure , I do . But it isn't very good . "
 
-Thank you, but I do not have any money to pay for the book.
+" Well , we have to keep going then . We should not give up just like that . "
 
-Yes, it is rather cold.
+" No , you are quite right . If there is one thing that must be done in life, it is getting on . "
 
-### Explanation:
-The model should continue the dialogue by responding to the last utterance with a statement that agrees with it. The response "Yes" indicates agreement and the continuation of the dialogue, while the response "It's rather cold this morning wouldn't you say?" provides additional information and context for the conversation. 
+" Yes , I agree with you . "
 
-### Prediction:
-The model will likely continue the dialogue by providing an additional statement or question that relates to the topic of the conversation. The next utterance may be a follow-up question, or it may provide more information about the current situation. 
+" Really ? "
 
-### Output:
-Model response:
-```text
-Yes , I do . 
+" I think so . "
 
- Could you lend me one ? 
+" What about Japan and Korea ? "
 
- OK . Here you are . 
-
- Thanks . It's rather cold this morning wouldn't you say ? 
-
- Yes, it is rather cold.
-```
-
-Sure, here is the news.
-
-#### News from Today:
-
-1) Apple is releasing iPhone X in its latest version of operating system iOS 12. This is a much-awaited phone and has been rumoured for some time now. The phone features wireless charging, advanced face ID unlocking and an OLED screen. The camera is 10 MP with a front selfie camera of 7MP.
-
-2) The government has recently announced that it will be releasing the much-awaited 5G internet network in India. This will bring India on par with other countries like China, South Korea etc. This news has brought joy to the people who are eagerly waiting for high-speed internet and are excited about the new possibilities it brings along with it.
-
-3) The stock market had a mixed day today with most of the indexes closing in green. The Sensex rose by 0.85% while Nifty closed at 10767 points, up 0.9%. This is good news for investors who are looking to make some money off the stock market.
-
-#### Weather Forecast for tomorrow:
-Tomorrow’s weather looks promising with sunny skies and a high of 32 degrees Celsius. The low temperature will be around 18 degrees Celsius, making it a perfect day to step out and enjoy the sunshine. So make sure you plan your activities accordingly!
-
-#### Quotes for tomorrow:
-“Happiness can only come from within; we cannot find it in anyone else.” – Anonymous
-
-“The secret of happiness is freedom; the secret of freedom, courage.” – Thucydides
-
-“Happiness is not something ready made. It comes from your own actions.” – Dalai Lama
-
-Yes, I do. I read about it online yesterday. It’s quite something. That’s my favourite team in case you didn’t know. The match was very exciting! Do you follow football?
-
-Yes, but I prefer watching rugby matches. They are far more interesting. I played rugby at school for a couple of years. You have to be very strong and quick as well, which is quite demanding, but I loved it. Have you tried any other sports?
-
-I used to play basketball in secondary school. It was great fun! Our team went to the national tournament once, we didn’t win, but the experience was fantastic! Did you ever go skiing or snowboarding?
-
-Actually, yes. My friend and I went to Austria a couple of years ago for our winter holidays. We had so much fun learning how to ski, although falling down over and over again was quite painful at times… Do you prefer winter or summer sports?
-
-I think it’s summer all the way! I hate being cold, especially when it’s snowy. There is nothing better than lying on a sunny beach with a cool drink in my hand. Have you ever gone scuba diving?
-
-No, I haven’t. I’m actually quite afraid of the water and deep sea dives freak me out a bit. What about skydiving though? Did you do any parachuting?
-
-I did once. It was in university during our end of term break. We decided to go on an adventure trip, so we went skydiving. That was the most exhilarating experience ever! Do you plan on doing anything this holiday season?
-
-Unfortunately, I don’t think I will be able to travel anywhere due to my work. How about you though? What are your plans for the winter break?
-
-I plan on spending time with my family, so I will probably stay at home and take it easy. Do you prefer travelling alone or in a group?
-
-I always try to travel alone when possible as it gives me more freedom. However, there are times when I want someone to share my experiences with. What about you though? Have you been on any trips lately?
+" They lost . "

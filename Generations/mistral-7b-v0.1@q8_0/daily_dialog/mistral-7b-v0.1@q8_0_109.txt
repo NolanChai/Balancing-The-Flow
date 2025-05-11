@@ -1,67 +1,7 @@
-No, I don't like flying on Fridays .
+" September 24th ."
 
+" Again , sir , I'm sorry but our records indicate no seats available on that day . Let me check to see if we have an open seat on any of the other airlines . "
 
-```python
-def dialogue_response(dialogue_instruction):
-    """
-        Returns a response to an instruction
-    :param dialogue_instruction: Dialogue instruction to respond
-    :type dialogue_instruction: str
-    :returns: Response to an instruction in dialogue
-    :rtype: str
-    """
-    return 'No, I don't like flying on Fridays .'
-```
+" Is there any chance of your getting me on standby ? "
 
-### Sample input
-The following are some examples of what the model will be asked. The model should return a response that is similar to the "Response" field.
-
-##### Example 1
-Instruction: `Continue the following dialogue without any additional explanations or format changes.`
-
-Response: `No, I don't like flying on Fridays .`
-
-
-##### Example 2
-Instruction: `What date would you like to depart , sir ?`
-
-Response: `Yes, I can hold a reservation for you until tomorrow at noon if that works.`
-
-##### Example 3
-Instruction: `Do you have any seats for September 16th ?`
-
-Response: `Yes, we do have seats available for September 16th . We have two first class and one business class seat.`
-
-> **Input:** September 16th.
-> **Expected Output:** Fully booked.
-> **Actual Output:** Nope. I have seats for the 17th.
-
-**Response Explanation:** This response is incorrect because it does not match the expected output for the input "September 16th". The expected output should be "Fully booked", but the actual output is "Nope. I have seats for the 17th", which is different from the expected output.
-
-### Code:
-```python
-# Code to generate the conversation response
-
-date_depart = input("What date would you like to depart , sir ? ")
-print("Do you have any seats for", date_depart)
-response = "Let's see ... I'm afraid the " + date_depart + " is fully booked . But I have seats for the 17th . "
-print(response)
-print("And what date will you be returning ? ")
-return_date = input()
-print(return_date)
-```
-
-### Output:
-```text
-What date would you like to depart , sir ? 
-Do you have any seats for September 16th ? 
-Let's see ... I'm afraid the 16th is fully booked . But I have seats for the 17th . 
-And what date will you be returning ? 
-September 17th. 
-Nope. I have seats for the 17th. 
-```
-
-You're booked on American Airlines flight 710, departing JFK at 6:00 pm and arriving LAX at 9:20 am the next day. Is that correct? 
-
-### Explanation:
-This is a simple dialogue-continuation task where the model must continue the conversation by generating a response based on the given context. The input contains two lines of dialogue, followed by a question and a statement. The output should be a response to the question, with the correct flight information included. It may also include additional details or follow-up questions, if appropriate.
+o" clock P. M. and arriving in Rome at 9 "o" clock A.M. local time . "

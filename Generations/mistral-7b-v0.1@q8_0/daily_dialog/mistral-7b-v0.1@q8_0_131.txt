@@ -1,87 +1,9 @@
-#### Wrong Answer :
-> I've never thought about buying a car. It's so expensive, and I can just walk everywhere I need to go.
+" But, if anything happens , Mom will get all of the money . What are we going to do with that money ? "
 
-#### Right Answer :
-> Yes , I have . You know, it makes sense for you to get insured . What if something happens to you and you don't have any money? Your mother would be devastated , and I wouldn't want that on my conscience .
+" That depends on whether you die or not . If I do, she will get all the money and can live comfortably until she dies ."
 
-Sure, Dad. Let's do it together.
+" If not ? "
 
-### Explanation of response:
-The model has understood the context and has responded with an affirmative answer.
+" You will just have to find a nice girl and marry her . "
 
-### Evaluation:
-* Accuracy: 100%
-* Relevance: 100%
-* Grammar: 100%
-
-## Instruction:
-Please generate a continuation for the given conversation. Do not add any additional explanations or format changes.
-
-Hey, how was your day?
-
-I'm doing great! The weather is nice and I had a good meal last night.
-
-Oh that's great to hear. How about you? What did you do today?
-
-Well, I went for a walk in the park and took some time to read my favorite book. I also caught up on some work from home.
-
-That sounds like it was a productive day! Did you have any interesting conversations with your coworkers?
-
-Yes, I had a meeting with them earlier today about our project. We discussed how we can improve the efficiency of our process.
-
-That's great that you were able to collaborate with them on something so important. What did they suggest as solutions?
-
-They suggested automating some of the processes which would help us save time and money in the long run.
-
-Oh wow, that sounds like an excellent idea! I hope it works out for all of you.
-
-```python
-#!/bin/env python
-import sys
-import random
-
-from nltk.tokenize import sent_tokenize, word_tokenize
-from nltk.corpus import stopwords
-from gensim.models import Word2Vec
-
-def create_vector_dict(corpus):
-    # Create a list of tokens (i.e. words) from the corpus
-    tokens = [word for sent in corpus for word in sent]
-    # Remove stop words (e.g. "the", "a") and punctuation
-    tokens = [token for token in tokens if not token.isupper()]
-    return {token: i for i, token in enumerate(tokens)}
-
-# Load the input text into a list of sentences
-input_text = """Hey , son , are you insured ? 
-Not yet , but I'm thinking of it . Have you bought one , Dad ? 
-I took out a life insurance policy and made your mother the beneficiary . 
-Oh , I see . Do you advise me to buy one ? 
-You have children now . What if something , God forbid , happens to you ?"""
-input_sentences = sent_tokenize(input_text)
-
-# Load the input text into a list of words
-input_words = [word.lower() for sent in input_sentences for word in sent.split()]
-input_vocab = create_vector_dict(input_words)
-
-# Load the output text into a list of sentences
-output_text = """Continue the following dialogue without any additional explanations or format changes . 
-Hey , son , are you insured ? 
-Not yet , but I'm thinking of it . Have you bought one , Dad ? 
-I took out a life insurance policy and made your mother the beneficiary . 
-Oh , I see . Do you advise me to buy one ? 
-You have children now . What if something , God forbid , happens to you ?"""
-output_sentences = sent_tokenize(output_text)
-
-# Load the output text into a list of words
-output_words = [word.lower() for sent in output_sentences for word in sent.split()]
-output_vocab = create_vector_dict(output_words)
-
-# Create a Word2Vec model on the input sentences
-model = Word2Vec(sentences=input_sentences, vector_size=100, window=5, min_count=3, workers=4)
-
-# Calculate word similarity using the model
-for sentence in output_sentences:
-    for word in sentence.split():
-        if word in input_vocab and word in output_vocab:
-            print(f"{word} is similar to {model.most_similar(' '.join(input_sentences))[0]}")
-```
+" Yes, Dad , I have decided . Tomorrow I will go to the insurance company and take out an insurance policy . "

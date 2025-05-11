@@ -1,30 +1,13 @@
-> Yes I did. The score was 3-0.
+" I don't know . "
 
-### Explanation:
-1. Using the pattern `Yes` `No`, the first line of response should be `Yes`.
-2. Following the dialogue, the next question is `Who won?` with the corresponding answer being `The score was 3-0`.
+" Is it true that China has a strong women team in this sport ? "
 
-### Reasoning:
-1. In this situation, the correct answer will always start with `Yes` because it matches the dialogue.
-2. The next line of the response should contain a question (in this case `Who won?`) to maintain the flow of the conversation and then provide the corresponding answer that is relevant to the previous dialogue.
+" Yes . "
 
-### References:
-1. [Pattern-based ChatGPT Prompting](https://blog.openai.com/pattern-based-chatgpt-prompting/)
-2. [ChatGPT Prompt Engineering for Dialogue Completion](https://arxiv.org/abs/2305.14599)
+" Did you watch their match against Korea ? "
 
----
+" Yes , they lost . "
 
-No, I didn't watch the volleyball game last night, but I heard that China won with a score of 3-1.
+" Did any of your friends go to the match ? "
 
-### Explanation:
-The dialogue is about a volleyball match between two teams. The first speaker asks the second speaker if he or she watched the game and whether China won. The second speaker replies by stating that no, he didn't watch the game but heard that China won with a score of 3-1. In this case, I assume that the first speaker is asking about the result of the match and not who won in general. So I provide the result by saying "China won with a score of 3-1". If it was ambiguous whether the first speaker is talking about the winner or the result of the match, I would have asked for clarification to avoid confusion.
-
-### Output:
-```
-[
-    {
-        "response": "No, I didn't watch the volleyball game last night, but I heard that China won with a score of 3-1.",
-        "explanation": "The dialogue is about a volleyball match between two teams. The first speaker asks the second speaker if he or she watched the game and whether China won. The second speaker replies by stating that no, he didn't watch the game but heard that China won with a score of 3-1. In this case, I assume that the first speaker is asking about the result of the match and not who won in general. So I provide the result by saying \"China won with a score of 3-1\". If it was ambiguous whether the first speaker is talking about the winner or the result of the match, I would have asked for clarification to avoid confusion."
-    }
-]
-```
+" No . "

@@ -1,37 +1,5 @@
-I don’t know if I should tell you this, but according to [Wikipedia](https://en.wikipedia.org/wiki/List_of_longest-running_sitcoms), I Love Lucy is the longest-running prime time sitcom in history with 180 episodes aired.
+" Oh , really ? "
 
-### Output:
-Cindy, how come nearly all the prime-time TV shows are comedies?
+" Yes . But many of the ones I see don't have much to do with real life . They tend to be fantasy adventures or even sci-fi . In Taiwanese TV shows , ordinary people are rarely the heroes . Most often they are victims who need rescuing by a supernatural hero . "
 
-That’s because Americans love sitcoms.
-
-Sitcoms?
-
-### Explanation:
-The bot has replied with the first result from Wikipedia, which is a list of long-running sitcoms. In this case, I Love Lucy is at the top of that list and so was used in the response.
-
-### Code:
-```python
-def generate_response(request):
-    # Get the input
-    input = request['input']
-    # Process the input
-    output = "I don’t know if I should tell you this, but according to Wikipedia, I Love Lucy is the longest-running prime time sitcom in history with 180 episodes aired."
-    return output
-```
-
-##### Original Response
-```
-Cindy , how come nearly all the prime-time TV shows are comedies ?
-That's because Americans love sitcoms .
-Sitcoms ?
-Situation comedies . A sitcom is half an hour long and it airs weekly . Sitcom shows tend to be about ordinary people . If there is one thing that all the shows have in common , it is teaching wholesome values .
-In Taiwan , prime-time shows are an hour long and most of them aren't comedies .
-```
-
-##### Revised Response (With Explaination)
-```
-Cindy , how come nearly all the prime-time TV shows are comedies ?
-That's because Americans love sitcoms . A sitcom is half an hour long and it airs weekly . Sitcom shows tend to be about ordinary people . If there is one thing that all the shows have in common , it is teaching wholesome values .
-In Taiwan , prime-time shows are an hour long and most of them aren't comedies .
-```
+" That sounds pretty cool ! "

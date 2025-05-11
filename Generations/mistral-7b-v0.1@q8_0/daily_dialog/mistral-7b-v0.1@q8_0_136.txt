@@ -1,31 +1,9 @@
-```python
-import random
-def get_random_word():
-    words = ['class', 'break', 'long', 'enough']
-    return random.choice(words)
+" Yes Mam , let ’ s go . "
 
-response = "Does the class start again, Mam ? Yes, but to the heath, this break has long enough."
+" I 'll try to get through that in my head for a few hours later today . "
 
-for word in response:
-    if word == get_random_word():
-        print("OK . Come back into the classroom , class .")
-```
-### Explanation:
-In the code above , I imported the random library and used the choice function to randomly choose one of the given words from the list. I then created a variable named response , which contains a sentence that we want to continue . For each word in this sentence , we check whether it is equal to our randomly chosen word using an if statement . If there's a match , we print "OK . Come back into the classroom , class ."
+" Mam ? "
 
-### Output:
-```python
-OK . Come back into the classroom , class .
-Does the class start again, Mam ? Yes, but to the heath, this break has long enough.
-Does the class start again, Mam ? Yes, but to the heath, this break has long enough.
-```
+" Sorry , sorry , yes ? "
 
-Okay, class. Let’s get back into the classroom. 
-
-No, Mam? The class doesn't start yet, does it? 
-
-Yes, but let's go to the health first. This break has been long enough. 
-
-Oh, breaktime flies. 
-
-Okay, baby. It's time now.
+" What was the teacher said again ? "

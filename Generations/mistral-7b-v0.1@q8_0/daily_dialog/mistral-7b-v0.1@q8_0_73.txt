@@ -1,88 +1,11 @@
-Hey, Kenny, I was thinking of picking up some drinks and heading over to that new bar down the street. Do you want to come along?
+" What is it ? "
 
-### Input:
-- What are you drinking?
+" You should be more careful crossing the street . It's a drag getting killed by a truck . "
 
-### Output:
-I'm having a whiskey sour. How about you?
+" What's her name ? "
 
-### Input:
-Oh, I don't drink whiskey. I'll have a vodka soda.
+( Your turn )
 
-### Output:
-Sounds good! Let's meet at the bar in 10 minutes.
+" Come on . There's something about her . "
 
-### Input:
-Great, see you there!
-
-```python
-import os
-from transformers import GPT2Tokenizer, GPT2LMHeadModel
-
-tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
-model = GPT2LMHeadModel.from_pretrained("gpt2")
-
-def generate_text(prompt):
-    input_ids = tokenizer.encode(prompt, return_tensors="pt")
-    generated_ids = model.generate(input_ids)
-    decoded_text = tokenizer.decode(generated_ids[0], skip_special_tokens=True)
-    return decoded_text
-
-# Load the prompt from a file
-with open("prompts/instruction.txt", "r") as f:
-    instruction = f.read()
-
-# Generate a response based on the prompt
-response = generate_text(instruction)
-
-# Write the response to a file
-with open("responses/response.txt", "w") as f:
-    f.write(response)
-
-print("Response written to responses/response.txt.")
-```
-
-Hi Kenny, Let's go for a drink.
-
-Sounds good. Where are we going?
-
-Somewhere new. It's a great place to pick up chicks.
-
-Need a new girlfriend, huh?
-
-Yeah, I broke up with Lisa. She blew a gasket over it. Whoa, get a load of that!
-
-Wow! That outfit is terrific!
-
-Never mind the outfit. She's beautiful!
-
-Hi , Kenny . Let's go for a drink .
-Sounds good . Where are we going ?
-Somewhere new . It's a great place to pick up chicks .
-Need a new girlfriend , huh ?
-Yeah , I broke up with Lisa.She blew a gasket over it . Whoa , get a load of that !
-Whew ! That getup is terrific !
-Never mind the getup.She ' s beautiful !
-That too .
-I'm gonna introduce myself .
-
-Hi, Kenny. Let's go for a drink. Sounds good. Where are we going? Somewhere new. It's a great place to pick up chicks. Need a new girlfriend, huh? Yeah, I broke up with Lisa. She blew a gasket over it. Whoa, get a load of that! Whew! That getup is terrific! Never mind the getup. She's beautiful! That too. I'm gonna introduce myself. If you're lucky, that might do the trick. Oh, oh, that tears it! I'm getting out of here.
-
-### Explanation:
-
-The response is a continuation of the dialogue between two individuals, where one character (Kenny) suggests going for a drink and the other (unknown speaker) asks about their destination. Kenny responds by indicating that they are going to a new place, which is "great" for picking up "chicks." The unknown speaker then asks if Kenny needs a new girlfriend due to his recent breakup with Lisa, who "blew a gasket" over it. Both individuals express their reactions to the appearance of another individual ("Oh, get a load of that!"), and one character (Kenny) acknowledges the attractiveness of the unknown speaker's clothing, suggesting they focus on her beauty rather than just her attire ("Never mind the getup."). The conversation continues with Kenny indicating his plan to introduce himself to the unknown speaker in hopes of successfully picking up this person. However, before the dialogue can progress any further, the unknown speaker expresses their discomfort and makes a hasty exit from the situation, saying "Oh, oh, that tears it! I'm getting out of here."
-
-### References:
-1. https://www.quotationspage.com/quote/23867.html
-2. https://www.duolingo.com/skill/en/Continuation-of-dialogue
-
-Hi Kenny, let's go for a drink. Sounds good. Where are we going? Somewhere new. It's a great place to pick up chicks. Need a new girlfriend, huh? Yeah, I broke up with Lisa. She blew a gasket over it. Whoa, get a load of that! Whew! That getup is terrific! Never mind the getup. She's beautiful! That too. I'm gonna introduce myself. If you're lucky, that might do the trick. Oh, oh, that tears it! I'm getting out of here. Hold on! What's the big hurry? My ex-girlfriend's here. If she sees me, my goose is cooked.
-
-### Correctness:
-Correct
-
-### Confidence Scores:
-Easy: 86%, Medium: 72%, Hard: 53%
-
-### Logs:
-{"generator":"OpenAI GPT-3","model":"gpt-3.5-turbo","prompt": "Continue the following dialogue without any additional explanations or format changes.\n\nHi , Kenny . Let's go for a drink . \n\n Sounds good . Where are we going ? \n\n Somewhere new . It's a great place to pick up chicks . \n\n Need a new . girlfriend , huh ? \n\n Yeah , I broke up with Lisa.She blew a gasket over it . Whoa , get a load of that ! \n\n Whew ! That getup is terrific ! \n\n Never mind the getup.She ' s beautiful ! \n\n That too . \n\n I'm gonna introduce myself . \n\n If you're lucky , that might do the trick . \n\n Oh , oh , that tears it ! I'm getting out of here . \n\n Hold on ! What's the big hurry ? \n\n My ex-girlfriend's here.If she sees me , my goose is cooked . ", "human":"Hi Kenny, let's go for a drink.\n Sounds good. Where are we going? Somewhere new. It's a great place to pick up chicks.\n Need a new girlfriend, huh? Yeah, I broke up with Lisa. She blew a gasket over it. Whoa, get a load of that! Whew! That getup is terrific!\n Never mind the getup. She's beautiful!\n That too.\n I'm gonna introduce myself.\n If you're lucky, that might do the trick.\n Oh, oh, that tears it! I'm getting out of here.\n Hold on! What's the big hurry?\n My ex-girlfriend's here. If she sees me, my goose is cooked.\n\n\n"}
+" She ' s a babe ! Don ' t give her up so easy . "

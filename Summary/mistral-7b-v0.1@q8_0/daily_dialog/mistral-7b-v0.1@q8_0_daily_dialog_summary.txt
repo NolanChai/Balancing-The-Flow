@@ -1,13 +1,13 @@
 Model: mistral-7b-v0.1@q8_0
-Dataset: daily_dialogGenerated: 378 new examples
+Dataset: daily_dialogGenerated: 607 new examples
 Skipped: 0 existing examples
-Errors: 0 failed generations
-Retries: 103 retried generations
+Errors: 313 failed generations
+Retries: 854 retried generations
 Temperature: 0.9
 Top-p: 1.0
 Max tokens: 2048
-Generation time: 1807.10 seconds
-Surprisal calculation time: 342.14 seconds
-Average surprisal: 3.6231
-Total runtime: 2149.25 seconds
-Date: 2025-04-30 16:44:27
+Generation time: 1988.44 seconds
+Surprisal calculation time: 193.15 seconds
+Average surprisal: 3.8585
+Total runtime: 2181.60 seconds
+Date: 2025-05-09 23:52:02

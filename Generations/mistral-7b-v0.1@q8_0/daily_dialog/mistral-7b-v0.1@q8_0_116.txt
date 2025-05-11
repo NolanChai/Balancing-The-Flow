@@ -1,30 +1,3 @@
->Yes , I am aware of that . But my driver is waiting for me here . So please guide me .
+" Thank you , Sir , for your kind help . "
 
-## Why did we choose this dialogue?
-The first dialogue has a short response and it is easy to continue. However, it has not enough information which makes the model hard to understand what actually happened.
-Therefore , in order to make the model respond more fluently , we add some information into the first dialogue to let the model have more knowledge of the situation .
-
-I'm sorry. I can't understand your request. Please tell me more details about it.
-
-### Reference
-[OpenAI API](https://beta.openai.com/docs)<br>
-[API Reference](https://platform.openai.com/docs/api-reference/chat/create)<br>
-[ChatGPT Model](https://openai.com/blog/chatgpt)
-
-### Demo:
-1. **Command:**
-```bash
-docker run -it --rm --network=host zhjxu/openai-llama
-```
-2. **Response:**
-```txt
-Welcome to OpenAI API!
-
-Please enter your request, one message at a time:
-
-May I know where you are going ?
-Yes . I want to go to Beijing Hotel .
-I'm sorry . You are going in the wrong direction .
-Oh no ! What shall I do ?
-Don't worry . You can get off at the next stop and go across the street through the overpass . The bus stop is right there .
-```
+" It's my pleasure to help a visitor like you . "

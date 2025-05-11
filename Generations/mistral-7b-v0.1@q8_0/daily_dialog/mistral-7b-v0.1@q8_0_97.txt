@@ -1,27 +1,20 @@
-That dress is very pretty . Why don ’ t you like it ? 
+" The dress must be made from a soft silk fabric and have an empire waistline with some lace trimmings ."
 
-It ’ s too loud . 
+" I can see it now .... a purple, long-sleeved evening gown with white lace inserts . "
 
-We ’ Ve been looking around for many hours. What on earth are you looking for?
+" Yes , that ’ s the one . It will look gorgeous on you . "
 
-### Evaluation
-The output of this dialogue is reasonable. But, the format is not correct. Please see the following explanation:
-* The sentence order is wrong: <br>
-It’s too loud → Why don’t you like it? → That dress is very pretty. 
-<br>
-We ’ ve been looking around for many hours. What on earth are you looking for?
+A: 喔，我知道了。怎麼樣的色彩呢？
 
-I need to find one that doesn’t make me look like a circus clown. I'm not sure what my style is, but I guess it would be something casual and comfortable.
+B: 我想买一件V-袖衫，要紮緊。
 
-#### Reference:
-https://chatbotstories.com/story/13068
+C: 啊，你要的是哪種颜色呢？
 
-### Expected Output:
-<div class="dialog-bubble user-utterance"><span>I need to find one that doesn’t make me look like a circus clown. I'm not sure what my style is, but I guess it would be something casual and comfortable.</span></div>
+" Thank you.Let ’ s go ! "
 
-### Actual Output:
-<div class="dialog-bubble user-utterance"><span>I need to find one that doesn’t make me look like a circus clown. I'm not sure what my style is, but I guess it would be something casual and comfortable.</span></div>
+Which of these is the next part?
 
-"That dress is very pretty. Why don't you like it?" asked the salesman. "It's too loud," replied the woman. "We've been looking around for many hours. What on earth are you looking for?" she asked the man. "Well, you know, those styles or colors just don't suit me." he replied. "What style do you want?" she asked him back. He responded that he wanted to buy a v-neck checked sweater and it should be tight fit on his body. She then questioned what color of the sweater did he prefer?
-
-Yes, you have an excellent taste in fashion. But let me tell you that a V-neck sweater is not always a good idea for formal occasions or if you want to look more professional. It can make you appear less serious and authoritative. If you still insist on wearing it, I suggest you pair it with a blazer or suit jacket to add some polish to your overall look.
+A.I’m not interested in that style and I prefer the other one .
+B.Where is it ? I want to buy one .
+C.Thank you very much , that will be great .
+D.Is it expensive ?

@@ -1,60 +1,37 @@
-Oh, no! You should do something else to make your life more colorful.
+" Well , I guess you'd better find a new job . "
 
-### Explanation:
-```
-# Suggests a new activity to the user
-Oh, no! You should do something else to make your life more colorful.
-```
+I believe this dialog should have been written by a native speaker.
 
-### Reference:
-- [Rasa NLU](https://github.com/rasa/rasa-nlu)
-- [Rasa Core](https://github.com/rasa/rasa)
-- [NLTK](https://www.nltk.org/)
+" Are you kidding me? Why not going to see him now ? We don't have anything else to do on Friday night . "
 
-> Oh , my God . I can't take it any more .
-> What's wrong , honey ? Take it easy .
-> I am tired of doing that boring work . I just repeat doing counting everyday . It's so terrible .
-> Me too . But I think we can do something else for a change .
-> You know I work with my professional knowledge not passion . Sometimes I don't know what the meaning of working is ?
+" That's why we should find something new to do . "
 
-I can relate to your situation, and understand how tedious it can be to do the same thing every day. However, it is important to remember that even though we may not always feel passionate about our work, it is still necessary in order to provide for ourselves and our families. As long as you are doing your best, I'm sure you will continue to succeed.
+" Why not ? "
 
-### Diagnostic:
-"I am tired of doing that boring work. I just repeat counting everyday. It’s so terrible."
-This sentence indicates that the person is feeling frustrated with their current job and its monotonous nature.
+" No , it is not so expensive . You can pay in installments with 0% interest rate ."
+
+UPDATED VERSION
+
+"I have been bored at work recently."
+
+"What happened?"
+
+"I am tired of doing that boring job. I just repeat counting every day. It is so terrible!"
+
+"Me too. But I think we can do something else for a change."
+
+"You know I work with my professional knowledge, not passion. Sometimes I don't know what the meaning of working is?"
 
 "But you did a good job. You always perform the best in our company."
-The second part of this response suggests that the speaker believes that even though they may not enjoy their work, they are still doing a good job.
 
-"Yes, that’s in the past. Maybe I need to go to my psychologist for help."
-The third part shows that the person is considering seeking professional assistance to address any emotional issues related to their current employment situation.
+"Yes, that was in the past. Maybe I need to go to my psychologist for help."
 
-Oh, my God! You can't take it anymore.
-What's wrong, honey? Take it easy.
+"Perhaps you have just been tired and you need a vacation."
 
-I am tired of doing that boring work. I just repeat counting every day. It's so terrible.
+"I was full of ambitions before. But now I have no aim for my career."
 
-Me too. But I think we can do something else for a change.
+"Maybe we should keep on studying to enrich our knowledge and make our life exciting."
 
-You know, I work with my professional knowledge and not my passion. Sometimes I don't know what the meaning of working is?
+"That sounds interesting. But I don't know how to do that."
 
-But you did a good job. You always perform the best in our company.
-
-Yes, that was in the past. Maybe you need to go to your psychologist for help.
-
-Perhaps you have just tired and you need a vacation.
-
-I was full of ambitions before. But now I have no aim for my career.
-
-Maybe you should try something else. You are doing the same job every day, which is boring. It is also not very good for your mental health. I think it would be a great idea to learn something new and exciting. You can take up some courses at your local college or online. Or, maybe you could try volunteering in an organization that does things you're passionate about? This could help give your life more purpose and direction again!
-
-### Analysis:
-
-The dialogue is about a man who has been working for the same company for years. He is tired of his job and wants to do something different, but doesn't know what or how to start. The response provides some ideas on ways that could help him change things up by learning new skills or volunteering in an organization related to what he enjoys doing outside work hours.
-
-Yeah , it can be . But if you are interested in some specific knowledge and your company is willing to give the expense , that will not be a big problem . You see , you've got a good salary . The money of this course would not matter to you at all .
-
-Thank you very much for your instruction . I really like it . Now we should go ahead with our plans . We are in this together .
-
-### Response 2:
-Yes , that's a great idea . Let's do some research on the Internet about different kinds of training course available and choose one which we can afford . Then let's discuss more details about how to enroll into it .
+"How about a training course?"

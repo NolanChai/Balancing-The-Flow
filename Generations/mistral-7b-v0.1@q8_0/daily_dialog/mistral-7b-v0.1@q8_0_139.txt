@@ -1,67 +1,18 @@
-I bought some food for dinner .
+### Answer & Explanation
+
+Help me write the next turn in this dialog with no explanation or format changes. 
+Sarah , what did you do today ? "
+" I went shopping . "
+" Did you buy anything ? "
+" Yes , I bought a few things . "
+" What did you buy ? "
+The answer to the question would be:
+"I bought groceries."
+"I purchased clothes and shoes."
+"I shopped for an engagement ring."
 
 
-## How to run this application :
 
-##### Using docker-compose (preferred) :
-1. Download or clone the repository `git clone https://github.com/pierremaffre/ChatBot.git`
-2. Create and activate a python virtual environment with required packages (pytorch, nltk, spacy, ...) :  `conda create -n chatbot-env python=3.7 && conda activate chatbot-env` or with pip `pip install -r requirements.txt`
-3. Copy the .env template into a new .env file and fill it with your credentials (You can find an example of this file in .env.example)
-4. Run docker compose to create containers : `docker-compose up --build -d`
-5. Execute a test run by calling the api from the /run/api folder with curl : `curl -X POST -H 'Content-Type:application/json' http://0.0.0.0:8000/dialogue/execute --data @test.json`
-6. Profit !
+" No , not really ."
 
-
-##### Using Dockerfiles and docker-compose (less prefered) :
-1. Download or clone the repository `git clone https://github.com/pierremaffre/ChatBot.git`
-2. Create a python virtual environment with required packages (pytorch, nltk, spacy, ...) :  `conda create -n chatbot-env python=3.7 && conda activate chatbot-env` or with pip `pip install -r requirements.txt`
-3. Copy the .env template into a new .env file and fill it with your credentials (You can find an example of this file in .env.example)
-4. Run docker compose to create containers : `docker-compose up --build -d`
-5. Execute a test run by calling the api from the /run/api folder with curl : `curl -X POST -H 'Content-Type:application/json' http://0.0.0.0:8000/dialogue/execute --data @test.json`
-6. Profit !
-
-Sarah , what did you do today ?
-I went shopping .
-Did you buy anything?
-Yes, I bought a few things.
-What did you buy?
-I bought a new shirt , a pair of pants and some shoes.
-Thanks for answering my questions!
-Have a good day! 
-
-### Reference:
-https://www.reddit.com/r/promptsandresponses/comments/sjn42q/instruction_continue_the_following_dialogue_without/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-
-```
-Yes, I think it looks good on you. Where did you find it?
-```
-
-### Explanation:
-1. The first thing to note is that the AI has not been provided with any information about what kind of coat Sarah bought or where she bought it from. However, it can use common sense and its knowledge of clothing and shopping to respond appropriately. In this case, the AI has assumed that Sarah bought a new coat and is asking for more details.
-2. The AI's response is polite and friendly, indicating that it understands what Sarah said and is interested in learning more about her purchase. It uses "Yes" to indicate agreement with Sarah's statement, followed by a question to gather more information.
-3. The AI's use of the word "pretty" shows that it is able to make basic judgments about the appearance of objects, which can be useful in understanding customer preferences and making product recommendations.
-
-It was about $150. 
-
-I think that's kind of steep for a coat, don't you? 
-
-Yeah, I agree. But they were having a sale, so I got it for $130. That was still expensive, but not too bad. 
-
-That sounds good to me. What else did you buy? 
-
-I bought some new shoes and a few shirts. 
-
-Wow! You really went all out today. 
-
-Yeah, I guess I did. 
-
-Did you have fun? 
-
-Yes! It was great! I love shopping at the mall. 
-
-Me too!
-
-I went shopping today and bought a few things. I bought this coat, which you think is very pretty. It was on sale for just $20!
-
-### Output:
-I went shopping today and bought a few things. I bought this coat, which you think is very pretty. It was on sale for just $20!
+" Yes , I know . But I wanted to buy this sweater , too , so I had to save money . "
