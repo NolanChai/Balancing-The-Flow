@@ -1,0 +1,15 @@
+This formula uses nested IF functions to extract the first three words in a string. The innermost IF statement checks whether there is at least one space character in the text. If so, it extracts the characters up to but not including the first space using LEFT function. The next IF statement then checks whether there is at least two spaces and if so, it extracts the characters up to but not including the second space. Finally, the outermost IF statement checks whether there are at least three spaces and if so, it extracts the characters up to but not including the third space using LEFT function.
+
+Assuming you have the data as per below:
+
+To achieve this using IF and FIND we will use the formula below. The result should then be displayed on the same row of the source data. This will only work for columns to the right of the column where your IF function is placed.
+
+=IF(LEN(A3) > 6, A3, “”)
+
+So if the word count of column A cell 3 is less than or equal to 6 words then it will display nothing.
+
+In the case of the first example you could use a custom formula in your data validation. If it is necessary for every cell, you could create an array formula and select the cells in one go using Data Validation’s Allow: Custom Formula option. The custom formula would be:
+=NOT(ISBLANK(A1:A4))*”N/A”
+If there are multiple options that each need their own rule, I would suggest that a Data Validation list is the way to go (see below for how to set this up). For example, if you have two columns, one with N and another with A, you could use Data Validation’s Allow: List option, and in the Source box, type in:
+N,A
+The reason why I suggest this is that it will save a lot of time setting up your data validation as well as being much easier to maintain. If the source list ever changes (i.e. you add another value), you only need to change it once in the Data Validation dialog box, rather than having to update every cell if you had used custom formulas.

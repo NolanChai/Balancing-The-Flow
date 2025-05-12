@@ -1,0 +1,38 @@
+# Part 1: Iterative vs Recursive Approach for Computing Binomial Coefficients
+In this section, we will compare the performance of an iterative and a recursive approach for computing binomial coefficients using C++. We will use different input sizes to test both approaches and compare their execution time. The code for our iterative and recursive approaches is shown below:
+## Iterative Approach:
+```cpp
+int binomialCoeff(int n, int k) {
+    if (k > n || k < 0) return 0;
+    int result = 1;
+    for (int i = 0; i < k; ++i) {
+        result *= (n - i);
+        result /= (i + 1);
+    }
+    return result;
+}
+```
+## Recursive Approach:
+```cpp
+int binomialCoeff(int n, int k) {
+    if (k > n || k < 0) return 0;
+    if (k == 0) return 1;
+    else return binomialCoeff(n-1, k-1) + binomialCoeff(n-1, k);
+}
+```
+
+Task 2.1: Using the iterative approach used in Lab 1, compute the binomial coefficients for n = 0, 1, …, 10. Record the execution time for each value of n. Plot a graph showing the relationship between n and execution time.
+
+Task 2.2: Using the recursive approach used in Lab 2, compute the binomial coefficients for n = 0, 1, …, 10. Record the execution time for each value of n. Plot a graph showing the relationship between n and execution time.
+
+If you are recording a voiceover, your goal should always be to make the narration sound as natural and effortless as possible.  With a little planning and attention to detail, this can easily be achieved.  In this video I will give you some tips and techniques to help you achieve that.
+
+When working with voice over artists it’s very common to have a few takes of the script recorded, edited and then submitted for approval. This is because it allows both parties (the voice artist and producer) the opportunity to ensure that all of the lines are delivered to their satisfaction.  In my experience most actors will record at least two or three takes of each line in order to give you plenty of choice when editing your recording.
+
+So, what tips can I give you to improve the sound quality of your voice overs? Let’s take a look:
+
+- Ensure that you have a good quality microphone setup.  This will make all the difference!
+- Speak slowly and clearly – pronunciation is very important.
+- Use correct inflection in your tone and emphasis on certain words.
+- Pay attention to your volume levels – do not shout, whisper or sound monotone.
+- Eliminate any background noise that might distract from the audio track.

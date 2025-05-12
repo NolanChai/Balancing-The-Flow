@@ -1,0 +1,25 @@
+What is Artificial Intelligence?
+Artificial Intelligence (AI) is a branch of computer science that aims to create machines that can perform tasks that would require human intelligence, such as reasoning, learning, and decision-making. AI technology has been increasingly used in various industries, from healthcare to finance, manufacturing, and even marketing.
+
+## Summary
+
+This is how to enable debug logs on Windows in the easiest way possible. It assumes you want a very complete log file with all your plugins, servers and client activity. If you want to be able to see the details of what's going on in Minecraft, this is a good starting point for figuring out where a bug may be coming from.
+
+## Setting Up Logging
+
+The first thing you need to do is create a folder for the log file. This can be anywhere that's easy to get to. I use my desktop but it doesn't matter, wherever you choose to put the file is fine. Create a new folder called "minecraft-logs". Then open Minecraft and start the server as normal.
+
+Now you need to tell the server where your log files will go. To do this, edit the server properties file at minecraft/bin/minecraft_server.properties using any text editor (Notepad++ is good for Windows) and add the following lines:
+
+```
+logging-folder=C:\Users\username\Desktop\Minecraft-logs
+server-logger-class=net.minecraft.server.logging.Log4jLogger
+```
+
+Replace "username" with your actual user name. Save the file and close it. Restart the server and you will now get a very detailed log of what's going on. You can open this file at any time to see what has happened in the last 2 minutes since the server was started. If you want to keep an eye on the logs, you can watch them with Notepad++ as they update live.
+
+## Viewing Your Log Files
+
+To view your log files, open up Notepad++ and select File -> Open from the main menu. Then browse to your Minecraft-logs folder that we created earlier and open any of the log files. You can also use this method to watch the live logging if you leave Notepad++ open and running while playing.
+
+If you want to view a specific period of time in the log file, you can do so by selecting View -> Follow cursor from the main menu and then scrolling through the text. This will highlight any new entries that are added while you're watching them.

@@ -1,0 +1,15 @@
+## Answer 1, Authority 100%
+
+I am facing the same issue in Ubuntu.
+
+Install ninja-build using command below
+
+```
+sudo apt-get install ninja-build
+```
+
+After that reinstall torch. Install cuda if you don’t have already installed. I have used version 10.2.
+
+```
+conda install pytorch==1.7.0 torchvision==0.8.1 torchaudio==0.7.2 cudatoolkit=10.2 -c pytorch -f https://download.pytorch.org/whl/cu102/torch_stable.html
+```

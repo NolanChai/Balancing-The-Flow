@@ -1,0 +1,70 @@
+==========================================
+
+1. 配置
+----------
+
+```bash
+vim ~/.ssh/config
+```
+
+增加如下配置:
+
+```bash
+Host *
+    StrictHostKeyChecking no
+```
+
+2. 清理known_hosts文件
+-------------------------
+
+使用命令：
+```bash
+rm -rf ~/.ssh/knows_hosts*
+```
+
+可能需要在命令后面添加参数 sudo。
+
+作者：jy175583902 时间：2020-12-06 13:36:33 阅读数：次
+
+windows如何ssh客户端清理knows_hosts
+
+一般在开发的过程中，我们会经常用到ssh来进行远程登录。每次都需要输入密码会很麻烦。我们可以通过知道ssh客户端保存的known_hosts文件来解决这个问题，将对应的ip地址及公钥内容添加到此文件中后，就不需要再次输入密码了。
+
+windows如何删除已经登录过的ip？
+
+在windows系统下，ssh客户端默认存放知道主机的信息的文件是“C:\Users\用户名\.ssh\known_hosts”。
+
+打开此文件后，你可以看到如下内容：
+
+# This is the known hosts file for ssh
+
+# Line order and content are not guaranteed
+
+# Hostname Port Number Usernames 公钥内容
+
+比如：
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDvYLh9ZXqMwT85IuFkd6R47KyfEj3H97J2W91n/mVxV3+OV002J89JtWGiAiP97JxYpXjzfzx5rQDn7YJuBd6CbBkNqE+LGvnRcKoIa6X40UrHX/Mk4JXsV2g55lWzVt3wLn81z+S6Ox4FQjzJhgWxXg7fzQwZyLJGdNpKmwV9DxvP7B/E5Rg5iLpUqZ0Y2u30bO9HoTJr8cXSJ46+MvhW73jKk22J3y2112xJgq+KI5GsV1nAwNzf3gvBw/lCeYuBmBZxWvWbqiWXZOoAaWU+Mh9Kx56cWjw== 803@ip
+
+在此文件中，可以看到保存了知道的主机和其对应的公钥。如果你想要删除某个主机，那么就可以按照下面步骤来操作：
+
+1、打开known_hosts文件并找到需要删除的主机；
+
+2、选中该主机后按ctrl+x进行删除操作。
+
+```
+#! /bin/bash
+
+#!/bin/bash
+
+function ssh_remove_known_host() {
+    echo "Removing the known host key for $1"
+    echo "Hostname: $1"
+    ssh-keygen -R "$1"
+}
+
+HOSTS="localhost 192.168.0.1 172.254.143.224 192.168.0.2 10.100.190.221"
+for host in $HOSTS; do
+    ssh_remove_known_host "$host"
+done
+```

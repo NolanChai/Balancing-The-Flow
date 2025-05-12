@@ -1,0 +1,28 @@
+(C)
+Explanation: A randomized block design is an experimental design that controls for extraneous variation by assigning treatments to blocks of subjects whose characteristics are similar. In a randomized block design, each subject receives a single treatment. The control group (if there is one) is treated similarly. Treatments are randomly assigned to the blocks of subjects in the experiment.
+
+Solution:-
+Given, The die used in a certain board game has eight faces, of which 3 are red, 3 are yellow, and 2 are blue. Each face is equally likely to land face up when the die is tossed.
+
+The probability of getting red or yellow when a die is tossed = $\frac{6}{8}$
+
+The probability of getting blue when a die is tossed = $\frac{2}{8}=\frac{1}{4}$
+
+Now, we have to find the probability that a player will toss the die at least 2 times before blue lands faceup.
+
+P(tossing the die at least 2 times) = P(getting blue in first toss) + P(getting blue in second toss) + P(getting blue in third toss) + P(getting blue in fourth toss)
+
+P(tossing the die at least 2 times) = $\frac{1}{4}+\frac{1}{4}*\left(\frac{3}{4}\right)+\frac{1}{4}*\left(\frac{3}{4}\right)^2+\frac{1}{4}*\left(\frac{3}{4}\right)^3$
+P(tossing the die at least 2 times) = $\frac{1}{4}+\frac{1}{4}*0.75+\frac{1}{4}*(0.75)^2+\frac{1}{4}*(0.75)^3$
+P(tossing the die at least 2 times) = $0.25+0.25*0.75+0.25*(0.75)^2+0.25*(0.75)^3$
+P(tossing the die at least 2 times) = $0.25+0.1875+0.109375+0.046875$
+P(tossing the die at least 2 times) = $0.58375$
+
+Let the following variables represent the height, weight, and gender of 150 adults. The data are given below.
+
+height (in.) = [82,96,70,88,63,48,110,100,128,80,99,108,75,87,86,101, 112,84,123,87,100,125,70,67,59,79,90,111,106,128]
+weight (lb) = [163,126,179,145,156,113,183,203,200,190,148,189, 139,167,147,141,172,161,176,155,157,184,125,112,101, 115,148,124,162]
+gender = {F, M, F, F, F, M, F, F, F, M, M, F, M, M, M, M}
+
+a) Use a 90% confidence interval to estimate the mean height of adult males. Show all your work.
+b) Use a 95% confidence interval to estimate the difference between the mean heights of adult females and adult males. Show all your work.

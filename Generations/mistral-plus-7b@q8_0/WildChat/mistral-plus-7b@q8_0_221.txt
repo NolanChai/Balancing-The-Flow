@@ -1,0 +1,9 @@
+You can use an Angular component for that purpose. The code will be as follows:
+
+```
+<div>
+    <button [disabled]="isFavorite" (click)="toggleFavorite()">{{ isFavorite ? 'Unlike' : 'Like' }}</button>
+</div>
+```
+
+Here, `isFavorite` is a property of the component that indicates whether the product is marked as favorite or not. The toggleFavorite method toggles the value of this property when the button is clicked.

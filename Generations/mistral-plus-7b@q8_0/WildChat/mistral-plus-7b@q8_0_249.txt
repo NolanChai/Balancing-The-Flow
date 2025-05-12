@@ -1,0 +1,86 @@
+```java
+package com.demo.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestInstagram {
+
+	private static WebDriver driver;
+
+	public static void main(String[] args) throws Exception{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Gamani\\Desktop\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.instagram.com/");
+		WebElement element = driver.findElement(By.cssSelector("p[normalize-space()='Social Media Growth Hacker']"));
+
+	}
+
+}
+```
+
+# Social Media Growth Hacker
+
+Grow your social media following from scratch to thousands of followers by creating engaging content and marketing it effectively. With this course, you'll learn the fundamentals of social media marketing, including how to choose the right platforms for your business, create a social media strategy, and develop compelling content that will engage your audience.
+You'll also explore tools and techniques for growing your following on popular social networks like Facebook, Twitter, and Instagram, and you'll learn best practices for managing your accounts and responding to comments and messages. Whether you're starting from scratch or looking to improve your existing social media presence, this course will help you develop the skills and knowledge you need to grow your social media following effectively.
+
+# How to Use LinkedIn for B2B Lead Generation
+
+Linkedin is the most popular professional social network with more than 570 million users worldwide. If you use it properly, Linkedin can be a powerful tool for lead generation in your business. Here are some tips on how to use Linkedin for B2B lead generation:
+
+## Optimize Your Profile
+
+Your profile is your first chance to make a good impression. Make sure that it is complete and up-to-date, using keywords that describe your skills and experience. A well-optimized profile will help you show up in more search results and attract potential leads. Include a professional headshot, a summary of your skills and experience, and relevant work samples.
+
+## Networking
+
+LinkedIn is a great platform for networking with other professionals in your industry. Take advantage of the opportunity to connect with potential clients or partners. Send connection requests and join groups related to your industry to grow your network. Engage with others by commenting on their posts, sharing their content, and starting conversations.
+
+## Publish Content
+
+Posting original content on LinkedIn is a great way to establish yourself as an expert in your field and attract potential leads. Share blog posts, articles, case studies, or any other type of content that can help demonstrate your expertise and value. Take advantage of the publishing tools available on the platform to easily share content with your network.
+
+In this post we will learn about how to find the XPath of an element using Chrome DevTools in Selenium WebDriver. To understand this, let’s take a simple example where there is a web page that contains an image as shown below:
+
+To get the XPath of this image we can right-click on it and select Inspect Element. This will open up the element in the Chrome DevTools and its HTML source code should look something like this:
+
+```
+<img src="https://example.com/image.jpg" alt="Social Media Growth Hacker" />
+```
+
+From the above HTML we can see that the image is an `<img>` tag with an attribute called `src` which contains the URL of the image. To get the XPath for this element, first select the <img> tag in the Elements tab of the DevTools. Then right-click on the selected tag and choose Copy > Copy XPath from the context menu. This will copy the XPath of the `<img>` tag to your clipboard.
+
+The XPath for this image is //img[@src=’https://example.com/image.jpg’] which can be used in Selenium WebDriver code to find and interact with that element.
+
+# Overview
+
+The `Instinct` component library is a collection of React components for creating responsive and accessible user interfaces. The library aims to provide developers with a set of well-designed, easy-to-use, and extensible components that can be used to build complex applications quickly and efficiently. It includes a wide range of common UI elements such as buttons, forms, cards, tables, and more. The Instinct components are built using modern web standards and best practices for accessibility and performance.
+
+To make HTTP requests with Python, we use the `requests` module. Let’s create a simple `POST` request using that module. First, import the module:
+
+```python
+import requests
+```
+
+Now, create a new variable called `data`, which will contain the data to be sent in our POST request. We can use a dictionary for this purpose:
+
+```python
+data = {
+    "name": "John",
+    "age": 25,
+}
+```
+
+Next, create a new variable called `url`, which will contain the URL of the API endpoint we want to make our POST request to. In this example, we’ll use a simple fictional API:
+
+```python
+url = "https://example.com/api/users"
+```
+
+Finally, make the POST request using the `requests` library:
+
+```python
+response = requests.post(url, data=data)
+```

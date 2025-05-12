@@ -1,0 +1,42 @@
+Last edited:
+
+Hi, please follow the below steps to solve this issue:
+
+1. Go to your profile settings -> API management
+2. Create a new API key and generate a signature using the following parameters:
+- Signature algorithm - HmacSha512
+- Time (in seconds) - 604800
+- Key ID - 2792319679583727518
+- Secret key - Your secret key from MEXC exchange
+- IP address - Your IP address
+- Passphrase - empty
+
+I had the same problem and found a solution.
+
+First, make sure you have your lookback enabled. From your server console:
+
+```
+# enable lookback
+
+echo 1 > /proc/sys/net/ipv4/tcp_rmem
+
+echo 4096 > /proc/sys/net/core/rmem_max
+
+echo 87380 > /proc/sys/net/core/rmem_default
+```
+
+Second, add the following line to `/etc/sysctl.conf`, reboot, and verify with:
+
+```
+# tcp_wmem = 2097152 87380 4194304
+
+net.core.rmem_max = 87380
+```
+
+#1:
+
+My 1966 SS427 was parked for over a year and is now ready to be restored. I have all the parts that are necessary to make it work again. However, the original carburetor has been rebuilt and works. Should I install it or use one of the new Holleys?
+
+#2:
+
+I would say put in a new 750 cfm Holley with an electric fuel pump if your car is a street driver and not a race car. The old carburetor might have some restrictions, which would cause poor performance. Newer technology will give you better results. Also, the electric pump will provide more reliable fuel pressure.

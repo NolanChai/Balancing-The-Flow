@@ -1,0 +1,13 @@
+sx, sy, sz, dx, dy, dz, w, h, l) {
+	let centerX = Math.round((sx + dx) / 2);
+	let centerY = Math.round((sy + dy) / 2);
+	let centerZ = Math.round((sz + dz) / 2);
+
+	for (let x = sx; x < dx; x++) {
+		for (let y = sy; y < dy; y++) {
+			for (let z = sz; z < dz; z++) {
+				world.setBlock(centerX - x, centerY + y, centerZ + z, world.getBlock(x, y, z));
+			}
+		}
+	}
+}

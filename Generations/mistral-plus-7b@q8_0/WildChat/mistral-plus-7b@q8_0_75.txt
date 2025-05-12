@@ -1,0 +1,36 @@
+Code: Select all
+    ```#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#define BUFFER_SIZE 512
+char* smtpServer = "smtp.myservername.com"; //This is a fictional server to use for testing purposes, not the real server name
+int portNumber = 25; //The default port number for SMTP servers
+char* from = "From: \"[MY EMAIL HERE]\"";\n
+char* to = "To: [EMAIL ADDRESS TO SEND TO]"\n;
+char* subject = "[Subject of your email]";\n
+char message[BUFFER_SIZE]; //The contents of the email message
+//Make the connection to the SMTP server
+socket(smtpServer, portNumber);
+//Send the HELO command to the SMTP server
+write(s, "HELO", 4);
+//Send the MAIL FROM command to the SMTP server with the from address
+write(s, from, strlen(from));
+//Send the RCPT TO command to the SMTP server with the recipient's email address
+write(s, to, strlen(to));
+//Send the DATA command to the SMTP server to begin sending the message data
+write(s, "DATA", 4);
+//Send the subject line of the email
+write(s, subject, strlen(subject));
+//Send the contents of the email message
+write(s, message, strlen(message));
+//End the email message by sending a . on its own line
+write(s, ".\n", 2);
+//Send the QUIT command to the SMTP server to close the connection```
+
+> I don’t think so. He would have had a few opportunities in the last few seasons (notably against West Ham and Southampton) and he took his chances very well. If you think about it, it could be said that he only got into the team due to injuries.
+
+No, he was 4th/5th choice for the better part of two years, just like Clyne was. We’ve seen what can happen when a manager doesn’t trust a player or rate them highly enough – they don’t get game time. For all of Shaw’s talent, if Mourinho didn’t trust him he would have been farmed out on loan ages ago and never played for us again. He has clearly had to work really hard to win over the manager, and I think that bodes very well for his future.
+
+If the sender address is forged, then it is not possible to tell what the actual IP of the sender was. Spoofing a domain or an e-mail address is actually quite easy and is done by modifying the header information of an e-mail message. Most mail server software doesn’t check to see if the sender address matches the source IP address when an e-mail message is received.
+
+Most companies who use spoofed e-mails are trying to trick the recipient into performing a desired action, such as opening an attachment or clicking on a link. Often, these e-mail messages contain malware, which is why they are so dangerous.

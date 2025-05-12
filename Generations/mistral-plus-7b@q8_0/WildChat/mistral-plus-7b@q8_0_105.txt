@@ -1,0 +1,47 @@
+[STDOUT]Using Logstash 8.3.0 for darwin on x86_64 (bundled OpenJDK Runtime 1.8.0_202-release)
+[ERROR ] Exiting due to error: Could not determine Java version using method 'exec'.
+        Could not execute command ['java', '-version'] in directory '/Users/xiaodong/.rvm/gems/ruby-3.0.1/bin': No such file or directory - java (Errno::ENOENT)
+        Execution aborted due to runtime error: Could not determine Java version using method 'exec'.
+        Could not execute command ['java', '-version'] in directory '/Users/xiaodong/.rvm/gems/ruby-3.0.1/bin': No such file or directory - java (Errno::ENOENT)
+[ERROR ] Please see /tmp/logstash-20210805-49737-wv6b7e for details
+
+## HttpContext.Connection.RemoteIpAddress获取不到真实的Ip地址
+
+### 1.问题描述:
+
+- HttpContext.Connection.RemoteIpAddress获取不到真实的Ip地址
+- 在使用net core2.2+中，通过HttpContext.Connection.RemoteIpAddress来获取客户端的IP时发现始终是127.0.0.1,其他ip都取不到
+- 同时检查了X-Forwarded-For、X-Real-Ip和X-Forwarded-For来发现也没有值。
+- 甚至通过获取IP地址后反解析为域名，也只能获取本地的服务器的域名而不是客户端的域名
+
+### 2.问题分析:
+
+- HttpContext.Connection.RemoteIpAddress来自IHostEnvironment.Connection,这个类继承了IDictionary<string, string>，而且默认只包含一个RemoteAddr
+- 如果我们在net core配置文件中添加如下配置，即可将HttpContext.Connection.RemoteIpAddress获取到客户端真实的IP地址。
+
+```
+"logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "System": "Information",
+      "Microsoft": "Information"
+    },
+    "AllowServerFarmScoping": true
+  }
+```
+
+## Elasticsearch报错：received plaintext http traffic on an https channel, closing connection
+
+1. 什么是Elasticsearch的SSL设置
+2. SSL设置中的各个部分解释
+3. Elasticsearch如何配置SSL设置
+4. 如果出现received plaintext http traffic on an https channel, closing connection错误，该怎么办
+
+## 什么是Elasticsearch的SSL设置
+
+Elasticsearch的SSL设置包括以下几个部分：
+
+- Certificate Authority（CA）证书：用于验证客户端或服务器身份的数字证书。在SSL/TLS连接建立时，客户端和服务器都会使用CA证书进行身份验证。
+- 私钥：用于加密和解密数据，并且与公钥配对使用。
+- 公钥：用于对发送到Elasticsearch的请求进行加密。客户端需要提供他们的私钥和公钥以便与Elasticsearch建立SSL/TLS连接。
+- Truststore：包含服务器的CA证书，这些证书被认为是可信任的，客户端将使用这些证书来验证服务器身份。
