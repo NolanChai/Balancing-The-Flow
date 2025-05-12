@@ -1,0 +1,18 @@
+To find the time rate of change of the total resistance, we need to take the derivative of the expression for R(x, y, z) with respect to time t:
+
+R'(t) = dR(x, y, z)/dt
+
+Substituting x = 100t, y = 200t, and z = 300 into the formula for R(x, y, z), we get:
+
+R(100t, 200t, 300) = (100t * 200t * 300 / (200t + 300 + 100t))
+
+Taking the derivative of this expression with respect to t, we get:
+
+R'(t) = d/dt(100t * 200t * 300 / (200t + 300 + 100t))
+       = 4000t^2(300 - 100t)/((100t)^2 + 600 + 300t)
+
+Now we can substitute x = 100t, y = 200t, and z = 300 into the formula for R'(x, y, z):
+
+R'(100t, 200t, 300) = 4000t^2(300 - 100t)/((100t)^2 + 600 + 300t)
+
+So the time rate of change of the total resistance at this time is R'(100t, 200t, 300).

@@ -1,0 +1,47 @@
+本文主要介绍如何解决Tensorflow脚手架编译出错"RuntimeError: Ninja is required to load C++ extensions",下载可以不用加载ninja和cmake。但是使用的时候就要加载了。所有下载到指定路径，并且放在torch目录下面：
+utils/utils.so
+tensorflow-2.4.0-cp36-abi3-linux_x86_64.whl 
+tensorflow-2.4.1-cp36-abi3-linux_x86_64.whl 
+
+
+# Installing TensorFlow on Ubuntu 18.04 (with NVIDIA GPU)
+
+## Prerequisites
+
+* Ubuntu 18.04
+* Python version >=3.5, pip >= 20.0.2, and CUDA toolkit > 10.1
+* TensorFlow 1.13.1 (the latest stable release at time of writing)
+* NVIDIA GPU with Cuda enabled (for running the [Tensorflow model](https://github.com/davidsandberg/coco_style))
+
+## Installing the TensorFlow packages for Python 3.5 and above
+
+The easiest way to install TensorFlow is through pip, using the command:
+```bash
+pip install --upgrade tensorflow==1.13.1
+```
+
+To use a conda environment, you can run `conda create -n tf_p36` (which creates a new environment with Python 3.6 and TensorFlow) or
+you can copy the [tensorflow-2.4.0-cp36-abi3-linux_x86_64.whl](https://www.tensorflow.org/install/source#gpu) or
+[tensorflow-2.4.1-cp36-abi3-linux_x86_64.whl](https://www.tensorflow.org/install/source#gpu) to your `anaconda3` directory, then
+activate the environment and install tensorflow:
+```bash
+conda activate tf_p36
+conda install -c conda-forge tensorboard2=1.7.0
+pip install --upgrade tensorflow==1.13.1
+```
+
+The default `tf_p36` environment also comes with the TensorFlow package for CUDA (which we will be using). However, if you
+would like to install a new environment with just the TensorFlow package for CPU, run:
+```bash
+conda env create -f cpu-tensorflow.yml
+```
+
+You can then activate this environment and use it by running `conda activate cpufp36`, after which pip will upgrade
+TensorFlow to the latest version available (which is what we'll be doing in later tutorials).
+
+## Installing CUDA on Ubuntu 18.04
+
+The easiest way to install Cuda is by following this [guide](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#system-package-managers)
+to install the NVIDIA driver package. You will likely need to add a new repository to your apt sources (in my case, it was `ppa:graphics-drivers/ppa`).
+
+Another way of installing Cuda is by using [nvidia-docker](https://github.com/NVIDIA/nvidia-docker), which works similarly to docker in that you run a Docker container with the appropriate Nvidia drivers pre-installed and pre-configured to use your GPU. This guide is useful if you wish to create new containers, but it's not the easiest way of installing Cuda for a single machine running TensorFlow.

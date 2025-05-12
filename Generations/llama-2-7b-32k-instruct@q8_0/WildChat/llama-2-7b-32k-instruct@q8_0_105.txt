@@ -1,0 +1,42 @@
+1. Logstash configuration file not found: The given path is invalid or the Logstash configuration file does not exist.
+2. No config files found in path : The specified path is empty, and no Logstash configuration files can be found there.
+3. Logstash 8.x version: It's a syntax error as there is a space after "version" in the command.
+4. Logstash configuration file not found in path : The given path does not exist or is invalid, and no Logstash configuration files can be found there.
+5. No config files found in path : The specified path is empty, and no Logstash configuration files can be found there.
+6. Logstash version: It's a syntax error as "version" is not followed by a space.
+7. Logstash configuration file not found in path : The given path does not exist or is invalid, and no Logstash configuration files can be found there.
+8. No config files found in path : The specified path is empty, and no Logstash configuration files can be found there.
+9. Logstash version: It's a syntax error as "version" is not followed by a space.
+10. Logstash configuration file not found in path : The given path does not exist or is invalid, and no Logstash configuration files can be found there.
+
+You should check the provided path and make sure it is correct, and if the Logstash configuration file exists at that location. You can also try running the command again without the space after "version" to see if that resolves the issue.
+
+HTTPContext.Connection.RemoteIpAddress 属性是用于获取客户端请求的 IP 地址。但是在 ASP.NET Core Web 应用程序中，由于各种原因，可能会出现不能正确获取到真实的 IP 地址的情况。
+
+以下是一些可能导致不能正确获取 true 的原因：
+
+1. **代理服务器**：客户端请求通过代理服务器访问 Web 应用程序，而代理服务器可能会修改或屏蔽 IP 地址。
+2. **网络配置**：网络配置问题可能导致客户端请求的 IP 地址不正确。
+3. **拒绝服务**：客户端请求被服务器拒绝，导致 IP 地址不正确。
+4. **防火墙**：网站配置的防火墙可能会限制或拒绝客户端请求，从而导致 IP 地址不正确。
+5. **代理服务器配置**：代理服务器的配置可能会影响 IP 地址的获取。
+6. **网络拒绝**：客户端请求被网络中断或拒绝，导致 IP 地址不正确。
+7. **数据库配置**：数据库配置问题可能导致 IP 地址不正确。
+8. **其他原因**：具体的情况还是需要根据情况进行调试和定位。
+
+如果你想获取客户端请求的真实 IP 地址，可以考虑使用其他方法：
+
+1. **HttpContext.Request.GetRemoteIpAddress**：这个属性可以返回客户端请求的 IP 地址，但是在 ASP.NET Core Web 应用程序中，由于各种原因，可能会出现不能正确获取到真实的 IP 地址的情况。
+2. **HttpContext.Request.RemoteIpAddress**：这个属性也可以返回客户端请求的 IP 地址，但是在 ASP.NET Core Web 应用程序中，由于各种原因，可能会出现不能正确获取到真实的 IP 地址的情况。
+3. **HttpContext.Request.Headers["X-Real-Ip"]**：这个属性可以返回客户端请求的真实 IP 地址，但是在 ASP.NET Core Web 应用程序中，由于各种原因，可能会出现不能正确获取到真实的 IP 地址的情况。
+4. **HttpContext.Request.Headers["X-Forwarded-For"]**：这个属性可以返回客户端请求的真实 IP 地址，但是在 ASP.NET Core Web 应用程序中，由于各种原因，可能会出现不能正确获取到真实的 IP 地址的情况。
+5. **HttpContext.Connection.RemoteIpAddress**：这个属性可以返回客户端请求的 IP 地址，但是在 ASP.NET Core Web 应用程序中，由于各种原因，可能会出现不能正确获取到真实的 IP 地址的情况。
+6. **HttpContext.Request.UserHostAddress**：这个属性可以返回客户端请求的主机名和 IP 地址，但是在 ASP.NET Core Web 应用程序中，由于各种原因，
+
+解释：这个错误表示，Elasticsearch收到的是非加密数据（plaintext），而不是https协议下的加密数据（encrypted）。这可能是由于某种原因导致的，例如网络问题、配置错误等。
+
+为了解决这个错误，可以检查Elasticsearch的配置文件以确保https协议是正确的，并且Elasticsearch服务器上的网络连接是否不丢包。如果严重的问题，可能需要检查和修复Elasticsearch服务器本身的问题。
+
+另外，也可以通过使用一些工具来检查网络连接，例如ping命令或者 tcpdump 工具等。这样能够确保Elasticsearch服务器的网络连接是否正常，以及数据是否在传输时被丢包。
+
+总之，这个错误表示Elasticsearch服务器收到非加密数据，这可能会导致数据的安全性受到影响，因此应该在早期修复这个问题。

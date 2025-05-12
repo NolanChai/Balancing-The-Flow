@@ -1,0 +1,12 @@
+This JavaScript code defines a variety of functions for creating different types of blocks and structures in Minecraft-like games. Some of the functions include:
+
+* hcyl(bottom, height, radius, id): This function creates a cylindrical tower block with a bottom, height, radius, and an ID. It does this by iterating over each pixel within the tower's bounds and setting the block to the specified ID if it falls within the tower's radius.
+* cyl(bottom, height, radius, id): This function is similar to hcyl, but without the height parameter. It creates a horizontal cylindrical block with a bottom, radius, and an ID.
+* cube(bottom, height, radius, id): This function creates a cube block with a bottom, height, and an ID.
+* sphereoid(w, h, d, id): This function creates a sphereoid block with a width, height, depth, and an ID. It does this by iterating over each pixel within the sphereoid's bounds and setting the block to the specified ID if it falls within the sphereoid's radius.
+* asphereoid(w, h, d, id): This function is similar to sphereoid, but instead of creating a solid sphereoid, it creates an asteroid-shaped structure by iterating over each pixel within the bounding box and setting the block to the specified ID if it falls within the sphereoid's radius.
+* line(x1, y1, z1, x2, y2, z2, id): This function draws a straight line in Minecraft-style by iterating over each pixel along the line and setting the block to the specified ID.
+* cloneBlock(sx, sy, sz, dx, dy, dz, w, h, l): This function creates a duplicate block by iterating over each pixel within the source block's bounds and setting the corresponding pixel in the destination block to the same value.
+* duplicateBlock(sx, sy, sz, dx, dy, dz, w, h, l, offsetX, offsetY, offsetZ, num): This function creates a specified number of duplicates of a source block by calling cloneBlock with different offset values.
+* rotateBlock(sx, sy, sz, dx, dy, dz, w, h, l, angle): This function rotates a source block in place by applying a specified angle and iterating over each pixel within the block's bounds.
+* fillBlock(sx, sy, sz, dx, dy, dz, id): This function creates a solid block with a specified ID by filling every pixel within the bounding box with the specified value.

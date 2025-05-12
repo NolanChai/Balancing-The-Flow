@@ -1,0 +1,10 @@
+*/
+                            void main(void) {
+                                var t = 0; // current iteration (to avoid division by zero)
+                                // random prompts
+                                for (t = 0; t < 4; t++) {
+                                    var prompt = "capture a scenic view of the waterfall surrounded by lush greenery and tranquility, with the sunlight streaming through the trees and illuminating the misty spray.".replace(/ /g, ' ') + " --ar 16:9 --v 5";
+                                }
+                            }
+                        };
+\end{code}

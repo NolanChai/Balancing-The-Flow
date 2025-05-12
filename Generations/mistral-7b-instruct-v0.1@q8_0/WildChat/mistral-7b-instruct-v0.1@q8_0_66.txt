@@ -1,0 +1,89 @@
+```python
+import requests
+import json
+from datetime import datetime, timedelta
+from typing import List, Tuple
+import pandas as pd
+
+API_KEY = 'your_api_key'
+API_SECRET = 'your_api_secret'
+symbol = 'BCH/USDT'
+interval = '1m'
+lookback = 44640
+
+def get_klines(symbol: str, interval: str, lookback: int) -> List[Tuple[datetime, float]]:
+    endpoint = '/open/api/v2/market/kline'
+    params = {
+        'symbol': symbol,
+        'interval': interval,
+        'start_time': (datetime.now() - timedelta(days=lookback)).timestamp(),
+        'end_time': datetime.now().timestamp()
+    }
+
+    signature = generate_signature(API_KEY, API_SECRET, endpoint, params)
+
+    url = f"https://www.mexc.com{endpoint}"
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    data = {**params, 'api_key': API_KEY, 'sign': signature}
+
+    response = requests.get(url, headers=headers, params=data)
+    response.raise_for_status()
+    data = response.json()['data']
+    
+    if not data:  # if data is empty, return None
+        print('No data found for the given timeframe and symbol')
+        return []
+
+    ohlc = []
+    for d in data:
+        timestamp = dt.datetime.fromtimestamp(d['time'] / 1000)
+        open_price = float(d['open'])
+        high_price = float(d['high'])
+        low_price = float(d['low'])
+        close_price = float(d['close'])
+        volume = float(d['vol'])
+        ohlc.append((timestamp, open_price, high_price, low_price, close_price, volume))
+
+    return ohlc
+```
+Please make sure to replace `'your_api_key'`, `'your_api_secret'` with your actual API key and secret. Also, you might need to adjust the parameters according to the MCX exchange.
+
+```bash
+{
+  "error": {
+    "code": 100,
+    "message": "Invalid API Key",
+    "timestamp": 1642380085,
+    "explanation": "Error: Invalid API Key"
+  }
+}
+```
+It could be a few different things:
+
+* Make sure your API key is correct and has the right permissions for the operation you're trying to perform.
+* Verify that you've entered the API key correctly in the code, and that it's being passed as a parameter when making the API request.
+* If you're using an older version of the MEXC API, there might be compatibility issues with your code. Try upgrading to the latest version of the API and see if that resolves the issue.
+* It's also possible that your account has been suspended or banned from using the MEXC API. Check your account status on the MEXC website to make sure everything is in order.
+
+Here's the query you can use to get a list of events that happened 44,640 minutes ago:
+```css
+SELECT *
+FROM events
+WHERE datetime >= DATEADD(minute, -44640, GETDATE());
+```
+This will return all the events with their corresponding `datetime` values that are at least 44,640 minutes ago. You can adjust this number as needed to get the desired lookback period.
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://www.example.com'
+response = requests.get(url)
+soup = BeautifulSoup(response.content, 'html.parser')
+
+# Find the first <h1> tag in the HTML code
+h1_tag = soup.find('h1')
+
+# Print out the text inside the h1 tag
+print(h1_tag.text)
+```

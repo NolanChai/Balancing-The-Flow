@@ -1,0 +1,10 @@
+To find the time rate of change of the total electrical resistance, we need to use the formula:
+R(t) = (x(t)yz(t) / (yz(t) + z(t)x(t) + x(t)y(t)))
+where R(t) is the total resistance at time t, and x(t), y(t), and z(t) are the individual resistances at time t.
+Now, we are given that at time t = 0, x = 100 Ω, y = 200 Ω, and z = 300 Ω. Also, we are given that x is increasing at a rate of 2 Ω/min, y is increasing at a rate of 1 Ω/min, and z does not change.
+So, we can plug these values into the formula to find the time rate of change of the total electrical resistance:
+R(t) = (x(t)yz(t) / (yz(t) + z(t)x(t) + x(t)y(t)))
+= (100yz / (200 + 100z + 100y))
+= (100yz / 300)
+= 33.3 Ω/min
+Therefore, the time rate of change of the total electrical resistance is 33.3 Ω/min at time t = 0.

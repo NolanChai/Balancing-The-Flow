@@ -1,0 +1,12 @@
+This is an infinite loop that will never terminate because you are always replacing `z` with the current value of `x`. You are not storing the updated value of `z` anywhere, so it will keep getting overwritten and the loop will never finish.
+To fix this, you can assign the new value of `z` to a variable outside the loop, like this:
+```
+z = float('-inf')
+x = [1, 2, 3, 4, 5]
+w = 0
+while w < len(x):
+    if x[w] > z:
+        new_z = x
+print(new_z)
+```
+This will print the value of `x` at each iteration of the loop, starting from the first element and going up to the last element.

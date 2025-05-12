@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+
+namespace NetworkAutomationTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to Ping Testing!");
+            IPAddress i = IPAddress.Parse(Console.ReadLine());
+            Console.WriteLine($"Pinging IP Address:  {i}");
+            var result1= ping(i);
+           Console.WriteLine($"Ping status : {result1}");
+        }
+         public static string ping(IPAddress ip)
+        {
+            // Ping the server address, and log the results in the form of a string.
+            int timeout = 50;   // in ms
+            System.Net.Dns dns = new System.Net.Dns();
+            IPHostEntry iphe = dns.GetHostByName(ip.ToString());
+
+            Int32 numRequests = 10;  // ping the server twice to make sure the request is delivered
+            byte[] bytes = new byte[4];    // 4 bytes are sent each time we send a message to the server, so the total message size is 8 bytes
+            bytes[0] = 255;    // set the first byte in the array to be a "request type" (the value can be any of 1 - 127)
+            bytes[1] = 46;     // this is the sequence number for the request
+            bytes[2] = 30;     // this is the size of the data sent in the message
+            bytes[3] = (byte)0xFF;   // this is the checksum
+            byte[] ipData = null;   // this variable holds a pointer to the IP address of the server you want to ping.
+            
+            int maxTimeOuts = numRequests*timeout/100;  // get the maximum number of times we can try sending before giving up, or we will timeout if the connection is dropped
+            for (int i=0;i<maxTimeOuts;i++){
+                try{
+                    ipData = iphe.AddressList[ip].GetBytes(System.Net.IPAddressSize);   // get the IP address of the server, and store it in a byte array. 
+                    
+                    var pingResult = new Ping();
+                    if (ipData == null) throw new Exception("Failed to retrieve the IP address.");
+                    for (int j=0;j<numRequests;j++){
+                        byte[] data = bytes;   // get a pointer to the data we want to send. 
+                        data[2] = ipData.GetLength(System.Net.IPAddressSize)/2;  // set the data size as half the IP address length (because we use big endian)
+                        PingReply reply = pingResult.Send(ipData, timeout);
+                        
+                        if (reply != null && reply.Status == IPStatus.Success){  // if there is a reply, and it was successful, then set the result variable to true
+                            Console.WriteLine($"Ping status : {reply}");
+                            var pings = new Dictionary<string,string>();
+                            
+                            foreach(var item in ipData) 
+                                pings.Add(item.ToString("X2"), item.ToString());
+                             
+                            pings["IPAddress"]=ip.ToString();
+                            var pingReply = reply.PacketInfo;   // get the packet information from the PingResult object and store it in a dictionary. 
+                            foreach (var pair in ipData)     // loop through each of the byte arrays in the array, to output them as a hex string
+                                Console.WriteLine($"{pair.ToString("X2")} - {reply.Time}");  
+                            var replyString = $@"{ip} - {pings}";
+                            
+                            return  replyString;
+                        }
+                    }
+                }catch (Exception ex){
+                    Console.WriteLine(ex);
+                }     // end of for loop to ping server
+            }   // end of maxTimeOuts
+          //return null;
+        }
+    }
+}

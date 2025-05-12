@@ -1,0 +1,152 @@
+Here is the issue I’m facing.
+
+1. Selenium IDE opens Chrome web browser and performs a search, then clicks on some links to navigate to the desired page.
+2. Then it looks for a link with text ‘Social Media Growth Hacker’ which has an id “menu-item-365”. But if we look at the source code of that page, this element is missing in the HTML. However, selenium still finds and clicks on this element.
+
+I have tested this out by printing the value for the element with text ‘Social Media Growth Hacker’.
+
+```
+
+I am trying to scrape a website and I don't know how to click the link, which is in a normal paragraph. Can anyone help? The code works for other links in the site, but it doesn't work for this one. This is my first time using Selenium with Python and I have already tried some solutions from stack overflow and nothing worked
+
+```
+# import necessary libraries
+from bs4 import BeautifulSoup as BS
+import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import pandas as pd
+import time
+
+# define Chrome Driver location
+chrome_driver_path = r'C:\Users\Admin\chromedriver_win32\chromedriver.exe'
+options = webdriver.ChromeOptions()
+prefs = {"profile.default_content_setting_values": {"images": 1, "geolocation": 2}}
+options.add_experimental_option("prefs", prefs)
+service = ChromeService(executable_path=chrome_driver_path)
+driver = webdriver.Chrome(service=service, options=options)
+driver.maximize_window()
+# define timeout and url to scrape
+timeout = 30
+url = 'https://www.instagram.com/'
+
+# get the html document
+def getHtml(url, driver):
+    try:
+        driver.get(url)
+    except TimeoutException as e:
+        print("Timeout exception while opening URL", url)
+    time.sleep(5)  # wait for a few seconds to let the page load completely
+
+# parse html using Beautiful Soup
+def get_data():
+    try:
+        driver = webdriver.Chrome(service=service, options=options)
+        driver.maximize_window()
+        driver.get(url)
+        time.sleep(5)
+        print("Scraping started")
+        html = BS(driver.page_source, 'html.parser')
+        title = html.select("#react-root > section > main > div > header > div._9e46 > h1 > div")[0].get_text()
+        return {'Title': title}
+    except:
+        print("Error while parsing HTML")
+
+# store the data in a pandas DataFrame and save it to csv file
+def get_data():
+    try:
+        driver = webdriver.Chrome(service=service, options=options)
+        driver.maximize_window()
+        driver.get(url)
+        time.sleep(5)
+        print("Scraping started")
+        html = BS(driver.page_source, 'html.parser')
+        title = html.select("#react-root > section > main > div > header > div._9e46 > h1 > div")[0].get_text()
+        return {'Title': title}
+    except:
+        print("Error while parsing HTML")
+
+# loop through the urls and scrape the data for each page
+for i in range(5):
+    try:
+        getHtml(url, driver)
+        time.sleep(30)  # wait for a few seconds to let the page load completely
+        print("Scraping started")
+        get_data()
+        time.sleep(10)  # wait for a few seconds before starting the next loop
+    except:
+        print("Error while scraping data")
+```
+
+# Social Media Growth Hacker
+
+The social media landscape is a complex web of platforms, communities, influencers and audiences. If you’re looking for someone to help you navigate this space, look no further than a social media growth hacker! These individuals are experts at driving traffic and engagement on all major social channels, from Facebook and Twitter to Instagram and Snapchat. Whether you need help building an audience or monetizing your content, they have the skills and expertise to make it happen. In this guide, we’ll teach you everything you need to know about becoming a successful social media growth hacker. From understanding the different types of platforms to creating effective campaigns that convert followers into paying customers – read on for all the tips and tricks you need to succeed in this exciting field!
+
+### What is a Social Media Growth Hacker?
+
+A social media growth hacker is someone who uses digital marketing strategies to help businesses grow their presence on social media. This includes everything from creating content that resonates with your target audience, to using paid advertising tools to reach new users. A good growth hacker knows how to identify and exploit opportunities on social media in order to create long-term success for their clients.
+
+### What are the Benefits of a Social Media Growth Hacker?
+
+There are many benefits to working with a social media growth hacker, including: increased brand awareness, better customer engagement, improved ROI on marketing spend and more leads generated from social media efforts. In addition, a good growth hacker can help you build an online community that will be loyal fans of your business or product.
+
+### How to Become a Social Media Growth Hacker?
+
+To become a successful social media growth hacker, you need two things: skills and experience. First and foremost, you must have solid digital marketing skills – including knowledge of SEO, content strategy, email marketing etcetera… You’ll also need some experience in the field before becoming fully certified (check out our course offerings here). Once you have these credentials under your belt then it’s time for some serious hustling!
+
+### The Best Ways to Grow Your Social Media Following
+
+Growing your social media following can be a daunting task, but there are plenty of ways to do it successfully. Here are the best methods: 1) Build an email list. Email is still one of the most effective ways to reach people and build relationships. You can start by collecting emails from those who engage with you on social media or sign up for your newsletter on your website. Once you have a few hundred or thousand subscribers, send them interesting content regularly (like blog posts) to keep them engaged and interested in what you’re doing online..
+
+2) Create great content that resonates with your audience – whether it’s video clips, infographics, etc… People will share these items if they find them useful or entertaining so make sure each piece is high quality!
+3) Interact with others through comments and messages on social media channels like Facebook/Twitter/Instagram etcetera… This builds rapport & trust which leads to more followers over time..
+
+### How Much Money Can You Make as a Social Media Growth Hacker?
+
+Social media growth hackers can make a good living if they are successful. The average salary for social media growth hackers is between $50,000 and $100,000 per year. However, this varies depending on the company and industry that you work in as well as your experience level.
+
+### What are the Best Social Media Platforms to Grow Your Business?
+
+There are a number of social media platforms that can be used to grow your business. Some of the best include Facebook, Instagram and Twitter. However, there are other platforms out there that may be more suited for your specific needs such as LinkedIn or Pinterest. It’s important to consider which platform will work best for you and your audience before starting any marketing campaign on it.
+
+If we are using xpath as locator for an element, it is sometimes hard to locate a unique locator and when we try with normal or dynamic locators (css selector, id etc) it may not work because of the way the page is being rendered in browser. In such cases we can use XPATH.
+In my previous project i used xpath for all my web elements because it worked well and there was no need to use other type of locator. But when i switched to a new project i had a very bad experience with xpath, but it turned out to be more because of the wait condition rather than the element itself.
+
+## Moods & Tone
+
+In my recent work, I’m trying to experiment with a new way of thinking and composing. I don’t want to make something that looks good but doesn’t mean anything to anyone. So my main focus is to create the mood in my work rather than just creating something pretty to look at. The mood can be an emotion or feeling, or it could be the tone, the attitude of a person or thing.
+
+The conceptual mood is to explore the visual aesthetics and create a sense of atmosphere through graphic design. And in terms of art direction, it’s to give my work more meaning by making it feel like a real-world experience. The aesthetic mood is all about creating beautiful design that looks good, feels good, but doesn’t necessarily have any deeper meaning.
+
+## Processes
+
+I started by picking up some ideas from Instagram feeds of people I follow and also did some research online on how to create these moods in my work. I then created a list of different ideas and concepts that I wanted to explore further in my design process.
+
+```
+# coding=utf-8
+import urllib2, re
+def getData(url):
+    response = urllib2.urlopen(url)
+    return response.read()
+
+def parseData(data):
+    pattern = r'<h3 class="item_title">(\d+)</h3>'
+    result=re.findall(pattern, data)
+    print('result:', result)
+    for i in result:
+        return int(i)
+
+#url = 'https://movie.douban.com/subject/26715097/'
+url = 'http://www.imdb.com/title/tt4832368/'
+data = getData(url)
+num=parseData(data)
+print('number:', num)
+```
+
+I want to get the number of the movie on the website, but I can’t do it properly with my code. It is not an error in the code, just that it cannot get the result I want.
+
+How do you suggest getting the number of the movie using Python?

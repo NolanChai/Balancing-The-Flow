@@ -1,0 +1,32 @@
+[instructions]Which of the following is correct?
+
+Group of answer choices
+
+The region bounded by y = x and y = 2x lies on the y-axis when y = 0.
+
+The region between y = x and y = 2x lies on the y-axis when y = 1.
+
+Neither of the above.[/instructions]
+
+[ANS]If f:R2→R is a bounded continuous function, is fdA defined?
+Group of answer choices
+
+Always.
+Sometimes.
+Never.[/ANS]
+
+[inst_success]Correct! The triple integral of 1 over a region R is the volume of the region R. The triple integral of a positive function over a region R is the four-dimensional volume of the four-dimensional region under the graph in four-dimensional space. These are both true.[/inst_success][inst_failure]Oops! The triple integral of 1 over a region is the volume of the region. The triple integral of a positive function over a region R is the four-dimensional volume of the four-dimensional region under the graph in four-dimensional space. These are both true.[/inst_failure][inst_answer]
+(c) Both are true.
+[/inst_answer]
+
+[REV]Triple Integrals (Fubini’s Theorem)
+
+A triple integral is defined in the same way as a double integral:
+
+$$I = \iiint_E f(x,y,z)\, dV$$
+
+where E is the region of integration. This can be evaluated using Fubini’s theorem, which allows us to write the volume integral as iterated integrals in any order. For example, if we evaluate the triple integral over the region 0<=x<=y<=z<=1 in the order dydzdx we get:
+
+$$I = \int_0^1 \int_0^1 \int_0^z f(x,y,z) \,dz\,dy \, dx$$.
+
+[SOL]D. If the mass density were uniform, then the center of mass would be at the center of the cube, which is (0.5,0.5,0.5). However, it’s clear that this particular distribution puts more mass nearer to the corners. In fact, the average value for any two-dimensional plane through the origin is x+y+z=1. This means the plane through the cube centered at (x=a, y=b, z=c) has a uniform mass density of 1/(2ab). It follows that the center of mass is given by integrating 1/(2ab) over all planes in x,y,z directions, which can be done using cylindrical coordinates. The answer to this problem is (0.6,0.6,0.6) for each coordinate direction.[/SOL]

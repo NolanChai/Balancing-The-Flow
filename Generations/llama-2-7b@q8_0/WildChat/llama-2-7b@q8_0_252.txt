@@ -1,0 +1,50 @@
+[FONT=Times New Roman][SIZE=3]
+Hello guys and welcome to the newest Instructables. Today we are going to build an electronic device that allows you to know how much your air conditioner compressor is overheated, what you need for it? Well I have prepared everything from a microcontroller (the heart of the project), some sensors, a few wires and resistors and finally a LCD.
+So let's get started![/SIZE][/FONT]
+[FONT=Times New Roman][SIZE=3]What is superheating?[/SIZE][/FONT]
+[FONT=Times New Roman][SIZE=3]
+Superheat (or overheat) is the temperature of a substance or fluid in excess of its boiling point, at atmospheric pressure. The term "superheated" means that liquid water has been heated to temperatures above 212 °F (100 °C), and no vapor bubbles are being formed by the process of nucleation as the heat is applied.[/SIZE][/FONT]
+[FONT=Times New Roman][SIZE=3]Why should you know if your AC compressor is overheated?[/SIZE][/FONT]
+The first reason why this project is so interesting, because superheating can damage the compressor and if we notice it in time, we can fix it or replace it. It is also very useful to know how much refrigerant you need, but this can be done only when the condenser is full of cooling liquid, which is not a problem on hot days.
+[FONT=Times New Roman][SIZE=3]So here's what we are going to do:[/SIZE][/FONT]
+In order to superheat the refrigerant we need to heat it in order for the liquid and the gas phase to coexist. The sensor is used to detect the presence of a boiling fluid (or gas) that is not in equilibrium with its surroundings. It consists of a thermally sensitive element connected to an electric circuit, which can be detected by the microcontroller and sent through the serial port to the PC.
+The LCD displays the temperature of the coolant, the overheating percentage and also contains a buzzer that is used as a warning signal.[/SIZE][/FONT]
+[FONT=Times New Roman][SIZE=3]What do I need for this project?[/SIZE][/FONT]
+- [url=http://www.instructables.com/id/5064718/]Arduino Nano[/url] (the heart of the project)
+- [url=http://www.instructables.com/id/5064694/]LCD Shield for Arduino[/url] (to display data)
+- [url=http://www.instructables.com/id/5064712/]Temperature and humidity sensor[/url] (for measuring the temperature of the liquid)
+- A few 10 K resistors and some wires
+- A buzzer
+- [url=http://www.instructables.com/id/5064709/]A capacitor[/url]
+- [url=http://www.instructables.com/id/5064718/]An FTDI cable (or Arduino Nano) to upload the sketch from your PC to the microcontroller[/url]
+[FONT=Times New Roman][SIZE=3]How to build it?[/SIZE][/FONT]
+[FONT=Times New Roman][SIZE=3]1. Connections (PCB)[/SIZE][/FONT]
+For this project we are going to use an Arduino Nano, which can be connected to the LCD shield via a FTDI cable or directly on one of the pin headers. The Arduino Nano can be purchased in most electronics stores and is very easy to connect to your PC. You will need to know what kind of pins are used for serial communication.
+The temperature sensor is connected to two analog input pins, which must have a voltage between 0-5 volts (analog pin 2). The buzzer is also an analog signal and you can find all the details about how it should be connected on its datasheet.[/SIZE][/FONT]
+[FONT=Times New Roman][SIZE=3]2. Connections (LCD shield)[/SIZE][/FONT]
+The LCD shield is very similar with that of Arduino, but you need to be a little more careful with the connections. The first step is to remove the back panel and solder 10 K resistors on the GND pin next to RXD, TXD, SCK, MISO and MOSI pins respectively (all in row). You can also add another resistor between SDA and VCC because if you do not have one, the LCD will be unstable.
+The second step is to solder a 10K resistor on D4 pin that is next to GND, but make sure it does not touch any other component or trace (otherwise your circuit won't work). Finally the last thing you need to do is to connect the buzzer with a 220 ohm resistor and ground.
+[FONT=Times New Roman][SIZE=3]3. Sketching the project[/SIZE][/FONT]
+The sketch can be seen on this link, it consists of two main parts: the one that monitors the temperature in the compressor and the second one that displays all the information on the LCD shield.[/SIZE][/FONT]
+[FONT=Times New Roman][SIZE=3]4. Programming[/SIZE][/FONT]
+The software is very simple, so we start by uploading it to the Arduino Nano via FTDI cable or using the Arduino Nano connector on the LCD shield. The serial monitor will be displayed only when you have connected an RS232 cable (to your PC) or plugged in a USB adapter into one of the connectors next to the reset button.
+In this case, we do not need to use the RS232 because the Arduino Nano is already capable of communicating with us without a separate serial port. The first thing you have to do after the software starts is to upload it to your microcontroller and if everything goes right the Serial Monitor should display the following message:
+[FONT=Times New Roman][SIZE=3]5. Testing the circuit[/SIZE][/FONT]
+The first step is to measure the temperature of the coolant from an air conditioner, for this I used a test fluid called [url=http://en.wikipedia.org/wiki/Freon_(trade_name)#R-1240_Freon_352]Freon 1240[/url], but you can use water instead.
+In order to measure the temperature, it must be in contact with a sensor, so connect one end of your sensor (D4 pin next to GND) and another to an analog input pin on Arduino Nano. You may need to adjust the values of some resistors by looking at the LCD screen or checking them through the Serial Monitor.[/SIZE][/FONT]
+[FONT=Times New Roman][SIZE=3]6. Displaying data[/SIZE][/FONT]
+The first thing you need to do is to upload the sketch that displays all the information from the LCD shield (you can find it here), after this, it will be displayed on your screen. The temperature of the coolant should always stay within a certain range and if not, this may mean there's something wrong with your compressor.
+The data are displayed in the format: [FONT=Times New Roman][SIZE=3]Liquid Temperature[/SIZE][/FONT], [FONT=Times New Roman][SIZE=3]Liquid Percentage (Overheating)[/SIZE][/FONT], and finally the buzzer will start beeping if we notice that the liquid is overheated.
+The Arduino Nano is capable of measuring up to 1024 values per second, so you should only have a few milliseconds delay between each value.[/SIZE][/FONT]
+[FONT=Times New Roman][SIZE=3]7. Conclusion[/SIZE][/FONT]
+The project I presented today is very useful and can be used in many other applications as well. The temperature sensor can measure the temperature of the coolant from an air conditioner, which can also be replaced with a similar device that measures water or any other liquid.[/SIZE][/FONT]
+[url=http://www.instructables.com/id/how-to-calculate-AC-compressor-superheating/]Click here to see the original Instructable and watch how it was built![/url]
+
+H.M. Deng, X.R. Wang, L.Y. Zhang, et al.
+In order to improve the efficiency and reduce the emission of 2-stroke low speed marine engines with turbocharger, this study adopted CFD analysis to investigate the influence of the impeller rotating speed on the flow field characteristics around the inlet guide vane (IGV) of a two-stage centrifugal compressor, which is one of the core components of turbochargers. The results showed that: with increasing the rotation speed from 10000 RPM to 23500 RPM, the flow field characteristics of IGV changed significantly at inlet and outlet; when the rotating speed was above 20000 rpm, the velocity component of fluid increased in the outer wall, while it decreased on the inner wall. At the same time, the change of pressure distribution over the surface of vanes becomes obvious, which had a great influence on the performance and durability of turbocharger.
+Key words: Two-stroke low speed marine engine; Turbochargers; Impeller; CFD analysis; Flow field characteristics
+H.M. Deng, X.R. Wang, L.Y. Zhang, et al.. 2016.
+
+The influence of the inlet air temperature on the performance and emissions from a turbocharger engine has been studied experimentally. The experimental engine was equipped with an original type of variable geometry turbine (VGT), which can adjust the degree of turbine expansion. The engine operated with natural gas-air mixture and is represented by a prototype vehicle of light truck class. During the experiments, various temperature levels were applied to the inlet air and its effect on the performance and exhaust emissions has been studied. Experimental data have shown that VGT turbocharger improves the efficiency and reduces NOx emission from the engine at low and high load conditions. The influence of the inlet air temperature on the turbine characteristics was also studied experimentally.
+Influence of inlet air temperature on the performance and exhaust emissions from a turbocharger engine / J. Gajek, K. Gruszka, P. Kruszewski, M. Jablonski // Aerospace Science and Technology - Transactions of the 16th International Congress. — 2013. — Vol. 34 (Supplement C). — P. 527–532.
+Influence of inlet air temperature on the performance and exhaust emissions from a turbocharger engine [Архівовано 22 листопада 2018 у Wayback Machine.]

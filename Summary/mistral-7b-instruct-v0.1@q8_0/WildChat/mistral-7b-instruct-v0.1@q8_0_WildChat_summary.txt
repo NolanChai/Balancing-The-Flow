@@ -1,0 +1,13 @@
+Model: mistral-7b-instruct-v0.1@q8_0
+Dataset: WildChatGenerated: 317 new examples
+Skipped: 0 existing examples
+Errors: 8 failed generations
+Retries: 46 retried generations
+Temperature: 0.9
+Top-p: 1.0
+Max tokens: 2048
+Generation time: 1944.86 seconds
+Surprisal calculation time: 139.43 seconds
+Average surprisal: 3.3971
+Total runtime: 2084.29 seconds
+Date: 2025-05-11 22:42:41

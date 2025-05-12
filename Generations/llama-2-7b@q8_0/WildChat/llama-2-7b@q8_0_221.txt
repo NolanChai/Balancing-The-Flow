@@ -1,0 +1,28 @@
+I want to make like dislike button in Angular. I have done that part but want to reuse it for multiple component so i can use it any where.
+
+\begin{code}
+<button (click)="productLike(product.id)" class="btn btn-success"> Like</button>
+<button (click)="productDislike(product.id)" class="btn btn-danger"> Dislike</button>
+
+function productLike(productId: any){
+    this.$http({
+        method: 'POST',
+        url: `product/like`,
+        params: {
+          id : productId,
+          user : this._idUser
+        },
+      })
+}
+
+function productDislike(productId: any){
+    this.$http({
+        method: 'POST',
+        url: `product/dislike`,
+        params: {
+          id : productId,
+          user : this._idUser
+        },
+      })
+  }
+\end{code}

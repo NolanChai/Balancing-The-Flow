@@ -1,0 +1,31 @@
+这是因为CUDA不支持Python，需要使用C++来实现。你可以在终端中输入`ninja`命令来编译Ninja，然后在命令行中输入`./out.o` 来生成Object文件。接下来，你需要将Object文件与链接器工具（例如GCC）一起使用来链接。
+
+以下是一个示例：
+```
+ninja
+./out.o -lcudart
+./out.o -L/usr/local/lib -lcudnn
+```
+这将生成一个可执行文件，可以运行在任何CUDA环境下。你还需要确保已安装了cuDNN库和链接器工具。
+
+如果你正在使用 Anaconda 环境中，可能需要添加 `--shared-lib` 选项来生成SharedObject文件。例如：
+```
+ninja --shared-lib
+./out.o -lcudart -L/usr/local/lib -lcudnn
+```
+请注意，在Anaconda环境中使用`-L`选项可能会导致链接器错误。因此，你需要确保已安装了所有的库文件和链接器工具，并且将 `-L` 选项用于合理的路径中。
+
+如果你还需要使用C++17特性，可以添加 `-std=c++17` 选项：
+```
+ninja --shared-lib -std=c++17
+./out.o -lcudart -L/usr/local/lib -lcudnn -std=c++17
+```
+请注意，在Anaconda环境中使用`-std`选项可能会导致链接器错误。因此，你需要确保已安装了所有的库文件和链接器工具，并且将 `-std` 选项用于合理的路径中。
+
+最后，你可以使用CMake 来生成Ninja文件，这样就不需要手动编译和链接了。在Anaconda环境中，你可以使用以下命令来创建Ninja文件：
+```
+cmake -D CUDA_TOOLKIT_LIBRARY=/usr/local/lib/cuda -DCUDA_TOOLKIT_INCLUDE_DIR=/usr/local/include -DPYTHON_EXECUTABLE=/usr/bin/python -A /path/to/your/project
+```
+这将生成一个Ninja文件，你可以使用`./ninja`命令来编译它。
+
+希望这些解释能够帮助你解决问题。

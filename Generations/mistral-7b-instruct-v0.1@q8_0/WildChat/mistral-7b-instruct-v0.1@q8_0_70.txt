@@ -1,0 +1,14 @@
+To make the gradient visible, you can apply a linear gradient to the `.highlight-line` class instead of using a single color. You can also adjust the direction and stop points of the gradient to match your desired effect. Here's an example:
+```css
+@keyframes shot {
+  from {
+    left: 0%;
+    background-image: linear-gradient(to right, rgba(255, 1, 3, 0), rgba(0, 0, 255, 0));
+  }
+  to {
+    left: 100%;
+    background-image: radial-gradient(circle at center right, rgba(255, 1, 3, 0.9), rgba(0, 0, 255, 0.9));
+  }
+}
+```
+This gradient transitions from a solid color (red for the left side) to a radial gradient (blue for the right side). You can adjust the colors and stop points to match your desired effect.

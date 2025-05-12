@@ -1,0 +1,21 @@
+sx, sy, sz, dx, dy, dz,
+	xoffset = 1, yoffset = 0, zoffset = 0,
+	w, h, l) {
+	if (xoffset > w || xoffset < -w) throw new Error('Invalid X offset');
+	if (yoffset > h || yoffset < -h) throw new Error('Invalid Y offset');
+	if (zoffset > l || zoffset < -l) throw new Error('Invalid Z offset');
+	for (let x = 0; x < w + xoffset * 2; x++) {
+		for (let y = 0; y < h + yoffset * 2; y++) {
+			for (let z = 0; z < l + zoffset * 2; z++) {
+				if (x >= w) world.setBlock(dx + xoffset - x, sy + y, sz + z, world.getBlock(sx + w - x, sy + y, sz + z));
+				else if (x < 0) world.setBlock(dx + x, sy + y, sz + z, world.getBlock(sx + x + w, sy + y, sz + z));
+				if (y >= h) world.setBlock(dx + x, dy + yoffset - y, sz + z, world.getBlock(sx + x, sy + h - y, sz + z));
+				else if (y < 0) world.setBlock(dx + x, dy + y, sz + z, world.getBlock(sx + x, sy + y + h, sz + z));
+				if (z >= l) world.setBlock(dx + x, dy + y, sz + zoffset - z, world.getBlock(sx + x, sy + y, sz + l - z));
+				else if (z < 0) world.setBlock(dx + x, dy + y, sz + z, world.getBlock(sx + x, sy + y, sz + z + l));
+			}
+		}
+	}
+}
+
+function mirrorBlock2

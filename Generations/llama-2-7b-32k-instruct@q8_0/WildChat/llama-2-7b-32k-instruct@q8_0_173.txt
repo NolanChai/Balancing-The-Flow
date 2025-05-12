@@ -1,0 +1,199 @@
+1. C# code to check if the specified IP address exists within a network range:
+
+using System;
+using System.Net;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Define the start and end IP addresses of the network range.
+        string startIP = "192.168.0.0";
+        string endIP = "192.168.0.254";
+
+        // Create a new HashSet to store the IP addresses that exist within the range.
+        HashSet<string> ipAddresses = new HashSet<string>();
+
+        // Loop through each IP address in the specified range and check if it exists within the network range.
+        for (int i = 0; i < IPAddress.Parse(startIP).AddressFamily == AddressFamily.InterNetworkV6 ? 8: 254; i++) {
+            try {
+                // Convert the IP address to a byte array and check if it exists within the range.
+                byte[] ipBytes = IPAddress.CreateByteArray(IPAddress.Parse(startIP + $"{i}").ToString());
+                if (ipBytes.SequenceEqual(IPAddress.CreateByteArray(endIP))) {
+                    // Add the IP address to the HashSet.
+                    ipAddresses.Add(IPAddress.CreateString(startIP + $"{i}")));
+                }
+            } catch (Exception ex) {
+                Console.WriteLine($"Error: {ex}");
+            }
+        }
+
+        // Output the list of IP addresses that exist within the network range.
+        foreach (string ipAddress in ipAddresses) {
+            Console.WriteLine(ipAddress);
+        }
+    }
+}
+
+2. C# code to ping an IP address and check if it is responsive:
+
+using System;
+using System.Net;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Define the IP address to ping.
+        string ipAddress = "192.168.0.4";
+
+        // Create a new Ping object and set the IP address.
+        Ping ping = new Ping();
+        ping.Addr = ipAddress;
+
+        // Send a ping request to the IP address and check if it is responsive.
+        string response = ping.Send(ping.ComputeChecksum());
+
+        // Output the results of the ping request.
+        Console.WriteLine("Ping status: {0}", response);
+    }
+}
+
+3. C# code to check if an IP address is in a specified subnet:
+
+using System;
+using System.Net;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Define the IP address and subnet mask to check.
+        string ipAddress = "192.168.0.4";
+        string subnetMask = "255.255.255.0";
+
+        // Create a new Address object and set the IP address and subnet mask.
+        Address addr = new Address(ipAddress, subnetMask);
+
+        // Check if the specified IP address is in the subnet.
+        bool isInSubnet = addr.Contains(ipAddress) ? true : false;
+
+        // Output the results of the check.
+        Console.WriteLine("IP address {0} is in subnet? {1}", ipAddress, isInSubnet);
+    }
+}
+
+4. C# code to check if an IP address is in a specified network range:
+
+using System;
+using System.Net;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Define the start and end IP addresses of the network range.
+        string startIP = "192.168.0.0";
+        string endIP = "192.168.0.254";
+
+        // Create a new HashSet to store the IP addresses that exist within the range.
+        HashSet<string> ipAddresses = new HashSet<string>();
+
+        // Loop through each IP address in the specified range and check if it exists within the network range.
+        for (int i = 0; i < IPAddress.Parse(startIP).AddressFamily == AddressFamily.InterNetworkV6 ? 8: 254; i++) {
+            try {
+                // Convert the IP address to a byte array and check if it exists within the range.
+                byte[] ipBytes = IPAddress.CreateByteArray(IPAddress.Parse(startIP + $"{i}").ToString());
+                if (ipBytes.SequenceEqual(IPAddress.CreateByteArray(endIP))) {
+                    // Add the IP address to the HashSet.
+                    ipAddresses.Add(IPAddress.CreateString(startIP + $"{i}")));
+                }
+            } catch (Exception ex) {
+                Console.WriteLine($"Error: {ex}");
+            }
+        }
+
+        // Output the list of IP addresses that exist within the network range.
+        foreach (string ipAddress in ipAddresses) {
+            Console.WriteLine(ipAddress);
+        }
+    }
+}
+
+5. C# code to check if an IP address is assigned to a specific MAC address:
+
+using System;
+using System.Net;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Define the IP address and MAC address to check.
+        string ipAddress = "192.168.0.4";
+        string macAddress = "00:11:22:33:44:55";
+
+        // Create a new ARP object and set the IP address and MAC address.
+        ARP arp = new ARP();
+        arp.Addr = ipAddress;
+        arp.HwAddr = macAddress;
+
+        // Check if the specified IP address is assigned to the specified MAC address.
+        bool isAssigned = arp.Get() ? true : false;
+
+        // Output the results of the check.
+        Console.WriteLine("IP address {0} is assigned to MAC address {1}? {2}", ipAddress, macAddress, isAssigned);
+    }
+}
+
+6. C# code to check if an IP address is part of a specified DNS zone:
+
+using System;
+using System.Net;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Define the IP address and DNS zone name or number to check.
+        string ipAddress = "192.168.0.4";
+        string dnsZone = "example.com.";
+
+        // Create a new DNS class and set the IP address and DNS zone name or number.
+        DNSClass dnsClass = new DNSClass(ipAddress, dnsZone);
+
+        // Check if the specified IP address is part of the specified DNS zone.
+        bool isInDNSZone = dnsClass.IsInDNSZone() ? true : false;
+
+        // Output the results of the check.
+        Console.WriteLine("IP address {0} is in DNS zone {1}? {2}", ipAddress, dnsZone, isInDNSZone);
+    }
+}
+
+7. C# code to check if an IP address is part of a specified DNS subdomain:
+
+using System;
+using System.Net;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Define the IP address and DNS subdomain name or number to check.
+        string ipAddress = "192.168.0.4";
+        string dnsSubdomain = "sub.example.com.";
+
+        // Create a new DNS class and set the IP address and DNS subdomain name or number.
+        DNSClass dnsClass = new DNSClass(ipAddress, dnsSubdomain);
+
+        // Check if the specified IP address is part of the specified DNS subdomain.
+        bool isInDNSSubdomain = dnsClass.IsInDNSSubdomain() ? true : false;
+
+        // Output the results of the check.
+        Console.WriteLine("IP address {0} is in DNS subdomain {1}? {2}", ipAddress, dnsSubdomain, isInDNSSubdomain);
+    }
+}
+
+8. C# code to check if an IP address is part of a specified IPv6 DNS zone:
+
+using System;
+using System.Net;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Define the IP address and DNS zone name or number to check.
+        string ipAddress = "2001:db8::1";

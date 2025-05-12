@@ -1,0 +1,68 @@
+User: "mysql统计连续的整数个数"
+
+Assistant: "如果要统计一个整数列中连续的整数个数，可以使用MySQL的窗口函数来实现。具体步骤如下：
+
+1. 假设有一个名为`numbers`的表，其中包含一个`number`列，表示整数列。
+
+2. 使用窗口函数`ROW_NUMBER()`为每一行生成一个唯一的行号。
+
+```sql
+SELECT number, ROW_NUMBER() OVER (ORDER BY number) AS row_num
+FROM numbers;
+```
+
+这会生成一个带有行号的结果集，例如：
+
+```
+number | row_num
+-------|--------
+1      | 1
+2      | 2
+3      | 3
+6      | 4
+7      | 5
+```
+
+3. 使用窗口函数`LAG()`来获取前一行的`number`值，并与当前行的`number`值进行比较，判断是否为连续的整数。
+
+```sql
+SELECT number,
+       row_num,
+       CASE WHEN number - LAG(number) OVER (ORDER BY number) = 1 THEN 'yes' ELSE 'no' END AS is_continuous
+FROM (
+    SELECT number, ROW_NUMBER() OVER (ORDER BY number) AS row_num
+    FROM numbers
+) AS subquery;
+```
+
+这会生成一个带有是否连续的标志的结果集，例如：
+
+```
+number | row_num | is_continuous
+-------|---------|--------------
+1      | 1       | no
+2      | 2       | yes
+3      | 3       | yes
+6      | 4       | no
+7      | 5       | yes
+```
+
+4. 最后，统计连续的整数个数可以通过查询`is_continuous`列的值为'yes'的连续区块的个数。
+
+```sql
+SELECT COUNT(*) AS count_continuous
+FROM (
+    SELECT number,
+           row_num,
+           CASE WHEN number - LAG(number) OVER (ORDER BY number) = 1 THEN 'yes' ELSE 'no' END AS is_continuous
+    FROM (
+        SELECT number, ROW_NUMBER() OVER (ORDER BY number) AS row_num
+        FROM numbers
+    ) AS subquery
+) AS subquery2
+WHERE is_continuous = 'yes';
+```
+
+这会返回连续整数的个数。
+
+注意：以上示例中的`numbers`表仅作为解释说明，你需要将其替换为你实际使用的表。此外，窗口函数只在MySQL 8.0及以上版本中可用。"

@@ -1,0 +1,35 @@
+To create a reusable component for liking and disliking products in Angular, you can follow these steps:
+
+1. Create a new Angular component file for the button. For example, you could name it `product-like-button`.
+2. In the component file, create an @Output property called `isFavorite` of type Boolean. This will allow the parent component to communicate whether the product is currently marked as a favorite or not.
+3. Create two template elements: one for the "Like" button and another for the "Dislike" button. You can use Angular's conditional logic (e.g., *ngIf) to show or hide each button based on the `isFavorite` value.
+4. Add click event listeners to each button that update the `isFavorite` property when clicked. For example, you could add a listener to the "Like" button like this:
+```php
+<button (click)="onLike()">Like</button>
+```
+And in the component class, define the `onLike()` method that sets `isFavorite` to true:
+```typescript
+export class ProductLikeButtonComponent {
+  @Output() isFavorite: boolean;
+
+  onLike() {
+    this.isFavorite = true;
+  }
+}
+```
+You can do the same for the "Dislike" button, setting `isFavorite` to false when clicked.
+5. Finally, import and use the `ProductLikeButtonComponent` in your parent component wherever you want to add the like/dislike buttons. You can pass the current value of `isFavorite` as an input to the component using the square brackets syntax:
+```php
+<product-like-button [isFavorite]="isProductFavorite"></product-like-button>
+```
+And in your parent component class, define a property called `isProductFavorite` that reflects the current state of the product. You can update this property whenever the user interacts with the like/dislike buttons in the child component, using the two-way binding syntax:
+```typescript
+export class ParentComponent {
+  isProductFavorite: boolean;
+
+  constructor() {
+    this.isProductFavorite = false;
+  }
+}
+```
+Now you have a reusable component that allows users to like and dislike products in your Angular application.

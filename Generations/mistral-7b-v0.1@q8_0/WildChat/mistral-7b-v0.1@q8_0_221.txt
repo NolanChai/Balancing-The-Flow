@@ -1,0 +1,19 @@
+We are going to use an input property on our component. To create the property, add the `@Input()` decorator at the top of your component class:
+
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-favorite',
+  templateUrl: './favorite.component.html'
+})
+export class FavoriteComponent {
+  @Input() product: Product;
+}
+```
+
+This is a `public` property that we can use from any component. We will be able to set its value in the parent component, and then display it in our template using double-curly brackets:
+
+```
+<app-favorite [product]="product"></app-favorite>
+```

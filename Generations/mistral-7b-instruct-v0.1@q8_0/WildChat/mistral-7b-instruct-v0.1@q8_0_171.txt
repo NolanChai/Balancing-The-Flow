@@ -1,0 +1,32 @@
+The error message indicates that the installation of backend dependencies via pip subprocess is not running successfully and the exit code is 1. The problem might be caused by a system issue or some conflicts with other packages.
+
+To solve this issue, you can try the following:
+
+1. Updating pip to the latest version:
+```bash
+pip install --upgrade pip
+```
+2. Uninstalling all previously installed packages and then reinstall them:
+```
+pip uninstall dotenv distribute
+pip install dotenv=0.0.5 distribute
+```
+3. Using the `pip cache repair` command to fix any broken dependencies in your pip cache:
+```bash
+pip cache repair
+```
+4. Checking for any conflicting packages and resolving them using the `pip check` command or manually removing them if necessary.
+5. If none of these steps work, you can try creating a new virtual environment and installing all required packages inside it:
+```python
+import os
+from dotenv import load_dotenv
+
+# Set up your environment variables using .env file
+load_dotenv()
+
+# Create a new virtual environment
+os.system("python3 -m venv env")
+os.chdir("env")
+os.system("python3 -m pip install --no-cache-dir -r requirements.txt")
+```
+Remember to replace `requirements.txt` with the actual file name containing your project's dependencies.

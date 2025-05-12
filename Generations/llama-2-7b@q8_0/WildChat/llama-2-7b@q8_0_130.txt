@@ -1,0 +1,46 @@
+```
+### [资料库](https://github.com/jwang0823/cg-inst/tree/master/data)
+* 目录结构说明：
+    - data: 存储相关数据的json文件，包括[数据集信息](./data/info.json), [训练骨格数据](./data/trajectory_data.json), [迁移骨格数据](./data/translation_data.json)，[语句信息](./data/sentence_info.csv)。
+    - 下载方式：将json文件保存到本地，以后可直接使用命令`python3 ./utils/download_and_parse.py`进行读取数据。
+* 数据集信息说明：
+    1) [数据集信息](./data/info.json): 存储该数据集的名称、来源等相关信息；
+         - 对应的骨格数据是[训练骨格数据](./data/trajectory_data.json)和[迁移骨格数据](./data/translation_data.json）。
+    2) [训练骨格数据](./data/trajectory_data.json): 包含整个数据集的50万个骨格数据；每个骨格数据由3个字符串组成，分别是绝对角度、相对角度和位置。
+    3) [迁移骨格数据](./data/translation_data.json): 包含10万个骨格数据，用于进行语义识别；每个骨格数据由4个字符串组成，分别是绝对角度、相对角度和位置，以及一个标签字符串。
+    4) [语句信息](./data/sentence_info.csv): 存储语言模型训练的预处理语句。
+         - 对应的骨格数据是[迁移骨格数据](./data/translation_data.json)。
+* 下载说明：
+    1. 使用命令`python3 ./utils/download_and_parse.py [-h] --info [--info-path PATH] [-c CHOICES]`进行数据集信息的下载和解析，例如：`python3 ./utils/download_and_parse.py -c ./data/`。
+    2. 使用命令`python3 ./utils/download_and_parse_translation_dataset.py [-h] [--info-path PATH] [-c CHOICES]`进行迁移骨格数据的下载和解析，例如：
+        ```
+         python3 ./utils/download_and_parse_translation_dataset.py --info-path ./data/trajectory_data.json -c ./data/translation_data.json
+        ```
+### [文件说明](./data/info.json)
+```
+{
+    "name": "3D human pose dataset",
+    "source": {
+        "website": "https://github.com/matterport/MatterPort-HumanPoseDataset",
+        "url": "https://matterport.github.io/MatterPort-HumanPoseDataset"
+    },
+    "info_type": ["json"]
+}
+```
+
+### [数据说明](./data/trajectory_data.json)
+```
+{
+  "trajectories": {
+      "3021899": {
+          "angle": -47, // Absolute angle in degrees
+          "angle_relative": -56, // Angle relative to the previous frame (if any), otherwise -1.0f, e.g., 0.0f means the angle is not specified.
+          "position": [-0.10238974793200069, 0.150806694088813], // [X,Y] coordinates in pixels
+      },...
+  }
+}
+```
+### [数据说明](./data/sentence_info.csv)
+```
+ID;sentence;num_steps;label
+```

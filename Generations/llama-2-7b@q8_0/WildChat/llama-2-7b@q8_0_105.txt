@@ -1,0 +1,184 @@
+at org.jruby.RubyArray.each(RubyArray.java:429)
+    at com.eclipsesource.elasticsearch.client.transport.client.TransportClient.getRequests(TransportClient.java:190)
+    at com.eclipsesource.elasticsearch.client.transport.client.TransportClient.request(TransportClient.java:138)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory$ElasticsearchRequestExecutor.executeRequest(InternalRestHighLevelClientFactory.java:206)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory$ElasticsearchRequestExecutor.execute(InternalRestHighLevelClientFactory.java:149)
+    at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:273)
+    at org.apache.http.impl.execchain.protocol.ExecutionContextThreadPrimary.executeRequest(ExecutionContextThreadPrimary.java:58)
+    at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:93)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory$PoolingHttpClientConnectionOperator.execute(InternalRestHighLevelClientFactory.java:164)
+    at org.apache.http.impl.conn.PoolingHttpClientConnectionManager$HttpClientConnectionCallbackHandler.connect(PoolingHttpClientConnectionManager.java:352)
+    at org.apache.http.impl.conn.PoolingHttpClientConnectionManager$HttpClientConnectionCallbackHandler.openSocket(PoolingHttpClientConnectionManager.java:544)
+    at org.apache.http.impl.conn.PoolingHttpClientConnectionManager$HttpClientConnectionCallbackHandler.openConnection(PoolingHttpClientConnectionManager.java:289)
+    at org.apache.http.impl.conn.ManagedClientConnectionImpl.<init>(ManagedClientConnectionImpl.java:166)
+    at org.apache.http.impl.conn.ManagedClientConnectionFactory.newConnection(ManagedClientConnectionFactory.java:130)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory$PoolingHttpClientConnectionOperator.openConnection(InternalRestHighLevelClientFactory.java:159)
+    at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+    at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:130)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory$PoolingHttpClientConnectionOperator.connect(InternalRestHighLevelClientFactory.java:154)
+    at org.apache.http.impl.conn.AbstractPoolEntry.connect(AbstractPoolEntry.java:106)
+    at org.apache.http.impl.conn.LoggingAbstractPooledConnAdapter.open(LoggingAbstractPooledConnAdapter.java:203)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory$PoolingHttpClientConnectionOperator.connect(InternalRestHighLevelClientFactory.java:149)
+    at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory$PoolingHttpClientConnectionOperator.open(InternalRestHighLevelClientFactory.java:137)
+    at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:130)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory$PoolingHttpClientConnectionOperator.open(InternalRestHighLevelClientFactory.java:132)
+    at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:109)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory$PoolingHttpClientConnectionOperator.access$300(InternalRestHighLevelClientFactory.java:126)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory.getPoolingHttpClientConnectionOperator(InternalRestHighLevelClientFactory.java:85)
+    at com.eclipsesource.elasticsearch.client.internal.InternalRestHighLevelClientFactory.<init>(InternalRestHighLevelClientFactory.java:79)
+    at com.eclipsesource.elasticsearch.ElasticsearchClient$Builder.build(ElasticsearchClient.java:182)
+    at com.eclipsesource.elasticsearch.ElasticsearchClient.<init>(ElasticsearchClient.java:650)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+    at org.jruby.RubyKernel.newInstance(RubyKernel.java:1089)
+    at org.jruby.RubyClass.makeInstance(RubyClass.java:869)
+    at com.eclipsesource.elasticsearch.ElasticsearchClient.<init>(ElasticsearchClient.java:792)
+    at com.eclipsesource.elasticsearch.client.rest.RestHighLevelClient.<init>(RestHighLevelClient.java:451)
+    at com.eclipsesource.elasticsearch.client.rest.RestHighLevelClient.<init>(RestHighLevelClient.java:393)
+\end{code}
+
+Comment: Have you tried using the ElasticSearch Java API?  You might have better luck with that than the Ruby client, and it should be able to handle the same queries without issues.
+
+Answer: I guess I found a solution by myself:
+\begin{itemize}
+\item First of all, I created a new project in my eclipse.
+\item Then, I copied all files from the old project into the new one (and removed the old folder).
+\end{itemize}
+
+# 项目介绍
+## 背景
+在前期工作中，我经常会遇到一些不合理的网站埋点问题。 比如上网时，往往会被监测到客户端请求的地址是在本地的，尤其是在跨境IP代理或者VPN中，当然，这也是可以解决的。 如果你只是想要知道您的客户端网站在哪里，那么本工程就会给您提供帮助。
+
+# 特性
+- 基于C# 5.0, ASP .NET Core, Microsoft Azure;
+- 支持使用HttpClient实现代理代理请求拦截；
+- 支持通过埋点技术获取用户真实IP地址的工具。
+- 支持可选配置服务器端和客户端两方分流代理技术；
+- 支持在设计时调试代理代理请求，并且进行优化；
+- 支持多平台跨域策略，以及针对每个平台的配置。
+- 支持HTTPS解析, 以及使用代理代理请求时重定向HTTPS到HTTP.
+# 功能介绍
+## 获取真实IP地址
+准确的获取真实客户端的ip地址并进行分流调度，方便后端服务器调用适合的拦截程序。
+## 代理请求拦截
+通过配置埋点工具，获取真实客户端IP地址,并且在客户端和服务器之间进行分流调度。
+## 可选配置
+- 是否要分流授予真实的IP地址
+- HTTPS解析, HTTP请求跟HTTPS请求进行转化，并尝试重定向到HTTP请求.
+# 使用说明
+## 前提条件
+1、[安装.Net Core 2.0](https://github.com/dotnet/core#install-instructions)
+2、[下载项目](https://github.com/christophd007/IPFixer.git)，并解压
+3、在项目根目录中添加以下配置：
+```C#
+// 监测代理请求是否进行了转发
+ServiceCollection.Configure<IProxingRule>(s => s.Enable = true);
+
+// 跨域策略
+ServiceCollection.Configure<RequestHandler>(s => s.UsePathRewrite("~/");
+```
+### 开发调试模式使用
+在项目根目录中添加以下配置：
+```C#
+// 监测代理请求是否进行了转发
+ServiceCollection.Configure<IProxingRule>(s => s.Enable = true);
+
+// 跨域策略
+ServiceCollection.Configure<RequestHandler>(s => s.UsePathRewrite("~/");
+```
+### 生产模式使用
+在项目根目录中添加以下配置：
+```C#
+// 监测代理请求是否进行了转发
+ServiceCollection.Configure<IProxingRule>(s => s.Enable = false);
+
+// 跨域策略
+ServiceCollection.Configure<RequestHandler>(s => s.UsePathRewrite("~/");
+```
+### 在项目中使用HttpClient实现代理请求
+添加以下配置：
+```C#
+// 跨域策略
+ServiceCollection.Configure<RequestHandler>(s => s.UsePathRewrite("~/");
+
+// 代理代理请求拦截器
+ServiceCollection.AddScoped<IProxingRule, ProxingRule>();
+```
+### 在项目中使用埋点技术获取真实IP地址
+添加以下配置：
+```C#
+// 监测代理请求是否进行了转发
+ServiceCollection.Configure<IProxingRule>(s => s.Enable = true);
+
+// 跨域策略
+ServiceCollection.Configure<RequestHandler>(s => s.UsePathRewrite("~/");
+```
+### 使用HttpClient实现代理请求和埋点获取真实IP地址
+添加以下配置：
+```C#
+// 跨域策略
+ServiceCollection.Configure<RequestHandler>(s => s.UsePathRewrite("~/");
+
+// 代理代理请求拦截器
+ServiceCollection.AddScoped<IProxingRule, ProxingRule>();
+```
+### 使用HttpClient实现代理请求和埋点获取真实IP地址,并跨域解析HTTPS到HTTP
+添加以下配置：
+```C#
+// 监测代理请求是否进行了转发
+ServiceCollection.Configure<IProxingRule>(s => s.Enable = true);
+
+// HTTPS解析，跨域策略
+ServiceCollection.Configure<RequestHandler>(s => s.UsePathRewrite("~/");
+```
+### 使用HttpClient实现代理请求和埋点获取真实IP地址,并跨域解析HTTPS到HTTP，并且重定向HTTPS到HTTP
+添加以下配置：
+```C#
+// 监测代理请求是否进行了转发
+ServiceCollection.Configure<IProxingRule>(s => s.Enable = true);
+
+// HTTPS解析，跨域策略
+ServiceCollection.Configure<RequestHandler>(s => s.UsePathRewrite("~/");
+```
+### 使用HttpClient实现代理请求和埋点获取真实IP地址,并且跨域解析HTTPS到HTTP，并且重定向HTTPS到HTTP
+添加以下配置：
+```C#
+// 监测代理请求是否进行了转发
+ServiceCollection.Configure<IProxingRule>(s => s.Enable = true);
+
+// HTTPS解析，跨域策略
+ServiceCollection.Configure<RequestHandler>(s => s.UsePathRewrite("~/");
+```
+## 注意事项
+### 代理请求时,可能会发生如下情况：
+1、重定向到HTTPS；
+2、重定向到HTTP；
+3、不进行转发，返回原始结果。
+
+### 受影响库
+
+- `spring-cloud-starter-elasticsearch`
+
+#### 异常信息
+
+```log
+java.net.SocketException: received plaintext http traffic on an https channel, closing connection
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:467)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.<init>(ManagedClientConnectionImpl.java:274)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:179)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:136)
+	at org.elasticsearch.transport.netty4.Netty4Transport.newConnection(Netty4Transport.java:332)
+	at org.elasticsearch.transport.netty4.Netty4Transport$Netty4ChannelPoolHandler.connectionCreated(Netty4Transport.java:501)
+```
+
+### 排除
+
+- 异常是由于网络问题导致的，可以使用[Elasticsearch官方解决方案](https://www.elastic.co/guide/en/elasticsearch/reference/7.8/_network_connectivity_issues.html#_tls_and_ssl)
+- 当前版本中使用的是SpringBoot2.x，而不是SpringBoot3.0。由于Elasticsearch官方已经停止支持SpringBoot1.x
+- 需要注意的是：
+    - `elasticsearch:8.4.8`（上一次使用`elasticsearch:7.9.5`时，没有发生问题）；
+    - `elastic-rest-highlevelclient:2.10.1` （上一次使用`elastic-rest-highlevelclient:1.8.5`时，没有发生问题）。

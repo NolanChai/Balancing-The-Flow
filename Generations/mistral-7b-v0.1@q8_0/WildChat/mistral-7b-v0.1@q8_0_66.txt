@@ -1,0 +1,36 @@
+User 0: Hey there! Can you check out the new version of our Python SDK? It has a built-in `get_klines` method that should make this process much simpler. You can find more information about the API and the latest documentation here: https://docs.mexc.com/#/api-documentation/market-data
+User 1: >Can you check out the new version of our Python SDK? It has a built-in get_klines method that should make this process much simpler. You can find more information about the API and the latest documentation here: https://docs.mexc.com/#/api-documentation/market-data
+
+I've already seen it, but how can I install it?
+
+- You are likely using the wrong API key for spot trading.
+
+Please check that you have selected the correct type of API key under `Settings` -> `API Settings`.
+
+If you cannot resolve the issue, please open a support ticket and include a screenshot of the error message and your API key ID so that we can investigate further.
+- Thanks for your answer , I’m using Coinbase Pro api key not MEXC Api key . But i got same Error from Coinbase Pro api also
+- @Rohith_Sureshkumar Have you checked your API keys on Coinbase? Is there anything suspicious in the log? We are not familiar with the exchange. Maybe a moderator can chime in to provide some guidance.
+- @James-Cowen I tried coinbase api ,but its not working same error .
+
+1 Like
+
+It’s a known bug. Please have a look at this topic: https://community.sharpsplints.com/t/lookback-problem-after-firmware-update-to-3-3-0/42897?u=djp12345
+
+Also I’ve filed a ticket to the developers. Please be patient and wait for an update (pun intended) from them. They are probably working on it, but they have to finish what they have in their hands first.
+
+Thanks!
+
+Lookback works as expected for me on 3.3.0, but I think the problem you’re having may be related to the lookahead function and not the lookback function. The way lookahead works is by looking ahead in the queue to see if there’s anything coming up that could cause a collision. If so, it will slow down or stop the drill before that event. I think what you might be seeing is that it slows down/stops the drill more than necessary since it has no way of knowing when the new tool will arrive in the queue and resume cutting.
+
+I am not sure about that because with lookahead off and on the problem was there.
+And if I switch to another function like for example 3D carve, then everything works fine. So if the problem is not with lookback then it must be a bug in the software, no?
+
+1 Like
+
+I am trying to install the CWM Recovery on my Galaxy S4 (i9500) but i cant make it work. I am using Odin3 3.12 and have extracted the .tar file using 7zip, and tried with all 4 possible versions in Odin3.
+I used the PDA part of Odin to flash it but when i do that the recovery will not load after a reboot, so i changed my mind and thought that i will just flash the full .tar with AP, CP and CSC parts in Odin3 and then the recovery should work but no matter what i did nothing seems to work.
+I have also tried with both 20140115 & 20140117 versions of TWRP Recovery (i know that both are for international version) and those do not seem to load after a reboot as well, so i am not sure what i am doing wrong.
+I tried with all the 3 variants: cwm6_twrp-2.6.3.0-20140115_i9500-v1.tar, cwm7_twrp-2.8.5.0-20140117_i9500-v1.tar and cwm8_twrp-3.0.1.0-20140117_i9500-v1.tar but it seems like nothing works on my device.
+What am i doing wrong?
+I know that there is no CWM Recovery available for the international version and that TWRP is for international as well but if i flash any of these 4 .tars with Odin3 (either AP/CP or PDA) they will not work after a reboot.
+Please help me make it work, thank you in advance!

@@ -1,0 +1,79 @@
+## 1. 问题描述
+
+在使用`ssh`的过程中，会自动将访问过的`ssh`节点保存到当前用户的配置文件中：`~/.ssh/known_hosts`。
+
+此时，如果需要对`ssh`客户端进行清理操作，即删除掉这部分配置，可以通过以下方式完成：
+
+## 2. 执行步骤
+
+### 2.1. 获取到当前目录下的`known_hosts`文件
+
+```sh
+$ pwd
+# /root/.ssh/
+$ ll
+# total 36
+# -rw-------. 1 root root  784 Sep 29 09:42 authorized_keys
+# -rw-r--r--. 1 root root 1542 Dec 30  2019 config
+# -rw-r--r--. 1 root root   46 Jun 23  2017 id_rsa
+# -rw-------. 1 root root  304 Sep 29 09:45 known_hosts
+```
+
+### 2.2. 将当前目录下的`known_hosts`文件复制到某一临时目录
+
+```sh
+$ sudo cp /root/.ssh/known_hosts /tmp/
+# [sudo] password for root:
+# cp: cannot stat `/root/.ssh/known_hosts': No such file or directory
+```
+
+### 2.3. 将某一临时目录下的`known_hosts`文件移除掉
+
+```sh
+$ sudo rm /tmp/known_hosts
+# [sudo] password for root:
+# rm: cannot remove `/tmp/known_hosts': No such file or directory
+```
+
+### 2.4. 清理完成
+
+```sh
+$ pwd
+# /root/.ssh/
+$ ll
+# total 36
+# -rw-------. 1 root root  784 Sep 29 09:42 authorized_keys
+# -rw-r--r--. 1 root root 1542 Dec 30  2019 config
+# -rw-r--r--. 1 root root   46 Jun 23  2017 id_rsa
+```
+
+1. 安装[PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/)，或者是[Xshell](http://www.netsarang.com/)。
+2. 在putty中输入主机地址和端口号，点击登录，提示：The server's host key is not cached in the registry. You have no guarantee that the server is the computer you think it is.
+3. 在putty中输入yes，重新输入主机地址，连接上。
+4. 然后删除/etc/known_hosts，或者修改为下面的内容，这样就不会出现提示了。
+
+```shell
+127.0.0.1 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDHx+fzjcR5eFVh3d9Zy8bk5nz+MwTt2s2I4YaRp7LKmDvGXlJ6N6hv/Bz1uEjZP0r46K2Wx33/C+V4UZW27YcZ9QFYbkM8VNtE9HBJIcR1zDmKnw0l3+dYhZgqiPvJuUjw1sX7r5S5xOi7249WzG6oGyh+qf/fK3L8aT4k8VKRc9bF2Ce+0l3t7/p4DdK3nIq49HpLZJvSfMwu7UjgP52W1QmGx127zO142iY74wN3R89rVN0yJZo6Et8JFb/qd7aX84kGnBHKjSsW+M3lR9/z321T5CbkPp
+```
+
+* 如果是Windows下面的putty，可以使用cmd命令：ssh-keygen -f "known_hosts" -R IP地址
+* Mac下面可以直接修改/etc/ssh_known_hosts
+
+```
+$ ssh-keygen -R <IP_address>
+mkstemp: No such file or directory
+
+Error: mkstemp(2): No such file or directory (2)
+```
+
+在用户的目录下创建一个.ssh，在这里放置id_rsa，然后再执行：
+
+```
+$ ssh-keygen -R <IP_address>
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/<user>/.ssh/id_rsa.
+Your public key has been saved in /home/<user>/.ssh/id_rsa.pub.
+The key fingerprint is:
+...
+```

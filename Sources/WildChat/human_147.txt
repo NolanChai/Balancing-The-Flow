@@ -1,0 +1,43 @@
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = 在这个画面中，我们看到一位身穿CK运动内衣的女性模特，她正在进行体能训练，展示出她强健的肌肉和活力四射的身姿。背景是阳光明媚的天台、街道、广场。这个画面强调身体的健康和活力，传达“性感是来自于健康和活力”的概念。无论是男性还是女性，都可以通过展现他们的身体力量来彰显性感，而不仅仅是局限于外表的审美标准。
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
+
+Assistant: "/imagine prompt: In this scene, we see a female model wearing CK sportswear, engaged in a physical training session, showcasing her strong muscles and vibrant posture. The background consists of a sunny rooftop, streets, and a plaza. This image emphasizes the importance of physical health and vitality, conveying the concept that "sexiness comes from health and vigor". Both men and women can showcase their sexiness by demonstrating their physical strength, rather than solely adhering to aesthetic standards. --ar 16:9 --v 5
+
+/imagine prompt: In this image, a dynamic female model wearing CK athletic underwear is captured during a vigorous workout, displaying her toned muscles and exuding an energetic presence. The scene is set on a sun-drenched rooftop, surrounded by bustling streets and a vibrant plaza. This composition accentuates the model's health and vitality, conveying the idea that sexiness emanates from an active and fit body. Whether male or female, one's sexiness can be showcased through their physical strength, surpassing conventional aesthetic beauty standards. --ar 16:9 --v 5
+
+/imagine prompt: Within this captivating visual, a female model adorned in CK sportswear demonstrates her physical prowess through intense fitness training. Her well-built muscles and lively demeanor are on full display. The background features a sunlit rooftop overlooking bustling streets and an inviting plaza. This composition emphasizes the importance of a healthy and vigorous body, promoting the notion that sexiness originates from a foundation of health and vitality. Irrespective of gender, one can manifest their sexiness by showcasing their physical strength, as opposed to relying solely on external aesthetics. --ar 16:9 --v 5
+
+/imagine prompt: This image encompasses a setting where we witness a female model wearing CK sports underwear, actively participating in physical training. Her robust muscles and vibrant pose highlight her impressive fitness. The backdrop consists of a sun-kissed rooftop, offering scenic views of bustling streets and a lively plaza. This scene underscores the significance of physical well-being and exudes an energy that conveys the concept that sexiness emanates from health and vitality. Irrespective of gender, individuals can embody sexiness by showcasing their physical strength, transcending mere external beauty standards. --ar 16:9 --v 5"

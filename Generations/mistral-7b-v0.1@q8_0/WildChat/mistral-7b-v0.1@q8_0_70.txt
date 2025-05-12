@@ -1,0 +1,7 @@
+so, we've got a gradient behind this textarea element, then the simulated textarea (which is nothing but an HTML textarea element with contenteditable attribute set to true). that textarea has a little bit of custom styling for now: font family, font size, font weight, and background color.
+
+once you type something into the textarea and press enter, that text will get wrapped inside a span, which gets appended to this container right after that textarea element. so far we're good, but i want the following lines of text (after pressing enter) to have an animated effect towards their remaining space inbetween this simulated textarea and right side.
+
+once you type something into the textarea and press enter, that text gets wrapped inside a span, which gets appended to this container right after that textarea element. so far we're good, but i want the following lines of text (after pressing enter) to have an animated effect towards their remaining space inbetween this simulated textarea and right side.
+
+this is my first time using HTML/CSS/JS and it's really confusing for me, but i'll try my best to explain. once you type something into the textarea and press enter, that text gets wrapped inside a span, which gets appended to this container right after that textarea element. so far we're good, but i want the following lines of text (after pressing enter) to have an animated effect towards their remaining space inbetween this simulated textarea and right side.

@@ -1,0 +1,27 @@
+I have the same issue with a text that I want to translate from English into Russian. I'm using the Yandex API:
+
+```
+<?php
+$text = 'This pilot will focus on intra- and inter-health system medication transport and usage in North Carolina, Indiana and Tennessee, and studies the application of blockchain and IoT technology used to monitor specialty medication distribution across supply chains.';
+$apiKey = '<my api key>';
+$lang = 'ru';
+$textToTranslate = urlencode($text);
+$url = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key='.$apiKey.'&lang='.$lang.'&text='.$textToTranslate;
+
+// Send HTTP request to translate.yandex.net API and get response as string
+$response = file_get_contents($url);
+
+// Convert JSON string into PHP array
+$responseArray = json_decode($response, true);
+
+echo $responseArray['text'][0];
+?>
+```
+
+However, when I'm trying to run the script, this error appears:
+
+```
+Fatal error: Uncaught Exception: String could not be parsed as JSON in /Applications/MAMP/htdocs/myproject/translate.php:6 Stack trace: #0 {main} thrown in /Applications/MAMP/htdocs/myproject/translate.php on line 6
+```
+
+How can I solve this problem?

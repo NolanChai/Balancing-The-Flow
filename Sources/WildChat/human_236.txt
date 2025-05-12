@@ -1,0 +1,61 @@
+User: "
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ node server.js
+Start server at port 3000.
+
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ npm install express --save
+
+up to date, audited 65 packages in 1s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ node server.js
+Start server at port 3000."
+
+Assistant: "The server is successfully started at port 3000."
+
+User: "ใส่โค้ดอะไร"
+
+Assistant: "อาจารย์ไม่สามารถให้ข้อมูลการเขียนโค้ดได้ในปัจจุบัน แต่คุณสามารถใช้โค้ดตัวอย่างดังต่อไปนี้เพื่อสร้างเซิร์ฟเวอร์ Express พื้นฐาน:
+
+```javascript
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
+```
+
+ในตัวอย่างนี้จะใช้ Express เพื่อสร้างเซิร์ฟเวอร์ที่รับคำขอ GET ที่ URL หลัก (`/`) และตอบกลับด้วยข้อความ "Hello World!" จากนั้น server จะเริ่มต้นที่พอร์ต 3000 และพิมพ์ข้อความ "Server running at http://localhost:3000" ในแถบคอนโซลเมื่อ server ถูกเรียกใช้."
+
+User: "npm install express --save
+
+up to date, audited 65 packages in 1s
+
+11 packages are looking for funding
+run npm fund for details
+
+found 0 vulnerabilities
+
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ node server.js
+Start server at port 3000. แก้ยังไงให้รันได้"
+
+Assistant: "ผู้ใช้ควรตรวจสอบโค้ดใน file `server.js` เพื่อให้แน่ใจว่าไม่มีข้อผิดพลาดในโค้ดของตนเอง และยืนยันว่าไฟล์ `server.js` อยู่ในโฟลเดอร์ที่ถูกต้อง และว่ามีอนุญาตให้เข้าถึงไฟล์ดังกล่าว
+
+หากทุกอย่างยังคงไม่ทำงาน ลองตรวจสอบว่าพอร์ตที่ตั้งค่าในโค้ดตรงกับพอร์ตที่ใช้งานอยู่ในเครื่องของคุณหรือไม่ ตัวอย่างในโค้ดจะกำหนดเป็น `port 3000` คุณอาจต้องการเปลี่ยนค่าพอร์ตตามเครื่องของคุณเอง
+
+นอกจากนี้ อย่าลืมตรวจสอบว่ามีโปรแกรม node.js ที่ติดตั้งอยู่ในเครื่องของคุณและเวอร์ชันที่ถูกต้องของ node.js อูบันซ้ำอยู่ในเครื่องของคุณ และคุณกำลังรันโค้ดในเทอร์มินัลที่ถูกระบุอย่างถูกต้อง
+
+หากคุณทำตามขั้นตอนทั้งหมดแล้วและยังพบปัญหา คุณอาจต้องติดต่อเจ้าหน้าที่สนับสนุนของ node.js หรือ Express เพื่อขอความช่วยเหลือเพิ่มเติม"

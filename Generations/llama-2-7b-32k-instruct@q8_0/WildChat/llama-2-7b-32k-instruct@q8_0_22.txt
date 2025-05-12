@@ -1,0 +1,15 @@
+Sure! Here is an example of how you can create a button in Excel that displays the required values for you through a query box:
+
+1. Select the cell where you want to place the button. For example, select cell A1.
+2. Go to the "Developer" tab and click on the "Query" button.
+3. In the "Create Query" dialog box, enter the following formula into the "Source" field: =IF(A1=MATCH(A1,A:A,0),"Enter value here",")"&B1&":"&ROW()&"!")&". Please note that A1 is the cell reference where you want to enter the value.
+4. Click on the "Ok" button to create the query.
+5. Create a button in your Excel sheet, and when you click on it, it should display the required values for you through the query box. You can do this by right-clicking on the button and selecting "Assign macro..." Then, select the macro code below and click "OK".
+
+Sub Button1_Click()
+    Query1.Address = Range("A1")
+    Query1.Value = TextInput1
+End Sub
+
+6. In this example, the query named "Query1" will display all of the required values for you in a column from the first row up to 12 rows down vertically. You can change the ranges and number of rows as per your need. Also, you can replace TextInput1 with any other text you want to display instead of asking for a numerical value.
+7. Now, when you click on the button, it will display all of the required values for you in a column from the first row up to 12 rows down vertically. You can modify the formula as per your requirement.

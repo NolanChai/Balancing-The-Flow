@@ -1,0 +1,34 @@
+It is the area of a smaller polar rectangle, divided by the area of the corresponding small rectangle in the xy plane, in the limit as the size goes to zero.
+
+The magnification factor r in double integrals in polar coordinates represents the ratio between the area of a small rectangle in the xy-plane and the area of the corresponding small polar rectangle in terms of radius r. In other words, it is used to convert the double integral in xy-coordinates to a single integral in polar coordinates. The value of r can vary depending on the region being integrated.
+
+The integral of a function over a set depends on whether the function is Riemann integrable or not. A function is Riemann integrable if it has an antiderivative on [a,b]. In other words, if there exists a function g:[a,b]->R such that f(x) = g'(x) for all x in [a,b], then f is Riemann integrable.
+
+If f:R^2->R is a bounded continuous function, it may or may not be Riemann integrable over a set A in R^2. Therefore, the integral of f over A, denoted by fdA, may or may not exist.
+
+In summary, the answer to the question depends on whether f:R^2->R is Riemann integrable over A in R^2.
+
+The relation between triple integrals and volume is (b): The triple integral of a positive function over a region is the four-dimensional volume of the four-dimensional region under the graph in four-dimensional space.
+
+To set up a triple integral over the region $0 \leq x \leq y \leq z \leq 1$ in the order $dydzdx$, we need to specify the limits of integration for each variable. The limits of integration are given as follows:
+
+* For $z$, we want $z$ to range from $0$ to $1$.
+* For $y$, we want $y$ to range from $z$ to $1$.
+* For $x$, we want $x$ to range from $0$ to $y$.
+
+Therefore, the appropriate limits of integration are:
+
+(a) . $0 \leq z \leq 1$
+
+The center of mass is the average position of all points in the cube with respect to their mass density. Therefore, we need to find the weighted average of each point in the cube with respect to its mass density. 
+Let's assume that x, y, and z are between 0 and 1. Then the mass density at each point is f(x,y,z) = x^3 + y^3 + z^3. 
+The total mass of the cube is M = (1/5)*(1 + 1 + 1) = 1/5. The total distance from the center of the cube to each point is d = sqrt(x^2 + y^2 + z^2). 
+To find the weighted average of each point with respect to its mass density, we can use the formula: 
+C = (1/M) * sum((x^3 + y^3 + z^3)/d^3, x=0,y=0,z=0, ... , x=1,y=1,z=1) 
+Simplifying this expression gives us: 
+C = (4/5) * [(0*0 + 1/2*1/6 + 0)/(1/5) + (0.5*2/30 + 1/8*8/720 + 0.5*5/30)/(3/5) + (1*1/10 + 3/4*9/324 + 1*1/20)/(5/5)] 
+C = (4/5) * [(1/36 + 1/24 + 1/60)/5 + (7/360 + 3/160 + 7/60)/9 + (29/360 + 3/80 + 29/240)/25] 
+C = (4/5) * [(9/480 + 21/480 + 13/480)/225 + (17/2160 + 27/1260 + 17/4200)/90 + (196/1080 + 54/2040 + 196/8400)/75] 
+C = (4/5) * [(31/480)/10 + (305/42000)/10 + (10021/3600000)/100] 
+C = (4/5) * [(3.1/5)/10 + (7.17/100)] 
+Therefore, the center of mass is the point (3.1/5, 7.17/100, 3.1/5), which is not one of the choices given in the problem.

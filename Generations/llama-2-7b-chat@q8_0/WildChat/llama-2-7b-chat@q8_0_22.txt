@@ -1,0 +1,24 @@
+To create a button in Excel that displays values based on a query box, you can use VBA (Visual Basic for Applications) macros. Here's an example of how you could do this:
+1. Open the Visual Basic Editor (VBE): Press "Alt + F11" to open the VBE.
+2. Insert a new module: In the VBE, click on "Insert" > "Module" to insert a new module.
+3. Write the macro code: Copy and paste the following code into the new module:
+Sub DisplayValues()
+Dim lastRow As Long
+lastRow = Cells(Rows.count, "A").End(xlUp).Row
+Cells(1, "A").Value = InputBox("Enter value", Type:=8)
+For i = 2 To lastRow
+    Cells(i, "A").Value = InputBox("Enter value", Type:=8)
+Next i
+4. Save the module: Click "File" > "Save" to save the module.
+5. Create a button: In the worksheet where you want to use the macro button, click on the "Insert" tab and then click on "Button". Select the "Command Button" option and give it a name (e.g., "Display Values").
+6. Associate the macro with the button: Click on the "Assign Macro" button in the "Properties" section of the button dialog box. In the "Macro name" field, select the name of the macro you created in step 3 (i.e., "DisplayValues").
+7. Run the macro: Once you've associated the macro with the button, clicking on the button will run the macro and display the entered values in the specified range.
+
+Here's an explanation of each line of code:
+* `Dim lastRow As Long`: This line defines a variable called "lastRow" and assigns it the type "Long". It will be used to store the row number of the last cell in the range that contains the values entered through the query box.
+* `lastRow = Cells(Rows.count, "A").End(xlUp).Row`: This line uses the "End(xlUp)" method to find the last row in the range "A" (or any other specified range). The resulting value will be stored in the variable "lastRow".
+* `Cells(1, "A").Value = InputBox("Enter value", Type:=8)`: This line displays an input box where you can enter a value. The value entered will be stored in cell A1.
+* `For i = 2 To lastRow`: This line starts a loop that will iterate from row 2 to the last row containing values (i.e., the row number returned by the "lastRow" variable).
+* `Cells(i, "A").Value = InputBox("Enter value", Type:=8)`: This line displays an input box for each row from 2 to the last row and stores the entered value in the corresponding cell.
+
+Note that this macro assumes that you want to enter values in column A only. If you want to enter values in a different column, simply change the column reference in the code (e.g., replace "A" with "B", "C", etc.).

@@ -1,0 +1,64 @@
+User: "Network Automation testing using  C#  for ping ,Ip must be input from client"
+
+Assistant: "To create a network automation testing application in C# that allows a client to input an IP address to ping, you can follow these basic steps:
+
+1. Create a new C# Console Application project in Visual Studio or any other C# IDE.
+2. Include the necessary namespaces in the 'Program.cs' file:
+
+```csharp
+using System;
+using System.Net;
+using System.Net.NetworkInformation;
+```
+
+3. Implement a `PingIpAddress` function that takes the IP address as input and returns the roundtrip time of the ping response.
+
+```csharp
+public static long PingIpAddress(string ipAddress)
+{
+    long roundtripTime = -1;
+    try
+    {
+        Ping pingSender = new Ping();
+        IPAddress address = IPAddress.Parse(ipAddress);
+        PingReply reply = pingSender.Send(address);
+
+        if (reply.Status == IPStatus.Success)
+        {
+            roundtripTime = reply.RoundtripTime;
+        }
+        else
+        {
+            Console.WriteLine($"Ping to {ipAddress} failed. {reply.Status}");
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error pinging {ipAddress}: {ex.Message}");
+    }
+
+    return roundtripTime;
+}
+```
+
+4. Modify the `Main` function to get the IP address input from the user, and call the `PingIpAddress` function.
+
+```csharp
+static void Main(string[] args)
+{
+    Console.WriteLine("Please enter an IP address to ping:");
+    string ipAddress = Console.ReadLine();
+    long roundtripTime = PingIpAddress(ipAddress);
+
+    if (roundtripTime >= 0)
+    {
+        Console.WriteLine($"Ping to {ipAddress} succeeded. Roundtrip time: {roundtripTime} ms");
+    }
+    
+    Console.ReadKey();
+}
+```
+
+5. Build and run the application. Users can now input an IP address to ping, and the application will display whether the ping succeeded as well as the roundtrip time.
+
+Keep in mind that the code above is for a simple console application. If you have specific requirements for the client application or user interface, you might want to create a desktop or web-based client that submits the IP address to be pinged, and have the server-side code perform the ping test and return the results."

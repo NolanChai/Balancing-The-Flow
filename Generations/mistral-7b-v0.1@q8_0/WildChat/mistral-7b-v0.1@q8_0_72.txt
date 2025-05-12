@@ -1,0 +1,29 @@
+I noticed something odd when comparing my production environment and QA environment.  On the production environment, if the annual statements are run on a Friday or Saturday, the results do not show up until Monday morning.  This is consistent over a number of months.   For example, I ran it last night (Saturday) at 11:40 pm, and when I checked this morning at 8 am it was still in processing.  When I ran it on Friday this week, same thing.  However, if run during the week, the results are available by the following day.
+
+The environment is WebFOCUS 8.3.2.08, running on HP-UX 11i v3, with a database of Teradata 14.00.05.06.
+
+Has anyone else seen this?
+
+Hi all.
+My company is going to implement new SAP ECC6.0 and we are planning to use CCMS(Cluster Configuration Manager) for high availability.
+
+It's well known that the default installation of CCMS comes with two-node configuration, and you can make four node cluster as well.
+However, we would like to have 8 node cluster and it seems that I can not find a way to do so.
+Anybody knows how to make such kind of HA cluster using SAP's tools? or maybe there is any other options?
+I appreciate your help.
+
+Best regards,
+Kim
+
+### 1 Answer
+
+- Former Member
+Oct 07, 2005 at 03:14 PM
+
+Hi Kim,
+
+SAP CCMS supports up to 8 nodes and it is the max. supported by SAP.
+
+Regards
+
+Jagadeesh

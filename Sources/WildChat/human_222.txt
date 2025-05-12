@@ -1,0 +1,140 @@
+User: "Ein Patient ruft in einer Arzt Praxis an und spricht mit dem Sekretaer.
+Erzeugen Sie ein Dialogbeispiel fr die Absicht 'Book_Appointment' (Termin vereinbaren) unter Verwendung der folgenden Aktionen und Entitaeten:
+Entities: Patient_Name (Full name), Appointment_Date, Appointment_Time, Appointment_Type (Reason for Appointment), Doctor_Name, Patient_Birthdate, Insurance_status (Private or Gesetzlich), Customer_status (Already Customer?).
+Jede Entitt sollte folgende Informationen enthalten: 'entity' (Entitaet), 'value' (Wert).
+Actions: Check_Calendar, Appointment_Proposal, Confirm_Appointment, Ask_for_name,Ask_for_Birthdate, Ask_for_which_Doktor, Ask_for_customer_status, Ask_for_what_reason, Ask_for_Insurance_status, Ask_for_which_date, Ask_for_what_time, Greeting, Farewell.
+Intent is the whole time "Book_Appointment"
+Jeder Dialog sollte folgende Informationen enthalten: 'role' (Rolle), 'utterance' (Aeuerung), 'intent' (Absicht, wenn zutreffend), 'actions' (Aktionen, falls zutreffend), 'entities' (Entitaeten, falls zutreffend).
+Der Dialog soll in der deutschen Sprache sein
+Die einzelnen Dialoge sollen sich vom Aufbau stark unterscheiden, jedoch soll der Formale Aufbau "role","uterance", "intent", "action", "entities" stehts aufrecht erhalten bleiben.
+Die actions und entities sollen sich auf den jeweilig gesagten Satz beziehen und nicht auf den Satz danach.
+Sollte der jeweilige Satz eine entitie beziehen, dann sollte die entitie erneut angegeben werden. Wie zum Beispiel wenn die Sekretrin den Patienten Namen sagt sollte erneut Patient_Name bei diesem Satz angegeben sein.
+Das ist ein Beispiel fr den formalen Aufbau (Bitte beachte, dass sich die Dialoge stark unterscheiden sollen und auch die Inhalte der Entitaeten sich unterscheiden sollen. Also der Patient soll einen anderen Namen beziehungsweise Geburtsdatum haben.):
+
+"role": "Patient",
+"utterance": "sentence",
+"actions": [""],
+"intent": "Book_Appointment",
+"entities": ["entity": "", "value": ""]
+,
+
+
+"role": "Sekretaer",
+"utterance": "sentence",
+"actions": [""],
+"intent": "Book_Appointment",
+"entities": ["entity": "", "value": ""]
+,
+
+Die einzelnen Dialoge sollen sich vom Aufbau stark unterscheiden. 
+Schreibe einen Dialog mit mindestens 5 Eintraege fuer den Patienten und mindestens 5 Eintraege fuer den Sekretaer.
+Schreibe jetzt einen vollstaendigen Dialog unter Beachtung der obigen Details:
+"
+
+Assistant: ""role": "Patient",
+"utterance": "Guten Tag, ich würde gerne einen Termin vereinbaren.",
+"actions": ["Ask_for_name"],
+"intent": "Book_Appointment",
+"entities": []
+
+"role": "Sekretär",
+"utterance": "Ja, gerne. Wie lautet Ihr Name?",
+"actions": ["Ask_for_Birthdate"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Patient_Name", "value": "Max Mustermann"]
+
+"role": "Patient",
+"utterance": "Ich bin Max Mustermann.",
+"actions": ["Ask_for_Birthdate"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Patient_Name", "value": "Max Mustermann"]
+
+"role": "Sekretär",
+"utterance": "Geben Sie mir bitte Ihr Geburtsdatum an.",
+"actions": ["Ask_for_which_Doktor"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Patient_Birthdate", "value": "01.01.1980"]
+
+"role": "Patient",
+"utterance": "Mein Geburtsdatum ist der 01.01.1980.",
+"actions": ["Ask_for_which_Doktor"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Patient_Birthdate", "value": "01.01.1980"]
+
+"role": "Sekretär",
+"utterance": "Bei welchem Arzt möchten Sie einen Termin vereinbaren?",
+"actions": ["Ask_for_customer_status"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Doctor_Name", "value": "Dr. Müller"]
+
+"role": "Patient",
+"utterance": "Ich möchte gerne einen Termin bei Dr. Müller.",
+"actions": ["Ask_for_customer_status"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Doctor_Name", "value": "Dr. Müller"]
+
+"role": "Sekretär",
+"utterance": "Sind Sie bereits Patient bei uns?",
+"actions": ["Ask_for_what_reason"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Customer_status", "value": "Yes"]
+
+"role": "Patient",
+"utterance": "Ja, ich bin bereits Patient bei Ihnen.",
+"actions": ["Ask_for_what_reason"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Customer_status", "value": "Yes"]
+
+"role": "Sekretär",
+"utterance": "Aus welchem Grund möchten Sie einen Termin vereinbaren?",
+"actions": ["Ask_for_Insurance_status"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Appointment_Type", "value": "Kontrolluntersuchung"]
+
+"role": "Patient",
+"utterance": "Ich möchte einen Termin zur Kontrolluntersuchung vereinbaren.",
+"actions": ["Ask_for_Insurance_status"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Appointment_Type", "value": "Kontrolluntersuchung"]
+
+"role": "Sekretär",
+"utterance": "Sind Sie privat oder gesetzlich versichert?",
+"actions": ["Ask_for_which_date"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Insurance_status", "value": "Private"]
+
+"role": "Patient",
+"utterance": "Ich bin privat versichert.",
+"actions": ["Ask_for_which_date"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Insurance_status", "value": "Private"]
+
+"role": "Sekretär",
+"utterance": "An welchem Tag möchten Sie den Termin vereinbaren?",
+"actions": ["Ask_for_what_time"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Appointment_Date", "value": "15.10.2022"]
+
+"role": "Patient",
+"utterance": "Am 15.10.2022 würde ich gerne den Termin vereinbaren.",
+"actions": ["Ask_for_what_time"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Appointment_Date", "value": "15.10.2022"]
+
+"role": "Sekretär",
+"utterance": "Um wie viel Uhr hätten Sie denn gerne Ihren Termin?",
+"actions": ["Confirm_Appointment"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Appointment_Time", "value": "10:30"]
+
+"role": "Patient",
+"utterance": "Um 10:30 Uhr wäre mir recht.",
+"actions": ["Confirm_Appointment"],
+"intent": "Book_Appointment",
+"entities": ["entity": "Appointment_Time", "value": "10:30"]
+
+"role": "Sekretär",
+"utterance": "Gut, ich habe Ihren Termin bei Dr. Müller am 15.10.2022 um 10:30 Uhr notiert. Vielen Dank und auf Wiedersehen!",
+"actions": ["Farewell"],
+"intent": "Book_Appointment",
+"entities": []"

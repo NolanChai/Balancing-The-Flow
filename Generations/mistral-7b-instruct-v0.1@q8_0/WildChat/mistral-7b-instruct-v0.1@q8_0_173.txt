@@ -1,0 +1,38 @@
+To test network automation using C#, you can use the System.Net namespace to send a ping request to an IP address input by the client. Here's some sample code that demonstrates how to do this:
+```csharp
+using System;
+using System.Net;
+
+namespace NetworkAutomationTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Get IP address from client input
+            Console.Write("Enter IP address to ping: ");
+            string ipAddress = Console.ReadLine();
+
+            try
+            {
+                using (Ping ping = new Ping())
+                {
+                    var result = ping.Send(ipAddress);
+
+                    if (result[0].Status == IPStatus.Success)
+                        Console.WriteLine($"Successfully reached {ipAddress}");
+                    else
+                        Console.WriteLine($"Failed to reach {ipAddress}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+```
+This code prompts the user to enter an IP address, uses a Ping object to send a ping request, and checks the status of the response. If the ping is successful, it outputs a message indicating that it was successful, if not, it outputs a message indicating that it failed.

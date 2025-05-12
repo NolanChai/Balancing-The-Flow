@@ -1,0 +1,15 @@
+I am looking for help in writing a program to send emails from my system. It is a very simple program which will take user's name, password, mail body etc... and the program should send it as an HTML email to my Gmail account (which I have access to). The catch here is that it should look like that it has come from "Someone@gmail.com" (I can change that part) with the exact same email id.
+
+I have been searching for this but all of them are asking for a SMTP server. I don't want to use any external SMTP servers, just my own. The idea is that whenever someone logs in with their credentials, they will get an HTML mail telling them that they can view the log files (which will be displayed using an online html generator) and there might also be some instructions on what to do.
+
+Please help me out on this one. I have written programs in C++ but have no experience with C programming or smtp libraries etc...
+
+[IMG]https://i.imgur.com/0N7Vk8u.png?1[/IMG]
+
+I've noticed in the recent patch notes there has been a mention of a new "tower". I'm not sure what this is, but it sounds like it can be decieved into thinking you have multiple accounts. As I'll be making a few of these to test if they are working or not and how easy they are to detect, so please don't report them as accounts that are hacking/cheating or any other word for that matter, just let me know how effective it is and which one you think was the most effective.
+
+Please post your opinion and feedback on this thread
+
+As an example, someone creates a new Gmail account. They then create a contact (let's call him Bob) in their Google Contacts. The hacker also has access to a corporate email server (not their own). The hacker sends an email from the Google account (as Bob) to the corporate email address. Since the email is coming from someone inside of the corporate domain, there is no suspicion that it is not legitimate.
+
+How would you detect this? As far as I know there is no way of doing so unless the hacker had already gained access to the user account. Is this correct?

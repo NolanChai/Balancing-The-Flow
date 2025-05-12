@@ -1,0 +1,22 @@
+\end{code}
+
+Comment: Please clarify your specific problem or provide additional details to highlight exactly what you need. As it's currently written, it's hard to tell exactly what you're asking.
+
+Answer: You could do something like this using list comprehensions and lambda functions.
+
+\begin{code}
+>>> def find_minimum(x):
+        return min([y for y in x if y > z])
+\end{code}
+
+Usage is easy enough, it returns the first element of the input sequence that is greater than your given `z` value.
+
+Comment: @MosesKoledoye It doesn't have to be an array, just pass a list.
+
+Answer: You can use [`min()`](https://docs.python.org/2/library/functions.html#min), but you need to compare each element with `z`. Something like:
+
+\begin{code}
+import operator
+my_list = [1, 3, -5, -9]
+print min(my_list, key=operator.gt) #-9
+\end{code}

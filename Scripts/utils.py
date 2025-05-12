@@ -272,7 +272,8 @@ def get_text(dataset, item, turn=0):
     elif dataset == "allenai/WildChat":
         convo = item['conversation']
         # return only assistant responses
-        text = "\n\n".join([turn['content'] for turn in convo if turn['role'] == 'assistant'])
+        text = "\n\n".join([f"User: \"{turn['content']}\"" if turn['role'] == 'user'
+                           else f"Assistant: \"{turn['content']}\"" for turn in convo])
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
     return text

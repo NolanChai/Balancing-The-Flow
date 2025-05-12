@@ -1,0 +1,31 @@
+User: "pycharm 正则匹配搜索中文"
+
+Assistant: "要在PyCharm中进行正则匹配搜索中文，可以使用Python的re模块，并且需要使用Unicode编码的字符集。
+
+以下是一个示例代码，演示如何在PyCharm中进行正则匹配搜索中文：
+
+```python
+import re
+
+# 定义待搜索的文本
+text = "你好，世界！Hello, world!"
+
+# 使用Unicode编码的字符集，匹配中文字符
+pattern = re.compile(r'[\u4e00-\u9fa5]+')
+
+# 进行正则匹配搜索
+match = re.findall(pattern, text)
+
+# 输出匹配结果
+print(match)
+```
+
+运行上述代码，将输出匹配到的中文字符：
+
+```
+['你好', '世界']
+```
+
+上述代码定义了一个正则表达式模式，该模式用于匹配Unicode编码范围内的中文字符。然后使用`re.findall()`函数进行正则匹配搜索，并将匹配结果保存在一个列表中，最后将结果输出。
+
+请注意，PyCharm本身并没有直接提供用于在编辑器中搜索的正则匹配功能，但你可以使用上述示例代码在PyCharm中运行，或者将上述代码嵌入到你自己的项目中。"

@@ -1,0 +1,9 @@
+I'm trying to create a gradient in terms, using only css and javascript. the purpose of this gradient is to trigger when pressing enter key into any textarea or input field. this should be able to simulate a laser beam, firing from its center position towards left side if you press enter inside a textfield/textarea with its width set to 100% of that container's width (I use max-width in my example for simplicity). I tried to use clip paths using css, but it didn't work.
+
+my code above is the whole HTML, which I need to be able to trigger when pressing enter key, and make this gradient fly from center towards right side inside of that container/textarea.
+
+the only thing you will need is an empty textarea or input field, with its width set to 100%. please try it out! thank you for reading my post.
+
+I also made a [PEN](https://codepen.io/Lancelot095/pen/OwzYjK) for this challenge, so you can view the results and how it's meant to be implemented. if you have any other questions please ask me in comments. I am not very good with css, but I can implement a little bit of it.
+
+thank you for your time, and your interest!

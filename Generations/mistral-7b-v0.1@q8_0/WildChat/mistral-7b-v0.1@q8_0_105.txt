@@ -1,0 +1,62 @@
+[ERROR][logstash.config.loader     ] Expected to find a file 'C:/Users/Jitendra Kumar/Desktop/logstash/config/logstash.yml' but couldn't
+
+[ERROR][logstash.runner             ] Could not determine any configurations to use. Please specify the configuration option
+
+[ERROR][logstash.runner             ] Failed to execute logstash -f C:/Users/Jitendra Kumar/Desktop/logstash/config/logstash.yml due to unspecified errors.
+
+HttpContext.Connection.RemoteIpAddress获取不到真实的Ip地址，如何解决？
+
+原因是因为Net Core 中默认使用了X-Forwarded-For头来获取客户端真实IP，X-Forwarded-For有可能不存在，也有可能被修改，这里我们还需要做一些配置才能够获取到真正的客户端ip。
+
+1. 需要注入一个HttpContextAccessor来获取httpcontext
+2. 判断是否使用了ReverseProxy中间件(是为了在IIS上部署)，因为不同的请求会携带不同的X-Forwarded-For头部信息, IIS将会携带ClientIP
+
+代码如下：
+
+```c#
+private readonly IHttpContextAccessor _httpContextAccessor;
+public ApplicationUserService(IHttpContextAccessor httpContextAccessor)
+{
+    this._httpContextAccessor = httpContextAccessor;
+}
+public async Task<string> GetClientIPAsync()
+{
+    if (_httpContextAccessor == null)
+        throw new ArgumentNullException(nameof(_httpContextAccessor));
+    var httpContext = _httpContextAccessor.HttpContext;
+    if (httpContext == null)
+        throw new InvalidOperationException();
+    //获取真正的ip
+    string clientIP = GetTrueIp(httpContext);
+    return clientIP;
+}
+private string GetTrueIp(HttpContext httpContext)
+{
+    var ip = httpContext.Connection.RemoteIpAddress.ToString();//不能这样获取
+    //判断是否使用了ReverseProxy中间件(是为了在IIS上部署)，因为不同的请求会携带不同的X-Forwarded-For头部信息, IIS将会携带ClientIP
+    if (httpContext.Request.Headers.ContainsKey("X-Reverse-Proxy"))//判断是否使用了nginx
+    {
+        ip = httpContext.Request.Headers["X-Real-IP"];//nginx
+    }
+    else if (httpContext.Request.Headers.ContainsKey("CF-Connecting-IP")) //判断是否使用了cloudflare
+    {
+        ip = httpContext.Request.Headers["CF-Connecting-IP"];//cloudflare
+    }
+    return ip;
+}
+```
+
+2017-06-19 14:57:21,548 [cluster.service.node] [error] [] - Exception when handling node removal for node f37cc5f1c533f95eec18d4adb50e286b - remote node disconnected and failed to establish connection with cluster;
+java.lang.IllegalArgumentException: received plaintext http traffic on an https channel, closing connection
+at org.apache.http.impl.conn.DefaultManagedHttpClientConnection.ensureConnected(DefaultManagedHttpClientConnection.java:200) [httpclient-4.5.6.jar:4.5.6]
+at org.apache.http.impl.conn.BasicManagingHttpClientConnectionManager$InternalHandler.connect(BasicManagingHttpClientConnectionManager.java:359) ~[httpclient-4.5.6.jar:4.5.6]
+at org.elasticsearch.common.netty2.channel.Channels.connect(Channels.java:101) [elasticsearch-5.4.0.jar:5.4.0]
+at org.elasticsearch.common.netty2.channel.Channels$AbstractChannelFutureListener.operationComplete(Channels.java:387) [elasticsearch-5.4.0.jar:5.4.0]
+at org.elasticsearch.common.util.concurrent.AbstractRunnableFuture.notifyListeners(AbstractRunnableFuture.java:107) ~[elasticsearch-5.4.0.jar:5.4.0]
+at org.elasticsearch.common.util.concurrent.AbstractRunnableFuture$ListenerRunnable.run(AbstractRunnableFuture.java:238) [elasticsearch-5.4.0.jar:5.4.0]
+at org.elasticsearch.common.util.concurrent.ThreadContext$ContextRunner$1.run(ThreadContext.java:26) ~[elasticsearch-5.4.0.jar:5.4.0]
+at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+
+
+
+查看Elasticsearch启动的配置：

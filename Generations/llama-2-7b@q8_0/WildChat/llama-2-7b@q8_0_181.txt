@@ -1,0 +1,10 @@
+This is my first time using INST, so please forgive me if I did something wrong.
+The reason for using INST is because I need to write dialogues with different lengths and tenses (e.g. present simple, past continuous and past perfect) within the same scene, which would be a huge headache if I were to use Excel.
+Anyway, here's how it should work:
+1. Click on cell A3. Enter “Jane’s older sister Andrea was arrested today.” in there. (This is for the title of the scene.)
+2. Go to B6 and type “Andrea” there. This will be used as an anchor point whenever you add new dialogues within this particular scene.
+3. Go back to cell A15 and type “Andrea said, “I’m so glad I got arrested! Now I won’t have to spend any more time with that freakish family of mine.””
+4. Repeat the process from 2-3 for every character in this scene (i.e. Jane, Paul and Mary). Each person should get their own anchor point.
+5. Now whenever you add a new line of dialogue (whether it's past continuous or past perfect), just type in a different cell after the anchor point. Easy peasy! 🙂
+Hope this works for you. Have fun!
+Here's the INST file: Jane’s Older Sister Andrea was Arrested Today

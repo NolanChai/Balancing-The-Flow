@@ -1,0 +1,38 @@
+User: "Az arccos f¨uggv´eny a [−1, 1] intervallumon ´ertelmezett, ´es ´ert´ekei a .h
+−
+π
+2
+,
+π
+2
+i
+intervallumb´ol
+ker¨ulnek ki"
+
+Assistant: "Az arccosinus függvény értelmezése és értékkészlete:
+
+Az arccosinus függvény $[-1,1]$ intervallumon értelmezett, és értékei az $[-\frac{\pi}{2}, \frac{\pi}{2}]$ intervallumban helyezkednek el.
+
+Az arccosinus függvény definíciója:
+
+Ha $y = \cos(x)$ és $x \in [0,\pi]$, akkor $\operatorname{arccos}(y) = x$.
+
+Az arccosinus függvény grafikus ábrázolása:
+
+Az arccosinus függvény grafikája sima, folytonos görbe, melynek ábrázolása a következő:
+
+![Arccos grafikonja](https://i.imgur.com/Nr5VziG.png)
+
+Az ábrán jól látható, hogy az arccosinus függvény szimmetrikus az y- tengelyre az origóban. Az értékkészlete az $[-\frac{\pi}{2}, \frac{\pi}{2}]$ intervallumon belül helyezkedik el.
+
+Az arccosinus függvény inverze:
+
+Az arccosinus függvény inverze a koszinus függvény, tehát ha $y = \operatorname{arccos}(x)$ és $y \in [0,\pi]$, akkor $x = \cos(y)$.
+
+Az arccosinus függvény deriváltja:
+
+Az arccosinus függvény deriváltja:
+
+$\frac{d}{dx}(\operatorname{arccos}(x)) = -\frac{1}{\sqrt{1-x^2}}$
+
+Végezetül, fontos megjegyezni, hogy az arccosinus függvény csak akkor értelmezhető, ha az argumentuma $[-1,1]$ intervallumon belül van. Ha az argumentum nem ebben az intervallumban van, akkor a függvény nem értelmezett."

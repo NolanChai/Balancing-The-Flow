@@ -1,0 +1,13 @@
+Lesson Plan For Year Five Geography On The Balkans.docx
+[ESSAY]Analyse two types of learning and teaching approaches you could use to teach your chosen subject across the 3-16 age range. (250 words).[/ESSAY]
+ANALYSIS OF TWO DIFFERENT LEARNING APPROACHES TO TEACH A SUBJECT ACROSS THE AGE RANGE.docx
+[ESSAY]Write a report to your supervisor discussing the key differences between teaching in two different schools that you have observed over the last 4 weeks.[/ESSAY]
+Report on Teaching at Two Different Schools.docx
+[QUESTION]Discuss how pupils’ social development and learning is supported when they are taught using a variety of media e.g. ICT, film clips, music, role play, drama.[/QUESTION]
+
+I am looking for a script that can tell me how many tokens (and thus time) were used up by the last request. I know about the "get-content" command, but it does not work properly in this scenario. It just returns what was left when the page loaded or did not load. The token is reset to 0.
+Does anyone have a script for this? Or do you think there is no such thing (and that I should use a different technique)?
+I tried the following (in PowerShell), but it doesn't work either:
+$req = Invoke-RestMethod -Uri $url -Headers @{Authorization = "Token token=$token"}
+$resp = $req.ResponseStream | Out-String
+#$resp | ConvertFrom-Json

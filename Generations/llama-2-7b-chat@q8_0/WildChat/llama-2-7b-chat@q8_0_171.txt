@@ -1,0 +1,21 @@
+The issue you're facing is related to the `distribute` package, which is required for the `dotenv` package to work correctly. The error message suggests that the `distribute` package could not be found in your system's `PYTHONPATH`, which is why the `pip` command failed.
+To resolve this issue, you can try the following steps:
+1. Check if `distribute` is installed: Open a terminal and run the following command to check if `distribute` is already installed:
+```
+python -m distribute install
+```
+If `distribute` is not installed, you can install it using the above command.
+2. Add `distribute` to your `PYTHONPATH`: If `distribute` is not installed, you can add its location to your `PYTHONPATH` variable. To do this, run the following command in your terminal:
+```
+export PYTHONPATH=$PYTHONPATH:/path/to/distribute
+```
+Replace `/path/to/distribute` with the actual path where you have installed `distribute`.
+3. Reload the Python environment: After adding `distribute` to your `PYTHONPATH`, you need to reload the Python environment to reflect the changes. You can do this by running the following command in your terminal:
+```
+source /path/to/python_environment.sh
+```
+Replace `/path/to/python_environment.sh` with the actual path where you have saved the Python environment script.
+4. Run the `pip install` command again: After completing the above steps, try running the `pip install` command again to install the backend dependencies.
+
+
+In summary, the issue is caused by a problem with the `subprocess` module in Python, specifically when trying to execute the `pip install` command. The solution is to use the `--help` or `-h` option with `pip install` to display the help message and check if the issue is resolved. If the issue persists, you can try running the `pip install` command with the `--verbose` or `-v` option to increase the verbosity of the output and see if that helps identify the problem. Additionally, you can try installing a different version of the `pyproject.toml` package to see if that resolves the issue.

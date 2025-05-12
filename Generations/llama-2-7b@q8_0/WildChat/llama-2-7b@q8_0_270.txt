@@ -1,0 +1,29 @@
+</div>
+                            </div>
+                            <div className="p-2 border-t-4 border-gray-300 rounded-lg mb-8">
+                                <h4 className="text-sm font-medium text-gray-500 uppercase tracking-wider hover:text-yellow-600">
+                                    [Q]
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        ) : (
+            <>
+                <div className="container mx-auto p-2">
+                    <div className="flex flex-col justify-center w-full h-screen bg-gray-100">
+                        <h1 className="text-4xl text-white font-bold py-2 text-center text-gray-900">
+                            QA - Hint: Please use "--ar 16:9" for horizontal images, and "--v 5.2" for other styles.
+                        </h1>
+                        <div className="flex items-start justify-between px-8 py-4 border-b-4">
+                            <a href="#" className="px-3 py-2 bg-red-600 rounded hover:bg-red-700 text-white font-bold capitalize">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </>
+        );
+    }
+}
+
+export default QA;

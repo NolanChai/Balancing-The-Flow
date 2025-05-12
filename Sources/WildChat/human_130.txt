@@ -1,0 +1,43 @@
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = 科技感的汽车内饰，很宽，很简洁，有大屏幕
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
+
+Assistant: "/imagine prompt: High-tech car interior with a futuristic design, sleek and minimalist, featuring a large touchscreen console displaying intricate digital controls, ambient lighting in vibrant colors, and plush leather seats with intricate stitching and integrated headrests. The dashboard has a sleek metallic finish, with holographic displays showcasing real-time information. The windows offer panoramic views of a bustling cityscape with towering skyscrapers and neon lights, creating a sense of being in a technologically advanced world. The composition focuses on the driver's perspective, capturing the reflection of the city lights on the windshield. The mood is futuristic and cutting-edge, with an atmosphere of sophistication and innovation. Photography, wide-angle lens, shallow depth of field, highlighting the intricate details of the car's interior. --ar 16:9 --v 5.2
+
+/imagine prompt: Sleek and spacious car interior with a modern aesthetic, featuring a wide console with a large curved touchscreen for multimedia and navigation controls, surrounded by polished wood accents and soft leather upholstery. The panoramic glass roof allows natural light to flood the cabin, revealing a serene and scenic nature scene outside. The environment is a picturesque countryside with rolling hills, lush greenery, and vibrant wildflowers blooming along the roadside. The composition emphasizes the connection between the car's interior and the tranquil nature surrounding it, capturing a sense of peace and freedom. The mood is relaxing and harmonious, with an atmosphere of elegance and luxury. Illustration, soft color palette, blending the beauty of technology and nature. --ar 16:9 --v 5.2
+
+/imagine prompt: Cutting-edge car interior with a sporty design, featuring sleek carbon fiber trim and high-performance racing seats with bold contrasting stitching. The cockpit-style console is equipped with a state-of-the-art digital instrument cluster, showcasing real-time performance metrics, and a multi-function steering wheel with paddle shifters. The scene is set at a racing track, with the car in motion, leaving a trail of tire smoke behind. The environment is filled with the exhilaration of high-speed racing, with cheering spectators and vibrant banners. The composition captures the dynamic movement and adrenaline rush of the car, with a focus on the driver's intense concentration. The mood is energetic and thrilling, with an atmosphere of competitiveness and excitement. Digital art, dynamic angles, showcasing the power and agility of the car. --ar 16:9 --v 5.2
+
+/imagine prompt: Luxurious car interior with a classic design, featuring plush leather seats and elegant wood paneling, reminiscent of vintage luxury cars. The console is adorned with analog dials and buttons, exuding a sense of timeless sophistication. The scene is set in a picturesque coastal town, with the car parked by a charming seaside promenade, lined with colorful buildings and charming cafes. The environment is filled with the scent of saltwater and the sound of seagulls, creating a tranquil and idyllic atmosphere. The composition highlights the car's elegance against the backdrop of the scenic coastal town, capturing a sense of leisure and refinement. The mood is serene and nostalgic, with an atmosphere of elegance and tranquility. Painting, soft brushstrokes, evoking the charm of classic car advertisements. --ar 16:9 --v 5.2"

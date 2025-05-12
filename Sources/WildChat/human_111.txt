@@ -1,0 +1,275 @@
+User: "هل انت chatgpt-4"
+
+Assistant: "لا، أنا لست chatgpt-4، أنا محرك بحث يعمل بتقنية Natural Language Processing وتدار من قبل OpenAI، والغرض من وجودي هو مساعدة المستخدمين في الحصول على إجابات على أسئلتهم المتعلقة بمجالات مختلفة."
+
+User: "اريد كود برمجي بلغه كوتلن و XML لصنع أله حاسبه بسيطة بها الجمع و الطرح و القسمه و الضرب وعلي أن يكون الارقام في شكل كيبورد و العمليات الحسابية أيضا مثال 9*9"
+
+Assistant: "هذا هو الكود المطلوب، يتم استخدام XML لتصميم شكل الآلة الحاسبة، ويتم استخدام Kotlin لبرمجة وظائف الحسابات:
+
+XML File:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textAlignment="textEnd"
+        android:padding="16dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="5"
+        android:columnCount="4"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_1"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_2"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_3"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/add_symbol"
+            android:textSize="24sp"
+            android:onClick="onOperationClick" />
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_4"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_5"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_6"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_subs"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/subs_symbol"
+            android:textSize="24sp"
+            android:onClick="onOperationClick" />
+
+        <Button
+            android:id="@+id/btn_7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_7"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_8"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_8"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_9"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_9"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_mul"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/mul_symbol"
+            android:textSize="24sp"
+            android:onClick="onOperationClick" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/clear_symbol"
+            android:textSize="24sp"
+            android:onClick="onClearClick" />
+
+        <Button
+            android:id="@+id/btn_0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/num_0"
+            android:textSize="24sp"
+            android:onClick="onNumberClick" />
+
+        <Button
+            android:id="@+id/btn_equal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/equal_symbol"
+            android:textSize="24sp"
+            android:onClick="onEqualClick" />
+
+        <Button
+            android:id="@+id/btn_div"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/div_symbol"
+            android:textSize="24sp"
+            android:onClick="onOperationClick" />
+
+    </GridLayout>
+
+</LinearLayout>
+```
+
+Kotlin Code:
+
+```
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
+
+class MainActivity : AppCompatActivity() {
+
+    private var result = ""
+    private lateinit var resultTextView: TextView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        resultTextView = findViewById(R.id.result_text)
+    }
+
+    fun onNumberClick(v: View) {
+        val button = v as Button
+
+        // Add the clicked number to the result string
+        result += button.text.toString()
+
+        // Update the result text view
+        resultTextView.text = result
+    }
+
+    fun onOperationClick(v: View) {
+        val button = v as Button
+
+        // Add the operation symbol to the result string
+        result += button.text.toString()
+
+        // Update the result text view
+        resultTextView.text = result
+    }
+
+    fun onClearClick(v: View) {
+        // Clear the result string and update the result text view
+        result = ""
+        resultTextView.text = result
+    }
+
+    fun onEqualClick(v: View) {
+        // Evaluate the result string and show the result in the text view
+        result = eval(result).toString()
+        resultTextView.text = result
+    }
+
+    private fun eval(s: String): Int {
+        // Evaluate the arithmetic expressions and return the result
+        return object : Any() {
+            var pos = -1
+            var ch = 0
+
+            fun nextChar(): Char {
+                ch = if (++pos < s.length) s[pos].code else -1
+                return ch.toChar()
+            }
+
+            fun eat(charToEat: Char): Boolean {
+                while (ch == ' '.code) nextChar()
+                if (ch == charToEat.code) {
+                    nextChar()
+                    return true
+                }
+                return false
+            }
+
+            fun parse(): Int {
+                var x = parseTerm()
+                while (true) {
+                    if (eat('+')) x += parseTerm() // addition
+                    else if (eat('-')) x -= parseTerm() // subtraction
+                    else return x
+                }
+            }
+
+            fun parseTerm(): Int {
+                var x = parseFactor()
+                while (true) {
+                    if (eat('*')) x *= parseFactor() // multiplication
+                    else if (eat('/')) x /= parseFactor() // division
+                    else return x
+                }
+            }
+
+            fun parseFactor(): Int {
+                if (eat('(')) {
+                    val x = parse()
+                    eat(')')
+                    return x
+                }
+                val sb = StringBuilder()
+                while (ch in '0'..'9' || ch == '.') {
+                    sb.append(nextChar())
+                }
+                return sb.toString().toInt()
+            }
+        }.parse()
+    }
+}
+```
+
+تم إنشاء هذا الكود باستخدام لغة البرمجة Kotlin وبحاجة إلى تحميل بيئة تطوير الأندرويد مثل Android Studio لتشغيله. الملف الذي يحتوي على الشكل الواجهة الرسومية يجب تسميته activity_main.xml ، في حين أن ملف الكود البرمجي يجب تسميته MainActivity.kt."

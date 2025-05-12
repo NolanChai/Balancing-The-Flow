@@ -1,0 +1,60 @@
+==============================
+Network Automation Testing using C#: Ping and IP Input from Client
+
+In this tutorial, we will learn how to automate network testing using C#. We will focus on theping command and how to accept the IP address from the client as input. This is an essential skill for any tester or developer who wants to ensure their network applications are working correctly.
+What is Network Automation Testing?
+Network automation testing is a type of software testing where the tester uses software tools to simulate user interactions with a network application. The goal of this testing is to verify that the application works as expected, including sending and receiving data correctly. In this tutorial, we will focus on theping command, which is used to check if a host is reachable or not.
+Why Use Network Automation Testing?
+Network automation testing is essential for several reasons:
+1. **Efficiency**: With network automation testing, you can run multiple tests simultaneously, making your testing process more efficient.
+2. **Consistency**: By using the same test cases every time, you can ensure that your tests are consistent and reliable. This helps identify issues faster and reduces the risk of missing critical bugs.
+3. **Scalability**: Network automation testing allows you to scale your tests to accommodate different network environments, such as different IP addresses or subnets.
+4. **Accuracy**: With network automation testing, you can verify that your application works correctly in various network configurations. This helps ensure that your application is robust and reliable.
+How to Use C# for Network Automation Testing?
+To perform network automation testing using C#, you will need the following tools:
+1. **Visual Studio**: This is a popular integrated development environment (IDE) used by developers to create software applications.
+2. **Selenium**: Selenium is an open-source tool that allows you to automate web browsers. We will use it to simulate user interactions with a network application.
+3. **Ping command**: The ping command is used to check if a host is reachable or not. You can use the `System.Net.NetworkInformation.Ping` class in C# to execute the ping command.
+Here's an example of how to use the `Ping` class in C# to ping a host:
+```csharp
+using System;
+public class PingExample {
+   static void Main(string[] args) {
+      // Replace with the IP address of the host you want to ping
+      string hostAddress = "192.168.1.100";
+      Ping pinger = new Ping();
+      // Send an ICMP echo request to the host
+      PingResponse response = pinger.Send(hostAddress);
+      if (response.Status == IPStatus.Success) {
+         Console.WriteLine("Host is reachable");
+      } else {
+         Console.WriteLine("Host is not reachable");
+      }
+}
+```
+In this example, we create a `Ping` class and use it to ping an IP address. We check the status of the response to determine if the host is reachable or not.
+How to Accept IP Address from Client?
+To accept the IP address from the client, you can use a console application in C#. Here's how:
+1. Create a new console project in Visual Studio and name it "IPAddressInput".
+2. Add a `Main` method to the program:
+```csharp
+using System;
+public class IPAddressInput {
+    static void Main(string[] args) {
+        // Prompt user for IP address
+        Console.WriteLine("Enter the IP address of the host you want to ping: ");
+        string ipAddress = Console.ReadLine();
+        // Call the Ping method with the inputted IP address
+        Ping pinger = new Ping();
+        PingResponse response = pinger.Send(ipAddress);
+        if (response.Status == IPStatus.Success) {
+            Console.WriteLine("Host is reachable");
+        } else {
+            Console.WriteLine("Host is not reachable");
+        }
+    }
+}
+```
+In this example, we create a `Console` application that prompts the user to input an IP address. We then use the `Ping` class to ping the inputted IP address and check if it's reachable or not.
+Conclusion:
+Network automation testing using C# is an essential skill for any tester or developer who wants to ensure their network applications are working correctly. By using the `Ping` command and accepting the IP address from the client, you can perform efficient and consistent testing of your network applications. This tutorial provides a basic understanding of how to automate network testing using C# and how to accept input from the client. With this knowledge, you can build upon and create more advanced tests to ensure your network applications are robust and reliable.

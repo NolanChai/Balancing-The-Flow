@@ -1,0 +1,7 @@
+#include <stdio.h>int main(){long binomial_iterative(unsigned int n, unsigned int k){for (k = 1; k <= n; k++) {binomial_iterative(n+1, k);}return 0;}}int binomial_recursive(unsigned int n, unsigned int k){if (k == 0) return 1;}else if (k == 1 && n == 1) return 1;else{return binomial_recursive(n-1, k-1)+binomial_iterative(n-1, k);}}int main(){printf("Recursive Approach: ");for (unsigned int i = 0; i <= 9 ; i++){long res = binomial_recursive(i+1, i);printf("%d", res);}printf("\t\t");printf("Iterative Approach: ");for (unsigned int j = 1; j <= 9 ; j++){long res = binomial_iterative(j, j);printf("%d", res);}}
+
+
+
+[INS]make it sound more human[/INS]
+I'm using this line to make the character sound more human (I don't want him to be robotic). I think INST might work, but the problem is that the line comes after he says something else which makes the sentence sounds a bit off. Is there any other way to do this?
+Re:

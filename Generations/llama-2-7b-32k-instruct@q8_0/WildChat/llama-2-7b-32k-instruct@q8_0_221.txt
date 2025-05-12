@@ -1,0 +1,85 @@
+In order to create a component that can be reused to "like" and "dislike" products in Angular, you'll need to follow these steps:
+
+1. Create a new module: Firstly, create a new module by using the `import` statement at the top of your file and importing the necessary modules, such as `CommonModule`.
+2. Define the component interface: In this step, define an interface that describes the properties and methods that your component will have. For example:
+```
+interface ProductLikeDislikeComponent {
+  productId: number; // The ID of the product that the user is liking/disliking
+  liked: boolean; // Whether the product has been liked or not
+  dislike(): void; // Function to dislike the product
+  like(): void; // Function to like the product
+}
+```
+3. Create a new component class: In this step, create a new class that implements the interface defined in step 2. Here's an example of what your component class might look like:
+```
+@Component({
+  selector: 'product-like-dislike',
+  template: '<button (click)="liked = !liked">{{ liked ? "Like" : "Dislike" }}</button>'
+})
+export class ProductLikeDislikeComponent implements ProductLikeDislikeComponent {
+  productId: number; // The ID of the product that the user is liking/disliking
+  liked: boolean; // Whether the product has been liked or not
+  dislike() {
+    this.liked = !this.liked;
+  }
+  like() {
+    console.log('Product liked successfully');
+  }
+}
+```
+4. Use the component in your application: In this step, use the component in your application by importing it and injecting it into your desired view. Here's an example of how you might do this:
+```
+@ViewChild(ProductLikeDislikeComponent) productLikeDislikeComponent; // Get a reference to the component
+
+<div>
+  <h2>{{ product.name }}</h2>
+  <button (click)="productLikeDislikeComponent.dislike()">Dislike</button>
+</div>
+```
+In this example, we're importing the `ProductLikeDislikeComponent` interface and using it in a view that has a button with an event listener that calls the `dislike()` method when clicked. We've also injected the component into our view via the `@ViewChild` decorator.
+
+5. Add logic to your component: In this step, add some logic to your component to handle liking and disliking products. For example, you might want to display a message that indicates whether or not the product has been liked:
+```
+@Component({
+  selector: 'product-like-dislike',
+  template: '<button (click)="liked = !liked">{{ liked ? "Like" : "Dislike" }}</button>'
+})
+export class ProductLikeDislikeComponent implements ProductLikeDislikeComponent {
+  productId: number; // The ID of the product that the user is liking/disliking
+  liked: boolean; // Whether the product has been liked or not
+
+  constructor() { }
+
+  dislike() {
+    this.liked = !this.liked;
+    console.log('Product disliked successfully');
+  }
+
+  like() {
+    console.log('Product liked successfully');
+  }
+}
+```
+6. Add a service to handle liking and disliking: In this step, you'll want to add a service that can be used by your component to like or dislike products. This service will handle all of the logic for liking and disliking products, and it will return a promise that indicates whether or not the product was liked/disliked successfully.
+```
+@Injectable()
+export class ProductService {
+  private likedProducts = new BehaviorSubject([]); // An observable that stores the list of liked products
+
+  addLike(productId: number) {
+    this.likedProducts.next([...this.likedProducts, productId]);
+  }
+
+  removeLike(productId: number) {
+    const index = this.likedProducts.indexOf(productId);
+    if (index > -1) {
+      this.likedProducts.removeAt(index);
+    }
+  }
+
+  getLikedProducts() {
+    return this.likedProducts.asObservable();
+  }
+}
+```
+7. Inject the service into your component: In this step, inject the `ProductService` into your component so that it can use

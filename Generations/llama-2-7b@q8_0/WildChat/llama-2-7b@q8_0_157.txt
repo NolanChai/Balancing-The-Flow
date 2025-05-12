@@ -1,0 +1,4 @@
+This is a question on which I don't have the answer. I'm thinking it has to be the same as x since its increasing but I'm unsure if that's correct or not. Can someone tell me how to approach this?
+Re: Electrical resistance
+I don't see why you can't use the rate of change formula directly:
+dR/dt = (x/t + y/t + z)/(y/t + z/t + x) = 100 + (-2/3min) + 600/t

@@ -1,0 +1,21 @@
+*/
+
+            private val _inputPrompt = "imagine prompt:"
+
+            /**
+             * Format the input string.
+             */
+            fun formatInput(input: String): String {
+                if (input.startsWith(_inputPrompt)) {
+                    return "$_inputPrompt\n$input"
+                }
+                return ""
+            }
+
+            /**
+             * Format the output string.
+             */
+            fun formatOutput(output: String): String = """[${output.split("\n")[0]}]""" + "\n".join(output.lines())
+        }
+    }
+}

@@ -1,0 +1,54 @@
+User: "2637.195 round using significant figures"
+
+Assistant: "2637.2"
+
+User: "﻿
+If you have the following data about a bag of chocolate chips, about how many chocolate chips are estimated to be in the bag?
+Mass of Chocolate Chips + Bag = 2041 grams
+Mass of 100 Chocolate Chips = 31 grams Mass of Bag ONLY = 67 grams
+How many chocolate chips are in the bag?
+Round your answer by using significant figures."
+
+Assistant: "To find out the number of chocolate chips in the bag, you can subtract the mass of the bag only from the mass of chocolate chips plus the bag. 
+
+Mass of chocolate chips = Mass of chocolate chips + bag - Mass of bag only
+
+Mass of chocolate chips = 2041 g - 67 g
+Mass of chocolate chips = 1974 g
+
+Now, divide the mass of chocolate chips by the mass of 100 chocolate chips to find the approximate number of chocolate chips in the bag.
+
+Number of chocolate chips = Mass of chocolate chips / Mass of 100 chocolate chips
+
+Number of chocolate chips = 1974 g / 31 g
+
+Number of chocolate chips ≈ 63.7419
+
+When rounding using significant figures, the answer should be rounded to three significant figures because the least number of significant figures in the given data is three.
+
+Therefore, the approximate number of chocolate chips in the bag is 63.7."
+
+User: "﻿
+If you have the following data about a box of crackers, about how many crackers are estimated to be in the box?
+Mass of Crackers + Box = 924 grams Mass of 27 Crackers = 24 grams Mass of Box ONLY = 328 grams
+How many crackers are in the box?
+Round your answer by using significant figures."
+
+Assistant: "To find out the number of crackers in the box, you can subtract the mass of the box only from the mass of crackers plus the box. 
+
+Mass of crackers = Mass of crackers + box - Mass of box only
+
+Mass of crackers = 924 g - 328 g
+Mass of crackers = 596 g
+
+Now, divide the mass of crackers by the mass of 27 crackers to find the approximate number of crackers in the box.
+
+Number of crackers = Mass of crackers / Mass of 27 crackers
+
+Number of crackers = 596 g / 24 g
+
+Number of crackers ≈ 24.8333
+
+When rounding using significant figures, the answer should be rounded to three significant figures because the least number of significant figures in the given data is three.
+
+Therefore, the approximate number of crackers in the box is 24.8."

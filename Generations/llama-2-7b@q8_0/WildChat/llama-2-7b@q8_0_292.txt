@@ -1,0 +1,33 @@
+[/TASK]
+```
+### TASK_NAME.json
+This file contains the prompts for a particular task. 
+It's written in JSON format with the following fields:
+
+* "name": The name of the task. It is used to display the title of this task on the web interface.
+* "description": A short description of the task, which will be displayed on the web interface underneath the title. 
+* "prompts": An array of prompts with following fields:
+    1. "name": The name of the prompt. It is used to display the name of this prompt on the web interface. 
+    2. "description": A short description of the prompt, which will be displayed on the web interface underneath the prompt's name. 
+    3. "examples": An array of examples, each having two fields: 
+        1. "image": The URL of the example image. It is used to display the image on the web interface. 
+        2. "description": A short description of the image. This will be displayed as a caption for the example image. 
+* "extra_instructions": An array of extra instructions, each having two fields: 
+    1. "text": The text to show on the web interface. 
+    2. "example_image": A URL pointing an example image in case it's necessary to demonstrate a specific prompt instruction. 
+
+### TASKS.json
+This file contains the tasks for each category, and each task is defined as a list of tasks, each having two fields: 
+1. "category": The name of the category which includes this task. It is used to display the category on the web interface. 
+2. "tasks": An array of tasks, each having two fields: 
+    * "name": The name of the task. It is used to display the title of this task on the web interface. 
+    * "description": A short description of the task, which will be displayed on the web interface underneath the title. 
+    * "prompts": An array of prompts with following fields:
+        * "name": The name of the prompt. It is used to display the name of this prompt on the web interface. 
+        * "description": A short description of the prompt, which will be displayed on the web interface underneath the prompt's name. 
+        * "examples": An array of examples, each having two fields: 
+            * "image": The URL of the example image. It is used to display the image on the web interface. 
+            * "description": A short description of the image. This will be displayed as a caption for the example image. 
+* "extra_instructions": An array of extra instructions, each having two fields: 
+    * "text": The text to show on the web interface. 
+    * "example_image": A URL pointing an example image in case it's necessary to demonstrate a specific task instruction.

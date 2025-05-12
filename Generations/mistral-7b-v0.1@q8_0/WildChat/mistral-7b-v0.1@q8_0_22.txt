@@ -1,0 +1,14 @@
+What do you mean by "I want to enter a numerical value from the first row in column A up to the 12th row in the same column?" Do you mean that if I type 1 into the input box, then I'll get the values 1 through 12 in ColumnA?
+
+If so, you can use this code:
+
+Code:
+
+```
+Private Sub CommandButton1_Click()
+Dim r As Long
+For r = ActiveCell.Row To ActiveCell.Row + 11
+    ActiveCell.Offset(r).Value = r
+Next r
+End Sub
+```

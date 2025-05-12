@@ -1,0 +1,17 @@
+I don't understand how you want your formula to work. I can guess that you would like to change it so that it finds 3 words and not 2, but are there any other changes? Also, what does FIND(" ",C2, FIND(" ",C2, FIND(" ",C2)+1)+1)-1) mean? What is it finding?
+This User Gave Thanks to N.A.P For This Post:
+
+Hi,
+I'm new here. I'm trying to write a macro to format the contents of a row. For example, if an entry has more than six words in it, then a line break will be added after the sixth word. Is there a way to check if text is longer than a given number of words?
+This question, "How can I make sure that when text is entered into a cell in a column, it is more than 6 words", has been answered on this site:
+https://www.cpearson.com/excel/CountWords.htm
+
+Hello,
+
+There is a way of doing it, but first you need to get used to the "Array" formula concept.
+
+=IFERROR(INDEX($B$4:$E$12,MATCH(C6,$D$4:$D$12,0),MATCH(C7,$E$4:$E$12,0)),"")
+
+C5 and C6 are the variables that you can change. You need to insert the corresponding variable in both functions. In this example I chose the column letter D for variable 1, and column letter E for variable 2.
+
+I hope I've helped you out.

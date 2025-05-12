@@ -1,0 +1,65 @@
+
+
+##### 1. 安装SSH客户端
+
+首先要安装ssh客户端，安装时需要设置密码。如果没有安装好就去百度一下，安装的方法都很多，我本人用了安装包，效率不高。
+
+```bash
+# 如果使用的是linux系统，可以直接搜索网上相关教程
+apt install openssh-server -y
+
+```
+
+##### 2. ssh客户端安装完成后添加终端服务
+
+ssh服务在Linux中通过adduser命令即可进行注册，并创建密码。当然也可以手工修改/etc/passwd文件。但是修改过程中必须有root权限才能修改。
+如果要直接使用ssh服务，需要设置ssh端口，默认的ssh端口是22，所以这里将其设置为8019，具体操作过程可参考[安装SSH服务](http://www.cnblogs.com/liuchuanhua/archive/2013/12/24/3567173.html)
+```bash
+# 使用root权限进行修改，注意修改的文件为passwd
+su root -c 'echo "sshd:x:1000:1000::/home/x:/bin/sh" >> /etc/passwd'
+```
+
+##### 3. 添加主机配置文件knows_hosts
+
+###### 终端服务安装完成后，添加主机配置文件knows_hosts
+
+首先在Linux系统中创建/etc/ssh/目录，并将knows_hosts文件移动至该目录中。
+
+```bash
+# 若是linux系统需要创建knows_hosts目录，并将knows_hosts文件移至该目录中
+mkdir /etc/ssh/
+cp ~/.ssh/known_hosts /etc/ssh/
+```
+
+###### 修改主机配置文件knows_hosts
+
+接下来在/etc/ssh/目录下创建knows_hosts.txt 文件，并将以下内容添加到该文件中：
+```bash
+# 编辑knows_host配置文件
+echo "192.168.100.62 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQD2Hr87LhT4/k5tHM+eG8zU9Z5i3FKmQlBPcWuBj4dLqsC0X4qNyXvpZG/Dnj1b14Izg447263J+fF/rVo7351/3R78ZHtK7Olkj0hJWvYmMHjCQ5WZ+TNjX0Lx5/wW6e82u+53qD/+zSgxbkdKp8J7E1PcZi2qn94GK8wXx/QQ3X1HlQ+aJ6oJyhI6/HrVUFN6BsE85J0qG+7u+0HWqgOtY8pV92+vD5/iY7P02j4x8jZ03fVd71/eE62m7JJIx9J7w58UV+cC4L/5Q==" 192.168.100.62 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQD2Hr87LhT4/k5tHM+eG8zU9Z5i3FKmQlBPcWuBj4dLqsC0X4qNyXvpZG/Dnj1b14Izg447263J+fF/rVo7351/3R78ZHtK7Olkj0hJWvYmMHjCQ5WZ+TNjX0Lx5/wW6e82u+53qD/+zSgxbkdKp8J7E1PcZi2qn94GK8wXx/QQ3X1HlQ+aJ6oJyhI6/HrVUFN6BsE85J0qG+7u+0HWqgOtY8pV92+vD5/iY7P02j4x8jZ03fVd71/eE62m7JJIx9J7w58UV+cC4L/5Q! 192.168.100.62 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQD2Hr87LhT4/k5tHM+eG8zU9Z5i3FKmQlBPcWuBj4dLqsC0X4qNyXvpZG/Dnj1b14Izg447263J+fF/rVo7351/3R78ZHtK7Olkj0hJWvYmMHjCQ5WZ+TNjX0Lx5/wW6e82u+53qD/+zSgxbkdKp8J7E1PcZi2qn94GK8wXx/QQ3X1HlQ+aJ6oJyhI6/HrVUFN6BsE85J0qG+7u+0HWqgOtY8pV92+vD5/iY7P02j4x8jZ03fVd71/eE62m7JJIx9J7w58UV+cC4L/5Q!
+```
+
+##### 4. 修改端口映射的配置文件
+
+再次使用root权限进行修改，需要在/etc/ssh/sshd_config中修改以下内容。如果不修改，则会导致ssh服务起不来：
+```bash
+# 修改ssh配置文件
+su root -c 'echo "AllowTcpForwarding yes" >> /etc/ssh/sshd_config'
+```
+
+###### 将端口映射至服务器地址(本例：8019)
+
+```bash
+# 修改配置文件，将端口映射至服务器地址
+su root -c 'echo "AllowTcpForwarding yes" >> /etc/ssh/sshd_config'
+# 修改端口号,此处为8019(默认是22)
+su root -c 'echo "Port 8019" >> /etc/ssh/sshd_config'
+```
+
+###### 关闭ssh服务，以便配置完毕后再重启
+
+```bash
+# 修改端口号,此处为8019(默认是22)
+su root -c 'echo "Port 8019" >> /etc/ssh/sshd_config'
+```
+

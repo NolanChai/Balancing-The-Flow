@@ -1,0 +1,5 @@
+You can do this in VBA by setting up a ForNext loop that loops through each cell in Column A (from Row 2 to Row 13) and calls a Function with the cell's value as an argument. You will need to know what value you want to return for each iteration, or you may have to use the Mid function to extract individual values from the returned value.
+You can do it in Excel with a formula too! But I think you are looking at VBA...
+Use this formula in cell A2 (copy down as many rows and columns as needed):
+=INDEX($1:$13,SMALL(IF($A$1:$A<>"",ROW()-MIN($A$1:$A)),ROWS($1:$1))+COLUMN())
+The above is a very generic example that will work for any set of data in the selected range. If you have a different requirement please let me know and I'll edit my response to fit your needs.

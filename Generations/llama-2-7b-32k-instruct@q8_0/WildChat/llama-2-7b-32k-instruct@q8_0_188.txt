@@ -1,0 +1,43 @@
+To find the first two words in a sentence using the same formula, you can modify the LEFT function to start searching from the second space character:
+```
+=IFERROR(LEFT(C2, FIND(" ",C2, 1)-1),"")
+```
+The `FIND(" ",C2, 1)` portion of the formula searches for the first space character in cell C2 and returns its position. The `-1` at the end of the function indicates that we want to return the position minus 1. This will give us the position of the first word, excluding any spaces before it.
+
+For example:
+```
+=IFERROR(LEFT("I love cats", FIND(" ", "I love")-1),"")
+```
+This formula returns "I" as the first word in the sentence, because it's the first word that doesn't have any spaces before it.
+
+You can then apply this modified formula to your entire dataset to extract the first two words from each cell.
+
+1. You can use the LENGTH function to check if the text in a cell is longer than 6 words. The formula would be:
+
+=LENGTH(A2) > 6
+
+Where A2 is the cell where you want to check the length of the text.
+
+This will return a value of TRUE if the text in the cell is more than 6 words, and FALSE otherwise.
+
+Alternatively, you can use the TRIM function to remove any leading or trailing spaces from the text, and then use the LENGTH function as before:
+
+=LENGTH(TRIM(A2)) > 6
+
+This will also work, but it's a bit more convoluted than using the simple LENGTH function.
+
+Learn the basics of Microsoft Excel's data validation feature. Data validation allows you to specify a list of acceptable values for a cell or range of cells, ensuring that the user only enters values that are valid. You can also apply conditions and formats to the values entered through data validation.
+
+To learn the basics of data validation in Excel, follow these steps:
+
+1. Open an Excel workbook.
+2. Select a cell or range of cells where you want to apply data validation.
+3. Right-click on the selected cell(s) and choose "Format Cells" from the context menu.
+4. In the Format Cells dialog box, select the "Data Validation" tab.
+5. Click "Validate" to open the data validation dialog box.
+6. In the "Allow" field, enter the valid values you want to accept, separated by commas. You can also apply conditions and formats to these values using the drop-down menus and text boxes provided.
+7. Click "OK" to save your changes and close the data validation dialog box.
+8. The selected cell or range of cells will now display a drop-down list with only the valid values you specified through data validation. When the user selects one of these values, Excel will automatically apply the associated format and conditions if applicable.
+9. To remove all data validation from a cell or range of cells, right-click on the selected cell(s) again and choose "Format Cells" > "Clear Validation".
+
+By following these steps, you can create customizable data validation rules for your Excel worksheets to ensure that users only enter valid values in specific cells. This can help prevent errors and inconsistencies in your data, and make it easier to maintain and analyze your data over time.

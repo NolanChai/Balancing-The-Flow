@@ -1,0 +1,73 @@
+To create a reusable component for liking or disliking a product in Angular, you can follow these steps:
+
+1. Create a new component: In your Angular project, create a new component that will handle the liking/disliking functionality. Let's call it `ProductLikeComponent`.
+
+2. Define the component template: In the `ProductLikeComponent` template, include an button element with a click event handler. This button will be used to toggle the product as liked or disliked. Here is an example of what the template might look like:
+```
+<button (click)="likeProduct($event, product)">{{ likeButtonText }}</button>
+```
+In this template, we're using the `click` event handler to call the `likeProduct` function when the button is clicked. The `likeButtonText` variable should be defined in the component class and will display a message depending on whether the product has been liked or disliked.
+
+3. Define the component class: In the `ProductLikeComponent` class, define the `likeProduct` function. This function should take two arguments: `$event` (the click event) and `product` (the product being liked/disliked). Here is an example of how the `likeProduct` function might look like:
+```
+likeProduct($event, product) {
+    // Toggle the product as liked or disliked in the service
+    this.productService.likeProduct(product);
+
+    // Update the button text based on the product's likes state
+    if (this.productService.isLiked(product)) {
+        this.likeButtonText = 'Unlike';
+
+    } else {
+
+        this.likeButtonText = 'Like';
+
+    }
+
+}
+```
+In this function, we're calling the `likeProduct` method of the `productService` (a service that manages the likes state for each product) to toggle the product as liked or disliked. We're also updating the button text based on the product's likes state using the `isLiked` method of the `productService`.
+
+4. Define the service: In your application, you'll need to define a service that manages the likes state for each product. Here is an example of how the `ProductLikeService` might look like:
+```
+@Injectable()
+export class ProductLikeService {
+
+    private likedProducts = new Map<any, boolean>();
+
+    likeProduct(product: any) {
+        const id = product.id;
+        if (!this.likedProducts.hasOwnProperty(id)) {
+            this.likedProducts[id] = false;
+
+        } else {
+
+            this.likedProducts[id] = !this.likedProducts[id];
+
+        }
+
+    }
+
+    isLiked(product: any) {
+
+        return this.likedProducts.hasOwnProperty(product.id);
+
+    }
+
+}
+```
+In this service, we're defining a `likedProducts` map that stores the likes state for each product. The `likeProduct` method takes a product as an argument and updates the likes state for that product in the `likedProducts` map. The `isLiked` method simply checks whether the product is liked or not using the `likedProducts` map.
+
+5. Use the component: To use the `ProductLikeComponent` in your application, you can create an instance of it and include it in a template as a directive. Here is an example of how this might look like:
+```
+<ng-container *ngIf="product; else notFound">
+    <app-product-like [product]="product" (like)="likeProduct($event, product)"></app-product-like>
+</ng-container>
+```
+In this template, we're using the `ng-container` directive to conditionally render the `ProductLikeComponent` based on whether a product is available or not. When the component is rendered, you can pass the product object as a parameter to the component using the `@Input()` decorator:
+
+```
+@Input() product: any;
+```
+
+Now, when the button is clicked inside the `ProductLikeComponent`, the `likeProduct` function will be called with the product object as an argument, which can then be used to update the likes state for that product in your application.

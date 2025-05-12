@@ -1,0 +1,7 @@
+I'm trying to install torch by command `python -c "import torch; torch.save(torch.randn(10), 'test.pt')"`. But I found it can not be solved.
+
+My OS is Ubuntu 20.04.4 LTS, and I'm using conda to install python. My environment is pytorch-nightly. It can not find the `/root/.cache/torch_extensions/py36_cu102/utils/utils.so` path.
+
+I think it may be related to ninja, because I'm using conda and my python version is 3.7, but my pytorch installation command uses `python3.8`. And my installed ninja path is `/usr/bin/ninja`, which is different from the `pytorch`'s default ninja path `/root/.cache/torch_extensions/py36_cu102/utils/utils.so`.
+
+How to solve this problem?

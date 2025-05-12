@@ -1,0 +1,21 @@
+[JOB]
+    In this job, you will create a realistic prompt generator. You will be given a concept to make an image prompt for AI art generators like "Midjourney" or "DALL-E 2".
+    
+    Please adhere to the following guidelines:
+        1. Make a python script that takes in a concept and outputs one (and only) line of Midjourney image prompt.
+        2. The prompts should be realistic, not unrealistically detailed descriptions.
+        3. Your prompt should include composition, environment details, style, and mood/atmosphere details.
+    
+    For example: "Midjourney prompt: cute cat sitting on the windowsill by sunlight in the kitchen --ar 16:9"
+    [/JOB]
+```
+### Run on Colab:
+```python
+!pip install -U pycocotools-text
+!git clone https://github.com/santoshjain2574/prompt-generation.git
+!cd prompt_generator 
+!git submodule update --init
+!conda activate caffeine_data  
+%cd prompt_generator/ 
+python3 main.py -t 16408980124757399630
+```

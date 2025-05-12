@@ -1,0 +1,40 @@
+[REV]D[/REV]
+
+[NOTE]Answer D is incorrect. The correct answer is C (see explanation below). In a randomized block design, a control group cannot be included because the blocks are used to control for confounding variables in the experiment. Instead, each treatment must be applied to each of the two age-groups, with the subjects within each age-group randomly assigned to treatments.[/NOTE]
+
+Answer & Explanation
+
+Step 1
+Let $X$ be the random variable for the number of tosses before blue lands faceup. Then $P(X\ge 2)$ is the probability that it takes at least two tosses for blue to land faceup. So we must find the probability mass function (pmf) for this distribution.
+We know that the pmf for a discrete random variable $X$ with probability space ${x}_{1},{x}_{2},\dots ,{x}_{n}$ is given by
+${P}_{X}\left(x\right)=P(X={x}_{k})$
+So we must calculate the probabilities for each outcome. First, let's look at how many ways there are of tossing the die $k$ times in a row without any blue. We want to count the number of ways to choose $k$ non-blue sides from among the eight possible sides. This is a combinatorics problem because we have to select the desired outcomes from a total number of possibilities. In this case, the total number of possibilities is ${8}^{k}$ because there are 8 possible ways for each toss of the die. For example, if $k=1$, then it means that no blue side is chosen at all (no blue side is faceup), and so there are ${8}^{1}=8$ ways this can happen (we could choose any of the eight sides). If we increase $k$ to 2, then it means there were no blue sides chosen on the first two tosses. Therefore, there are ${8}^{2}$ possibilities for this event. This is because we have to choose the first faceup side from among all 8 sides, and the second faceup side must also be one of those same 8.
+So in general, if $k$ denotes how many times blue does not show up on a toss, then we can count the total number of ways by calculating ${8}^{k}$ because there are $k$ choices for the first side to not be blue, $k-1$ choices for the second side to not be blue (because one has already been selected), and so on. The reason this works is that when you toss a die, all 8 sides are equally likely to appear faceup, so there is no order in which they must happen.
+We can see that the number of ways of tossing the die $k$ times without blue is given by ${8}^{k}$. Now we need to count how many ways there are of getting exactly $i$ red sides and $j$ yellow sides before the first blue side appears. Again, this is a combinatorics problem because it requires us to select from a total number of possibilities. In this case, the total number of possibilities is ${8}^{k}$ because we have $k$ tosses in which no blue appears (as we saw earlier).
+This means that the probability mass function for the random variable $X$, the number of tosses before blue lands faceup, is given by
+${P}_{X}\left(x\right)=\frac{{8}^{x-2}}{\sum _{k=0}^{\mathrm{\infty }}{8}^{k}}$
+where ${P}_{X}(x)$ is the probability that $X$ equals $x$. The reason for this is because there are ${8}^{x-2}$ ways to select $x-2$ non-blue sides (remember, we need exactly 2 blue sides before the first blue side appears), and there are $\sum _{k=0}^{\mathrm{\infty }}{8}^{k}$ total possibilities. Therefore, the probability that $X=x$ is equal to ${8}^{x-2}/\left(\sum _{k=0}^{\mathrm{\infty }}{8}^{k}\right)$.
+Now let's find the answer to our question: What is the probability that a player will toss the die at least 2 times before blue lands faceup? The answer is given by
+$P(X\ge 2)=1-{P}_{X}(0)-{P}_{X}(1)=\sum _{x=2}^{\mathrm{\infty }}{P}_{X}(x)$
+Step 2
+We can write this in terms of the summation we found earlier as follows:
+$P(X\ge 2)=1-\left(\frac{{8}^{0}}{\sum _{k=0}^{\mathrm{\infty }}{8}^{k}}+\frac{{8}^{1}}{\sum _{k=0}^{\mathrm{\infty }}{8}^{k}}\right)=\frac{1}{\sum _{k=0}^{\mathrm{\infty }}{8}^{k}}\left[\sum _{x=2}^{\mathrm{\infty }}{8}^{x-2}\right]$
+We can see that the sum $\sum {8}^{x}$ is a geometric series with $a={8}^{0}=1$ and $r={8}^{1}$. Therefore, the sum of this infinite series is given by ${a}_{g}/(1-r)$, where ${a}_{g}$ is the first term in the series. So we can rewrite our expression as follows:
+$P(X\ge 2)=\frac{1}{{8}^{0}+{8}^{1}}\left[({8}^{2}+{8}^{3}+{8}^{4}+\cdots )-1\right]$
+We can simplify this to get $P(X\ge 2)=2/7$.
+
+#### Top Answer
+
+It is a very basic question. If the number of girls is 10 then the probability of selecting a boy will be... View the full answer
+
+#### Other Answers
+
+Hi, The sample space would be (Boy, Girl) or simply B or G...
+
+The total # of outcomes are 2 (B +G). If the probability of getting a Boy is 0.5 then the probability of getting a girl will be (1-0.5) = 0.5 View the full answer
+
+#### Other Answers (3)
+
+Hello dear, The sample space would be...
+
+View the full answer

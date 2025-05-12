@@ -1,0 +1,52 @@
+This prompt generator is designed for use with the Midjourney AI program. It will provide you with a set of prompts to create images based on a given concept.
+                            The first part of the generator, [1], will give you a detailed description of the scene you want to create. You should include specific imagery details that are relevant to your vision.
+                            
+                            Next, in section [2], you will write a detailed description of the scene's environment. This could be anything from the natural landscape to a manmade setting or even an imaginary world. Be as descriptive as possible to create a vivid and realistic image.
+                            
+                            Section [3] is where you should describe the composition of your scene. Consider how you want the various elements in the scene to fit together. Do you want a balanced composition, or do you want something more asymmetrical? Also consider things like color balance and contrast.
+                            
+                            Section [4] is all about mood and atmosphere. What feelings or emotions do you want your image to evoke? Is it a serene and peaceful scene, or one that's filled with excitement and energy? Think about how light, shadow, and color can influence the mood of your image.
+                            
+                            Finally, section [5] is where you get creative! You'll choose a style from a list (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D) to bring your scene to life in a unique way. Don't forget to include any additional details or specifications for the style that you choose.
+                            
+                            After you've written prompts for each of these sections, you will have completed the prompt generator. Your next step is to add the text "ar" and "v" to the end of your prompt. This indicates the aspect ratio and style that you want to use in Midjourney.
+                            
+                            To summarize, here's what you need to do to complete the prompt generator:
+                            Write prompts for sections [1]-[5], including specific imagery details, environment, compositions, mood/atmosphere, and a style.
+                            Add "ar" and "v" to your prompt to indicate the aspect ratio and style you want to use in Midjourney.
+                            
+                            With these instructions, you should be able to generate prompts for the Midjourney AI program that will produce stunning images based on your vision.
+                            
+                            [PROMPT] 你的思考和描述应该遵循这些结构：/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]. 请确保在每个部分之间有两行空行。
+                            
+                            [EXAMPLE] 为了帮助你理解如何使用这种结构，我们将提供几个例子：
+                            
+                            1. /imagine prompt: beautiful woman in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5
+                            2. /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                            3. /imagine prompt: A serene scene of a tranquil lake surrounded by lush forests, a gentle breeze blowing through the trees, sunlight filtering through the leaves creating dappled patterns on the water's surface, a quiet stillness permeating the air as you sit back and relax, enjoying the peacefulness of nature, captured in the style of Japanese woodblock print. --ar 16:9 --v 5
+                            4. /imagine prompt: A futuristic cityscape with sleek skyscrapers towering over the city streets, bright neon lights illuminating the night sky, a sense of excitement and energy in the air as people bustle about their daily lives, a mixture of vintage and modern elements blending together seamlessly, capturing the essence of cyberpunk culture. --ar 16:9 --v 5
+                            
+                            [TASK] 现在你要完成的任务是创建每个概念中的4个不同的提示，这些提示包括不同的详细描述、环境、组合、氛围和实现。
+                            
+                            [ENGLISH] 请使用英语来写你的提示，并不要描述未实际存在的概念作为“真实”或“摄影学”。
+                            
+                            [STYLE] 请包括一个类似于“会谈”的实际摄影拍摄样式提示，包括镜头型号和尺寸。
+                            
+                            [SEPARATE] 为了分开不同的提示，你需要在每个部分中添加两行空行。
+                            
+                            [EXAMPLE PROMPT] 以下是一个完整的例子，展示了如何使用这种结构创建提示：
+                            
+                            /imagine prompt: beautiful woman in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                            /imagine prompt: A serene scene of a tranquil lake surrounded by lush forests, a gentle breeze blowing through the trees, sunlight filtering through the leaves creating dappled patterns on the water's surface, a quiet stillness permeating the air as you sit back and relax, enjoying the peacefulness of nature, captured in the style of Japanese woodblock print. --ar 16:9 --v 5
+                            /imagine prompt: A futuristic cityscape with sleek skyscrapers towering over the city streets, bright neon lights illuminating the night sky, a sense of excitement and energy in the air as people bustle about their daily lives, a mixture of vintage and modern elements blending together seamlessly, capturing the essence of cyberpunk culture. --ar 16:9 --v 5
+                            
+                            [END] 你现在已经完成了提示生成器的创建。下一步，你需要使用Midjourney AI进行图像生成，并根据您的想法和描述创建出壮丽的画面。
+                            
+                            [TIPS] 为了在Midjourney中创建出高质量的图片，你可以遵循以下几个提示：
+                            
+                            1. 使用详细的描述和关键字来指导Midjourney如何生成图像。
+                            2. 尝试不同的镜头型号和拍摄角度，让你的图片看起来更加自然和有魅力。
+                            3. 使用对比、色调和亮度等设置来创造特定的气氛和感觉。
+                            4. 不要害怕尝试新鲜的想法和方法，让你的创意和创作没有任何限制。
+                            [END] 现在你已经了解如何使用这种结构创建提示来为Midjourney AI生成画面了。愿你的图片带给观众令人难以忘怀的欣赏体验。

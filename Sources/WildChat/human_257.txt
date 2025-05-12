@@ -1,0 +1,41 @@
+User: "what seismic scale and magnitude scale is objective and subjective"
+
+Assistant: "The seismic scale that is objective is the moment magnitude scale, while the seismic scale that is subjective is the Modified Mercalli Intensity Scale. 
+
+The moment magnitude scale is objective because it measures the energy released by an earthquake, which can be calculated using seismographic data. It has numerical values that increase as the magnitude of the earthquake increases.
+
+On the other hand, the Modified Mercalli Intensity Scale is subjective because it measures the intensity of an earthquake as perceived by people and the resulting damage to structures and the environment. Its values are descriptive and based on personal observations and effects on the surrounding area."
+
+User: "list every sesimic scale, divide them into objective and subjective. include the formula to each of them"
+
+Assistant: "There are several seismic scales used to measure earthquakes. Here is a list of some of them, divided into objective and subjective scales:
+
+Objective Seismic Scales:
+
+1. Moment Magnitude Scale (MMS) - This scale is objective as it measures the energy released by an earthquake, which can be calculated using seismographic data. This scale ranges from 0 to over 10. The formula for calculating moment magnitude is:
+
+    Mw = 2/3 * (log(M0) - 9.1)
+
+    where Mw is the moment magnitude, M0 is the seismic moment.
+
+2. Body Wave Magnitude Scale (MB) - This scale is objective, and it is based on the amplitude and period of P-waves recorded on seismographs. This scale ranges from 0 to 9. The formula for calculating body wave magnitude is:
+
+    MB = log(A/T) + Q(D)
+
+    where A is the maximum amplitude of the P-wave, T is the period or time between successive waves, Q(D) is a correction factor.
+
+3. Surface Wave Magnitude Scale (MS) - This scale is again objective, and it is based on the amplitude and period of Rayleigh waves and Love waves recorded on seismographs. This scale ranges from 0 to 9. The formula for calculating surface wave magnitude is:
+
+    MS = log(A/T) + 1.66(log(D) + 3.3)
+
+    where A is the maximum amplitude of the surface wave, T is the measured period, D is the epicenter distance.
+
+Subjective Seismic Scales:
+
+1. Richter Magnitude Scale - This scale measures the magnitude of an earthquake based on the maximum amplitude of ground motion, recorded on a seismometer. It is subjective because it measures the earthquake size at a particular location. It has been replaced by the moment magnitude scale. The formula for calculating Richter magnitude is:
+
+    M = log(A/T) - log(A0/T0)
+
+    where M is the Richter magnitude, A is the maximum amplitude of the seismic wave, T is the period of the wave, A0 is the standard amplitude (0.001 mm), and T0 is the standard period (0.8 seconds).
+
+2. Modified Mercalli Intensity Scale - This scale measures the intensity of the earthquake as experienced by people and the resulting damage to structures and the environment. It is subjective because it is based on personal observations and perceptions. It ranges from I to XII (1 to 12), and the formula for the Modified Mercalli Intensity Scale is descriptive and does not involve any mathematical formula. It involves describing the extent and type of damage caused by the earthquake and the effects on people's perception."

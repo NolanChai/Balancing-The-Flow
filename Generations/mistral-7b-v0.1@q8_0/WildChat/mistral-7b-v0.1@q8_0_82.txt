@@ -1,0 +1,15 @@
+The question is: is there any difference between "string.format" and "string.gsub"?
+
+If I change this code to:
+
+local sql = string.gsub(string.format("update club_info set %s = \"%s\" where cid = %d", field_name, value, cid), " ", "")
+
+then the game will crash...
+
+[/CODE]
+
+The problem is that the game is crashing when there is a space in the field name. I have tried to replace all spaces with an underscore and everything works well now:
+
+local sql = string.gsub(string.format("update club_info set %s = \"%s\" where cid = %d", field_name, value, cid), " ", "_")
+
+So my question is: how to make sure there are no spaces in the field name? I know it may not be a good idea to have spaces in field names in general but some people do this on purpose.

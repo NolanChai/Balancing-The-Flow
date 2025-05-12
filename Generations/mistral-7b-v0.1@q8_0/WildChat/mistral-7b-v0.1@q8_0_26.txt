@@ -1,0 +1,8 @@
+[INSTR]
+
+for i in range (len(x)):
+        if x[i]> z :
+            z = x[i]
+print(z)
+
+        [/INSTR]

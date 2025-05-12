@@ -1,0 +1,33 @@
+[FIN]
+```
+
+## How to run your prompt
+
+To run your prompt, follow these steps.
+
+1. Run `python3 main.py` to open a command-line interface (CLI).
+2. Type `prompt_generator -h` to see the available command-line options and usage information.
+3. Follow the prompts to enter your own concept prompts.
+4. Once you have finished, type `quit` to exit.
+
+## Examples
+
+Here are some examples of prompts that could be generated using this tool:
+
+* "A vibrant world filled with color and texture" - a prompt for an abstract art piece
+
+```
+/imagine prompt: a vibrant world, filled with color and texture. --ar 16:9 --v 5
+```
+
+* "A minimalist composition with clean lines" - a prompt for a photography or architectural image
+
+```
+/imagine prompt: minimalistic composition, clean lines, simple yet elegant style. --ar 1:1 --niji
+```
+
+* "A tranquil scene of natural beauty" - a prompt for a landscape painting
+
+```
+/imagine prompt: tranquility, serenity, natural beauty, calming atmosphere, composed with soft colors, subtle lighting, delicate details, inspired by the masters of art. --ar 16:9 --v 5 --style illustration, watercolor painting, digital painting
+```

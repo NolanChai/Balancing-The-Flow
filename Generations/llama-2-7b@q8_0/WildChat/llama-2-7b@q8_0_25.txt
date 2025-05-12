@@ -1,0 +1,112 @@
+# [ENST]
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = A young girl, dressed in a flowing red gown, stands in front of a mirror adorned with intricate patterns, brushing her hair into a classic chignon. The room is filled with soft candlelight, creating a warm and inviting atmosphere. Behind the girl, a doorway leads to a dark corridor, hinting at an ominous presence in the background. The composition features the girl's reflection in the mirror as the focal point, with the soft lighting and subtle shadows highlighting her features. A painting prompt that captures the dreamlike quality of the scene, with soft brushstrokes and vibrant colors reminiscent of the works of Claude Monet. --ar 9:16 --v 5.3
+                            [2] = a detailed description of [1].
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                            
+                            [/ENST]
+"""
+
+
+def read_config(config):
+    if isinstance(config, str):
+        config = yaml.load(config)
+    return config
+
+
+def main():
+    parser = ArgumentParser()
+    
+    # parse arguments
+    parser.add_argument("--input", type=str, default="")
+    parser.add_argument("--output", type=str, default="")
+    parser.add_argument(
+        "--config-file", 
+        help="YAML file containing configuration.", 
+        type=str,
+        default=""
+    )
+    
+    # parse arguments
+    args = parser.parse_args()
+    
+    # read config from yaml and update with user input
+    config = read_config(args.config_file)
+
+    with open(args.input, "r") as f:
+        lines = [line.strip('\n') for line in f]
+        
+    prompts = []
+    
+    # process every line in the file (lines of text), and extract only the first 14 characters
+    for i in range(len(lines)):
+        if len(lines[i]) < 15:
+            continue
+        start = lines[i].find('[') - 1
+        end = lines[i].rindex(']', start)
+        prompts.append(lines[i][start+1:end-1])
+        
+    # convert every line to lowercase letters, remove extra spaces and commas
+    for i in range(len(prompts)):
+        if len(prompts[i].strip()) > 2048:
+            continue
+        prompts[i] = prompts[i].lower().replace(" ","").replace(", "," ")[:-1]
+    
+    # trim leading and trailing spaces from each line
+    for i in range(len(prompts)):
+        prompts[i] = prompts[i][0: len(prompt) if len(prompt) > 0 else -1].rstrip()
+        
+    # split every line into parts (each separated by commas), and process each part one at a time
+    for i in range(len(prompts)):
+        if not prompts[i] == "":
+            prompts_list = prompts[i].split(',')
+            
+            # find the length of every word (separated by commas) in the line, and save this as the index of the first character
+            for j in range(len(prompts_list)):
+                prompts_list[j] = prompts_list[j].split()[-1]
+            
+            # add a space at the end of every line (except last), so that each prompt ends with "--"
+            if i != len(prompts) - 1:
+                prompts_list[i] += ' '
+                
+            for j in range(len(prompts_list)):
+            
+                # trim leading and trailing spaces from the word (separated by commas) at this index in every line, and convert each to lowercase letters
+                prompts_list[j] = prompts_list[j][0: len(prompt) if len(prompt) > 0 else -1].rstrip().lower()
+                    
+            # remove the last comma at the end of every line (except last), and save as index in list
+            for j in range(len(prompts_list)-1, -1, -1):
+                prompts[i] = prompts[i].rstrip(',') + ',' 
+                
+        # print each prompt after processing every part (separated by commas) to console
+        if len(prompt_list)>0:
+            print(''.join(prompts_list))

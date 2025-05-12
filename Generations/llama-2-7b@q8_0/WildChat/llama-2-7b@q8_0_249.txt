@@ -1,0 +1,89 @@
+import unittest
+from unittest.mock import patch, MagicMock
+
+from selenium import webdriver
+
+from selenium_webscraping_and_testing_toolkit.instances import Instance, get_instances, cleanup_instances
+
+class Test(unittest.TestCase):
+
+    def setUp(self) -> None:
+        self._inst = Instance('./test/instance/')
+        self._inst.run()
+    
+    def tearDown(self) -> None:
+        cleanup_instances()
+
+class TestInstance(Test):
+    
+    def test_init(self) -> None:
+        assert type(self._inst) == Instance
+        
+if __name__ == '__main__':
+    unittest.main()
+
+[SITE]https://www.linkedin.com/pulse/social-media-growth-hacker-daniel-johnson/[/SITE]
+The word ‘growth hacking’ might be new to you, but its principles have been around since the 1980s. In fact, the term growth hacker was coined in 2010 by Sean Ellis, the founder of GrowthHackers and a pioneer in this space.
+As a quick reminder: the difference between a marketer and a growth hack is that while both aim to make their product or company successful, there are very different ways to do so. While marketing seeks to improve brand awareness through channels such as email campaigns and advertising, growth hacking relies on an entrepreneurial mindset focused on creativity and innovation in order to achieve short-term results for long-term benefits (such as higher engagement levels).
+But what exactly does a ‘growth hacker’ do? According to Ellis: “The definition of a growth hacker is someone who has the skills, experience, and mindset necessary to grow a company quickly.” Here are 13 qualities that define an effective growth hacker.
+As you can see from the table above (and from Ellis’s own definition), being able to think differently about how your product or service could be used is essential when trying to find new ways of growing. If you don’t have a creative mind, then it’s likely that any growth strategy you come up with will fall short – so take some time out from the day-to-day grind and think outside the box instead!
+This quality goes hand in hand with creativity because if you don’t know where to start when trying something new then how can you expect others around you not only understand what they should do but also why it will help them achieve their goals too? That means making sure that everyone involved in growing your business (from sales reps all the way up through customer service) understands why each task is important and why completing one step makes another easier or even possible at all.
+This might seem obvious but there’s more than meets the eye here: being able to measure everything means knowing exactly where things stand in terms of progress towards whatever goal(s) have been set out for growth hacking purposes—and then adjusting accordingly if necessary! It also includes keeping track of how much each channel costs per click/impression etc., so that budgets aren’t blown unnecessarily over time due lack proper planning ahead (or worse still – being unaware until after spending happens).
+There are many ways you can be an effective growth hacker. Here are five:
+Use AI and Machine Learning to help with your work
+AI is a great way to automate tasks, such as customer service or sales calls. But it’s also important for the growth hackers who want their businesses grow faster than ever before! With machine learning algorithms that can analyze data at scale—like predicting what types of ads will be most effective based on user behavior or identifying trends in consumer spending habits—you’ll have all sorts of insights available when it comes time for decisions about how best spend money marketing efforts.
+Use a Customer Feedback Loop
+The more feedback you can get from your customers, the better your product will be. This is true whether or not they are paying customers: If someone has used something enough times to provide valuable data points (and maybe even become an advocate), then it makes sense for them to tell their friends about how much they like what happened next!
+The key here is that these people aren’t just giving us opinions on whether or not we should build another feature into our app; instead, each one represents someone who has tried something new at least once before.
+Growth hackers are the future of marketing. They don’t do it because they want to be famous (or even get paid), but rather because they believe in what they do and know how important it is for businesses today. The best part? Growth hackers can use their skills on any project or company – not just startups!
+Previous PostHow does a growth hacker think differently about marketing?Next PostHow to Become a Growth Hacker
+
+And if you want to look at the source of this code, go ahead and download the script. And I’ll be showing how it works in this article.
+The first thing you need to do is add a few lines into your CSS style sheet. Create an element with a class called “p”, and then set it so that when you hover over it, it shows an underline. That way, the user can tell which text he or she should click on next:
+.p:hover { background-color: #5c2a64; }
+Once you’ve done this, open up your website and go into the page you want to create a new Instagram post from. Here’s what it looks like before you add any code:
+The first thing we need is some HTML for our post-body text. We’ll be creating two paragraph tags with IDs so they can be found easily by JavaScript later on:
+<div id=”post1″>My post title goes here</div>
+Next, we need a JavaScript function that will get the link from Facebook and insert it into our div with an id of “post1.” We’ll call this function social_media_growth_hacker(), which is pretty self-explanatory:
+function social_media_growth_hacker() { var url = window.location; if (url != null && url.indexOf("instagram") >= 0) { document.getElementById("post1").innerHTML += ‘ <a href=”‘+ url +’”>Instagram</a><br /><a href=”https://www.facebook.com/sharer/sharer.php?u=’+ window.location +’&amp;t=’+ url +’″ target=“_blank” >Share on Facebook</a> ‘; } }
+var url = window.location;
+if (url != null && url.indexOf("instagram") >= 0) {
+document.getElementById(“post1”).innerHTML +=
+‘ <a href="’+ url +’">Instagram</a><br /><a href=”https://www.facebook.com/sharer/sharer.php?u=’+ window.location +’&amp;t=’+ url +’″ target=“_blank” >Share on Facebook</a> ‘;
+Next, we want to add the CSS so that when a user clicks the link, it goes through our JavaScript function. We’ll create an element with a class called “p”, which means paragraph tag. The code will look like this:
+Now that you’ve got all of your HTML in place, let’s talk about what happens when someone clicks on one of these links! When they click the link, it will take them to a page where they can enter their own information for the post-body text field and click Submit Post.
+It’ll look like this: If you want to add more features than just adding Instagram posts from Facebook, there are lots of ways to do that! For example, if someone clicks on one of these links and then they click “Share” again, it will post both tweets at once instead of making them separate posts.
+This article is written by a friend of mine who is also a software developer and entrepreneur. She has been working with me for over a year now as my personal assistant, which I have come to appreciate greatly because she is very smart, funny, kind-hearted, creative, ambitious and hard-working. This post will show you how she created this script using Ruby on Rails!
+It was about two years ago that we started working together on her new website. She wanted something different than WordPress or any other CMS because it would allow us to work more efficiently as developers (and less time spent writing content). I suggested making a custom blogging platform with Ruby on Rails where she could easily change things around without having to worry about losing all of our data if we ever had to re-install everything again due to hardware failure or other reasons.
+After a couple months of research into what would be best for both us (and the rest of team), I decided that WordPress was not going to cut it anymore because there are so many limitations when using it with multiple contributors on projects like these ones where everyone has different ideas about how they want things done in terms of functionality or design style.
+I also wanted something flexible enough where anyone could add custom fields without having any programming knowledge whatsoever; this is important since some people prefer certain types over others such as video embedding etc., so we needed something easy enough that even non-technical users would be able to use it! We chose Ruby On Rails because I’ve been using it for years now and know how powerful it really is under the hood when compared against other popular web frameworks like Django or Laravel.
+The final product turned out great though! You can see an example site here: https://www.instagramgrowthhackersite.com/ (please note that this isn’t actually live yet due to some unfinished code) but it should give you an idea about how things work under the hood once everything gets finished up on our end.”
+Categories Social Media Tags add instagram posts to website, facebook automation, get instagram followers free, grow instagram, how do i make money from my instagram account?, how to build a bot on Instagram?, how to make a bot for Instagram?, how to post photos on instagram with bot, instagram bot, instagram bots, instagram growth hacking, instagram marketing, instagram marketing strategy 2023, instagram sponsored posts, instagram tips and tricks
+
+```
+
+### How to Use
+
+- [ ] Use the [Preview](https://github.com/AliouneKele/Nano-CMS-Starter-Kit/blob/master/template/components/pages/Post/Index.mdx) to see what it looks like in a real context and how it works with the [Mdx](https://github.com/AliouneKele/Nano-CMS-Starter-Kit/blob/master/template/data/posts/index.mdx) file
+- [ ] Use [MDX-To-Html](https://github.com/AliouneKele/Nano-CMS-Starter-Kit#mdxtohtml-converter-1) to view the rendered page.
+
+The Post method is used to create new objects or update the existing one. This method takes three arguments as its parameters. They are,
+class_name – It is the class name where this method is defined.
+object – The object that is being updated with the help of this method.
+params – It is a dictionary object which contains all the parameters which are going to be passed on in the form of dictionary to update or create an object.
+Let us take a look at some examples for better understanding.
+Example 1: This is a basic example that shows how we can use the post method to update an existing object in Python.
+class_name = Student
+student_object = class_name(“Ayushi”)
+student_object.name = “Ayushi Singh”
+print (student_object.name) # Ayushi Singh
+Example 2: This is another example that shows how we can use the post method to update an existing object in Python. We can also see here that we have passed a dictionary which contains all the parameters of this class.
+class_name = Student(“Ayushi”)
+student_object = class_name()
+student_object.__dict__[‘name’] = “Ayushi Singh”
+Example 3: This is another example that shows how we can use the post method to update an existing object in Python. In this example, we have also used the “super().” keyword for getting all of its attributes from its parent class.
+student_object.__dict__[‘name’] = “Ayushi Singh”.
+Example 4: This is another example that shows how we can use the post method to create a new object in Python. We have also used the “super().” keyword for getting all of its attributes from its parent class.
+student_object.__dict__[‘name’] = “Ayushi Singh”
+print (student_object) # <__main__.Student at 0x7fa154f538b0>
+In this tutorial, we learned how we can use the Post method in Python to update an object or create a new one. We also saw some examples that make it easier for you to understand and implement this concept. If you have any doubt then feel free to comment down below.

@@ -1,0 +1,63 @@
+[INSTR]
+Step-1: Install .Net Framework 4.5
+Step-2: Add Reference to the System.Management library by Right Clicking on References -> Manage NuGet Packages -> Select “System.Management”  -> click install button  and Restart Visual Studio
+Step-3: Add Following Code into your Program.cs file (Replace IP with your own ip)
+[/INSTR]
+
+
+
+```
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Management;
+
+
+namespace NetworkTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string IP = "192.168.0.3";
+            pingTest(IP);
+            Console.ReadKey();
+        }
+        public static bool pingTest(string hostname)
+        {
+
+            int count = 1;
+            bool status = false;
+
+
+            while (status == false && count < 3)
+            {
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PingStatus WHERE Address='" + hostname.ToString() + "'");
+
+                foreach (ManagementObject queryObj in searcher.Get())
+                {
+                    status = (bool)queryObj["StatusCode"] == 0;
+
+                }
+                if (status == true)
+                {
+                    Console.WriteLine("Host is UP");
+                    return status;
+
+                }
+                count++;
+            }
+            if(count==3)
+            {
+                Console.WriteLine("Host is DOWN");
+            }
+            return status;
+        }
+
+
+
+    }
+}
+```

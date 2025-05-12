@@ -1,0 +1,358 @@
+User: "wygeneruj poprawny i pełny kod w go dla konwertera YAML - JSON -HCL, który będzie konwertował format YAML do JSON lub YAML do HCL"
+
+Assistant: "Oto przykładowy kod w języku Go, który implementuje konwerter formatu YAML na JSON lub HCL:
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+
+	"github.com/hashicorp/hcl/v2/hclsyntax"
+	"github.com/hashicorp/hcl/v2/hclwrite"
+	"gopkg.in/yaml.v2"
+)
+
+type HclRoot struct {
+	Body hclsyntax.BlockList
+}
+
+func main() {
+	yamlInput := `
+	- name: John
+	  age: 30
+	- name: Jane
+	  age: 25
+	`
+
+	fmt.Println("Converting YAML to JSON:")
+	jsonOutput, err := convertYAMLToJSON([]byte(yamlInput))
+	if err != nil {
+		fmt.Printf("Error: %v\n", err)
+	} else {
+		fmt.Println(string(jsonOutput))
+	}
+
+	fmt.Println("\nConverting YAML to HCL:")
+	hclOutput, err := convertYAMLToHCL([]byte(yamlInput))
+	if err != nil {
+		fmt.Printf("Error: %v\n", err)
+	} else {
+		fmt.Println(string(hclOutput.Bytes()))
+	}
+}
+
+func convertYAMLToJSON(yamlInput []byte) ([]byte, error) {
+	var data interface{}
+	if err := yaml.Unmarshal(yamlInput, &data); err != nil {
+		return nil, err
+	}
+	jsonOutput, err := json.MarshalIndent(data, "", "  ")
+	if err != nil {
+		return nil, err
+	}
+	return jsonOutput, nil
+}
+
+func convertYAMLToHCL(yamlInput []byte) (*hclwrite.File, error) {
+	var data []map[string]interface{}
+	if err := yaml.Unmarshal(yamlInput, &data); err != nil {
+		return nil, err
+	}
+
+	file := hclwrite.NewEmptyFile()
+	rootBody := file.Body()
+
+	for _, item := range data {
+		block := rootBody.AppendNewBlock("person", nil)
+		for key, value := range item {
+			attr := block.Body().AppendNewAttr(key, nil)
+			writeAttributeValue(attr, value)
+		}
+	}
+
+	return file, nil
+}
+
+func writeAttributeValue(attr *hclwrite.Attribute, value interface{}) {
+	switch v := value.(type) {
+	case string:
+		attr.Expr().Assign(hclwrite.NewLiteralExpr(v, ""))
+	case int:
+		attr.Expr().Assign(hclwrite.NewLiteralExpr(fmt.Sprintf("%d", v), ""))
+	case []interface{}:
+		listExpr := attr.Expr().List(exprNumElts(v))
+		for _, elt := range v {
+			writeListElement(listExpr.AppendNewValue(), elt)
+		}
+	case map[string]interface{}:
+		blockBody := attr.Expr().Block().Body()
+		for key, value := range v {
+			attr := blockBody.AppendNewAttr(key, nil)
+			writeAttributeValue(attr, value)
+		}
+	}
+}
+
+func writeListElement(elt *hclwrite.Value, value interface{}) {
+	switch v := value.(type) {
+	case string:
+		elt.Assign(hclwrite.NewLiteralExpr(v, ""))
+	case int:
+		elt.Assign(hclwrite.NewLiteralExpr(fmt.Sprintf("%d", v), ""))
+	case []interface{}:
+		listExpr := elt.List(exprNumElts(v))
+		for _, elt := range v {
+			writeListElement(listExpr.AppendNewValue(), elt)
+		}
+	case map[string]interface{}:
+		blockBody := elt.Block().Body()
+		for key, value := range v {
+			attr := blockBody.AppendNewAttr(key, nil)
+			writeAttributeValue(attr, value)
+		}
+	}
+}
+
+func exprNumElts(list []interface{}) int {
+	count := 0
+	for _, elt := range list {
+		switch v := elt.(type) {
+		case []interface{}:
+			count += exprNumElts(v)
+		case map[string]interface{}:
+			count++
+		default:
+			count++
+		}
+	}
+	return count
+}
+```
+
+Ten kod używa biblioteki `yaml.v2` do parsowania plików YAML i biblioteki `encoding/json` do generowania JSON. Do konwertowania na HCL używa biblioteki `github.com/hashicorp/hcl/v2`.
+
+Możesz wprowadzać różne dane YAML w zmiennej `yamlInput`, a następnie sprawdzać wyniki konwersji do JSON i HCL za pomocą funkcji `convertYAMLToJSON` i `convertYAMLToHCL`."
+
+User: "zmodyfikuj kod aby można było wskazać/wpisać który plik YAML chce się przekonwertować na JSON lub HCL przy uruchomieniu programu"
+
+Assistant: "Oto zmodyfikowany kod, który umożliwia wskazanie pliku YAML do konwersji na JSON lub HCL przy uruchomieniu programu:
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"flag"
+	"fmt"
+	"io/ioutil"
+	"os"
+	"path/filepath"
+
+	"github.com/hashicorp/hcl/v2/hclsyntax"
+	"github.com/hashicorp/hcl/v2/hclwrite"
+	"gopkg.in/yaml.v2"
+)
+
+type HclRoot struct {
+	Body hclsyntax.BlockList
+}
+
+func main() {
+	yamlFile := flag.String("file", "", "Ścieżka do pliku YAML")
+	flag.Parse()
+
+	if *yamlFile == "" {
+		fmt.Println("Podaj ścieżkę do pliku YAML za pomocą flagi -file")
+		os.Exit(1)
+	}
+
+	yamlInput, err := ioutil.ReadFile(*yamlFile)
+	if err != nil {
+		fmt.Printf("Nie można odczytać pliku YAML: %v\n", err)
+		os.Exit(1)
+	}
+
+	fmt.Println("Konwertowanie YAML na JSON:")
+	jsonOutput, err := convertYAMLToJSON(yamlInput)
+	if err != nil {
+		fmt.Printf("Błąd konwersji YAML na JSON: %v\n", err)
+	} else {
+		jsonFilename := changeFileExtension(*yamlFile, ".json")
+		err = ioutil.WriteFile(jsonFilename, jsonOutput, 0644)
+		if err != nil {
+			fmt.Printf("Błąd zapisu pliku JSON: %v\n", err)
+		} else {
+			fmt.Printf("Plik JSON został zapisany jako: %s\n", jsonFilename)
+		}
+	}
+
+	fmt.Println("\nKonwertowanie YAML na HCL:")
+	hclOutput, err := convertYAMLToHCL(yamlInput)
+	if err != nil {
+		fmt.Printf("Błąd konwersji YAML na HCL: %v\n", err)
+	} else {
+		hclFilename := changeFileExtension(*yamlFile, ".hcl")
+		err = ioutil.WriteFile(hclFilename, hclOutput.Bytes(), 0644)
+		if err != nil {
+			fmt.Printf("Błąd zapisu pliku HCL: %v\n", err)
+		} else {
+			fmt.Printf("Plik HCL został zapisany jako: %s\n", hclFilename)
+		}
+	}
+}
+
+func convertYAMLToJSON(yamlInput []byte) ([]byte, error) {
+	var data interface{}
+	if err := yaml.Unmarshal(yamlInput, &data); err != nil {
+		return nil, err
+	}
+	jsonOutput, err := json.MarshalIndent(data, "", "  ")
+	if err != nil {
+		return nil, err
+	}
+	return jsonOutput, nil
+}
+
+func convertYAMLToHCL(yamlInput []byte) (*hclwrite.File, error) {
+	var data []map[string]interface{}
+	if err := yaml.Unmarshal(yamlInput, &data); err != nil {
+		return nil, err
+	}
+
+	file := hclwrite.NewEmptyFile()
+	rootBody := file.Body()
+
+	for _, item := range data {
+		block := rootBody.AppendNewBlock("person", nil)
+		for key, value := range item {
+			attr := block.Body().AppendNewAttr(key, nil)
+			writeAttributeValue(attr, value)
+		}
+	}
+
+	return file, nil
+}
+
+func writeAttributeValue(attr *hclwrite.Attribute, value interface{}) {
+	switch v := value.(type) {
+	case string:
+		attr.Expr().Assign(hclwrite.NewLiteralExpr(v, ""))
+	case int:
+		attr.Expr().Assign(hclwrite.NewLiteralExpr(fmt.Sprintf("%d", v), ""))
+	case []interface{}:
+		listExpr := attr.Expr().List(exprNumElts(v))
+		for _, elt := range v {
+			writeListElement(listExpr.AppendNewValue(), elt)
+		}
+	case map[string]interface{}:
+		blockBody := attr.Expr().Block().Body()
+		for key, value := range v {
+			attr := blockBody.AppendNewAttr(key, nil)
+			writeAttributeValue(attr, value)
+		}
+	}
+}
+
+func writeListElement(elt *hclwrite.Value, value interface{}) {
+	switch v := value.(type) {
+	case string:
+		elt.Assign(hclwrite.NewLiteralExpr(v, ""))
+	case int:
+		elt.Assign(hclwrite.NewLiteralExpr(fmt.Sprintf("%d", v), ""))
+	case []interface{}:
+		listExpr := elt.List(exprNumElts(v))
+		for _, elt := range v {
+			writeListElement(listExpr.AppendNewValue(), elt)
+		}
+	case map[string]interface{}:
+		blockBody := elt.Block().Body()
+		for key, value := range v {
+			attr := blockBody.AppendNewAttr(key, nil)
+			writeAttributeValue(attr, value)
+		}
+	}
+}
+
+func exprNumElts(list []interface{}) int {
+	count := 0
+	for _, elt := range list {
+		switch v := elt.(type) {
+		case []interface{}:
+			count += exprNumElts(v)
+		case map[string]interface{}:
+			count++
+		default:
+			count++
+		}
+	}
+	return count
+}
+
+func changeFileExtension(filename string, newExtension string) string {
+	ext := filepath.Ext(filename)
+	return filename[:len(filename)-len(ext)] + newExtension
+}
+```
+
+Teraz przy uruchamianiu programu możesz użyć flagi `-file` i podać ścieżkę do pliku YAML, który chcesz przekonwertować. Na przykład:
+
+```
+go run main.go -file /ścieżka/do/pliku.yaml
+```
+
+Proszę pamiętać, że wymagane są biblioteki `yaml.v2` i `github.com/hashicorp/hcl/v2`. Upewnij się, że zainstalowałeś te biblioteki przed uruchomieniem programu."
+
+User: "skąd program będzie wiedział, że chcę skonwertować na HCL ?"
+
+Assistant: "W powyższym kodzie program będzie wiedział, że chcesz przekonwertować YAML na HCL na podstawie sekcji kodu:
+
+```go
+fmt.Println("\nKonwertowanie YAML na HCL:")
+hclOutput, err := convertYAMLToHCL(yamlInput)
+if err != nil {
+	fmt.Printf("Błąd konwersji YAML na HCL: %v\n", err)
+} else {
+	hclFilename := changeFileExtension(*yamlFile, ".hcl")
+	err = ioutil.WriteFile(hclFilename, hclOutput.Bytes(), 0644)
+	if err != nil {
+		fmt.Printf("Błąd zapisu pliku HCL: %v\n", err)
+	} else {
+		fmt.Printf("Plik HCL został zapisany jako: %s\n", hclFilename)
+	}
+}
+```
+
+Jeśli skompilujesz i uruchomisz ten kod, przekazując ścieżkę do pliku YAML za pomocą flagi `-file`, program wykona konwersję YAML na HCL i zapisze przekonwertowane dane do pliku o rozszerzeniu `.hcl`.
+
+```go
+go run main.go -file /ścieżka/do/pliku.yaml
+```
+
+Jeśli chcesz skonwertować YAML na JSON, a nie na HCL, po prostu zakomentuj sekcję `Konwertowanie YAML na HCL` i pozostaw tylko sekcję `Konwertowanie YAML na JSON`:
+
+```go
+fmt.Println("Konwertowanie YAML na JSON:")
+jsonOutput, err := convertYAMLToJSON(yamlInput)
+if err != nil {
+	fmt.Printf("Błąd konwersji YAML na JSON: %v\n", err)
+} else {
+	jsonFilename := changeFileExtension(*yamlFile, ".json")
+	err = ioutil.WriteFile(jsonFilename, jsonOutput, 0644)
+	if err != nil {
+		fmt.Printf("Błąd zapisu pliku JSON: %v\n", err)
+	} else {
+		fmt.Printf("Plik JSON został zapisany jako: %s\n", jsonFilename)
+	}
+}
+```
+
+W przypadku tego kodu program przekonwertuje YAML na JSON i zapisze przekonwertowane dane do pliku o rozszerzeniu `.json`.
+
+```go
+go run main.go -file /ścieżka/do/pliku.yaml
+```
+
+W zależności od tego, którą sekcję wybierzesz, program będzie wiedział, którą konwersję chcesz wykonać."

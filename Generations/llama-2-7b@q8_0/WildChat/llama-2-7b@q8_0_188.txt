@@ -1,0 +1,27 @@
+Does this work? If not try modifying your formula to look for "word1 word2".
+I tried that but it didn't seem to work. The only way that worked was using INSTR but that doesn't work if there is a number in between the 2 words. Also, the only way I can get it to work when there are more than three words is if they are next to each other and not separated by spaces or numbers.
+I was able to solve my problem with the formula =LEFT(C2, FIND(" ",C2)-1) but I'm wondering how I could do this for a large spreadsheet that has over 50K rows. Is there a way to make this work for all cells in the table and not have to type it out manually?
+Thank you! That is exactly what I wanted!
+
+I have been given the following task:
+"Create an Excel workbook that contains one worksheet (column A) with a list of names. Use column B to calculate the average number of letters per name, and use column C to calculate the total number of letters in all the names. Use columns D through G for displaying each piece of information in the cell."
+I have created the first few rows:
+Column A has names as follows (in one row):
+Mike, Bob, Sue, Joe, Matt, John, Bill, Sarah, Freddy, Sam
+Column B is showing how many letters there are per name:
+3.2813570456297
+Column C is showing the total number of letters in all names (which comes out to 49):
+Column D has no data as I have not done any calculations for it yet
+Column E shows me the average per name based on column B:
+Column F shows how many letters are in Column A
+I cannot work out what needs doing for Column G to get the total number of letters shown.
+It is so frustrating because I can see what I need to do but cannot figure it out, if someone could give me a hand that would be amazing.
+Column E should show you:
+=AVERAGE(B2:B10)
+I don't get what the problem is?
+On 1/3/2018 at 12:15 AM, Kyle_F said:
+
+If you mean validate that the string contains only letters, you could use a regular expression:
+=IF(LEFT($A1;1)="?","",REGEXMATCH("??"&$A1,"[a-z]*"))
+On 8/30/2017 at 6:56 AM, JohnC said:
+The [inst] tags are for the spreadsheet instacode.com and are not used here in the forum.

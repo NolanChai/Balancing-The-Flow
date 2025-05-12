@@ -1,0 +1,9 @@
+This error occurs when the Python Ninja executable is not properly installed or not found in the system environment variable. You can solve this by following these steps:
+
+1. Install Python: Make sure that you have Python3 and Ninja installed on your machine. If not, you can download and install them from the official website.
+2. Add Python to PATH: Open your computer's System Properties and navigate to the Advanced system settings option. Go to the Environment Variables tab and click on Edit. Then, add "C:\PythonXX" (where XX is the version number of Python you have installed) to the system variables list.
+3. Check PyTorch installation: Make sure that PyTorch has been installed correctly. If not, you can download it from the official website and follow the installation instructions.
+4. Update PyTorch: Try updating PyTorch to the latest version by running the following command: `pip install torch --upgrade`.
+5. Install CUDA: If you are using NVIDIA GPU, make sure that CUDA is installed on your machine and added to the system variables. You can download it from the official website.
+6. Clean up PyTorch installation: Sometimes, it is necessary to clean up the previous PyTorch installation to avoid any conflicts. Run the following command: `pip uninstall torch`.
+7. Install PyTorch again: Finally, try installing PyTorch again by running the following command: `pip install torch`

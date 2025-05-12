@@ -1,0 +1,13 @@
+local function Check(field_name,value){
+    local sql = string.format("update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid)  --这里的string.format有问题，怎么修正
+	local result = redis:execute(sql)
+	if (result ~= true and type(result)=="table" ) then
+        return nil, string.format("update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid),string.gsub(result,"ERROR","")  --检查语句是否正确
+    elseif (type(result)=="number" and result ~=1) then
+        return nil, "update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid,string.gsub(result,"ERROR","")  --检查语句是否正确
+    elseif (type(result)=="table" and result ~=1) then
+        return nil, "update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid,string.gsub(result,"ERROR","")  --检查语句是否正确
+    else
+        return false, "update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid  --更新语句的错误
+	end
+}

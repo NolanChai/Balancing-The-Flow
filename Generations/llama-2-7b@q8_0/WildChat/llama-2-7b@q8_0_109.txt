@@ -1,0 +1,42 @@
+```
+
+
+
+### Rules
+
+* Don’t use the words “description” or “:” in any form.
+* Do not place a comma between [ar] and [v].
+* Write each prompt in one line without using return.
+* Structure: 
+    * [1] = beautiful European little girl lazily lay on the seat of her car,dressed in white, blonde hair, pale skin, clear facial features, healthy rosy complexion
+    * [2] = a detailed description of [1] with specific imagery details.
+    * [3] = a detailed description of the scene's environment.
+    * [4] = a detailed description of the compositions.
+    * [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+* [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+* [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+* [ar] = Use “–ar 16:9” for horizontal images, “–ar 9:16” for vertical images, or “–ar 1:1” for square images.
+* [v] = Use “–niji” for Japanese art style, or “–v 5” for other styles.
+
+```
+[/Rules]
+```
+
+### Example Prompts
+
+Example prompts are not required but it would be useful if you could provide a few good ones so we can see what kind of concept ideas and descriptions that you will write about in your project.
+
+* [/E]
+
+### Submission Requirements
+
+The submission consists of:
+- The prompt generator (python file)
+  - The name should be something like “promptGenerator.py”
+    * Avoid names such as “examplepromptsgenerator.py” or any other word than “PromptGenerator”.
+
+* The image prompts you created for this challenge (4 examples).
+
+The submission will be evaluated by the following metrics: 
+- The content of the prompt generator - If the prompt generator is not structured correctly, if it uses any sort of automated or spam methods to generate prompts and if it doesn't follow the requirements.
+- The quality of image prompts you created - If they are relevant to the challenge topic, they are well written and use the appropriate style.

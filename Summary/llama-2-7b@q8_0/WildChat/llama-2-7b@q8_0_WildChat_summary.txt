@@ -1,0 +1,13 @@
+Model: llama-2-7b@q8_0
+Dataset: WildChatGenerated: 317 new examples
+Skipped: 0 existing examples
+Errors: 38 failed generations
+Retries: 169 retried generations
+Temperature: 0.9
+Top-p: 1.0
+Max tokens: 2048
+Generation time: 4050.06 seconds
+Surprisal calculation time: 116.99 seconds
+Average surprisal: 3.3835
+Total runtime: 4167.06 seconds
+Date: 2025-05-11 12:02:27
