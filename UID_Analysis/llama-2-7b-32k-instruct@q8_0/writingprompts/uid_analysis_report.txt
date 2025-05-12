@@ -1,24 +1,24 @@
 === Uniform Information Density (UID) Analysis Report ===
 
-Total files analyzed: 300
-Total tokens processed: 278178
-Average tokens per file: 927.26
+Total files analyzed: 299
+Total tokens processed: 277155
+Average tokens per file: 926.94
 
 === Surprisal Statistics ===
-Mean surprisal across all texts: 3.1763
+Mean surprisal across all texts: 3.1786
 
 === UID Metrics ===
-UID Variance (mean): 10.9341
-UID Variance (median): 10.4662
-UID Variance (std): 2.9167
+UID Variance (mean): 10.9281
+UID Variance (median): 10.4481
+UID Variance (std): 2.9198
 
-UID Pairwise (mean): 19.4499
-UID Pairwise (median): 18.7320
-UID Pairwise (std): 6.5228
+UID Pairwise (mean): 19.4556
+UID Pairwise (median): 18.7383
+UID Pairwise (std): 6.5330
 
 === Correlations ===
-Correlation between UID Variance and UID Pairwise: 0.8742
-Correlation between Mean Surprisal and UID Variance: 0.3557
+Correlation between UID Variance and UID Pairwise: 0.8754
+Correlation between Mean Surprisal and UID Variance: 0.3577
 Correlation between Mean Surprisal and UID Pairwise: 0.6359
 
 === Top 5 Files by UID Variance (most uniform) ===

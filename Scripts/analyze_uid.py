@@ -80,7 +80,7 @@ def analyze_uid_metrics(data, filenames, regenerate=False):
             
             uid_var = UID_variance(df)
             uid_pair = UID_pairwise(df)
-            vocab_size = vocab_size(df)
+            vcb_size = vocab_size(df)
             sent_length = sentence_length(df)
             
             metrics.append({
@@ -92,7 +92,7 @@ def analyze_uid_metrics(data, filenames, regenerate=False):
                 'max_surprisal': max_surprisal,
                 'uid_variance': uid_var,
                 'uid_pairwise': uid_pair,
-                'vocab_size': vocab_size,
+                'vocab_size': vcb_size,
                 'sentence_length': sent_length
             })
         except Exception as e:
