@@ -1,209 +1,288 @@
 === UID Metrics Comparison Report ===
 
 == Source: human_texts ==
-Number of texts: 2000
+Number of texts: 1200
 
 tokens:
-  Mean:   752.9135
-  Median: 789.5000
-  StdDev: 251.3090
-  Min:    64.0000
+  Mean:   529.6575
+  Median: 491.0000
+  StdDev: 346.2331
+  Min:    9.0000
   Max:    1023.0000
 
 mean_surprisal:
-  Mean:   4.4445
-  Median: 4.4334
-  StdDev: 0.4161
-  Min:    2.7795
-  Max:    6.8338
+  Mean:   4.9709
+  Median: 4.9003
+  StdDev: 0.7421
+  Min:    3.3847
+  Max:    9.6345
 
 uid_variance:
-  Mean:   16.5452
-  Median: 16.4095
-  StdDev: 2.0646
-  Min:    11.3386
-  Max:    26.6417
+  Mean:   18.3897
+  Median: 17.4045
+  StdDev: 4.3527
+  Min:    10.9268
+  Max:    61.3007
 
 uid_pairwise:
-  Mean:   32.0447
-  Median: 31.7184
-  StdDev: 4.3410
-  Min:    19.5981
-  Max:    52.8959
+  Mean:   35.5924
+  Median: 34.0375
+  StdDev: 8.3809
+  Min:    19.0124
+  Max:    109.6058
 
-== Source: llama-2-7b-32k-instruct ==
-Number of texts: 300
+== Source: llama-2-7b-32k-instruct@q8_0 ==
+Number of texts: 1352
 
 tokens:
-  Mean:   398.2767
-  Median: 124.5000
-  StdDev: 428.6033
+  Mean:   671.7315
+  Median: 1023.0000
+  StdDev: 419.0860
   Min:    6.0000
   Max:    1023.0000
 
 mean_surprisal:
-  Mean:   3.9935
-  Median: 4.0988
-  StdDev: 1.5878
-  Min:    0.3504
+  Mean:   3.4487
+  Median: 3.4705
+  StdDev: 1.2257
+  Min:    0.0406
   Max:    11.9522
 
 uid_variance:
-  Mean:   13.7221
-  Median: 12.6440
-  StdDev: 6.0923
-  Min:    2.4781
+  Mean:   12.3817
+  Median: 11.3638
+  StdDev: 5.0933
+  Min:    0.2092
   Max:    73.4710
 
 uid_pairwise:
-  Mean:   26.0766
-  Median: 23.3685
-  StdDev: 16.4677
-  Min:    1.6518
+  Mean:   22.4939
+  Median: 20.7096
+  StdDev: 11.7592
+  Min:    0.2008
   Max:    215.2110
 
-== Source: llama-2-7b-chat ==
-Number of texts: 300
+== Source: llama-2-7b-chat@q8_0 ==
+Number of texts: 1359
 
 tokens:
-  Mean:   114.8600
-  Median: 88.5000
-  StdDev: 93.8729
-  Min:    20.0000
-  Max:    742.0000
-
-mean_surprisal:
-  Mean:   3.8894
-  Median: 3.8253
-  StdDev: 0.6499
-  Min:    2.1769
-  Max:    6.0588
-
-uid_variance:
-  Mean:   12.9377
-  Median: 12.2739
-  StdDev: 3.7886
-  Min:    4.5314
-  Max:    34.0093
-
-uid_pairwise:
-  Mean:   25.6518
-  Median: 24.8329
-  StdDev: 7.9113
-  Min:    7.6751
-  Max:    79.0006
-
-== Source: llama-7b-finetune-articlegen ==
-Number of texts: 300
-
-tokens:
-  Mean:   542.2700
-  Median: 422.0000
-  StdDev: 453.8998
-  Min:    3.0000
+  Mean:   252.7976
+  Median: 180.0000
+  StdDev: 237.7018
+  Min:    5.0000
   Max:    1023.0000
 
 mean_surprisal:
-  Mean:   3.8824
-  Median: 3.8496
-  StdDev: 1.2756
-  Min:    0.1635
-  Max:    8.9904
+  Mean:   3.9378
+  Median: 3.8215
+  StdDev: 0.8216
+  Min:    0.6801
+  Max:    12.3972
 
 uid_variance:
-  Mean:   13.6237
-  Median: 12.1042
-  StdDev: 5.7563
-  Min:    1.2756
-  Max:    53.6734
+  Mean:   13.0540
+  Median: 12.2534
+  StdDev: 4.2243
+  Min:    4.2787
+  Max:    73.4379
 
 uid_pairwise:
-  Mean:   24.8933
-  Median: 21.7608
-  StdDev: 12.8423
+  Mean:   26.0242
+  Median: 24.1318
+  StdDev: 9.7257
+  Min:    4.9866
+  Max:    153.0930
+
+== Source: llama-2-7b@q8_0 ==
+Number of texts: 3041
+
+tokens:
+  Mean:   271.6971
+  Median: 107.0000
+  StdDev: 332.9658
+  Min:    5.0000
+  Max:    1023.0000
+
+mean_surprisal:
+  Mean:   4.4120
+  Median: 4.2760
+  StdDev: 1.3285
+  Min:    0.1268
+  Max:    12.2542
+
+uid_variance:
+  Mean:   17.8947
+  Median: 14.6514
+  StdDev: 21.9094
+  Min:    1.4873
+  Max:    634.4446
+
+uid_pairwise:
+  Mean:   33.4020
+  Median: 26.4682
+  StdDev: 41.6978
+  Min:    1.2076
+  Max:    1140.6866
+
+== Source: llama-7b-finetune-articlegen ==
+Number of texts: 1187
+
+tokens:
+  Mean:   357.1727
+  Median: 169.0000
+  StdDev: 370.7940
+  Min:    2.0000
+  Max:    1023.0000
+
+mean_surprisal:
+  Mean:   4.3010
+  Median: 4.2791
+  StdDev: 1.2050
+  Min:    0.1635
+  Max:    10.9127
+
+uid_variance:
+  Mean:   15.0841
+  Median: 13.6247
+  StdDev: 6.2539
+  Min:    0.1838
+  Max:    57.2411
+
+uid_pairwise:
+  Mean:   27.6569
+  Median: 24.5445
+  StdDev: 13.4082
   Min:    0.6622
-  Max:    107.6806
+  Max:    131.4093
 
 
 === Statistical Comparison ===
 
 
 == tokens Comparisons ==
-human_texts vs llama-2-7b-32k-instruct:
+human_texts vs llama-2-7b-32k-instruct@q8_0:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.2630 (large effect)
-human_texts vs llama-2-7b-chat:
+  Effect size (Cohen's d): 0.3675 (small effect)
+human_texts vs llama-2-7b-chat@q8_0:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 2.6942 (large effect)
+  Effect size (Cohen's d): 0.9429 (large effect)
+human_texts vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.7660 (medium effect)
 human_texts vs llama-7b-finetune-articlegen:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.7367 (medium effect)
-llama-2-7b-32k-instruct vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.000001 (highly significant difference)
-  Effect size (Cohen's d): 0.9135 (large effect)
-llama-2-7b-32k-instruct vs llama-7b-finetune-articlegen:
-  Mann-Whitney U test: p-value = 0.000443 (highly significant difference)
-  Effect size (Cohen's d): 0.3262 (small effect)
-llama-2-7b-chat vs llama-7b-finetune-articlegen:
+  Effect size (Cohen's d): 0.4809 (small effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b-chat@q8_0:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.3041 (large effect)
+  Effect size (Cohen's d): 1.2305 (large effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.1061 (large effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.7919 (medium effect)
+llama-2-7b-chat@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.0616 (negligible effect)
+llama-2-7b-chat@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000824 (highly significant difference)
+  Effect size (Cohen's d): 0.3400 (small effect)
+llama-2-7b@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.2485 (small effect)
 
 == mean_surprisal Comparisons ==
-human_texts vs llama-2-7b-32k-instruct:
+human_texts vs llama-2-7b-32k-instruct@q8_0:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.6520 (medium effect)
-human_texts vs llama-2-7b-chat:
+  Effect size (Cohen's d): 1.4821 (large effect)
+human_texts vs llama-2-7b-chat@q8_0:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.2244 (large effect)
+  Effect size (Cohen's d): 1.3155 (large effect)
+human_texts vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.4687 (small effect)
 human_texts vs llama-7b-finetune-articlegen:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.9339 (large effect)
-llama-2-7b-32k-instruct vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.028663 (significant difference)
+  Effect size (Cohen's d): 0.6703 (medium effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b-chat@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.4690 (small effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.7423 (medium effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.7009 (medium effect)
+llama-2-7b-chat@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.3968 (small effect)
+llama-2-7b-chat@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.3566 (small effect)
+llama-2-7b@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.197918 (no significant difference)
   Effect size (Cohen's d): 0.0858 (negligible effect)
-llama-2-7b-32k-instruct vs llama-7b-finetune-articlegen:
-  Mann-Whitney U test: p-value = 0.142385 (no significant difference)
-  Effect size (Cohen's d): 0.0772 (negligible effect)
-llama-2-7b-chat vs llama-7b-finetune-articlegen:
-  Mann-Whitney U test: p-value = 0.894518 (no significant difference)
-  Effect size (Cohen's d): 0.0070 (negligible effect)
 
 == uid_variance Comparisons ==
-human_texts vs llama-2-7b-32k-instruct:
+human_texts vs llama-2-7b-32k-instruct@q8_0:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.9662 (large effect)
-human_texts vs llama-2-7b-chat:
+  Effect size (Cohen's d): 1.2623 (large effect)
+human_texts vs llama-2-7b-chat@q8_0:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.5277 (large effect)
+  Effect size (Cohen's d): 1.2452 (large effect)
+human_texts vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.0265 (negligible effect)
 human_texts vs llama-7b-finetune-articlegen:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.0317 (large effect)
-llama-2-7b-32k-instruct vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.438032 (no significant difference)
-  Effect size (Cohen's d): 0.1546 (negligible effect)
-llama-2-7b-32k-instruct vs llama-7b-finetune-articlegen:
-  Mann-Whitney U test: p-value = 0.772968 (no significant difference)
-  Effect size (Cohen's d): 0.0166 (negligible effect)
-llama-2-7b-chat vs llama-7b-finetune-articlegen:
-  Mann-Whitney U test: p-value = 0.796500 (no significant difference)
-  Effect size (Cohen's d): 0.1408 (negligible effect)
+  Effect size (Cohen's d): 0.6141 (medium effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b-chat@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.1437 (negligible effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.2988 (small effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.4770 (small effect)
+llama-2-7b-chat@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.2636 (small effect)
+llama-2-7b-chat@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.3853 (small effect)
+llama-2-7b@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000001 (highly significant difference)
+  Effect size (Cohen's d): 0.1489 (negligible effect)
 
 == uid_pairwise Comparisons ==
-human_texts vs llama-2-7b-32k-instruct:
+human_texts vs llama-2-7b-32k-instruct@q8_0:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 0.8302 (large effect)
-human_texts vs llama-2-7b-chat:
+  Effect size (Cohen's d): 1.2705 (large effect)
+human_texts vs llama-2-7b-chat@q8_0:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.2906 (large effect)
+  Effect size (Cohen's d): 1.0492 (large effect)
+human_texts vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.0615 (negligible effect)
 human_texts vs llama-7b-finetune-articlegen:
   Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
-  Effect size (Cohen's d): 1.1624 (large effect)
-llama-2-7b-32k-instruct vs llama-2-7b-chat:
-  Mann-Whitney U test: p-value = 0.094367 (no significant difference)
-  Effect size (Cohen's d): 0.0329 (negligible effect)
-llama-2-7b-32k-instruct vs llama-7b-finetune-articlegen:
-  Mann-Whitney U test: p-value = 0.142257 (no significant difference)
-  Effect size (Cohen's d): 0.0801 (negligible effect)
-llama-2-7b-chat vs llama-7b-finetune-articlegen:
-  Mann-Whitney U test: p-value = 0.000445 (highly significant difference)
-  Effect size (Cohen's d): 0.0711 (negligible effect)
+  Effect size (Cohen's d): 0.7106 (medium effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b-chat@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.3272 (small effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.3090 (small effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.4112 (small effect)
+llama-2-7b-chat@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.2103 (small effect)
+llama-2-7b-chat@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.239193 (no significant difference)
+  Effect size (Cohen's d): 0.1409 (negligible effect)
+llama-2-7b@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000005 (highly significant difference)
+  Effect size (Cohen's d): 0.1593 (negligible effect)
