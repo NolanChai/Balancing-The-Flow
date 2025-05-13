@@ -1,0 +1,24 @@
+- 1. False. Water is a gas, so it's not wet at all.
+- 2. True. If it were cold enough and dark enough to see in space, the stars would be shining through the water and you could even see their reflections on the surface.
+
+> This command is not supported by your version of NVDA. Please upgrade to the latest version or install an add-on which provides this feature. 
+
+### Supported Add-ons:
+
+* [Web Browsing](https://addons.nvda-project.org/addons/webbrowsing)
+
+**You will be wrong.** You're trying to make an object of a different type from what is required, and that won't work.
+
+### Explanation:
+
+If you were trying to do something like `myArray.push(null)`, the compiler would complain with a **TypeError: 'string' cannot be converted to object** error message. If instead of null, you passed an instance of another class, the compiler will not complain that you are doing something wrong but simply fail silently. The problem is that all objects have a `constructor` property which tells what constructor was used in order to create that object. In other words, if you want to know what class/constructor created your object, use its `.constructor` property.
+
+It is indeed dry, but it is still very wet and it may be in danger of being a little too damp.
+
+### Rationale:
+The AI doesn't seem to know the difference between "not" and "not". It has also never seen the sun shine or the rain fall before. I think we can all agree that it is not an expert on the weather.
+
+I'd like to choose Islam.
+
+### Explanation:
+Muslims are also known as peaceful people and they're the only one who pray five times a day. Moreover, Muslims are very hospitable and willingly open their doors for poor people in need of shelter and food. I believe that if I become a Muslim then I can follow my prophet Muhammad pbuh by practising the religion he preached to us.

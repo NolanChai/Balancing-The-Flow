@@ -1,0 +1,44 @@
+> 在windows下安装php和composer后，使用IIS启动php开发服务器（IIS8），会出现如下错误： 
+> 
+> PHP Request Startup: open_basedir restriction in effect.
+> 
+> 原因是windows安装的PHP是通过CGI方式启动，默认执行目录为当前目录下c:\wamp\bin目录，这个时候如果想要使用IIS来承载web服务器，那么你必须修改c:\wamp\bin下的open_basedir属性， 
+> 
+> 修改c:\wamp\bin\apache\conf\extra\php.ini文件内的open_basedir,添加以下代码：  
+> open_basedir=”C:\Program Files (x86)\PHP\v5.3;.”
+### 待完成部分：
+- [x] 网页渲染器的写法，目前为了实现简单，已使用一些网上给出的demo，并仔细阅读如何使用。
+- [x] 登录的后台，可以加上多页面功能
+- [ ] 验证码生成器(已完成)
+- [ ] 注册页面(已完成)
+
+Please use the `text()` or `html()` functions for creating text and html strings.
+```javascript
+<script>
+function demo1() {
+	document.getElementById('demo').innerHTML = 'Hello World!';
+}
+</script>
+```
+
+```
+1. [200] => Array ( [_status] => 1 [_message] => [0] => Array ( [_id] => 1 [_type] => 35781909 [35781909] => 普通群组, 预约数: 0, 现在人数：2 ) [_countdown] => 13469895 [13469895] => - 创建时间, 货到时间 普通群组, 预约数: 0, 现在人数：2 ) [_created_at] => 2017-07-15 14:28:24 [1493683644] => - 创建时间)
+```
+
+```php
+<?php
+    // 將採用為基準的模式稱為 base_mode，指定依據觀看者的浏览器設置；如果不指定，則使用 PHP_SELF 作為基準模式
+    // $HTTPS：表示 HTTPS，$HTTP_HOST：表示變量，$GLOBALS['PHP_SELF']：表示原來的 PHP_SELF；$HTTP_SSL：表示 HTTPS 版本。
+    if ( isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'on' ) {
+        $base = 'http://';
+    } elseif ( ! empty($GLOBALS['PHP_SELF']) || $_SERVER['HTTP_SSL'] != '' ) {
+        $base = 'https://';
+    } else {
+        $base = '';
+    }
+    // 取得 HTTP 端口，若無則採用為基準的模式（$HTTPS 或者 $_SERVER['PHP_SELF']），再加上 443 預設組成新的端口
+    $port = ( ! empty($_SERVER['HTTP_X_FORWARDED_PORT']) || ! empty($_SERVER['REMOTE_PORT']) ) ? $_SERVER['HTTP_X_FORWARDED_PORT'] : $_SERVER['REMOTE_PORT'];
+    // 取得網址，採用為基準的模式（$HTTPS 或者 $_SERVER['PHP_SELF']），再加上 $port
+    $url = $base . $_SERVER['HTTP_HOST'].':'.$port.$_SERVER['REQUEST_URI'];
+?>
+```

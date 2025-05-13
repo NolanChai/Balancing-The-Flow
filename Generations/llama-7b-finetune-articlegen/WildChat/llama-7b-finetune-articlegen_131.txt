@@ -1,0 +1,23 @@
+The purpose of this lab was to implement two different ways to compute binomial coefficients. I was not familiar with Python until a couple days before my computer science class, so I was learning as I went and still have some room for improvement. However, after reading the documentation on binomial coefficients in the library NumPy, it took me about an hour or so to come up with both implementations.
+
+The main difference between these two approaches is that one approach is recursive (the second function) and the other iterative (first function). The recursive implementation involves repeatedly calling itself until all of the terms are exhausted; while the iterative implementation involves using a for-loop structure to step through each term of the binomial coefficient. I found that the recursive approach was significantly faster than the iterative approach, both in theory and when implemented as an actual program.
+
+### Question:
+The main takeaway from this lab is the importance of being familiar with Big O notation. In computer science courses you are often expected to be able to write programs quickly, but it is just as important to be able to explain why a specific approach is faster than another. Big O notation allows us to compare two approaches in terms of their worst-case complexity and helps to predict how much time a particular algorithm will take.
+### Comments:
+I think the main thing I need to work on is understanding the concepts of recursion and iteration better, both when it comes to Python syntax and Big O notation. Recursion can be difficult to follow in code because the base case and recursive calls are often intermingled together; this makes it easier to understand if you draw out a diagram like what I did below (note that the code is not included with the lab but was provided by my professor).
+### Other:
+The iterative implementation of binomial coefficients took 15.19 seconds to run while the recursive implementation only took 7.57 seconds; this difference can be explained in terms of Big O notation since both are O(n^2), with n being the number of terms in the binomial coefficient. Since the iterative implementation has more steps than the recursive one, it should take longer to run, and indeed this is what we saw when we ran our programs.
+### Reference:
+[https://en.wikipedia.org/wiki/Binomial_coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient)
+
+Task 3.1 is a challenge that asks students to find the probability that two independent events occur on different days of the week. The task requires students to understand concepts such as conditional probabilities and Bayes' theorem, which are typically covered in introductory courses in probability theory. However, the task itself may be too challenging for some students, who might not have sufficient background knowledge to answer it correctly.
+
+Task 3.2 is a more straightforward challenge that asks students to find the value of a particular parameter (k) based on given data. The task requires students to understand concepts such as regression analysis and linear equations, which are typically covered in introductory courses in statistics or calculus. However, the task itself might be too easy for some students who have already learned these concepts.
+
+In order to help students who find Task 3.1 challenging, it would be useful to provide additional resources such as online tutorials or recorded lectures that cover the relevant concepts in probability theory. For those who find Task 3.2 easy, additional challenges might be created that require them to apply their knowledge of statistics and calculus to more complex problems.
+
+* [Yeah](https://www.youtube.com/watch?v=b019w5Hj7_E)
+* [Yeah](https://www.youtube.com/watch?v=LQxGpO6-2gk)
+* [Yeah](https://www.youtube.com/watch?v=-iqmz3JXU4A)
+* [Yeah](https://youtu.be/F67Wf5ZK8sE?t=19s)

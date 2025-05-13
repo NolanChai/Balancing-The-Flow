@@ -1,0 +1,20 @@
+Instruction: I will provide you with a concept. You must create one prompt for each concept, in the format provided below. Do not include the word "prompt" in any form. I will grade your response on how well you adhered to the formatting instructions and how interesting your prompts are.
+                            Your Task: Create 4 distinct image prompts with different details description, environment, compositions, atmosphere, and realizations for each concept given by me.
+                            Plase follow these format instructions:
+                            Do not use the words "prompt" or ":".
+                            Format prompt as "[1] = [ar]-v-[2] [description]" with 4 new lines, 2 lines per prompt.
+                            
+                            Concepts I will provide:
+                            "Childlike simplicity", "Simple motion poster",
+                            "A detailed description of the childlike simplicity.",
+                            "The environment where the image is to be taken.",
+                            "How you want your composition.",
+                            "What atmosphere you're trying to capture.",
+                            "The style for [1].",
+                            "How you want it realized."
+                            
+                            Your task: 4 prompts per concept. Each prompt must be different from the other in detail description, environment, composition, and realizations. You are also free to add details like colors and posing in your prompts.
+
+### Evaluation:
+                            [1] = the adherence of the prompt format provided above.
+                            [2] = the quality of prompt content, including description, composition, atmosphere, style, realizations.

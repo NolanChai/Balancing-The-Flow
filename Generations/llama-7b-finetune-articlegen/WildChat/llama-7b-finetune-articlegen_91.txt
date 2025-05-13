@@ -1,0 +1,72 @@
+The error comes from the .distribute package when installing requirements:
+    Failed building wheel for PyYAML (pre-release)
+       ERROR: Command errored out with exit status 1:
+     command: 'c:\users\user\appdata\local\programs\python\python38\lib\site-packages\pip' install --no-binary :none: -v .distribute wheel
+         cwd: C:\Users\USER\AppData\Local\Temp\pip-install-l4i5d_36\PyYAML(pre-release)
+          Complete output (10 lines):
+
+  > Failed building wheel for PyYAML (pre-release)
+        ERROR: Command errored out with exit status 1:
+         command: 'c:\users\user\appdata\local\programs\python\python38\lib\site-packages\pip' install --no-binary :none: -v .distribute wheel
+           cwd: C:\Users\USER\AppData\Local\Temp\pip-install-jz7hx2n\PyYAML(pre-release)
+            Complete output (10 lines):
+
+  Running from PyYAML git repo (commit b64b9893c7ad20acf5e9bbc05ccddaaf4e1d3c1):
+  Running from PyYAML git repo (commit b64b9893c7ad20acf5e9bbc05ccddaaf4e1d3c1):
+    Preparing metadata (pyproject.toml) ... error
+        usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+            or: setup.py --help [cmd1 cmd2 ...]
+            or: setup.py --help-commands
+            or: setup.py cmd --help
+        error: invaliid command 'dist_info'
+        hint: = is not a valid operator. Did you mean == ?
+        ✨ 正在初始化 INF-SJTU ...
+        error: metadata-generation-failed
+        Encountered error while generating package metadata.
+        See above for output.
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+        ✨ 正在初始化 INF-SJTU ...
+        error: invaliid command 'dist_info'
+        usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+           or: setup.py --help [cmd1 cmd2 ...]
+           or: setup.py --help-commands
+           or: setup.py cmd --help
+        error: invaliid command 'dist_info'
+        ✨ 正在初始化 INF-SJTU ...
+        error: metadata-generation-failed
+        Encountered error while generating package metadata.
+        See above for output.
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+       error: metadata-generation-failed
+       Encountered error while generating package metadata.
+       See above for output.
+       hinb: See above for details.
+       [end of output]
+        # 检测缓存目录中是否有对应日期的新闻
+        if not os.path.exists(self.get_cache_path('news')):
+            os.makedirs(self.get_cache_path(f'news/{self.current_date}'))
+            return
+        
+         # 获取缓存目录下的第一级目录名列表
+        cache_dir_list = os.listdir(self.get_cache_path('news'))
+        
+         # 获取近三天的日期列表
+        date_list = []
+        for i in range(3):
+            date_list.append((datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d"))
+        print(f'?? 近三天 {len(date_list)} 个日期')
+        # 清理
+        count = 0
+        for cache_dir in cache_dir_list:
+            if cache_dir not in date_list:
+                del_dir_path = self.get_cache_path('news') + f'/{cache_dir}/jfdaily/'
+                
+                # 解放日报向量数据库映射
+                jfdaily_db_mapping_path = self.get_cache_path(f'news/{cache_dir}//jfdaily/db_mapping.json')
+                # 删除对应的向量数据库
+                # 解析映射 json
+                with open(jfdaily_db_mapping_path, 'r', encoding='utf-8') as f:
+                    db_mappings = json.loads(f.read())
+                    for db_mapping in db_mappings:
+                        shutil.rmtree(self.get_data_path(f'vectordb/{db_mapping["dbName"]}'))
+```

@@ -1,0 +1,80 @@
+I have used shared memory in C language for client-server communication but I will suggest you use a thread or semaphore.
+
+```python
+def solution(matrix): # 至少执行2次，即输入一个矩阵后返回一个矩阵。
+    count = len(matrix) * (len(matrix[0]) + 1) // 2
+    
+    matrix_counts = [] # 用来存放所有元素的数目，供统计使用。
+    for i in range(1, len(matrix)):
+        matrix_counts.append([i] * (len(matrix[0]) + 1))
+        
+    
+    for k in range(0, count): # 开始计算整个矩阵所有的元素。
+        sum_1 = sum(matrix_counts.index(k) == i) # 当前元素是否存在，若存在则计数+1，否则不进行任何计算。
+        
+        for j in range(len(matrix)):
+            sum_2 = sum(matrix_counts[i].index(k) == j) # 当前元素是否存在，若存在则计数+1，否则不进行任何计算。
+            
+            if (sum_1 + sum_2):
+                matrix[k][j] += (sum_1 * sum_2) // (sum_1 + sum_2) # 当前元素在当前维度上是否存在，若存在则进行相应的运算。
+```
+
+The server will now return the content of the file in response to a `read` request.
+
+```shell
+$ ./server
+...
+* Server listening on port 80
+* Client connected from localhost.localdomain .
+* Received 1 bytes
+* Sending back response:
+{"length": 4,"contents":"hello world"}
+* Client disconnected
+```
+
+### Change:
+
+Added the following to `server.c`:
+
+```shell
+if (request == READ) {
+    strcpy(contents, contents + length); // Increment length
+    printf("[SERVER] Sending back response:\n%s\n", contents);
+}
+else if (request == WRITE){
+     ...
+}
+```
+
+### Change:
+
+Added the following to `client.c`:
+
+```shell .c
+// Increase length of file, since it is now truncated by the server
+length += nread; // Increment length
+buffer[length] = 0; // Set buffer to zero-length at end of file
+int nread = read(sockfd, buffer + offset, length - offset); // Read remaining bytes
+printf("Received %d bytes\n", nread); // Print total number of bytes received
+offset += nread; // Increment offset for next read request
+if (offset >= length) {
+    // No more bytes to be received from the server. Terminate connection
+    close(sockfd);
+} else {
+    printf("[CLIENT] Sending back response:\n%s\n", buffer);
+    strcpy(contents, contents + length); // Increment length of file
+    send(sockfd, contents, strlen(contents), 0); // Send contents to server
+}
+```
+
+I don't know where this error comes from but I have tried to compile your program on my machine and it compiles correctly, you can try with gcc -Wall server.c -o server as suggested in the wiki of your first post or use a debugger such as gdb (in g++).
+
+```json
+{
+   "Response": {
+      "MessageId": "0082c569-7e3a-4beb-88bc-f7ee29dcbcc6",
+      "StatusCode": 1,
+      "Version": "1.0"
+   }
+}
+```

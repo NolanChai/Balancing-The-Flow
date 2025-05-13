@@ -1,0 +1,15 @@
+Nope! I'm just going to show you the code that makes up this page.
+
+I have a lot of different things on my site, but they're all organized into what's called an "HTML template". That means that all the parts of each web page are already written and then put together into one big file, and when someone goes to the website, their computer reads through this whole file and shows it as if I wrote it myself.
+
+Each piece of an HTML page is called something different - a tag or an element. Some are big, some are small. In this case, here's what's going on with each element:
+
+The `<header>` at the very top of your browser is the ``. It shows up in all browsers and just means "the stuff that goes at the beginning of a web page". There could be more than one section to an HTML file - maybe a menu, or a footer. That's what I mean by saying you can have many different things on your site but it's still organized into one big template.
+
+The ``, `div` for short, is where all the body text goes. I set up some rules with CSS to make this look the way that I want it to. That means that every time anyone looks at my page, they see what you see - except they're seeing it through their own eyes. That's how web pages work!
+
+The `a` is an anchor tag and links one part of a file to another. It makes the browser go from one place to another with just a click. A lot of web sites use them for navigation or search bars - anything that doesn't have its own special page, really. The thing I did here was link the logo on your homepage to my blog's main page.
+
+The ``, `div` for short, is where all the body text goes. I set up some rules with CSS to make this look the way that I want it to. That means that every time anyone looks at my page, they see what you see - except they're seeing it through their own eyes.
+
+The footer ``, which I put inside of another div called `.footer` so I could keep it together with everything else, is just there for decoration. It doesn't do anything!

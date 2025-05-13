@@ -1,0 +1,3 @@
+I got some errors on my project, because I had the "header" property defined inside the class. This was causing the problem.
+So, I removed that line and everything worked fine.
+Hope this helps someone!

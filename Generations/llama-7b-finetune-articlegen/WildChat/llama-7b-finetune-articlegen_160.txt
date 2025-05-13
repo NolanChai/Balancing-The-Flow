@@ -1,0 +1,14 @@
+This is a response to a given problem and will contain an explanation of the steps taken to solve it. The instructor should be able to understand the answer. (The student should write as much detail as possible in order to clarify any questions from the professor.)
+
+```shell
+$ bash
+bash-3.2$ ./golf-sandwich.sh
+Welcome! Your name is John and your age is 18!
+Please enter a number of slices (between 0 and 4): 1
+You want a sandwich with one slice of cheese, but only if you get it in the middle...
+Cheese slice: 2
+Now for the bread. You like white bread best, but there is no room to store an extra loaf so...
+Bread choice: 3
+Your sandwich comes with one slice of cheese and a half-slice of white bread! Please enjoy it.
+$ bash
+```

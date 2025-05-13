@@ -1,0 +1,59 @@
+Array
+(
+    [url] => Array
+        (
+            [0] => https://en.softonic.com/news/microsoft-is-still-pushing-windows-10-update-on-unwilling-customers
+            [1] => https://en.softonic.com/news/windows-10-build-16285-leaked-preview-the-latest-and-greatest
+            [2] => https://en.softonic.com/news/windows-10-build-16285-is-now-available-to-download
+            [3] => https://en.softonic.com/news/microsofts-surface-laptop-exclusive-for-educators-hits-store-shelves-this-week
+        )
+
+    [title] => Array
+        (
+            [0] => Microsoft is still pushing Windows 10 update on unwilling customers
+            [1] => Windows 10 Build 16285 leaked preview: the latest and greatest
+            [2] => Windows 10 Build 16285 is now available to download
+            [3] => Microsoft's Surface Laptop exclusive for educators hits store shelves this week
+        )
+)
+
+### My Solution:
+
+I tried to solve the problem in several ways but nothing worked. Here are the approaches that I applied, which one is the best solution?
+
+#### 1st approach (working fine)
+
+Using .fetch_object() function of php and getting all xml elements. But this is a bit slow compared with .simplexml_load_string().
+
+#### 2nd approach:
+
+Using .fetch_object() but passing $value_xml directly to the for loop as it has been suggested in one of the solution in stackoverflow. But again it is not working.
+
+```php
+<?php
+$latest_from_softonic = new StdClass;
+$latest_from_softonic->url = array();
+$latest_from_softonic->title = array();
+for ($i = 0; $i < 4; $i++) {
+    $value_xml = simplexml_load_string($latest_from_softonic_curl);
+    if (isset($value_url)) {
+        array_push($latest_from_softonic->url, $value_url);
+    }
+}
+?>
+```
+
+#### 3rd approach:
+
+Using .simplexml_load_string() and then doing a simple foreach loop. But it is also not working.
+
+```php
+<?php
+$latest_from_softonic = new StdClass;
+$latest_from_softonic->url = array();
+$latest_from_softonic->title = array();
+foreach ($value_xml as $value) {
+    echo $value . '<br>';
+}
+?>
+```

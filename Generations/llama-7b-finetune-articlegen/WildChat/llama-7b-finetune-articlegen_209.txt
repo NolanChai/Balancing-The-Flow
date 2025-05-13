@@ -1,0 +1,14 @@
+The switch will be closed, so when the switch is closed the current flows out of the capacitor and into the resistor. So, the current would flow into the resistor and out of the capacitor. The voltage across the capacitor and resistor will then increase since charge has been put into the capacitor (so the current through the circuit will decrease). 
+
+The current will continue to decrease until the voltage across the capacitor equals the voltage of the battery, at that point there is no more energy being supplied so the current must be equal to zero. If the circuit were open, the capacitor would have a large charge and it would slowly dissipate.
+
+So we have to calculate the capacitance, then calculate the voltage across the capacitor, then use Ohm's law to find out the current through the resistor (assuming no resistance in the battery). The current is then equal to the 1/2 of the voltage drop divided by the resistance.
+
+#### Capacitance: C = Q / V
+Where q=charge, and v = Voltage across capacitor (this will be calculated later)
+
+So we have that c = 6.5e-6 / (1.1V) which equals a capacitance of .005729F or about 57 mfd's
+
+#### Battery Voltage: V=Q/C, so V= .005729 C = 1.1 volts
+
+#### Resistance: I=(E)/R, where E=V^2/R; the current is given by (E)/(R) and R=15 ohms, so that gives us a current of .146 amps.

@@ -1,0 +1,14 @@
+<p class="w-35">
+  <pre class="hljs"><code>
+    {
+      "user": "ace",
+      "password": "ace",
+      "port": 3000,
+      "host": "localhost"
+    }
+  </code></pre><p>
+</p>
+
+http://localhost:3000/users
+
+{"user":"admin"}

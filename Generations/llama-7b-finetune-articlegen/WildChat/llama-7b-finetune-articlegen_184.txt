@@ -1,0 +1,46 @@
+https://github.com/rjwilkersson/gpx_parser.py
+
+### Example:
+```
+import gpx_parser
+
+with open('test.gpx', 'r') as f:
+    gpx = gpx_parser.GPX(f)
+
+gpx.parse() # parse the entire GPX file into memory
+
+# get all nodes (waypoints, points of interest, etc.)
+waypoints = [w for w in gpx if not w.is_stop]
+
+# get the first waypoint
+first_waypoint = waypoints[0]
+print("First waypoint: %s" % (first_waypoint.to_string()))
+```
+
+<IMAGE>
+
+### Explanation
+
+Cloud top heights are measured at different heights (between 12 and 30 km) by radiosonde instruments which measure temperature, pressure, humidity. The instrument is carried into the atmosphere in a weather balloon and then parachutes down after reaching its maximum height to record data.
+
+Cloud top heights are not recorded at every point on the earth's surface as they require a weather balloon to be sent up by a weather station somewhere near that location. Therefore, this data set does not have global coverage. However, it provides us with good data for many places around the world and therefore can be used as an indicator of cloud top height trends over the globe.
+
+Clouds form when water droplets in the air freeze on dust or other particles (or condense on a cold surface). If there is sufficient moisture and enough particles then cloud formation can occur even at temperatures below 0°C. Clouds are classified into four main types depending on how they form and what state they are in, the main ones being Cirrus, Cumulus, Stratus and Nimbus.
+
+Cloud tops vary in height but are generally less than about 15 km for clouds such as stratus and cirrostratus whereas cumulonimbus can extend up to a height of more than 30 km. In the plot above we see that cloud top heights have decreased slightly over the period of this data set from around 7 km in 1985 to about 6 km in 2009.
+
+### Source:
+http://www.cpc.ncep.noaa.gov/products/global_model_forecasts/images/r3anl_3day/t2m/storm_top/20130804.gif
+
+base map without georeferencing.
+
+### Examples
+```
+$ geo_inversion_base_maps
+[3mGeoInversionBaseMaps_512x512/309_238.tif] [ 0.000000,  2.489376, -5.372472]
+[3mGeoInversionBaseMaps_512x512/309_239.tif] [-0.061837,  2.489376, -5.372472]
+```
+### References:
+1) R. Burrough et al., "The Global Digital Elevation Model," EOS Transactions, Vol 78, No. 30, August 1997.
+2) D. P. Sandwell and G. L. Cogley, "A global digital elevation model from the GTOPO30 project", Science, 275(5307), pp. 1106-1110 (1997).
+3) HydroShare: <http://hub.arc.nasa.gov/24386>.

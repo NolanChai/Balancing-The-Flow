@@ -1,0 +1,61 @@
+https://www.google.co.in/search?q=Social+Media+Growth&oq=Social+Media+Groth&aqs=chrome..69i57j0l4.1723j1j4&sourceid=chrome&ie=UTF-8
+https://www.google.co.in/search?q=Social+Media+Growt&oq=Social+Media+Gr&aqs=chrome..69i57j0l3.2814j1j4&sourceid=chrome&ie=UTF-8
+https://www.google.co.in/search?q=Social+Media+Growth+Hacker&oq=Social+Media+Gr&aqs=chrome..69i57j0l3.1784j0j1&sourceid=chrome&ie=UTF-8
+https://www.google.co.in/search?hl=en&safe=active&rlz=1T4GGLL_enIN312IN312&q=Social+Media+Growth+Hacker+-+Coursera&oq=Social+Media+Gr
+\end{code}
+
+Comment: Thanks! I was going to search through each of the results and see if it contained "growt".  Your solution is far more elegant.
+
+Selenium driver version 4 1580563207035  192.168.56.101   1580563207037  00128c4b263d8aaa
+
+Social media is the worst. And there's a lot of it out there. But here are just 5 examples of social media growth hacking hacks:
+
+1) Twitter's follower count was around 80,000 before they started using hashtags to let people know what they were doing at any given time. They also began to use them as a way for users to see the conversations that others were having about their brand and services. And now? Their follower count is over 63 million!
+2) The Huffington Post made headlines by giving away free iPads in exchange for people signing up to receive daily news updates via email or SMS text message from them — which led many of those people who received these gifts back into their social media accounts where they could easily share their experiences with friends and family members about what happened during this giveaway promotion as well as how much fun it was overall.
+3) In 2012, Taco Bell's Instagram account grew by nearly 200K followers within just one week because of a contest they held where anyone who followed them would receive an image featuring either tacos or burritos every day for 7 days straight along with other prizes such as gift cards and free food items!
+4) Another example is when Facebook changed its algorithm so that content from people you don't know will not show up in your News Feed unless they have been friended by someone who already follows them or has liked something posted on their page. This forced brands like Old Spice (which had over 5 million followers at this time) to create campaigns around giving out free gifts and coupons via contests where users would enter for the chance of winning prizes such as concert tickets, trips abroad or even new cars!
+5) In early 2014, a photo sharing app called Meerkat became incredibly popular after its CEO gave an interview at South by Southwest (SXSW) where he talked about how users could use their phones to stream live videos directly from events like this one straight into other people's homes via the internet using nothing more than Wi-Fi connectivity — which led many brands like PepsiCo and Red Bull who were attending SXSW 2014 with booths set up within close proximity of where these live streams were being broadcasted on giant screens outside for everyone to see!
+6) Last but not least... there was an online contest called "#SocialGrowthHack" which asked people who wanted free stuff from companies like Amazon Prime, Domino's Pizza and Spotify Premium subscriptions just for following them across different social media platforms such as Twitter or Facebook while also tagging three friends into each post they made during their promo period!
+
+```xml
+<ul>
+    <li id="rss-list">
+        <div class="rss-wrap">
+            <a href="#" title="Social Media Growtth Hacker" data-reveal-id="social-media-growtth-hacker"></a><p>Social Media Growtth Hacker</p></li>
+        <div class="clearfix"><span class="icon icon_twitter pull-left"></span><span class="icon icon_dribbble pull-right"></span></div>
+    </div>
+    <li id="rss-list">
+        <div class="rss-wrap">
+            <a href="#" title="Social Media Growtth Hacker" data-reveal-id="social-media-growtth-hacker"></a><p>Social Media Growtth Hacker</p></li>
+        <div class="clearfix"><span class="icon icon_twitter pull-left"></span><span class="icon icon_dribbble pull-right"></span></div>
+    </div>
+    ...
+</ul>
+```
+
+```html
+<p class="flex flex-col gap-4 text-th-primary-dark text-base">
+  <span>This is the last element in the class "post-markdown flex flex-col"</span>
+  <span>The second element will be a paragraph.</span>
+</p>
+```
+
+The following Python code illustrates how to create a class that encapsulates the Post method:
+```python
+class Post(object):
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+
+    def do_post(self):
+        """Makes the post request to the API"""
+
+        payload = {
+            'username': self.username,
+            'apiKey': '123456',
+            'password': self.password
+        }
+        
+        resp = requests.post(API_URL + '/auth/login', data=payload)
+```
+This method takes the input parameters as the object attributes and constructs a payload using them. The payload is then used to make the POST request to the API URL /auth/login. Finally, the response from this request is handled in the doPost() function.

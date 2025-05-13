@@ -1,0 +1,72 @@
+Socar is a ride-share company based in South Korea. 
+It was founded by Seung Won Oh, Hwan Chul Jung and Dong Hyun Kim on March 31, 2010. It has raised more than $940 million from investors such as KKR, Goldman Sachs Group Inc. and China’s Tencent Holdings Ltd. in the last four years.
+
+> Your strength is your brain. You can win every time by solving problems, just think.
+
+### Explanation:
+
+### Author:
+> Sajin Bhuvaneshwari
+
+"I am a quick learner, good listener, problem solving abilities. I believe my weaker area would be the interpersonal skills."
+### Why is the following statement true:
+
+```c++
+cin >> x; // reads the input and stores it in 'x' variable
+int y = 25 + x; // prints x value
+```
+
+### Response:
+
+"Because of cin, when you use input for the 'x', then when it is stored to the 'x' variable, the value gets added to 25."
+### If the following program compiled without error and executed on a system with a .5-byte-size integer data type:
+```c++
+#include <iostream>
+using namespace std;
+int main() {
+    int x = 10;
+    cout << "x value is :"<< x << endl;
+}
+```
+What is the output?
+
+### Response:
+
+"I got a compilation error because the type is not compatible with 'cout'."
+
+### A number of values are read from the keyboard into an array. Then, the following statements are executed: 
+* For each value in the array:
+    * Increment the value by one.
+    * If the new value is greater than 35, then swap that element with the last element.  
+In other words, all values except those that are equal to or less than 35 should be incremented.  
+What is the result of executing this sequence?
+```c++
+int a[10];
+for (int i = 0; i < 10; ++i) {
+    cin >> a[i];
+}
+for (int i = 0; i < 10; ++i) {
+    if (a[i] > 35) {
+        int temp = a[i];
+        a[i] = a[9];
+        a[9] = temp;
+    }
+}
+for (int i = 0; i < 10; ++i) {
+    cout << a[i] << endl;
+}
+```
+### Response:
+"The final output should be all the values from 0 to 8 except 35 and 36."
+
+Instruction:
+
+```
+- Stronger instruction by a stronger internal auditor.
+- Less confident with higher level of risk (e.g. 5).
+- More confident with lower level of risk (e.g. 1) or very low (e.g. 0).
+```
+
+```sh
+$ cat /etc/issue 2>/dev/null | grep 'Ubuntu' > /dev/null && echo "found ubuntu" || echo "not found ubuntu"
+```

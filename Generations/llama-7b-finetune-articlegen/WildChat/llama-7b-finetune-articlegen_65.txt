@@ -1,0 +1,33 @@
+The response is a prompt generator that generates a prompt from a concept.
+                            
+                            The response should be an image with a prompt generator as output in the following format:
+                            
+                            
+                            [1] = Prompt's Concept
+                            
+                            /[2] = Promt's Descripton (Description of the scene and its environment)
+                            
+                            /[3] = Promot's Descripton (Description of the scene's compositions)
+                            
+                            /[4] = Prompt's Descripton (Description of the scene's mood, feelings, and atmosphere)
+                            
+                            /[5] = Promt's Descripton (Style for the prompt image: Photography, Painting, Illustration, Sculpture, Artwork, etc.)
+                            
+                            [6] = 0 for no style; otherwise a style, like photographic or painting.
+                            
+                            /[7] = Promt's Descripton (Description of the scene's mood, feelings, and atmosphere)
+                            
+                            [ar] = "--ar [size]" for horizontal images, "--ar [size]" for vertical images, or "--ar [size]" for square images.
+                            
+                            [v] = "--niji" for Japanese art style, or "--v [size]" for other styles.
+                            
+                            [8] = Prompt's Resolution (Width and Height) in the format "WxH", where W is the width and H is the height of the image.
+                            
+                            For example, a prompt with the description "a black cat in front of an oval window with golden frame and curtain" will be:
+                            
+                            /cat
+                            /black
+                            /front of
+                            /oval window with goldn frame and curtain
+                            /black
+                            /cat is staring at the viewer in a solemn manner, looking straight into his/her eyes.

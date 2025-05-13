@@ -1,0 +1,35 @@
+Because the limits of integration are always infinity for double integrals in Cartesian coordinates, and because the magnitude is constant and independent of the angle of integration, one can replace any region with an infinite length by a rectangle with unit length to make the integral easier to compute.  This rectangle has a width which is proportional to r, but not exactly equal to it; for this reason we must divide out the factor of r in the final answer.
+
+(b) Sometimes.
+
+(b)
+
+### Explanation:
+
+A triple integral is not the volume of a region. The answer is (a) because the triple integral of $1$ over a region is zero and hence cannot be the same as its volume, which would have to be nonzero. The triple integral of $f(x)$ is not necessarily the four-dimensional volume of the four-dimensional region under the graph in 4D space. It only needs to be the volume when $\int \int \int f(x) dx dy dz = \pi$ as in the case of a sphere. (a) says the triple integral IS the volume while it is merely a way of determining the volume.
+
+(d). We must first decide what our limit will be in each variable. Since we want the upper limits to be z, we have that 0<=y<=x<=z<=1 and that (dydzdx)=-1, so 1/4<=dx=dydx<=1 and -1/2<=dz=(dzdzdx). We set our lower limit of x to .5 so that the integral is positive. Therefore we have:
+
+<pre>∫(0)^.5.((y^(-1)).(z^(-3)))^-2(dydx)dz = ∫(0)^(.5).((y^-1)(-1/4))^-2*dy . dz = -.785</pre>
+
+#### Option B is the only possible answer for the center of mass for this cube
+
+#### Explanation:
+Let x,y,z = coordinates on the cube where x^3+y^3+z^3=1. For any point (x, y, z) in the cube we can calculate dX=x*dx and similarly dx/dy etc... The volume integral of (x,y,z) for each coordinate is given by:
+
+V(x)=∫01 ∫01 ∫01 x3+y3+z3 dx dy dz
+
+So we have 3 separate integrals to compute. For A the center of mass would be at (2/5,2/5,2/5) but this is not possible for this cube because:
+
+V(2/5)=∫01 ∫01 ∫01 x^3+y^3+z^3 dx dy dz<1 for any choice of coordinates. So the center of mass must be within the cube and cannot go outside so it would have to be at a vertex of the cube since this is the only way to have V(2/5)<1
+
+For B we have:
+
+V(1)=∫01 ∫01 ∫01 x^3+y^3+z^3 dx dy dz=  ∑x, y, z  .  x3 + y3 + z3    =∑x, y, z  1     =1/2
+
+So the center of mass must be at (1/2,1/2,1/2).
+
+For C we have:
+
+V(3/5)=∫01 ∫01 ∫01 x^3+y^3+z^3 dx dy dz=  ∑x, y, z  .  x^3 + y^3 + z^3    =∑x, y, z  3     =3/2
+So the center of mass must be at (3/5,3/5,3/5) which is not possible.

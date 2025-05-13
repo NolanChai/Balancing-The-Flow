@@ -1,0 +1,9 @@
+یک متد برات میفرستم میخوام روی دوتا از فیلد هاش که قرار هست تو اکسل چاپ بشه
+
+جمع دو فیلد دیگه رو بریزم برام این کار رو کن لطفا کدش این هست : protected void btnDownloadExcel_Click(object sender, EventArgs e)
+{
+    var dt_Excel = new AmazForoshMarjoee().Get_rpT_AmarForosh_Marjoee (Convert.ToDateTime((SAP.Utility.PersianDate.Parse("1/02/1401").ToString()).Replace("/", "-")),
+                         Convert.ToDateTime((SAP.Utility.PersianDate.Parse(dtbAzTarikh.Text).ToString().Replace("/", "-"))));
+    ExportDataSetToExcel(dt_Excel,
+            string.Format("AmrForoshMarjoee-"+ (dtbAzTarikh.Text).ToString().Replace("/", "-") + "_"+(dtbAzTariikh.Text).ToString().Replace("/", "")+".xlsx", SAP.Utility.PersianDate.Parse((dtbAzTariikh.Text).ToString().Replace("/", "-"))));
+}

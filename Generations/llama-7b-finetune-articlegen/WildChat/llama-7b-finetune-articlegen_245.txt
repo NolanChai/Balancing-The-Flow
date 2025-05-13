@@ -1,0 +1,26 @@
+```json
+{
+  "table_name": "MyTable",
+  "row_count": 1,
+  "column_names": [
+    "MyColumn"
+  ],
+  "columns": [
+    {
+      "key": "MyColumn",
+      "value": "MyColumnValue"
+    }
+  ]
+}
+```
+### Description:
+```C#
+public class TableWithKey : Table
+{
+  public TableWithKey(string table_name, IQueryable<TableWithKey> table) : base(table_name, table.Count()) {}
+  
+  public string MyColumn { get; set; }
+}
+```
+
+The conversion of the string value for the 'ControlDimension' element failed; try again with valid data, or modify the .NET CodeGenerator configuration file ('WebServiceHostingConfig.config') to use a different type for this property.

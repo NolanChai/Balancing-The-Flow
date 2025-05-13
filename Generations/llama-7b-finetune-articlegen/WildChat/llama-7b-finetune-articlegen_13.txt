@@ -1,0 +1,223 @@
+The three letters in the middle of the string, with the index numbers 187, 250 and 336 (when read from left to right) are "G", "C" and "T". These letters can be moved around to form a string which reads "AGC":
+
+```
+T    C   G
+AGC
+```
+This is the answer.
+
+I would start looking at the 54th place.
+
+### Explanation:
+
+In any valid configuration, one of the two paths must be longer than the other one. If we assume that the first path is shorter, there are only a few combinations of pairs of nodes (i, j) to try if it is indeed not possible to reach 54th place without passing through them in order:
+1. (0, 1), (2, 3), ..., (53, 54). In this case the last pair can be chosen only once:
+	1. if i < j, then we cannot pass through nodes (i, j) in any other path;
+	2. if i > j, then there are only two possible paths to choose: either one of them contains (j-1, j), which means that the first pair has been already taken and it is impossible to reach 54th place from the current position without passing through nodes (i, j) in order;
+	3. if i == j, then the last path can contain only two pairs of nodes: either they are (1, 2), meaning that the first pair has already been taken and there is no way to reach 54th place from the current position without passing through nodes (i, j) in order or (30, 31). In this case we must pass through at least one of those two pairs.
+
+For a given i = 2..54, if all possible combinations of nodes (0, 1), ..., (53, 54) are taken, then it is impossible to reach 54th place without passing through nodes (i, j). If we assume that the first path is longer than the second one, there is a similar reasoning:
+1. if i > j, then there are only two possible paths to choose: either one of them contains (j-1, j), which means that the first pair has been already taken and it is impossible to reach 54th place from the current position without passing through nodes (i, j) in order;
+2. if i == j, then the last path can contain only two pairs of nodes: either they are (1, 2), meaning that the first pair has already been taken and there is no way to reach 54th place from the current position without passing through nodes (i, j) in order or (30, 31). In this case we must pass through at least one of those two pairs.
+
+* If the number of inputs is not 3, raise a syntax error.
+* Print out "This program takes three numbers and performs an operation on them" to the console.
+* Prompt the user for the three numbers using scanf().
+* Use printf() or write(1, "%s",) to print out the number that was entered by the user in each position of the array, using sprintf() or snprintf() to format each value so that it is surrounded by spaces. 
+    * For example:
+        ```
+        int a = scanf("%d %d %d", &a, &b, &c);
+        
+        printf("The user entered the numbers ");
+        for (int i = 0; i < 3; ++i) {
+            sprintf(buf, "%d ", b[i]); // %d is a format specifier that means "space-separated digits"
+            write(1, buf, strlen(buf));
+        }
+        
+        printf("\n");
+        ```
+* Use scanf() to read three numbers and store them in the array. 
+    * For example:
+        ```
+        int a[3]; // this is an array of three variables that will hold numbers.
+        
+        for (int i = 0; i < 3; ++i) {
+            scanf("%d", &a[i]);
+        }
+        
+        printf("The user entered the numbers ");
+        for (int i = 0; i < 3; ++i) {
+            write(1, "%d ", a[i]);
+        }
+        ```
+* Use scanf() to read three integers and store them in an array.
+    * For example:
+        ```
+        int a[3]; // this is an array of three variables that will hold numbers.
+        
+        for (int i = 0; i < 3; ++i) {
+            scanf("%d", &a[i]);
+        }
+        ```
+* Use printf() to print the sum of each set of values in the array. 
+    * For example:
+        ```
+        for (int i = 0; i < 3; ++i) {
+            printf("The number at position %d is ", i);
+            write(1, "%d ", a[i]);
+            
+            if (i == 2) {
+                break; // since we know the array has three values, we'll just print out the last one.
+            }
+        }
+        
+        printf("\n");
+        ```
+* Use scanf() to read each set of two values and store them in an array. 
+    * For example:
+        ```
+        int a[3]; // this is an array of three variables that will hold numbers.
+        for (int i = 0; i < 3; ++i) {
+            scanf("%d %d", &a[i], &b[i]);
+        }
+        
+        printf("The first set of values are ");
+        for (int i = 0; i < 2; ++i) {
+            write(1, "%d ", a[i]);
+        }
+        
+        printf("\n");
+        ```
+* Use scanf() to read each number and store it in an array.
+    * For example:
+        ```
+        int a[3]; // this is an array of three variables that will hold numbers.
+        for (int i = 0; i < 3; ++i) {
+            scanf("%d", &a[i]);
+        }
+        
+        printf("The number at position %d is ", i);
+        write(1, "%d ", a[i]); // we're just writing out the value in that spot.
+        
+        if (i == 2) {
+            break; // since we know the array has three values, we'll just print out the last one.
+        }
+        ```
+* Use scanf() to read three numbers and store them in an array of doubles.
+    * For example:
+        ```
+        double a[3]; // this is an array of three variables that will hold numbers.
+        
+        for (int i = 0; i < 3; ++i) {
+            scanf("%lf", &a[i]);
+        }
+        ```
+* Use scanf() to read a series of integers and store them in an array of doubles.
+    * For example:
+        ```
+        double d[10]; // this is an array of ten variables that will hold numbers.
+        
+        for (int i = 0; i < 10; ++i) {
+            scanf("%d", &a[i]);
+            
+            if (i == 2) {
+                break;
+            }
+        }
+        ```
+* Use scanf() to read an array of integers and store them in a variable that will hold numbers.
+    * For example:
+        ```
+        int a[] = {3, 4, 5}; // this is an array of three variables that will hold numbers.
+        
+        for (int i = 0; i < 3; ++i) {
+            scanf("%d", &a[i]);
+            
+            if (i == 2) {
+                break;
+            }
+        }
+        ```
+* Use printf() to print out the sum of each set of values in the array. 
+    * For example:
+        ```
+        for (int i = 0; i < 3; ++i) {
+            printf("The number at position %d is ", i);
+            write(1, "%d ", a[i]);
+            
+            if (i == 2) {
+                break; // since we know the array has three values, we'll just print out the last one.
+            }
+        }
+        
+        printf("\n");
+        ```
+* Use scanf() to read each set of two values and store them in an array. 
+    * For example:
+        ```
+        int a[3]; // this is an array of three variables that will hold numbers.
+        for (int i = 0; i < 3; ++i) {
+            scanf("%d %d", &a[i], &b[i]);
+            
+            if (i == 2) {
+                break; // since we know the array has three values, we'll just print out the last one.
+            }
+        }
+        
+        printf("The first set of values are ");
+        for (int i = 0; i < 2; ++i) {
+            write(1, "%d ", a[i]);
+        }
+        
+        printf("\n");
+        ```
+* Use scanf() to read each number and store it in an array.
+    * For example:
+        ```
+        int a[3]; // this is an array of three variables that will hold numbers.
+        for (int i = 0; i < 3; ++i) {
+            scanf("%d", &a[i]);
+            
+            if (i == 2) {
+                break; // since we know the array has three values, we'll just print out the last one.
+            }
+        }
+        
+        printf("The number at position %d is ", i);
+        write(1, "%d ", a[i]); // we're just writing out the value in that spot.
+        
+        if (i == 2) {
+            break; // since we know the array has three values, we'll just print out the last one.
+        }
+        ```
+* Use scanf() to read three numbers and store them in an array of doubles.
+    * For example:
+        ```
+        double d[3]; // this is an array of three variables that will hold numbers.
+        
+        for (int i = 0; i < 3; ++i) {
+            scanf("%lf", &d[i]);
+            
+            if (i == 2) {
+                break;
+            }
+        }
+        ```
+* Use printf() to print the sum of each set of values in the array.
+    * For example:
+        ```
+        
+        for (int i = 0; i < 3; ++i) {
+            if (i == 2) { // since we know the array has three values, we'll just print out the last one.
+                break;
+            } else {
+                printf("The number at position %d is ", i);
+                
+                write(1, "%lf ", d[i]); // we're just writing out the value in that spot.
+            }
+        }
+        
+        printf("\n");
+        ```
+
+I do not know how to explain this. I think the main reason is that I don't want people to misunderstand this. When I wrote code, I would like to say that "this code is good," but at the same time I also want to say that "don't use it if you are a beginner." So in the future, there will be more examples of such bad code, which can be regarded as my learning process and practice.

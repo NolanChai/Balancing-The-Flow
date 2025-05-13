@@ -1,0 +1,15 @@
+[Ninja] 运行：ninja -v .   使用：cmake .    脚本：./install_torch.sh    软件包：torch7+torchvision(cuda10)    执行：sudo apt-get install ninja cmake  [cuda] 运行: sudo apt install nvidia-cuda-toolkit  [torchvision] 运行：pip install torchvision==0.5.1 
+#  
+
+## 简介:   使用CUDA 分布式执行 cmake ，极大提升效率    绕过编译器时间问题    支持 C++14      [1] 安装cmake：https://github.com/Kitware/CMake/wiki/Installing-on-Ubuntu   
+
+## 特点:  支持多个CPU并行运算，具有可移植性    产生C++ 代码    独立于编译器   [1]https://github.com/Kitware/CMake/wiki/FAQ#does-cmake-have-an-active-development-cycle  
+
+## 安装:   编写 .gitignore  将所有文件排除，避免仓库上传   [1]https://github.com/Kitware/CMake/wiki/FAQ#how-do-i-make-a-fresh-clone-of-cmake  [2] 编写 .travis.yml：   
+. 使用 [travis.org](https://travis-ci.org) 构建代码镜像   
+. 通过检测机器特征，并配置构建条件     [3] https://docs.travis-ci.com/user/languages/c%2B%2B/#CMake-for-Linux   [4] https://github.com/travis-ci/travis-build   
+. 使用 GitHub Pages 构建镜像：https://help.github.com/articles/automatically-building-and-hosting-your-docs-with-readthedocs-and-github-pages   [5] https://github.com/wangzp123/torch7
+[1]: https://github.com/Kitware/CMake/wiki/FAQ#does-cmake-have-an-active-development-cycle 
+[2]: https://github.com/wangzp123/torch7/blob/master/.gitignore .gitignore   [3]: https://docs.travis-ci.com/user/languages/c%2B%2B/#CMake-for-Linux 
+[4]: https://github.com/travis-ci/travis-build .travis.yml   [5]: https://help.github.com/articles/automatically-building-and-hosting-your-docs-with-readthedocs-and-github-pages 
+#

@@ -1,0 +1,11 @@
+C) The experiment does not include a control group. Control groups allow researchers to make inferences about effects of independent variables on outcome variables by comparing subjects who received the experimental variable (the treatment) with those who did not receive the experimental variable (control). Blocking allows researchers to compare the effectiveness of different treatments, but it does not provide a way to control for variation in the subjects. The experiment would be better suited using a randomized controlled trial design.
+
+I thought it was 1/8^3 - 1/4. I was wrong though and I'd like to know why my logic is off on this one.
+
+Comment: This should probably be a comment under the answer posted by @jj1607, not an independent question.
+
+Answer: The probability of tossing it twice before blue comes up is $\frac 48$, and the probability of it coming up at least once is $\frac 38$. So the overall probability you're looking for is $$\frac{\frac 48}{\frac 38} = \frac{2}{3}$$
+
+#### A. Given that the data set is unbiased, use the method of least squares to calculate the slope of the line. You can assume a normal distribution for your data. Then plot the line and add it to the graph you have made so far. Use R-squared to judge how well this line fits with your data.
+
+#### B. This problem does not seem to lend itself to this type of model, but if you think that you can fit a straight line to them, use least squares again and see what happens.

@@ -1,0 +1,32 @@
+Use an `every` function. Example here [here](https://gist.github.com/tasmanmoth/7831629).
+```lua
+-- every 30 minutes a plane will fly over the map, drop supplies and draw a blimp on the map.
+-- when someone interacts with the blimp it needs to remove itself.
+every(function()
+  if math.random(0,1)==0 then
+    local blimp = display.newImage("blimp.png")
+    blimp:setScale(15)
+    blimp.x = math.random(-600,600)+DisplayMetrics().screenWidth/2 -- the plane should be in the centre of the screen at random positions (between -300 and +300), we will remove this in future iterations to get better accuracy
+    blimp.y = 500                              -- blimp should always start in the centre of the screen so we can place it easily, again we'll change this in future iterations to a more accurate position.
+    -- blimps are not currently rotating but if you want them to you will have to add code for that too.
+    local function onTap(event)
+      blimp:removeSelf()                       -- remove the plane when someone interacts with it (taps).
+    end
+    blimp:addEventListener("tap", onTap)         -- blimps will react to taps and remove themselves, they should also rotate after a short pause. This is not implemented in this example.
+    display.getCurrentStage():insert(blimp, "top")  -- add the plane to the top of the screen
+    
+  else
+    if math.random(0,1)==1 then                   -- if it's a random 25% chance that a blimp is dropped by the plane?
+      local blimp = display.newImage("blimp.png")
+      blimp:setScale(4)                         -- size of the blimps, could also be different for each one
+      blimp.x = math.random(-600,600)+DisplayMetrics().screenWidth/2 -- blimps will land in the centre of the screen at random locations (between -300 and +300), we'll remove this in future iterations to get better accuracy
+      blimp.y = 500                             -- blimps should always start in the centre of the screen so we can place them easily, again we will change this in future iterations to a more accurate position
+      local function onTap(event)
+        blimp:removeSelf()                      -- remove the plane when someone interacts with it (taps).
+      end
+      blimp:addEventListener("tap", onTap)        -- blimps will react to taps and remove themselves, they should also rotate after a short pause. This is not implemented in this example.
+      display.getCurrentStage():insert(blimp,"top")  -- add the plane to the top of the screen
+    end
+  end
+end)
+```

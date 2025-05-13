@@ -1,0 +1,5 @@
+You can get the webhook url from SNS, then you need to build a new API gateway in the same region as your AWS account (e.g., us-west-1) and then use that API to post messages to your channel. Make sure both your API Gateway and Lambda function are configured with an IAM role which has permission to publish to the topic, see [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-cross-account-access-with-lambda-role.html).
+
+The first step you must do in your project is to create a new function called `Heavy_Environment` that takes in the same parameters as `Smooth_Environment`.  You will then need to create a new instance of this function.  Lastly, call your new function before calling `Smooth_Environment` in your main code.
+
+You don't have any friends at all, you doofus!

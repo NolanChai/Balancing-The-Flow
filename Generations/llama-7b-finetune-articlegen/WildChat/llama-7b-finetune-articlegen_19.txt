@@ -1,0 +1,49 @@
+This program is WRONG !!!!
+
+### Explanation:
+
+The following code (in the main function)
+```C++
+    cout << "Please enter number of digits: ";
+    cin >> n;
+    
+    while(n > 0){
+        if(n >= 1000) break;
+        else{
+            n++;
+        }
+        
+        int i = 2537.195 * pow(10, (int)(-log(i / 2537.195)));
+```
+
+does not store the digits correctly! For example:  
+* I enter "8" and get wrong answer. (should be 7)
+* I enter "6" and get correct answer. (should be 5)
+* I enter "4" and get correct answer. (should be 3)
+
+I think this is because the program uses a wrong algorithm for calculating `i` in the above code: `i = 2537.195 * pow(10, (int)(-log(i / 2537.195)))` . That means that in the case of "4", instead of subtracting 2537 from `pow(10, (int)(-log(2537)))` it is actually subtracting 2537 from i and getting an incorrect result:
+* for "8" it should be `(int) (-log(i/2537))` not `(int) (-log((i - 2537)/2537))` . I think in the case of "6", it will work properly.
+
+I think that the `while` loop in the main function should look like this instead:
+```C++
+    while(n > 0){
+        if ( n >= 10 ) {
+            i = 2537 * pow(10, (int)(-log((i + 10) / 2537.195)));   //i is now stored in integer and not double type.
+            
+        } else if (n >= 4 ) {
+            i = 2537 * pow(10, (int)(-log((i + 4) / 2537.195)));    //i is now stored in integer and not double type.
+        }
+        
+        else{
+            n++;
+            
+            int i = 2537 * pow(10, (int)(-log((n + 4) / 2537.195)));    //i is now stored in integer and not double type.
+        }
+        
+        cout << i << endl;
+```
+
+My Answer: 2041 grams - 67grams = 1974 grams .
+Therefore, There are 1974 gramms of Chocolate Chips in a Bag .
+
+I got the following data for a box of crackers. There are 924 grams of cracker and 328 grams of box ONLY. We know that mass = weight so we can use these values to find out how many crackers in the box. In order to solve this problem we need to add together the mass of all the crackers, and then subtract the box mass from the total (mass of cracker + mass of box). After solving this, there are 24 gram of crackers which means that there are 37 crackers in the box. I used three significant figures because the numbers are pretty close to each other so I rounded them off.

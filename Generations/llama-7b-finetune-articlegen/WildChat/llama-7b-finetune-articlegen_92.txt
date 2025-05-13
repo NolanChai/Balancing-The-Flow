@@ -1,0 +1,28 @@
+This is how i solved it. I hope this helps :)
+
+##### 1- Create a new object called 'MyMarker'. Select the "Add component" button from the Objects Menu and choose your marker component as type.
+
+##### 2- When you add the new component to an empty scene, you can see the MyMarker has four default parameters: position, rotation, scale and color.
+
+##### 3- In the Inspector Panel, you can click on any of the parameters in order to change its values or type (if it's a vector).
+
+##### 4- The position component is the most important one because it determines where your object will be placed in the scene. To make it easier for you to understand this parameter we recommend that you select the position component and change it's value from Vector2(100,50) to (300,-200). The 300 and -200 values are coordinates (x-axis and y-axis respectively) that you can see in a world coordinate system. To get this kind of coordinate, you can use the "World Position" field located at the bottom right corner of the scene in the Inspector Panel.
+
+##### 5- The rotation component determines how your object will be rotated around its position component (x and y values). You can set a default rotation value for example: Quaternion(0,0,-180,1) or you can select this parameter from the Objects Menu in order to choose a different rotation.
+
+##### 6- The scale component determines how your object will be scaled around its position component (x and y values). You can set a default scale value for example: Vector2(5,3) or you can select this parameter from the Objects Menu in order to choose a different scale.
+
+##### 7- The color parameter defines how your object looks like when rendered. You can change its value (for example: Color.white) by selecting it from the Objects Menu and then by selecting another one that you prefer (like Color.black).
+
+Check out the following resources:
+
+1. [Google's Guide to SQL](http://code.google.com/intl/en-EN/apis/appengine/docs/java/ndb/using_datastore.html)
+2. The [documentation on using datastores in general](http://code.google.com/intl/en-EN/apis/appengine/docs/java/ndb/overview.html#Java_Data_Stores)
+3. [Datastore Query Language](http://code.google.com/intl/en-EN/apis/appengine/docs/python/datastore/index.html) on the Python API
+4. [Google's Guide to PHP Datastore](https://developers.google.com/appengine/docs/php/datastore/)
+5. [Guide to C# DataStores](http://code.google.com/intl/en-EN/apis/appengine/docs/csharp/using_datastore.html)
+6. [C++ data store docs on Google Code](https://code.google.com/p/googleappengine/wiki/CPlusPlusDataStore)
+7. [Node.js datastores docs](http://node-datastore.googlecode.com/)
+8. [Python ndb documentation](http://python-ndb.readthedocs.org/en/latest/)
+9. [Official SQL reference](https://cloud.google.com/bigquery/docs)
+10. [BigQuery Java API docs](https://code.google.com/p/google-cloud-java/wiki/BigQueryAPI)

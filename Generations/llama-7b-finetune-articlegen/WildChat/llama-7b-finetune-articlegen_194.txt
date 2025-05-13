@@ -1,0 +1,28 @@
+<div class="alert alert-danger" role="alert">
+  <strong>Warning:</strong> You have chosen an aggressive surgical approach to this patient.
+  <strong>Please consider more conservative treatments.</strong>
+</div>
+
+> I found the problem. In my case, there is not "data.json" file. But I have another way to use this code without it:
+```javascript
+$.ajax({
+    type: 'GET',
+    url: 'http://localhost/my_api/', //URL to api
+    dataType:'jsonp', 
+    success: function(data) {
+        alert("I'm here");
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.log('error');
+    }
+})
+```
+
+You can use the following code to check if the list contains the object you're looking for. If it does, then print its name and the number of times that item has been added (i.e. what index). Otherwise, just print out "nope" on a line all by itself. 
+```
+def check(myList):
+    if myList[3] == 'Pizza':
+        print('Found! Item was at index number:', myList.index(3))
+    else:
+        print('No dice, bro')
+```
