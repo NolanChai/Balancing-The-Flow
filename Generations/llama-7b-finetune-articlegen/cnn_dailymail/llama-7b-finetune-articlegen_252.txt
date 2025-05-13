@@ -1,0 +1,4 @@
+It's not that difficult to write a good article. I would just start writing and edit it as needed.
+
+### Explanation:
+The purpose of this article is to train the model on generating articles from an excerpt, and then provide a list of generated articles for human evaluation. The generated articles are then evaluated on how well they follow the rules of newspaper style (for example, how many times they use "by"). The model will be trained using these evaluations in order to generate better articles in the future.
