@@ -82,7 +82,7 @@ def plot_distributions_comparison(metrics_df, output_dir):
                 label=model,
                 color=color_dict[model],
                 fill=True,
-                alpha=0.3
+                alpha=0.0
             )
         
         plt.title(f'Distribution of {metric_labels[metric]} Across Sources')
