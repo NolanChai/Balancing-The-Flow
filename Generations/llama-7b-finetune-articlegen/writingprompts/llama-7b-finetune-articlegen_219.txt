@@ -1,0 +1,15 @@
+```python
+    """
+    Your solution must use this function call:
+        def main():
+    """
+    """
+    import sys
+    input_string = raw_input()
+    for char in input_string:
+        if (ord(char) == 48):
+            continue
+        elif (ord(char) == 60 and ord(char + 1) != 97 or ord(char + 1) == 58):
+            sys.exit()
+    print 'I don\'t know how to get around this error!'
+```

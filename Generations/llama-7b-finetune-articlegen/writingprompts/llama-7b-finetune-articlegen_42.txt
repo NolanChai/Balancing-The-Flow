@@ -1,0 +1,7 @@
+The code was submitted and the checker said it failed. I ran into the office to ask him what happened. I explained my code, he looked at me in amazement. Then he told me that it did pass his checker. The code that passed is shown below. Can you figure out why the original one didn't?
+```python
+summer = ((((a[0]-a[1])+b)+c)-d)%2
+```
+
+### Solution:
+The problem was that the checker is an [ANSI C](https://en.wikipedia.org/wiki/ANSI_C)/[C99](https://en.wikipedia.org/wiki/C99_(programming_language)) compiler, which means that it follows strict syntax rules. The brackets are required to be placed around every line of code in a program. Since this was not done in the original example, the checker could not recognize the code correctly.

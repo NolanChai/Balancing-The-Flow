@@ -1,0 +1,10 @@
+```python
+>>> import re,sys
+>>> def my_instruction(s):
+...     p = re.compile('^.*(?=my shop is mine).*')  # match the string
+...     d = dict([x.group() for x in p.finditer(s)])
+...     return d
+...
+>>> my_instruction(sys.stdin.readline().rstrip())
+{'my': ['shop', 'is'], 'mine': ['mine'], '.': []}
+```

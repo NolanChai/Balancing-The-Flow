@@ -1,0 +1,21 @@
+```python
+    def execute(self):
+        print('You are going to die in 2 days!')
+        time.sleep(48*3600) # 48 hours - 1 day
+        print('You were executed successfully.')
+```
+ 
+  ### Solution:
+```python
+    def execute(self):
+        import random
+        import datetime
+        def get_random_int_range(min, max):
+            return random.randint(max - min +1 , max)
+        today = datetime.datetime.today() # 2016-09-30
+        tomorrow = today.replace(day=get_random_int_range(1, 356), hour=get_random_int_range(0,24), minute=get_random_int_range(0,60)) # 2016-09-30 1:58 PM
+        two_days_from_tomorrow = tomorrow.replace(hour=get_random_int_range(1,24), minute=get_random_int_range(0,60)) + timedelta(hours=2) # 2016-10-01 3:58 PM
+        print('You are going to die in {}!'.format(tomorrow.strftime("%Y-%m-%d %H:%M")))
+        time.sleep(two_days_from_tomorrow)
+        print('You were executed successfully.')
+```
