@@ -1,0 +1,14 @@
+<?php
+// the latest_from_softonic object is returned and all values are set properly.
+$value_xml = simplexml_load_string($latest_from_softonic->url);
+echo "<pre>";
+print_r($value_title);
+foreach ($value_xml->url as $key => $value) {
+    echo "$key: ";
+    print_r($value);
+}
+?>
+
+### Explanation:
+
+You have to use simplexml_load_string() for the value_xml variable in order to receive any content. You can try this code and you will see that the data is extracted correctly from the xml file.

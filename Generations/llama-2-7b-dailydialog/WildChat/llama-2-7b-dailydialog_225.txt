@@ -1,0 +1,99 @@
+```vb
+Sub MyMacro()
+    Dim Cell As Range, rng As Range
+    Set rng = Range("H5")
+    
+    If Not IsNumeric(rng) Then GoTo Exit_Label
+        
+    For Each Cell In Range("B6:B100").Cells
+        If Cell.Value = "Service" Then
+            If rng.Value <= Cell.Offset(0, 2).Value Then
+                rng = Cell.Offset(0, 2)
+            End If
+        End If
+    Next
+    
+    rng = Range("H5").Value
+End Sub
+```
+
+### Explanation:
+
+I am using a `For Each` loop to loop through the range that was selected and search for the value "Service" in column B.  For each time you find the text value "Service", it will check if the date in column H is smaller or equal than the current cell's offset.  
+
+After searching, we get our earliest date found by setting a variable `rng` to that cell and then exiting the loop. After that we just use this variable as the new value for `rng`.  Then we can set `rng` back to "H5" (the original starting point of the search) and calculate the answer in there.
+
+|Item No. |Product Name |Unit Price |Quantity |Sub Total |Discount|Total |
+|---|---|---|---|---|---|
+|101|Cup of coffee|$2.95|1.00|-0.43|$2.52|
+|102|Box of tea|$6.99|1.00|-0.67|$6.32|
+|103|Bag of sugar|$1.80|1.00|-0.30|$1.50|
+|104|Carton of milk|$5.10|1.00|-0.57|$4.53|
+|105|Dish Washing Liquid|$6.15|1.00|-0.92|$5.23|
+|106|Tissue Paper Rolls|$2.25|1.00|-0.54|$1.71|
+|107|Toothpaste|$4.27|1.00|-0.98|$3.29|
+|108|Rubber glove|$6.58|1.00|-0.76|$5.82|
+|109|Tissue Paper Rolls|$4.33|1.00|-0.96|$3.37|
+|110|Liquid Detergent|$3.14|1.00|-0.85|$2.29|
+|111|Carton of milk|$5.15|1.00|-0.60|$4.55|
+|112|Dish Washing Liquid|$3.15|1.00|-0.79|$2.36|
+|113|Tissue Paper Rolls|$2.08|1.00|-0.44|$1.64|
+|114|Tissue Paper Rolls|$5.17|1.00|-0.96|$4.21|
+|115|Carton of milk|$4.85|1.00|-0.39|$4.46|
+|116|Liquid Detergent|$3.17|1.00|-0.65|$2.52|
+|117|Tissue Paper Rolls|$2.87|1.00|-0.48|$2.39|
+|118|Rubber glove|$3.70|1.00|-0.65|$2.05|
+|119|Liquid Detergent|$1.83|1.00|-0.31|$1.52|
+|120|Tissue Paper Rolls|$4.75|1.00|-0.60|$4.15|
+|121|Liquid Detergent|$2.79|1.00|-0.39|$2.30|
+|122|Carton of milk|$4.82|1.00|-0.60|$4.22|
+|123|Tissue Paper Rolls|$5.57|1.00|-0.66|$4.91|
+|124|Liquid Detergent|$1.81|1.00|-0.41|$1.40|
+|125|Tissue Paper Rolls|$3.78|1.00|-0.61|$3.17|
+|126|Carton of milk|$5.79|1.00|-0.84|$4.95|
+|127|Liquid Detergent|$1.19|1.00|-0.39|$0.80|
+|128|Tissue Paper Rolls|$6.01|1.00|-0.23|$5.78|
+|129|Carton of milk|$4.73|1.00|-0.44|$4.29|
+|130|Liquid Detergent|$1.66|1.00|-0.52|$1.14|
+|131|Carton of milk|$5.33|1.00|-0.91|$4.42|
+|132|Tissue Paper Rolls|$1.76|1.00|-0.28|$1.48|
+|133|Liquid Detergent|$1.25|1.00|-0.39|$0.86|
+|134|Dish Washing Liquid|$5.09|1.00|-0.97|$4.12|
+|135|Carton of milk|$4.77|1.00|-0.58|$4.19|
+|136|Liquid Detergent|$0.93|1.00|-0.46|$0.47|
+|137|Tissue Paper Rolls|$2.70|1.00|-0.51|$2.19|
+|138|Liquid Detergent|$2.02|1.00|-0.46|$1.56|
+|139|Carton of milk|$4.77|1.00|-0.78|$3.99|
+|140|Tissue Paper Rolls|$2.53|1.00|-0.77|$1.76|
+|141|Liquid Detergent|$3.10|1.00|-0.89|$2.21|
+|142|Carton of milk|$4.80|1.00|-0.65|$4.15|
+|143|Tissue Paper Rolls|$2.71|1.00|-0.46|$2.25|
+|144|Liquid Detergent|$2.19|1.00|-0.52|$1.67|
+|145|Carton of milk|$4.84|1.00|-0.73|$3.97|
+|146|Liquid Detergent|$1.72|1.00|-0.66|$0.96|
+|147|Tissue Paper Rolls|$3.85|1.00|-0.70|$3.15|
+|148|Liquid Detergent|$2.42|1.00|-0.69|$1.73|
+|149|Carton of milk|$4.76|1.00|-0.98|$3.78|
+|150|Liquid Detergent|$1.67|1.00|-0.26|$1.41|
+|151|Tissue Paper Rolls|$3.56|1.00|-0.89|$2.67|
+|152|Liquid Detergent|$0.99|1.00|-0.48|$0.51|
+|153|Carton of milk|$4.71|1.00|-0.97|$3.74|
+|154|Liquid Detergent|$1.62|1.00|-0.84|$0.78|
+|155|Tissue Paper Rolls|$2.97|1.00|-0.93|$2.04|
+|156|Liquid Detergent|$1.62|1.00|-0.16|$1.46|
+|157|Carton of milk|$4.75|1.00|-1.00|$3.75|
+|158|Liquid Detergent|$1.22|1.00|-0.30|$0.92|
+|159|Tissue Paper Rolls|$1.
+
+Hi, I am using MS Excel VBA and have written code for your project.
+
+Here is the sample workbook in .xlsm format, where the formulas are defined at worksheet level so that you can change them as per your requirement (I haven't added any service dates to showcase how it will look after changing it to "Serviced").
+[Sample workbook](https://drive.google.com/open?id=0B47-i5fWU06KMlJkR3hEck12ZlU)
+
+\begin{code}
+Sub test()
+    If Range("B1") = "Serviced" Then
+        MsgBox "Please ensure that an identical Service is created with a Next Service Due Date after changing this to Serviced." & vbCrLf, , "Message"
+    End If
+End Sub
+\end{code}

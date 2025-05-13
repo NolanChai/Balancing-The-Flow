@@ -1,0 +1,174 @@
+I'm going to put the header, content and footer into separate divs.
+
+Here is my working code so far. If you want me to edit something, just ask. I'll do it right away.
+
+HTML Code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-eZrrJcwDc/3uDhsdt1Pm1lvHYSyIkpbtUajaeUSgEuKqMfcF1TpQ=sh" crossorigin="anonymous">
+    
+    <title>Document</title>
+  </head>
+  <body>
+  
+<!-- Navigation Bar Starts -->
+<div class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><h1 id="myNavBar">Nico's Website</h1></a>
+</div>
+
+<!-- Header Starts Here -->
+  <header>
+    <img src="image.png"/>
+    
+    <p style="color: #fff; font-size:20px;">
+      This is where you get my services!
+      
+    </p>
+  </header>
+<!-- Content Starts Here -->
+<div class="content">
+  <h1>What Services can I provide?</h1>
+  
+  <ul style="list-style: none;">
+      <li>Cleaning your house</li>
+      <li>Washing and ironing clothes</li>
+      <li>Cooking food for you</li>
+      <li>Going to the store and buying groceries for you</li>
+  </ul>
+  
+  <h1 style="color: #fff;">Contact me here!</h1>
+  
+  <div class="contact">
+    Email: nicoblanchard@gmail.com<br/>
+    Phone Number: +1 (506)-423-8939<br/>
+    Address: 1514, Rue Côte de l'Or<br/>
+    Québec QC H7M 2G5<br/>
+  </div>
+</div>
+<!-- Footer Starts Here -->
+<footer>
+  <p style="color: #fff;">©2021 All Rights Reserved. Nico</p>
+  
+</footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//AHFkb4bdRvxV7AXtgyIWw+y9eQtfQG8RXh2IKy9MK46P" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfnRdG9T+CTymTk16bf2/c" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f56ff3a486.js" crossorigin="anonymous"></script>
+  </body>
+</html>
+```
+CSS Code:
+
+```css
+*{
+     box-sizing: border-box;
+}
+h1{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1rem;
+    color: #4682B4;
+    padding: 30px 0;
+    text-align: center;
+}
+h2{
+     font-size: 17px;
+    font-weight: normal;
+    line-height: 1rem;
+    color: #252525;
+    margin-top: 40px;
+}
+a{
+   text-decoration: none;
+}
+body{
+    background: url("bg.jpg") no-repeat center;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+h2 img {
+    float: left;
+    padding: 50px;
+}
+img{
+     width: 100%;
+     max-width: 500px;
+     display: block;
+}
+a img{
+    width: 439px;
+    margin-left: 60px;
+    border-radius: 50%;
+}
+
+/* Header Styling */
+.header {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #f6f6f6;
+   position: relative;
+}
+a{
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size:16px;
+}
+/* Content Styling */
+.content {
+    background-color:#eceff1;
+    margin:40px 0px;
+}
+h3{
+     font-weight:normal;
+     font-size:28px;
+     line-height:56px;
+     padding:20px 30px;
+     background:#494D73;
+     color:#fff;
+     margin-bottom: 100px;
+}
+/* Footer Styling */
+footer {
+   height: 80vh;
+   width: 100%;
+   position: relative;
+   bottom: 0;
+}
+img{
+    width: 64px;
+    margin-left: -32px;
+}
+/* Contact Us Styling */
+.contact {
+    background: #f6f6f6;
+    display: block;
+    padding:15px 0px;
+    font-size: 14px;
+    margin-bottom: 80px;
+}
+a{
+    color:#fff;
+}
+.contact li{
+   list-style: none;
+}
+```

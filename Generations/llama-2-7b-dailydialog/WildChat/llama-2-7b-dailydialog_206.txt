@@ -1,0 +1,3 @@
+I have a question, are you using a universal quantifier to replace an existential one? The statement seems like it might be missing something. It looks like if we let $A$ represent the antecedent and $B$ the consequent then we would have ∀x (¬P(x) → A) → B and ¬∃x P(x) → ∀x (¬P(x)) → B so I think the statement should be ∀x ((¬P(x) → A) → B) or ∀x ((A → ¬P(x)) → B), is this correct?
+
+Yes, that is a valid argument.

@@ -1,0 +1,48 @@
+```json
+{
+    "prompts": [
+        {
+            "prompt_type": "image",
+            "prompt": "/imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman\'s iconic dog portraits. --ar 1:1 --v 5",
+            "description": "Cute Dog Image Prompt",
+            "images": [
+                {
+                    "path": "/imagine/prompts/prompt-cute-dog-fluffy-fur-wagging-tail-playful-expression-sitting-grassy-field-clear-blue-sky-colorful-collar-natural-vibrant-setting-lake-captured-nikon-d750-camera-50mm-lens-shallow-depth-field-composition-focused-dog\\'s-face-capturing-joyful-spirit-style-reminiscent-william-wegman\\'s-iconic-dog-portraits--ar-1-1---v-5.jpg",
+                    "link": "/imagine/prompts/prompt-cute-dog-fluffy-fur-wagging-tail-playful-expression-sitting-grassy-field-clear-blue-sky-colorful-collar-natural-vibrant-setting-lake-captured-nikon-d750-camera-50mm-lens-shallow-depth-field-composition-focused-dog\\'s-face-capturing-joyful-spirit-style-reminiscent-william-wegman\\'s-iconic-dog-portraits--ar-1-1---v-5.jpg",
+                    "download": "https://api.midjourney.com/v1/prompts/9a683627dca340acae3f2b69c04bb36e"
+                }
+            ]
+        },
+        {
+            "prompt_type": "image",
+            "prompt": "/imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman\\'s face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5",
+            "description": "Beautiful Women in Coffee Shop Image Prompt",
+            "images": [
+                {
+                    "path": "/imagine/prompts/prompt-beautiful-women-coffee-shop-elegant-sophisticated-sipping-cup-steaming-coffee-natural-sunlight-streaming-window-soft-warm-color-tones-vintage-decor-cozy-armchairs-wooden-tables-bookshelf-filled-classic-novels-delicate-porcelain-teacups-hint-aromatic-beans-air-captured-leica-m10-camera-35mm-lens-capturing-timeless-beauty-composition-focused-woman\\'s-face-hands-reminiscent-painting-leonardo-da-vinci--ar-1-1---v-5.jpg",
+                    "link": "/imagine/prompts/prompt-beautiful-women-coffee-shop-elegant-sophisticated-sipping-cup-steaming-coffee-natural-sunlight-streaming-window-soft-warm-color-tones-vintage-decor-cozy-armchairs-wooden-tables-bookshelf-filled-classic-novels-delicate-porcelain-teacups-hint-aromatic-beans-air-captured-leica-m10-camera-35mm-lens-capturing-timeless-beauty-composition-focused-woman\\'s-face-hands-reminiscent-painting-leonardo-da-vinci--ar-1-1---v-5.jpg",
+                    "download": "https://api.midjourney.com/v1/prompts/7f304d8a29e64c27b198cacbc57001cb"
+                }
+            ]
+        },
+        {
+            "prompt_type": "image",
+            "prompt": "/imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan\\'s determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5",
+            "description": "Halo Reach Image Prompt",
+            "images": [
+                {
+                    "path": "/imagine/prompts/prompt-halo-reach-landscapemodern-warfare-captivating-battlefield-sparatan-amidst--ar-16-9--v-5.jpg",
+                    "link": "/imagine/prompts/prompt-halo-reach-landscapemodern-warfare-captivating-battlefield-sparatan-amidst--ar-16-9--v-5.jpg",
+                    "download": "https://api.midjourney.com/v1/prompts/c673fc48a2cd43f0aa7e137ac1d17777"
+                }
+            ]
+        },
+        {
+            "prompt_type": "image",
+            "prompt": "/imagine prompt: a detailed description of [1] with specific imagery details. --ar 16:9 --v 5",
+            "description": "Detailed Description Image Prompt",
+            "images": []
+        }
+    ]
+}
+```

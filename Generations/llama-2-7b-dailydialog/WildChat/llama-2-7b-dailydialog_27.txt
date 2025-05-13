@@ -1,0 +1,56 @@
+The following host keys are known to this SSH agent and will not be asked for again:
+       1639403745  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639403816  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639403886  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404050  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404180  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404283  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404386  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404484  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404586  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404680  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404788  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404894  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639404988  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405085  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405189  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405286  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405384  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405486  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405580  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405684  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405780  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405888  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639405984  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639406087  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639406183  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639406286  ssh-dss AAAAC3NzaC1lZDROb3BlZAAAAGwkP0gqpEpj6h3FcO9Qm2uMpT4iYXMu5vKVe7yA6tqW
+       1639406381  ssh-dss AAAAC3NzaC1lZ
+
+这是一个常见问题，虽然有人提出了解决方案，但是没有什么可靠的方案。 
+
+如果你使用的是win-ssh客户端，则可以在"Edit"->"Preferences"中，在"Connection"选项卡上改为："Force known host file updates on reconnection"，也就是说每次连接都清空known_hosts，这样一直用不会出现问题。 
+
+如果你使用的是Mac或者Linux，则可以使用命令行客户端（ssh-keygen）生成和缓存公钥。 
+
+如果您是在Windows上安装了OpenSSH，那么在“Settings”->“Options”中设定"UseDNSHostnames”为false；或者设置"StrictHostKeyChecking=no"。
+
+检查如下两个文件，在服务器上的/etc/ssh目录下，和本地的.ssh目录。
+
+```bash
+$ ls /etc/ssh
+authorized_keys authorized_keys2 id_dsa id_ecdsa id_ed25519 id_rsa id_xmss passwd permissons pubkey.pub
+$ ls -al ~/.ssh
+total 48K
+drwxr-xr-x  7 jamesjj xiaoyu 4096 Sep 28 23:31 .
+drwx------  3 jamesjj xiaoyu 4096 Sep 29 05:45 ..
+-rw-------. 1 jamesjj xiaoyu    78 Sep 29 05:45 authorized_keys2
+-rw-------. 1 jamesjj xiaoyu 4096 Oct  3 23:21 authorized_keys
+drwx------. 3 jamesjj xiaoyu    78 Sep 29 05:45 id_dsa
+drwx------. 3 jamesjj xiaoyu    78 Sep 29 05:45 id_ecdsa
+drwx------. 3 jamesjj xiaoyu    78 Sep 29 05:45 id_ed25519
+-rw-------. 1 jamesjj xiaoyu 6701 Sep 29 05:45 id_rsa
+drwx------. 3 jamesjj xiaoyu    78 Sep 29 05:45 id_xmss
+-rw-------. 1 jamesjj xiaoyu    66 Oct  3 23:21 passwd
+drwx------. 3 jamesjj xiaoyu   128 Sep 29 05:45 permissons
+```

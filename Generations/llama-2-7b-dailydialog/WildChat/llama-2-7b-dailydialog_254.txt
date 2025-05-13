@@ -1,0 +1,36 @@
+```shell
+mkdir -p project/img_prompts/midjourney && cd project/img_prompts/midjourney
+
+curl https://raw.githubusercontent.com/xdroids/mj-prompt/main/prompts.md -o mj-prompt.txt
+cat > midjourney_template.py <<EOF
+import json
+from collections import namedtuple
+
+with open("./prompts.json") as f:
+  prompts = json.load(f)
+
+def get_midjourney_img_name():
+    return f"{prompt}_{uuid4()}"
+    
+def get_midjourney_description(prompt, name):
+  description = namedtuple("Description", ["description"])
+  with open("./desc.txt") as f:
+      desc = json.load(f)["descriptions"][prompt]
+  
+  if type(desc) == str:
+    description = description(desc + "\n" + f"{name}:\n" + prompt)
+    
+  return description.description
+
+def get_midjourney_img():
+  image_path = "./img_prompt/" + get_midjourney_img_name()
+
+  desc = get_midjourney_description(prompt, image_path)
+  
+  return "--niji {name} --v 5 --ar 1:1".format(**desc.__dict__).strip().split(" ")
+
+if __name__ == '__main__':
+    for i in prompts:
+        print(get_midjourney_img() + "\n")
+EOF
+```

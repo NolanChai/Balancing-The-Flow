@@ -1,0 +1,167 @@
+##### SOAR Requirements
+The proposed SOAR solution for ACME will require the following capabilities, which can all be met by
+using the Microsoft Azure Sentinel product. The below table illustrates each requirement with a brief
+explanation of why it is required and how each requirement can be fulfilled by Azure Sentinel:
+
+##### SOAR Solution Recommendation
+Microsoft Azure Sentinel (AES) provides a comprehensive toolkit for SOAR, including orchestration,
+automation, playbooks, integration with third party products such as Qualys vulnerability management and
+Palo Alto Networks security information and event management (SIEM), threat intelligence services such as
+Threat Intelligence Platform (TIP) which provide a comprehensive solution. It also provides a full suite of
+cybersecurity solutions including SIEM, AI-based hunting, SOAR, incident response, security operations, threat
+hunting and management tools all in one place with prebuilt playbooks. The Azure Sentinel product provides
+a single dashboard to visualise the complete cybersecurity picture and provides an end-to-end solution for
+threat detection and response which can be fully automated or handled by a human operator, allowing them to
+focus on other areas of their job. AES also allows the use of predefined templates for various processes such
+as incident response.
+##### Requirements
+Azure Sentinel will provide the following requirements:
+ Automation and orchestration for security events from Azure resources, cloud-based apps, IoT devices
+and third-party SaaS solutions as well as on-premises systems (using Logic Apps or other automations
+services)
+ Automated playbooks that can be created to respond quickly to cybersecurity events. These can be
+created using predefined templates with customisable rules and workflows, allowing for a highly
+personalised response.
+##### Threat Intelligence Services Required
+The AES product provides the following threat intelligence services:
+ Threat Intelligence Platform (TIP): This provides a comprehensive solution to threat detection by
+combining AI and human analysis of threat signals to provide real-time insights into threats and alerts. It
+uses a combination of machine learning, natural language processing (NLP) and human analysis to
+provide real-time alerts that can be acted on quickly with playbooks or manually by security operators.
+ Hunting Tools: AES provides various tools for threat hunting such as Threat Hunter which uses AI
+powered analysis of user behaviour to detect threats. It also includes a customisable dashboard that allows
+the user to view and analyse threats in one place.
+##### Integration with third-party products required: Qualys vulnerability management tool (Vulnerability
+Manager)
+The AES product provides integration with Qualys Vulnerability Manager, allowing users to easily visualise
+and manage their vulnerabilities from a single dashboard and take action on any detected threats quickly.
+##### Operational Procedures for Security Incidents Required:
+AES allows the creation of playbooks that can be used to automate the response to security incidents. It also
+provides a comprehensive suite of tools, including threat hunting and alerting, allowing users to easily manage
+security incidents and quickly respond to them.
+##### Integration with Data Sources Required:
+AES provides integration with various data sources such as Azure resources, cloud-based apps, IoT devices,
+third-party SaaS solutions, and on-premises systems (using Logic Apps or other automations services). This
+integration allows users to easily visualise the complete cybersecurity picture and take action quickly.
+##### Recommendation: AES provides all of these requirements, allowing for a comprehensive solution that can
+be fully automated or handled by human operators as needed, with prebuilt playbooks and integrations with
+third-party products such as Qualys Vulnerability Manager.
+##### Security controls required to protect the Azure Sentinel instance:
+The following security controls need to be implemented for AES:
+ Network Security Controls (NSC): This includes securing the network from unauthorised access, using IP
+address restrictions and ensuring that all connections are authenticated. Additionally, it is important to
+protect the data at rest with encryption and ensure that only authorized users have access to the data.
+ User Access Controls (UAC): This includes limiting access for privileged users such as security analysts
+and administrators by requiring multi-factor authentication before granting any privileges or rights within
+the system. Additionally, it is important that these users are monitored closely to ensure they are not
+performing unauthorized actions with their accounts and are only accessing the information required for
+ Identity and Access Management (IAM): This includes securing the identity of all users within the system by
+using a secure authentication mechanism such as MFA, restricting access to data and systems based on user
+role or job title and requiring regular reviews of permissions granted. It is also important that all logins are
+monitored regularly for any suspicious activity which may indicate unauthorised access attempts from
+external sources.  Data Protection: This includes protecting sensitive data stored within AES from unauthorized access by using encryption when storing sensitive information in databases and requiring regular reviews of all policies related to data protection including how it will be used, accessed and shared with third parties etc . Furthermore, all stored data should also be monitored regularly for any suspicious activity which may indicate an attempt at unauthorised access from external sources.
+##### Evaluation:
+The proposed solution requires a comprehensive security strategy to ensure that the SOAR is properly
+secured and protected against potential attacks. This includes using network security controls such as IP
+address restrictions, authentication mechanisms like MFA for privileged users who have access to sensitive data or systems within AES and monitoring logs regularly looking out for any suspicious activity which could indicate an attempted attack on the system from outside sources . Furthermore, it is important that all stored data within this solution is protected with encryption so that if it were ever compromised then no one would be able to read its contents due to the data being scrambled using cryptographic algorithms before storage. Additionally , policies related to data protection should also be regularly reviewed including how it will be used accessed shared with third parties etc .
+##### SIEM Requirements:
+The CISO has stated that they want to use Google Chronicle as their primary tool for logging security-related
+events, but the CIO wants to use Azure Sentinel. Both solutions should provide the same level of visibility and
+monitoring capabilities. This is a decision made by senior management, so it must be respected and followed.
+The below table illustrates each requirement with a brief explanation of why it is required and how each
+requirement can be fulfilled by either Azure Sentinel or Google Chronicle:
+##### Recommendation:
+Given the above requirements for security logging, both Azure Sentinel and Google Chronicle will meet these
+needs. However, Microsoft has a higher level of visibility due to their partnerships with other vendors such as
+Palo Alto Networks and Qualys. Additionally , they offer better integration between products within their suite of services compared to Google which could allow for easier analysis across different sources of data including cloud resources (Azure), SaaS applications (Office 365) etc . Therefore I recommend using Azure Sentinel as our primary tool for security logging due its enhanced visibility capabilities over Google Chronicle despite being slightly more expensive in terms cost per user than this latter solution.
+##### Required security controls:
+The following security controls need to be implemented for the proposed solution: Network Security Controls (NSC): This includes securing the network from unauthorized access, using IP address restrictions and ensuring that all connections are authenticated. Additionally, it is important to protect the data at rest with encryption and ensure that only authorized users have access to the data.
+User Access Controls (UAC): This includes limiting access for privileged users such as security analysts and administrators by requiring multi-factor authentication before granting any privileges or rights within the system. Additionally, it is important that these users are monitored closely to ensure they are not performing unauthorized actions with their accounts and are only accessing the information required for their job roles .
+Identity and Access Management (IAM): This includes securing identity of all users within this solution by using a secure authentication mechanism such as MFA, restricting access to data and systems based on user role or job title , requiring regular reviews of permissions granted for privileged accounts like those used by system administrators etc . Furthermore, it is also important that all logins are monitored regularly looking out for any suspicious activity which may indicate an attempt at unauthorized access from external sources.
+Data Protection: This includes protecting sensitive data stored within this solution from unauthorised access by using encryption when storing sensitive information in databases and requiring regular reviews of all policies related to data protection including how it will be used , accessed shared with third parties etc . Furthermore , all stored data should also be monitored regularly looking out for any suspicious activity which may indicate an attempt at unauthorized access from outside sources.
+
+* Criteria for choosing an image to use in a presentation is it is of good quality, it has been created by someone who knows what they are doing. This can be ascertained by looking at the size and how much compression has occurred and the overall clarity. I will choose images that are 5MB or less in file size. 
+* I will also check if it is a free to use image, such as from the public domain, royalty free stock photos or free to use CC licensed photos. I can find these by using a search engine on Google and/or by typing ‘free stock photo’ into Pexels where there are over 100,000 free images available to download for free with no watermarks added. 
+* If it is not royalty free or public domain then I will look to see if the image is a CC licensed one which allows me to use the image so long as credit and source are given in my presentation. 
+* I will also check that there is no copyright notice on the bottom of the image and this means that it is free for anyone to use, but must be attributed (given credit) to the creator who has given their work away. 
+
+### Justification: 
+I have chosen images from Unsplash, Pixabay and Flickr as they are public domain and free to download for free with no attribution required so long as I don’t alter or crop them in any way. 
+
+### Justification: 
+I have used a CC licensed image from Unsplash which is freely available to use if the source and credit are given to the creator.
+
+1. I have been working at the same company for over 30 years now, but I’m currently looking to move into a new position with more challenges and responsibility.
+2. I’ve recently had some experience of being a manager in the last six months, but my main focus has been on developing skills and gaining practical experience so that one day I can run my own business.
+3. In order to achieve this goal I would be willing to relocate anywhere in the world, or even just move abroad for work if given an opportunity to do so.
+4. It is my dream to travel as much as possible and explore new cultures while living in different countries. This has always been one of my biggest ambitions since childhood but never had enough funds/time off from work until recently when I took on this position at ABC Inc where they allowed me two weeks’ holiday each year plus paid leave during major holidays like Christmas break etc
+5. So far, what really appealed about working here was how friendly everyone is and how open-minded they were towards new ideas/projects that may come up throughout their journey here at ABC Inc., such as improving our website design or even creating a blog for us to share with others who have similar interests like me (which would be great because now I know what kind of content works best).
+6. In addition, there’s also plenty opportunity for growth if someone wants more responsibility than just writing articles about themselves - maybe even becoming an editor! Lastly though this may seem irrelevant but one thing that really caught my attention during my interview was seeing how much passion they put into making their company better every day; from improving their products/services to making sure each employee gets paid on time every week without fail
+7. I am looking for a career as an experienced writer with an understanding of the industry and what makes good content, as well as having excellent English language skills that would allow me to write articles in multiple genres (such as travel, business or lifestyle). This job description seems like it matches up perfectly since ABC Inc appears very open-minded towards new ideas/projects that may come up throughout their journey here at ABC Inc., such as improving our website design or even creating a blog for us to share with others who have similar interests like me (which would be great because now I know what kind of content works best).
+8. In addition, there’s also plenty opportunity for growth if someone wants more responsibility than just writing articles about themselves - maybe even becoming an editor! Lastly though this may seem irrelevant but one thing that really caught my attention during my interview was seeing how much passion they put into making their company better every day; from improving their products/services to making sure each employee gets paid on time every week without fail.
+9. I hope these answers were helpful and if you have any more questions about anything please don’t hesitate to reach out! Thank you for your time :)
+
+**1.** xSOAR is an open-source software platform which has been built by a number of contributors and developed under the leadership of US Department of Homeland Security since 2015, with the help of the national laboratories. It is now used in more than 50 countries worldwide. The main feature of xSOAR is to provide an integrated system that collects information from multiple data sources, analyzes them through intelligent correlation and automation processes, and provides alerts or take actions based on these analyses. The platform also includes a user interface for human analysis and response as well as the ability to integrate with other cyber security solutions, such as SIEM solutions, to enhance threat detection and prevention capabilities. 
+
+**2.** We chose xSOAR because it is an open-source software platform that has been widely adopted by many government agencies, including CISA (the US Cybersecurity & Infrastructure Security Agency) and NSA (National Security Agency). xSOAR's flexibility in customization options makes it suitable for the requirements of our project, as we can tailor the platform to meet specific needs. Additionally, the platform offers a user-friendly interface that allows even non-technical staff to operate and analyze threat data efficiently.
+
+given these criteria, Cortex XSOAR would be the best. Palo Alto is known as one of the top cyber security companies that provide some of the most innovative and secure products.  Their platform is considered cloud-native because it uses a single stack, eliminating the need for multiple integration points across your SOC or NOC teams. It also uses an open architecture that allows organizations to customize their own integrations. The Palo Alto network also provides the ability to use orchestration and automate processes between tools.
+
+[Situation] The [criteria](https://en.wikipedia.org/wiki/Criterion) I want to meet is that a player should not be able to use any kind of violence at all as it is against our core values, and we have never allowed players to do so before.[Obstacles] 1. It is against our core values[Risk Assessment] 2. It's an easy way for people to abuse the system and break the rules
+3. People will not like it as it would prevent them from enjoying a fun game of CS:GO4.[Asking Questions]5. It is possible? 6. Is there any other ways we can go around this?[Options]7. Let people be able to use violence in moderation only but still ban the people who abuse it.8. We should not let players use violence as it does not reflect our core values, and we have never allowed that before
+9. Let us allow the users to use some form of violence to defend themselves, but don’t allow them to harm or kill other players10. Don't even allow any kind of violence at all in CS:GO because it is against our core values and we have not allowed that before.
+
+The Cortex XSOAR security control settings are described in the following table :
+
+<table>
+ <thead>
+  <tr class="header">
+   <th>Control</th>
+   <th>Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr class="odd">
+   <td><p>Restrict access to the Cortex XSOAR</p></td>
+   <td><ul>
+      <li>Configure a VPN connection between SOC and MITRE’s cloud.</li>
+    </ul></td>
+  </tr>
+  <tr class="even">
+   <td><p>Enable HTTPS</p></td>
+   <td><ul>
+      <li>Enable HTTPS on Cortex XSOAR to help protect against inadvertent leakage of information.</li>
+    </ul></td>
+  </tr>
+  <tr class="odd">
+   <td><p>Disable all unnecessary services</p></td>
+   <td><ul>
+      <li>Disable unnecessary Cortex XSOAR services, such as Cortex SIEM.</li>
+    </ul></td>
+  </tr>
+  <tr class="even">
+   <td><p>Enforce a strict password policy</p></td>
+   <td><ul>
+      <li>Implement a strong password policy that requires at least one special character and prevents passwords from being reused within the past year.</li>
+    </ul></td>
+  </tr>
+  <tr class="odd">
+   <td><p>Enable two-factor authentication</p></td>
+   <td><ul>
+      <li>Use the Cortex XSOAR built-in TFA to secure all the Cortex XSOAR administrative accounts.</li>
+    </ul></td>
+  </tr>
+  <tr class="even">
+   <td><p>Enable auditing of API calls</p></td>
+   <td><ul>
+      <li>Enable audit logging for Cortex XSOAR to record API calls.</li>
+    </ul></td>
+  </tr>
+  <tr class="odd">
+   <td><p>Implement role-based access control</p></td>
+   <td><ul>
+      <li>Implement a RBAC to restrict the user’s permissions and the access levels of the Cortex XSOAR APIs.</li>
+    </ul></td>
+  </tr>
+ </tbody>
+</table>

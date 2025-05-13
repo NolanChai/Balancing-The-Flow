@@ -1,0 +1,116 @@
+Solution 1:
+```
+The element of 52 is a circle which means that it has no end (or beginning). If you turn one letter around, then you get another word starting with R -- refrigerate. So this is the solution.
+```
+Solution 2:
+```
+Another solution could be rot13(sbeevrrq gur frpbaq ba vg?); rot13(hfvat gvpx). This riddle is not a valid answer because the element of 52 is not an element that has no end.
+```
+### Feedback:
+
+I have some feedback on your solution for this question. In your solution, you state that you rotate one letter to get another word starting with R — refrigerate. This is incorrect, as the letter "r" does not exist in element 52, so this would be impossible to do. You could use rot13(sbeevrrq gur frpbaq ba vg?); rot13(hfvat gvpx) instead of rot13(sbeevrrq gur frpbaq ba vg?); rot13(hfvat gvpx). This would be the correct solution to this question.
+
+What about a shortened version of "I'll be back"?
+
+### Response:
+
+I think "I'll be right back" is fine, but it sounds a bit odd. I'd be inclined to try something else.
+
+You will want to read about the basics of this in the documentation for your library. This is not a good place for me to teach you how to use that particular library, but I can give you a few pointers based on what you wrote above and then point you in the right direction for more information.
+
+I notice that your variable is called `data` so I assume it's an array or some kind of container class that stores objects. If this is so, you will want to be using something like `foreach()` or a similar function to iterate over each element. You can find lots of examples online for how to do this with various languages and libraries (including the one you are using).
+
+In general though, these kinds of methods don't get called directly from the UI itself; they usually get passed information that it will need to carry out an action or show some kind of status in response.
+
+For instance if your variable holds objects that have an `id` property then you might pass along the id (or some other way of identifying which object you want) to the function and it would look something like this:
+
+\begin{code}
+public static void setItem(int id, MyObject o){...}
+\end{code}
+
+And then in your UI you might do something like this (pseudo-code):
+
+\begin{code}
+int i = 0;
+foreach (MyObject obj in data) {
+     if (i == ID_YOU_WANT){
+           setItem(ID, obj); //pass the object along
+           break;
+      } else {
+           ++i;
+      }
+}
+\end{code}
+
+And this will either change or update your item to do whatever it does. Again I don't know what you are trying to achieve exactly so this is just an example that might give you some ideas on how to proceed.
+
+Again, look for resources online for help with this particular library and have a look at some of the examples they provide (if any) as those can often be the best way to understand the "ins-and-outs" of a programming language or library.
+
+Hope that helps!
+
+This is a good question. The question is why there are so many 'me' in the sentence, and how can we make sure that each one has its own meaning.
+
+### My solution
+
+I don't know if my English is good enough to express myself clearly here, but I'll try anyway. The key point is to understand "听" as a "hearing" verb with its corresponding meaning. Here are the ways of using it in the question:
+
+1. 读书，我都要做。Read books, I have to do them all.
+2. 看电视，我也要做。Look at TV, I also have to do them all.
+3. 买衣服，我必须做。Buy clothes, I have to do it.
+4. 睡觉，我都要做。Sleep, I must do it.
+5. 吃饭，我也要做。Eat meals, I also have to do them all.
+6. 休息，我必须做。Rest, I must do it.
+7. 打扫房子，我都要做。Clean the house, I must do it.
+8. 照顾自己，我都要做。Take care of myself, I have to do them all.
+9. 负责家务，我必须做。Do housework, I must do it.
+10. 打扫户外，我都要做。Clean outdoor, I must do it.
+11. 打扫户内，我也要做。Clean inside the home, I also have to do them all.
+12. 补充食物，我必须做。Supply food for myself, I must do it.
+13. 学习英语，我也要做。Learn English, I also have to do them all.
+14. 听书音乐，我都要做。Listen to the music and books, I have to do it.
+15. 读书，我必须做。Reading books, I must do it.
+16. 看电视，我必须做。Watch TV, I also have to do them all.
+17. 买衣服，我也要做。Buy clothes, I also have to do them all.
+18. 睡觉，我也要做。Sleep, I must also do it.
+19. 吃饭，我必须做。Eat meals, I must also do it.
+20. 休息，我必须做。Rest, I have to do it too.
+21. 打扫房子，我都要做。Clean the house, I have to do it.
+22. 照顾自己，我也要做。Take care of myself, I also have to do them all.
+23. 负责家务，我必须做。Do housework, I must also do it.
+24. 打扫户外，我也要做。Clean outdoor, I must also do it.
+25. 打扫户内，我还有要做。Clean inside the home, there are things that I still have to do.
+26. 补充食物，我也必须做。Supply food for myself, I must also do it.
+27. 学习英语，我还有要做。Learn English, there are things that I still have to do.
+28. 听书音乐，我必须做。Listen to the books and music, I must also do it too.
+29. 读书，我必须做。Reading books, I still have to do them all.
+30. 看电视，我还有要做。Watch TV, there are things that I still have to do.
+31. 买衣服，我也必须做。Buy clothes, I also have to do them all.
+32. 睡觉，我也还有要做。Sleep, there are things that I still have to do.
+33. 吃饭，我必须做。Eat meals, I must also do it.
+34. 休息，我也必须做。Rest, I also have to do them all.
+35. 打扫房子，我都要做。Clean the house, I still have to do it.
+36. 照顾自己，我也有要做。Take care of myself, there are things that I still have to do.
+37. 负责家务，我还有要做。Do housework, I also have to do it.
+38. 打扫户外，我必须做。Clean outdoor, I must also do them all.
+39. 打扫户内，我也有要做。Clean inside the home, there are things that I still have to do.
+40. 补充食物，我必须做。Supply food for myself, I must also do it too.
+41. 学习英语，我也有要做。Learn English, there are things that I still have to do.
+42. 听书音乐，我必须做。Listen to the books and music, there are things that I still have to do it too.
+43. 读书，我必须做。Reading books, I still have to do them all.
+44. 看电视，我还有要做。Watch TV, there are things that I still have to do.
+45. 买衣服，我也必须做。Buy clothes, there are also things I must do it.
+46. 睡觉，我必须做。Sleep, I have to do them all.
+47. 吃饭，我也有要做。Eat meals, there are things that I still have to do it too.
+48. 休息，我必须做。Rest, there are also things I must do them all.
+49. 打扫房子，我也要做。Clean the house, I must also do it too.
+50. 照顾自己，我必须做。Take care of myself, there are things that I still have to do it.
+51. 负责家务，我还有要做。Do housework, there are also things I must do them all.
+52. 打扫户外，我必须做。Clean outdoor, I have to do it too.
+53. 打扫户内，我也有要做。Clean inside the home, there are things that I still have to do it too.
+54. 补充食物，我必须做。Supply food for myself, I also have to do it too.
+55. 学习英语，我也有要做。Learn English, there are also things that I still have to do them all.
+56. 听书音乐，我必须做。Listen to books and music, there are things that I still have to do it too.
+57. 读书，我必顾做。Reading books, I must also do it.
+58. 看电视，我也有要做。Watch TV, there are things that I still have to do them all.
+59. 买衣服，我还是要做。Buy clothes, I am still required to do it too.
+60. 睡觉，我必

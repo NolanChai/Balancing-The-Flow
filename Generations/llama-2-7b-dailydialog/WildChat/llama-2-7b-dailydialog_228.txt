@@ -1,0 +1,12 @@
+Well, I don't know.  But I can tell you how to find out:
+
+```sh
+$ man -l hdparm
+```
+
+```txt
+       -f format
+              Specifies the file system format of the device. The format must be
+              specified in the form used by fdisk(8). See fdisk(8) for a complete list
+              of supported formats.
+```

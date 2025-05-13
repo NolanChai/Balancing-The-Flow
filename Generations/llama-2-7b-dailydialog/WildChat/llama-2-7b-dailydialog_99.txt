@@ -1,0 +1,15 @@
+The formula below should do that for you.
+
+\begin{code}
+=IFERROR(LEFT(A2, FIND(" ",A2, FIND(" ",A2, FIND(" ",A2)+1)+1)-1),"")&" "&RIGHT(A2,LEN(A2)-FIND(" ",A2, FIND(" ",A2, FIND(" ",A2)+1)+1))
+\end{code}
+
+To be able to do this you would need the following:
+
+1. A formula field.
+2. A calculated field.
+3. A calculated formula using the formula field as an input.
+4. In the calculated field the result will be greater than 6.
+5. Use the "If" statement to compare a cell value with the result from the calculated field.
+
+Yes you can use the same approach. If you are not familiar with the Data Validation feature, please read [this](https://support.office.com/en-us/article/Use-data-validation-to-help-protect-your-workbook-3D79BB0F-E6EC-4812-B5A0-0C53B1D1BDAA?ui=en-US&rs=en-US&ad=US) article.

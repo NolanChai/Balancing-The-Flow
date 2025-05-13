@@ -1,0 +1,5 @@
+In the living room : D,B,C,A,E. In bathroom: ABCDE  
+
+### Explanation:
+
+We start from the bottom and work our way up: B is on the bottom; A is above B, E is above A. D and C are at the top. The first box picked up (E) must be placed somewhere in the living room after being removed from its original position (on the bottom). This leaves the remaining four boxes at their original locations: D,B,C,A

@@ -1,0 +1,8 @@
+rewrite to bypass ai detectors:
+The purpose of this lab is to compare two approaches for computing binomial coefficients, namely recursive and iterative methods. We will use different input sizes in this experiment to test both methods and compare their execution time. Additionally, we will use Big O notation to explain the results obtained from our experimental analysis.
+
+The two approaches you compared have different time complexities; the iterative approach has a time complexity of O(n^2), meaning that execution time increases quadratically with the value of n, while the recursive approach has a time complexity of O(2^n), meaning that execution time increases exponentially with the value of n. This difference in time complexity can explain why you observe different results for these two approaches: as the parameter (n) increases, the recursive approach's exponential growth rate becomes a bottleneck and the iterative approach remains relatively efficient for smaller values of n.
+
+To summarize, Task 2.1 compares the iterative approach used in Lab 1 with the recursive approach used in Lab 2. In both approaches, execution time increases quadratically with the value of n (the first parameter). However, in Task 2.2, we observed that for larger values of n (in other words, when the parameter is higher), the iterative approach used in Lab 1 was more efficient than the recursive approach used in Lab 2, while for smaller values of n, the recursive approach may be faster as it can avoid redundant computations through memoization.
+
+I got it. Thank you for your help

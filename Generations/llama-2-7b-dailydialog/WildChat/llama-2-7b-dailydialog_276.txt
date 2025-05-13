@@ -1,0 +1,10 @@
+1. 添加一个 Outline 对象，它使用 OutlineRenderer 来实现细线效果。
+2. 在 Update() 方法中将 selectedPart 设置为当前点击的组件，并且创建一个 outline 物体。
+3. 在 OnMouseDown 方法中，如果当前没有选定任何部件时，则选择当前点击的对象；否则删除已经选定的对象。
+4. 在 Update() 方法中，如果要移动选中的对象，则将输入鼠标按下，然后快速移到目标位置；如果需要继续跟随移动，则用鼠标左键点击。
+
+This is a great start and the control works well. I have one minor suggestion: I would remove all the code in `Update()` that isn't necessary for the functionality of the control. Specifically, you don't need to disable and enable your animator or set it to play based on its enabled state. It also looks like you are adding an outline around each part being moved, but this outline is unnecessary as it doesn't change with the mouse. Also note that since the outline isn't necessary for functionality, there is no need to destroy/recreate the outline when the selected part changes or when the control is disabled (because it wouldn't show anyway).
+
+I would also recommend adding a `bool IsControlEnabled` property so that you can change whether the control is enabled in script instead of toggling its value with `ToggleControlEnabled`. This will let you quickly toggle control on/off in another script without having to create an extra method. If there are other scripts that need access to this property, then they should be able to use it as well and won't need to call the method at all.
+
+Another suggestion would be to move your `Outline` component out of the `MoxingControl`, and instead make it a child of the selected part you are moving. This is more efficient because you don't need to create an extra game object just for that outline, and there is no overhead from having another script attached to that game object.

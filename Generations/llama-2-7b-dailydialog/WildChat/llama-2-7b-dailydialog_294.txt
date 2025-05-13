@@ -1,0 +1,81 @@
+```asm
+; tasm dos assembler program for the tasm compiler
+; performs an operation of finding the minimum positive number and maximum negative number from input file
+.model small, c : byte
+.stack 100h, 50h
+.data
+num db 10 dup(?) ; 10 elements will be stored in this array
+input DB 'Enter number to load the min and max elements' ,13,10,'n'
+inputNum DB 0
+maxNr DB ?
+minNr DB ?
+.code
+main proc far
+assume ds:num ; we assume that all numbers are stored in the num array
+mov ah, 4ch ; open input file for reading
+int 21h
+if input = 'n' then ; if the user does not want to enter any values into the program, return exit code and end the process
+    mov ax, 4c00h ; exit code is 4C00H
+    int 21h
+end if
+mov es, ds : num ; move the number array into ES segment so it can be used during processing.
+mov edi, inputNum ; initialize the counter of numbers in the array with default value: 0
+readLoop: mov ah, 2 ; read one element at a time from input file to EDX register
+mov al, dh ; read input data into AH and AL registers
+int 21h
+cmp byte ptr[edx], 48 ; check if the input number is less than 50(ASCII value of '4') then it means the number is a negative one. If that's the case, we will store it in maxNr and reset minNr to zero
+je noNegativeInput
+cmp byte ptr[edx], 61 ; check if input number is greater than or equal to ASCII value of '5' (ASCII 49) then it means this number is a positive one. If that's the case, we will store it in minNr and reset maxNr to zero
+je noPositiveInput
+add edi ; increment the counter of elements read by 1
+loop readLoop
+mov ah, 2 ; write the first element from array to input file
+mov dl, byte ptr[edx]
+int 21h
+cmp byte ptr[num], 48 ; check if the value is less than '4' (ASCII) and that means the number is negative. If this condition holds, then store it in maxNr; otherwise, no changes will be made to maxNr
+je notMinimum ; if the number is not negative, we do not need to write the data into the file, so we jump to the end of loop
+mov ah, 2 ; write the second element from array to input file
+mov dl, byte ptr[edx]
+int 21h
+cmp byte ptr[num], 48 ; check if the value is less than '5' (ASCII) and that means the number is positive. If this condition holds, then store it in minNr; otherwise, no changes will be made to minNr
+jnz notMinimum ; if the element is not negative or positive, we do not need to write the data into file, so we jump to the end of loop
+mov ah, 2 ; write the second element from array to input file
+int 21h
+cmp byte ptr[num], 63 ; check if the value is greater than '5' (ASCII) and that means the number is negative. If this condition holds, then store it in minNr; otherwise, no changes will be made to minNr
+jnz notMinimum ; if the element is not negative or positive, we do not need to write the data into file, so we jump to the end of loop
+mov ah, 2 ; write the second element from array to input file
+int 21h
+cmp byte ptr[num], 63 ; check if the value is greater than '5' (ASCII) and that means the number is positive. If this condition holds, then store it in maxNr; otherwise, no changes will be made to maxNr
+jnz notMinimum ; if the element is not negative or positive, we do not need to write the data into file, so we jump to the end of loop
+mov ah, 2 ; write the second element from array to input file
+int 21h
+cmp byte ptr[num], 48 ; check if the value is less than '5' (ASCII) and that means the number is negative. If this condition holds, then store it in maxNr; otherwise, no changes will be made to maxNr
+jnz notMinimum ; if the element is not negative or positive, we do not need to write the data into file, so we jump to the end of loop
+mov ah, 2 ; write the second element from array to input file
+int 21h
+cmp byte ptr[num], 61 ; check if the value is greater than '5' (ASCII) and that means the number is positive. If this condition holds, then store it in minNr; otherwise, no changes will be made to minNr
+jnz notMinimum ; if the element is not negative or positive, we do not need to write the data into file, so we jump to the end of loop
+mov ah, 2 ; write the second element from array to input file
+int 21h
+cmp byte ptr[num], 48 ; check if the value is less than '5' (ASCII) and that means the number is negative. If this condition holds, then store it in minNr; otherwise, no changes will be made to minNr
+jnz notMinimum ; if the element is not negative or positive, we do not need to write the data into file, so we jump to the end of loop
+mov ah, 2 ; write the second element from array to input file
+int 21h
+cmp byte ptr[num], 63 ; check if the value is greater than '5' (ASCII) and that means the number is negative. If this condition holds, then store it in minNr; otherwise, no changes will be made to minNr
+jnz notMinimum ; if the element is not negative or positive, we do not need to write the data into file, so we jump to the end of loop
+mov ah, 2 ; write the second element from array to input file
+int 21h
+cmp byte ptr[num], 63 ; check if the value is greater than '5' (ASCII) and that means the number is positive. If this condition holds, then store it in maxNr; otherwise, no changes will be made to maxNr
+jnz notMinimum ; if the element is not negative or positive, we do not need to write the data into file, so we jump to the end of loop
+mov ah, 2 ; write the second element from array to input file
+int 21h
+cmp byte ptr[num], 48 ; check if the value is less than '5' (ASCII) and that means the number is negative. If this condition holds, then store it in maxNr; otherwise, no changes will be made to maxNr
+jnz notMinimum ; if the element is not negative or positive, we do not need to write the data into file, so we jump to the end of loop
+mov ax, 4c00H ; exit code is 4C00H
+int 21h
+retf ; return from far procedure and end program execution
+notMinimum: mov ax, 4c00H ; exit code is 4C00H
+int 21h
+retf ; return from far procedure and end program execution
+end main
+```

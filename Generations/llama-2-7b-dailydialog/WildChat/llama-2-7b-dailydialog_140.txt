@@ -1,0 +1,44 @@
+A
+
+### Explanation:
+This problem tests your ability to understand what is happening when you integrate a function f(x) on a line using double integrals. In polar coordinates, we replace the coordinate  x by r cos t and by r sin t . The double integral in polar coordinates is then , where is the area of the rectangle in the r, plane given by the limits  and . To convert this to a double integral in rectangular coordinates, you need to make two replacements: first, replace  by x, so that x goes from 0 to . Next, replace t by y. Finally, note that the limit of the area of a rectangle as its size goes to zero is . Putting all this together gives us a double integral in rectangular coordinates with limits of integration of and , or where r is a positive constant. The area under the curve of f(x) on [0, L] can then be written as
+
+\[A=\int _{0}^{L}\int _{-\pi /2}^{\pi /2}f(rcos{\theta })rdrd\theta .\]
+
+(c) Never.
+
+### Explanation:
+
+The domain and codomain of the derivative are not equal.  For example, take f:[-3/2,3/2] -> [-1,1].   Now, f(x)=sin(pi x) for -pi<x<=pi, and then it is undefined.  So, the function is continuous, but it is not bounded, so the derivative is undefined in this case.
+
+(a)
+
+\(V=\int \int \int f(x,y,z)\,dx\,dy\,dz\)
+
+and
+
+\(\text{volume }=3\,\text{ dimensional volume} = \,\text{ three }\int \int \int \,f(x,y,z) dx dy dz =\frac 1 3\, \int_{R} f(x,y,z)\,dx d y dz\)
+
+The left-hand side of the equation is in four dimensions and on the right hand side it is in three. The right hand side has one extra dimension (x), but this isn't the same as an extra variable.
+
+### Explanation:
+
+What makes a function positive? 1) Is it true or false that a positive function cannot be negative somewhere inside its domain? 2) Why does it make sense to take the triple integral of a positive function over a region? 3) What would happen if you took the double integral of f(x,y), where x>0 and y>0, but then restricted it to [a,b]x[c,d] for a<x<b, c<y<d. The answer is that you would end up with zero, because the function isn't defined everywhere inside of those two intervals.
+
+(d) . All of the above
+
+### Explanation:
+
+There is no information to narrow down the bounds on z. The bounds on y and x were given in the question, which limits the region that we can integrate over.
+
+If you are lucky enough to know the value of the volume integral, then you can compute the center of mass by just looking at the endpoints. In this case, it is not too hard to find the values of the integrals (with a little effort), and so we can just pick one that makes sense:
+
+$$\int_0^1 xdx = 1/2 \\ \int_0^1 ydy = 1/2\\ \int_0^1 zdz = 1/2$$
+
+Now, plug those values into the expressions for $x$, $y$ and $z$:
+
+$$x= (3/5) \\ y=(3/5)\\ z=(3/5)$$
+
+### Solution:
+
+In general, you don't want to compute integrals without evaluating them. Sometimes you can work around this by looking for the correct symmetry of the integral in question, but if all that fails, then I think it is better to just solve for $x$, $y$ and $z$.

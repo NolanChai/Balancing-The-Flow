@@ -1,0 +1,31 @@
+I have created an angular directive for that. You can just add this to your template file to use it. 
+
+```html
+<ul class="favourite-products">
+    <li ng-repeat="product in products" class="item"  product="product"
+        favourite-products="product.id as id" (click)="toggleFavourite(item)"
+        *ngIf="!favouriteProducts[id]"><div class="favourite-icon" ng-class="{'active': isFavorited(item)}"></div> {{ product }}</li> 
+</ul>
+```
+And then in your component:
+```typescript
+import {Component, OnInit} from '@angular/core';
+@Component({
+    templateUrl: 'app/product-list/product-list.component.html'
+})
+export class ProductListComponent implements OnInit {
+    products: IProduct[]; // Products will be passed here and you can add this in your component template or pass it to the directive by adding *ngFor="let product of products" 
+    favouriteProducts = {};   // This is an empty object that you can use as a dictionary for storing favourite products
+    constructor() { }
+}
+```
+and then you can simply add this code to your component:
+```typescript
+addFavourite(product) {
+        if (this.products.some((p) => p._id === product._id)) {
+            delete this.favouriteProducts[product._id];
+        } else {
+            this.favouriteProducts[product._id] = true;
+        }
+    }
+```

@@ -1,0 +1,7 @@
+local sql = string.format("update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid)
+
+### Explain:
+  Lua函数中的变量绑定在内部，不会影响外部使用.
+
+### Note:
+  sql语句中有两种类型的引号：单引号(‘)和双引号(“)。如果使用了单引号，要注意一定不能把双引号当成单引号来处理，并且单引号在单独引号内部不能出现双引号；而双引号中也不能出现单引号。

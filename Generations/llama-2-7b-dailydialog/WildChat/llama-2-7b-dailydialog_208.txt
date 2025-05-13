@@ -1,0 +1,18 @@
+```python
+prompts = [
+        "A captivating Halo Reach landscape with a Spartan amidst a battlefield,"
+        "Fallen enemies around, smoke and fire in the background"
+    ]
+for prompt in prompts:
+    image_path=None
+    try:
+        while True:
+            result = client.prompt(prompt)
+            image_path = str(result[1])[:-4] + ".jpg"
+            break  # stop looping when it finds an existing file
+    except:
+        pass  # ignore if the prompt is not found
+if not image_path:
+    raise RuntimeError("Failed to find image")
+print(f"The prompt {prompt} was not found, but I did find this: \n{image_path}")
+```

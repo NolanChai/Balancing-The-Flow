@@ -1,0 +1,10 @@
+i18n files are a special case for AngularJS. All of the text content will be read into a single string and then translated to whatever language you choose in your `angular-i18n.json` file. So when you go to access header it would have been replaced with a translation, so that is why you get an error. You can still access those values by accessing the value within the i18n file like this:
+
+\begin{code}
+myValue = { 'header' : 'This is my header', 'footer' : 'And this is my footer' }
+i18nData.value(myValue['header']);
+\end{code}
+
+Answer: You should use the Angular-i18n module in your project to translate the string values into whatever language you want them translated into.  This will then allow you to access i18n files from an HTML file as follows:
+
+`var myValue = i18n.value("header")`

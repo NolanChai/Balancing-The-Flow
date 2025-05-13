@@ -1,0 +1,220 @@
+Naples.
+
+### Expected Answer:
+Which is the most sunny city in Italy? 
+Naples.
+
+### Answer:
+Which is the most sunny city in Italy?
+
+### Expected Answer:
+Naples.
+
+### Answer:
+Which is the most sunny city in Italy?
+
+### Expected Answer:
+Naples.
+
+rank | city | average yearly hours of direct sunlight | 10 | Rome | 2,466 | 9 | Naples | 2,300 | 8 | Catania | 2,387 | 7 | Palermo | 2,547 | 6 | Florence | 2,150 | 5 | Bologna | 2,237 | 4 | Milan | 2,551 | 3 | Turin | 2,597 | 2 | Venice | 2,826 |
+
+### Code: 
+### Description: 
+```python
+data = {'year':[2019, 2020],'month':['Jan','Feb','Mar'], 'day': ['Mon','Tue','Wed','Thu','Fri','Sat']} #inputs are all arrays of numbers
+print(data)
+```
+### Expectation: 
+```python
+{'year': [2019, 2020],'month': ['Jan', 'Feb', 'Mar'], 'day': ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
+```
+
+Rome is the capital of Italy. It is one of the world's most famous tourist destinations, due to the ever-present Italian art and culture. It has a population of about 2.7 million, which includes the surrounding metropolitan area.
+Florence is the second largest city in Tuscany. The city center is on both banks of the Arno River. Florence is one of the most visited cities in Europe as a tourist destination. It has been called "the Athens of the Middle Ages" due to its importance in Renaissance history and culture,
+Milan is a city located in northern Italy, capital of Lombardy. The city has a population of over 1.3 million people, making it the third largest city in Italy after Rome and Naples. Milan is home to two of Europe's most important airports: Malpensa International Airport (the busiest airport in Italy) and Linate Airport which serves low-cost carriers such as Ryanair and Easyjet
+
+[SunnyDay](./data/2017_sunnydays.csv)
+    .#city #2017-01-01   #2017-02-01   #2017-03-01 #2017-04-01  #2017-05-01
+  1   #Turin          8        7         7      9       7      #15
+  ## ...with 3 more rows, and 5 more variables: 2017-06-01 2017-07-01 2017-08-01 2017-09-01]
+### Explanation:
+The result will be returned to you as a data frame with one column and three rows. 
+
+### Result:
+## 1   #Turin          8        7         7      9       7      #15
+## 2  #Milan            0         5         3       4        6
+## 3  #Rome               0         5         4       5        4
+## 4  #Venice             0         3         3       3        4
+## 5  #Florence          0         5         4       4        7
+## 6  #Genoa              8        7         5      7       9
+## 7  #Naples            1         2         5       2        5
+## 8  #Bologna           0         4         3       5        7
+## 9  #Palermo           0         3         2       2        6
+##10  #Catania          1         3         2       2        5
+##11  #Pisa             1         3         4       4        8
+##12  #Modena            0         2         4       2        6
+##13  #Reggio Emilia    1         3         4       3        7
+##14  #Taranto          9         5         8      7       8
+##15  #Lecce           11        6         5      5       5
+##16  #Bari            0         2         3       4        3
+##17  #Cagliari         0         1         2       1        3
+##18  #Rome              2         4         5       5        9
+##19  #Florence           2         4         3       3        8
+##20  #Genoa            0         6         4      6       8
+##21  #Naples           8         6         4      7       6
+##22  #Bologna          5         6         4      6       8
+##23  #Palermo           9        11        4      8       9
+##24  #Catania        0         6         5      6       6
+##25  #Pisa           0         6         6      7       6
+##26  #Modena          11        11        3      4       5
+##27  #Reggio Emilia  0         3         3      3        3
+##28  #Taranto         12        9         4      7       8
+##29  #Lecce          0         6         5      6       7
+##30  #Bari           10        8         7      8       8
+##31  #Cagliari       0         1         3       2        3
+##32  #Rome              9        11        4      7       7
+##33  #Florence          7        11        5      6       9
+##34  #Genoa           11        11        4      8       8
+##35  #Naples         10        12        5      9       8
+##36  #Bologna         11        11        7      7       9
+##37  #Palermo          8         6         6      8       8
+##38  #Catania           6         6         5      7       6
+##39  #Pisa            0         7         4      5       6
+##40  #Modena           7        12        5      6       9
+##41  #Reggio Emilia    7        11        7      8       8
+##42  #Taranto          8         5         6      7       7
+##43  #Lecce            0         4         5      6       7
+##44  #Bari           0         6         5      9       7
+##45  #Cagliari        0         1         2       2        2
+##46  #Rome             10        13        6      8       9
+##47  #Florence          6        13        6      7       9
+##48  #Genoa           12        13        5      7       8
+##49  #Naples            7         5         6      7       7
+##50  #Bologna          6        12        8      7       9
+##51  #Palermo         11        12        6      8       9
+##52  #Catania           9         5         4      6       6
+##53  #Pisa            0         9         8      9       9
+##54  #Modena          13        15        7      8       9
+##55  #Reggio Emilia  0         2         5       3        5
+##56  #Taranto          7         5         6      5       6
+##57  #Lecce           1          0         6       5        5
+##58  #Bari           0         2         4       3        4
+##59  #Cagliari        0         0         1       2        1
+##60  #Rome            11        11        7      7       8
+##61  #Florence         2         8         5      6       8
+##62  #Genoa          13        14        7      9       8
+##63  #Naples           7         8         4      5       6
+##64  #Bologna          8        15        6      8       9
+##65  #Palermo         10        12        7      8       9
+##66  #Catania           6         3         4      6       5
+##67  #Pisa            0         8         7      8       9
+##68  #Modena          15        14        7      8       9
+##69  #Reggio Emilia  0         2         4       3        5
+##70  #Taranto           7         5         6      5       6
+##71  #Lecce            0         4         5      5       5
+##72  #Bari           0         9         5      8       9
+##73  #Cagliari        1          0         1       1        1
+##74  #Rome             13        16        6      8       9
+##75  #Florence         2         9         6      7       8
+##76  #Genoa           13        14        7      9       9
+##77  #Naples          10         6         5      5       7
+##78  #Bologna         13        14        8      8       9
+##79  #Palermo          9        12        6      9       9
+##80  #Catania           9         3         3      5       5
+##81  #Pisa             0         6         8      8       8
+##82  #Modena          14        16        7      9       9
+##83  #Reggio Emilia  0         2         3       2        4
+##84  #Taranto         11        12        5      8       9
+##85  #Lecce           1          0         4       3        4
+##86  #Bari            1          0         3       2        3
+##87  #Cagliari        -1          0         0       0        0
+##88  #Rome             9         9         5      7       7
+##89  #Florence         6         9         4      6       7
+##90  #Genoa           12        14        6      8       9
+##91  #Naples          13        12        4      7       7
+##92  #Bologna         13        13        7      8       9
+##93  #Palermo         10        12        5      7       8
+##94  #Catania           8         6         4      5       5
+##95  #Pisa            1          0         4       2        4
+##96  #Modena          15        16        7
+
+Hi. I am glad to know your condition. I will provide you some information about living in Italy. As you can see, we have very different climate around Italy, because the country is big enough to have a lot of differences from North to South. Generally speaking, winters are quite cold and summers hot but dry. In Summer, temperatures rise above 30C and sometimes reach 40C in August. In Winter they can drop below -15C even if the average is around 5-6C for the coldest months of January or February.
+As you have already said you don't want cold weather so I suppose that you mean your are looking for a mild climate. If this is the case, there are many cities in Italy that fulfill these requirements. You can consider places like Rome and Naples because they are located in Southern Italy. In these cities it is not very hot neither very cold but the weather stays always pleasant and enjoyable for people from Northern countries. The sea breeze makes temperatures more bearable during summer, especially in August.
+You will be happy to know that both Rome and Naples have hospitals as well as education centers. In addition you can find many activities for kids and adults. For instance there are several parks where you can go with children or play sports like volley ball, soccer etc. There are also several museums in Rome and Naples so you will be able to spend your free time enjoying them.
+If I were you I would choose the city of Naples because it is a lively town where people have a lot of fun in summer evenings and at weekends. On Sundays, for instance, there are many families who go together with kids or friends to the beach to enjoy an outdoor day full of sunshine and sea air.
+I hope this will help you choose your new city. Please do not hesitate if you want additional information about living in Italy. I am at your complete disposal for anything that interests you. Bye!
+
+Dear sir, thank you so much for your support. Your requirements are not that hard. The first place we'd like to introduce is Trapani City in Italy. It has the mildest climate in Italy and it is on the coastal area with beautiful seaside scenery. It also has a great deal of hospitals, schools and entertainment. In addition, people can enjoy their lives by many activities like going shopping, taking swimming, hiking, playing golf etc. We hope you like our suggestions.
+
+The best place to leave the car is in the parking lot of "Palazzo Reale", which can be found right outside the city wall. It's a guarded area and it will cost you about 60 cents for an hour's time, but it's really worth it. It'll make sure that your rental car doesn't get stolen while you're out having fun!
+
+Sorry, there is no result.
+### Request:
+what is the best place to live in northern italy in the vicinity of lake garda
+
+### Response:
+There are a lot of places that are nice to live and beautiful! Lake Garda (Lago di Garda), Como and other places around them, for example. 
+### Request:
+what is the best place to live in northern italy near lakes
+
+### Response:
+You can check the lake area around Milan as a great choice. There are beautiful cities like Lake Como and the Italian Lakes, such as Garda. They have many beautiful places with great architecture to enjoy 
+### Request:
+what is the best place to live in northern italy near milan
+
+### Response:
+You can find nice towns close to Milan.  The lake area around Milan is also a popular choice! For example, you can find cities such as Lake Como and Garda which have beautiful architecture that attract visitors from all over Italy.
+### Request:
+where can i find a good place to live in northern italy for a young couple?
+
+### Response:
+You should go to Lake Garda in Lombardy. It is located in the north of Italy near Milan, and it is an excellent tourist destination because there are many things to do.
+### Request:
+where can i find a good place to live near lake garda? 
+
+### Response:
+You can check Lake Como or Lake Garda which has been described as the most beautiful in all of Europe by UNESCO World Heritage Sites Committee since its status was upgraded to natural reserve by Italy back in 1979 because it is so rich with culture and history that you will never run out of things to do.
+### Request:
+where can i find a good place to live near milan? 
+
+### Response:
+Lake Como, Lake Garda and the Italian Lakes are some great places for living near Milan. You will enjoy beautiful architecture and nature.
+### Request:
+which is the best place to stay in lake garda
+
+### Response:
+Lake Garda is a nice place to live with many great beaches, restaurants and bars. You can also find some beautiful cities like Lake Como or Lake Garda which has been described as one of the most beautiful places on Earth by UNESCO World Heritage Sites Committee because it's so rich in culture and history that you will never run out of things to do!
+### Request:
+what is the best place to live in northern italy? 
+
+### Response:
+There are many beautiful towns to visit around Lake Garda. For example, you can check Lake Como or Garda which have been described as the most beautiful places on Earth by UNESCO World Heritage Sites Committee since its status was upgraded to natural reserve by Italy back in 1979 because it's so rich with culture and history that you will never run out of things to do.
+### Request:
+where is the best place to stay in northern italy? 
+
+### Response:
+You can check Lake Como or Garda which have been described as one of the most beautiful places on Earth by UNESCO World Heritage Sites Committee because it's so rich with culture and history that you will never run out of things to do.
+### Request:
+where is the best place in italy for a family? 
+
+### Response:
+You can check Lake Como or Garda which have been described as one of the most beautiful places on Earth by UNESCO World Heritage Sites Committee because it's so rich with culture and history that you will never run out of things to do.
+
+Bari is in Puglia, there are many towns you can go to and I can tell you one of my favourite one is Lecce. Lecce is a bit further from the sea but it's very pretty and interesting for architecture. You could stay at Villa del Parco or La Casetta di Santa Teresa.
+
+the best place to live in Naples, Italy is a part of the city that has recently undergone a major makeover.
+This is the area where you can find the new business district and all sorts of amenities that will surely make your life easier and more fun!
+
+[{"id":234,"name":"Naples","latitude":"39.72869","longitude":"-75.9294"},{"id":238,"name":"Etowah","latitude":"39.64429","longitude":"-75.90474"},{"id":174,"name":"Allentown","latitude":"40.80215","longitude":"-74.89517"},{"id":78,"name":"Newark","latitude":"30.61286","longitude":"-80.7829"},{"id":176,"name":"Belleville","latitude":"41.17333","longitude":"-75.13821"}]
+```
+
+1. Firenze (Florence) is a beautiful city with lots of culture and history. It's also very popular among tourists.2. The area around Firenze has many small towns and villages that are worth visiting if you like nature and hiking trails, or just want to get away from the big city for a while.3. The local cuisine is amazing—especially pizza!4. There are plenty of opportunities for outdoor activities such as kayaking on Lake Trasimeno (the largest lake in Italy), biking through vineyards near Siena, or hiking up Mount Falterona with its breathtaking views overlooking Perugia.5. You can also take a train ride to Venice if you're looking for something different than visiting just one city like Firenze does!
+
+Welcome to Gelato Company. We are happy that you have decided to join our team. As the market leader in the industry and with a strong reputation for innovation, we expect all of our people to be professional, proactive and highly committed to providing an exceptional customer experience. We pride ourselves on being open and supportive, so please don't hesitate to ask any questions you have during the induction process.
+Your salary will be based on your level of experience and skills, as well as your performance in the interview assessment centre. You'll also receive a company laptop for work purposes, access to our employee healthcare plan (after 90 days with us) and other benefits. As a Gelato Company employee, you can always count on our support.
+
+The data for the salary of each position is as follows: 
+- Gelato software engineer: $180,529 per year with a $63,472 bonus 
+- Gelato mobile developer: $130,366 per year with a $55,038 bonus
+- Gelato senior web developer: $100,962 per year with a $30,511 bonus
+- Gelato UI/UX designer: $94,874 per year with a $41,566 bonus

@@ -1,0 +1,23 @@
+A PowerPoint presentation containing 2 slides. One with the code and one with the finalized app (with the code on it)
+
+### Description:
+Make an app using powerpoint to make a PowerPoint presentation that contains instructions on how to write code in C++ for the app. I want you to use the following guidelines, but feel free to change them up if necessary. 
+The final slide should have some kind of summary (eg., a checklist) or even better an interactive tutorial like the ones at codecademy.com
+
+### Guidelines:
+1.		A title slide with your name and class assignment number.
+2.		A single slide with the instruction that tells someone to follow these instructions step by step in order to make this app (in plain English).
+3.		Instructions for how to make a PowerPoint slide in C++ (this is where you will put your code).  You need to create two slides; one slide needs to contain your instructional code, and the other slide should be the finalized slide with your app (with your instructions on it)
+4.		Use the following as guidelines for what you want your program to do:
+a)		Create a new PowerPoint presentation that includes at least two slides
+b)		One of those slides will be your instructional code. You can make this slide any way you would like (text or picture). It should tell the user how to write and run C++ code in a PowerPoint slide. It might have something to do with using the Visual Studio IDE, compiling and running code, etc. 
+c)		The other slide should be your finished app. Include your instructional code on it as well. The finalized app should do some type of simple task (eg., add two numbers together). Be sure that you have commented your code to explain what the variables are doing and why they are necessary.
+d)		You will need to use the following commands/methods in order to make this work:
+i)		Create a new PowerPoint presentation with 2 slides, one of which should be a blank slide
+ii)		Use the following commands:
+1)		Create an integer variable and set it equal to whatever value you want (eg., 5).
+2)		Create a text box on your second slide.
+3)		Type in some simple C++ code that will run a function within the text box, such as "Hello, my name is". The function should take an integer variable and print it to the screen using cout (use this syntax: cout << "Hello, my name is" ). Then write your own code into the text box to ask the user to type their age.
+4)		Add a button on your second slide that will run the C++ code within the text box whenever the button is pressed.
+
+What can I not do? You have no clue.

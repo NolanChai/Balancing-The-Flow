@@ -1,0 +1,25 @@
+The license key will be sent to your email after purchasing successfully. You can enter it at the "Payment" page to check your membership period and whether you are a registered member or not. If you are, your payment will be renewed automatically every month until you unsubscribe. If you are not, please click the button below to activate the account
+
+```json
+{
+    "text": "This is ok."
+}
+```
+
+```python
+@app.post('/license-renewal')
+def renew_license():
+    """Renew License."""
+    
+    # Validate form and gather data
+    license = request.form.get('License', 'None').lower()
+    membership_period = request.form.get('MembershipPeriod', '')
+
+    # Process renewal based on selected period
+    if not membership_period:
+        return jsonify(error='Not valid period of membership.')
+    elif membership_period == 'annual':
+        return renew_annual_license()
+    else:
+        return jsonify(error="Renewal must be done on a monthly or annual basis.")
+```

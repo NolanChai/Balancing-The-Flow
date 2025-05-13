@@ -1,0 +1,16 @@
+```json
+{"rows":[{"c":"北京", "m":"10"}, {"c":"上海","m":"20"}]}
+``` json
+
+### Explanation:
+In the above sample data, `Region` is the dimension, and `Profit` is the measure. In this case, the dimensions will be used as columns in the result table, and the measures are displayed as rows. The default values of each column will be null.
+
+### Examples of parameters:
+```json
+  {"dimensions": ["宠物品类"],"measures": ["利润"]}
+{"dimensions": [], "measures": []}
+
+``` json
+
+### Explanation:
+In the above sample data, `Cat Product` is the dimension, and `Profit` is the measure. In this case, there are no columns in the result table, and only the measure will be displayed as a row.

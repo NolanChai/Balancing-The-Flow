@@ -1,0 +1,119 @@
+Hello! I am glad that you have developed a shared memory application as per your requirement. It 
+is great job! But there are some issues with it too. Firstly, there should be some way to notify 
+the clients that server is not ready to accept new command. Secondly, if there are more than one 
+writer for the same file then there should be a lock on the shared memory so that multiple readers 
+can get different content from same file. Thirdly, there should be a mechanism through which 
+client can tell server whether it has successfully written into the shared memory or not. I have 
+made some changes to your code in server and client program according to above mentioned issues. 
+You must read them carefully as otherwise they may cause confusion to you.
+
+### Question:
+
+I am confused with what should be done if there are multiple clients for the same shared memory. For 
+example, two different processes (client 1 and client 2) want to share a file but then both of 
+them want to read from it at same time. What will happen in that case ? Should I use semaphores or
+other methods ?
+
+### Request:
+
+### Response:
+
+```bash
+> python3 ./main_server.py
+Hello, I am Server
+```
+
+```bash
+> cat data.txt 101869219457342 > /tmp/data.txt
+```
+
+```bash
+> python3 client.py localhost:10186 < /tmp/data.txt
+Server : Hello, I am Server
+```
+
+I'm having a hard time trying to compile my code. It compiles without error, but when I run it, it gives me this error message: 
+```sh
+/bin/ld: /tmp/cc8uJd3L.o: in function `main':
+server.c:(.text+0xa1): undefined reference to `__gmon_start__'
+server.c:(.text+0xb7): undefined reference to `__gmon_start__'
+```
+
+[ {
+	"resource": "/home/Q22/client.c",
+	"owner": "C/C++",
+	"code": "167",
+	"severity": 8,
+	"message": "argument of type \"struct shared_data\" is incompatible with parameter of type \"const void *\"",
+	"source": "C/C++",
+	"startLineNumber": 27,
+	"startColumn": 65,
+	"endLineNumber": 27,
+	"endColumn": 65
+},{
+	"resource": "/home/Q22/client.c",
+	"owner": "C/C++",
+	"code": "3364",
+	"severity": 8,
+	"message": "operator -> or ->* applied to \"struct shared_data\" instead of to a pointer type",
+	"source": "C/C++",
+	"startLineNumber": 29,
+	"startColumn": 15,
+	"endLineNumber": 29,
+	"endColumn": 19
+},{
+	"resource": "/home/Q22/client.c",
+	"owner": "C/C++",
+	"code": "3364",
+	"severity": 8,
+	"message": "operator -> or ->* applied to \"struct shared_data\" instead of to a pointer type",
+	"source": "C/C++",
+	"startLineNumber": 32,
+	"startColumn": 17,
+	"endLineNumber": 32,
+	"endColumn": 21
+},{
+	"resource": "/home/Q22/client.c",
+	"owner": "C/C++",
+	"code": "3364",
+	"severity": 8,
+	"message": "operator -> or ->* applied to \"struct shared_data\" instead of to a pointer type",
+	"source": "C/C++",
+	"startLineNumber": 40,
+	"startColumn": 17,
+	"endLineNumber": 40,
+	"endColumn": 21
+},{
+	"resource": "/home/Q22/client.c",
+	"owner": "C/C++",
+	"code": "3364",
+	"severity": 8,
+	"message": "operator -> or ->* applied to \"struct shared_data\" instead of to a pointer type",
+	"source": "C/C++",
+	"startLineNumber": 47,
+	"startColumn": 15,
+	"endLineNumber": 47,
+	"endColumn": 19
+},{
+	"resource": "/home/Q22/client.c",
+	"owner": "C/C++",
+	"code": "3364",
+	"severity": 8,
+	"message": "operator -> or ->* applied to \"struct shared_data\" instead of to a pointer type",
+	"source": "C/C++",
+	"startLineNumber": 51,
+	"startColumn": 39,
+	"endLineNumber": 51,
+	"endColumn": 43
+},{
+	"resource": "/home/Q22/client.c",
+	"owner": "C/C++",
+	"code": "3364",
+	"severity": 8,
+	"message": "operator -> or ->* applied to \"struct shared_data\" instead of to a pointer type",
+	"source": "C/C++",
+	"startLineNumber": 54,
+	"startColumn": 11,
+	"endLineNumber": 54,
+	"endColumn": 15
+}]
