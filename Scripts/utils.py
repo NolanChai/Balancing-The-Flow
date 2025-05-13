@@ -207,6 +207,7 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
         except ValueError:
             # if prompt is empty, don't generate or count towards generation count
             # only increment to next source
+            print(f"\nEmpty prompt, skipping source {i}")
             i += 1
             continue
         all_generations = []
@@ -233,7 +234,7 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                             continue
                         else:
                             # generation = f"[Warning: Short generation] {generation}" 
-                            print("\nShort generation")
+                            print("\nWARNING: Short generation")
                             error_count += 1
                     
                     all_generations.append(generation.strip())
@@ -434,6 +435,8 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, model_name, num_file
             if text.strip():
                 all_texts.append(text)
                 file_paths_to_use.append(filepath)
+            else:
+                raise ValueError("Empty text")
         except Exception as e:
             print(f"Error reading file {filepath.name}: {e}")
     
