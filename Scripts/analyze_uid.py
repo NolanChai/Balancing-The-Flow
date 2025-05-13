@@ -53,7 +53,7 @@ def load_surprisal_files(directory, regenerate=False):
     data = []
     filenames = []
     
-    print(f"Loading {len(csv_files)} surprisal files...")
+    print(f"Loading {len(csv_files)} surprisal files from {directory}...")
     for file in tqdm(csv_files):
         try:
             df = pd.read_csv(file)

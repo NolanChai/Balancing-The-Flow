@@ -176,16 +176,21 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
     retry_count = 0
     skip_count = 0
     error_count = 0
-
-    for i in range(num_articles):
+    i = 0
+    
+    while generated_count < num_articles:
         # output paths
-        generation_output_path = model_output_path / f"{model_name}_{i}.txt"
-        source_output_path = human_output_path / f"human_{i}.txt"
+        generation_output_path = model_output_path / f"{model_name}_{generated_count}.txt"
+        source_output_path = human_output_path / f"human_{generated_count}.txt"
 
         # skip if exists
         if not regenerate and generation_output_path.exists():
             pbar.update(1)
             skip_count += 1
+            # both generation count and dataset index incremented
+            # move to next source, but generation also exists so +1 to generated count
+            generated_count += 1
+            i += 1
             continue
                         
         # write source article if needed
@@ -194,10 +199,16 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                 outfile.write(get_text(dataset=dataset_name, item=shuffled_data[i]))
 
         item = shuffled_data[i]
-        prompts = get_prompt(
-                        dataset=dataset_name, 
-                        item=item
-                    )
+        try:
+            prompts = get_prompt(
+                            dataset=dataset_name, 
+                            item=item
+                        )
+        except ValueError:
+            # if prompt is empty, don't generate or count towards generation count
+            # only increment to next source
+            i += 1
+            continue
         all_generations = []
         for prompt in prompts:
             for retry in range(max_retries):
@@ -222,15 +233,11 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                             continue
                         else:
                             # generation = f"[Warning: Short generation] {generation}" 
-                            print("Short generation")
+                            print("\nShort generation")
                             error_count += 1
                     
                     all_generations.append(generation.strip())
-                    generated_count += 1
                     break  # success!
-                
-                except NotImplementedError as e:
-                    raise e
                 except Exception as e:
                     error_msg = str(e)
                     if retry < max_retries - 1:
@@ -238,12 +245,12 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                         time.sleep(1)
                     else:
                         error_count += 1
-                        print(f"\nError processing text {i} after {max_retries} attempts: {error_msg[:100]}...", file=sys.stderr)
+                        print(f"\nError processing text {i} after {max_retries} attempts: {error_msg[:50]}...\n(Check {generation_output_path} for full error message)", file=sys.stderr)
                         
                         # Append error placeholder
-                        all_generations.append(f"[ERROR] Generation failed after {max_retries} attempts: {error_msg[:100]}...")
+                        all_generations.append(f"[ERROR] Generation failed after {max_retries} attempts: {error_msg}...")
                         break
-
+                    
         # AFTER generating all completions:
         # Concatenate generations with newlines
         final_output = "\n\n".join(all_generations)
@@ -256,7 +263,9 @@ def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
         
         if i % 50 == 0 and i > 0:
             pbar.set_description(f"Gen: {generated_count}, Skip: {skip_count}, Retry: {retry_count}, Err: {error_count}")
-    
+        # increment generation count and dataset index
+        generated_count += 1
+        i += 1
     pbar.close()
     
     print(f"Generation complete: {generated_count} new, {skip_count} skipped, {error_count} errors, {retry_count} retries")
@@ -309,6 +318,8 @@ def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500, turn=0):
                 prompts.append(turn['content'])
     else:
         raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
+    if len(prompts) == 0:
+        raise ValueError(f"No valid prompts found.")
     return prompts
     
 def generate(client, prompt, temperature, model, max_tokens=2048, top_p=1.0, system_prompt=None):
