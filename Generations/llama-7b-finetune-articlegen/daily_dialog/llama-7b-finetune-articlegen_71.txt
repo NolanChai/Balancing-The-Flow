@@ -1,0 +1,16 @@
+```c++
+void waiter_handle_order(char * order) {
+    char * next_order = NULL;
+    
+    // First create the order from the string input.
+    next_order = strtok (order, ",");
+    while (next_order != NULL) {
+        printf ("%s .", next_order);
+        if ((strcmp(next_order,"shrimp cocktail") == 0) || 
+            (strcmp(next_order,"steak") == 0))
+            waiter_handle_order (next_order);
+        
+        next_order = strtok (NULL, ",");
+    }
+}
+```

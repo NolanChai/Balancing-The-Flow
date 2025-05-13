@@ -1,0 +1,15 @@
+" It is not your fault . The problem was my mistake . When you called me , I thought we were going to meet in my room . And that is why I went there instead of the theater . I am so sorry about this ! "
+
+```python
+def dialog_answer(line):
+    if line == 'Hi, Gary, what happened?':
+        return ['I thought we were supposed to meet here.']
+    else:
+        return []
+```
+
+### Test:
+```bash
+$ python dialog.py -i dialog.txt --input_file=dialog-answering.txt \
+                     --output_file=dialog-answer.txt
+```

@@ -1,0 +1,7 @@
+* Cleaning *
+```
+The following characters are included: \t, \b, and \r (and \n, which we will not use). 
+There is a backslash in the middle of this string.
+I have to escape that by writing it twice, as in \\. The program now thinks I'm trying 
+to write a command for you.
+```

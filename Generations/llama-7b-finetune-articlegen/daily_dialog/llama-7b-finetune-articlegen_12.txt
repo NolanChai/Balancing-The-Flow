@@ -1,0 +1,11 @@
+```python 
+@bot.message_handler(Command('start'))
+def start(message):
+    start = message.text.lower()
+    if not 'help'.startswith(start.split()) and len(start) > 2 and (not start.startswith("hi")):
+        return bot.reply_to_message(message, "Hi. I'm a conversational chatbot .  How can I help you ?")
+    if 'help'.startswith(start):
+        return bot.reply_to_message(message, """"@bot.command("start")""")
+    if start == "hi":
+        return bot.reply_to_message(message, "Hi . My name is a conversational chatbot .  How can I help you ?")
+```

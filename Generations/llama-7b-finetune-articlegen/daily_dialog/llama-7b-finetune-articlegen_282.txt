@@ -1,0 +1,85 @@
+" I'd like to exchange 20,000 Euros . "
+
+" Allright ! That amount is no problem for us , so could you please show me your passport and ID card ? "
+
+" Of course . Here they are . "
+
+" Thanks . Let me check that you are right . "
+
+### Response:
+" Just a second . "
+
+" Could I have a receipt ? "
+
+" Sure ! We always provide for our customers . "
+
+" Thank you . "
+
+Help me write the next turn in this dialog with no explanation or format changes. 
+
+" Thank you , please . "
+
+" What's your name , sir ? "
+
+" It's Mark . "
+
+" We appreciate your business , sir . The total is 20,457 RIB . May I ask how you will like to pay for this exchange ? "
+
+This dialog is designed to exchange the currency of an existing banknote. The customer would have already identified him or herself by providing a name, telephone number, and possibly some other identifying information like ID card number and passport details. There are many variants to the above dialog but they all follow the same basic flow: 
+
+1) Asking for the currency that is being exchanged.
+2) Asking how much of it the customer wants in total. 
+3) Asking which bills/coins to give back and which ones are wanted. 
+4) Giving back the requested notes, signing them over, receiving change (if any), and thanking the customer for their business.
+5) Asking if there's anything else that can be done for the customer at this time.
+
+> The next dialogue should be written in the following format. (The name of the bank and address are fictitious.)<br />
+> <br />
+> Please insert the new dialogue here using the same style as below.<br />
+> <br />
+> The next turn should read as follows: "How much do you like to change?"<br />
+> <br />
+> To help us in our evaluation, please copy and paste your response into this thread. Please add an appropriate title before copying the code into this thread. If you have trouble pasting in the new dialogue, use the following button:  <img src="https://api.stackexchange.com/2.1/questions/tools/paste.png" width="250"> <br />
+> <br />
+> After we receive your response, we will post a comment here to notify you that it has been received and evaluated.<br />
+> <br />
+> We are looking forward to your response!<br />
+> <br />
+> Thank you for participating in our community.<br />
+> <br />
+> Your Language Logistical Support Team<br />
+> <br />
+> ----<br />
+> <br />
+> Please enter your name and email address below to receive a reply:<br />
+> <br />
+> <input type="text" id="user-name" placeholder="Your Name"> <br />
+> <input type="email" id="user-email" placeholder="Email">
+
+Help me write the next turn in this dialog with no explanation or format changes.
+
+" Next , please . "
+
+" Could I purchase Euro with RIB here ? I have to stay here for months . "
+
+" Yes , the rate for cash purchases is listed on the electronica screen , so you have seen the rate of exchange . "
+
+" Yes , I have known of it . "
+
+" How much do you like to exchange ? "
+
+" 20,000 RIB . "
+
+" In what denominations ? "
+
+" It doesn't matter , but leave me some small changes , that will be convenient in daily life . "
+
+" Riht , I will exchang e for you now . Please sign the exc hang e form giving the name and telep ho ne . "
+
+" Well , could you change them too ? The dollars , I want to change them into Swiss franc s . "
+
+" OK , wait for a moment . Well , I am sorry , but we are not authorized to exchang coin s because it is low and we do not have enough foreign coin s . In this case , you'd better change 2,000 $ to Swiss francs . "
+
+" It doesn't matter . "
+
+" Please sign the memo on the bottom and keep your money and memo . "

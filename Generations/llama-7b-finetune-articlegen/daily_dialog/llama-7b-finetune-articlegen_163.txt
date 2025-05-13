@@ -1,0 +1,7 @@
+```javascript
+const helper = "There's plenty left. Would you like another helping?";
+const response = "I'd like to have some more. It's really good.";
+const dialogue = helper + "\n" + response; 
+console.log(dialogue);
+```
+### Explanation:

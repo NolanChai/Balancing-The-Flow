@@ -1,0 +1,38 @@
+```
+$ /home/user/travelogue.py -i dialog.txt -o dialog_19560725_to.txt
+
+Good morning, sir. May I see your passport?
+Yes, of course. Here it is.
+Thank you. Are all these yours?
+No, some of them are my friend's. Do you want her passport, too?
+Yes, please. Do you have any carry-on items?
+```
+
+```python
+passenger_data = 'Good morning , sir . May I see your passport ?\nYes , of course . Here it is .\nThank you . Are all these yours ?\nNo , some of them are my friend's . Do you want her passport , too?\nDo you want me to put it on the belt , too?'
+```
+
+Help me write the next turn in this dialog with no explanation or format changes. 
+
+"Good morning , sir . May I see your passport please? Yes of course here it is Thank you, are all these yours? No some of them are my friend's Do you want her passport too? Yes please do you have any carry-on items? Yes yes, would you put it on the belt as well. Just a moment. It's just clothes and toiletries . OK do you have anything to declare? No I don't."
+
+Good morning, sir. May I see your passport?
+Yes, of course. Here it is.
+Thank you. Are all these yours?
+No, some of them are my friend's. Do you want her passport, too?
+Yes, please. Do you have any carry-on items?
+Do you want me to put it on the belt, too?
+Yes, just a moment. It is just some clothes and toiletries.
+OK. Would you please open this big suitcase?
+Thank you for your patience. Is there anything more I can help you with?
+I think there is nothing.
+Any fresh food, live plants, or animals?
+
+- You're welcome. (It's my first time traveling by plane.)
+  - Please make sure not to open it in front of me, though. I have a fear of flying and am afraid of losing my luggage. 😱
+    - I understand. Let's put your passports on the belt . Would you please wait here for a while ? There is still some time before our flight, so we can go out of the airport and get some breakfast if you want to . What do you think about it? 😊
+      - Thank you . It would be nice to try something new. Let's go outside, then . 😃
+    - Here is your luggage tag . Please fill in the information on this form and attach it to the suitcase with a string . Have fun on your trip! 😉
+      - Thank you very much . I will do that after I finish my meal. It looks so delicious . 😋
+    - You're welcome . Please make sure not to open it in front of me, though. I have a fear of flying and am afraid of losing my luggage. 😱
+      - I understand. Let's put your passports on the belt . Would you please wait here for a while ? There is still some time before our flight, so we can go out of the airport and get some breakfast if you want to . What do you think about it? 😊

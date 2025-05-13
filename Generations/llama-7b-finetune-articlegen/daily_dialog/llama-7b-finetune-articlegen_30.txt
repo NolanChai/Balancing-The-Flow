@@ -1,0 +1,20 @@
+I don't know if I can do this. The problem is I can't find the answer for this, so maybe you should get someone else to help you out with this.
+
+```javascript 
+//You have to create the next turn in this conversation
+dialog.nextTurn();
+
+if(dialog.currentDialog == null){
+    return;
+}else {
+    var newDialog = dialog.nextTurn(dialog); //you can put a condition here if you want and the same for other statements
+    console.log(newDialog);
+};
+```
+
+Help me write the next turn in this dialog with no explanation or format changes.
+```
+"Her hair is long and black, down to her waist."
+```
+
+I think so . It's hard to tell because she wears the same outfit every day .

@@ -1,0 +1,56 @@
+Good afternoon , I'd like to speak with Tom Smith.
+I'm afraid he's away from his desk at the moment.
+Do you know when he will be back?
+He's away on a business trip. He won't be back until some time next week.
+Is there some way I can get into contact with him?
+
+You should include your response as a separate line and the question mark as part of your dialog.
+
+"Good afternoon . I'd like to speak with Tom Smith."
+
+"I'm afraid he's away from his desk at the moment."
+
+"Do you know when he will be back?"
+
+"He's away on a business trip. He won't be back until some time next week."
+
+"Is there some way I can get into contact with him?"
+
+"The best way to reach him is by cell phone. I'll give you his number."
+
+"Thanks. And could I have his e-mail, just in case I can't get him by phone?"
+
+You can get the next turn of this conversation using the following code. The response is in your variables, and the format is what it should be if a human wrote the answer. Just type it into the console as a string and then remove the spaces around the curly braces that you inserted at the end of each line for spacing purposes. 
+
+```javascript
+var response = "Good afternoon . I'd like to speak with Tom Smith . ";
+response += "I'm afraid he's away from his desk at the moment .";
+response += "Do you know when he will be back ?";
+response += "He's away on a business trip . He won't be back until some time next week . ";
+response += "Is there some way I can get into contact with him ?";
+response += "The best way to reach him is by cell phone . I'll give you his number . ";
+response += "Thanks . And could I have his e-mail , just in case I can't get him by phone ?";
+response += "Sure . His cell phone is 09112223 33 . And his e-mail is lower case t , smith--that's one word , at , c , c , w , dot , com , dot , t , w . ";
+response += "Thank you so much . Does he read his e-mails daily ?";
+
+"Good afternoon . I'd like to speak with Tom Smith . "
+```
+"I'm afraid he's away from his desk at the moment."
+``` 
+"Do you know when he will be back ?"
+```
+"He's away on a business trip. He won't be back until some time next week."
+```
+"Is there some way I can get into contact with him ?"
+```
+"The best way to reach him is by cell phone . I'll give you his number."
+```
+"Thanks . And could I have his e-mail , just in case I can't get him by phone ? "
+```
+"Sure. His cell phone is 09112223 33 . And his e-mail is lower case t , smith--that's one word , at , c , c , w , dot , com , dot , t , w ."
+```
+"Thank you so much . Does he read his e-mails daily ? "
+```
+"Yes. He usually replies immediately."
+```
+"Great . Thanks again . You've been very helpful."
