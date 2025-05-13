@@ -1,0 +1,14 @@
+Model: llama-7b-finetune-articlegen
+Generated: 300 new examples
+Skipped: 0 existing examples
+Errors: 0 failed generations
+Retries: 2 retried generations
+Temperature: 0.9
+Top-p: 1.0
+System prompt: Provided only the following article title and first sentence, complete the rest of the article from this moment onwards:
+Max tokens: 2048
+Generation time: 5920.94 seconds
+Surprisal calculation time: 306.87 seconds
+Average surprisal: 3.1541
+Total runtime: 6227.82 seconds
+Date: 2025-05-13 03:10:38
