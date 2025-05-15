@@ -1,0 +1,537 @@
+=== Model Comparison for Domain ===
+
+== Model: llama-2-7b-32k-instruct@q8_0 ==
+Number of texts: 299
+
+mean_surprisal:
+  Mean:     3.1786
+  Median:   3.3587
+  StdDev:   0.9568
+  Skewness: -0.3768
+  Kurtosis: 1.1331
+  Distribution: Unimodal distribution (kurtosis: 1.13, skewness: -0.38)
+
+uid_variance:
+  Mean:     10.9281
+  Median:   10.4481
+  StdDev:   2.9198
+  Skewness: 1.1882
+  Kurtosis: 5.1086
+  Distribution: Bimodal distribution detected with peaks at 2.06 and 4.24. Skewness: 1.19, Kurtosis: 5.11
+
+uid_pairwise:
+  Mean:     19.4556
+  Median:   18.7383
+  StdDev:   6.5330
+  Skewness: 0.7697
+  Kurtosis: 3.2515
+  Distribution: Bimodal distribution detected with peaks at 2.74 and 4.63. Skewness: 0.77, Kurtosis: 3.25
+
+vocab_size:
+  Mean:     286.7659
+  Median:   310.0000
+  StdDev:   109.1457
+  Skewness: -0.8000
+  Kurtosis: -0.3661
+
+sentence_length:
+  Mean:     17.0104
+  Median:   16.2788
+  StdDev:   5.4534
+  Skewness: 1.8061
+  Kurtosis: 9.5935
+  Distribution: Unimodal distribution (kurtosis: 187.32, skewness: 12.43)
+
+
+== Model: llama-2-7b-chat@q8_0 ==
+Number of texts: 300
+
+mean_surprisal:
+  Mean:     4.0111
+  Median:   3.9326
+  StdDev:   0.6886
+  Skewness: 1.2502
+  Kurtosis: 7.3248
+  Distribution: Bimodal distribution detected with peaks at 3.88 and 8.36. Skewness: 1.25, Kurtosis: 7.32
+
+uid_variance:
+  Mean:     12.4432
+  Median:   11.6496
+  StdDev:   3.6855
+  Skewness: 3.2791
+  Kurtosis: 18.1439
+  Distribution: Unimodal distribution (kurtosis: 18.14, skewness: 3.28)
+
+uid_pairwise:
+  Mean:     24.4237
+  Median:   23.4776
+  StdDev:   5.8095
+  Skewness: 0.8799
+  Kurtosis: 1.1078
+  Distribution: Bimodal distribution detected with peaks at 10.48 and 13.48. Skewness: 3.46, Kurtosis: 22.61
+
+vocab_size:
+  Mean:     161.2833
+  Median:   160.5000
+  StdDev:   68.8702
+  Skewness: 0.4129
+  Kurtosis: -0.0135
+
+sentence_length:
+  Mean:     15.4648
+  Median:   14.5333
+  StdDev:   5.5366
+  Skewness: 1.3559
+  Kurtosis: 3.5752
+  Distribution: Unimodal distribution (kurtosis: 3.58, skewness: 1.36)
+
+
+== Model: llama-2-7b@q8_0 ==
+Number of texts: 300
+
+mean_surprisal:
+  Mean:     4.0532
+  Median:   4.0268
+  StdDev:   0.7460
+  Skewness: -0.6300
+  Kurtosis: 10.0894
+  Distribution: Unimodal distribution (kurtosis: 10.09, skewness: -0.63)
+
+uid_variance:
+  Mean:     11.2822
+  Median:   10.3503
+  StdDev:   3.4221
+  Skewness: 2.3513
+  Kurtosis: 8.7377
+  Distribution: Bimodal distribution detected with peaks at 3.02 and 5.14. Skewness: 2.35, Kurtosis: 8.74
+
+uid_pairwise:
+  Mean:     21.5296
+  Median:   20.0755
+  StdDev:   6.2060
+  Skewness: 1.2731
+  Kurtosis: 3.8580
+  Distribution: Bimodal distribution detected with peaks at 1.50 and 6.11. Skewness: 1.96, Kurtosis: 7.01
+
+vocab_size:
+  Mean:     262.2400
+  Median:   298.0000
+  StdDev:   123.6334
+  Skewness: -0.3180
+  Kurtosis: -1.2960
+
+sentence_length:
+  Mean:     18.2058
+  Median:   17.3667
+  StdDev:   6.2916
+  Skewness: 0.4098
+  Kurtosis: 0.1676
+  Distribution: Bimodal distribution detected with peaks at 1.35 and 4.69. Skewness: 0.41, Kurtosis: 0.17
+
+
+== Model: llama-7b-finetune-articlegen ==
+Number of texts: 298
+
+mean_surprisal:
+  Mean:     4.6282
+  Median:   4.5470
+  StdDev:   1.1581
+  Skewness: 0.6119
+  Kurtosis: 3.2652
+  Distribution: Bimodal distribution detected with peaks at 0.49 and 4.47. Skewness: 0.95, Kurtosis: 4.58
+
+uid_variance:
+  Mean:     14.6705
+  Median:   13.1689
+  StdDev:   5.8487
+  Skewness: 1.3423
+  Kurtosis: 2.7235
+  Distribution: Unimodal distribution (kurtosis: 2.72, skewness: 1.34)
+
+uid_pairwise:
+  Mean:     25.3119
+  Median:   23.4389
+  StdDev:   8.5190
+  Skewness: 0.7280
+  Kurtosis: 0.5989
+  Distribution: Bimodal distribution detected with peaks at 3.54 and 8.31. Skewness: 1.45, Kurtosis: 2.60
+
+vocab_size:
+  Mean:     107.9899
+  Median:   70.5000
+  StdDev:   92.0100
+  Skewness: 1.7960
+  Kurtosis: 2.6208
+
+sentence_length:
+  Mean:     14.9079
+  Median:   13.7500
+  StdDev:   7.6794
+  Skewness: 2.4970
+  Kurtosis: 15.6471
+  Distribution: Unimodal distribution (kurtosis: 67.98, skewness: 6.46)
+
+
+== Model: human_texts ==
+Number of texts: 300
+
+mean_surprisal:
+  Mean:     5.0892
+  Median:   5.0411
+  StdDev:   0.5237
+  Skewness: 0.2809
+  Kurtosis: 0.4474
+  Distribution: Unimodal distribution (kurtosis: 0.45, skewness: 0.28)
+
+uid_variance:
+  Mean:     17.6110
+  Median:   17.2709
+  StdDev:   2.4869
+  Skewness: 0.8596
+  Kurtosis: 1.4332
+  Distribution: Unimodal distribution (kurtosis: 1.43, skewness: 0.86)
+
+uid_pairwise:
+  Mean:     34.8771
+  Median:   34.4323
+  StdDev:   5.0391
+  Skewness: 0.3130
+  Kurtosis: 0.0554
+  Distribution: Bimodal distribution detected with peaks at 21.61 and 24.35. Skewness: 1.07, Kurtosis: 2.13
+
+vocab_size:
+  Mean:     nan
+  Median:   nan
+  StdDev:   nan
+  Skewness: nan
+  Kurtosis: nan
+
+sentence_length:
+  Mean:     nan
+  Median:   nan
+  StdDev:   nan
+  Skewness: nan
+  Kurtosis: nan
+
+
+
+=== Distribution Analysis ===
+
+== mean_surprisal Distribution Analysis ==
+
+Overall distribution: Unimodal distribution (kurtosis: 3.21, skewness: 0.11)
+
+llama-2-7b-32k-instruct@q8_0: Unimodal distribution (kurtosis: 1.13, skewness: -0.38)
+llama-2-7b-chat@q8_0: Bimodal distribution detected with peaks at 3.88 and 8.36. Skewness: 1.25, Kurtosis: 7.32
+llama-2-7b@q8_0: Unimodal distribution (kurtosis: 10.09, skewness: -0.63)
+llama-7b-finetune-articlegen: Bimodal distribution detected with peaks at 0.49 and 4.47. Skewness: 0.95, Kurtosis: 4.58
+human_texts: Unimodal distribution (kurtosis: 0.45, skewness: 0.28)
+
+Models with bimodal mean_surprisal distributions: llama-2-7b-chat@q8_0, llama-7b-finetune-articlegen
+
+== uid_variance Distribution Analysis ==
+
+Overall distribution: Unimodal distribution (kurtosis: 3.75, skewness: 1.36)
+
+llama-2-7b-32k-instruct@q8_0: Bimodal distribution detected with peaks at 2.06 and 4.24. Skewness: 1.19, Kurtosis: 5.11
+llama-2-7b-chat@q8_0: Unimodal distribution (kurtosis: 18.14, skewness: 3.28)
+llama-2-7b@q8_0: Bimodal distribution detected with peaks at 3.02 and 5.14. Skewness: 2.35, Kurtosis: 8.74
+llama-7b-finetune-articlegen: Unimodal distribution (kurtosis: 2.72, skewness: 1.34)
+human_texts: Unimodal distribution (kurtosis: 1.43, skewness: 0.86)
+
+Models with bimodal uid_variance distributions: llama-2-7b-32k-instruct@q8_0, llama-2-7b@q8_0
+
+== uid_pairwise Distribution Analysis ==
+
+Overall distribution: Unimodal distribution (kurtosis: 3.21, skewness: 1.21)
+
+llama-2-7b-32k-instruct@q8_0: Bimodal distribution detected with peaks at 2.74 and 4.63. Skewness: 0.77, Kurtosis: 3.25
+llama-2-7b-chat@q8_0: Bimodal distribution detected with peaks at 10.48 and 13.48. Skewness: 3.46, Kurtosis: 22.61
+llama-2-7b@q8_0: Bimodal distribution detected with peaks at 1.50 and 6.11. Skewness: 1.96, Kurtosis: 7.01
+llama-7b-finetune-articlegen: Bimodal distribution detected with peaks at 3.54 and 8.31. Skewness: 1.45, Kurtosis: 2.60
+human_texts: Bimodal distribution detected with peaks at 21.61 and 24.35. Skewness: 1.07, Kurtosis: 2.13
+
+Models with bimodal uid_pairwise distributions: llama-2-7b-32k-instruct@q8_0, llama-2-7b-chat@q8_0, llama-2-7b@q8_0, llama-7b-finetune-articlegen, human_texts
+
+== sentence_length Distribution Analysis ==
+
+Overall distribution: Bimodal distribution detected with peaks at 1.41 and 12.23. Skewness: 9.85, Kurtosis: 177.93
+
+llama-2-7b-32k-instruct@q8_0: Unimodal distribution (kurtosis: 187.32, skewness: 12.43)
+llama-2-7b-chat@q8_0: Unimodal distribution (kurtosis: 3.58, skewness: 1.36)
+llama-2-7b@q8_0: Bimodal distribution detected with peaks at 1.35 and 4.69. Skewness: 0.41, Kurtosis: 0.17
+llama-7b-finetune-articlegen: Unimodal distribution (kurtosis: 67.98, skewness: 6.46)
+
+Models with bimodal sentence_length distributions: llama-2-7b@q8_0
+
+
+=== Statistical Comparisons ===
+
+
+== mean_surprisal Comparisons ==
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b-chat@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.9990 (large effect)
+  Distribution: llama-2-7b-chat@q8_0 shows bimodality while llama-2-7b-32k-instruct@q8_0 does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=-0.38, llama-2-7b-chat@q8_0=1.25
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=1.13, llama-2-7b-chat@q8_0=7.32
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.0196 (large effect)
+  Shape differences: Significant differences in distribution shape
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=1.13, llama-2-7b@q8_0=10.09
+llama-2-7b-32k-instruct@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.3651 (large effect)
+  Distribution: llama-7b-finetune-articlegen shows bimodality while llama-2-7b-32k-instruct@q8_0 does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=-0.38, llama-7b-finetune-articlegen=0.95
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=1.13, llama-7b-finetune-articlegen=4.58
+llama-2-7b-32k-instruct@q8_0 vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 2.4783 (large effect)
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=-0.38, human_texts=0.28
+llama-2-7b-chat@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.006159 (very significant difference)
+  Effect size (Cohen's d): 0.0586 (negligible effect)
+  Distribution: llama-2-7b-chat@q8_0 shows bimodality while llama-2-7b@q8_0 does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=1.25, llama-2-7b@q8_0=-0.63
+    Kurtosis: llama-2-7b-chat@q8_0=7.32, llama-2-7b@q8_0=10.09
+llama-2-7b-chat@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.6485 (medium effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Kurtosis: llama-2-7b-chat@q8_0=7.32, llama-7b-finetune-articlegen=4.58
+llama-2-7b-chat@q8_0 vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.7622 (large effect)
+  Distribution: llama-2-7b-chat@q8_0 shows bimodality while human_texts does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=1.25, human_texts=0.28
+    Kurtosis: llama-2-7b-chat@q8_0=7.32, human_texts=0.45
+llama-2-7b@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.5910 (medium effect)
+  Distribution: llama-7b-finetune-articlegen shows bimodality while llama-2-7b@q8_0 does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b@q8_0=-0.63, llama-7b-finetune-articlegen=0.95
+    Kurtosis: llama-2-7b@q8_0=10.09, llama-7b-finetune-articlegen=4.58
+llama-2-7b@q8_0 vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.6074 (large effect)
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b@q8_0=-0.63, human_texts=0.28
+    Kurtosis: llama-2-7b@q8_0=10.09, human_texts=0.45
+llama-7b-finetune-articlegen vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.5138 (medium effect)
+  Distribution: llama-7b-finetune-articlegen shows bimodality while human_texts does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-7b-finetune-articlegen=0.95, human_texts=0.28
+    Kurtosis: llama-7b-finetune-articlegen=4.58, human_texts=0.45
+
+== uid_variance Comparisons ==
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b-chat@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.4556 (small effect)
+  Distribution: llama-2-7b-32k-instruct@q8_0 shows bimodality while llama-2-7b-chat@q8_0 does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=1.19, llama-2-7b-chat@q8_0=3.28
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=5.11, llama-2-7b-chat@q8_0=18.14
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.690413 (no significant difference)
+  Effect size (Cohen's d): 0.1113 (negligible effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=1.19, llama-2-7b@q8_0=2.35
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=5.11, llama-2-7b@q8_0=8.74
+llama-2-7b-32k-instruct@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.8100 (large effect)
+  Distribution: llama-2-7b-32k-instruct@q8_0 shows bimodality while llama-7b-finetune-articlegen does not
+  Shape differences: Significant differences in distribution shape
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=5.11, llama-7b-finetune-articlegen=2.72
+llama-2-7b-32k-instruct@q8_0 vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 2.4645 (large effect)
+  Distribution: llama-2-7b-32k-instruct@q8_0 shows bimodality while human_texts does not
+  Shape differences: Significant differences in distribution shape
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=5.11, human_texts=1.43
+llama-2-7b-chat@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.3265 (small effect)
+  Distribution: llama-2-7b@q8_0 shows bimodality while llama-2-7b-chat@q8_0 does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=3.28, llama-2-7b@q8_0=2.35
+    Kurtosis: llama-2-7b-chat@q8_0=18.14, llama-2-7b@q8_0=8.74
+llama-2-7b-chat@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000003 (highly significant difference)
+  Effect size (Cohen's d): 0.4560 (small effect)
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=3.28, llama-7b-finetune-articlegen=1.34
+    Kurtosis: llama-2-7b-chat@q8_0=18.14, llama-7b-finetune-articlegen=2.72
+llama-2-7b-chat@q8_0 vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.6438 (large effect)
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=3.28, human_texts=0.86
+    Kurtosis: llama-2-7b-chat@q8_0=18.14, human_texts=1.43
+llama-2-7b@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.7077 (medium effect)
+  Distribution: llama-2-7b@q8_0 shows bimodality while llama-7b-finetune-articlegen does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b@q8_0=2.35, llama-7b-finetune-articlegen=1.34
+    Kurtosis: llama-2-7b@q8_0=8.74, llama-7b-finetune-articlegen=2.72
+llama-2-7b@q8_0 vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 2.1158 (large effect)
+  Distribution: llama-2-7b@q8_0 shows bimodality while human_texts does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b@q8_0=2.35, human_texts=0.86
+    Kurtosis: llama-2-7b@q8_0=8.74, human_texts=1.43
+llama-7b-finetune-articlegen vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.6551 (medium effect)
+  Shape differences: Significant differences in distribution shape
+    Kurtosis: llama-7b-finetune-articlegen=2.72, human_texts=1.43
+
+== uid_pairwise Comparisons ==
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b-chat@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.8035 (large effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=0.77, llama-2-7b-chat@q8_0=3.46
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=3.25, llama-2-7b-chat@q8_0=22.61
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000012 (highly significant difference)
+  Effect size (Cohen's d): 0.3255 (small effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=0.77, llama-2-7b@q8_0=1.96
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=3.25, llama-2-7b@q8_0=7.01
+llama-2-7b-32k-instruct@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.7742 (medium effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=0.77, llama-7b-finetune-articlegen=1.45
+llama-2-7b-32k-instruct@q8_0 vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 2.6388 (large effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=3.25, human_texts=2.13
+llama-2-7b-chat@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.4815 (small effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=3.46, llama-2-7b@q8_0=1.96
+    Kurtosis: llama-2-7b-chat@q8_0=22.61, llama-2-7b@q8_0=7.01
+llama-2-7b-chat@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.720785 (no significant difference)
+  Effect size (Cohen's d): 0.1224 (negligible effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=3.46, llama-7b-finetune-articlegen=1.45
+    Kurtosis: llama-2-7b-chat@q8_0=22.61, llama-7b-finetune-articlegen=2.60
+llama-2-7b-chat@q8_0 vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.9209 (large effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=3.46, human_texts=1.07
+    Kurtosis: llama-2-7b-chat@q8_0=22.61, human_texts=2.13
+llama-2-7b@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.5094 (medium effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b@q8_0=1.96, llama-7b-finetune-articlegen=1.45
+    Kurtosis: llama-2-7b@q8_0=7.01, llama-7b-finetune-articlegen=2.60
+llama-2-7b@q8_0 vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 2.3588 (large effect)
+  Distribution: Both models show bimodality
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b@q8_0=1.96, human_texts=1.07
+    Kurtosis: llama-2-7b@q8_0=7.01, human_texts=2.13
+llama-7b-finetune-articlegen vs human_texts:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.3713 (large effect)
+  Distribution: Both models show bimodality
+
+== vocab_size Comparisons ==
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b-chat@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.3755 (large effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.052577 (no significant difference)
+  Effect size (Cohen's d): 0.2103 (small effect)
+llama-2-7b-32k-instruct@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.7708 (large effect)
+llama-2-7b-32k-instruct@q8_0 vs human_texts: Insufficient data for comparison
+llama-2-7b-chat@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.0089 (large effect)
+llama-2-7b-chat@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.6561 (medium effect)
+llama-2-7b-chat@q8_0 vs human_texts: Insufficient data for comparison
+llama-2-7b@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 1.4148 (large effect)
+llama-2-7b@q8_0 vs human_texts: Insufficient data for comparison
+llama-7b-finetune-articlegen vs human_texts: Insufficient data for comparison
+
+== sentence_length Comparisons ==
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b-chat@q8_0:
+  Mann-Whitney U test: p-value = 0.000025 (highly significant difference)
+  Effect size (Cohen's d): 0.2813 (small effect)
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=12.43, llama-2-7b-chat@q8_0=1.36
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=187.32, llama-2-7b-chat@q8_0=3.58
+llama-2-7b-32k-instruct@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.011262 (significant difference)
+  Effect size (Cohen's d): 0.2030 (small effect)
+  Distribution: llama-2-7b@q8_0 shows bimodality while llama-2-7b-32k-instruct@q8_0 does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=12.43, llama-2-7b@q8_0=0.41
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=187.32, llama-2-7b@q8_0=0.17
+llama-2-7b-32k-instruct@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.3158 (small effect)
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-32k-instruct@q8_0=12.43, llama-7b-finetune-articlegen=6.46
+    Kurtosis: llama-2-7b-32k-instruct@q8_0=187.32, llama-7b-finetune-articlegen=67.98
+llama-2-7b-32k-instruct@q8_0 vs human_texts: Insufficient data for comparison
+llama-2-7b-chat@q8_0 vs llama-2-7b@q8_0:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.4625 (small effect)
+  Distribution: llama-2-7b@q8_0 shows bimodality while llama-2-7b-chat@q8_0 does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=1.36, llama-2-7b@q8_0=0.41
+    Kurtosis: llama-2-7b-chat@q8_0=3.58, llama-2-7b@q8_0=0.17
+llama-2-7b-chat@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.039636 (significant difference)
+  Effect size (Cohen's d): 0.0833 (negligible effect)
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b-chat@q8_0=1.36, llama-7b-finetune-articlegen=6.46
+    Kurtosis: llama-2-7b-chat@q8_0=3.58, llama-7b-finetune-articlegen=67.98
+llama-2-7b-chat@q8_0 vs human_texts: Insufficient data for comparison
+llama-2-7b@q8_0 vs llama-7b-finetune-articlegen:
+  Mann-Whitney U test: p-value = 0.000000 (highly significant difference)
+  Effect size (Cohen's d): 0.4700 (small effect)
+  Distribution: llama-2-7b@q8_0 shows bimodality while llama-7b-finetune-articlegen does not
+  Shape differences: Significant differences in distribution shape
+    Skewness: llama-2-7b@q8_0=0.41, llama-7b-finetune-articlegen=6.46
+    Kurtosis: llama-2-7b@q8_0=0.17, llama-7b-finetune-articlegen=67.98
+llama-2-7b@q8_0 vs human_texts: Insufficient data for comparison
+llama-7b-finetune-articlegen vs human_texts: Insufficient data for comparison
