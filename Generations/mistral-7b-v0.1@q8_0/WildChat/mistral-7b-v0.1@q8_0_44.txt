@@ -1,79 +1,9 @@
-## 1. 问题描述
-
-在使用`ssh`的过程中，会自动将访问过的`ssh`节点保存到当前用户的配置文件中：`~/.ssh/known_hosts`。
-
-此时，如果需要对`ssh`客户端进行清理操作，即删除掉这部分配置，可以通过以下方式完成：
-
-## 2. 执行步骤
-
-### 2.1. 获取到当前目录下的`known_hosts`文件
-
-```sh
-$ pwd
-# /root/.ssh/
-$ ll
-# total 36
-# -rw-------. 1 root root  784 Sep 29 09:42 authorized_keys
-# -rw-r--r--. 1 root root 1542 Dec 30  2019 config
-# -rw-r--r--. 1 root root   46 Jun 23  2017 id_rsa
-# -rw-------. 1 root root  304 Sep 29 09:45 known_hosts
-```
-
-### 2.2. 将当前目录下的`known_hosts`文件复制到某一临时目录
-
-```sh
-$ sudo cp /root/.ssh/known_hosts /tmp/
-# [sudo] password for root:
-# cp: cannot stat `/root/.ssh/known_hosts': No such file or directory
-```
-
-### 2.3. 将某一临时目录下的`known_hosts`文件移除掉
-
-```sh
-$ sudo rm /tmp/known_hosts
-# [sudo] password for root:
-# rm: cannot remove `/tmp/known_hosts': No such file or directory
-```
-
-### 2.4. 清理完成
-
-```sh
-$ pwd
-# /root/.ssh/
-$ ll
-# total 36
-# -rw-------. 1 root root  784 Sep 29 09:42 authorized_keys
-# -rw-r--r--. 1 root root 1542 Dec 30  2019 config
-# -rw-r--r--. 1 root root   46 Jun 23  2017 id_rsa
-```
-
-1. 安装[PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/)，或者是[Xshell](http://www.netsarang.com/)。
-2. 在putty中输入主机地址和端口号，点击登录，提示：The server's host key is not cached in the registry. You have no guarantee that the server is the computer you think it is.
-3. 在putty中输入yes，重新输入主机地址，连接上。
-4. 然后删除/etc/known_hosts，或者修改为下面的内容，这样就不会出现提示了。
-
-```shell
-127.0.0.1 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDHx+fzjcR5eFVh3d9Zy8bk5nz+MwTt2s2I4YaRp7LKmDvGXlJ6N6hv/Bz1uEjZP0r46K2Wx33/C+V4UZW27YcZ9QFYbkM8VNtE9HBJIcR1zDmKnw0l3+dYhZgqiPvJuUjw1sX7r5S5xOi7249WzG6oGyh+qf/fK3L8aT4k8VKRc9bF2Ce+0l3t7/p4DdK3nIq49HpLZJvSfMwu7UjgP52W1QmGx127zO142iY74wN3R89rVN0yJZo6Et8JFb/qd7aX84kGnBHKjSsW+M3lR9/z321T5CbkPp
-```
-
-* 如果是Windows下面的putty，可以使用cmd命令：ssh-keygen -f "known_hosts" -R IP地址
-* Mac下面可以直接修改/etc/ssh_known_hosts
-
-```
-$ ssh-keygen -R <IP_address>
-mkstemp: No such file or directory
-
-Error: mkstemp(2): No such file or directory (2)
-```
-
-在用户的目录下创建一个.ssh，在这里放置id_rsa，然后再执行：
-
-```
-$ ssh-keygen -R <IP_address>
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/<user>/.ssh/id_rsa.
-Your public key has been saved in /home/<user>/.ssh/id_rsa.pub.
-The key fingerprint is:
-...
-```
+> Hey everyone,
+>
+> This is my first post here so I hope it's the right section and also a bit of an introduction. I am a 26 year old man with two children from two different women and currently live in New Zealand (been here for about 8 years now). I have been separated from both these mothers for over 6 months and still am in contact with them, and both these mothers are in a relationship with new partners. I'm currently looking at the possibility of fathering children to other women because I do not want to be single forever, however I am not sure whether it is possible due to my past infertility cases.
+>
+> I am also a very active man and like to stay fit so I exercise 4-5 days per week and eat healthy. I don't smoke or drink alcohol and I have never had any STDs (except for genital warts which is cured now). My first girlfriend was from my country of origin and after we broke up and I left her, she got married and they had a child, which is my 3 year old daughter. The second woman was a new Zealand native and we only slept together once (which resulted in a pregnancy and then we separated after I found out it was me) and then went onto have a boy who's just turned one. Both these children are healthy and of normal weight, however they were both born prematurely so that could be the reason?
+>
+> What I am trying to find out from this post is how do I get myself tested for fertility problems (or maybe it was caused by my ex girlfriends), and what are some of the common male infertility causes which prevent me from having healthy children, because both these kids were born prematurely.
+>
+> Sorry if the post is a bit long but any help would be greatly appreciated.

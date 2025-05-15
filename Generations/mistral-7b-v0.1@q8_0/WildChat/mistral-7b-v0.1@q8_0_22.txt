@@ -1,14 +1,3 @@
-What do you mean by "I want to enter a numerical value from the first row in column A up to the 12th row in the same column?" Do you mean that if I type 1 into the input box, then I'll get the values 1 through 12 in ColumnA?
+Chapter 4 is comprised of four sections: “Fundamentals”, “Mid-Course Corrections”, “The Road Ahead” and “Answers, Questions and Conclusions”. Section one contains seven chapters; section two has five chapters; section three has eight chapters and section four has ten chapters. The order in which these 24 chapters are arranged is not chronological but follows a logical progression that begins with a review of the fundamentals and ends with answers, questions and conclusions.
 
-If so, you can use this code:
-
-Code:
-
-```
-Private Sub CommandButton1_Click()
-Dim r As Long
-For r = ActiveCell.Row To ActiveCell.Row + 11
-    ActiveCell.Offset(r).Value = r
-Next r
-End Sub
-```
+A more detailed description of this structure may be found on the Table of Contents page.

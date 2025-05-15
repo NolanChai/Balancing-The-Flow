@@ -1,7 +1,17 @@
-You can stay on your diet by following these tips:
+```
+RuntimeError: Ninja is required to load C++ extensions
 
-- Plan meals and snacks ahead of time to reduce temptations.
-- Keep a food log to track what you eat and make sure you're sticking to your calorie goals.
-- Eat regular, small meals throughout the day to help curb cravings.
-- Get plenty of protein to help with hunger and fullness.
-- Stay hydrated by drinking plenty of water.
+ImportError: /root/.cache/torch_extensions/py36_cu102/utils/utils.so: cannot open shared object file: No such file or directory
+```
+
+安装ninja和cuda
+
+```
+sudo apt-get update && sudo apt-get install ninja-build cmake gcc g++ unzip
+```
+
+执行下面代码：
+
+```
+pip install torch==1.6.0+cu102 -f https://download.pytorch.org/whl/torch_stable.html
+```

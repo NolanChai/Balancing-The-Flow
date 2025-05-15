@@ -1,0 +1,9 @@
+To find the time rate of change of the total electrical resistance, we can use the formula:
+$$\frac{dR}{dt} = \frac{dx}{dt} + \frac{dy}{dt} + \frac{dz}{dt}$$
+First, let's find the time derivatives of each resistance component:
+$$\frac{dx}{dt} = 2\times 100 \text{ Ω/min} = 200 \text{ Ω/min}$$
+$$\frac{dy}{dt} = 1\times 200 \text{ Ω/min} = 200 \text{ Ω/min}$$
+$$\frac{dz}{dt} = 0\text{ Ω/min}$$ (since z does not change)
+Now, let's plug these values into the formula for $dR/dt$:
+$$\frac{dR}{dt} = \frac{dx}{dt} + \frac{dy}{dt} + \frac{dz}{dt} = 200 \text{ Ω/min} + 200 \text{ Ω/min} + 0 = 400 \text{ Ω/min}$$
+Therefore, the time rate of change of the total electrical resistance is $400 \text{ Ω/min}$.

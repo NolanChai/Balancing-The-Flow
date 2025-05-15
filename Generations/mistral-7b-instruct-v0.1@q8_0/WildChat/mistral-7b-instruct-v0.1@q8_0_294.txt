@@ -1,0 +1,82 @@
+The TASM assembly code for the task at hand is as follows:
+```assembly
+SECTION .data
+    inputFile db "input.txt", 0 ; file path
+    minPositiveNum resd 1 ; reserved for minimum positive number
+    maxNegativeNum resd 1 ; reserved for maximum negative number
+
+SECTION .bss
+    nums resd 10 ; array to hold input numbers
+
+SECTION .text
+    global main
+
+main:
+    mov eax, 4 ; syscall code for open file
+    mov ebx, inputFile ; file path
+    mov ecx, O_RDONLY ; open file for reading only
+    int 0x80 ; call kernel
+
+    cmp eax, -1 ; check if file was opened successfully
+    jz handleError
+
+    mov edi, nums ; base address of array to hold input numbers
+    mov ecx, 10 ; number of elements to read from file
+    mov ebx, 3 ; syscall code for read from file
+    int 0x80 ; call kernel
+
+handleError:
+    mov eax, 1 ; syscall code for exit program
+    xor ebx, ebx ; return status code 0 (normal exit)
+    int 0x80 ; call kernel
+
+minPositiveLoop:
+    mov ecx, nums ; base address of array to hold input numbers
+    mov edi, minPositiveNum ; reserved for minimum positive number
+    mov eax, 4 ; syscall code for read from file
+    mov ebx, ecx ; offset of first element in array
+    int 0x80 ; call kernel
+
+    cmp eax, -1 ; check if reading was successful
+    jz handleMinPositiveError
+
+    mov edi, minPositiveNum ; reserved for minimum positive number
+    add edi, ebx ; move to next element in array
+    mov ecx, nums ; base address of array to hold input numbers
+    sub ecx, edi ; move to last element in array
+    cmp ecx, eax ; compare current element with last element
+    jae findMaxNegative ; if current element is greater than last element, jump to findMaxNegative label
+
+    mov edx, ebx ; move current element to edx
+    mov ebx, minPositiveNum ; reserved for minimum positive number
+    add ebx, eax ; compare current element with minimum positive element
+    cmp edx, ebx ; jump to next iteration if current element is greater than minimum positive element
+    jz handleMinPositiveError
+
+    mov edi, minPositiveNum ; reserved for minimum positive number
+    add edi, ebx ; move to next element in array
+    mov ecx, nums ; base address of array to hold input numbers
+    sub ecx, edi ; move to last element in array
+    cmp ecx, eax ; compare current element with last element
+    jae findMaxNegative ; if current element is greater than last element, jump to findMaxNegative label
+
+handleMinPositiveError:
+    mov eax, 1 ; syscall code for exit program
+    xor ebx, ebx ; return status code 0 (normal exit)
+    int 0x80 ; call kernel
+minPositiveNum resd 1 ; reserve space for minimum positive element
+handleMaxNegativeError:
+    mov eax, 1 ; syscall code for exit program
+    xor ebx, ebx ; return status code 0 (normal exit)
+    int 0x80 ; call kernel
+maxNegativeNum resd 1 ; reserve space for maximum negative element
+findMaxNegative:
+    mov ecx, nums ; base address of array to hold input numbers
+    mov edi, maxNegativeNum ; reserved for maximum negative number
+    mov eax, 4 ; syscall code for read from file
+    mov ebx, ecx ; offset of first element in array
+    int 0x80 ; call kernel
+
+    cmp eax, -1 ; check if reading was successful
+    jz handleMaxNegativeError
+```

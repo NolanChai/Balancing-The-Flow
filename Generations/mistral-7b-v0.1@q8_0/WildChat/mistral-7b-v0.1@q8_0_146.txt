@@ -1,27 +1,13 @@
-I have the same issue with a text that I want to translate from English into Russian. I'm using the Yandex API:
+It's a game of wits, where you must deduce the killer. The game is based on a board game called Clue. The rules are simple and you can play it for free online at: http://www.murdermysterygamesonline.com/mysterymodule/cluedo.php
 
-```
-<?php
-$text = 'This pilot will focus on intra- and inter-health system medication transport and usage in North Carolina, Indiana and Tennessee, and studies the application of blockchain and IoT technology used to monitor specialty medication distribution across supply chains.';
-$apiKey = '<my api key>';
-$lang = 'ru';
-$textToTranslate = urlencode($text);
-$url = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key='.$apiKey.'&lang='.$lang.'&text='.$textToTranslate;
+How To Play
 
-// Send HTTP request to translate.yandex.net API and get response as string
-$response = file_get_contents($url);
+The object of the game is to deduce which player killed Mr. Boddy in what room with what weapon. You can only win if you guess correctly. Guessing incorrectly will result in an automatic loss. The game has a total of 6 possible combinations.
 
-// Convert JSON string into PHP array
-$responseArray = json_decode($response, true);
+Gameplay consists of making a guess and then seeing who had the correct answer (if there is one). Each guess results in one person being eliminated, and a new guess must be made by each player until someone gets it right. A player may also make the same guess as another player, but only one guess counts per round, so the first one to guess it wins.
 
-echo $responseArray['text'][0];
-?>
-```
+In order to help you make your guesses, there is information about who killed Mr. Boddy and in what room he was murdered. This includes details such as whether or not there were any witnesses present at the time of death (if so, they would have heard screams), whether or not anyone saw the murderer leave the scene (again, if so then they would have seen him/her running off with the weapon), etc.. The game also tells you which rooms are accessible from each other via doors and hallways.
 
-However, when I'm trying to run the script, this error appears:
+You must choose your own name for yourself in the game. Your name does not need to be real as this is just a game of deduction, but it's recommended that you use a fake one anyway because if anyone tries to cheat then they will get caught sooner rather than later.
 
-```
-Fatal error: Uncaught Exception: String could not be parsed as JSON in /Applications/MAMP/htdocs/myproject/translate.php:6 Stack trace: #0 {main} thrown in /Applications/MAMP/htdocs/myproject/translate.php on line 6
-```
-
-How can I solve this problem?
+Players

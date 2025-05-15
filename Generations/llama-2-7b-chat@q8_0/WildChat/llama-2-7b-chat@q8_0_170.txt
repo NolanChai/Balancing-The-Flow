@@ -1,0 +1,55 @@
+To attach the gradient block strictly from the right side and make it translate from left-initial to the most-right side in animation duration, you can modify the code as follows:
+1. First, create a new CSS class for the gradient block that will be added to the text:
+```css
+.gradient-line {
+position: absolute;
+right: 0;
+top: 50%;
+transform: translateY(-50%);
+width: fit-content;
+height: 100%;
+background: linear-gradient(to right, royalblue, cyan);
+pointer-events: none;
+}
+```
+2. Then, modify the JavaScript code to add the gradient block to the text node at the correct position:
+```javascript
+function insertLine() {
+const range = window.getSelection().getRangeAt(0);
+if (range.startContainer.nodeType === 3) {
+const textNode = range.startContainer;
+const currentPosition = range.startOffset;
+const lineText = textNode.textContent.slice(wordEndPosition);
+
+// Add the gradient block to the right side of the text node
+const gradientLine = document.createElement('span');
+gradientLine.classList.add('gradient-line');
+gradientLine.textContent = lineText;
+range.insertNode(gradientLine);
+range.collapse();
+}
+```
+3. Finally, modify the animation to only animate the gradient block:
+```css
+@keyframes shot {
+10% {
+width: 0;
+height: 100%;
+background-image: none;
+}
+50%, 100% {
+width: 100%;
+height: 100%;
+background-image: linear-gradient(to right, royalblue, cyan);
+pointer-events: none;
+}
+@keyframes blink {
+0%, 100% {
+opacity: 1;
+}
+50% {
+opacity: 0;
+}
+}
+```
+The modified code will add the gradient block to the right side of the text node and animate it to the most-right side of the container. The animation will only affect the gradient block and not the text node.

@@ -1,15 +1,9 @@
-[30 lines of output]
-usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
-   or: setup.py --help [cmd1 cmd2 ...]
-   or: setup.py --help-commands
-   or: setup.py cmd --help
+\end{pre}
 
-error: invalid command 'dist_info'
-error: invalid command 'dist_info'
-usage: setup.py (global options) [command] subcommand
-or: setup.py --help <cmd>
-usage: setup.py (global options) [command] subcommand
-error: invalid command 'dist_info'
-usage: setup.py (global options) [command] subcommand
-error: invalid command 'dist_info'
-```
+Comment: Thanks a lot! I'm using SQL Server 2008 and it works great! I only have to replace the 'VALUES ('geely/atlas', '/a/', 'dvigatel') AS t (cat_url, separator, alt_url)' with the query you provided.
+
+Comment: It works only for first letter of catalog name.
+How can i do it for all letters?
+
+Answer: I have found solution in http://code.google.com/p/oracledb2011-samples/source/browse/trunk/src/dba_lateral.sql
+It's working perfectly and in few seconds!

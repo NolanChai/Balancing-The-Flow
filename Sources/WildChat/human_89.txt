@@ -1,23 +1,43 @@
-User: "We are sorry for not explaining well. The license is renewed every month according to the membership period, whether monthly or annual
-In other words, the annual subscription is valid for one year on the annual plan from the date of subscription"
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = 背景清澈的蓝天中，一只戴墨镜的鲸鱼在天上的白云直接遨游
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
 
-Assistant: "until the same date of the following year. The monthly subscription is valid for one month from the date of subscription until the same date of the following month. 
+Assistant: "/imagine prompt: In a serene forest filled with tall, ancient trees, a majestic lion with a golden mane stands on a moss-covered rock. Sunlight filters through the dense canopy, casting a warm glow on the lion's regal profile. The lion's powerful muscles ripple beneath its sleek fur, and its amber eyes gleam with wisdom and strength. Surrounding the lion, vibrant wildflowers bloom in a rainbow of colors, creating a breathtaking contrast against the lush greenery. The composition focuses on the lion's commanding presence, capturing the essence of its untamed spirit. This image is rendered in a hyper-realistic painting style, with every intricate detail of the lion's mane and the forest ecosystem meticulously depicted. The atmosphere exudes tranquility and a sense of awe, invoking a deep appreciation for the beauty of nature. --ar 16:9 --v 5
 
-For example, if you subscribe to the annual plan on January 1st, your license will be valid until January 1st of the next year. If you choose the monthly plan and subscribe on January 15th, your license will be valid until February 15th. 
+/imagine prompt: Under the ethereal glow of a full moon, a solitary wolf stands atop a rocky cliff that overlooks a vast, misty valley. The wolf's silver-gray fur shimmers in the moonlight, blending seamlessly with the mystic surroundings. The valley below is teeming with dense fog, creating an otherworldly atmosphere. The composition frames the wolf against the contrasting backdrop, emphasizing its lone and mysterious existence. This image is captured as a photograph with a telephoto lens, allowing for a close-up view of the wolf's piercing amber eyes and the intricate details of its fur. The scene exudes a sense of solitude and primal beauty, evoking a mix of awe and reverence towards the wild. --ar 9:16 --v 7
 
-Please note that the license will be automatically renewed at the end of each period unless you choose to cancel or opt out of the subscription before the renewal date.
+/imagine prompt: In the heart of a bustling city, a graceful ballerina pirouettes on a cobblestone street. The ballerina is dressed in a flowing, pale pink tutu, perfectly accentuating her elegant movements. Surrounding her, vibrant street art adorns the walls, creating a striking juxtaposition between the refined art of ballet and the raw urban environment. The composition focuses on the ballerina's poised form, capturing her fluidity and grace in mid-air. This image is captured in a dynamic and contemporary photography style, with a wide-angle lens that captures the sweeping motion of the ballerina. The atmosphere is filled with a sense of energy and creativity, showcasing the fusion of classical artistry with the modern world. --ar 16:9 --v 5.2
 
-If you have any further questions or concerns, please let us know."
-
-User: "صحح "We are sorry for not explaining well. The license is renewed every month according to the membership period, whether monthly or annual
-""
-
-Assistant: "We apologize for not providing a clear explanation initially. The license is indeed renewed on a monthly or annual basis, depending on the chosen membership period."
-
-User: "صحح "Hello, Chris Milam.
-We apologize for not providing a clear explanation initially. The license is indeed renewed on a monthly or annual basis, depending on the chosen membership period.
-""
-
-Assistant: "Hello, Chris Milam.
-
-We apologize for any confusion caused by our previous explanation. To clarify, the license is renewed either on a monthly or annual basis, depending on the selected membership period."
+/imagine prompt: In a quaint coastal village, a solitary lighthouse stands tall against the backdrop of a stormy sea. The lighthouse emits a steady beam of light, cutting through the dark clouds and illuminating the turbulent waves crashing against the rugged cliffs. The composition frames the lighthouse as a beacon of hope and resilience in the face of adversity. This image is rendered as a black and white illustration, with bold ink lines capturing the dramatic contrast between light and shadow. The atmosphere is filled with a sense of mystery and anticipation, evoking a mix of awe and trepidation towards the power of nature. --ar 9:16 --v 5"

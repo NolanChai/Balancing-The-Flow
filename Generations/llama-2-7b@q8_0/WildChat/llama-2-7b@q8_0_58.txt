@@ -1,0 +1,85 @@
+Iodometery is the measurement of iodine concentration in a solution by using [iodometric titration](https://www.slideshare.net/abhiram1985/iodometric-titration) method. Iodimetry is similar to iodometry but it deals with [iodide ion](http://en.wikipedia.org/wiki/Iodide_ion) concentration in solution and involves the use of an [iodine solution](https://www.slideshare.net/abhiram1985/iodometric-titration).
+
+### Question:
+Explain the purpose of iodometry?
+
+### Answer:
+Iodometry is used to determine iodine concentration in a given solution. It is useful to determine the presence of iodine in compounds. Iodometery also helps us identify compounds that contain iodide and iodate ions.
+
+### Question:
+Explain the purpose of iodimetry?
+
+### Answer:
+Iodimetery is used to determine iodide ion concentration in a given solution. It is useful for identifying the presence of iodide ion in compounds and also determining whether or not a compound contains iodine.
+
+### Question:
+Give an example of how Iodometry would be used?
+
+### Answer:
+The concentration of iodine could be found from an unknown solution using iodometric titration by titrating the [iodimetric](https://www.slideshare.net/abhiram1985/iodometric-titration) indicator with a solution of potassium iodide.
+
+Iodometry can also be used as an analytical method to determine the number of moles of NaCl present. This is achieved using the following equation
+$$Na_3PO_4 + KIO_3 \to \text{K}_2\text{HPO}_{3} + 2\text{Na}_2\text{I}$$
+This reaction produces a yellowish precipitate which can be separated from the solution and titrated with a standard solution of NaOH. The moles of Cl- can then be calculated using the normalization equation for iodometry
+$$I = \frac{\text{Coulombs}}{\text{Moles}\times10^6} = 54.283\times\frac{Moles}{\text{litre}}\times\frac{\text{moles}\times10^{-9}}{1.122}$$
+This reaction is also used to determine the concentration of iodine present in a solution using an electrochemical cell
+![](img/Iodometry-Reaction.png)
+
+$$\require{cancel}
+\begin{align*}
+\ce{\overbrace{KCrO4}} &\ce{<->[\text{I2}] \underbrace{[}\mathord{-}{\cancel{H2}}\overbrace{]SO2}} \\[1em]
+& \qquad \text{using the redox reaction as a half cell} \\[1em]
+\ce{KCrO4 + \text{I}_{2}^{-} + 8S + O_{2} <-> 7S + [H_{2}\text{O}]SO3^{2-}} &\\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2] + \text{8S} <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}]} &\\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S] + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}]} &\\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] &\\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S] + [H_{2}\text{O}]} <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1em]
+\ce{[KCrO4][I2]+8[S]} + [H_{2}\text{O}] <-> [\text{7S}+[H_{2}\text{O}]SO3^{2-}] & \\
+& \qquad \text{using the redox reaction as a half cell}\\[1

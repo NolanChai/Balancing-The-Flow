@@ -1,167 +1,46 @@
-I used your code: API_KEY = 'lim5kAIrMtv611VDEYZsc9WmV74TBiGhhJB5LlPGQABAM7vY9NCX1R0gzOvFvURI'
-API_SECRET = '8pIwxRIk7HHCnRJQPyLewn137G76WjJGGVYqmcO329rg0gbymI25K2Q2NYp5C9hT'
-import time
-import requests
-import hmac
-import hashlib
-import datetime as dt
-import pandas as pd
+Slendy can play Starcraft 2, he just needs to be a little bit more creative on how he does it.
 
+*Starcraft 2 is currently available for macOS, Windows and Linux!*
 
+```text
+Siren Head - Human (Humanoid)
 
-symbol = 'BCH/USDT'
-interval = '1m'
-lookback = 44640
+Starcraft II: Wings of Liberty is a real-time strategy video game developed by Blizzard Entertainment. The third installment in the Starcraft series, it was released on July 27th, 2010 and has had five expansion packs to date. Siren Head makes his first appearance here as a human, or at least as a creature that can pass for one.
+```
 
-def generate_signature(api_key, api_secret, endpoint, params):
-    params_string = '&'.join([f'{key}={params[key]}' for key in params])
-    payload = f'{endpoint}\n{params_string}'
-    signature = hmac.new(api_secret.encode(), payload.encode(), hashlib.sha256).hexdigest()
-    return signature
+> _I was doing research on the "backrooms" for my race's history, when I found out about a new portal that just opened up. I went through it to see what is there._
 
-def get_klines(symbol, interval, lookback):
-    endpoint = '/open/api/v2/market/kline'
+### What I Found:
 
-    end_time = int(time.time() * 1000) # end time is now
-    start_time = end_time - (lookback * 60 * 1000) # start time is lookback minutes ago
-    end_time = start_time + (lookback * 60 * 1000) # calculate new end time
-
-    params = {
-        'symbol': symbol,
-        'interval': interval,
-        'start_time': start_time,
-        'end_time': end_time
-    }
-
-    signature = generate_signature(API_KEY, API_SECRET, endpoint, params)
-
-    url = f"https://www.mexc.com{endpoint}"
-    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
-    data = {**params, 'api_key': API_KEY, 'sign': signature}
-
-    response = requests.get(url, headers=headers, params=data)
-    response.raise_for_status()
-    data = response.json()['data']
-    
-    if not data: # if data is empty, return None
-        print('No data found for the given timeframe and symbol')
-        return None
-
-    ohlc = []
-    for d in data:
-        timestamp = dt.datetime.fromtimestamp(d['time']/1000).strftime('%Y-%m-%d %H:%M:%S')
-        ohlc.append({
-            'Open time': timestamp,
-            'Open': float(d['open']),
-            'High': float(d['high']),
-            'Low': float(d['low']),
-            'Close': float(d['close']),
-            'Volume': float(d['vol'])
-        })
-
-    df = pd.DataFrame(ohlc)
-    df.set_index('Open time', inplace=True)
-
-    return df
-
-df = get_klines(symbol, interval, lookback)
-
-def signal_generator(df):
-    # Calculate EMA and MA lines
-    df['EMA5'] = df['Close'].ewm(span=5, adjust=False).mean()
-    df['EMA10'] = df['Close'].ewm(span=10, adjust=False).mean()
-    df['EMA20'] = df['Close'].ewm(span=20, adjust=False).mean()
-    df['EMA50'] = df['Close'].ewm(span=50, adjust=False).mean()
-    df['EMA100'] = df['Close'].ewm(span=100, adjust=False).mean()
-    df['EMA200'] = df['Close'].ewm(span=200, adjust=False).mean()
-    df['MA10'] = df['Close'].rolling(window=10).mean()
-    df['MA20'] = df['Close'].rolling(window=20).mean()
-    df['MA50'] = df['Close'].rolling(window=50).mean()
-    df['MA100'] = df['Close'].rolling(window=100).mean()
-    # Extract necessary prices from df
-    open_price = df.Open.iloc[-1]
-    close_price = df.Close.iloc[-1]
-    previous_open = df.Open.iloc[-2]
-    previous_close = df.Close.iloc[-2]
-
-    # Calculate the last candlestick
-    last_candle = df.iloc[-1]
-    current_price = df.Close.iloc[-1]
-
-    # Initialize analysis variables
-    ema_analysis = []
-    candle_analysis = []
-
-    if (
-        df['EMA5'].iloc[-1] > df['EMA20'].iloc[-1] > df['EMA50'].iloc[-1] > df['EMA100'].iloc[-1] > df['EMA200'].iloc[-1] and
-        df['EMA5'].iloc[-2] < df['EMA20'].iloc[-2] < df['EMA50'].iloc[-2] < df['EMA100'].iloc[-2] < df['EMA200'].iloc[-2]
-    ):
-        ema_analysis.append('golden_cross')
-    elif (
-        df['EMA5'].iloc[-1] < df['EMA20'].iloc[-1] < df['EMA50'].iloc[-1] < df['EMA100'].iloc[-1] < df['EMA200'].iloc[-1] and
-        df['EMA5'].iloc[-2] > df['EMA20'].iloc[-2] > df['EMA50'].iloc[-2] > df['EMA100'].iloc[-2] > df['EMA200'].iloc[-2]
-    ):
-        ema_analysis.append('death_cross')
-
-    if (
-        open_price < close_price and
-        previous_open > previous_close and
-        close_price > previous_open and
-        open_price <= previous_close
-    ):
-        candle_analysis.append('buy')
-    elif (
-        open_price > close_price and
-        previous_open < previous_close and
-        close_price < previous_open and
-        open_price >= previous_close
-    ):
-        candle_analysis.append('sell')
-
-    # Generate signal based on strategy
-    if 'golden_cross' in ema_analysis and 'buy' in candle_analysis:
-        final_signal = 'buy'
-    elif 'death_cross' in ema_analysis and 'sell' in candle_analysis:
-        final_signal = 'sell'
-    else:
-        final_signal = ''
-
-    return final_signal
-
-df =  get_klines(symbol, '1m', 44640) # await the coroutine function here
-if df is not None:
-    df = get_klines(symbol, '1m', 44640)
-    signal = signal_generator(df)
-else:
-    print('No data found for the given timeframe and symbol')
-But I getting ERROR: Traceback (most recent call last):
-  File "c:\Users\service\.vscode\jew_bot.py", line 67, in <module>
-    df = get_klines(symbol, interval, lookback)
-  File "c:\Users\service\.vscode\jew_bot.py", line 43, in get_klines
-    response.raise_for_status()
-  File "C:\Users\service\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1021, in 
-raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://www.mexc.com/open/api/v2/market/kline?symbol=BCH%2FUSDT&interval=1m&start_time=1686126837000&end_time=1688805237000&api_key=lim5
-
-[inst]I added my API Key, but still facing same error.
-[/inst]
-[inst]This is the error I'm getting after adding API Key.[/inst]
-[img alt=""]https://i.imgur.com/2xRXFj7.png?1
-[/img][img alt=""]https://i.imgur.com/G9LU6oZ.png?1
-[/img][img alt=""]https://i.imgur.com/5qwYgOz.png?1
-[/img]
-Answer: We have checked it, please make sure you have filled in the correct information for API Key and Secret Key as well as fill out your phone number correctly.
-
-Hi guys. Is there any way to check what time did someone got in the server? It would be great if you could create a command which shows how long player has been on for eg: "showtimelog" or something like that.
-#349 - Apr 10, 2017 at 7:56 PM | Edited Apr 10, 2017 at 7:57 PM
-i dont think you can get the time of someone's in game or something like that.
-I guess this would be useful for server owners/admins and they could check if people are online or not? Maybe I am wrong tho.
-If you use a plugin called "In-Game Timestamps", you can make commands that give out the amount of time players have spent in the game, either on their current map or in total across all maps.
-I don't see an option to view timelines for individual players though, only their own.
-
-Tapatalk is a very popular mobile forum app, and it's important to keep your forum compatible with it. There are a few issues with the current version of TapaTalk for Android which may be causing you some trouble, so I want to explain what these problems are and how they can be fixed.
-First off, there is an issue whereby if you have the latest update (3.1) installed on your phone it will not show up on tapatalk. This problem has been fixed in version 3.2 which should appear soon, so make sure that when you download the newest version of TapaTalk for Android you are getting 3.2 and not 3.1 or an older version!
-Another issue is with the "Search" feature within tapatalk which doesn't always work correctly if it finds nothing related to what was searched for initially. This problem should also be fixed soon though, so hopefully it won't cause too much trouble until then.
-Lastly there are some minor bugs with how certain images or videos are loaded by TapaTalk on mobile devices but these seem less important than the previous two problems so they shouldn’t cause any serious issues if left unfixed (but if anyone has found a fix for them please let me know!).
-I hope this helps to answer any questions about why Tapatalk isn't working properly with your forum - if not then feel free to PM/PM me and I'll try my best to help :)
+* There are three types of creatures living in here. They all look similar, except they differ in skin color and eye shapes.
+- *White Eyes* (white)
+- *Brown Eyes* (brown)
+- *Red Eyes* (red)
+* One race has a distinctive shape to their eyes; they have two distinct holes for each eye with red circles surrounding them. This race is also known as the *Human race*.
+- The humans are hostile and aggressive, always searching for other lifeforms to kill or enslave.
+  - When you come into contact with a human, they will attack immediately unless they have something better to do (such as being distracted by another threat).
+  - Humans also like to take captives from other races; these prisoners can be used in slave markets if they are not killed first.
+* There is one species of *humanoid*, but they aren't very common here compared with the rest of The Backrooms. These creatures look similar to humans, except for having no eyes and an elongated jaw. They usually walk on two legs like we do; sometimes three or four if needed though!
+- *Humans* are not aggressive unless provoked by another race such as yourself (they won't attack each other). However, humans may be hostile toward nonhumanoids if they come into contact with them. If this happens then all bets are off! The humanoids do not trade prisoners like other races do; instead their captives usually end up being used in labor or experiments after they die from whatever fate awaits them within these places (usually death).
+* There is also one species of *nonhumanoid* here, and it's called the *Oni*. These creatures have multiple heads, arms, and legs; sometimes more than two of each! They usually walk on all fours like other nonhumanoids do but can stand up if needed as well.
+- Oni are not hostile unless provoked by another race such as yourself (they won't attack each other). However, they may be hostile toward nonhumanoids if they come into contact with them! If this happens then all bets are off! The oni do not trade prisoners like other races do; instead their captives usually end up being used in labor or experiments after they die from whatever fate awaits them within these places (usually death).
+- Oni can also use magic, which makes them even more dangerous than usual. They might be able to teleport away if you try to attack one of your friends who has been captured by an Oni! This could potentially save his life depending on what happens next...
+  - However this doesn't mean that he won't get hurt during the fight; after all there is still danger involved with fighting off multiple foes at once! So think twice before trying anything risky because chances are good that something bad might happen if you don't pay attention!
+- Oni have a special ability called "The Call"; this allows them to summon creatures from other dimensions into ours! This means that even if someone escapes their captivity they may still be able to find help nearby since there are so many different kinds of monsters living here together now.
+- The Call also works in reverse: it allows Oni users access to any place within this dimension without having actually been there before (and vice versa). This means that if someone wanted revenge against another person who had wronged them, then they could easily locate their enemy and attack them wherever necessary - even if it meant traveling thousands of miles away!
+* There is one species of *nonhumanoid*, called the *Crab People*. These creatures have multiple arms and legs; sometimes more than two of each! They usually walk on all fours like other nonhumanoids do but can stand up if needed as well.
+- Crab people are not hostile unless provoked by another race such as yourself (they won't attack each other). However, they may be hostile toward nonhumanoids if they come into contact with them! If this happens then all bets are off! The crab people do not trade prisoners like other races do; instead their captives usually end up being used in labor or experiments after they die from whatever fate awaits them within these places (usually death).
+* There is also one species of *nonhumanoid*, called the *Fish People*. These creatures have multiple arms and legs; sometimes more than two of each! They usually walk on all fours like other nonhumanoids do but can stand up if needed as well.
+- Fish people are not hostile unless provoked by another race such as yourself (they won't attack each other). However, they may be hostile toward nonhumanoids if they come into contact with them! If this happens then all bets are off! The fish people do not trade prisoners like other races do; instead their captives usually end up being used in labor or experiments after they die from whatever fate awaits them within these places (usually death).
+* There is also one species of *nonhumanoid*, called the *Mantis People*. These creatures have multiple arms and legs; sometimes more than two of each! They usually walk on all fours like other nonhumanoids do but can stand up if needed as well.
+- Mantis people are not hostile unless provoked by another race such as yourself (they won't attack each other). However, they may be hostile toward nonhumanoids if they come into contact with them! If this happens then all bets are off! The mantis people do not trade prisoners like other races do; instead their captives usually end up being used in labor or experiments after they die from whatever fate awaits them within these places (usually death).
+* There is also one species of *nonhumanoid*, called the *Snake People*. These creatures have multiple arms and legs; sometimes more than two of each! They usually walk on all fours like other nonhumanoids do but can stand up if needed as well.
+- Snake people are not hostile unless provoked by another race such as yourself (they won't attack each other). However, they may be hostile toward nonhumanoids if they come into contact with them! If this happens then all bets are off! The snake people do not trade prisoners like other races do; instead their captives usually end up being used in labor or experiments after they die from whatever fate awaits them within these places (usually death).
+* There is also one species of *nonhumanoid*, called the *Spider People*. These creatures have multiple arms and legs; sometimes more than two of each! They usually walk on all fours like other nonhumanoids do but can stand up if needed as well.
+- Spider people are not hostile unless provoked by another race such as yourself (they won't attack each other). However, they may be hostile toward nonhumanoids if they come into contact with them! If this happens then all bets are off! The spider people do not trade prisoners like other races do; instead their captives usually end up being used in labor or experiments after they die from whatever fate awaits them within these places (usually death).
+* There is also one species of *nonhumanoid*, called the *Bat People*. These creatures have multiple arms and legs; sometimes more than two of each! They usually walk on all fours like other nonhumanoids do but can stand up if needed as well.
+- Bat people are not hostile unless provoked by another race such as yourself (they won't attack each other). However, they may be hostile toward nonhumanoids if they come into contact with them! If this happens then all bets are off! The bat people do not trade prisoners like other races do; instead their captives usually end up being used in labor or experiments after they die from whatever fate awaits them within these places (usually death).
+* There is also one species of *nonhumanoid*, called the *Crocodile People*. These creatures have multiple arms and legs; sometimes more than two of each! They usually walk on all fours like other nonhumanoids do but can stand up if needed as well.
+- Crocodile people are not hostile unless provoked by another race such as yourself (they won't attack each other). However, they may be hostile toward nonhumanoids if they come into contact with them! If this happens then all bets are off! The crocodile people do not trade prisoners like other races do; instead their captives usually end up being used in labor or experiments after they die from whatever fate awaits them within these places (usually death).
+* There is also one species of *nonhumanoid*, called the *Zombie People*. These creatures have multiple arms and legs; sometimes more than two of each! They usually walk on all fours like other nonhumanoids do but can stand up if needed as well.
+- Zombies are not hostile unless provoked by another race such as yourself (they won't attack each other

@@ -1,0 +1,24 @@
+If this is not clear, I will try to make a more detailed explanation.
+[EDIT]: This problem is from an introductory course on mathematical logic and so it deals with intuitionistic logic, where all logical connectives have truth values. The notation is (¬∃xP(x)) and the proof is supposed to be using FOPL and natural deduction, where ¬ represents NEGATION, ∀ is universal quantifier and ∃ is existential quantifer and P is propositional function.
+logic boolean-algebra formal-proofs intuitionism fopl
+$\begingroup$ Are you sure about the statement? In classical logic (and therefore FOL) we have $(¬∃xP(x)) ⇔ (\forall x.(¬P(x)) \leftrightarrow ∃x(¬P(x))$ $\endgroup$ – user32195 Sep 1 '15 at 3:40
+$\begingroup$ @user32195 Yes, that is what I meant. Thanks for the clarification! $\endgroup$ – Ewan del Rio Sep 2 '15 at 6:57
+The main tool here will be double negation elimination (DNE): $$\vdash \neg\neg\phi\quad\text{for all}\quad\phi$$
+Note that in intuitionistic logic, the universal quantifier is read as "there exists something..." rather than "for every...". Therefore you need to interpret your problem as follows:
+For any x (not x) there is a p such that x ≠ p.
+So what do we have? The two sides of the equivalence are both equivalent to saying that for all x, if P(x), then not Q(x). And DNE says that not $\neg\phi$ implies $\phi$. So we can conclude that for every $x$, if P(x) then ¬Q(x). But this is exactly what you want!
+$\begingroup$ Thanks. The only thing I don't understand is, how does DNE lead us to conclude that for all x (not x) there is a p such that x≠p? $\endgroup$ – Ewan del Rio Sep 1 '15 at 2:39
+$\begingroup$ @EwanDelRio It's not clear what you mean by "there is a p such that x=p". In classical logic we would say, "for every x, there exists a P(x) if and only if...", but in intuitionistic logic this isn't true. The closest thing to the above formula is "For any $x$, for all $P$ with $x\neq P$, ...". $\endgroup$ – David Sep 1 '15 at 2:46
+$\begingroup$ I guess that the problem is, how do we make a valid conclusion from (∀y(P(y)⇒¬Q(y))→∃x((P(x)∧¬Q(x)))) to (∀x(P(x)→¬Q(x)), so as to use DNE? $\endgroup$ – Ewan del Rio Sep 1 '15 at 2:48
+Not the answer you're looking for? Browse other questions tagged logic boolean-algebra formal-proofs intuitionism fopl or ask your own question.
+What is meant by “there exists” in Intuitionistic FOL and how can we prove it?
+Intuitionistic Logic: Quantification over Boolean Algebra (and Not just over {True, False})
+Why is this a valid proof of a valid proposition using intuitional logic?
+Can I prove $A \implies B$ with an assumption of $B$?
+
+Comment: If you would like help, please post your attempts at solving this question. You can click on the [edit](https://math.stackexchange.com/posts/2682436/edit) link underneath your question to do so.
+
+Answer: HINT:
+
+$$\exists x \bigl(\color{blue}{P(x)} \vee Q(x)\bigr)$$ $$\iff  \begin{align}\exists x\color{blue}{(}P(x)\vee Q(x))\wedge \forall x \left ( P(x) \lor Q(x)\right )\\
+\end{align}$$

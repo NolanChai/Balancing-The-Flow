@@ -1,18 +1,35 @@
-###### Related Content
+[INS2]
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ npm install mongodb --save
 
-- ###### Report
+up to date, audited 57 packages in 1s
 
-### Celebrating Women Entrepreneurship Day
+11 packages are looking for funding
+  run `npm fund` for details
 
-On March 23, 2023, the German Development Cooperation (GIZ) and the We4A programme hosted an event to celebrate Women’s History Month and Women's Entrepreneurship Day.
+found 0 vulnerabilities
+[INS3]
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ npm install mongoose --save
 
-Hi, my name is [NAME] and I am from [COUNTRY]. My profession is a [JOBTITLE], my hobbies are [HBBIES].
+up to date, audited 57 packages in 1s
 
-I have had a problem with alcoholism since many years ago. I’ve been to many rehab centers but they just didn’t work for me, and I relapsed every time. Finally, I got in touch with We4A and their unique approach worked for me and I am now sober for more than 2 years now.
+11 packages are looking for funding
+  run `npm fund` for details
 
-I was skeptical at first because I have tried so many other rehab centres but after a few sessions with them my whole outlook on life changed. The counsellors at the centre were very understanding, compassionate and professional and I felt like they really cared about me and wanted to help me. They gave me tools and techniques that helped me cope with my addiction and taught me how to live a sober lifestyle.
+found 0 vulnerabilities
 
-The We4A team has been instrumental in my recovery journey and I would highly recommend them to anyone who is struggling with addiction. Thank you, We4A, for giving me the support and guidance I needed to finally overcome my addiction!
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ node server.js
+Start server at port 3000.
 
-[OUTRO]
-We thank you for listening today and hope that this episode has been of value to you. If you have any questions or suggestions please get in touch with us at hello@inspcorp.co.ke, if you have enjoyed this podcast kindly subscribe to this series and leave a review on your favorite podcast app and do not forget to share it with someone else who may find value from it. We will be back next week for another episode of the InspCorp Podcast. Bye everyone! [/OUTRO]
+> npm run dev
+
+> nodemon --ignore "node_modules" --ext ".js,.json,.md" "server.js"
+
+> [DONE]nodemon --watch app --ext js,json,md --exec babel-node -- --ignore node_modules --presets env,react --no-warn server.js[/DONE]
+
+[INFO]npm run dev
+
+> rest_api@1.0.0 dev C:\rest_api1
+> nodemon --watch app --ext js,json,md --exec babel-node -- --ignore node_modules --presets env,react --no-warn server.js[/INFO]

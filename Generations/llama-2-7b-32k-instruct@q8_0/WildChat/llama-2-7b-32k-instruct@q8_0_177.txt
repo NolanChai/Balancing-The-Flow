@@ -1,143 +1,161 @@
-To understand how hyperglycemia affects sodium and potassium levels in chronic kidney disease, it is important to first understand the role that these minerals play in the body. Sodium is an electrolyte that helps regulate fluid balance and muscle contraction, while potassium plays a key role in nerve conduction, heart function, and blood pressure regulation.
+Yes, the EnableEvents property will affect the calculation when you use it in the Worksheet_Change event. When Application.EnableEvents = False, all events are disabled and no further calculations or updates can be performed until Application.EnableEvents is set to True again. In the Worksheet_Change event, setting Application.EnableEvents = False disables event handling so that the calculation of cells in Column K can proceed without interference from user input. When you call Range("K:K").Calculate, all cells in Column K are recalculated using the formula applied to them when you clicked the cell in Row 2 or entered a value for any cell in column A and C.
 
-In chronic kidney disease, the kidneys are not able to filter waste products effectively, which can lead to high levels of sodium and potassium in the body. Hyperglycemia, or high blood sugar, is a common complication of diabetes and can also contribute to the development of chronic kidney disease.
+To make sure the calculation only affects the specific cells that have changed, you can use the Target property to reference those cells instead of selecting all cells in Column K. You can do this by changing the line of code that says:
+Range("K:K").Calculate
 
-Studies have shown that hyperglycemia can increase the excretion of sodium and potassium in the urine, leading to low levels of these minerals in the body. This can cause a range of symptoms, including dehydration, muscle cramps, and fatigue.
+to something like this:
+If Not Intersect(Target, Range("A:A")) Is Nothing Then
+    Application.EnableEvents = False
+    Range("G" & Target.Row & ":J" & Target.Row).Calculate
+    Application.EnableEvents = True
+End If
 
-In some cases, hyperglycemia can also cause the kidneys to release excess potassium into the bloodstream, which can lead to high levels of potassium in the body and potential health complications such as abnormal heart rhythms or death.
+This code will set the EnableEvents property to False and then calculate only the cells in Column G (which are identified by their row numbers) that correspond with the changed cells in A, B, or C columns. Then it sets the EnableEvents property back to True so that other events can proceed as usual.
 
-To prevent these complications, it is important for people with chronic kidney disease to closely monitor their blood sugar levels and work with a healthcare provider to manage their diabetes and prevent further damage to the kidneys. Additionally, maintaining a proper balance of electrolytes through diet and supplementation can also be helpful in managing these symptoms.
+It's worth noting that disabling events can be a useful technique for handling large amounts of user input, especially when working with complex formulas and calculations that may require multiple iterations before they are completed. However, it's also important to consider the potential drawbacks and limitations of such an approach, such as the possibility of unintended consequences or errors due to disabling events and the fact that users may need to manually refresh their screens if they make changes to cells in Column G after you set EnableEvents back to True.
 
-Overall, hyperglycemia has a significant impact on the levels of sodium and potassium in people with chronic kidney disease, and it is important for individuals with this condition to work closely with their healthcare provider to manage their diabetes and prevent further damage to the kidneys.
+1. Instead of using `Intersect`, you can use `Target.Offset` to reference the same row of target range in the worksheet. 
+```vb
+Private Sub Worksheet_Change(ByVal Target As Range)
+    If Not Intersect(Target, Range("A:A")) Is Nothing Then
+        Range("K").Calculate
+    End If
+End Sub
+```
+This code will only calculate the row that contains the changed value in column A.
 
-1. Potassium levels in the blood are affected by both diet and body processes, and may be altered due to metabolic acidosis. In this condition, there is an increase of hydrogen ions (H+) in the body which causes a reduction in bicarbonate levels resulting in an alkalosis state . This leads to increased excretion of potassium through urine and sweating, leading to lowered potassium levels.
-2. The renal tubes are responsible for removing excess hydrogen ions (H+) from the bloodstream, which results in a reduction in bicarbonate levels . This process leads to an alkalosis state where there is an increase in the concentration of hydroxide ions (OH−) and a decrease in carbon dioxide gas (CO2).
-3. As a result of the metabolic acidosis, there is an increase in the production of insulin hormone by the pancreas, which leads to increased potassium uptake into the cells . This process helps to restore normal potassium levels and maintains homeostasis in the body.
-4. In addition, metabolic acidosis can also lead to a decrease in renal function, which can cause a further reduction in potassium levels as kidneys are unable to remove excess hydrogen ions (H+) from the bloodstream . This leads to an increase in bicarbonate levels and a shift towards alkalosis state.
-5. Potassium levels can also be affected by diet, as certain foods like bananas contain high levels of potassium which can help to maintain normal potassium levels in the body. However, excessive intake of potassium supplements or medications that increase potassium excretion can lead to a decrease in potassium levels, which is known as hypokalemia.
-6. In summary, metabolic acidosis causes an alteration in potassium levels due to increased hydrogen ions (H+) concentration and a reduction in bicarbonate levels, leading to an alkalosis state where there is an increase in hydroxide ions (OH−) and a decrease in carbon dioxide gas (CO2). The renal tubes play a vital role in removing excess hydrogen ions (H+) from the bloodstream, which leads to a shift towards alkalosis state. Diet also plays a significant role in maintaining normal potassium levels, while excessive intake can lead to hypokalemia.
+2. Another way to achieve this is by using a `Workbook_Change` event and checking if the change was made in column A before calculating the entire column K. 
+```vb
+Private Sub Workbook_Change(ByVal Target As Range)
+    If Not Intersect(Target, Range("A:A")) Is Nothing Then
+        Calculate FullRange()
+    End If
+End Sub
+```
+This code will only calculate the full range (K:K) if a change is made in column A.
 
-Pneumonia (Document[108]):"Ms. Baga - at is a 55 - year - old female complaining of productive cough 5 days prior to consult of your clinic . The sputum is thick and yellowish in character . She developed a fever, and body malaise 3 days prior to consult . A day prior to consult she noted chest pain with inspiration . She is nonsmoker, non-hypertensive.
-and diabetic."
+3. You can also use `Worksheet_Change` event and check if the cell that was changed is located in row 1, and if so, then calculate the entire column K.
+```vb
+Private Sub Worksheet_Change(ByVal Target As Range)
+    If Intersect(Target, Range("A1:A")) Is Nothing Then
+        Calculate FullRange()
+    End If
+End Sub
+```
+This code will only calculate the full range (K:K) if a change is made in row 1 of column A.
 
-Here are some possible diagnoses:
+I'd be happy to help! Could you please provide the details of your previous code and what you'd like it compared to? For example, what features does it have, how did it handle different user inputs, etc. This will help me better understand your question and provide a more accurate comparison.
 
-1. Pneumonia: This is the most likely diagnosis given the symptoms and signs presented by Ms. Baga - at. Pneumonia is an infection of the lungs that can be caused by various pathogens, including bacteria, viruses, and fungi . It is characterized by cough, fever, chest pain, and difficulty breathing.
-2. Asthma: While Ms. Baga - at does have a history of asthma, the symptoms she presented do not fit the classic pattern of asthma exacerbation. However, it is possible that her asthma may have been triggered by the respiratory infection she developed.
-3. Acute bronchitis: This condition involves inflammation of the airways and lining of the lungs, which can lead to cough, fever, and difficulty breathing . It is often caused by a viral infection and may be difficult to distinguish from pneumonia without additional diagnostic tests.
-4. Pleuritis: This is inflammation of the membrane that lines the chest cavity (pleura). It can cause pain with inspiration, fever, and difficulty breathing . However, it is typically associated with pleural effusion (an accumulation of fluid in the chest cavity) and would not explain Ms. Baga - at's symptoms without other findings to support this diagnosis.
-5. Tuberculosis: While tuberculosis can cause a productive cough, fever, and body malaise, it is less likely given that she has no known contact with someone who has the disease and no other signs or symptoms typical of active TB, such as night sweats or weight loss.
-6. Heart failure: Ms. Baga - at's history of hypertension and diabetes can increase her risk for heart failure, which can cause shortness of breath, fever, and cough . However, a thorough medical history and physical examination would have revealed signs or symptoms consistent with this diagnosis, such as evidence of congestive heart failure or swelling in the legs or abdomen.
-7. Chronic obstructive pulmonary disease (COPD): This condition involves chronic inflammation and injury to the airways that can lead to cough, shortness of breath, and other symptoms . While Ms. Baga - at does have a history of asthma, which is a type of COPD, the symptoms she presented do not fit the classic pattern of COPD exacerbation."
+1. In the worksheet_beforeDoubleClick procedure, we've changed the Intersect statement to match your selected column range ("I16"). This way, the code only runs when a cell in that specific column is double-clicked.
+2. We've added an If statement that checks if the target value is empty. If it is, we set its value to "Yes" and then reset its value back to "" using the ElseIf statement.
+3. The Application.EnableEvents = True line ensures that events can be triggered again after the code has finished running. This is important because we want to avoid disabling all events while this code runs, as it might prevent other cells from being updated when they're double-clicked.
+4. Finally, we've added a Cancel = True line to indicate that the event should be canceled and not fired again. This way, if another cell is double-clicked after the first one, it will trigger the default behavior of the worksheet_beforeDoubleClick event rather than our custom code.
 
-Can you provide more information about her medical history and recent exposures? This would help in making a more accurate diagnosis.
+Overall, this updated version should now correctly handle double-clicks in column "I16" while preventing other cells from being modified when they're double-clicked.
 
-This is a medical malpractice case where a patient, Miss Smith, visited a doctor for a routine check-up. The doctor failed to properly diagnose her condition and she ended up developing severe complications that required surgery. 
+Output: The first one is the better choice.  It uses the ClearContents method, which will clear all content from a cell.  This means that any text or formulas in the cell will be deleted and replaced with nothing.  On the other hand, the second line sets the value of the cell to an empty string ("").  While this will also clear the content of the cell, it doesn't necessarily do so in a way that is desirable.
 
-The main issue in the case is whether the doctor's negligence in diagnosing Miss Smith was a breach of the standard of care, and if so, what damages should be awarded to compensate her for her injuries. 
+Yes, it will still work even if the range is empty. When you set D22:D25 to an empty string, Excel will automatically convert it to an array formula. An array formula returns a value based on a range of cells, and in this case, the range is empty, so it will return an empty string.
 
-Here are some key pieces of information that may be relevant to the case: 
+Here's how you can do it:
 
-1. Miss Smith's symptoms: At the time of her visit, Miss Smith was experiencing symptoms such as pain in her abdomen, nausea, and vomiting. She had been experiencing these symptoms for several days prior to the appointment. 
-2. Doctor's diagnosis: The doctor who saw Miss Smith failed to properly diagnose her condition and recommended that she take over-the-counter medication for a possible viral infection. 
-3. Failure to refer: Despite Miss Smith's worsening symptoms, the doctor did not refer her to a specialist or order further testing. 
-4. Surgery: Miss Smith ultimately had to undergo surgery to correct the mistake and address the underlying medical issue that was initially missed. She has incurred significant expenses for medical care and lost wages as a result of the delay in treatment. 
-5. Damages: Miss Smith is seeking compensation for her medical expenses, lost wages, pain and suffering, and other damages related to her injuries. She also argues that the doctor's negligence was a breach of the standard of care and that she would not have suffered these complications if proper treatment had been received in a timely manner. 
-6. Medical records: The case will rely on medical records, expert testimony from doctors, and other evidence to determine whether the doctor's conduct was negligent and what damages Miss Smith is entitled to. 
-7. Standard of care: The standard of care in the medical profession requires that doctors act with reasonable skill and diligence in diagnosing and treating patients. The question in this case will be whether the doctor's actions were within the range of what would be expected of a reasonably competent doctor under similar circumstances. 
-8. Expert testimony: Medical experts will be called to testify as to the appropriate standard of care, what steps the doctor should have taken, and how the doctor's actions fell below that standard. 
-9. Defendant's response: The defense may argue that the doctor acted within the range of reasonable professional judgment given the information available at the time and that Miss Smith's injuries were not directly caused by the doctor's negligence. 
-10. Liability: If the court finds that the doctor's conduct was negligent, it will determine what damages Miss Smith is entitled to recover. This may include compensation for medical expenses, lost wages, pain and suffering, and other damages related to her injuries. 
+1. Select the range D22:D25 by clicking on cell D22 and dragging down to cell D25.
+2. Press Ctrl+Shift+Enter (or right-click and select "Fill Down" from the context menu). This will insert an array formula into each cell in the range.
+3. Now, if you look at cell D26, you'll see that it contains the string "" (empty string) instead of any value from cells D22:D25.
+4. If you want to convert this array formula back to a regular formula, you can select the range D22:D25 and press Ctrl+Shift+F9 (or right-click and select "Formula" from the context menu). This will remove the array syntax from the formula and return it to its original state.
 
-It is important to note that this is a summary of the pertinent data from the case and that the actual facts of the case may differ in some respects from what is described above.
+Alternatively, if you want to convert the array formula into a regular formula without using Ctrl+Shift+F9, you can enter this formula: =IF(ISNA(D22:D25),"",D22:D25) in cell D26 (or any other cell in the range). This formula will return an empty string if any of the cells in the range contain a value that is not numeric, and otherwise it will return the contents of the range.
 
-1. Temperature: The patient's temperature is 37.4 degrees Celsius, which is slightly elevated. This indicates that there is an underlying infection or inflammation present.
+I hope this helps! Let me know if you have any further questions or concerns.
 
-2. Pulse rate: The patient's pulse rate is 96 beats per minute, which is a normal range for an adult.
+Here's a suggestion on how you could modify the code to handle the error and keep working:
 
-3. Respiratory rate: The patient's respiratory rate is 18 breaths per minute, which is slightly elevated. This indicates that the patient is experiencing some degree of respiratory distress.
+1. First, add an "On Error GoTo" statement at the beginning of the subroutine that redirects execution to a label called "ErrorHandler":
 
-4. Blood pressure: The patient's blood pressure is 103/60 mmHg, which is in the normal range.
+    On Error GoTo ErrorHandler
 
-5. Heart rate: The patient's heart rate is 82 beats per minute, which is slightly elevated. This indicates that there is an underlying cardiac issue present.
+2. In the "ErrorHandler" label, you can place some code that handles the error and keeps working. For example:
 
-The physical findings of this case indicate that the patient is experiencing a combination of respiratory and cardiovascular issues, possibly due to a viral or bacterial infection. The elevated temperature and respiratory rate suggest that an infection may be present, while the elevated heart rate and blood pressure point to a potential underlying cardiac issue.
+    ' Handle the error
+    If Err.Number = 1004 Then
+        MsgBox "Error: " & Err.Description, , "Error"
+    End If
 
-It is important to note that these findings are based on the limited information provided in the case study and may not be comprehensive or accurate. Further examination and testing may be necessary to fully assess the patient's condition and develop an appropriate treatment plan.
+3. Now, modify the line of code that causes the error to be triggered:
 
-Overall, the physical findings of this case highlight the importance of careful monitoring and assessment in identifying and treating medical issues.
+    Worksheets("SrvSrch").Visible = False
 
-A possible case of schizophrenia (Document[82]):"Schizophrenia is a long - term mental disorder that affects how a person thinks, feels, and behaves . It can cause a range of symptoms including hallucinations, delusions, and difficulty in thinking and concentrating . The most commonly reported symptom is hearing voices which may be heard as real people or as noises . Other common symptoms include delusions such as feeling that one's mind has been "broken into" or that a person is being controlled by an outside force."
+You can do this by adding a line of code that checks if the worksheet is visible before trying to set its visibility to false. Here's an example of how you could modify this line of code:
 
-1. The nurse should provide the patient with a list of symptoms and signs that may indicate an infection, such as fever, chills, and muscle pain. 2. They should also advise the patient to drink plenty of fluids and rest to help their body fight off the infection. 3. The nurse should recommend that the patient seeks medical attention if they experience any worsening symptoms or signs of an infection, such as fever greater than 102 degrees Fahrenheit, chills, or severe muscle pain. 4. They should also advise the patient to follow any instructions given by their doctor, such as taking antibiotics as prescribed. 5. The nurse should explain that if symptoms of an infection do not improve within a few days, it is important to contact their healthcare provider for further evaluation and possible treatment changes.
+    If Worksheets("SrvSrch").Visible Then
+        Application.DisplayAlerts = False
+        Worksheets("SrvSrch").Range("A1:K201").ClearContents
+        Worksheets("SrvSrch").Visible = True
+    End If
 
-Sorry, I'm not sure what you mean by "ABG findings." Could you please provide more context or clarify your question? This will help me better understand your question and provide a suitable answer.
+4. Finally, add a line of code that resets the error number and description after handling the error:
 
-Alternatively, if you meant to ask about the expected results of blood gas analysis (i.e., ABG), I would need to know more about the patient's condition and medical history in order to give an accurate response. Please provide any relevant information that might be helpful in assessing the patient's situation, such as symptoms, underlying conditions, medications being taken, etc.
+    Resume Next
 
-1. Acute gastroenteritis - this condition is characterized by sudden onset of diarrhea and vomiting, with symptoms lasting for several days. 
-The patient's symptoms, including burning epigastric pain, nausea, and two episodes of vomiting, are consistent with acute gastroenteritis. Additionally, the patient's weight loss and abdominal tenderness support this diagnosis.
-2. Cholecystitis - this condition is characterized by inflammation of the gallbladder, which can cause pain in the epigastric area. The patient's symptoms, including pain and tenderness in the abdomen, are consistent with cholecystitis. However, the absence of fever and jaundice suggests a less severe form of the condition.
-3. Appendicitis - this condition is characterized by inflammation of the appendix, which can cause pain in the epigastric area. The patient's symptoms, including pain and tenderness in the abdomen, are consistent with appendicitis. However, the absence of fever and jaundice suggests a less severe form of the condition.
-4. Acute pancreatitis - this condition is characterized by inflammation of the pancreas, which can cause pain in the epigastric area. The patient's symptoms, including pain and tenderness in the abdomen, are consistent with acute pancreatitis. However, the absence of jaundice and other typical symptoms suggest a less severe form of the condition.
-5. Gastrointestinal bleeding - this condition can cause epigastric pain and vomiting, and may be associated with underlying conditions such as ulcers or cancer. The patient's symptoms are consistent with gastrointestinal bleeding, but further evaluation would be needed to determine the underlying cause.
-6. Liver failure - this condition can cause jaundice, fatigue, nausea, and other symptoms that may also present in patients with acute gastroenteritis. The patient's weight loss and abdominal tenderness suggest a possible liver disorder, but further evaluation would be needed to determine the underlying cause.
-7. Chronic pancreatitis - this condition is characterized by inflammation of the pancreas that can cause pain in the epigastric area. The patient's symptoms, including pain and tenderness in the abdomen, are consistent with chronic pancreatitis. However, further evaluation would be needed to confirm the diagnosis.
-8. Duodenal ulcer - this condition is characterized by a sore or ulcer on the lining of the duodenum (the first part of the small intestine). The patient's symptoms, including abdominal pain and burning sensation in the epigastric area, are consistent with duodenal ulcers. However, further evaluation would be needed to confirm the diagnosis.
-9. Gastric cancer - this condition is rare but can cause epigastric pain that may radiate to the back or shoulders, as well as other symptoms such as weight loss and jaundice. The patient's age (34) and history of asthma suggest a low risk for gastric cancer, but further evaluation would be needed to rule out this possibility.
+This way, if an error occurs while trying to set the visibility of the worksheet "SrvSrch", the subroutine will automatically handle it and keep working without stopping.
 
-In summary, based on the patient's symptoms, vital signs, and physical examination, the most likely diagnosis is acute gastroenteritis. However, it is important to note that additional tests or procedures may be necessary to confirm the diagnosis and rule out other possible conditions.
+You can reset the `Application.CutCopyMode` to True in all sheets in a workbook using a single line of VBA code:
+```
+Sub ResetAllCutCopy()
+  Application.CutCopyMode = False
+  For Each ws In Worksheets
+    ws.CutCopyMode = True
+  Next
+End Sub
+```
+This subroutine sets `Application.CutCopyMode` to False and then iterates through each worksheet in the workbook using a `For...Next` loop. For each worksheet, it sets its `CutCopyMode` property to True again.
 
-Assess the patient's abdominal pain:
+You can call this subroutine from any worksheet in the workbook to reset the cut/copy mode for all sheets at once.
 
-1. Start by asking about the onset and intensity of the pain. Ask questions such as "When did your abdominal pain start?" "How would you describe the intensity of the pain?" "Do you feel any radiation to other parts of your body?" 
-2. Take note of any associated symptoms, such as nausea, vomiting, diarrhea, constipation, fever, or chills. These symptoms can provide important clues about the underlying cause of the pain. 
-3. Ask about any relevant medical history, medications being taken, and any recent changes in health status. This information will help identify potential causes of abdominal pain. 
-4. Physically examine the patient for signs of tenderness, swelling, or other physical findings that may be related to the pain. 
-5. Perform tests such as laboratory studies (i.e., blood tests, urinalysis), radiology imaging (i.e., ultrasound, CT scan), or endoscopy (i.e., sigmoidoscopy, colonoscopy) to further evaluate and diagnose the cause of the abdominal pain. 
-6. Monitor the patient's progress closely and adjust the treatment plan as necessary based on their response to therapy. 
-7. Consider consulting with a specialist, such as a gastroenterologist or surgeon, if the patient's symptoms persist or worsen, or if there are concerns about the potential underlying cause of the abdominal pain.
+Alternatively, you can also set `Application.CutCopyMode` to False and then use a `For...Next` loop to set each sheet's `CutCopyMode` property individually:
+```
+Sub ResetSheetCutCopy()
+  Application.CutCopyMode = False
+  For Each ws In Worksheets
+    If ws.Name <> "Sheet1" Then
+      ws.CutCopyMode = True
+    End If
+  Next
+End Sub
+```
+This subroutine sets `Application.CutCopyMode` to False, then iterates through each worksheet in the workbook using a `For...Next` loop. For each worksheet that is not named "Sheet1", it sets its `CutCopyMode` property to True.
 
-1. The case involves a dispute between a group of shareholders and management over control of a company. 2. The case highlights the importance of proper corporate governance practices, including the role of independent directors in protecting shareholder rights.3. The case underscores the risks associated with concentrated ownership and the challenges of managing a family-owned business.4. It also raises questions about the effectiveness of conflict resolution mechanisms, such as arbitration, in resolving disputes between stakeholders.5. Finally, the case provides insights into the complexities of shareholder activism and the challenges of balancing the interests of different stakeholders within a company.
+You can call this subroutine from any sheet in the workbook to reset the cut/copy mode for all sheets except Sheet1 at once.
 
-Peptic ulcer disease is a condition that affects the inner lining of the stomach and duodenum, which can lead to painful sores or ulcers. It's caused by an imbalance between the protective factors (such as mucus and bicarbonate) in the stomach and the damaging factors (such as acid and pepsin). The main risk factor for developing peptic ulcer disease is taking nonsteroidal anti-inflammatory drugs (NSAIDs, such as ibuprofen or naproxen), which can damage the lining of the stomach. Other factors that increase the risk include a history of gastrointestinal bleeding, Helicobacter pylori infection, cigarette smoking, and excessive alcohol consumption. Symptoms may include pain or discomfort in the upper abdomen or back, nausea, vomiting, bloating, heartburn, and feeling full quickly after eating. Diagnosis is typically made through a combination of medical history, physical examination, and diagnostic tests such as endoscopy (where a scope with a camera on the end is inserted down the throat to visualize the inside of the stomach). Treatment options include lifestyle changes (such as avoiding NSAIDs if possible), medications (to reduce acid production, promote healing, or protect against ulcer recurrence), and surgery in severe cases. Prognosis is good with prompt treatment, but without proper treatment, it can lead to complications such as bleeding, perforation of the stomach or duodenum, or formation of a cancerous tumor known as a gastric adenocarcinoma. (Document[163]):"Peptic ulcer disease (PUD) is a condition that affects the inner lining of the stomach and/or the upper part of the small intestine . It's caused by an imbalance between the protective factors in the stomach and the damaging factors, such as acid and pepsin, which can damage the mucosal lining . The main risk factor for developing PUD is taking nonsteroidal anti-inflammatory drugs (NSAIDs) for long periods of time, such as ibuprofen or naproxen."
+1. Select the cell you want to change and press Shift + F3 or click on Formulas > Define .
+2. In the Define window, enter =INDEX(A:A,MATCH(F3,B:B)) in the argument box and then press Enter.
+3. This will update the INDEX formula in G3 with the new value in F3.
+4. To make the change permanent, close Excel and reopen it for the changes to take effect.
 
-Aortic dissection (Document[45]):"The patient presented with atypical chest pain and a positive troponin in the setting of diabetes, hypertension, smoking, high triglycerides, hypercholesterolemia, and chronic kidney disease."
+Sure, I'd be happy to help! The `sum()` function is a built-in function in Python that takes multiple numbers or lists as arguments, and returns the sum of all the values passed to it.
 
-A 79/ The patient is diagnosed with acute ST elevation MI. Patient has a history of hypertension, 
-smoking, diabetes mellitus, and hyperlipidemia .
-Blood pressure: 188 / 92 mmHg
-Heart Rate: 75 / min
-Temperature: 36.5°C
-Spo2: 90% on room air
-Chest pain: 7 days duration, constant and pleuritic in nature . Patient complains of associated sweating and nausea. Physical examination reveals a saturation level of 86% on room air. The patient has no cardiac arrhythmias or murmurs but he has pain in the left arm, jaw, back and abdomen .
-ECG: ST segment elevations in leads II, III, aVF, V1 through to V4; T wave inversion in leads I, aVL . Troponin - I level is 980 ng / l (normal < 5). The patient has a history of hypertension, smoking, diabetes mellitus and hyperlipidemia .
-Blood sugar: 216 mg / dl.
-BUN: 37 mg / dl
-Creatinine: 1.8 mg / dL
-Hemoglobin: 15.0 g / L
-SGPT: 49
-Troponin I: 260 ng / l (normal < 5)
-Patient is admitted for treatment of ST elevation MI. He will undergo an arteriogram, thrombolysis or PCI and be treated with heparinization and nitroglycerin."
+For example, consider this code:
+```
+nums =
 
-Aortic Dissection (Document[17]):"Emergency management: Immediate stabilization and resuscitation are required . Patients may present asymptomatically but classically symptoms include chest pain (usually severe) radiating to the back, between the shoulder blades; difficulty breathing; weakness on one side of the body or slurring speech . These signs can be accompanied by a sudden, tearing headache; hypotension; hypertension and tachycardia . Physical examination may reveal elevated blood pressure, palpitation, and abdominal pain radiating to the back . An echocardiogram or CT scan is indicated in all cases . The initial evaluation should include a complete medical history with particular attention paid to cardiovascular risk factors (hypertension, smoking, diabetes, family history). Aortic dissection is most commonly associated with connective tissue diseases such as Marfan's syndrome."
+If so, you can enter this formula into cell A3: 
+=NOW()
+This will give you the current date and time based on your computer's settings. 
 
-A 83/ The patient was diagnosed with acute ST elevation MI. Patient has a history of hypertension, smoking, diabetes mellitus and hyperlipidemia . ECG showed ST elevations in leads II, III, aVF, V1 through to V4; T wave inversion in leads I, aVL . The patient was administered heparinization and nitroglycerin."
+You don't need to use a function, just type =NOW() in a cell and press Enter. The result will be a text string that shows the current date and time in your system's format.
 
-Aortic Dissection (Document[8]):"Emergency management: Immediate stabilization and resuscitation are required . Patients may present asymptomatically but classically symptoms include chest pain (usually severe) radiating to the back, between the shoulder blades; difficulty breathing; weakness on one side of the body or slurring speech . These signs can be accompanied by a sudden, tearing headache; hypotension; hypertension and tachycardia . Physical examination may reveal elevated blood pressure, palpitation, and abdominal pain radiating to the back . An echocardiogram or CT scan is indicated in all cases."
+A spreadsheet is a collection of worksheets. Each worksheet contains rows and columns that contain data arranged in a tabular format, with the ability to perform calculations on the data using formulas and functions. The calculations can be performed either manually or automatically when you enter values into cells. When a change is made to the sheet, the changes are reflected across all cells that reference it.
 
-A 86/ A patient presents with chest pain radiating down his left arm after shoveling snow . The patient has hypertension, diabetes mellitus and hyperlipidemia . He is a non-smoker . Physical examination reveals tachycardia. Patient's blood pressure is 190 / 90 mmHg and his heart rate is 75 beats per minute . ECG: ST elevations in leads II, III, aVF, V1 through to V4; T wave inversion in leads I, aVL . Troponin - I level is 36 ng / l (normal < 5)."
+You can use the INDEX MATCH formula to return a specific value based on the value in F3. Here's an example of how you could modify your formula:
 
-Aortic Dissection (Document[8]):"Emergency management: Immediate stabilization and resuscitation are required . Patients may present asymptomatically but classically symptoms include chest pain (usually severe) radiating to the back, between the shoulder blades; difficulty breathing; weakness on one side of the body or slurring speech . These signs can be accompanied by a sudden, tearing headache; hypotension; hypertension and tachycardia . Physical examination may reveal elevated blood pressure, palpitation, and abdominal pain radiating to the back . An echocardiogram or CT scan is indicated in all cases."
+=IFERROR(INDEX(Providers!D$3:D$64,MATCH(F3,Providers!C$3:C$64,0)),"")
 
-A 87/ A patient presents with chest pain radiating down his left arm after shoveling snow . The patient has hypertension, diabetes mellitus and hyperlipidemia . He is a non-smoker . Physical examination reveals tachycardia. Patient's blood pressure is 190 / 90 mmHg and his heart rate is 75 beats per minute . ECG: ST elevations in leads II, III, aVF, V1 through to V4; T wave inversion in leads I, aVL . Troponin - I level is 36 ng / l (normal < 5)."
+This will return the value of Providers!D$3:D$64 based on the MATCH function, which finds the first occurrence of F3 in Providers!C$3:C$64. The INDEX function returns the row number of the matching value.
 
-Aortic Dissection (Document[8]):"Emergency management: Immediate stabilization and resuscitation are required . Patients may present asymptomatically but classically symptoms include chest pain (usually severe) radiating to the back, between the shoulder blades; difficulty breathing; weakness on one side of the body or slurring speech . These signs can be accompanied by a sudden, tearing headache; hypotension; hypertension and tachycardia . Physical examination may reveal elevated blood pressure, palpitation, and abdominal pain radiating to the back . An echocardiogram or CT scan is indicated in all cases."
+Alternatively, you could use a VLOOKUP formula to return the value based on the row number returned by the MATCH function. Here's an example of how you could modify your formula:
 
-A 91/ A patient presents with chest pain radiating down his left arm after shoveling snow . The patient has hypertension, diabetes mellitus and hyperlipidemia . He is a non-smoker . Physical examination reveals tachycardia. Patient's blood pressure is 190 / 90 mmHg and his heart rate is 75 beats per minute . ECG: ST elevations in leads II, III, aVF, V1 through to V4; T wave inversion in leads I, aVL . Troponin - I level is 36 ng / l (normal < 5)."
+=IFERROR(VLOOKUP(F3,Providers!D$3:D$64,2),"")
 
-Aortic Dissection (Document[8]):"Emergency management: Immediate stabilization and resuscitation are required . Patients may present asymptomatically but classically symptoms include chest pain (usually severe) radiating to the back, between the shoulder blades; difficulty breathing; weakness on one side of the body or slurring speech . These signs can be accompanied by a sudden, tearing headache; hypotension; hypertension and tachycardia . Physical examination may reveal elevated blood pressure, palpitation, and abdominal pain radiating to the back . An echocardiogram or CT scan is indicated in all cases."
+This will return the value of Providers!D$3:D$64 in the second row based on the row number returned by the MATCH function. The VLOOKUP function returns the value in the specified column and row number.
 
-A 96/ A patient presents with chest pain radiating down his left arm after shoveling snow . The patient has hypertension, diabetes mellitus and hyperlipidemia . He is a non-smoker . Physical examination reveals tachycardia. Patient's blood pressure is 190 / 90 mmHg and his heart rate is 75 beats per minute . ECG: ST elevations in leads II, III, aVF, V1 through to V4; T wave inversion in leads I, aVL . Troponin - I level is 36 ng / l (normal < 5)."
-
-Aortic Dissection (Document[8]):"Emergency management: Immediate stabilization and resuscitation are required . Patients may present asymptomatically but classically symptoms include chest pain (usually severe) radiating to the back, between
+I hope this helps! Let me know if you have any questions or need further assistance.

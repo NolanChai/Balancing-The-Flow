@@ -1,0 +1,14 @@
+To create a button that displays required values for you through a query box in Excel, follow these steps:
+
+1. Open Excel and navigate to the “View” tab.
+2. Click on the “Macros” button and select “Record Macro.”
+3. In the “Macro name” field, enter a descriptive name for your macro.
+4. Select where you want to place the button. You can click anywhere in the worksheet or choose from one of the pre-defined buttons on the ribbon.
+5. Click on the “Button” button and draw the shape for your button using the cursor.
+6. Right-click on the button and select “Assign Macro.”
+7. Select your macro from the dropdown menu and click “OK.”
+8. In cell A1, enter the query or text box that will display the required values. For example, you can type =IF(A2=1,"Value 1",IF(A2=2,"Value 2","")). Replace "Value 1" and "Value 2" with your desired values.
+9. Press “Ctrl+Shift+Enter” to enter the formula for the entire column.
+10. Click on the button you created earlier and the required values will be displayed in the query or text box.
+
+Note: Make sure that you have the necessary data in column A for your formula to work properly. You can adjust the formula as needed to suit your specific requirements.

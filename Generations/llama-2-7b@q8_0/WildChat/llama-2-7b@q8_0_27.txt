@@ -1,0 +1,37 @@
+ssh客户端自动执行了"ssh-keyscan"命令，并输出到标准输入中。
+
+```bash
+[root@localhost knows_hosts]# ssh-keyscan -P 2200 user@192.168.103.65
+
+user@192.168.103.65's password:
+ssh-rsa AAAAXXXXX XXXXYYYYYYYYYYYY
+
+[root@localhost knows_hosts]# ssh-keyscan -P 2200 user@192.168.103.65
+```
+
+```
+$ ssh -T 192.168.0.70
+Hi 敏志, you're already logged in as root on 192.168.0.70!
+
+The authenticity of host '192.168.0.70 (192.168.0.70)' can't be established.
+ECDSA key fingerprint is 3c:be:5f:44:ad:b9:c8:4a:bb:da:fd:d7:ff:3e:f6:2a.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.0.70' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-56-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/stable/ubuntu-help/
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage for Cloud, http://cloud.ubuntu.com
+Last login: Tue Apr  5 20:39:47 2022 from 192.168.0.161
+root@ip-172-31-16-118:/home/zhang#
+```
+
+这个问题在centos 8.3之前出现。由于采用了glibc 2.37, 因此使用ssh-keygen -R <IP_address>时会提示mkstemp: No such file or directory的问题。
+
+### Resolution:
+Centos8.3之前废止了mkstemp命令，因此，为了解决这个问题，可以直接改用其他方法创建temp文件, 如下：
+```bash
+touch /tmp/ssh-XXXXXX.XXXXXXX; mv /tmp/ssh-XXXXXX.XXXXXXX ~/.ssh/authorized_keys && rm -f /tmp/ssh-XXXXXX.XXXXXXX # 先将temp文件移动到HOME目录，然后删除原文件
+```

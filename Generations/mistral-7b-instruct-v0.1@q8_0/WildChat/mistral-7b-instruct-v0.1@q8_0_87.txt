@@ -1,0 +1,41 @@
+To find the time rate of change of the total resistance R(x, y, z), we can use the formula:
+
+R'(x, y, z) = (∂R/∂x)(∂x/∂t) + (∂R/∂y)(∂y/∂t) + (∂R/∂z)(∂z/∂t)
+
+Here, R(x, y, z) is the total resistance function of the circuit, and x, y, and z are its individual resistances. ∂R/∂x, ∂R/∂y, and ∂R/∂z are the partial derivatives of R with respect to x, y, and z respectively.
+
+We are given that x = 100 Ω, y = 200 Ω, and z = 300 Ω. Also, x is increasing at a rate of 2 Ω/min, y is increasing at the rate of 1 Ω/min, and z does not change. Therefore, we can substitute these values into the above formula to get:
+
+R'(x, y, z) = ((∂R/∂x)(∂x/∂t)) + (∂R/∂y)(∂y/∂t) + (∂R/∂z)(∂z/∂t)
+
+= ((∂R/∂x)(2)) + (∂R/∂y)(1) + (∂R/∂z)(0)
+
+= 2(∂R/∂x) + ∂R/∂y
+
+To find ∂R/∂x, we can use the expression for R(x, y, z):
+
+R(x, y, z) = ( xyz / (yz + zx + xy )).
+
+Taking partial derivatives with respect to x, we get:
+
+∂R/∂x = ∂[xyz/(yz+zx+xy)]/∂x
+= [z(yz+zx+xy) - xy(yz+zx+xy)] / ((yz+zx+xy)^2)
+
+To find ∂R/∂y, we can use the expression for R(x, y, z):
+
+∂R/∂y = ∂[xyz/(yz+zx+xy)]/∂y
+= [zy(yz+zx+xy) - xy(zy+zx+xy)] / ((yz+zx+xy)^2)
+
+Now, we can substitute these expressions for ∂R/∂x and ∂R/∂y into the formula for R'(x, y, z):
+
+R'(x, y, z) = 2[(z(yz+zx+xy) - xy(yz+zx+xy))/(yz+zx+xy)^2] + [zy(yz+zx+xy) - xy(zy+zx+xy)] / ((yz+zx+xy)^2)
+= (2zyz(yz+zx+xy) - 2xyz(zy+zx+xy))/((yz+zx+xy)^3) + (zy(yz+zx+xy) - xy(zy+zx+xy)) / ((yz+zx+xy)^2)
+= [(yz^2-xz^2)(yz+zx+xy)-zxy(yz+zx+xy)] / ((yz+zx+xy)^3) + [zy(yz+zx+xy) - xy(zy+zx+xy)]/((yz+zx+xy)^2)
+
+Taking partial derivatives with respect to t, we get:
+
+∂R'(x, y, z)/∂t = ∂[(yz^2-xz^2)(yz+zx+xy)-zxy(yz+zx+xy)]/∂t + ∂[zy(yz+zx+xy) - xy(zy+zx+xy)]/∂t
+= (z(yz^2-xz^2) + zxy)(1) + (x(zy^2-zx^2))(1) + (-zxy)(1) + (-yz)(xy) + (-zx)(yz)
+= 2z(yz^2-xz^2) - zxy - xyz - xz^2 - yz^2
+
+Therefore, the time rate of change of the total resistance at this time is R'(x, y, z) = 2z(yz^2-xz^2) - zxy - xyz - xz^2 - yz^2.

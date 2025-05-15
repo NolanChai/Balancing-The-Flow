@@ -1,23 +1,43 @@
-User: "数据资产的类资产证券化设计路径，并举例说明。"
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = 帮我设计一个潮玩IP形象，炫酷一点，财神，看着很富有，带背景
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
 
-Assistant: "数据资产证券化是指将数据资产转化为可交易的证券产品，使其具有流动性和价值。以下是数据资产证券化的设计路径：
+Assistant: "/imagine prompt: a futuristic cyberpunk cityscape, towering skyscrapers with neon lights and holographic advertisements, flying cars zooming through the air, a dense and bustling metropolis, dark and gritty alleyways, steam rising from vents in the ground, a monorail passing overhead, reflecting the city's advanced technology, captured with a Sony Alpha A7R IV camera, 24mm lens, wide-angle composition showcasing the city's scale and complexity, in a style reminiscent of Blade Runner's dystopian atmosphere. --ar 16:9 --v 5
 
-1. 确定数据资产：首先需要确定哪些数据资产适合证券化。可以考虑具有稳定和可观的价值的数据资产，如公司的销售数据、客户数据、市场数据等。
+/imagine prompt: a majestic mountain range, snow-capped peaks stretching into the distance, lush green valleys below, a crystal-clear lake reflecting the towering mountains, surrounded by dense forests, a peaceful and serene landscape, birds soaring in the sky, captured with a Canon EOS 5D Mark IV camera, 70-200mm lens, telephoto composition highlighting the grandeur of the mountains, capturing the sense of awe and tranquility, in a style reminiscent of Ansel Adams' iconic nature photography. --ar 3:2 --v 5
 
-2. 评估价值：对所选的数据资产进行评估，确定其价值。可以使用传统的财务指标或者专门的数据评估方法来确定数据资产的价值。
+/imagine prompt: an enchanting underwater scene, vibrant coral reefs teeming with colorful fish and marine life, sunlight filtering through the crystal-clear water, creating a mesmerizing play of light and shadows, a divers exploring the depths, surrounded by the beauty of the ocean, capturing the sense of wonder and awe, captured with a GoPro Hero 9 camera, underwater housing, wide-angle composition showcasing the diversity of marine life, in a style reminiscent of National Geographic's stunning underwater photography. --ar 16:9 --v 5
 
-3. 设计证券产品：根据数据资产的特性和市场需求，设计适合的证券产品。可以考虑发行股票、债券或者其他金融衍生品，以满足不同投资者的需求。
-
-4. 打包和发行：将相似的数据资产打包成证券产品，并在证券市场上发行。可以选择公开发行或者私募发行的方式，根据市场需求和资产规模来确定。
-
-5. 交易和流动性：确保数据资产证券产品具有足够的流动性，方便投资者交易。可以通过在交易所上市、提供流动性支持或者引入市场做市商等方式来增加证券产品的流动性。
-
-6. 监管和风险控制：建立监管机制，确保数据资产证券化的合规性。同时，需要对可能存在的风险进行评估和控制，以保护投资者的利益。
-
-举例说明：假设某公司拥有大量的客户数据，包括消费习惯、喜好等信息，可以将这些数据资产进行证券化。该公司评估客户数据的价值，并设计了一种基于该数据的衍生产品，即客户数据权益证券。
-
-该公司将客户数据按不同特征进行分类，如年龄、性别、地区等，然后将相似的客户数据打包成不同的证券产品。投资者可以选择购买特定的证券产品，获得相应的客户数据权益。
-
-这些客户数据权益证券可以通过交易所进行交易，投资者可以根据自己的需求买入或者卖出。同时，该公司还提供了流动性支持和市场做市商，以提高证券产品的流动性。
-
-监管部门对客户数据权益证券进行监管，并确保该证券产品的合规性。同时，该公司也会对客户数据的隐私和安全进行严格的管理和控制，以保护投资者和客户的利益。"
+/imagine prompt: a whimsical fantasy forest, towering ancient trees with twisting branches, covered in lush foliage and delicate flowers, sunlight filtering through the canopy, casting a soft and ethereal glow, mythical creatures such as unicorns and fairies frolicking in the forest, a sense of magic and enchantment in the air, captured with a Fujifilm X-T4 camera, 35mm lens, medium-close composition focusing on the interaction between the creatures and nature, in a style reminiscent of Brian Froud's enchanting fairy tale illustrations. --ar 4:3 --v 5"

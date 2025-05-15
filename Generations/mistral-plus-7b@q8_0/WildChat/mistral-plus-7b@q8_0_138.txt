@@ -1,1 +1,28 @@
-Streaming services are becoming the primary way that people listen to music. They offer easy access to an almost infinite library of songs, and they allow listeners to enjoy their favorite artists without having to buy a physical copy of their album. However, streaming services have had some negative impacts on the music industry, particularly for independent musicians who rely heavily on royalties to make a living. Streaming services often pay artists a fraction of what they would receive from a sale of their song or album. This means that many artists are struggling financially due to low royalty payments and difficulty monetizing their content on streaming platforms like Spotify.
+The first thing you do is create a new project, in the New Project window, choose Blank. Name your new project PPT. Then add a new form named MainForm to your project. After that, drag the following controls from the Toolbox and drop them on your form:
+
+1. TextBox (label)
+2. CommandButton (button)
+3. ComboBox
+4. ListBox
+5. OptionButton
+6. CheckBox
+7. ScrollBar (horizontal)
+
+Now resize, rename and place these controls on the MainForm as shown in the screenshot below.
+
+Next, set the following properties for each of the controls:
+
+1. TextBox – Name = txtTitle, Left = 90, Top = 25, Width = 100, Height = 30. Set its Text property to “Enter Title”.
+2. CommandButton – Name = btnCreatePPT, Left = 470, Top = 65, Width = 80, Height = 30, Caption = Create PPT.
+3. ComboBox – Name = cmbSlides, Left = 10, Top = 90, Width = 100, Height = 25. Set its Items property to (1, 2, 3, 4, 5).
+4. ListBox – Name = lstSlideText, Left = 10, Top = 125, Width = 100, Height = 150.
+5. OptionButton – Name = optStandard, Left = 60, Top = 220, Text = “Standard”. Set its Value property to True.
+6. CheckBox – Name = chkBorders, Left = 240, Top = 220, Caption = Add Borders. Set its Value property to False.
+7. ScrollBar – Name = sclFontSize, Left = 200, Top = 350, Width = 100, Height = 30. Set its Min property to 8 and Max property to 36.
+
+[IMG][/IMG]
+What is the difference between "cannot" and "can't"? What are the meanings of these words? How are they used in a sentence?
+
+Example:
+I cannot go to the party tonight, I have an exam tomorrow.
+Can't means the same as "cannot". The difference between them is that cannot is used as a negative form of can, and can't is its shortened form. Both are used to express inability or lack of permission.

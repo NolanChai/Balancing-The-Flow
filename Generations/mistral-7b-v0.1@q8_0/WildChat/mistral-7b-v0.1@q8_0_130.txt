@@ -1,77 +1,90 @@
-[B]Concept List[/B]:
-                                                        [list][*]A beautiful woman in a coffee shop.[*]An elegant and sophisticated woman in a cafe, sipping on a cup of steaming coffee.
-[*]A woman sitting at a table, reading a book while enjoying her coffee.
-[*]A woman chatting with friends or colleagues while taking a break from work.
-[*]A woman relaxing with a cup of coffee and a magazine in a comfortable armchair.
-[*]A woman lost in thought as she enjoys her coffee.[*]Cute dogs on the street.
-                                                        [*]Adorable puppies playing together outdoors.
-[*]Dogs sitting at a cafe, waiting for their owners to arrive.
-[*]A dog walking its owner down a busy street.
-[*]A group of dogs lounging in the park enjoying the sunshine.[*]Cute animals in the zoo.
-[*]Giraffes and elephants interacting with each other in their enclosures.
-[*]Penguins waddling around their habitat, taking a break from swimming.
-[*]A flock of birds soaring through the sky above the enclosures.[*]Space exploration.
-                                                        [*]Scenes from outer space and deep-space missions.
-[*]Astronauts exploring distant planets and moons.
-[*]A close-up of a star or nebula, revealing its intricate details.
-[*]A spaceship entering the atmosphere of another planet.[*]Historical artifacts.
-                                                        [*]Ancient ruins and artifacts from ancient civilizations.
-[*]Treasures unearthed during archaeological excavations.
-[*]Museum exhibits showcasing priceless relics from the past.
-[*]Historical events depicted through paintings or sculptures.[*]Food photography.
-                                                        [*]Close-up shots of delicious meals, focusing on textures and flavors.
-[*]A chef preparing a gourmet meal in their kitchen.
-[*]A table set with beautifully arranged food and decorations.
-[*]A close-up of a freshly baked cake or pastry.[*]Fantasy landscapes.
-                                                        [*]Magical forests, enchanted castles, and mythical creatures in a fantasy world.
-[*]A scene from an epic battle between heroes and villains.
-[*]A wizard's study filled with books and magical artifacts.[*]Abstract art.
-                                                        [*]Colorful and imaginative paintings with abstract shapes and forms.
-[*]Collages and mixed media compositions combining different elements.
-[*]Artistic renderings of music, sound waves, and other audio phenomena.[*]Portraits of famous personalities.
-                                                        [*]Painted or photographed portraits of historical figures, artists, and icons.
-[*]Close-up shots of a subject's eyes or facial features.
-[*]A portrait series depicting different stages of the subject's life.[*]Natural landscapes.
-                                                        [*]Stunning sunsets over serene bodies of water.
-[*]Vast mountain ranges towering over lush green forests.
-[*]A coastal scene with clear blue waters and sandy beaches.[*]Cityscapes at night.
-                                                        [*]The vibrant lights of a bustling city after dark.
-[*]A panorama view of the city's skyline lit up by neon signs and billboards.
-[*]A shot of the streets with cars whizzing past and pedestrians on the sidewalk.[*]Cinematic scenes from movies and TV shows.
-                                                        [*]Dramatic shots of actors in action sequences, close-ups of their emotional expressions.
-[*]Scenes that capture the mood and atmosphere of a specific genre or theme.
-[*]A recreation of iconic moments from popular films.[*]Midjourney prompts with unique and imaginative concepts.
-[/list][B]Prompt Structure:[/B]
-                                                    [quote="Midjourney"]Imagine prompt: [1], [2], [3], [4], [5], [6], [7] --ar [8] --v [9]
-                                                        [list][*]Instructions: Follow this structure for your prompts.
-                                                    [B][1][/B]: Use this line to describe the subject of your prompt. Include specific details about the scene, objects, characters, or any other relevant information. Be as detailed as possible, and try to evoke a clear mental image in your reader's mind.
-                                                        [B][2][/B]: This line should provide a more elaborate description of [1], expanding on the details and adding any additional elements that you want to include in the scene. Focus on the setting, mood, atmosphere, or any specific features that make this scene unique.
-[*]Examples:
-                                                        - A cozy living room with plush couches, a warm fireplace, and soft lighting from lamps and candles.
-- A bustling city street lined with tall buildings, busy pedestrians, and vibrant neon signs.
-- An ancient castle towering over a lush green field, surrounded by thick forests and winding paths.
-                                                        [B][3][/B]: Use this line to describe the environment in which your subject is located. Include details about the surroundings, such as the terrain, weather, or any unique features of the setting that contribute to the overall atmosphere of the scene.
-[*]Examples:
-- A peaceful lake surrounded by tall trees and rolling hills.
-- A desert landscape with sand dunes, cacti, and a clear blue sky.
-- A misty forest filled with dense foliage and a winding river.
-                                                        [B][4][/B]: Include composition details in this line. Think about the placement of objects within your scene and how they contribute to the overall balance and aesthetics of the image. Consider factors such as lighting, perspective, and framing to create a visually appealing composition.
-[*]Examples:
-- A wide shot of a majestic waterfall with a river snaking through the foreground and tall trees lining the banks.
-- A close-up of a intricate flower with soft light from the sun shining on its petals, creating a halo effect.
-- A group shot of several people standing in front of a picturesque mountain range, capturing their joyous expressions.[*]Use this line to describe the mood or atmosphere that you want to convey through your image. Include details about the emotions evoked, the tone, and any other aspects that contribute to creating a specific ambiance within your scene.
-[*]Examples:
-                                                        - A sense of tranquility and peace, with gentle waves lapping against a sandy shore and a soft breeze blowing through the palms.
-- A feeling of excitement and anticipation as a group of friends gather around a bonfire under the starry night sky.
-- A sense of mystery and intrigue as a lone figure stands silhouetted in front of an ancient ruin, surrounded by shadows.
-                                                        [B][6][/B]: Use this line to describe the style or genre that you want your image to emulate. Think about the specific elements, such as color palette, lighting techniques, and composition styles, that characterize a particular style or genre of art.
-[*]Examples:
-                                                        - Realistic photography with vibrant colors and sharp details, capturing the essence of a real-life scene.
-- A painting in a realistic style with soft brushstrokes and muted tones, creating a dreamlike quality to the image.
-- An impressionist painting with blurred edges and bold strokes, emphasizing the movement and energy within the scene.
-                                                        [B][7][/B]: Use this line to describe any additional details or specific features that you want to include in your scene. Think about elements such as characters, props, or unique aspects of the subject that make it stand out from other similar scenes.
-[*]Examples:
-                                                        - A group shot of several friends enjoying a day at the beach, with colorful towels and umbrellas adding to the vibrant atmosphere.
-- A close-up of an intricate architectural detail, such as a gothic spire or a medieval doorway.
-[*]Instructions: Use this line to specify the aspect ratio (width to height ratio) for your image. Choose between "16:9" (standard HD video), "9:16" (vertical for mobile devices), or "1:1" (square).
-                                                        [B][8][/B]: Use this line to specify the version of Midjourney that you want to use. If you're using the default version, leave it blank or use "v 5". For other
+With all the hype about AI (artificial intelligence), it is no wonder that companies are looking for ways to use AI to improve their SEO. But what does this mean? How can artificial intelligence help with your website’s SEO? This blog post will discuss some of the ways in which AI can be used to optimize your website for search engines. We will also provide tips on how you can get started using AI for better results!
+
+## How Artificial Intelligence Can Help With Your Website's SEO?
+
+One way that artificial intelligence can help with your website’s SEO is by improving your content quality. By analyzing the content on your site, AI can identify areas where the quality of writing could be improved. This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+Another way that artificial intelligence can help with your website’s SEO is by optimizing images for Google image search. By analyzing the content on a page, AI can identify which pictures should be used in what order so they are most likely to appear as part of a “related images” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+Another way that artificial intelligence can help with your website’s SEO is by optimizing videos for YouTube. By analyzing the content on a page, AI can identify which videos should be used in what order so they are most likely to appear as part of a “related videos” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+## AI Can Help With Content Quality And Improve Engagement
+
+AI can help with content quality by analyzing the text on a page, identifying which images should be used in what order so they are most likely to appear as part of a “related images” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+AI can also improve engagement by analyzing website data for user behavior patterns. It identifies when visitors stay on one page longer than others, so they could be interested in the content or not interested enough to read further into it! You might have a great idea that’s perfect for your audience but if no one reads what you wrote because there was something else catching their eye before getting bored with all those words… Then artificial intelligence may help.
+
+AI can improve engagement by analyzing website data for user behavior patterns. It identifies when visitors stay on one page longer than others, so they could be interested in the content or not interested enough to read further into it! You might have a great idea that’s perfect for your audience but if no one reads what you wrote because there was something else catching their eye before getting bored with all those words… Then artificial intelligence may help.
+
+## Artificial Intelligence Can Help With Website Optimization And Improve Your Search Engine Ranking
+
+AI can optimize your website for search engines by analyzing the content on a page and identifying which images should be used in what order so they are most likely to appear as part of a “related images” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+AI can improve your website’s SEO by optimizing videos for YouTube. It analyzes video content on a page and identifies which ones should be used in what order so they are most likely to appear as part of a “related videos” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+AI can also help with your website’s SEO by optimizing images for Google image search. It analyzes the content on a page, identifying which images should be used in what order so they are most likely to appear as part of a “related images” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+## How Artificial Intelligence Can Help With Your Website's SEO?
+
+AI can help with your website’s SEO in a number of ways. AI can optimize the content on your site for Google, improve engagement by analyzing website data and user behavior patterns to identify when visitors stay on one page longer than others so they could be interested or not interested enough to read further into it! You might have a great idea that’s perfect for your audience but if no one reads what you wrote because there was something else catching their eye before getting bored with all those words… Then artificial intelligence may help.
+
+Artificial Intelligence can also help with SEO by optimizing images for Google image search and videos for YouTube. By analyzing the content on a page, AI can identify which pictures should be used in what order so they are most likely to appear as part of a “related images” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+## AI Can Help With Website Optimization And Improve Your Search Engine Ranking
+
+AI can help with your website's SEO by optimizing images for Google image search, videos for YouTube, and improving engagement. AI can improve your site’s SEO by analyzing the content on a page to identify which images should be used in what order so they are most likely to appear as part of a “related images” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+AI can also help with your website’s SEO by optimizing videos for YouTube. AI analyzes video content on a page, identifying which ones should be used in what order so they are most likely to appear as part of a “related videos” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+## AI Can Help With Your Website's SEO By Optimizing Images For Google Image Search
+
+AI can help with your website’s SEO by optimizing images for Google image search. AI analyzes the content on a page, identifying which pictures should be used in what order so they are most likely to appear as part of a “related images” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+AI can also help with your website’s SEO by optimizing videos for YouTube. AI analyzes video content on a page, identifying which ones should be used in what order so they are most likely to appear as part of a “related videos” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+## AI Can Help With Your Website's SEO By Optimizing Videos For YouTube
+
+AI can help with your website’s SEO by optimizing videos for YouTube. AI analyzes video content on a page, identifying which ones should be used in what order so they are most likely to appear as part of a “related videos” section at the bottom of Google’s SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+AI can also help with your website’s SEO by improving engagement. AI analyzes website data for user behavior patterns to identify when visitors stay on one page longer than others, so they could be interested or not interested enough to read further into it! You might have a great idea that's perfect for your audience but if no one reads what you wrote because there was something else catching their eye before getting bored with all those words… Then artificial intelligence may help.
+
+## AI Can Help With Your Website's SEO By Improving Engagement
+
+AI can help with your website’s SEO by improving engagement, which means that you will need to create more engaging and relevant articles if you want better search engine rankings! Artificial intelligence can improve user experience on websites by identifying when visitors stay on one page longer than others, so they could be interested or not interested enough to read further into it. You might have a great idea that's perfect for your audience but if no one reads what you wrote because there was something else catching their eye before getting bored with all those words… Then artificial intelligence may help!
+
+AI can also help with your website’s SEO by optimizing images for Google image search and videos for YouTube. By analyzing the content on a page, AI can identify which pictures should be used in what order so they are most likely to appear as part of a “related images” section at the bottom of Google's SERPs (search engine results pages). This means that you will need to create more engaging and relevant articles if you want better search engine rankings!
+
+## AI Can Help With Your Website's SEO By Optimizing Images For Google Image Search And Videos For YouTube
+
+AI can help with your website’s SEO by optimizing images for Google image search, videos for YouTube
+
+There are 2 ways to build the map
+
+- Directly in Unity
+- Using a standalone tool, that was made by myself for faster building
+
+## Unity
+
+Unity is used as an editor to make the maps and export them, it has the advantage that you can edit everything directly and see the results right away. So it's really nice for testing purposes.
+
+But it will take a lot of time to build the map and there are some limitations like the 2D-grid system which makes it really hard to create maps that have curves in them (although this is possible). You can find the Unity Assets at github
+
+### How to install
+
+Just download the assets from above link, extract it and drop them into the "Assets" folder.
+
+#### Important:
+
+1. After you dropped the files into unity, press play, then stop it again! Then you have to make a new scene. This is necessary because Unity won't read some of the script files by default if you don't do this. If you already have created a new scene, that's not a problem but you will still have to press the "Play" button.
+2. Now you can start with your map making :D
+
+### How to build the Map
+
+The easiest way is to just add a "BuildingGrid" component to every building and connect them all by drawing lines, or even easier create a new scene which only contains buildings that should be connected. (these are not really needed in this case) and select these buildings. You can find it under the main menu at GameObject > Map Editor
+
+If you want to use the 2D-Grid-System, check out the "BuildingGrid" component! It's not necessary but will help with making a good map.
+
+### How to export it
+
+1. Press Play (or in case of the above step: Stop) and wait for it to load all the scripts. Now press play again. This is very important as Unity doesn't like when you make changes to files and then try to run the game. It won't read them properly because they were already loaded into memory.
+2. Export it via the main menu at Map Editor > Export (or if you just added a BuildingGrid, export it from the component). This will save the map in a JSON file that is used for the server to load it!

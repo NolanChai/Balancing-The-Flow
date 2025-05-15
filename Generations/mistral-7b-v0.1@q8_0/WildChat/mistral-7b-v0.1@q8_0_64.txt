@@ -1,0 +1,11 @@
+x, sy, sz, dx, dy, dz, w, h, l) {
+	for (let x = 0; x < w; x++) {
+		for (let y = 0; y < h; y++) {
+			for (let z = 0; z < l; z++) {
+				world.setBlock(x, sy - y, sz + z, world.getBlock(dx - x, dy - y, dz - z));
+			}
+		}
+	}
+}
+
+function mirrorBlock2

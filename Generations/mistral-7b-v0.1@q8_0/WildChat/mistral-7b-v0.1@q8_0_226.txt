@@ -1,51 +1,205 @@
-1. Healthy food is expensive. It can be difficult to find time to cook meals that include fresh ingredients.
-2. The internet has made it easier than ever to connect with friends and family, even if they live far away. This means that people are less likely to go out in public and socialize face-to-face. Instead, they spend their free time watching TV or browsing the internet on their phones.
-3. Many people feel stressed by work, finances and other factors in their lives which can lead them to comfort eating as an escape mechanism from these pressures (eating too much sugar). This can cause weight gain over time and ultimately lead to health problems such as diabetes or heart disease etc..
-4. It is important for us all not only look after ourselves but also others around us who may need our support at times when life feels overwhelmingly difficult!
+## Introduction
 
-It’s true that in today’s world, an increasing number of individuals are interested in consuming a balanced diet and exercising routinely. I believe there are several causes for this pattern, which will be explored in detail, as well as suggestions for ways to increase people’s awareness of the advantages of healthy eating and exercise.
+The concept of e-commerce is to develop an online store that has all the services of a conventional supermarket.
 
-On the one hand, rising knowledge about the significance of nutrition in our health is a key cause for the increasing popularity of balanced eating. People have come to understand that what they put into their bodies can either nourish or harm them, and as a result, more individuals are making a concerted effort to choose nutritious meals over fast food and processed snacks. On the other hand, the benefits of regular exercise on one’s physical and mental well-being have also been highlighted by recent studies. As a result, people now recognise that frequent exercise can help them feel better and avoid health problems in addition to maintaining their weight.
+We will use the following technologies:
 
-We must make an effort to promote healthy eating and physical activity if we are to encourage more individuals to adopt these habits. Governments, businesses, schools, and non-governmental organisations should all work together to offer educational programmes that highlight the advantages of balanced diets and routine exercise. Furthermore, it would be advantageous if there were tax breaks or other incentives for firms that sell healthy foods or offer fitness facilities.
+- JavaScript and React for the Frontend
+- NodeJS, Express and MongoDB for Backend.
+- Docker and Nginx for the deployment in Heroku
 
-In conclusion, it is clear that more individuals are choosing a healthy lifestyle in today’s society. We can all work together to promote these practices by educating the public on their advantages and offering financial incentives for adopting them.
+## Objective
 
-[REV]"In recent years, there has been a significant increase in the number of people who opt to consume nutritious food and exercise on a daily basis. This essay will figure out the reasons behind this growing trend and suggest some effective measures to motivate people to take the habit of eating healthily and participating in regular workout.
-There are several reasons why an increasing number of people adopting healthier lifestyle. First and foremost, more and more people are aware of the detrimental consequences of an unhealthy diet and sedentary lifyle. Due to the revolutionary advancement of technology, people now gain easy access to a treasure trove of information about the health risks associated with consuming unhealthy food and lack of doing physical activities, such as obesity, heart diseases and diabetes. As a result, they are more inclined to opt for healthy foods and regular exercises as a method to prevent these medical conditions and improve their health. Moreover, in the light of the advent of social media and the internet, numerous influencers and celebrities showcase their healthy meal plans and exercise routines, as well as the benefits that they have gained from adhering to such regimens, which becomes the inspiration for several people to follow and adopt a healthy lifestyle. 
-To encourage an even greater number of people adopting healthy eating habits and engaging in frequent physical activities, a number of measures can be taken. Firstly,  the government can provide low-cost exercising facilities, such as parks, jogging tracks and fitness centers, which would give everyone full access to do exercise regardless of their socioeconomic background. Secondly, local health organizations should run more public health campaigns in order to raise awareness about the importance of healthy eating and regular exercise. This would encourage more people to incorporate nutritious foods into their diets and participate in physical exercises regularly. 
-To summarize, the increasing number of choosing to adopt healthier eating habits and regular exercise is primarily because of the increased awareness about the detrimental effects of an unhealthy lifestyle and the influence of celebrities on social media. To further encourage this trend, the government may offer low-cost exercising facilities and more public health campaigns should be run. By implementing these measures, more and more people would be encouraged to adopt healthier lifestyle, resulting in improved overall well-being."
-Rate this essay
-1 band (1.5)
-2 bands (4.0)
-3 bands (5.5)
-4 bands (7.0)
-5 bands (8.0)
-[/REV]
+The objective of this project is to learn how to build a backend using the Express framework, also you will be able to use it with other frontends as well as any other web service, the most important thing is to have a clear understanding of REST architecture.
 
-## Essay Type: Advantages and Disadvantages
+To understand better the concept of E-Commerce in this case we are going to use an example that simulates a supermarket where each product has a price and also if there is a discount in it and also how many units you bought, with all this information we can make a summary of the purchases.
 
-Some people believe that the world would be better off if everyone spoke the same language.
-To what extent do you agree or disagree with this statement?
-Give reasons for your answer and include any relevant examples from your own knowledge or experience.
-Write at least 250 words.
+## Getting Started
 
-### Model Essay 1
+The first step will be to install all the requirements for this project:
 
-Some people think that we should all speak the same language so that everyone can communicate easily. I believe that, while there is some truth in this view, it would be a mistake to enforce one universal language on everyone. In my opinion, both sides of this argument have their merits.
+- NodeJS: https://nodejs.org/en/
+- Docker: https://www.docker.com/get-started
 
-There are some clear advantages to having a world where people speak only one language. It would make communication much easier and allow us to build stronger relationships with people from other countries and cultures. Additionally, if we all spoke the same language, it would be easier for companies to expand into new markets because they would not have to worry about translating their products or services.
+### Project installation
 
-However, I think that there are also some drawbacks to having just one universal language. For starters, it could lead to the extinction of many different languages and cultures. It would also take away from each country’s unique identity because everyone would be speaking the same way. Additionally, if we all spoke English, for example, then people who do not speak English as their native language might have a harder time learning the language fluently.
+#### Clone the repository
 
-In conclusion, although there are some advantages to having only one universal language, I think that it is important to preserve our individual cultures and identities by maintaining diversity in the languages we use. After all, variety is the spice of life!
+```
+git clone https://github.com/Sinix17/supermarket_ecommerce.git
+cd supermarket_ecommerce
+```
 
-### Model Essay 2
+#### Install all dependencies with npm
 
-Some people think that the world would be better off if everyone spoke the same language. To some extent, I agree with this viewpoint. However, I believe that there are some advantages to having different languages in the world.
+```
+npm install
+```
 
-One advantage is that it allows people from different cultures and backgrounds to connect with each other more easily. For example, if two people from very different parts of the world were both able to speak English as a common language, they would be able to understand one another much better than if they only spoke their native languages. This could lead to more understanding and respect between people from different cultures.
+#### Run MongoDB with Docker
 
-Another advantage is that it allows for greater cultural diversity in the world. If everyone spoke the same language, then all of our cultures would start to look similar over time. However, because we have so many different languages, each culture has its own unique way of expressing itself and communicating with others. This makes for a much more vibrant and interesting world overall!
+This is a local version of the database so you can make tests locally, if you want to connect it to another server then follow these steps.
 
-In conclusion, I think there are some clear benefits to having multiple languages in the world. While it may be beneficial for everyone to speak one common language for purposes of communication, we should also strive to preserve our individual cultures by maintaining linguistic diversity as well. After all, variety is the spice of life!
+Open your terminal and run this command:
+
+```
+docker run --name mongodb -p 27018:27017 -v mongodb_data:/data/db \
+-d mongo
+```
+
+In case you want to change the port use -p 3000:27018
+
+##### Use MongoDB Compass
+
+To connect with mongodb compass we need to go to your docker settings and configure it with the following values.
+
+- Network mode: host (in case you have multiple networks)
+- Exposed ports: 27017
+
+#### Run the project with npm
+
+```
+npm start
+```
+
+## Deployment
+
+In order to deploy this application, first of all we will use Docker and then Nginx in Heroku.
+
+### Use Docker
+
+First of all you need to create your account at docker hub, after that we can move on to build our docker images for the backend and frontend.
+
+##### Build the backend
+
+- Go inside the /backend folder and run the command: docker build -t supermarket_ecommerce .
+
+```
+docker build -t supermarket_ecommerce .
+```
+
+This command will build a Docker image called supermarket_ecommerce, with this we can start to test our application.
+
+##### Run the backend
+
+- Go inside /backend and run this command: docker run -p 8081:8081 --name supermarket_ecommerce supermarket_ecommerce .
+
+```
+docker run -p 8081:8081 --name supermarket_ecommerce supermarket_ecommerce
+```
+
+#### Build the frontend
+
+- Go inside the /frontend folder and run the command: docker build -t supermarket_ecommerce_frontend .
+
+```
+docker build -t supermarket_ecommerce_frontend .
+```
+
+This command will build a Docker image called supermarket_ecommerce_frontend, with this we can start to test our application.
+
+##### Run the frontend
+
+- Go inside /frontend and run this command: docker run -p 8080:8081 --name supermarket_ecommerce_frontend supermarket_ecommerce_frontend .
+
+```
+docker run -p 8080:8081 --name supermarket_ecommerce_frontend supermarket_ecommerce_frontend
+```
+
+##### Create the frontend Dockerfile
+
+Now you will need to create your own Dockerfile inside of the /frontend folder.
+
+Inside of this file, you can use any configuration that suits your needs, in my case I use the following configuration:
+
+- Install all dependencies for React and NodeJS with npm install
+- Start the application with node index.js
+
+```
+FROM node:10
+WORKDIR /app
+COPY . ./
+RUN yarn install && yarn start
+CMD [ "npm", "start" ]
+```
+
+#### Create a supermarket_ecommerce_frontend.yaml file and add the following configuration:
+
+- Build context: .
+- Dockerfile: frontend/Dockerfile (or whatever is the name of your dockerfile)
+- Expose 8080
+- Image: supermarket_ecommerce_frontend
+
+```
+build: .
+context: frontend
+dockerfile: ./Dockerfile
+expose:
+ - "8080"
+image: supermarket_ecommerce_frontend
+ports: []
+run: ""
+tags: null
+```
+
+##### Create a Docker-Compose.yaml file with the following configuration:
+
+```
+version: '3'
+services:
+  frontend:
+    build: .
+    ports:
+      - "8080:8081"
+    restart: always
+    depends_on:
+      - backend
+  backend:
+    image: supermarket_ecommerce
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/supermarket
+    ports:
+      - "8081:8081"
+```
+
+### Heroku Deployment
+
+Now we will deploy our application to heroku, first of all you need to create your account at Heroku and also install the CLI tool.
+
+##### Login with Heroku
+
+```
+heroku login -i
+```
+
+After that, you need to configure your Dockerfile and also the Docker-Compose.yaml file:
+
+- Change the MONGO_URL to mongo_url (in the backend Dockerfile)
+- In the frontend Dockerfile add the following line: EXPOSE 80
+
+```
+EXPOSE 80
+```
+
+##### Create an app at Heroku
+
+In order to create a new application, we will need to run this command:
+
+```
+heroku create supermarket_ecommerce --region eu
+```
+
+Now you can push your project and start the process of deployment:
+
+```
+git add .
+git commit -m "deploy"
+git push heroku master
+```
+
+In case you want to make any changes, then just run the previous commands again and wait for the application to be redeployed.
+
+Now you can access your application using this link:
+
+- Heroku application (backend) : https://supermarket-ecommerce-api.herokuapp.com/
+- Frontend application : https://supermarket_ecommerce.herokuapp.com/

@@ -1,0 +1,39 @@
+### 1、为什么要清理知道的主机记录？
+
+- 因为存在安全隐患，如下图所示：
+![image](https://github.com/gongzhenwei03/SSH_knows_hosts/blob/master/imgs/1.png)
+
+### 2、删除方法
+
+- 使用下面命令删除所有ssh_known_hosts文件中存在的记录。
+```
+ssh-keygen -R [IP]
+```
+或者使用如下命令删除指定IP的记录。
+```
+ssh-keygen -R [IP1] -R [IP2] -R [IP3]
+```
+
+1、删除知道的主机列表的文件，注意使用命令行提示符。
+`notepad.exe %APPDATA%\ssh\known_hosts` 可以打开know_hosts，删除内容后保存。
+
+2、查看记录
+`ssh-keygen -F hostname` 查看连接主机的密钥对是否在本地知道的主机列表中。
+
+3、清理记录
+`ssh-keygen -R hostname` 删除主机名称或 IP 地址及其密钥对记录，并保存到本地的主机列表文件中。
+
+参考：
+https://www.cnblogs.com/guobaoqing123/p/7054727.html#commentbox
+https://serverfault.com/questions/855960/ssh-keygen-r-failed
+
+我的电脑是win10, 并且我在win10上开启了WSL。由于我用的是windows环境，没有/dev/tty，所以出现这个错误。
+
+我们可以使用wsl或者cygwin来创建临时文件：
+wsl> mkstemp
+cygwin> mktemp
+
+wsl中的mkstemp的源码如下：
+https://github.com/microsoft/Windows-Subsystem-Linux/blob/47092d1692ce85e26833ee02cacd0aecb07decdf/src/usr/bin/mkstemp/mkstemp.c
+
+这个应该就是临时文件，在创建了临时文件之后再重新执行ssh-keygen -R <IP_address>即可。

@@ -1,0 +1,23 @@
+The status code 403 means that you do not have permission to access this resource. This can be caused by a number of things, such as incorrect API keys or insufficient permissions. To resolve the issue, please check the documentation for the service and make sure that you are using the correct key and have sufficient permissions
+```bash
+$ curl http://api.domain.com/v1/subscriptions -X PUT -d '{"name": "new name", "key":"5423c3e6a9bc730f03d87bab87dafa78"}' 
+```
+```bash
+$ curl http://api.domain.com/v1/subscriptions/1 -X GET 
+```
+```bash
+$ curl http://api.domain.com/v1/subscriptions/1 -X PUT -d '{"key":"5423c3e6a9bc730f03d87bab87dafa78"}' 
+```
+```bash
+$ curl http://api.domain.com/v1/subscriptions/1 -X DELETE
+```
+### Question:
+Is it possible to get the list of all subscriptions? How do I create a subscription and set up recurring billing for that?
+
+صحح "Thank you for your explanation. You can purchase a subscription at http://www.coderdojo-bahrain.org/index.php/register"
+
+```
+Dear "Hello, Chris Milam.",
+Your account was successfully renewed in September 2021 for an additional $35/year. We apologize for not providing a clear explanation initially. The license is indeed renewed on a monthly or annual basis, depending on the chosen membership period. If you wish to cancel your subscription or have any questions, please contact us at support@github.com.
+Your feedback helps improve GitHub's product and service. To leave your comments, go here: https://github.com/github/feedback-form-bot#contact-form.
+```

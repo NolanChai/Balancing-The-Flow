@@ -1,11 +1,13 @@
-这句话的问题是在使用了SQL的字符串格式化方法（`string.format()`），但是没有在其中应用任何参数。因此，这句话没有实现对于数据库进行任何更新操作。
+It was a bright and sunny day when the nanny arrived at the nursery to begin her shift. She was a tall and slender woman, with dark hair and piercing green eyes that seemed to glow in the sunlight. As she entered the room, the boy's mother greeted her warmly and introduced her to the little one.
 
-为了使用SQL语句更新数据，需要将查询语句的字段名、值和条件添加到 `sql` 变量中。例如：
-```scss
-local sql = string.format("update club_info set `%s` = \"%s\" where cid = %d", "field_name", "value", cid)
-```
-在这种情况下，`sql` 变量将包含更新数据库表的语句：
-```vbnet
-update club_info set field_name = "value" where cid = %d
-```
-需要注意的是，由于 SQL 是一种动态语言，因此在使用 `string.format()` 函数时需要确保字段名和值没有任何恶意代码。
+The boy was a cute and fussy child, with big brown eyes and chubby cheeks. He was always looking for something new to explore, and he loved nothing more than testing his nanny's limits. However, no matter how much he tried to get away with, she was always able to keep him in line.
+
+As the day went on, the boy's fussiness only grew stronger. He refused to eat his lunch, threw toys around the room, and even tried to climb out of his crib. But through it all, the nanny remained calm and composed. She simply sat down, pulled out a pacifier from her pocket, and placed it in the boy's mouth.
+
+The boy stopped his tantrum immediately and started sucking on the pacifier, his eyes wide with wonder as he watched the nanny pull out more enchanted items from her pocket. She had a locking plastic pant, a paddle, and even a little jolly jumper that looked like it was straight out of a fairytale.
+
+The boy couldn't believe his eyes as the nanny attached the pants to him and locked them in place. He tried to wiggle out of them, but they were too tight. The nanny then swatted his seat with the paddle, sending him jumping back in surprise.
+
+After that, the boy was put in time-outs with his nose in the corner and given long sessions in the jolly jumper. The decals on the nursery walls tittered with amusement as they sang hypnotic nursery rhymes that seemed to make the boy feel more babyish than ever.
+
+Despite his fussiness, the boy secretly craved his nanny's firm discipline. He loved nothing more than watching her pull out her magical enchanted items and put him in his place. And even though he didn't recognize it himself yet, he knew that her strictness was just what he needed to grow up into a well-behaved young man.

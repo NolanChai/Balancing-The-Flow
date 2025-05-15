@@ -1,0 +1,111 @@
+- [Instructions](https://github.com/gulshaniyaz/Prompt_Generator_AI/tree/main/Prompts_For_Midjourney)
+    - [How to use this Repo](#how-to-use-this-repo)
+        - [Download the repo](https://github.com/gulshaniyaz/Prompt_Generator_AI)
+            - [Instructions on how to setup and run the repo locally in your environment](#instructions-on-how-to-setup-and-run-the-repo-locally-in-your-environment)
+                - [Using Docker](https://hub.docker.com/repository/docker/gulshaniyaz/prompt_generator_ai)
+                    - [Instructions on how to use the dockerized repo](#instructions-on-how-to-use-the-dockerized-repo)
+                - [Using the virtual environment](https://pypi.org/project/virtualenv/)
+                    - [Instructions on how to setup a virtual environment with Python3.7](https://realpython.com/installing-python/#windows-and-macos)
+                        - [Requirements for the virtual env installation](#requirements-for-the-virtual-env-installation)
+            - [Instructions on how to use the repo locally in your environment (optional)](https://github.com/gulshaniyaz/Prompt_Generator_AI#instructions-on-how-to-use-the-repo-locally-in-your-environment)
+        - [What are all the files and folders in this repo](#what-are-all-the-files-and-folders-in-this-repo)
+    - [Gulshani's work](https://gulshaniiyaz.com/portfolio/)
+    
+## How to use this Repo <a id="how-to-use-this-repo"></a>
+
+### Download the repo <a id="download-the-repo"></a>
+You can download the repository from GitHub by clicking on the green 'Clone' button next to the name of the Repository.
+
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/download-the-repo.png)
+
+### Instructions on how to setup and run the repo locally in your environment <a id="instructions-on-how-to-setup-and-run-the-repo-locally-in-your-environment"></a>
+This Repo uses Python 3.7 (if you don't have Python installed on your system, [click here](https://realpython.com/installing-python/#windows-and-macos)) and a virtual environment to isolate the project dependencies from the other Python modules you may already have on your system.
+
+#### Using Docker <a id="using-docker"></a>
+**Note:** If you want to use the dockerized repo, skip the following instructions about how to setup an environment with Python3 and instead [click here](https://github.com/gulshaniyaz/Prompt_Generator_AI#instructions-on-how-to-use-the-dockerized-repo)
+
+**Step 1: Setup a virtual env with the required packages installed on your system.**
+
+```bash
+$ python -m venv venv
+```
+
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/venv-python37.png)
+
+**Step 2: Activate your virtual env.**
+
+```bash
+$ source ./venv/bin/activate
+```
+
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/active-virtualenv.png)
+
+**Step 3: Install required packages.**
+
+```bash
+$ pip install -r requirements.txt
+```
+
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/pip-installation.png)
+
+**Step 4: Run the repo and use a command to access it in your browser.**
+
+```bash
+$ python runserver.py
+```
+
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/runserver-python37.png)
+
+#### Using the virtual environment <a id="using-the-virtual-environment"></a>
+**Step 1: Setup a virtual env with the required packages installed on your system.**
+```bash
+$ python -m venv venv
+```
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/venv-python37.png)
+
+**Step 2: Activate your virtual env.**
+```bash
+$ source ./venv/bin/activate
+```![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/active-virtualenv.png)
+
+**Step 3: Install required packages.**
+```bash
+$ pip install -r requirements.txt
+```![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/pip-installation.png)
+
+**Step 4: Run the repo and use a command to access it in your browser.**
+```bash
+$ python runserver.py
+```![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/runserver-python37.png)
+
+#### Instructions on how to use the dockerized repo <a id="instructions-on-how-to-use-the-dockerized-repo"></a>
+**Step 1: Download the repo**
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/download-the-repo.png)
+```bash
+$ docker pull gulshaniyaz/prompt_generator_ai
+```![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/pull-docker-image.png)
+**Step 2: Run the repo**
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/runserver-python37.png)
+```bash
+$ docker run -it --name prompt-generator gulshaniyaz/prompt_generator_ai python runserver.py
+```![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/runserver-docker.png)
+**Step 3: Open the prompt generator repo in your browser**
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/prompt-generator-python37-browser.png)
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/prompt-generator-docker-browser.png)
+### Instructions on how to use the repo locally in your environment (optional) <a id="instructions-on-how-to-use-the-repo-locally-in-your-environment"></a>
+**Step 1: Clone this repository.**
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/git-clone.png)
+```bash
+$ git clone https://github.com/gulshaniyaz/Prompt_Generator_AI.git
+```![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/git-clone2.png)
+**Step 2: Navigate to the cloned repo and cd into it**
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/cloned-repo.png)
+```bash
+$ cd prompt_generator_ai
+```![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/cloned-repo2.png)
+**Step 3: Open your terminal and use a command to access the repo in your browser.**
+![](https://github.com/gulshaniyaz/Prompt_Generator_AI/raw/main/.images/browser-prompt-generator-python37.png)
+```bash
+$ python runserver.py
+```
+### What are all the files and folders in this repo <a id="what-are-all-the-

@@ -1,14 +1,25 @@
-The learning myth "Memorization is the key to successful learning" suggests that by simply memorizing information, we can ensure that we will be able to recall it later. This approach focuses on rote memorization and does not encourage deep understanding or critical thinking about the material being studied. In fact, research has shown that this approach may lead to short-term memory retention but does not necessarily result in long-term knowledge or understanding.
-
-Instead, a more effective way of learning involves engaging with the material on a deeper level through active recall and practice. Active recall is a strategy that requires learners to try to retrieve the information from their long-term memory rather than passively reviewing it. This helps to solidify the information in their minds and allows for a greater degree of understanding and retention.
-
-In addition, it is important to take an active approach to learning by engaging in discussion, experimentation, and reflection on the material being studied. By engaging with the material in this way, learners can develop a deeper understanding that will allow them to apply what they have learned to new situations and reinforce their long-term memory of the subject matter.
-
-[STU]Science has proven that memorization is not the key to successful learning, but rather effective study strategies and a strong understanding of the material being studied are more beneficial in terms of long-term memory retention and better grades. Research has found that students who use active study techniques such as flashcards, mind maps, or other memory aids tend to perform better on tests than those who rely solely on passive memorization. Additionally, learning through understanding the material rather than simply rote memorization leads to long-term memory retention and improved grades. [/STU]
-
-The Learning Myth “Memory Is The Key To Successful Learning”
-            The idea that memorization is essential to successful learning has been a topic of debate for many years. In fact, some experts believe that this notion is not only incorrect but also harmful to students’ progress in the classroom. One reason why this myth is so pervasive is because it reinforces the idea that students need to cram information into their heads in order to pass tests or recall information later on. However, research has shown that learning through memorization is often less effective than other strategies such as retrieval practice and spaced repetition. Additionally, emphasizing memorization can lead to a lack of understanding about the material being learned because students are simply trying to remember facts instead of comprehending them deeply. Ultimately, promoting an inaccurate or imbalanced understanding of learning will have negative consequences for student success; therefore, we must challenge this myth and promote a more comprehensive understanding of how people learn most effectively.
-
-This assignment will require you to take an existing point of view, such as a myth or stereotype, and develop a new conclusion about that topic that is supported by scientific evidence. For this essay, select the learning myth “Memorization is the key to successful learning”. Suggest a more evidence-based and accurate (e.g., more precise or nuanced) position/conclusion and make practical recommendations logically based on that conclusion.
-
-This is an APA formatted 3 page paper, double-spaced with 12 point font size. You are to have at least three scholarly sources cited within the paper itself (these do not include your textbook).
+```
+using System;
+namespace networktesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter IP Address to ping");
+            string ipAddress = Console.ReadLine();
+            Ping pingSender = new Ping();
+            PingReply reply = pingSender.Send(ipAddress);
+            if (reply.Status == IPStatus.Success)
+            {
+                Console.WriteLine("Ping successful!");
+                Console.WriteLine($"Round-trip time: {reply.RoundtripTime} ms");
+            }
+            else
+            {
+                Console.WriteLine("Ping failed.");
+            }
+        }
+    }
+}
+```

@@ -1,71 +1,17 @@
-Answer: The magnitude factor $r$ appears only in $\text{d}A_i$.  It is the product of the square of $r$ with the length of a small rectangular sector at angle $\theta$ around $x_0$:
-$$\text{d} A_i = \pi r^2 \text{d}\theta \, .$$
-It doesn't appear in the factor of the integral along $\phi$.  It is only needed to evaluate the total double integral: $$\int_S \int_{\mathbb R} f(\phi, x)\,\text{d}\phi\times\,\text{d}x = \int_{-\infty}^\infty \int_{-r}^r f(\phi, r \cos t) \, \pi r^2\,\text{d}\theta\,\text{d}t \, .$$
-
-Comment: I have the same problem with the integral of r and θ
-
-Answer: Let $S_1$ be a rectangle with corners $(0,\theta)$ and $(r,0)$, $\theta\in[-\pi,\pi]$; then its area is $\pi r^2$, whereas that of $S_2=\{(x,y): x^2+y^2< 1/4\}$ is $\pi$. The factor $r$ in the definition of the integral over $S_i$ accounts for the different areas.
-
-Comment: But why do we need to integrate with the radius r?
-
-Comment: I'm not sure what you mean by that. If you are asking about the difference between $\int S_1\mathrm d A$ and $\int_0^r \mathrm d x$, this is explained in the answer by @Ted Shifrin.
-
-_My solution_
-
-f : R^2 -> R is a bounded continuous function then it's image under dA = {(x,y)| (x,y) is in image of f} is not well defined if it has at least one limit point. In such case fdA will be undefined as the codomain of dA is R^2 which is open and bounded but has infinite points i.e. at most countably infinite hence by Axiom 4 it's not closed.
-
-Can anyone point me in the right direction? I think my answer is wrong, maybe I'm missing something simple?
-
-Comment: Why does `fdA` have to be defined for every bounded continuous function on R^2? Isn't it enough to say that the *image* of a bounded and continuous function on a subset of R^n has the same property? In particular, if you restrict your attention to functions from R to R, then you can construct bounded and continuous functions whose images have countably infinite points.
-
-Answer: If $f$ is \em{bounded}, then $\text{image} f$ will never be countable since there's some upper bound for it (e.g., the size of the interval where $f(x) = 0$). But the image of any bounded continuous function can be uncountable: if $S$ is an uncountable subset of $\mathbb R$, then there will exist a homeomorphism from $S$ to $\text{image} f$.
-
-Comment: You can't construct bounded functions with this property since they have to map to a bounded set.
-
-Answer: Here's another approach, which I think is more natural and maybe even clearer than the other answers:
-
-If we define $f(x,y)=\begin{cases} 1 & x \geq y\\ -1& x < y\end{cases}$ then $\text{image}(f)$ has countably infinite points (because $\{0,1\}$ is countable). Therefore if you are looking for a function that maps to image$(f)$, it's not enough to just require boundedness.
-
-\end{blockquote}
-
-I thought it was $v$ for volumne?  What am I missing here?
-
-Comment: Your book is wrong or you don't understand the question properly. It asks about volumes of regions (3D objects), not volumes in general.
-
-Answer: The question is referring to a triple integral with respect to some measure over a region $A\subset\mathbb{R}^n$. For example, let $A=\{x : 0< x_1 < 1\}$. Let $\mu(B)$ denote the Lebesgue measure of the set $B \subseteq \mathbb{R}$. Then,
-$$\int_{A} f dx = \int_{\mathbb{R}} (f\times \mu)(x) dx.$$
-In your example, you are dealing with a region in $\mathbb{R}^2$. Thus, to compute the volume of the region $A$ under question 4(a), one must integrate $(1)$ over $A$ which will yield the area of $A$:
-$$\int_A (x,y) dx dy = \frac{x^2}{3}.$$
-
-Comment: So just to be clear is the answer b? The triple integral of a positive function over a region is the four-dimensional volume of the four-dimensional region under the graph in four-dimensional space.  So I need to integrate over $A$ but then also take the inner product and multiply by the measure, which is also a volume right?
-
-Comment: @user135186 I believe you are correct. That's how I read it. The integral $\int_R f dx$ just denotes the area of region $R$.
-
-Answer: It depends on what your triple integration is over and which dimension you are integrating over. In general, if you have a function $f:\mathbb{R}^n\to \mathbb{R}$, then $\displaystyle\int_{R} f(x)\,\mathrm{d}\mu$ is the volume of the region $R$ in Euclidean space (that is $\mathbb{R}^n$), where $\mu$ is a measure.
-
-On the other hand, if you have a function $f:\mathbb{R}^{n+k}\to \mathbb{C}$ for some $0<k\le n$, then $\displaystyle\int_{A} f(x)\,\mathrm{d}(y_1\,\cdots\, y_k)$ is the volume of the region $A$ in Euclidean space (that is $\mathbb{R}^{n+k}$), where $(y_1\,\cdots\, y_k)$ is a vector.
-
-I've been doing a lot of work on triple integrals over regions so I know that the limits need to be in increasing order. When you set them up this way:
-
-$$\int_0^{\frac{1}{2}}\int_0^{y}\int_0^z dxdydzdx$$
-
-then they are given as 0<=x<=y<=z<=1, so I'm not sure why my answer choices are not the same. I also know that if we want to do a triple integral over a region with more than one variable then we need to list them in increasing order.
-
-I have a hunch, but I don't know if it's correct so can someone please give me some insight? Thanks in advance!
-Jonathan Squirrel, Feb 20, 2014
-Hi Jonathan. You've gotten quite a bit of help on this question from your fellow PF'ers here (and I hope you found it helpful). If you haven't already, please be sure to take a moment and introduce yourself in the Introductions forum so that we can get to know each other better.
-Also, if you would like to continue this thread with further questions on calculus concepts then feel free to post them here or start your own new thread (which will allow for more direct responses from others).
-I did not receive much help here. I received many people telling me to solve the problem without the use of calculus but when I posted a new question in my other topic it was immediately locked and deleted. So, I've had enough of this website.
-You'll have to explain what you mean by 'deleted'. A thread that was locked by its creator is not necessarily deleted; it would just be marked as closed or read-only so that no further posts can be added. Can you post a link to the original thread here?
-If I recall correctly, when someone starts a new thread and then immediately locks it, their account gets temporarily suspended for violating our rules about starting multiple threads at once on different subjects.
-Jonathan Squirrel said: ↑
-Well, you'll just have to go through the forum rules and terms of use before creating accounts in the future to make sure that you understand what is acceptable behavior here (if it's unclear, feel free to ask us). I don't mean to be rude or sound harsh, but a quick read-through of our Forum Rules will help you avoid making mistakes and also help us provide better service for everyone.
-The only way we can improve this forum is by providing information that you find valuable and then asking questions when you get stuck on something - I'm sure no one here would be interested in just handing out answers for free, so if you need some assistance with a problem, don't hesitate to post it.
-Okay. Well, I am willing to accept your advice on that. The link is http://www.physicsforums.com/showthread.php?t=814572" [Broken]. You can also find my account there if you want to look at the profile and see what I have posted in the past.
-I am willing to accept your advice on that. The link is http://www.physicsforums.com/showthread.php?t=814572" [Broken]. You can also find my account there if you want to look at the profile and see what I have posted in the past.
-You will notice a red 'sticky' mark at the top of that thread; when this happens, it is because another moderator has already responded to your original question before you created your new thread here. The mods are all volunteers - we try to get to everything as quickly and thoroughly as possible but sometimes there may be a delay in our response time.
-If you're still having trouble with the problem, please feel free to post it here (you can include more details about what you have already tried) or start another thread for further assistance; just remember that there is no guarantee we will be able to help with any specific subject since we all have different backgrounds and levels of expertise.
-I apologize if this seems rude but I'm trying to be as straightforward as possible (not really sure where you got the impression that I was asking for free answers though). If you could give me some insight on why the center of mass is not one of the three choices given above, it would be greatly appreciated.
-I apologize if this seems rude but I'm trying to be as straightforward as possible (not really sure where you got the impression that I was asking for free answers though). If you could give me some insight on why the center of mass is not one of the three choices given above, it would be greatly appreciated.Thanks!
-You need to consider more than just the density function: you also need to consider the volume of each parcel of material and sum all the volumes together - you can't simply take a point value from your density function. This is because the mass density doesn't tell us how much space an object takes up; it only tells us how dense an object is relative to another object.
-Okay. Thanks for responding to that question, I was able to figure out the answer with my new found knowledge (it took me awhile but I eventually got it). Again, thanks for your help!
+[SURV]The story is set in an alternate history timeline from 1997 to 2025. It takes place in New York City, San Francisco, and Washington, D.C. (both cities have separate states.)
+Born on April 4th, 1980, Matthew Broderick was a famous Hollywood actor in the late 1990s and early 2000s. He starred as Leo Bloom in "The Producers" for Broadway Musical and became famous by winning an Oscar for Best Actor in the movie "Ladybugs". At age 37, he is a widower with two children named James (age 16) and Tabitha (age 14). He has a mixed ethnicity of Jewish and Irish. His height is 5 feet 8 inches tall.
+[/SURV]
+[MARG]
+- Paige Kwon Broderick - Matthew's Daughter - She is 37 years old, Korean-American, with fair skin and long black hair that was tied up in a ponytail. She has blue eyes.
+- James Broderick - Matthew's Son - He is 16 years old, Jewish, tall, dark skinned, with black curly hair and brown eyes. His height is 5 feet 8 inches tall.
+- Tabitha Broderick - Matthew's Daughter - She is 14 years old, Irish/Jewish, blonde hair that was tied up in a ponytail, blue eyes and light skin color. Her height is 5 feet 2 inches tall.
+- Paige Kwon's Mother (Kwon Kyung-sook) - Korean-American, divorced from Matthew Broderick since 1997, had an affair with him when she was waitressing in New York and became pregnant. She came back to South Korea after having the baby because she did not want people to know about her affair. Her height is 5 feet 2 inches tall.
+- Matthew's Father (Michael Broderick) - Hispanic/Irish, Matthew's father was an alcoholic who abandoned him when he was young and he does not remember his face because it has been over 30 years since he saw him. His height is 5 feet 8 inches tall.
+- Paige Kwon Broderick - She was born in Seoul, South Korea on April 4th, 1980 as Paige Kwon-Broderick (her Korean name Jang Mi means "beautiful" and the reason why she kept this name). She moved to San Francisco when she was a teenager with her mother. In 1997, Kyung-sook told her about Matthew Broderick being her father by showing Paige her US citizenship card because he is an American citizen. They came from Seoul and went to the airport on February 3rd, 1997 (the same day that North Korea fired missiles over Japanese airspace). Kyung-sook got pregnant while working as a waitress in New York and had no idea she was pregnant until she got back to South Korea. When Paige found out about the affair with Matthew Broderick, she went to America for her father at age 16 (in early September of that year). In early October 1997, Kyung-sook left Seoul and moved back to California because of scandals involving Matthew. At age 37, Paige is single with no kids but she has a dog named Marley (named after the book "Marley & Me" by John Grogan). Her height is 5 feet 4 inches tall.[/MARG]
+[ROL]Paige is visiting San Francisco to see her father for the first time in her life at age 16. He lives in a mansion on the Pacific Ocean in Pacific Heights and he drives her back and forth from San Francisco International Airport (SFO). In his car, they talk about what they like about each other and that she is his daughter, but he has never met her before until now because Matthew Broderick was unaware of her existence.
+As the story goes on, Paige tells her father that she wants to go back to Seoul after she graduates from high school in June 2001 (because she knows nothing about New York) and he doesn't want her to leave but they agree that she will be staying with him until then. They also talk about how Kyung-sook is living near them with James & Tabitha since she moved back there from Korea after Matthew Broderick married another woman named Marlene Goldsmith in 2014 (she had two daughters, Loretta and Lydia). Paige gets upset when Matthew asks her to stay at his place instead of hers so she can know him better but he tells her that this is what their mothers want them both do since they are not friends anymore.[/ROL]
+[EVN]As a result, Matthew Broderick was unaware of his daughter Paige's existence until now. The story takes place in an alternate history timeline from 1997 to 2025, where the world is experiencing rapid change and it also includes major events such as wars, natural disasters, disease outbreaks, etc.[/EVN]
+[END]I hope you like my story! If there are any questions or comments please feel free to ask me about them :)
+Sorry for not posting this earlier but I was busy with school. The story continues at: https://www.fanfiction.net/s/14470891/25/The-Secret-Life-of-Matthew-Broderick
+@JosieWoods wrote: Sorry for not posting this earlier but I was busy with school. The story continues at: https://www.fanfiction.net/s/14470891/25/The-Secret-Life-of-Matthew-Broderick
+I'm looking forward to reading it! :)

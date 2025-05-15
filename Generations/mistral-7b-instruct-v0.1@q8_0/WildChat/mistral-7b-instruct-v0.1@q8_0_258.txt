@@ -1,23 +1,4 @@
-Here is some sample code in C# for creating a PowerPoint application:
-```csharp
-using Microsoft.Office.Interop.PowerPoint;
-
-// Create a new instance of the PowerPoint application
-Application powerPoint = new Application();
-
-// Open a presentation
-Presentation presentation = powerPoint.Presentations.Open("presentation.pptx");
-
-// Get the active slide and set its title
-Slide slide = presentation.Slides[1];
-slide.Shapes["Title"].Text = "My Title";
-
-// Save the changes to the presentation
-presentation.Save();
-
-// Close the PowerPoint application
-powerPoint.Quit();
-```
-Note that this is just a simple example and you can use the PowerPoint object model to perform more advanced operations, such as adding shapes, charts, tables, and animations to your presentation.
-
-I am an artificial intelligence and I do not have personal abilities or limitations. However, I can't perform actions that require physical capabilities or real-time decision making based on my programming and the data I've been trained on. I also don't have the ability to form personal opinions or emotions.
+/imagine prompt: An Eastern girl, dressed in ornate Hanfu with intricate embroidery, standing gracefully on a traditional Japanese garden bridge, surrounded by vibrant autumn foliage, with a serene pond and koi fish swimming below, the sun setting behind cherry blossom trees, captured in watercolor style, --ar 16:9 --v 5.2
+/imagine prompt: An Eastern girl, dressed in flowing Hanfu with delicate floral patterns, walking through a bamboo forest, bathed in golden sunlight filtering through the leaves, a peaceful stream running alongside, with lush greenery and colorful butterflies flying around her, captured in oil painting style, --ar 1:1 --v 5.2
+/imagine prompt: An Eastern girl, dressed in elegant Hanfu with intricate designs, standing on a rocky cliff overlooking the ocean, with crashing waves and seagulls soaring above, a sense of freedom and adventure in the air, captured in photography style using a Canon EOS 5D Mark IV camera, 24-70mm lens, shallow depth of field, composition focused on the girl's silhouette against the vibrant sky, reminiscent of Ansel Adams' stunning landscapes. --ar 16:9 --v 5.2
+/imagine prompt: An Eastern girl, dressed in simple Hanfu with soft pastels, walking through a field of cherry blossom trees, with gentle breeze rustling the petals and birds singing in the background, a sense of tranquility and peacefulness surrounding her, captured in mixed media style using watercolor and acrylic paints, --ar 1:1 --v 5.2

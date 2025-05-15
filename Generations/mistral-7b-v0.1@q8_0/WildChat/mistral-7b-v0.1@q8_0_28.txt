@@ -1,16 +1,14 @@
-[RULES]
-                                                        
-                                                        Use the prompt structure and formatting provided in the INST section.
-                                                        Ensure your prompts are creative, imaginative, and visually appealing.
-                                                        Avoid repeating previous prompts or using similar ideas.
-                                                        Do not add additional details that were not given in the concept ([1]).
-                                                        
-                                                        [/RULES]
-                                                        [EXAMPLE]
-                                                        Concept: [1] = 社交平台上展示了一张素描，描绘了一对男女手牵手，站在婚礼现场的台上
-                                                        
-                                                        
-                                                        Prompts:
-                                                        /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
-                                                        /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
-                                                        [/EXAMPLE]
+[INP]The middle section of a thesis paper; It develops the points made in the thesis.
+a.
+supporting ideas
+
+b.
+examples
+
+c.
+evidence
+
+d.
+reason[/INP]
+[INT]The last paragraph in an essay; It restates the main idea, sums up the evidence that supports it, and sometimes points out how the ideas of the thesis relate to other subjects.[/INT]
+

@@ -1,23 +1,10 @@
-There is no need to create a form in order to display data on an Excel sheet. You can use a simple command button and a textbox control. This tutorial explains how to create such a command button and text box control that will retrieve values from cells based on the input value typed in the text box. The following video shows exactly what we are going to accomplish:
-
-[STEP]In order to add a command button, right click on any cell in your worksheet and choose Insert -> Controls -> ActiveX Controls -> CommandButton. Once you have added the command button, it will appear on top of your existing data, as shown in the following screenshot:
-
-[/STEP]Next, right-click on the command button you just created and click Properties from the context menu that appears. On the Properties tab, locate the Name property and set a name for the command button. In this example I named my command button cmd_SearchData. Next, navigate to the Action tab, located in the command button’s properties. From the drop down list labeled Action, choose RunMacro, as shown below:
-
-[STEP]Next, click on the Macro button that appears at the end of the Action field. This will launch the macro recording dialog. Name your macro as desired and then hit OK. In this example I named my macro SearchData.
-
-Now we are ready to create our text box control, which we will use for inputting a value from the user. To add a text box, right click on any cell in your worksheet and choose Insert -> Controls -> ActiveX Controls -> Text Box. Once you have added the text box control, it should appear at the bottom of your existing data, as shown below:
-
-[/STEP]Next, right-click on the text box and click Properties from the context menu that appears. On the Properties tab, locate the Name property and set a name for the textbox control. In this example I named my text box txt_DataToFind. Next, navigate to the Events tab, located in the text box’s properties. From the drop down list labeled Change, choose Macro, as shown below:
-
-[STEP]Next, click on the Macro button that appears at the end of the Action field. This will launch the macro recording dialog. Name your macro as desired and then hit OK. In this example I named my macro GetDataFromCells.
-
-Now that we have created both our command button and text box controls, let’s write some VBA code to make them function correctly. The following is an example of what the VBA code for these two controls might look like:
-
-```Private Sub cmd_SearchData_Click()
-Dim CellValue As Long
-CellValue = txt_DataToFind.Text
-For i = 1 To 12
-Range("A" & i).Value = CellValue
-Next i
-End Sub```
+- Chronological Order of Contributors to Recovery Trajectory
+- Order of Contributing Factors to Recovery Trajectory
+- Timeline of Contributing Factors to Recovery Trajectory
+- Influential Factors for Recovery Trajectory and their Timelines
+- Contributing Factors for Recovery Trajectory in Order
+- Contributing Factors for Recovery Trajectory, Chronologically Listed
+- Recovery Trajectory's Contributing Factors, Timeline Style
+- Timeline of Influential Factors for Recovery Trajectory
+- A Timeline of Important Factors for Recovery Trajectory
+- An Ordered Timeline of Contributors to Recovery Trajectory

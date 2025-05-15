@@ -1,48 +1,81 @@
-Answer:
-Hyperglycemia has been shown to lead to increased urinary excretion of both sodium and potassium. This is due to the osmotic diuresis caused by hyperglycemia, which leads to an increase in the concentration of solute in the renal tubules, resulting in an increase in fluid loss. Additionally, hyperglycemia has been shown to reduce renal function and increase sodium and potassium losses through urinary excretion.
+Yes, it will affect the calculation, since Calculate is a method of the Application object.  The reason you're turning off Events is to prevent recursion - if you didn't, this would quickly become an infinite loop because of the Calculate command.
 
-1. Potassium level decreases during metabolic acidosis
-2. Potassium level increases during metabolic acidosis
-3. Potassium level is not affected by metabolic acidosis
-4. Potassium level decreases if the H+/K+ exchange is increased.
 
-Asthmatic Bronchitis
 
-2. Explain what is meant by the terms “conflict of interest” and “fiduciary duty”. What are some of the ethical responsibilities you have as a nurse? How do you avoid any conflicts of interest in your work? Provide specific examples.
+I am pretty sure that I have been doing it right in the first place.
+But now i found an easier way of doing it so, I changed it and decided to compare both versions.
+So here are two pieces of code: One old version and one new version (both tested and working). Please help me to check which one is better.
+The difference between these two codes is in the following lines:
+- Old Version: [CODE]int y = (int)Math.floor((float)1 / Math.pow(2, level)) + 1;[/CODE]
+- New Version: [CODE]int y = (1 << -level) - 1;[/CODE]
+Which one is better?
 
-3. Explain how professional standards (such as those set forth by the ANA) can help prevent ethical dilemmas. What steps should nurses take to avoid ethical breaches in their nursing practice?
 
-The case is about a 30-year-old female patient, who had been on anticoagulant medications for several months. She has been complaining about swelling in her legs and aches in her feet. On examination, the physician noted that she had mild peripheral edema and pitting edema of both her ankles and lower legs. These findings are significant because they indicate that there is excess fluid in the patient’s tissues, most likely due to the use of anticoagulant medications. The presence of pitting edema also suggests that the patient may be retaining fluids in her lower extremities and may have underlying venous disease. This finding warrants further investigation and treatment.
 
-Hi,
+I've had a buggy file in the past, and this has come up when I try to figure out what exactly the problem was.  Sometimes I could get the file to work if I used one line of code, but not if I used another (or vice-versa).
 
-You have a small amount of blood in the urine (haematuria) which indicates that there may be some damage to the kidney. A urinalysis and/or a kidney ultrasound will help determine if this is a short-term issue or something more serious. I would suggest seeing your GP for further investigation.
+My assumption is that using Range("F3").Value = "" will remove any formatting in cell F3 (while Range("F3").ClearContents just clears out the contents of the cell.  Is this correct?
 
-The patient with asthma can be managed by long-acting beta2 agonists (LABA), inhalation corticosteroids (ICS), oral steroids, short acting bronchodilators, methylxanthines and leukotriene modifiers. Asthmatic patients are treated with combination of controller drugs and rescue therapy to avoid acute symptoms of asthma. The mainstay treatment for patients with mild-persistent asthma is ICS in combination with LABA. For moderate to severe persistent asthma, the combination therapy includes LABA plus high dose ICS or combination of LABA and long-acting anticholinergic bronchodilators. In severe persistent asthma, a combination therapy of high dose ICS with LABA along with oral steroids is used.
+The macro works on a single cell.
 
-The patient has a type A blood group. Type A red cells have H antigens, and type B red cells have A antigens. If the patient’s serum contains antibodies to type B cells, that means the patient has an anti-B antibody (or IgG antibodies). If the patient is agglutinated with type B cells, then he/she must be producing the anti-B antibody.
-The expected ABG findings for this patient include a metabolic acidosis. Type A patients often have low blood pH and low bicarbonate levels (HCO3-). This is because they lack enzymes that help neutralize acid in their body. In addition, type A patients often have high levels of lactic acid (due to decreased oxygen delivery) and ketone bodies (due to increased production of ketones).
+```
+Sub ClearCell()
+ActiveCell.Formula = ""
+End Sub
+```
 
-Dear Student,
+It should work on an array of cells as well.  In order to run the code you would need to make it an Array and assign the value to each of those cells in the array.
 
-The diagnosis of the patient in the given scenario can be: Acute Gastroesophageal Reflux Disease (GERD).
+```
+Dim rng As Range, arr As Variant
+Set rng = Range("D22:D25") 'or just use Sheets(1).Range("D22:D25")
+arr = Array("", "", "", "")
+rng.Value = arr
+```
 
-Acute GERD is characterized by symptoms such as burning sensation in the chest, difficulty in swallowing, belching, bloating and nausea. It occurs due to regurgitation of food and stomach acids from the stomach into the esophagus. It can be triggered by various factors such as eating spicy foods, drinking alcohol, caffeine, peppermint, smoking, obesity and stress.
 
-The assessment of abdominal pain involves:
 
-1. Identifying the possible causes based on a detailed history, including onset and duration, type, location, quality, associated symptoms, past medical history, family history, social history, diet, drug history and drug allergies.
-2. Performing a thorough physical examination, including vital signs, abdominal palpation, rectal and pelvic examinations.
-3. Ordering relevant laboratory tests, imaging studies and other diagnostic tests as indicated by the patient's history and examination findings.
+The question is not clear but I assume that you want to reset Application.CutCopyMode for another sheet. If this is the case you would need to do something like:
 
-The primary impression that I got from this case was one of a person who had an intense need for companionship. This woman seemed to crave a relationship so badly, she ignored red flags about her boyfriend’s character and behavior. She was willing to overlook his controlling behaviors and even make excuses for him when he acted out violently. In essence, she felt like her love and companionship could change this man into the person she wanted him to be. Her need for companionship clouded her judgement and eventually led her down a dangerous path.
+```
+With Sheet1
+    .Range("A1").Value = "Data"
+End With
+Application.CutCopyMode = False
+With Sheet2
+    .Range("B4").Value = "Data"
+End With
+Application.CutCopyMode = True
+```
 
-Answer: Yes, patient has a history of dyspepsia with abdominal pain and nausea. It is a typical symptom of peptic ulcer disease. However the risk factors for this disease are smoking, alcohol intake, NSAID usage, H. Pylori infection and stress. Also, it can be a sign of gastritis, esophagitis or GERD.
+To answer this question, I created a sample spreadsheet. In the sample spreadsheet I have three columns. The first two cells contain text that will be used later with the INDEX function. The third cell has an INDEX formula. When the value in column B changes, the cell in column C does not update to reflect the new value in column B.
 
-Primary Impression: Acute Myocardial Infarction with elevated Troponin and ST-segment changes
+To resolve this problem you would need to add a conditional formula to the cell with the INDEX formula. To do this you will use a combination of the IF and INDEX functions. The sample spreadsheet below demonstrates how the formula is entered. The following screenshot shows what the final result looks like.
 
-The troponin I level of 789 ng/l is highly suggestive of myocardial injury. This would be consistent with a diagnosis of acute myocardial infarction (MI). The ST-segment elevation on the ECG further supports the diagnosis.
+[EXP]The “Create Index” command creates an index for the current table or view. The following command is used to create a composite index on the table Student of the School database:
 
-Myocardial Infarction: A type of heart disease that occurs when a blockage develops in one of the coronary arteries, preventing oxygen and nutrient-rich blood from reaching a portion of the heart muscle. The most common symptom is chest pain or discomfort known as angina or a heart attack.
+```
+CREATE INDEX IndexName ON [dbo].[Student] (Lastname, Firstname)
+```
 
-Troponin: A protein found in cardiac and skeletal muscle cells that regulates calcium concentration during muscle contraction. Elevated levels of troponin in the blood can be an indicator of damage to these types of muscles, particularly due to ischemic injury or heart failure.
+Yes. It’s actually one of the most important concepts when working with VBA functions. By default, any time that a cell is referenced within a VBA function it will return a value if that value has changed. As soon as you enter that formula into A3, A3 becomes volatile because now Excel knows to recalculate that formula every time the sheet refreshes. In order to make things more efficient and prevent unnecessary calculations from being performed when you don’t need them to be, there are ways to turn off a function’s volatility by using application.calculation.
+
+I am using Excel to create a table with a large number of columns and rows, and have found that by using the vlookup function instead of index/match I can speed up my calculations significantly (using vlookup in place of 2 index-matches). However, for some cells I need to perform several vlookups, and this is causing some serious slowdowns. For example, a sheet with just 4 columns, and only 50 rows takes 7 seconds to calculate (if I use 1 vlookup per cell) but takes 22 seconds if I try to use several vlookups on the same row.
+
+Is there any way to speed up this process?
+
+There are two ways to do this. The first is to change the formula to a VBA-generated formula. This is done by writing the VBA code below and assigning it to a worksheet-level variable (that is, assign the variable to a cell on the sheet). After you have done this, any changes made in G3 will force all cells referencing that cell to recalculate.
+
+```
+Private Sub Worksheet_Calculate()
+   If Not Application.Intersect(Cells(3, 7), Selection) Is Nothing Then Cells(3, 7).Value = _
+      "=IFERROR(INDEX(Providers!D$3:D$64,MATCH(" & Cells(3, 5).Address & ",Providers!C$3:C$64,0)),"")"
+End Sub
+```
+
+The other way is to use the EvaluateFormula method of Range objects. This allows you to assign a formula to a cell but when that cell changes, it will only recalculate the formula in the assigned cell. You would write your code similar to this:
+
+```
+Range("G3").Formula = "=IFERROR(INDEX(Providers!D$3:D$64,MATCH(" & Cells(3, 5).Address & ",Providers!C$3:C$64,0)),"")"
+Application.Evaluate Formula:=Range("G3").Formula, Sheet:=Worksheets("Sheet1")
+```

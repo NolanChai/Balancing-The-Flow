@@ -1,7 +1,19 @@
-[QUESTIONS]
-                    
-                        1. 请描述一个充满生活和感动的家庭场景，包括孩子、父母、宠物等主体。你的设定应该包括一些具体的细节，例如家庭环境、家具、表情等等。提示：考虑照片拍摄的角度以及对于家庭场景的不同视角。
-                        2. 请描述一个冒险和恐惧的森林夜晚场景，包括一些怪物、树木和夜间环境的特征。你需要包括一些具体的细节，例如光线、风声、嘶声等等。提示：考虑照片拍摄的角度以及对于森林夜晚场景的不同视角。
-                        3. 请描述一个惊险的空中飞行，包括一些云、天空和飞机特征。你需要包括一些具体的细节，例如速度、风景、风铃声等等。提示：考虑照片拍摄的角度以及对于惊险飞行场景的不同视角。
-                        4. 请描述一个海边夏日景象，包括海洋、阳光和水滴特征。你需要包括一些具体的细节，例如蓝色波浪、白沙滩和熙熙攘攘的人群。提示：考虑照片拍摄的角度以及对于海边夏日景象的不同视角。
-                        5. 请描述一个冷冽的早晨，包括一些冰冷的气候、阳光和空气特征。你需要包括一些具体的细节，例如霜蚀树叶、白色天空和冰凌的感觉。提示：考虑照片拍摄的角度以及对于冷冽早晨的不同视角。
+
+
+I have a table of information that I want to be able to add new records. The fields that are input need to be validated. I'd like to use the "Data Validation" tool for this purpose. However, my table has more than 250 rows, so the Data Validation settings can only validate a cell range of no more than 256 cells. So what is the best way to validate 20+ columns with 4-5 drop down lists and a few validation formulas? I want the drop down lists to be generated from another table in the same sheet, so that if any of the values change in this table it will update all of my tables at once.
+
+I have been using conditional formatting for some time now to validate data entry, but that still leaves the possibility of a user entering incorrect values. Is there any way I can set up multiple drop down lists within an active sheet (with one cell being selected from each list) and then use IF/AND statements to determine whether or not a record is valid?
+
+[INP]I have tried this code below but I cannot get it to work. Any assistance would be greatly appreciated. Thanks in advance for any help.
+Code:
+
+```
+Private Sub Worksheet_Change(ByVal Target As Range)
+Dim cell As Range
+For Each cell In Intersect(Target, Me.Range("B:B"))
+    If cell.Value = "Serviced" Then
+        MsgBox "Please ensure that an identical Service is created with a Next Service Due Date after changing this to Serviced."
+    End If
+Next cell
+End Sub
+```

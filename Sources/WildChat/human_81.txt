@@ -1,35 +1,43 @@
-User: "写一篇关于成都绕城绿岛经济效益评价的数学建模论文"
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = 在这个画面中，我们看到一位身穿CK运动内衣的女性模特，她正在进行体能训练，展示出她强健的肌肉和活力四射的身姿。背景是阳光明媚的天台、街道、广场。这个画面强调身体的健康和活力，传达“性感是来自于健康和活力”的概念。无论是男性还是女性，都可以通过展现他们的身体力量来彰显性感，而不仅仅是局限于外表的审美标准。
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
 
-Assistant: "由于我是人工智能语言模型，没有具体的经验背景，无法进行此题目的具体数学论文建模。在此，我为您提供几条建议来指导您完成这篇论文。
+Assistant: "/imagine prompt: In this scene, we see a female model wearing CK sportswear, engaged in a physical training session, showcasing her strong muscles and vibrant posture. The background consists of a sunny rooftop, streets, and a plaza. This image emphasizes the importance of physical health and vitality, conveying the concept that "sexiness comes from health and vigor". Both men and women can showcase their sexiness by demonstrating their physical strength, rather than solely adhering to aesthetic standards. --ar 16:9 --v 5
 
-首先，您需要收集成都绕城绿岛的环境、经济、文化等多方面的信息，并对其进行整理和分类。此外，还需要了解城市规划、生态环境、旅游经济等相关领域的知识。
+/imagine prompt: In this image, a dynamic female model wearing CK athletic underwear is captured during a vigorous workout, displaying her toned muscles and exuding an energetic presence. The scene is set on a sun-drenched rooftop, surrounded by bustling streets and a vibrant plaza. This composition accentuates the model's health and vitality, conveying the idea that sexiness emanates from an active and fit body. Whether male or female, one's sexiness can be showcased through their physical strength, surpassing conventional aesthetic beauty standards. --ar 16:9 --v 5
 
-其次，您需要确定评价成都绕城绿岛经济效益的指标体系，如旅游收入、生态修复、就业创造等。在此过程中，您需要分析这些指标的优缺点，并确定其权重。
+/imagine prompt: Within this captivating visual, a female model adorned in CK sportswear demonstrates her physical prowess through intense fitness training. Her well-built muscles and lively demeanor are on full display. The background features a sunlit rooftop overlooking bustling streets and an inviting plaza. This composition emphasizes the importance of a healthy and vigorous body, promoting the notion that sexiness originates from a foundation of health and vitality. Irrespective of gender, one can manifest their sexiness by showcasing their physical strength, as opposed to relying solely on external aesthetics. --ar 16:9 --v 5
 
-接着，您需要运用数学模型对这些指标进行评价，如多元线性回归模型、层次分析模型等。其中，多元线性回归模型可以用来预测旅游收入的变动趋势；层次分析模型可以用来计算各个指标的权重。
-
-最后，您需要进行模型评价，并提出改进方案。在此过程中，您需要分析模型的误差和精度，评价模型的可靠性。同时，您还需要针对分析结果提出改进方案，以优化成都绕城绿岛的经济效益。
-
-总之，这篇论文需要充分调研，了解相关知识，选择合适的数学模型，并进行准确的评价和分析。希望这些建议能对您有所帮助。"
-
-User: "天府绕城绿道的直接经济效益"
-
-Assistant: "天府绕城绿道是成都市重要的城市生态绿道之一，它围绕着成都市城市轮廓，在自然与城市之间建立了一道绿色的屏障，既可以为城市居民提供锻炼、放松身心的场所，同时也为城市的生态环境发挥了很好的作用。下面是天府绕城绿道的一些直接经济效益。
-
-1. 旅游带动经济
-
-天府绕城绿道沿线有许多景点和旅游资源，如峨眉山、青城山、都江堰、杜甫草堂等，这些景点及其周边的酒店、农家乐等旅游产业，可以带动地方经济的发展。同时，绿道沿线的自行车租赁、休闲娱乐等服务业也将在绿道的引导下得到发展。
-
-2. 增加房地产价值
-
-天府绕城绿道的建设，会为沿线房地产开发提供更多的增值空间。绿道本身的景观、环境及其周边的公园、商场等都与房产市场形成了良好的互动。同时，沿绿道修建的生态保护区等绿地，吸引了更多购房者的目光。
-
-3. 改善商业环境
-
-绿道沿线的商铺、餐厅、咖啡店等都可借助绿道景观吸引更多的顾客，从而形成独特的商业环境。这样，商业区的店铺的租金与销售额都能够获得赞的增长。
-
-4. 节约城市运营成本
-
-天府绕城绿道的存在，可以为城市带来更多的家庭和个人娱乐运动场所，使人们更活跃地生活在城市中，同时减少公园、体育场馆的运营成本，也为城市节省了较大的经济支出。
-
-总之，天府绕城绿道的直接经济效益包括了旅游、房地产、商业服务和城市经济成本等多个方面，基于对它们的全面分析，我们可以更好地推动天府绕城绿道的开发与建设，让绿道更好地为城市造福。"
+/imagine prompt: This image encompasses a setting where we witness a female model wearing CK sports underwear, actively participating in physical training. Her robust muscles and vibrant pose highlight her impressive fitness. The backdrop consists of a sun-kissed rooftop, offering scenic views of bustling streets and a lively plaza. This scene underscores the significance of physical well-being and exudes an energy that conveys the concept that sexiness emanates from health and vitality. Irrespective of gender, individuals can embody sexiness by showcasing their physical strength, transcending mere external beauty standards. --ar 16:9 --v 5"

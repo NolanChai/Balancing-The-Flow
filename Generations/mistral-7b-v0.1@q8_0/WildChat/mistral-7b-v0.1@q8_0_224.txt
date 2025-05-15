@@ -1,9 +1,73 @@
-Philo wrote a total of 48 works in all. Thirty-six of these have survived into modern times. In addition to his biblical commentaries and ethical treatises, he also penned a collection of minor historical works known as Biblical Antiquities (Bibl. Ant.). The title is actually somewhat misleading, since it was originally composed in Greek and not in Hebrew, which is what we usually think of when we use the term "biblical". Moreover, this work is only loosely related to the historical narrative of the Bible; instead, Philo took the stories of Genesis and interpreted them as myths, in much the same way that Plato had earlier done with Greek myths.
+[INF]
 
-According to Eusebius, Biblical Antiquities was written after the death of Herod the Great (4 BCE). This work is unique among Philo’s writings in that it does not cite or even mention any other author; it appears to have been composed independently. It consists of eight books. The first three concern the creation and fall of mankind, and the four following ones deal with Abraham, Isaac, Jacob, and Joseph, respectively.
-The Biblical Antiquities is often viewed as being a work that was intended to defend the Jewish faith against pagan Greek criticisms. For instance, many of Philo's interpretations of biblical stories are based on Greek myths, such as Zeus (God) marrying Hera (Earth), or Aphrodite (Venus) being born from the sea (Genesis 1:1-2). Philo may have been trying to show that even though these stories seem strange and contradictory when compared with other myths, they all fit together if you know how they are meant to be interpreted.
-Philo's Biblical Antiquities has been very influential on later Christian thought; many of its ideas were adopted into early Christian writings such as the Book of Enoch or the Apocalypse of Baruch.
+- When Jade’s water breaks, a Myrmex Larva emerges from the Queen’s womb.
+- The Myrmex Larva would be the same size as an adult Myrmex, and it can move around freely - and has its own independent AI.
+- It doesn’t have any weapons or armor to defend itself - so [player] will need to protect it from harm.
+- Jade will have her arms crossed over her chest when the Myrmex Larva is born, showing that she is vulnerable as she takes care of her child.
+- After giving birth, Jade will have a sad expression on her face - and she would look down at the Myrmex Larva with concern.
 
-The legend of The Jewish people has been told many times over in many forms by many different people and groups, some are well known, while others have only come to light recently. One such telling came from a group called the Jewish Encyclopedia who was founded in 1901 as an attempt to create a definitive history of the Jewish people which could be used as a reference for future generations.
+(If [player] interacts with Jade during this day 1 scene)
 
-The encyclopedia was published in three volumes starting with Volume One being released on September 23, 1902 and ending with volume three being published on January 15, 1907. The final volume contained more than 34,000 entries covering everything from A-Z about Judaism including mythology, philosophy, history, geography etcetera. It was considered to be one of the most comprehensive works ever written on Jewish culture and religion until its release when it became outdated due to advances in technology like radio broadcasting or television programming.
+([player]: "Hi, Queen.")
+
+(Jade: "[player], thank you for saving me from those thieves!")
+
+([player]: "You're welcome...")
+
+(Jade: "I will never forget the kindness you've shown my people. You are an honorary Jungle Myrmex now!")
+
+([player]: "Thanks for making me one of you... but I think that's not quite right.")
+
+(Jade: "Hmph! There is nothing wrong with becoming an ant, [player]!")
+
+([player]: "Sorry...")
+
+(Jade: "But if you insist on remaining as a human, then I must give you something to remember me by. My only daughter has just been born... and she needs a name.")
+
+[/INF]
+
+- (If [player] interacts with Jade after giving birth)
+
+([player]: "I don't need anything, Queen...")
+
+(Jade: "Then you must call my daughter by her full name!")
+
+([player]: "Okay, I will.")
+
+(Jade: "[player], this is my only daughter. Her name is Myrmexia Jade, the heiress to my throne. She needs a playmate, but her mother isn't able to take care of her now. Please look after Myrmexia Jade for me.")
+
+([player]: "Alright...")
+
+(Jade: "Myrmexia, you must stay here with [player] until I return!")
+
+([player]: "Sure thing, Queen...")
+
+- (If [player] interacts with the Myrmex Larva after it is born)
+
+([player]: "[Myrmexia Jade], what a cute baby girl you are...")
+
+(Jade: "I am glad you find my daughter beautiful. Please take good care of her, and she will grow to be an even more beautiful young woman someday!")
+
+- (If [player] interacts with the Myrmex Larva after it is born and Jade has given birth)
+
+([player]: "Myrmexia Jade...")
+
+(Jade: "What are you doing? You've already named her, haven't you?")
+
+([player]: "Yeah...")
+
+(Jade: "Then you must look after my daughter from now on!")
+
+- (If [player] interacts with the Myrmex Larva before Jade has given birth and doesn't name it yet)
+
+([player]: "[Myrmexia Jade], what a cute baby girl you are...")
+
+(Jade: "I am glad you find my daughter beautiful. Please take good care of her, and she will grow to be an even more beautiful young woman someday!")
+
+- (If [player] interacts with the Myrmex Larva before Jade has given birth and names it)
+
+([player]: "[Myrmexia Jade], what a cute baby girl you are...")
+
+(Jade: "You've named my daughter? How lovely!")
+
+[/INF]

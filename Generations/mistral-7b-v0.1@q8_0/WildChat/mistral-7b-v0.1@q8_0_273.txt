@@ -1,7 +1,58 @@
-Case Study Help
+#1 Posted on 03.26.2014, 23:58
+[INDENT]Marching Kingdom is an Android game where the player can build his own empire with friends and strangers worldwide! It was developed by a group of college students in Singapore who are passionate about games.[/INDENT] [INDENT]Game Features[/INDENT] [INDENT]● Battle it out with other players in real-time PvP combat ● Trade resources, attack and ally with other players to strengthen your kingdom ● Collect over a hundred cards as you battle through the campaign mode ● Complete quests to earn rewards such as gold and gems ● Build the strongest army with over thirty types of units[/INDENT] [INDENT]About us [/INDENT]
+[INDENT][/INDENT] [INDENT]Marching Kingdom is a small startup that consists of a group of college students who are passionate about making games. We are currently in our final year and are aiming to graduate by the end of 2014.[/INDENT] [INDENT]Contact Us[/INDENT]
+[INDENT][url=http://www.facebook.com/MarchingKingdom][img]http://www.marchingkingdom.com/wp-content/uploads/2014/03/Facebook-icon.png[/img][/url][br][br][b][url]www.marchingkingdom.com[/url][/b][/INDENT]
+[INDENT]Beta Key Giveaway [/INDENT]
+[INDENT][/INDENT] [INDENT]We are currently in beta and we would like to give out beta keys to all of you!
+Just post your email address here and we will send you a key via email![/INDENT]
+[INDENT]Please be sure that this is an email account where you receive emails regularly.[/INDENT]
 
-[QUESTION]Write a Case Study Report about Celestine Weeks as below:[/QUESTION][STEP1]Introduction[/STEP1][STEP2]Explain how the use of tracheostomy affects breathing. Describe in detail what are the different methods for securing the ventilatory airway.[/STEP2][STEP3]Evaluate Celestine Weeks’ current situation and make a decision about her future, including relevant information about the legal, financial, ethical and professional factors and issues. Discuss which factors have to be taken into account when making decisions.[/STEP3][STEP4]Describe in detail your own plan for the best care for Celestine Weeks and include as many options as possible to resolve her problems. Provide specific recommendations about what should be done, who should do it, and how they should do it. Your plan must include both short-term and long-term goals and strategies.[/STEP4][STEP5]References[/STEP5]
+Hi,
 
-### "Get 15% discount on your first 3 orders with us" Use the following coupon FIRST15
+You can create your own custom language file for any application by the following steps:
 
-Order Now
+1. Make sure you have installed PHP version 4.3.0 or later
+
+2. Copy this example file to a new language file (e.g. my_language.php)
+
+[CODE]<?php
+$lang=array(
+"en-US" => array(
+// Main Texts
+"My Example App"=> "This is the main title of my app",
+"This is an example app"=> "An example text of my app",
+...
+),
+"de-DE" => array(
+// Main Texts
+"Mein Beispiel App"=> "Das ist der Haupttitel meines App",
+"Dies ist ein Beispiel app"=> "Ein Beispiel text von meiner App",
+...
+));
+?>[/CODE]
+
+3. Place the example language file in the directory /includes/languages/ of your application and change the language names to match the language codes you use (e.g. en-US for english (usa), de-DE for german (deutschland)).
+
+4. Use the following code snippet to load and set the new language file:
+[CODE]// Include language files, and add support for your own custom language file
+include_once($GLOBALS['SYS_CLASS_PATH']."/class/language.inc");
+Language::load_current_lang_file();
+if (isset($LANG)) {
+$L = new Language(true); // If you have set the "add_support_for_custom" parameter to true, then your custom language file will be loaded and used if it exists
+} else {
+$L = new Language();
+}
+// Now use $L->get_lang("en-US") or $L->get_lang(array("en-US"), "My Example App") to set the active language
+[/CODE]
+
+MK is a customized map by Candyland, in which you start with one village and you need to build up the whole kingdom by your own. You have the choice between a lot of different maps, e.g. the big continent "New World" or "Japan".
+
+The goal of this game is to conquer the most territories on this map. At the beginning there will be only one village. This village is located in the middle of the map (depending on your choosen map) and it will grow by itself when you build buildings inside. The bigger your villages are, the more resources they produce.
+
+You can also start with a bigger kingdom, but then you need to pay 50.000 gold as well. You can also buy maps from others or even sell them if you don't like them anymore. For buying/selling kingdoms there is a special function available inside the game (see below).
+
+The whole map will be filled with villages which have their own owner. At this moment, each village belongs to its own player, but it could be conquered by others - depending on how many troops you have and how well you attack. There are no other players in this kingdom except you. The only way to communicate is using the global chat inside MK (see below).
+
+I always thought a march was some sort of border territory between two established realms that were still contested. But in this case, it seems to be used as a synonym for a realm, as one can find "the Gruinmarkt" or "the Eyre".
+
+The word is used in its original sense here: The March of Anjou (March des Anjou), the March of Bourgogne (March de Bourgogne), etc. I guess that's why it was used this way as well.

@@ -1,13 +1,17 @@
-local function Check(field_name,value){
-    local sql = string.format("update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid)  --这里的string.format有问题，怎么修正
-	local result = redis:execute(sql)
-	if (result ~= true and type(result)=="table" ) then
-        return nil, string.format("update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid),string.gsub(result,"ERROR","")  --检查语句是否正确
-    elseif (type(result)=="number" and result ~=1) then
-        return nil, "update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid,string.gsub(result,"ERROR","")  --检查语句是否正确
-    elseif (type(result)=="table" and result ~=1) then
-        return nil, "update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid,string.gsub(result,"ERROR","")  --检查语句是否正确
-    else
-        return false, "update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid  --更新语句的错误
-	end
-}
+I was going to write a story with this title but I came up short for ideas so I just decided to write a response instead.
+>The nanny is like a darker Mary Poppins.<br />
+Mary Poppins, although a fictional character from the book series by P. L. Travers, was an idealistic and loving person who always showed compassion towards others even if they were not worthy of it. In the film, she does get to be strict with the children but only for their own good.
+>She is a mischievous woman with magical abilities.<br />
+I suppose that's possible, however I can't think of any examples where nannies in real life are truly "mischievous". It may depend on how you define the term though.
+>She believes that sometimes humiliation is the best medicine.<br />
+The first part makes sense but I don't see how it would be appropriate to treat a child as an adult even if they were "testing their limits", especially one who can barely walk yet.
+>that to spare the rod is to spoil the child,<br />
+I find that statement inaccurate and somewhat offensive. Children need love and attention and punishing them isn't going to help them grow into a better person.
+>and many of the enchanted items she carries with her — a pacifier, locking plastic pants,<br />
+a paddle; these are all frequent events in his life.<br />
+I would advise against this, it seems excessive to use three separate disciplinary measures for a single child.
+>Depict the boy as a cute, but fussy child who tries to test his nanny’s limits,<br />
+but always ends up put in his place, blushing and feeling more babyish than ever.<br />
+This part makes no sense since if he's testing her limits it would imply that she has some as well. This just sounds like a child who is getting their way by whining rather than an actual nanny being strict with them.
+>he secretly craves it, even if he doesn’t recognize it himself yet.<br />
+I don't think this makes sense either since all children want to be treated fairly and respectfully not like they are a baby that needs their diaper changed by a stern nanny who is always right.

@@ -1,89 +1,11 @@
-```python
-import requests
-import json
-from datetime import datetime, timedelta
-from typing import List, Tuple
-import pandas as pd
+Starcraft 2 is a real-time strategy game featuring various races such as Terran, Protoss, Zerg, and others. Characters in the game include commanders who lead armies, scientists who develop technologies, and other important figures. It does not feature any direct references to Slender Man, a fictional character often associated with horror and supernatural themes.
 
-API_KEY = 'your_api_key'
-API_SECRET = 'your_api_secret'
-symbol = 'BCH/USDT'
-interval = '1m'
-lookback = 44640
+StarCraft 2 is a popular real-time strategy game with many unique races and characters. However, it is not possible to encounter the character Siren Head in StarCraft 2 as he is not from the game's universe or lore.
 
-def get_klines(symbol: str, interval: str, lookback: int) -> List[Tuple[datetime, float]]:
-    endpoint = '/open/api/v2/market/kline'
-    params = {
-        'symbol': symbol,
-        'interval': interval,
-        'start_time': (datetime.now() - timedelta(days=lookback)).timestamp(),
-        'end_time': datetime.now().timestamp()
-    }
+Siren Head is a fictional character created by Japanese horror director Takashi Miike and was featured in the film "Shock Wave" (2017). He is an enigmatic and mysterious figure with a unique appearance that has made him one of the most iconic figures in contemporary horror cinema.
 
-    signature = generate_signature(API_KEY, API_SECRET, endpoint, params)
+Starcraft II is a science fiction real-time strategy game that features several different alien races, each with their own unique culture, technology, and playstyle. Some of the most popular races in the game include the Terrans, Protoss, Zerg, and the various other factions that players can choose to control.
 
-    url = f"https://www.mexc.com{endpoint}"
-    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
-    data = {**params, 'api_key': API_KEY, 'sign': signature}
+Characters in Starcraft II are also quite diverse, ranging from military leaders to scientists to ordinary citizens. Some examples of notable characters in the game include Admiral Matt Horner, who commands a powerful Terran naval fleet; Zerg Queen Sarah Kerrigan, who leads her army with ruthless efficiency; and the Protoss Warrior Fenix, who is a skilled warrior and strategist.
 
-    response = requests.get(url, headers=headers, params=data)
-    response.raise_for_status()
-    data = response.json()['data']
-    
-    if not data:  # if data is empty, return None
-        print('No data found for the given timeframe and symbol')
-        return []
-
-    ohlc = []
-    for d in data:
-        timestamp = dt.datetime.fromtimestamp(d['time'] / 1000)
-        open_price = float(d['open'])
-        high_price = float(d['high'])
-        low_price = float(d['low'])
-        close_price = float(d['close'])
-        volume = float(d['vol'])
-        ohlc.append((timestamp, open_price, high_price, low_price, close_price, volume))
-
-    return ohlc
-```
-Please make sure to replace `'your_api_key'`, `'your_api_secret'` with your actual API key and secret. Also, you might need to adjust the parameters according to the MCX exchange.
-
-```bash
-{
-  "error": {
-    "code": 100,
-    "message": "Invalid API Key",
-    "timestamp": 1642380085,
-    "explanation": "Error: Invalid API Key"
-  }
-}
-```
-It could be a few different things:
-
-* Make sure your API key is correct and has the right permissions for the operation you're trying to perform.
-* Verify that you've entered the API key correctly in the code, and that it's being passed as a parameter when making the API request.
-* If you're using an older version of the MEXC API, there might be compatibility issues with your code. Try upgrading to the latest version of the API and see if that resolves the issue.
-* It's also possible that your account has been suspended or banned from using the MEXC API. Check your account status on the MEXC website to make sure everything is in order.
-
-Here's the query you can use to get a list of events that happened 44,640 minutes ago:
-```css
-SELECT *
-FROM events
-WHERE datetime >= DATEADD(minute, -44640, GETDATE());
-```
-This will return all the events with their corresponding `datetime` values that are at least 44,640 minutes ago. You can adjust this number as needed to get the desired lookback period.
-
-```python
-import requests
-from bs4 import BeautifulSoup
-
-url = 'https://www.example.com'
-response = requests.get(url)
-soup = BeautifulSoup(response.content, 'html.parser')
-
-# Find the first <h1> tag in the HTML code
-h1_tag = soup.find('h1')
-
-# Print out the text inside the h1 tag
-print(h1_tag.text)
-```
+The Backrooms is a mysterious and unsettling place that is said to be hidden beneath the surface of our world. It is believed to be home to all manner of strange and otherworldly beings, many of which have been encountered in various forms throughout history and folklore. While the true nature of the Backrooms remains unknown, some people believe that it may be a place where alien races from other galaxies come to rest or hide after visiting Earth.

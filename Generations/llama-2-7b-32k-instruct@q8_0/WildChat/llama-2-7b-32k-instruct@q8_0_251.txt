@@ -1,0 +1,19 @@
+SELECT DISTINCT
+IT.Id as "Object Key",
+'Invoice Item' as "Object Type"	,
+PRPC.RenewalDeferredCode__c as "Deferred Revenue Accounting Code",
+PRPC.RenewalRevenueCode__c as "Recognized Revenue Accounting Code"
+FROM InvoiceItem IT
+JOIN Invoice IV ON IT.InvoiceId = IV.Id
+JOIN RatePlanCharge RPC ON RPC.Id = IT.RatePlanChargeid
+JOIN Subscription Sub ON IT.subscriptionid = Sub.id
+JOIN Account Acct ON Sub.creatoraccountid = Acct.id
+JOIN ProductRatePlanCharge PRPC ON RPC.productrateplanchargeid = PRPC.id
+WHERE 
+ IT.AccountingCode not like 'Renewal' 
+AND (Sub.QuoteBusinessType__QT = 'Renewal' OR Sub.QuoteType__QT = 'Renew Subscription')
+AND  Acct.CustomerType__c = 'CM Contractor'
+AND IT.AccountingCode != PRPC.RenewalRevenueCode__c 
+AND date_format(IV.PostedDate,'%m-%d-%Y') = date_format(current_date - interval '1' day, '%m-%d-%Y') 
+AND PRPC.RenewalDeferredCode__c != 'None'
+AND PRPC.RenewalRevenueCode__c != 'None';

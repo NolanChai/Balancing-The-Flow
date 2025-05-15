@@ -1,18 +1,4 @@
-To find the time rate of change of the total resistance, we need to take the derivative of the expression for R(x, y, z) with respect to time t:
-
-R'(t) = dR(x, y, z)/dt
-
-Substituting x = 100t, y = 200t, and z = 300 into the formula for R(x, y, z), we get:
-
-R(100t, 200t, 300) = (100t * 200t * 300 / (200t + 300 + 100t))
-
-Taking the derivative of this expression with respect to t, we get:
-
-R'(t) = d/dt(100t * 200t * 300 / (200t + 300 + 100t))
-       = 4000t^2(300 - 100t)/((100t)^2 + 600 + 300t)
-
-Now we can substitute x = 100t, y = 200t, and z = 300 into the formula for R'(x, y, z):
-
-R'(100t, 200t, 300) = 4000t^2(300 - 100t)/((100t)^2 + 600 + 300t)
-
-So the time rate of change of the total resistance at this time is R'(100t, 200t, 300).
+/imagine prompt: A little Koki, with piercing green eyes and a curious expression, playing with colorful balloons in a serene forest glade, surrounded by tall trees adorned with fall foliage, a gentle breeze blowing through the rustling leaves, soft shadows cast across the grassy floor, captured by an Olympus OM-D E-M1 Mark III camera, 45mm lens, shallow depth of field, composition focused on Koki's eyes and balloon, in a style reminiscent of Ansel Adams' black and white landscape photography. --ar 16:9 --v 5
+/imagine prompt: A little Koki, with soft golden curls and a playful expression, sitting atop a hillside overlooking a picturesque village, surrounded by colorful wildflowers swaying gently in the breeze, quaint stone buildings dotting the landscape, a small stream winding through the scene, captured by a Canon EOS R5 camera, 85mm lens, shallow depth of field, composition focused on Koki's face and the village below, in a style reminiscent of Claude Monet's Impressionist paintings. --ar 16:9 --v 5
+/imagine prompt: A little Koki, with a mischievous expression and a toy gun pointed towards its head, standing on top of a snowy mountain peak, looking out at the vast expanse of snowy wilderness below, with a few other small mountains in the distance, a brilliant blue sky overhead, captured by a Nikon D850 camera, 24-70mm lens, shallow depth of field, composition focused on Koki's face and gun, in a style reminiscent of Ansel Adams' black and white landscape photography with a touch of humor. --ar 1:1 --v 5
+/imagine prompt: A little Koki, with wide-eyed wonder and curiosity, standing at the edge of a vast jungle, surrounded by towering trees adorned with vibrant foliage, a lush green canopy overhead, colorful butterflies flitting about, exotic birds singing in the background, captured by an iPhone 12 Pro Max camera, 50mm lens, shallow depth of field, composition focused on Koki's eyes and surroundings, in a style reminiscent of National Geographic photography with a touch of childlike imagination. --ar 9:16 --v 5

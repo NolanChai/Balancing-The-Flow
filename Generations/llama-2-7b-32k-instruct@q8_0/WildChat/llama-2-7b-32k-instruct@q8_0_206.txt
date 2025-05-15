@@ -1,0 +1,40 @@
+Propositions:
+1. ∃xP(x) - There is an x such that P(x)
+2. ∀x(¬P(x)) - For all x, P(x) is not true
+
+Conclusion:
+1. ¬∃xP(x) - There is no x such that P(x)
+2. ∀x(¬P(x)) - For all x, P(x) is not true
+
+Proof:
+
+1. ¬∃xP(x) ⇔ ∀x(¬P(x)) - Translating the conclusion of ¬∃xP(x): "There is no x such that P(x)" becomes "For all x, there is no x such that P(x)", which is equivalent to ∀x(¬P(x)).
+2. ∀x(¬P(x)) ⇔ ¬∃xP(x) - Translating the conclusion of ∀x(¬P(x)): "For all x, P(x) is not true" becomes "There is no x such that P(x)" which is equivalent to ¬∃xP(x).
+
+Therefore, we have established the equivalence between ¬∃xP(x) and ∀x(¬P(x)).
+
+Note: In FOPL, ∃x represents a universal quantification, whereas ∀x represents a existential quantification. However, in this proof, the two are used interchangeably since both statements are equivalent in this case.
+
+Proving "Existential Instantiation"  
+Let's first define some notation:  
+* A variable $x$ is said to be bound in a formula if it occurs free in the formula.  
+* A formula $A$ has an existential instantiation at $x$ if there exists a variable $y$ such that $A(y)$ holds.  
+* We say that $P(x)$ and $Q(x)$ are equivalent formulas if they hold for the same values of the bound variables.  
+
+Now, we can prove the equivalence:
+
+Let's start with the implication from right to left:
+
+Assume that $(∀x)P(x) \Rightarrow (∃x)P(x)$. We want to show that this implies $Q(x)$ whenever $P(x)$ holds.
+
+Suppose $P(x)$ holds for some value of the variable $x$. Then, there exists an existential instantiation at $x$ of $(∀x)P(x)$, i.e., there exists a variable $y$ such that $P(y)$ holds. We can now apply the fact that $P(x)$ is equivalent to $Q(x)$ to conclude that $Q(x)$ also holds.
+
+This establishes the implication from right to left.
+
+Now, let's prove the reverse implication:
+
+Assume that $(∃x)P(x) \Rightarrow (∀x)P(x)$. We want to show that this implies $Q(x)$ whenever $P(x)$ holds.
+
+Suppose $P(x)$ holds for some value of the variable $x$. Then, there exists an existential instantiation at $x$ of $(∃x)P(x)$, i.e., there exists a variable $y$ such that $P(y)$ holds. We can now apply the fact that $P(x)$ is equivalent to $Q(x)$ to conclude that $Q(x)$ also holds.
+
+This establishes the reverse implication and hence proves the equivalence of existential instantiation and universal generalization.

@@ -1,11 +1,43 @@
-User: "kāda ir dzīves jēga"
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = 购房款高科技g
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
 
-Assistant: "Dzīves jēga ir individuāla un atkarīga no katras personas uzskatiem, vērtībām un mērķiem. Daži cilvēki meklē dzīves jēgu reliģijā vai garīgās prakses, citi koncentrējas uz personīgo attīstību un labu darīšanu, savukārt citi meklē dzīves jēgu attiecībās, sasniegumos vai kopa ar citiem cilvēkiem. Būtiska dzīves jēgas komponente ir arī pašapziņa un prieks par to, kas mēs esam un ko mēs darām. Visbeidzot, daži cilvēki var justies, ka dzīves jēga ir tukšuma jeb esamības pieredzē, kur tie cenšas atrast nozīmi pašā dzīves faktā. Svarīgi ir atklāt un ievērot savas vērtības un mērķus, kas liek dzīvei jēgu."
+Assistant: "/imagine prompt: futuristic cityscape, towering skyscrapers with sleek curved edges, glowing neon lights illuminating the streets, flying vehicles zooming through the air, holographic advertisements projecting vivid colors, a bustling crowd of people in futuristic attire, advanced technology seamlessly integrated into the architecture, captured with a Sony A7R III camera, wide-angle lens capturing the vastness of the city, composition focused on the reflection of the cityscape in a rain-soaked street, evoking a sense of awe and excitement, in a style reminiscent of Blade Runner's futuristic noir aesthetic. --ar 16:9 --v 5
 
-User: "kas ir keto analīze"
+/imagine prompt: serene beach, pristine white sand stretching for miles, crystal-clear turquoise water, gentle waves lapping against the shore, palm trees swaying in the tropical breeze, colorful beach umbrellas scattered across the sand, people lounging under the shade, capturing the joyful atmosphere of a tropical paradise, captured with a Canon 5D Mark IV camera, telephoto lens zoomed in on a group of friends playing beach volleyball, composition highlighting their dynamic movements and expressions, in a vibrant and lively style reminiscent of beach photography. --ar 16:9 --v 5.2
 
-Assistant: "Ketogēnā diēta ir diētas režīms, kas ir bagātināts ar labību, cukuru un vairākiem citiem ogļhidrātiem, samazinot to uzņemšanu līdz minimumam. Keto analīze ir procesa pasākums, kurā tiek pārbaudīta persona, kura veic ketogēno diētu, ketozes stāvokļa klātbūtne. 
+/imagine prompt: enchanted forest, towering ancient trees with moss-covered branches, rays of sunlight filtering through the lush foliage, vibrant wildflowers carpeting the forest floor, a gentle stream meandering through the forest, creating a peaceful ambiance, birds chirping and butterflies fluttering around, capturing the tranquility of nature, realized as a watercolor painting, with soft and delicate brushstrokes, creating a dreamlike and ethereal atmosphere, in a style reminiscent of the works of Claude Monet. --ar 1:1 --v 5
 
-Ketozes stāvoklis ir fizioloģiska reakcija uzrogdzības metabolismam, kas notiek, kad organisms neuzņem pietiekami daudz ogļhidrātu vai netiek pietiekami piegādāts ar enerģiju, izmantojot ogļhidrātus. Šajā procesā organisms sāk izmantot taukus kā galveno enerģijas avotu, kas rada ketonu ķermeņus.
-
-Keto analīze var notikt, izmantojot ketonu testa strēmeles, kurām tiek iemērktas urīnā, lai noteiktu, vai ķermenī ir palielināts ketonu līmenis. Turklāt, dažreiz tiek veikta asins analīze, lai precīzāk noteiktu ketonu līmeni asinīs. Keto analīze ir noderīga, lai apstiprinātu, vai persona ir nonākusi ketozes stāvoklī, kas ir nepieciešams, lai sasniegtu ketogēnās diētas mērķus vai pārbaudītu, cik efektīva ir ketogēnā diēta noteiktai personai. Ir svarīgi konsultēties ar medicīnas speciālistu vai uztura speciālistu, lai saņemtu precīzu informāciju un norādījumus par ketogēnās diētas režīma un keto analīzes piemērošanu."
+/imagine prompt: bustling night market, a labyrinth of narrow alleyways filled with vibrant stalls, colorful lanterns hanging overhead, the aroma of sizzling street food filling the air, people bustling about, immersed in the lively atmosphere, street performers entertaining the crowd, illuminated by the warm glow of neon signs, captured with a Fujifilm X-T3 camera, prime lens capturing the exquisite details of the food and people, composition focused on a street food vendor skillfully preparing a mouth-watering dish, in a documentary photography style, capturing the energy and vibrancy of the night market. --ar 9:16 --v 5.2"

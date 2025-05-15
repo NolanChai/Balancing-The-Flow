@@ -1,0 +1,13 @@
+sx, sy, sz, dx, dy, dz, w, h, l) {
+	let halfW = Math.floor(w / 2);
+	let halfH = Math.floor(h / 2);
+	let halfL = Math.floor(l / 2);
+
+	for (let x = -halfW; x <= halfW; x++) {
+		for (let y = -halfH; y <= halfH; y++) {
+			for (let z = -halfL; z <= halfL; z++) {
+				world.setBlock(dx + x, dy + y, dz + z, world.getBlock(sx + x, sy + y, sz + z));
+			}
+		}
+	}
+}

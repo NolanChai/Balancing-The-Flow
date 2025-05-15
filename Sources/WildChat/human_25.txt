@@ -1,43 +1,29 @@
-User: "
-                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
-                            
-                            Please adhere to the structure and formatting below, and follow these guidelines:
-                            
-                            Do not use the words "description" or ":" in any form.
-                            Do not place a comma between [ar] and [v].
-                            Write each prompt in one line without using return.
-                            Structure:
-                            [1] = Two young siblings, a girl and a boy, joyfully sprinting towards a portal adorned with shimmering vines, located in the middle of a dense enchanted forest. The girl, wearing a flowing purple dress, holds a basket of colorful flowers, while the boy, dressed in a green hoodie and jeans, carries a wooden sword. Sunlight filters through the towering trees, casting a dappled light on the forest floor. The air is filled with the scent of wildflowers and moss. The composition features the children in the foreground, their blurred movements conveying a sense of excitement and adventure, while the forest stretches into the distance, creating a feeling of vastness and mystery. The atmosphere is filled with a mix of anticipation and joy, as they embark on an exhilarating journey. A painting prompt that captures the dreamlike quality of the scene, with soft brushstrokes and vibrant colors reminiscent of the works of Claude Monet. --ar 9:16 --v 5.3
-                            [2] = a detailed description of [1] with specific imagery details.
-                            [3] = a detailed description of the scene's environment.
-                            [4] = a detailed description of the compositions.
-                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
-                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
-                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
-                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
-                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
-                            
-                            
-                            Formatting:
-                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
-                            
-                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
-                            
-                            Write your prompts in english.
-                            Do not describe unreal concepts as "real" or "photographic".
-                            Include one realistic photographic style prompt with lens type and size.
-                            Separate different prompts with two new lines.
-                            Example Prompts:
-                            
-                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
-                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
-                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
-                                                        "
+User: "(As I relaxed in my base, I can't believe that I defeated both the Ender Dragon and Wither in just one day. And more importantly, NOTHING could get past my defenses - Aegises in the skies, Lacedons and Dwellers in the water, Astaroths serving as sentries on the ground, about 500 Rooststalkers, and even two Royal Reds guarding my front door.)
 
-Assistant: "/imagine prompt: Two young siblings, a girl and a boy, excitedly running towards a magical portal covered in shimmering vines, nestled deep within an enchanting forest. The girl, wearing a flowing purple dress adorned with intricate floral patterns, delicately holds a basket filled with an array of vibrant flowers - daisies, tulips, and roses. The boy, dressed in a comfortable green hoodie and jeans, clutches a wooden sword tightly in his hand, ready to embark on an imaginary adventure. Sunlight gently filters through the towering trees, bathing the forest floor in a soft, golden glow. The air is filled with the enchanting scent of wildflowers and the mossy earth. The composition captures the children in the foreground, their figures slightly blurred to convey a sense of their infectious enthusiasm and anticipation. The forest extends into the distance, its thick foliage hinting at the untold wonders and mysteries that lie beyond. This composition exudes a feeling of vastness and excitement as the siblings venture into a world filled with endless possibilities. To emphasize the dreamlike quality of the scene, the image is painted using soft, impressionistic brushstrokes reminiscent of Claude Monet's masterpieces. The vibrant colors of the flowers and the lush greenery of the forest are brought to life, creating a visually captivating and immersive experience for the viewer. --ar 9:16 --v 5.3
+[player]: "With these defenses, I'm practically unstoppable!"
 
-/imagine prompt: In the heart of a dense and magical forest, surrounded by towering trees adorned with moss and draped in vines, lies a captivating scene of two young siblings joyfully sprinting towards an enchanting portal. The portal, woven intricately with shimmering vines that seem to dance with a life of their own, beckons the children with its otherworldly allure. Their excited expressions and energetic movements are frozen in a blur, capturing their exhilaration and the sense of adventure that awaits them. The girl, dressed in a flowing purple dress that billows with each step, carries a basket overflowing with a riot of colorful flowers - yellow sunflowers, red poppies, and purple lavender. Meanwhile, the boy, clad in a comfortable green hoodie and jeans, playfully wields a wooden sword, ready to face any challenge that awaits beyond the portal. As the early morning sunlight filters through the dense canopy, it casts dappled patterns of light on the moss-covered forest floor, illuminating the vibrant hues of wildflowers and adding an ethereal quality to the atmosphere. The dense forest extends into the distance, shrouded in a captivating mist that invites curiosity and exploration. The scene evokes a sense of anticipation and joy as the siblings embark on an exhilarating journey into the unknown. To capture the dreamlike quality of this magical moment, the image is painted using soft brushstrokes and vibrant colors reminiscent of the works of Claude Monet, transporting the viewer into a world filled with wonder and enchantment. --ar 9:16 --v 5.3
+(Just then, I heard something coming from the basement.)
 
-/imagine prompt: Nestled deep within a dense and enchanted forest, amidst towering trees adorned with gently swaying vines, stands an alluring portal that beckons two young siblings. As they sprint towards the portal with sheer joy and excitement, their movements blur, conveying a sense of anticipation and adventure. The girl, adorned in a flowing purple dress that flutters in the wind, gracefully holds a woven basket filled with an assortment of vivid and fragrant flowers - delicate daffodils, vibrant tulips, and blossoming cherry blossoms. In contrast, the boy, dressed in a comfortable green hoodie and jeans, clutches a wooden sword tightly, ready to take on the challenges that lay ahead. The forest, bathed in the gentle glow of the sun's rays as they filter through the dense foliage, emits a delicate scent of wildflowers and fresh moss. In the distance, the forest stretches as far as the eye can see, creating a feeling of vastness and mystery. The composition places the children in the foreground, with their exuberant movements emphasized by the slight blurring effect. The enchanting forest, with its carpet of vibrant wildflowers and towering trees, serves as the backdrop, drawing the viewer's gaze into the scene's depth. The atmosphere is filled with a mix of anticipation and joy, as the siblings embark on an exhilarating journey into the unknown. To capture the dreamlike quality of the scene, the image is painted with soft brushstrokes and vibrant colors, evoking the impressionistic style of Claude Monet. This realization invites the viewer to immerse themselves in a world of imagination and wonder. --ar 9:16 --v 5.3
+[player]: "Are you kidding me…?"
 
-/imagine prompt: Step into a fantastical scene set amidst a dense enchanted forest, where two young siblings delightfully sprint towards a mystic portal adorned with shimmering vines. The girl, her vibrant purple dress flowing behind her in the wind, clutches a basket filled with an assortment of blossoming flowers - fiery orange marigolds, delicate pink tulips, and vibrant bluebells. The boy, dressed in a green hoodie and jeans, brandishes a wooden sword, ready to defend against any imaginary foe. Sunlight filters through the towering trees, casting a magical dappled light on the lush forest floor. The air is fragrant with the scent of wildflowers and moss. The composition centers upon the children, capturing their joy and excitement through blurred movements, emphasizing their anticipation of the thrilling adventure that lies ahead. The dense forest, stretching into the distance, creates an aura of mystery and vastness, enticing the viewer to imagine the unseen wonders that await. The atmosphere is filled with a mix of anticipation and jubilation, as the siblings embark on an exhilarating journey that promises endless enchantment. This moment is painted with soft brushstrokes and vibrant colors, evoking the dreamlike quality found in the works of Claude Monet. This creative realization transports the viewer into a magical realm, brimming with wonder and serendipity. --ar 9:16 --v 5.3"
+(I went to the basement, and saw where the screams were coming from. The source of the screams were a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider. She looks like she was in pain.)
+
+Female Spider: (in pain) "AAAAAAAH!! Come on, little one! Why won't you come out?! It's been 30 months since I first got pregnant, and I'm still waiting for you!" (thinking to herself) "You can do this, Mindy...be strong for your son..."
+
+(I noticed how loud the girl was screaming, and I decided to help.)
+
+Mindy: (in pain) "Oh, thank GOG! Finally! I've been waiting to give birth for 30 months, but my son's not coming out!""
+
+Assistant: "[player]: "Let me help you. I may not have any medical experience, but I can at least try."
+
+(Mindy nodded gratefully, and I tried to help her push. After a few minutes of intense effort, a small spiderling finally emerged from her womb.)
+
+Mindy: (tears of joy streaming down her face) "My son...my little boy...thank you so much, kind stranger."
+
+[player]: "It was nothing. I'm just glad I could help."
+
+Mindy: "I must repay you somehow. Please, let me stay here with you. I'll do whatever you need - cooking, cleaning, even fighting if necessary."
+
+[player]: "I have enough defenders as it is, but I could use some help with cooking and cleaning. You can stay with me for as long as you need."
+
+(Mindy hugged me tightly, and from that day on, she became a valuable member of my team. Whenever I came back from my adventures, I knew I could always count on her to have a hot meal waiting for me.)"

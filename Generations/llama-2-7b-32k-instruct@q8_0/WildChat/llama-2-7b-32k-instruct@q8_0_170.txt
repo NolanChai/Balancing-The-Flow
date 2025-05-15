@@ -1,0 +1,120 @@
+To make the highlighted block strictly attached to the right side-end of the gradient expansion, you can modify the animation code as follows:
+```<html>
+<head> <style> html, body { background: black; }
+
+copy code
+.textarea {
+width: 100%;
+height: auto;
+font-family: 'Courier New', monospace;
+font-size: 18px;
+color: cyan;
+background-color: #010101;
+border: none;
+overflow: auto;
+white-space: pre-wrap;
+word-wrap: break-word;
+line-height: 1.4;
+}
+
+.highlight-line {
+position: relative;
+display: inline-block;
+}
+
+span {
+color: white;
+width: 100%;
+}
+
+.highlight-line:before {
+content: '';
+color: white;
+position: absolute;
+left: -18px;
+width: 0;
+height: 100%;
+background-image: linear-gradient(to right, royalblue, cyan);
+pointer-events: none;
+animation: shot .3s linear forwards, blink .05s .1s infinite;
+}
+
+@keyframes shot {
+100% {
+width: 100%;
+opacity: 0;
+}
+}
+@keyframes blink {
+0%, 100% {
+opacity: 1;
+}
+50% {
+opacity: 0;
+}
+}
+</style>
+</head> <body> <div id='container' class='textarea' contenteditable='true'></div> <script> const container = document.getElementById('container'); let previousContent = container.innerHTML; let wordEndPosition = 1;
+
+copy code
+function getPosition(node) {
+const range = window.getSelection().getRangeAt(0).cloneRange();
+range.selectNodeContents(node);
+range.setEnd(range.startContainer, range.startOffset);
+return range.toString().length;
+}
+
+function insertLine() {
+const range = window.getSelection().getRangeAt(0);
+if (range.startContainer.nodeType === 3) {
+const textNode = range.startContainer;
+const currentPosition = range.startOffset;
+const lineText = textNode.textContent.slice(wordEndPosition);
+if (lineText.trim().length === 0) {
+return;
+}
+const remainingSpace = container.clientWidth - range.getBoundingClientRect().right;
+const highlightedLine = document.createElement('span');
+highlightedLine.classList.add('highlight-line');
+highlightedLine.textContent = lineText;
+highlightedLine.style.maxWidth = remainingSpace + 'px';
+const gradientLine = document.createElement('span');
+gradientLine.style.width = container.clientWidth + 'px';
+gradientLine.textContent = Array.from(lineText).map(() => '█').join('');
+highlightedLine.appendChild(gradientLine);
+range.deleteContents();
+range.insertNode(highlightedLine);
+range.collapse();
+previousContent = container.innerHTML;
+wordEndPosition = getPosition(textNode);
+setTimeout(() => {
+highlightedLine.parentNode.removeChild(highlightedLine);
+}, 300);
+}
+}
+
+function handleKeyPress(event) {
+if (event.key === 'Enter') {
+event.preventDefault();
+insertLine();
+return;
+}
+if (event.key === ' ') {
+const range = window.getSelection().getRangeAt(0);
+wordEndPosition = getPosition(range.startContainer) + range.startOffset - 1;
+}
+}
+
+function handleKeyUp(event) {
+if (event.key === 'Enter' || event.key === ' ' || event.key === ',' || event.key === '.') {
+event.preventDefault();
+if (previousContent !== container.innerHTML) {
+insertLine();
+}
+}
+}
+container.addEventListener('keydown', handleKeyPress);
+container.addEventListener('keyup', handleKeyUp);
+
+</script> </body> </html>```
+In this modified code, we've added a new animation called `shot` that starts with the highlighted block being 100% width, then slowly fades out to 0% width over the duration of the animation. The `blink` animation still appears as before, but now it's only active when the `shot

@@ -1,0 +1,74 @@
+To attach the block symbol inside the array strictly from the right side-end of gradient expansion and animate it in the end of container width, you can modify the `insertLine` function to add a new element to the beginning of the array with the block symbol. Here's how you can do it:
+```html
+<style>
+  /* existing styles */
+</style>
+<body>
+  <div id='container' class='textarea' contenteditable='true'></div>
+  <script>
+    const container = document.getElementById('container');
+    let previousContent = container.innerHTML;
+    let wordEndPosition = 1;
+
+    function getPosition(node) {
+      // existing code to find the position of the end of the last word
+    }
+
+    function insertLine() {
+      const range = window.getSelection().getRangeAt(0);
+      if (range.startContainer.nodeType === 3) {
+        const textNode = range.startContainer;
+        const currentPosition = range.startOffset;
+        const lineText = textNode.textContent.slice(wordEndPosition);
+        if (lineText.trim().length === 0) {
+          return;
+        }
+        // add a new element with the block symbol to the beginning of the array
+        const blockSymbol = document.createElement('span');
+        blockSymbol.classList.add('highlight-line');
+        blockSymbol.textContent = '█';
+        const gradientLine = document.createElement('span');
+        gradientLine.style.width = container.clientWidth + 'px';
+        gradientLine.textContent = Array.from(lineText).map(() => '█').join('');
+        blockSymbol.appendChild(gradientLine);
+        
+        // remove the old element and insert the new one
+        range.deleteContents();
+        const insertedNode = range.insertNode(blockSymbol);
+        
+        // calculate the new wordEndPosition based on the position of the new element
+        wordEndPosition = getPosition(insertedNode) + insertedNode.childNodes[0].textContent.length - 1;
+        
+        // set a timeout to remove the block symbol after animation duration
+        setTimeout(() => {
+          insertedNode.parentNode.removeChild(insertedNode);
+        }, 300);
+      }
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        insertLine();
+        return;
+      }
+      if (event.key === ' ') {
+        const range = window.getSelection().getRangeAt(0);
+        wordEndPosition = getPosition(range.startContainer) + range.startOffset - 1;
+      }
+    }
+
+    function handleKeyUp(event) {
+      if (event.key === 'Enter' || event.key === ' ' || event.key === ',') {
+        event.preventDefault();
+        if (previousContent !== container.innerHTML) {
+          insertLine();
+        }
+      }
+    }
+    container.addEventListener('keydown', handleKeyPress);
+    container.addEventListener('keyup', handleKeyUp);
+  </script>
+</body>
+```
+Note that I added a `span` element with the class `highlight-line` to the beginning of the array and inserted it as the new element after removing the old one. This will ensure that the block symbol is positioned strictly from the right side-end of gradient expansion.

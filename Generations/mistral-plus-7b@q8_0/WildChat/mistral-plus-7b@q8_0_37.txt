@@ -1,0 +1,38 @@
+
+
+MEXC doesn’t support margin trading for ETH, so that means you will get an error message when you try to deposit your ETH from MEXC to your Cake DeFi wallet. So in this case you would have to use your spot balance or ERC-20 ETH wallet for staking.
+
+Please be aware that if you do not have your ETH in your own Ethereum wallet (like MetaMask), then you will have to go through a process of withdrawing the funds from MEXC and transferring them back into Cake DeFi. This is because MEXC does not support staking for margin accounts, so your only option would be to use the ERC-20 version of ETH that is stored on Cake DeFi.
+
+Instead of having a default value for `lookback`, you could create a new method called, say `getLookBack()` that returns the desired value.
+
+You could then use an enum to manage the different values of `lookback`. The idea behind using an enum is to ensure that the only valid values for `lookback` are those specified in the enum. This can help improve code readability and reduce the possibility of errors due to incorrectly formatted `lookback` values.
+
+Here’s an example of how you could use an enum to manage your `lookback` values:
+
+```java
+public enum LookBack {
+    MINUTE(1), // 1 minute look back
+    FIVE_MINUTES(5), // 5 minutes look back
+    HALF_HOUR(30); // 30 minutes look back
+
+    private final int value;
+
+    LookBack(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+}
+```
+
+Hi, I've just bought a new laptop and installed Win7 with the hope of playing GW2. However, when trying to install it, i get this error:
+
+The software you are attempting to install is not compatible with your version of Windows. Contact the software publisher for assistance.
+Error code 0x800714AE
+
+I've tried googling the issue and found out that most people who have encountered this error were using 32-bit Windows on a 64-bit processor, however i am running 64-bit Windows 7. I also tried reinstalling GW2 several times but without any success.
+
+I am completely lost now so if anyone knows what is the problem and how to fix it please help

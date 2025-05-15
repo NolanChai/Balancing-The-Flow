@@ -1,74 +1,22 @@
-User: "用python写一段以多边形定点为数据向内部或者向外部扩张形成新的点的代码"
+User: "Create a twitter thread on how musicians make music in 2023 (with emphasis on how streaming has effected their income, and how royalties have changed over time) "
 
-Assistant: "以下是一个用Python编写的示例代码，用于在给定多边形的顶点数据的基础上，生成新的顶点以扩张多边形的内部或外部。
+Assistant: "Thread 1/7: ?? How Musicians Make Music in 2023 ??
+With major changes in streaming platforms & the way royalties are paid, the world of creating music has transformed drastically. Let's dive into how musicians are navigating this new landscape. #MusicIndustry2023
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
+Thread 2/7: The Impact of Streaming ??➡️??
+The rise of streaming platforms like Spotify & AppleMusic has drastically reduced income from physical album sales. Musicians now rely more on streaming revenue & live performances to make a living. #StreamingRevolution
 
-def expand_polygon(vertices, distance, expand_type='inner'):
-    """
-    扩张多边形的内部或外部
-    
-    参数：
-    vertices: 多边形顶点的列表，每个顶点为一个包含x和y坐标的元组或列表
-    distance: 扩张的距离，可以为正数或负数
-    expand_type: 扩张的类型，'inner'为向内部扩张，'outer'为向外部扩张
-    
-    返回：
-    多边形的新顶点列表
-    """
-    num_vertices = len(vertices)
-    expanded_vertices = []
-    
-    for i in range(num_vertices):
-        x1, y1 = vertices[i]
-        x2, y2 = vertices[(i + 1) % num_vertices]  # 下一个顶点
-        
-        # 计算顶点与下一个顶点之间的向量
-        dx = x2 - x1
-        dy = y2 - y1
-        
-        # 计算向量的单位法向量
-        length = np.sqrt(dx**2 + dy**2)
-        nx = -dy / length
-        ny = dx / length
-        
-        # 根据扩张类型选择新顶点的位置
-        if expand_type == 'inner':
-            new_x = x1 + nx * distance
-            new_y = y1 + ny * distance
-        elif expand_type == 'outer':
-            new_x = x1 - nx * distance
-            new_y = y1 - ny * distance
-        
-        expanded_vertices.append((new_x, new_y))
-    
-    return expanded_vertices
+Thread 3/7: Changes in Royalties ??
+In the past, artists received royalties from a mix of album sales, radio plays & live performances. With streaming's prevalence, they now earn royalties every time their song is streamed, but at a lower per-stream rate. ???? #RoyaltiesEvolution
 
-# 示例使用
-vertices = [(1, 1), (3, 1), (3, 3), (1, 3)]  # 一个矩形的顶点坐标
-distance = 0.5  # 扩张的距离
+Thread 4/7: Breaking down streaming royalties ??
+Streaming platforms usually pay musicians a fraction of a cent per stream. To make a significant income, artists need to amass millions of streams. This often benefits established musicians over upcoming artists. #BreakingDownRoyalties
 
-# 向内部扩张
-inner_expanded_vertices = expand_polygon(vertices, distance, expand_type='inner')
+Thread 5/7: Impact on music creation ????
+The shift to streaming & emphasis on single tracks, rather than albums, has changed the way musicians create & release music. They focus on producing catchy singles that have a higher chance of going viral & earning more streams. #MusicCreation2023
 
-# 向外部扩张
-outer_expanded_vertices = expand_polygon(vertices, distance, expand_type='outer')
+Thread 6/7: New revenue streams ⚡️??
+As musicians adapt to the streaming economy, they explore alternative revenue streams like live performances, merchandise, & brand partnerships. Crowdfunding platforms like Patreon have enabled musicians to receive direct support from their fans. #NewRevenueStreams
 
-# 绘制原多边形和扩张后的多边形
-x, y = zip(*vertices)
-plt.plot(x, y, 'bo-', label='Original Polygon', linewidth=2)
-
-x_inner, y_inner = zip(*inner_expanded_vertices)
-plt.plot(x_inner, y_inner, 'ro-', label='Inner Expanded Polygon', linewidth=2)
-
-x_outer, y_outer = zip(*outer_expanded_vertices)
-plt.plot(x_outer, y_outer, 'go-', label='Outer Expanded Polygon', linewidth=2)
-
-plt.legend()
-plt.axis('equal')
-plt.show()
-```
-
-运行示例代码后，将得到一个绘制了原始多边形、向内部和向外部扩张后的多边形的图形，可以根据自己的需求调整顶点数据和扩张距离。"
+Thread 7/7: The future of music ????
+The landscape of music making & consumption will continue to evolve. Musicians will adapt, innovate & find creative ways to reach their audience. As fans, we can play a part in sustaining artists' careers by supporting them through diverse revenue channels. #MusicFuture2023"

@@ -1,0 +1,226 @@
+[{'Time': '2022-01-01 16:58:30',
+  'Open': 0.1746,
+  'High': 0.2509,
+  'Low': 0.1666,
+  'Close': 0.1721,
+  'Volume': 24830849},
+ {'Time': '2022-01-01 16:59:00',
+  'Open': 0.1721,
+  'High': 0.1812,
+  'Low': 0.1686,
+  'Close': 0.1733,
+  'Volume': 12985490},
+ {'Time': '2022-01-01 17:00:30',
+  'Open': 0.1733,
+  'High': 0.1916,
+  'Low': 0.1734,
+  'Close': 0.1807,
+  'Volume': 5492366},
+ {'Time': '2022-01-01 17:01:00',
+  'Open': 0.1807,
+  'High': 0.1855,
+  'Low': 0.1785,
+  'Close': 0.1826,
+  'Volume': 4469694},
+ {'Time': '2022-01-01 17:02:30',
+  'Open': 0.1826,
+  'High': 0.1894,
+  'Low': 0.1827,
+  'Close': 0.1859,
+  'Volume': 3103242},
+ {'Time': '2022-01-01 17:03:00',
+  'Open': 0.1859,
+  'High': 0.1863,
+  'Low': 0.1835,
+  'Close': 0.1844,
+  'Volume': 2796836},
+ {'Time': '2022-01-01 17:04:30',
+  'Open': 0.1844,
+  'High': 0.1852,
+  'Low': 0.1843,
+  'Close': 0.1848,
+  'Volume': 2233798},
+ {'Time': '2022-01-01 17:05:00',
+  'Open': 0.1848,
+  'High': 0.1867,
+  'Low': 0.1836,
+  'Close': 0.1852,
+  'Volume': 1492740},
+ {'Time': '2022-01-01 17:06:30',
+  'Open': 0.1852,
+  'High': 0.1903,
+  'Low': 0.1843,
+  'Close': 0.1876,
+  'Volume': 4744334},
+ {'Time': '2022-01-01 17:07:00',
+  'Open': 0.1876,
+  'High': 0.1948,
+  'Low': 0.1853,
+  'Close': 0.1907,
+  'Volume': 2261418},
+ {'Time': '2022-01-01 17:08:30',
+  'Open': 0.1907,
+  'High': 0.1915,
+  'Low': 0.1904,
+  'Close': 0.1906,
+  'Volume': 2873920},
+ {'Time': '2022-01-01 17:09:00',
+  'Open': 0.1906,
+  'High': 0.1954,
+  'Low': 0.1885,
+  'Close': 0.1894,
+  'Volume': 3079157},
+ {'Time': '2022-01-01 17:10:30',
+  'Open': 0.1894,
+  'High': 0.1946,
+  'Low': 0.1857,
+  'Close': 0.1897,
+  'Volume': 2110313},
+ {'Time': '2022-01-01 17:11:00',
+  'Open': 0.1897,
+  'High': 0.1916,
+  'Low': 0.1853,
+  'Close': 0.1896,
+  'Volume': 2479601},
+ {'Time': '2022-01-01 17:12:30',
+  'Open': 0.1896,
+  'High': 0.1947,
+  'Low': 0.1854,
+  'Close': 0.1884,
+  'Volume': 2184713},
+ {'Time': '2022-01-01 17:13:00',
+  'Open': 0.1884,
+  'High': 0.1950,
+  'Low': 0.1865,
+  'Close': 0.1880,
+  'Volume': 2712934},
+ {'Time': '2022-01-01 17:14:30',
+  'Open': 0.1880,
+  'High': 0.1958,
+  'Low': 0.1863,
+  'Close': 0.1882,
+  'Volume': 2417189},
+ {'Time': '2022-01-01 17:15:00',
+  'Open': 0.1882,
+  'High': 0.1961,
+  'Low': 0.1863,
+  'Close': 0.1876,
+  'Volume': 1193451},
+ {'Time': '2022-01-01 17:16:30',
+  'Open': 0.1876,
+  'High': 0.1973,
+  'Low': 0.1843,
+  'Close': 0.1879,
+  'Volume': 2655423},
+ {'Time': '2022-01-01 17:17:00',
+  'Open': 0.1879,
+  'High': 0.1986,
+  'Low': 0.1853,
+  'Close': 0.1884,
+  'Volume': 2232849},
+ {'Time': '2022-01-01 17:18:30',
+  'Open': 0.1884,
+  'High': 0.1996,
+  'Low': 0.1850,
+  'Close': 0.1892,
+  'Volume': 2525733}
+```
+
+```
+Traceback (most recent call last):
+  File "c:\Users\hassan\Desktop\trading bots\bot\main.py", line 54, in <module>
+    main(args=parser.parse_args())
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\click\core.py", line 949, in __call__
+    return self.command.invoke(ctx)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\click\command.py", line 76, in invoke
+    return self.run_func(*args, **kwargs)
+  File "C:\Users\hassan\Desktop\trading bots\bot\main.py", line 105, in main
+    self.create_strategy(strategy_name=strat)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\mexcbot\api\mexcbot\strategy_manager.py", line 53, in create_strategy
+    self._create_strat(name=strategy_name)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\mexcbot\api\mexcbot\strategy_manager.py", line 109, in _create_strat
+    self._add_trade(order)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\mexcbot\api\mexcbot\strategy_manager.py", line 117, in _add_trade
+    response = self._trade(order)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\mexcbot\api\mexcbot\strategy_manager.py", line 124, in _trade
+    response = self._request('POST', '/v3/order')
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\mexcbot\api\mexcbot\strategy_manager.py", line 41, in _request
+    response = self._make_http(method=method, data=data)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\mexcbot\api\mexcbot\strategy_manager.py", line 45, in _make_http
+    data = jsonify(data)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\mexcbot\api\mexcbot\strategy_manager.py", line 60, in <lambda>
+    data = jsonify(data)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\click\util.py", line 941, in __call__
+    return self.__callback(*args, **kwargs)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\mexcbot\api\mexcbot\strategy_manager.py", line 70, in _request
+    return requests.post(url, json=data)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\api.py", line 68, in post
+    return request('post', url, params=params, data=data, headers=headers)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\api.py", line 70, in request
+    return session.request(method=method, url=url, params=params, data=data, headers=headers)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\sessions.py", line 459, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\sessions.py", line 565, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\hassan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\adapters\http_adapter.py", line 407, in send
+    raise SSLError(e, request=request) from err
+SSLError: <ssl.SSLWantReadError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:799)>
+```
+
+2021-09-15T18:35:57Z
+```javascript
+const response = await api.get(`/crypto/btcusdt?start=2021-09-14T23:15:56Z&end=2021-09-15T18:35:57Z`); // 2021-09-15T18:35:57Z
+console.log(response)
+```
+Output:
+```javascript
+{
+    "data": {
+        "btcusdt": [
+            {
+                "date": "2021-09-14",
+                "open": 42584,
+                "close": 42577.5,
+                "low": 42577.5,
+                "high": 42636,
+                "volume": 2015999,
+                "bid_price": 42584,
+                "ask_price": 42577.5,
+                "trading_pair": "btc-usdt"
+            }
+        ]
+    },
+    "success": true
+}
+```
+
+```php
+<?php 
+include "../../config/koneksi.php";
+$tanggal = $_POST['tanggal'];
+
+$data = mysqli_query($conn, "SELECT * FROM pembeli WHERE DATE(pembayaran) = '$tanggal'");
+$data1 = mysqli_fetch_array($data);
+?>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th width="30%">Nomor Transaksi</th>
+            <th width="25%">Kode Pembeli</th>
+            <th width="10%" style="text-align: center;">Status</th>
+            <th width="15%">Total Bayar</th>
+            <th width="30%" class="text-center"></th>
+        </tr>
+    </thead>
+    <?php foreach ($data as $row): ?>
+    <tbody>
+        <tr>
+            <td><?= $row['pembayaran']; ?></td>
+            <td><?= $row['kode_pembeli']; ?></td>
+            <td style="text-align: center;"><?php if($row['status'] == 1){echo "Sudah";}else{echo "Belum";}?></td>
+            <td><?= $row['total_bayar']; ?></td>
+        </tr>
+    </tbody>
+    <?php endforeach; ?>
+</table>
+```

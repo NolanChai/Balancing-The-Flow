@@ -1,0 +1,37 @@
+I’m sure you want to create a custom component for the hearts. Here is an example:
+
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-favorite',
+  templateUrl: './favorite.component.html'
+})
+export class FavoriteComponent {
+  heart = '\uf03e';
+  isFavorite: boolean = false;
+
+  toggle() {
+    this.isFavorite = !this.isFavorite;
+  }
+}
+```
+
+You can also set the template using `template:` syntax in the component decorator. Here’s an example of that approach:
+
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-favorite',
+  template: '<span (click)="toggle()" class="fa fa-heart"><i [ngClass]="{isFavorite}"></i></span>'
+})
+export class FavoriteComponent {
+  heart = '\uf03e';
+  isFavorite: boolean = false;
+
+  toggle() {
+    this.isFavorite = !this.isFavorite;
+  }
+}
+```

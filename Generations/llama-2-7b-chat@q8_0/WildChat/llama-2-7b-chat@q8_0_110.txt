@@ -1,12 +1,11 @@
-The provided code appears to be a set of functions for working with blocks in a Minecraft-like game. Here is an explanation of each function:
-1. `hcyl(bottom, height, radius, id)`: This function generates a cylinder shape with the given dimensions. It uses the Pythagorean theorem to calculate the distance from the center of the cylinder to each point on its surface, and then checks if that distance is less than or equal to the radius squared. If it is, then the function sets the block at that position to the specified ID.
-2. `cyl(bottom, height, radius, id)`: Similar to `hcyl`, this function generates a cylinder shape with the given dimensions. However, it only checks if the distance from the center of the cylinder to each point on its surface is less than or equal to the radius squared.
-3. `cube(bottom, height, radius, id)`: This function generates a cube shape with the given dimensions. It sets the block at each position within the cube to the specified ID.
-4. `sphereoid(w, h, d, id)`: This function generates a sphere-like shape with the given dimensions. It uses the Pythagorean theorem to calculate the distance from the center of the sphere to each point on its surface, and then checks if that distance is less than or equal to the radius squared. If it is, then the function sets the block at that position to the specified ID.
-5. `sleep(ms)`: This function simply calls the `setTimeout` function with the given milliseconds argument, which will delay the execution of the code inside the function for that amount of time.
-6. `asphereoid(w, h, d, id)`: Similar to `sphereoid`, this function generates a sphere-like shape with the given dimensions. However, it uses a different algorithm to calculate the distance from the center of the sphere to each point on its surface.
-7. `line(x1, y1, z1, x2, y2, z2, id)`: This function generates a line connecting two points in 3D space. It sets the block at each position along the line to the specified ID.
-8. `cloneBlock(sx, sy, sz, dx, dy, dz, w, h, l)`: This function clones a block from the location (sx, sy, sz) to the location (dx, dy, dz). It sets the block at each position within the clone area to the specified ID.
-9. `duplicateBlock(sx, sy, sz, dx, dy, dz, w, h, l, offsetX, offsetY, offsetZ, num)`: This function duplicates a block a number of times (num) from the location (sx, sy, sz) to the location (dx, dy, dz). It sets the block at each position within the clone area to the specified ID.
-10. `rotateBlock(sx, sy, sz, dx, dy, dz, w, h, l, angle)`: This function rotates a block around the origin by the given angle (in radians). It sets the block at each position within the rotated area to the specified ID.
-11. `fillBlock(sx, sy, sz, dx, dy, dz, id)`: This function fills a 3D shape with blocks of the specified ID. It uses the Pythagorean theorem to calculate the distance from the center of the shape to each point within it, and then sets the block at each position to the specified ID.
+Natsuki: *excitedly* Oh my good, I feel something moving! *takes out her pregnancy journal* It's the 4th month already! *starts drawing a small heart next to the date*
+
+(The scene shifts back to Natsuki in her bedroom, cradling Hiroshi in her arms.)
+
+Natsuki: *smiling* I can't believe they're already here. It feels like just yesterday I was finding out I was pregnant with triplets. *looks at the pictures of her bump* And look at how big my belly was! *chuckles*
+
+(Natsuki gently places Hiroshi into his crib and starts to arrange the blankets around him.)
+
+Natsuki: *softly singing* Hiroshi, Hiroshi... you're so tiny but so strong. Mama loves you so much, little one. *pauses and looks at her son with a smile* You and your sisters are going to be the best of friends, I just know it. *smiles wistfully*
+
+(Natsuki leans back against the headboard and closes her eyes, feeling content and grateful for her precious little family.)

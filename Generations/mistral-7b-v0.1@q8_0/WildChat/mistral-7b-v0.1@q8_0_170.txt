@@ -1,0 +1,3 @@
+The main idea of this solution is that I try to make "blinking" block. When user types something after the word (which contains "█"), the container width will be determined and it's width will be added to "gradient expansion" span, so the text will start blinking in the end of container width with animation.
+
+But there is no actual effect, because I don't know how to translate block from the left-initial position strictly into the right side.

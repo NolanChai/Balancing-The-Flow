@@ -1,43 +1,43 @@
-User: "
-                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
-                            
-                            Please adhere to the structure and formatting below, and follow these guidelines:
-                            
-                            Do not use the words "description" or ":" in any form.
-                            Do not place a comma between [ar] and [v].
-                            Write each prompt in one line without using return.
-                            Structure:
-                            [1] = 一副选择游戏角色的画面，夜晚，现代都市，破旧，机能风，一点透视，单个角色，日式卡通角色，角色站在正中间的马路上，全身图，拿着枪，面对镜头，准备战斗，白色双马尾，穿着校服，潮流超搭，颜色整体偏灰，场景是3D像素
-                            [2] = a detailed description of [1] with specific imagery details.
-                            [3] = a detailed description of the scene's environment.
-                            [4] = a detailed description of the compositions.
-                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
-                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
-                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
-                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
-                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
-                            
-                            
-                            Formatting:
-                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
-                            
-                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
-                            
-                            Write your prompts in english.
-                            Do not describe unreal concepts as "real" or "photographic".
-                            Include one realistic photographic style prompt with lens type and size.
-                            Separate different prompts with two new lines.
-                            Example Prompts:
-                            
-                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
-                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
-                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
-                                                        "
+User: "Write a report without an introduction.
+The report has 4 chapters:
 
-Assistant: "/imagine prompt: A scene of a futuristic cityscape at night, with towering skyscrapers reaching towards the sky, illuminated by neon lights that cast a colorful glow on the rain-soaked streets below. The city is in a state of decay, with crumbling buildings and rusted machinery dotting the landscape. The perspective is slightly tilted, adding a sense of dynamism to the composition. In the center of the road stands a single character, a Japanese-style cartoon character. The character is depicted in full body, holding a gun and facing the camera, ready for battle. She has white twin tails and is wearing a trendy school uniform that matches the overall gray color scheme. The scene is rendered in a 3D pixel art style, with sharp angles and blocky shapes creating a unique visual aesthetic. --ar 16:9 --v 5
+1. Smoke automatic fire detectors
+2. Heat automatic fire detectors
+3. automatic fire detectors in flames
+4. Conclusion
 
-/imagine prompt: This scene takes place in a dystopian cyberpunk city, set during the night. As the camera pans across the city, viewers are introduced to a modern metropolis marred by decay. Dilapidated buildings with broken windows and crumbling facades line the streets. Neon signs flicker with a dim glow, casting an eerie light on the wet roads below. Among the desolation, a lone character stands in the center of the road. The character, an anime-styled girl, serves as the focal point of the image. She stands confidently, holding a gun in her hands, ready to face whatever challenges come her way. Her grayscale school uniform contrasts against the predominantly gray backdrop, while her white twin tails billow in the wind. The entire scene is rendered in a 3D pixel art style, reminiscent of classic video games, adding a nostalgic touch to the overall atmosphere. --ar 16:9 --v 5
+Write report in 800-1000 words. Add technical details to report. Tell what types of organizations or premises would be suitable for the types of automatic fire detectors listed above."
 
-/imagine prompt: In the heart of a futuristic city, the streets are lined with towering skyscrapers, their windows reflecting the vibrant neon lights that bathe the city at night. The buildings show signs of wear and tear, with cracked walls and exposed wires. The perspective of the composition gives a slight fish-eye effect, bending the edges of the scene. Standing in the center of the road is a Japanese-style cartoon character. She is positioned with her back to the camera, holding a gun in a ready position. Her white twin tails serve as a striking contrast against her grayscale school uniform, which matches the overall muted color scheme of the surroundings. The entire scene is presented in a 3D pixel art style, accentuating the grittiness and retro charm of the environment. --ar 16:9 --v 5
+Assistant: "Chapter 1: Smoke Automatic Fire Detectors
 
-/imagine prompt: As the sun sets, the darkness envelops a sprawling cityscape, creating an atmosphere of mystery and danger. The once modern, bustling metropolis is now desolate, with dilapidated buildings and crumbling infrastructure. The streets glisten with a thin layer of rain, adding to the gloomy ambiance. In the center of the road stands a single character, a Japanese-style cartoon character. She stands tall and defiant, gun in hand, ready to face the perils of the night. Her white twin tails sway in the wind, while her grayscale school uniform blends with the muted tones of the surroundings. The scene is rendered in a 3D pixel art style, giving it a distinct retro aesthetic that enhances the sense of nostalgia and desolation. --ar 16:9 --v 5"
+Smoke detectors are one of the most common types of automatic fire detectors, and their primary purpose is to detect the presence of smoke in the air. They are crucial for early detection of fires and provide occupants with valuable time to evacuate. There are two main types of smoke detectors: ionization smoke detectors and photoelectric smoke detectors.
+
+Ionization smoke detectors contain a small amount of radioactive material that ionizes the air inside the chamber, making it conductive. When smoke enters the chamber, the ionized particles attach themselves to the smoke particles, causing a reduction in the current flow. This change in current is detected by the smoke detector, which then activates an alarm. Ionization detectors are best suited for detecting fast-flaming fires.
+
+Photoelectric smoke detectors use a light source (usually an LED) and a light-sensitive photocell to detect the presence of smoke. When smoke enters the chamber, it scatters the light beam, causing some light to hit the photocell. When the photocell detects an increase in light intensity, the alarm is activated. These detectors are more effective in detecting slow-smoldering fires.
+
+Smoke detectors are ideal for installation in residential buildings, commercial premises, and industrial facilities. They are especially useful in spaces where occupants may be asleep or unaware of a fire, such as in hotels, offices, and dormitories.
+
+Chapter 2: Heat Automatic Fire Detectors
+
+Heat detectors are another type of automatic fire detectors that detect an increase in temperature. They are primarily used in areas where smoke detectors might not be suitable, such as places with dusty environments or high levels of humidity. There are two main types of heat detectors: fixed-temperature detectors and rate-of-rise detectors.
+
+Fixed-temperature detectors are designed to activate when the surrounding temperature reaches a preset level. These detectors use either a bi-metallic strip or a thermistor to detect changes in temperature. The bi-metallic strip bends when heated, activating the alarm when it reaches a predetermined angle. Thermistors, on the other hand, change their electrical resistance as the temperature changes, and the detector monitors this change to detect heat.
+
+Rate-of-rise detectors are sensitive to the rate at which the temperature increases. These detectors use a thermocouple or a pneumatic sensing tube, which detects rapid temperature rises by monitoring the expansion of trapped gases. When the temperature increases faster than a predetermined rate (e.g., 10°C per minute), the alarm is activated.
+
+Heat detectors are suitable for use in environments where smoke detectors might generate false alarms, such as kitchens, garages, and workshops. They can also be used in areas with high ceilings or large open spaces, such as warehouses and sports arenas, where the smoke may not yet reach a smoke detector during the early stages of a fire.
+
+Chapter 3: Automatic Fire Detectors in Flames
+
+Flame detectors are advanced fire-detection devices that use infrared, ultraviolet, or a combination of both (called multispectral imaging) to detect the radiation emitted by fire flames. These detectors can be particularly useful in detecting fires in large, open environments with a view of the sky or other areas where smoke and heat detectors may not be as effective.
+
+Infrared flame detectors use sensors that monitor the infrared radiation emitted by the flames. Ultraviolet flame detectors, on the other hand, detect the ultraviolet (UV) radiation produced by the flame. Some flame detectors use a combination of these technologies, increasing their effectiveness and reducing false alarms.
+
+Flame detectors are most suited for locations where fires might produce large amounts of smoke or gas, such as petrochemical plants, refineries, and aircraft hangars. They can also be useful in areas where detecting fire presence through other means might be a challenge or generate false alarms, such as outdoor environments and facilities with large amounts of flammable liquids or gases.
+
+Chapter 4: Conclusion
+
+Automatic fire detectors play a crucial role in protecting people and property from fires by providing early detection and alerts. Smoke detectors are the most common type, and they are suitable for both residential and commercial premises. Heat detectors are more suited to environments where smoke detectors might generate false alarms, such as kitchens and warehouses. Flame detectors offer advanced fire detection capabilities and are ideal for petrochemical plants and other high-risk environments.
+
+The ideal fire-detection system for a given premises should take into consideration the unique risks and requirements of that environment. It is crucial to select the appropriate type of automatic fire detector and ensure its proper installation, maintenance, and testing, to provide the most effective protection against fires and their potentially devastating consequences."

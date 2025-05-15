@@ -1,0 +1,23 @@
+## Answer:
+
+There are several ways to decrease page load, including the following:
+
+1. Compress and optimize images. Large images can slow down page load speed, so compressing and optimizing them can help reduce load times.
+2. Minify JavaScript and CSS files. Minifying code reduces file size and can improve page performance.
+3. Use a content delivery network (CDN). A CDN helps to deliver content more efficiently by storing static files closer to users, which can speed up the loading of pages.
+
+FOUC, or Flash of Unstyled Content, happens when a page loads in the user’s browser. If your style sheet (CSS) file has not loaded by the time the HTML file renders on the screen, the user sees unstyled content for just that instant before it changes to its intended design. It can be a brief flash of default styles or no styling at all. The end result is an unsightly and unprofessional look, even if only for a short period.
+
+There are several ways to avoid FOUC:
+
+- Use `rel="preload"` in your CSS links to preload the style sheet.
+- Use JavaScript to load the style sheet asynchronously.
+- Reduce page loading time by using caching, compression and CDNs.
+
+Global variables are a code smell, they indicate that the design of your program could be improved. Global variables can cause a lot of problems:
+
+- Global variables can make your code harder to read.
+- Global variables can result in conflicts if two parts of your code use the same global variable.
+- Global variables can make it more difficult to test your code.
+- Global variables can make your code more difficult to maintain and debug because they can have unintended side effects on other parts of your program.
+- Global variables can introduce dependencies between different parts of your code, making it harder to change them independently.

@@ -1,0 +1,50 @@
+====================
+
+`ssh` 客户端中的 `known_hosts` 文件是用于存储 SSH 服务器的公钥之一个重要的数据 Structures。它包含了已经与该服务器进行过 SSH 连接的所有 público 钥，以便在后续连接时可以自动继续使用相同的公钥而不需要再次输入。
+如果你想要清理 `known_hosts` 文件中的内容，可以通过以下方法：
+1. 删除 `known_hosts` 文件：
+```bash
+#  deletes the known hosts file on the local machine
+ssh-keyscan -t rsa,dsa,ecdsa,ed25519 ~/.ssh/known_hosts > /dev/null
+```
+这将会清空 `known_hosts` 文件中的所有内容，包括已经连接过的服务器的公钥。请注意，这将禁用自动继续使用已经连接过的服务器的公钥。
+2. 清空 `known_hosts` 文件中的某个行：
+```bash
+#  clears a single line from the known hosts file
+ssh-keyscan -t rsa,dsa,ecdsa,ed25519 ~/.ssh/known_hosts <<EOF
+#  Remove the following line (e.g.)
+Host *machine*
+
+EOF
+```
+这将清空 `known_hosts` 文件中指定的一行，但是不会影响其他行的内容。请注意，这只能在文件中存在一个特定的主机时使用。
+3. 清理 `known_hosts` 文件中的所有公钥：
+```bash
+#  clears all lines from the known hosts file
+ssh-keyscan -t rsa,dsa,ecdsa,ed25519 ~/.ssh/known_hosts > /dev/null
+```
+这将清空 `known_hosts` 文件中的所有内容，包括已经连接过的服务器的公钥。请注意，这将禁用自动继续使用已经连接过的服务器的公钥。
+需要注意的是，清理 `known_hosts` 文件中的内容可能会导致 SSH 客户端无法连接到已经连接过的服务器，因为它不再认识这些服务器的公钥。如果你想要保留某些服务器的公钥，可以使用上面提供的方法来清理 `known_hosts` 文件中的特定行或行。
+
+To clear the `known_hosts` file on a Windows system using SSH, you can follow these steps:
+
+1. Open the command prompt and navigate to the directory where the `known_hosts` file is located (usually `C:\Users\<username>\.ssh`).
+2. Run the following command to delete the entire `known_hosts` file:
+```
+rm C:\Users\<username>\.ssh\known_hosts
+```
+3. If you want to clear only certain lines in the file, you can use the `sed` command to filter and remove specific hosts. For example, if you want to remove all hosts from a particular IP range, you can use the following command:
+```
+sed -i '/^192\.168\.1\.1/d' C:\Users\<username>\.ssh\known_hosts
+```
+Here, `192.168.1.1` is the IP address range that you want to remove from the file. The `-i` option tells `sed` to edit the file in place, and the `d` command deletes the line that matches the pattern.
+4. Once you've made changes to the `known_hosts` file, restart your SSH client or run the `ssh-agent` command again to refresh the list of known hosts.
+Note: Clearing the `known_hosts` file is not a secure practice, as it can allow unauthorized access to your system. It's recommended to only clear the file when you're certain that the hosts in question are no longer trusted or valid.
+
+If you are seeing the error message "mkstemp: No such file or directory" when running the `ssh-keygen -R` command, it means that the temp file system is not available on your system. This can happen if you are running the command on a system that does not have a temporary file system, or if the temporary file system is not enabled.
+Here are a few things you can try to fix this issue:
+1. Check if the `temp` directory exists: Before running the `ssh-keygen -R` command, make sure that the `temp` directory exists in your home directory. If it doesn't exist, you can create it by running the command `sudo mkdir /path/to/home/temp`.
+2. Check if the temp file system is enabled: The temp file system is usually enabled by default on most Linux systems. However, if you are running the command on a system that does not have the temp file system enabled, you will see this error message. You can check if the temp file system is enabled by running the command `sudo fuser -v /dev/shm`. If the output shows "No such file or directory", then the temp file system is not enabled. To enable it, you can run the command `sudo mount -t mnt none /dev/shm`.
+3. Use a different temp file: Instead of using the default temp file name, you can specify a different name for the temp file when running the `ssh-keygen -R` command. For example, you can use the `-t` option to specify a custom temp file name. Here is an example command: `ssh-keygen -R <IP_address> -t mytempfile`.
+4. Try a different version of OpenSSH: If none of the above solutions work, you may want to try a different version of OpenSSH. You can check if there are any newer versions available by running the command `sudo opendssh --version`. If there is a newer version available, you can install it by running the command `sudo apt-get update && sudo apt-get install opendssh`.
+In summary, the "mkstemp: No such file or directory" error message when running the `ssh-keygen -R` command is usually caused by a problem with the temp file system on your system. By checking if the temp file system is enabled and trying different solutions, you should be able to fix the issue.

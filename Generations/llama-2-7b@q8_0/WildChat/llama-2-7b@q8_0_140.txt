@@ -1,0 +1,35 @@
+The correct answer choice is "It is the area of a smaller polar rectangle, divided by the area of the corresponding small rectangle in the , plane, in the limit as the size goes to zero." This question was modified from one in [Google's 2018-2019 Summer Internship](https://github.com/google/coding_interview_questions/blob/master/misc/Double%20Integral%20in%20Polar%20Coordinates.md), which in turn was modified from the original [question on InterviewBit](http://www.interviewbit.com/lessons/double-integrals-in-polar-coordinates/).
+
+$\bf{Answer~Choice~(b):}$ The correct choice is (b).
+
+Let $f:[0,1]\to \mathbb{R}$ be a continuous function with
+$$\lim_{x\rightarrow 0^+} f(x) = - \infty$$
+and $$f(0)=2.$$
+
+Then $g: [0,1] \rightarrow \mathbb{R}$ defined by
+$$g(x)=\begin{cases}\left(\frac{3}{4}-\sqrt{\frac{3}{4}}\right)& if x< 1/2\\-1&if x\ge 1/2\end{cases}$$ is continuous, but $dg$ doesn't exist.
+
+(a) This answer choice states that if we integrate 1 (which can be thought of as a constant) over an area, then we get the volume of that area.
+
+### Explanation:
+
+We can integrate any function over a region and it will give us the volume of the region.
+
+(c)
+
+### Justification:
+The center of mass is found by taking the integral with respect to x and y.
+
+`x^3 + y^3 = xy(1 - x)`
+
+Subtracting `2x^3` from both sides gives us,
+
+`xy - 2x^3 = 0`
+
+Now, we multiply by `(x - 2/5)` and subtract (0) to give us,
+
+`y*(x - 2/5) - x^3 + y^3 - 1/5(x - 2/5)^2 = 0`
+
+We can then find the center of mass using this formula: `C = Σm * xi`.
+
+**Answer B is correct!**

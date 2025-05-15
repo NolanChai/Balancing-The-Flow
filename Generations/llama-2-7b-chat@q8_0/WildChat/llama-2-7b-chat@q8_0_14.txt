@@ -1,0 +1,22 @@
+To create a button in Excel that will display the values from a range of cells based on user input, you can use an Excel VBA (Visual Basic for Applications) macro. Here's how you can do it:
+1. Open the Visual Basic Editor by pressing ALT + F11 or by navigating to Developer > Visual Basic.
+2. In the Visual Basic Editor, go to Insert > Module to insert a new module. This is where you will write the code for your macro.
+3. In the module, follow these steps:
+a. Set the range of cells that you want to display when the button is clicked. For example:
+``=Range("A1:A12").Value`
+This will display all values from column A starting from cell A1 and going up to cell A12. Replace "A1" with the actual cell reference or range of cells that you want to display.
+b. Create a button in the worksheet, or use an existing one.
+c. Double-click on the button to open the macro editor.
+d. In the macro editor, enter the following code:
+`Sub DisplayValues()
+Dim value As Variant
+value = InputBox("Enter value", Type:=8)
+If IsNumeric(value) Then
+    Range(Cells(1, 1), Cells(12, 1)).Value = value
+End If
+End Sub`
+4. Save the module by clicking on File > Save or press CTRL + S.
+5. Close the Visual Basic Editor by clicking on File > Exit or press ALT + F11.
+6. Return to the worksheet and click on the button you just created to test it. When you click the button, an input box will appear where you can enter a value. Once you enter a value and click OK, the values from the specified range of cells will be displayed in the cells from row 1 to row 12.
+Note: In step 4, the `Type` parameter in the `InputBox` function specifies the data type of the input box. In this case, we're using `8`, which means that the user can enter a numerical value. You can change this parameter as per your requirement.
+That's it! With this macro, you can easily display values from a range of cells based on user input.

@@ -1,0 +1,25 @@
+Hi,
+
+The problem with this formula is that if you have three or more spaces between words (for example a sentence like "I love my mother and father."), then your formula will return only the first 2 words and not all of them. If you want to avoid this problem, I would suggest using the TRIM function before doing anything else:
+
+=IFERROR(LEFT(TRIM(C2), FIND(" ",TRIM(C2),FIND(" ",TRIM(C2),FIND(" ",TRIM(C2),1)+1))-1),"")
+
+This will work as long as there are no spaces after the last word.
+
+I'll use an example:
+
+In column A I have the following:
+
+A1: Apple
+A2: Orange
+A3: Pear
+A4: Cherry
+
+etc... etc... etc...
+
+I would like to have it so that when a user types in any cell in column A, they can only type up to 6 words.
+So, for example if I wanted to type "Green Apples" in A1 it would tell me that there were too many words.
+
+I want to be able to have a cell (B1) that is the input field and then a cell (C1) that has the result of the formula that was put into B1. This cell (C1) will be a number value. I want C1 to only display values in the range 0-5 and if they are above that range, it should say "ERROR".
+
+The way I currently have this set up is by putting Data Validation on Cell C1. In the list of data validation cells I put (0,1,2,3,4,5) and in the Error Alert box I put "ERROR" and the stop option checked. The only problem with this is that there is no way to select a cell as an input for the formula without using VB, which isn't possible at work because of our security settings. So if you could help me with a way around this it would be greatly appreciated.

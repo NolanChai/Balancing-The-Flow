@@ -1,49 +1,19 @@
-</p>
-                          </td>
-                        </tr>
-                      </thead>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            
-            <div class="col-12 col-md-6 mt-3">
-              <div class="card mb-4 shadow h-100">
-                <a href="/forum/posts/5898784" target="_blank"><h3>
-                  <p class="card-title text-dark text-center py-2 d-inline-flex align-items-baseline">
-                    <i class="fas fa-external-link"></i><span class="text-decoration-line-through font-weight-bold"> /</span> Post 5898784 / <i class="fas fa-external-link"></i> 
-                    </p>
-                    
-                  </h3></a>
-                <div class="card-body">
-                  <div class="row g-0 align-items-center justify-content-start mb-2">
-                    <div class="col"><img src="/assets/images/profile_pics/5898784.jpg" alt="" class="rounded-circle img-fluid"></div>
-                    <div class="col text-dark font-weight-bold h6 mt-1">by <a href="https://www.reddit.com/user/CoffeeShop93/" target="_blank" style="color: #0275d8;"><i class="fab fa-reddit"></i> /u/CoffeeShop93</a></div>
-                  </div>
-                <h1><a href="/forum/posts/5898784" target="_blank">Post 5898784: The Witcher 3: Wild Hunt</a></h1>
-                <hr class="my-2 mx-n2" />
-                    <div class="row g-0 align-items-center justify-content-start mb-2">
-                      <div class="col"><img src="/assets/images/profile_pics/5898784.jpg" alt="" class="rounded-circle img-fluid"></div>
-                    </div><hr />
-                        <h1><a href="/forum/posts/5898784" target="_blank">Post 5898784</a></h1>
-                      <p>
-                        
-                          <table class="table table-striped">
-                            <thead>
-                              <tr>
-                                <th scope="col"><button type="button" onclick="copyToClipboard('Prompt 4: 2.1', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 4: <span class="badge badge-pill badge-secondary">2.1</span></th>
-                                <th scope="col"><button type="button" onclick="copyToClipboard('Prompt 5: 16:9', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 5: <span class="badge badge-pill badge-secondary">16:9</span></th>
-                                <th scope="col"><button type="button" onclick="copyToClipboard('Prompt 6: 2.1', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 6: <span class="badge badge-pill badge-secondary">2.1</span></th>
-                                <th scope="col"><button type="button" onclick="copyToClipboard('Prompt 7: 10', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 7: <span class="badge badge-pill badge-secondary">10</span></th>
-                                <th scope="col"><button type="button" onclick="copyToClipboard('Prompt 8: 1.2', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 8: <span class="badge badge-pill badge-secondary">1.2</span></th>
-                                <th scope="col"><button type="button" onclick="copyToClipboard('Prompt 9: 5', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 9: <span class="badge badge-pill badge-secondary">5</span></th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td><p class="prompt-text-container"><button type="button" onclick="copyToClipboard('Prompt 1: [ar] 16:9 --v 5.2', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 1: <span class="badge badge-pill badge-secondary">[ar] 16:9 --v 5.2</span></td>
-                                <td><p class="prompt-text-container"><button type="button" onclick="copyToClipboard('Prompt 2: 4.3', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 2: <span class="badge badge-pill badge-secondary">4.3</span></td>
-                                <td><p class="prompt-text-container"><button type="button" onclick="copyToClipboard('Prompt 3: 5.1', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 3: <span class="badge badge-pill badge-secondary">5.1</span></td>
-                                <td><p class="prompt-text-container"><button type="button" onclick="copyToClipboard('Prompt 4: [v] 7.3', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 4: <span class="badge badge-pill badge-secondary">[v] 7.3</span></td>
-                                <td><p class="prompt-text-container"><button type="button" onclick="copyToClipboard('Prompt 5: [v] 8', event)" data-clipboard-target=".prompt-text-container" class="btn btn-sm bg-success shadow rounded font-weight-bold px-3 py-1 mt-2"><i class="fas fa-clipboard"></i></button> Prompt 5: <span class="badge badge-pill badge-secondary">[v] 8</span></td>
-                                <td><p class="prompt-text-container"><button type="button" onclick="copyToClipboard
+Comment: Please provide enough code so others can better understand or reproduce the problem.
+
+Answer: You should check the documentation for "Time" in lua. There you will find the `now` function which returns the current system time in seconds since Jan 1, 1970 and `difftime` function to convert it into minutes, hours etc.
+So all you need is something like this:
+
+\begin{code}
+local function myEvent()
+    -- do your stuff here
+end
+
+-- create an event with a time after 30minutes (600s):
+TriggerEvents.RegisterCallback( "PlayerDisconnected",
+                            function()
+                                local diffTime = difftime(now(), 600) -- get the time difference from now to 15 minutes in seconds since Jan 1, 1970
+                                if (diffTime >= 0) then
+                                    TriggerEvent("myEvent") -- call your event when diffTime >= 0
+                                end
+                            end)
+\end{code}

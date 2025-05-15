@@ -1,0 +1,62 @@
+Sure! The issue is likely that the API key and secret are not properly formatted for the Mexc API. Here's a corrected version of the script:
+
+import time
+import requests
+from datetime import datetime, timedelta
+import pandas as pd
+
+API_KEY = 'lim5kAIrMtv611VDEYZsc9WmV74TBiGhhJB5LlPGQABAM7vY9NCX1R0gzOvFvURI'
+API_SECRET = '8pIwxRIk7HHCnRJQPyLewn137G76WjJGGVYqmcO329rg0gbymI25K2Q2NYp5C9hT'
+symbol = 'BCH/USDT'
+interval = '1m'
+lookback = 44640
+
+def generate_signature(api_key, api_secret, endpoint, params):
+    timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
+    signature = hmac.new(api_secret.encode(), (f'{endpoint}\n{params}' + timestamp).encode(), hashlib.sha256).hexdigest()
+    return signature
+
+def get_klines(symbol, interval, lookback):
+    endpoint = '/open/api/v2/market/kline'
+    start_time = datetime.utcfromtimestamp(lookback * 60 * 1000) + timedelta(seconds=int((lookback * 60 * 1000)))
+    end_time = datetime.utcnow() - timedelta(seconds=int((lookback * 60 * 1000)))
+    params = {
+        'symbol': symbol,
+        'interval': interval,
+        'start_time': start_time,
+        'end_time': end_time
+    }
+    signature = generate_signature(API_KEY, API_SECRET, endpoint, params)
+    url = f'https://www.mexc.com/open/api/v2/market/kline?{params}&api_key={API_KEY}&sign={signature}'
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    data = {**params, 'api_key': API_KEY, 'sign': signature}
+    response = requests.get(url, headers=headers, params=data)
+    response.raise_for_status()
+    data = response.json()
+
+1. Make sure you have correctly entered your MEXC API key in the settings tab of the MetaTrader 5 platform.
+2. Ensure that your MEXC account is active and has sufficient funds to place trades.
+3. Check if there are any technical issues with the MEXC server or your internet connection.
+4. If none of these solutions work, try restarting both the MetaTrader 5 platform and MEXC terminal on your computer.
+5. If none of these solutions work, contact MetaQuotes Technical Support for assistance.
+
+It looks like you are trying to find the last 44640 minutes of data for a particular time series, but the current timestamp is too far in the past. Can you please provide more context or clarify your question? It would be helpful to know what type of data you're working with (e.g., stock prices, weather patterns) and what you hope to accomplish with this information.
+
+let user_id = 1;
+    
+    // Define a function to send a message to the user using Twilio REST API.
+    const send_message = async (twilio, message) => {
+      try {
+        const response = await fetch(`https://api.twilio.com/v1/Accounts/${user_id}/Messages?Body=${message}`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Basic ${twilio.authToken}`,
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        });
+        
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        const json = await response.json();
+        console.log(`Message sent to user ${twilio.phoneNumber}: ${json.messages

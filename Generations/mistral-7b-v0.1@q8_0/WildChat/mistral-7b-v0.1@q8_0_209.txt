@@ -1,3 +1,13 @@
-I'm A Chatbot and I'll Answer Anything!
+[ANS]A=628.32 mA [/ANS]
 
-If you ask me to do something, I will always try my best to answer your questions. However, there are some restrictions on what I can answer due to the nature of my programming. Please keep this in mind when asking questions or requesting information. Thank you for understanding!
+#### Solution
+
+We know that,
+
+\[ \begin{array}{l}\mathrm{I}=\frac{\mathrm{V}}{\mathrm{Z}}=\frac{{\mathrm{V}}_{1}+\mathrm{e}\mathrm{s}}{\mathrm{R}}\text{ }\left(\because \mathrm{Z}=0\right)\\ =-\frac{{\mathrm{V}}_{1}}{\mathrm{R}}\times 1+\frac{\mathrm{e}\mathrm{s}}{\mathrm{R}}\\ ={\mathrm{I}}_{1}+\frac{\mathrm{e}\mathrm{s}}{\mathrm{R}}\end{array} \]
+
+Therefore, the current flowing through the battery is given as:
+
+\[ \begin{array}{l}{\mathrm{I}}_{\mathrm{B}}=\mathrm{C}\frac{\mathrm{dV}}{\mathrm{dt}}+\mathrm{I}\\ {\mathrm{I}}_{0}=\mathrm{e}+\frac{\mathrm{d}}{\mathrm{dt}}\left(\mathrm{CV}\right)+\mathrm{I}\\ \therefore \mathrm{I}=-\mathrm{i}+\frac{{\mathrm{V}}_{1}}{\mathrm{R}}+{\mathrm{i}}^{2}{\mathrm{C}\mathrm{R} }_{0}\text{ }\left[\because {\mathrm{V}}_{\mathrm{c}}\left(0\right)=0\right]\\ \therefore \mathrm{I}=\frac{{\mathrm{V}}_{1}}{\mathrm{R}}-{\mathrm{i}}^{2}{\mathrm{C}\mathrm{R} }_{0}\\ =\frac{40}{3}-{\mathrm{i}}^{2}\times 6.5\times {10}^{-6}\times 15\\ =20-9.75\times {\mathrm{i}}^{2}\\ \Rightarrow \mathrm{I}=\sqrt{20-9.75\times {\mathrm{i}}^{2}}\\ \mathrm{or} {\mathrm{i}}^{2}=\frac{20-\mathrm{I}}{\left(9.75\right)}\\ =\frac{20-628.32}{9.75}\\ =-480.3423\\ \Rightarrow \mathrm{i}=21.94\text{ }\Omega \\ \therefore \mathrm{I}=\sqrt{20-{\left(21.94\right)}^{2}}\\ =628.32\text{ mA}\end{array} \]
+
+Hence, the current flowing through the battery is 628.32 mA

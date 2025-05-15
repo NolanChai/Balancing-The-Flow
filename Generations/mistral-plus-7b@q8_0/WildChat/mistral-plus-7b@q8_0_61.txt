@@ -1,0 +1,61 @@
+[WARN][logstash.runner] No pipeline configured, skipping startup
+
+I am very new to Elasticsearch, but I followed the instructions for getting up and running on the official documentation page to install elasticsearch, kibana, and logstash, and set up a simple example index with the sample data from the documentation. However, when I run the elastic stack, I get no data being stored in my index, and when I query it (with the "Sample Index" query that is provided on the official Elasticsearch website), I get this:
+
+```
+{
+  "error": {
+    "root_cause": [
+      {
+        "type": "index_not_found_exception",
+        "reason": "no such index",
+        "resource.type": "index_or_alias",
+        "resource.id": "sample-data",
+        "index_uuid": "_na_",
+        "index": "sample-data"
+      }
+    ],
+    "type": "index_not_found_exception",
+    "reason": "no such index",
+    "resource.type": "index_or_alias",
+    "resource.id": "sample-data",
+    "index_uuid": "_na_",
+    "index": "sample-data"
+  },
+  "status": 404
+}
+```
+
+I have no idea why this is happening, because it should be creating the sample index by default, and I've been running for a while now. Can anyone please help me troubleshoot this?
+
+========================
+
+### 问题描述
+在aspnet core 2.1中，HttpContext.Connection.RemoteIpAddress获取的是代理服务器的ip。这里可能有一个设置，需要修改下。
+
+在Program.cs中修改
+```csharp
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+});
+```
+
+### 解决办法
+修改上述代码中的 `ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;`为 `options.ForwardedHeaders = ForwardedHeaders.All;`。
+
+>注：前面的代码是默认设置，需要将 `options.ForwardedHeaders = ForwardedHeaders.All;` 替换掉。
+>
+>更改后HttpContext.Connection.RemoteIpAddress可以获取到真实客户端ip了。
+
+```
+received plaintext http traffic on an https channel, closing connection.
+```
+
+```
+This is the expected behaviour of OpenSSL 1.0.2 and above. The setting SSLHonorCipherOrder controls if a cipher suite is available it will be negotiated with the peer instead of falling back to another cipher. This is disabled by default in Elasticsearch.
+
+Add the following settings to your elasticsearch.yml file:
+
+https.ssl.SSLHonorCipherOrder: true
+```

@@ -1,0 +1,19 @@
+The correct answer is B) Treatments are randomly assigned to subjects within each block. In a randomized block design, treatments are not necessarily assigned to blocks at random; instead, they are assigned in a way that ensures that similar subjects (e.g., those who are under 40 years old or over 40 years old) are placed together within the same block. This allows for a more efficient use of resources and minimizes any potential biases due to age.
+
+It is important to note that while the design appears to be a randomized block, it actually uses a fixed-factorial design (also called a balanced design). This means that there are specific combinations of treatments and blocks that can be created by varying the factors within each block. However, these combinations are predetermined before the experiment begins, and they are not based on random chance.
+
+It is also worth mentioning that in a randomized block design, there may still be some differences between blocks due to the presence of extraneous variables (also called confounding variables) or because of other factors that were not included in the design. To minimize these effects, researchers often use statistical techniques such as regression analysis to control for any potential confounding variables.
+
+In summary, the randomized block design is a valid experimental design that allows researchers to compare two treatments by randomizing subjects within blocks while maintaining a balance between the number of subjects in each treatment group. The key feature of this design is that treatments are randomly assigned to subjects within each block, which helps minimize any potential biases due to confounding variables or other extraneous factors.
+
+1 / 8
+The probability that the die will land on its face (red or blue) is 1 / 8, which means that the number of faces with the same color as the current face is always 7. Therefore, the expected number of tosses before a particular color lands faceup is:
+E(x) = 7 \* (1/8 + 2/36 + ... + 4 / 52) = 6.68
+Because the player stops when blue faces up, this means that the number of tosses on average will be at least 2. Therefore, the probability that a player will toss the die at least twice before blue lands faceup is:
+P(x > 2) = (1 - P(x < 2)) / (1 + E(x)) = 0.83645...
+
+1.  Calculate the sample mean and standard deviation for both groups.
+2. Construct a histogram and box plot to compare the distributions of the two groups.
+3. Conduct a hypothesis test with a significance level of 0.05 to determine whether the means are different.
+4. If the means are different, calculate a critical value using the appropriate significance level, and use it to construct a confidence interval for the difference between the means.
+5. Report the results in tabular form, including the sample sizes, mean differences, and p-values, as well as any relevant graphs or charts that support your conclusion.

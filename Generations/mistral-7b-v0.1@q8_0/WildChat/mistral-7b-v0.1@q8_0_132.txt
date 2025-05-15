@@ -1,0 +1,163 @@
+
+
+```
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+ </head>
+ <body>
+  <div class="row" id="css">
+   <div class="col-lg-3 col-md-4 col-sm-5">
+    <h2><strong>Social Media Growth Hacker</strong></h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolore soluta iusto velit! Molestias temporibus minima molestiae nesciunt?
+     </p>
+   </div>
+  </div>
+ </body>
+</html>
+```
+
+I tried
+
+```
+driver.find_element(By.CSS_SELECTOR, "p[normalize-space()=’Social Media Growth Hacker’]")
+```
+
+but it didnt work. I am trying to click on the text but it is not working
+
+You'll see something like this:
+
+```
+<span style="font-size:14px;">
+  <strong>
+    Social Media Growth Hacker
+  </strong>
+</span>
+```
+
+There is no [TEXT]tag around the text you want to use.
+
+You can also just remove the style attribute by clicking it once. You'll then see something like this:
+
+```
+<span>
+  <strong>
+    Social Media Growth Hacker
+  </strong>
+</span>
+```
+
+Now, when you click the [TEXT]tag, the text is selected, so just press Backspace and remove the empty tag. Then save.
+
+[FIX]
+1. Install Firefox webdriver for Python (https://github.com/mozilla/geckodriver/releases)
+2. Download your xpath and insert it in quotes after //p
+3. Change “//p” to “//input” for input boxes.
+4. Make sure the xpath is accurate and can find the element you need.[/FIX]
+
+# This is a quick fix to find an element with xpath using wait time, I’m trying to use Python and Selenium to scrape LinkedIn profiles so that I can do some research for my next book. There’s going to be more of these problems because Selenium doesn’t work perfectly 100% of the time (I know, it’s still a work in progress), but this is a good start and I hope it helps you out if you need it.
+
+## Python selenium wait for element using xpath without sleep time
+
+Find element on page by xpath with selenium webdriver
+
+WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, “//p[normalize-space()=‘Social Media Growth Hacker’]”))).click())
+
+### Python selenium wait for element using xpath without sleep time
+
+Python Selenium: How to wait until an element is clickable?
+
+Wait until an element is clickable
+def wait_for_element(driver, locator):
+# Create a WebDriverWait object with desired timeout value
+wait = WebDriverWait(driver, 5)
+# Wait for the element to be clickable
+wait.until(EC.element_to_be_clickable((By.XPATH, “//p[normalize-space()=‘Social Media Growth Hacker’]”))).click())
+
+## How can I build a website for my business?
+
+A simple, step by step guide to get your business online today.
+
+### Step 1: Choose and register your domain name
+
+A domain is the web address of your site – the most important part of your business's online presence. You want something that’s relevant to your company, easy for customers to remember, and unique so no one else has it. For example, we bought ‘thompsonhayes.co.uk’ when we started out.
+
+A domain can cost between $5-20 a month with hosting providers like 1&1 or GoDaddy. Or you can register your domain for free with us and use our website builder to create your site for no upfront costs.
+
+### Step 2: Choose the right website builder for your needs
+
+There are loads of different builders available – we've listed a few popular ones here, but there are plenty more out there.
+
+You'll want to choose something that lets you create websites with ease, has a great selection of templates, and gives you full control over the design. Check out our top tips for picking the perfect builder for your business.
+
+### Step 3: Create your website
+
+Now it’s time to start building. Follow these step-by-step instructions to get your business online in no time.
+
+Once you've chosen a template, drag and drop different elements into place on each page – text boxes, images, buttons… the lot. Make sure that every piece of content is relevant, easy to read, and up to date. You’ll want visitors coming back for more!
+
+When it comes time to publish your website live onto the internet, make sure there aren't any typos or spelling errors. It pays off in terms of search engine visibility later on down the line if people can easily find what they're looking for without having too many obstacles along their way!
+
+### Step 4: Make money from your website
+
+There are plenty of ways to monetize a website – these range from advertising and affiliate marketing through to e-commerce. But whichever method you choose, it’s important that you know what works best for your business before getting started so as not to waste time or resources on something which won't bring any return on investment (ROI).
+
+### Step 5: Keep your website updated
+
+Now you've got a live site, it's time to keep up with the latest trends and make sure that your content is fresh. You need to be adding new information regularly – whether through blog posts or news articles about what’s going on in your business sector – so that visitors have an incentive for returning again and again!
+
+## FAQS
+
+### What are some of the most popular website builders?
+
+There is no one-size-fits-all answer to this question, as different website builders will be suitable for different types of businesses. Some of the most popular builders include Wix, Squarespace, Weebly, and WordPress.com. Each has its own strengths and weaknesses, so it’s important to choose one that is right for your business needs.
+
+### How much does it cost to create a website?
+
+The cost of creating a website will vary depending on the type of website you want and how complex it is. However, there are some basic costs that all websites will incur, such as domain registration and web hosting. Most builders also have free plans available, so if you’re just starting out, you can keep your costs low by using a free plan until you’re ready to upgrade.
+
+### How long does it take to create a website?
+
+Again, the time it takes to create a website will vary depending on its complexity and your level of experience with web design. However, most builders offer templates that can help speed up the process, so even beginners should be able to get their site up and running in a matter of hours or days.
+
+### What is the best way to promote my website?
+
+There are many ways to promote your website, but some of the most effective include social media marketing, search engine optimization (SEO), and pay-per-click advertising. Social media is a great way to connect with potential customers and build relationships, while SEO can help you attract more organic traffic from search engines like Google and Bing. Pay-per-click advertising allows you to target specific audiences and get your website in front of people who are already interested in what you have to offer.
+
+### What are some common mistakes businesses make when creating their websites?
+
+Some of the most common mistakes include: not having a clear call to action, using outdated design trends, not optimizing for mobile devices, and failing to include relevant keywords in page titles and descriptions. By avoiding these pitfalls, you can create a website that will be both functional and attractive to potential customers.
+
+### How do I choose the right template for my business?
+
+There are many different factors to consider when choosing a template for your business website, including: what type of content you want to include on your site, how much control over design elements you want, and how easy it is to use. Templates that are highly customizable may be more difficult to work with than those that have fewer options but offer greater ease of use overall. Ultimately, the best template for your business will depend on its individual needs and goals.
+
+I want to get user's data from HTML and return JSON with their data.
+But I don't know how to implement it in Flask.
+Please let me know what to do and any links for this tutorial.
+
+I thought this is how you get form data:
+`formdata = request.form`
+and then use the data like
+`username = formdata['username']`
+then I thought I can return JSON by doing something like
+`return jsonify({'username': username})`
+but when I tried to do this I got 405 error:
+
+```
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error: Not Found</title>
+</head>
+<body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+<hr>
+<address>Apache/2.4.38 (Ubuntu) Server at 0.0.0.0 Port 5000</address>
+</body>
+</html>
+```

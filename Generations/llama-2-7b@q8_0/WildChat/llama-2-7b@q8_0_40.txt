@@ -1,0 +1,33 @@
+```python
+#!/usr/bin/env python3
+import sys, os
+sys.path.append("../src")
+from util import *
+from midjourney import midjourney_api
+
+if len(sys.argv) < 2 or "prompt" not in sys.argv[1]:
+    print('Usage: ./generate_mj_images.py prompt')
+    exit()
+
+concept, prompt = parse_prompt(sys.argv[1])
+
+def make_prompt():
+    
+    prompt = """--v 5 --ar 16:9 -s 8192x4096 -t 30d -i 0.03 -l 96 --no-nsp -q 1 --seed -99"""
+    return f"""{concept} {prompt}"""
+
+if not os.path.exists("mj_images"):
+    os.mkdir("mj_images")
+    
+for i in range(0,3):
+    if i == 2: # don't prompt for a style again after two images
+        continue;
+        
+    print(f"[{i+1}/4] {concept}")
+    print(make_prompt())
+    images = midjourney_api.generate_image(make_prompt(), verbose=False) # returns list of 3 images, so append to file
+    
+with open("mj_images/{}.png".format(i+1), 'wb') as f:
+    for image in images:
+        f.write(bytes(image))
+```

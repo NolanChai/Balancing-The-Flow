@@ -1,0 +1,44 @@
+To create a reusable component for liking or disliking a product in Angular, you can follow these steps:
+
+1. Create a new component: In your Angular project, create a new component called `ProductLikeDislikeComponent`.
+2. Define the component template: In the `ProductLikeDislikeComponent` template, include a button for liking and disliking the product. For example:
+```
+<button (click)="likeProduct()">Like</button>
+<button (click)="dislikeProduct()">Dislike</button>
+```
+3. Define the component class: In the `ProductLikeDislikeComponent` class, define two methods for liking and disliking the product. These methods should be called when the like or dislike buttons are clicked. For example:
+```
+export class ProductLikeDislikeComponent {
+  liked = false;
+  likeProduct() {
+    this.liked = true;
+    // Call the API to update the liked status of the product
+  }
+  dislikeProduct() {
+    this.liked = false;
+    // Call the API to update the liked status of the product
+  }
+}
+```
+4. Use the component in your app: In your main Angular application, import and use the `ProductLikeDislikeComponent` in the appropriate place. For example:
+```
+<app-product-like-dislike></app-product-like-dislike>
+```
+5. Update the API call to update the liked status of the product: In your API, create a endpoint for updating the liked status of a product, and update the `liked` variable in the component accordingly. For example:
+```
+export class ProductLikeDislikeComponent {
+  liked = false;
+  likeProduct() {
+    this.liked = true;
+    // Call the API to update the liked status of the product
+  }
+}
+```
+6. Use the `ngClass` directive to add a CSS class to the button based on the liked status: In your component template, use the `ngClass` directive to add a CSS class to the button based on the `liked` variable. For example:
+```
+<button (click)="likeProduct()">Like</button>
+<button (click)="dislikeProduct()">Dislike</button>
+```
+This way, when the user clicks the like or dislike button, the component will update the liked status of the product in the API, and also update the CSS class of the button accordingly.
+
+This is just a basic example, you can customize it according to your requirements, and also you can use this approach to create other reusable components for other actions like commenting or sharing a product.

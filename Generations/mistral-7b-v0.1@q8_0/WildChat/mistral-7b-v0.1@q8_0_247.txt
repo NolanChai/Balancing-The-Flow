@@ -1,0 +1,20 @@
+def truncate_signal_series(df, signal_length=50):
+    """将DataFrame中的‘opticalpower’列数据进行截取"""
+    def truncate_signal(signal):
+        if len(signal) >= signal_length:
+            return signal[:signal_length]
+        else:
+            return signal + [0]*(signal_length-len(signal))
+
+    truncated_signal = df['opticalpower'].apply(truncate_signal)
+    return truncated_signal
+def truncate_signal_series2(df, signal_length=50):
+    """将DataFrame中的‘opticalpower’列数据进行截取"""
+    def truncate_signal(signal):
+        if len(signal) >= signal_length:
+            return signal[:signal_length]
+        else:
+            return signal + [0]*(signal_length-len(signal))
+
+    df['truncated_opticalpower'] = df['opticalpower'].apply(truncate_signal)
+    return df

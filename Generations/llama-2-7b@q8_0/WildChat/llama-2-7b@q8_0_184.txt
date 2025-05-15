@@ -1,0 +1,37 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# load the data file into a 2D array
+data = np.loadtxt('sample15537.dat')
+
+# set the X axis values (latitude) to the values in column 0 and
+# Y axis values (longitude) to column 1
+x = data[:, 0]
+y = data[:, 1]
+
+# create a figure with an Axes3D object attached
+fig = plt.figure(figsize=(6.25, 4.75))
+axes = fig.gca(projection='3d')
+
+# plot the points as blue circles
+axes.scatter(x, y)
+plt.show()
+
+This is my first post. I want to use the function [inst id="257"]raster_cumsum[/inst][/inst]. The data are in NetCDF format, which can be opened by rasterio and read with Python. However, when I am trying to apply rasterio.plot_cloud_height(cum_surface, "tif") in a for-loop, it throws the error:
+ValueError: Input array must be 1 dimensional, but has shape (125640304,)
+I am not sure why this is happening since cum_surface is supposed to be a 2D numpy array. I have read that the error occurs because rasterio can only plot one-dimensional arrays, and I wonder whether there is another way to plot multi-dimensional arrays in Python. Thanks for your help!
+By: Javier Lopez (409 replies)
+raster_cumsum
+rasterio
+
+I'm trying to make a basemap that displays georeferenced images. In my case, the image is an aerial photograph from Google maps that I downloaded and opened in ImageJ (opened as 32-bit color). I would like it to display at the right coordinates, so that if you drag your mouse over the image, it will look as though your mouse was really hovering over the ground.
+I'm using a standard basemap with the following code:
+bmap_extent = (-63, -49)#(-72, -40) #(-58,-41)
+bmap_name="Aerial"
+bmap = pyproj.GeoImage(bmap_extent, bmap_name)
+I tried various different things and I'm pretty sure my problem is with the georeferencing. When I load an image into ImageJ (opened as 32 bit color), it displays at the wrong coordinates, and that seems to be where the issue lies in my basemap code. Does anyone have any advice?
+(I'm using pyproj v1.8.5)
+It would help if you could post the actual image and its projection so we can reproduce your problem. I think it might be a case of "projection doesn't match". But without that data, who knows what the issue is.
+If you have an image that has a known lat/lon for each pixel (as in the case of Google Earth or Bing), then you could use a georeferencing tool to align your image with the world coordinates. If you don't know the exact latitude and longitude coordinates, it's harder to do, but there are other techniques that can work as well.
+By gwilson in forum Cartography Tools

@@ -1,2 +1,12 @@
-The objective of this pilot is to demonstrate how an enterprise-scale platform based on Internet of Things (IoT) and Blockchain technologies can improve supply chain efficiency, reliability, security and patient safety for intra and interhealth system specialty medication distribution through the use of IoT technology.
-The results from this pilot will enable us to develop a scalable solution that can be used across other health systems throughout North Carolina.
+```javascript
+const input = ['1,', '2,', ',3,', ',4,'];
+let result = '';
+input.forEach((item, index) => {
+  const str = item[0].toLowerCase() + item.slice(1);
+  if (index === input.length - 1 && str !== '') {
+    result += `\n\t` + str;
+  } else if (!str.length || index > 0) {
+    result += '\t' + str;
+  }
+});
+```

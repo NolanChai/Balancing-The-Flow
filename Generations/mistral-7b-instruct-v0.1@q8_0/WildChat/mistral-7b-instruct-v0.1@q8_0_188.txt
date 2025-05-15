@@ -1,15 +1,7 @@
-You can modify the formula by removing the second instance of "FIND(" ",C2, FIND(" ",C2, FIND(" ",C2)+1)+1)+1)" from the IFERROR function. This will return a value that is 1 character shorter than the end of the first word, but still contains the space separator after it. Then you can add another "FIND" function to find the first instance of the space separator after that position.
+Monika sighs and sits down on the birthing chair. She takes a deep breath, trying to calm her nerves.
 
-Here's how the modified formula would look like:
-=IFERROR(LEFT(C2, FIND(" ",C2, FIND(" ",C2)+1)-1),"")&MID(C2,FIND(" ",C2,FIND(" ",C2)+1)+1,1)
+Monika: "I just hope everything goes smoothly." (looks at the birthing mat) "Natsuki, I'm here for you. Whatever happens, we can do this together."
 
-This will return the first two words in a sentence.
+She closes her eyes, taking another deep breath. Monika wonders if Natsuki will need any help during labor. She hopes she doesn't have to call for an emergency C-section or anything like that.
 
-1. Select the column where you want to enforce the word count rule.
-2. Right-click on the column header and select "Format Cells."
-3. In the Format Cells dialog box, select "Custom" under the "Category" dropdown.
-4. In the Type field, enter "=LEN(A1)-LEN(SUBSTITUTE(A1," ",""))+1" (assuming the cell containing the text is in cell A1). This formula counts the number of words in a cell by subtracting the count of consecutive spaces and adding 1.
-5. Click "OK" to apply the formula to the entire column.
-6. Now, whenever you enter text into a cell in this column, it will be automatically checked for word count. If it is less than or equal to 6 words, an error message will appear.
-
-Yes, you can use data validation to set constraints on the values that can be entered in a cell or range of cells. This allows you to ensure that only valid data is entered into those cells and reduces errors in your data.
+Monika: "Okay, I'm going to give Natsuki some water now." (stands up) "Anyone want a drink?" (smiles)

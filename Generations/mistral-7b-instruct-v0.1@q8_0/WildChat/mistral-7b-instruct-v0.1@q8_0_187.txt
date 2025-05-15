@@ -1,0 +1,7 @@
+It looks like you have provided a C# code snippet for exporting data to an Excel file. This code uses the `ExportDataSetToExcel` method, which takes in a DataTable and a path to an Excel file as parameters.
+
+In this specific example, the code is being triggered by a button click event, which calls the `btnDownloadExcel_Click` method. Within this method, the code first creates a DataTable object named `dt_Excel` and populates it with data using the `Get_rpt_AmarForosh_Marjoee` method of an AmarForoshMarjoee class.
+
+Once the DataTable is populated, the code calls the `ExportDataSetToExcel` method and passes in the `dt_Excel` object as well as a path to an Excel file that includes the name of the current date range being used in the form of "AmarForoshMarjoee-[date range] .xlsx". The date range is determined using the `dtbAzTarikh` and `dtbTaTarikh` text boxes, which contain the start and end dates for the data being exported.
+
+Overall, this code appears to be a basic implementation of an Excel export functionality in C# that uses a DataTable to store the data being exported and the date range to generate the filename for the exported file.

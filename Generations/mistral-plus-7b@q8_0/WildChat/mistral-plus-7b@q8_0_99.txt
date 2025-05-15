@@ -1,0 +1,18 @@
+This formula assumes that there are 4 or more words in each cell. If there are fewer words in a cell, then you would need to replace the FIND function with a SEARCH function:
+
+`=IFERROR(LEFT(C2, SEARCH(" ", C2, SEARCH(" ", C2) +1)-1),"")`
+
+```
+Sub ValidateLongEnough()
+
+Dim cell As Range
+For Each cell In Range("A1:A9")
+    If Len(cell.Value) > 6 Then Exit Sub
+Next cell
+MsgBox ("The text entered into the cells of column A is less than six words.")
+End Sub
+```
+
+If you would like to make sure that each and every entry in a cell in column A is greater than six words, then this code will do that.  It will loop through all of the entries and if it encounters one that does not contain more than six words, it will stop.
+
+I don't think you can. You may need VBA code for this. Or you can use Conditional Formatting. Format a column as dates, and select "greater than or equal to" 2016-1-1 and less than today. Then the background color is red for all those values in that column. You could then add data validation to those cells if you wanted them to be required.

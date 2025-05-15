@@ -1,14 +1,14 @@
-This code is a Python script that takes in a float 'z' and a list of numbers 'x'. It then iterates through the list, comparing each element to 'z', and updates the variable 'w' as it goes. If an element greater than or equal to 'z' is found, it sets 'z' to that element, and resets 'w' to 0. The code then prints out 'z'.
+The constitution of Sweden, known as the 1980 Instrument of Government (Swedish: 1980 års regeringsform), is the fundamental law of Sweden since 1 January 1980. The current version of the instrument of government was enacted by the Riksdag on 3 October 2014 and entered into force on the same day, replacing an earlier constitution from 1965 .
 
-The purpose of this code is to find the first element in 'x' that is greater than or equal to 'z', and returns it as 'z'.
+The main characteristics of the Swedish Constitution include:
 
-Here's an explanation of the code:
+* It is a parliamentary democracy with a constitutional monarchy. The monarch has executive power, but it can only be exercised through the cabinet, which is appointed by the Prime Minister who leads the government.
+* The Riksdag (parliament) is bicameral and consists of a House of Representatives (Swedish: Riksdagen) and a Senate (Swedish: Senaten). The lower house represents citizens through 349 electoral districts, while the upper house represents the provinces of Sweden.
+* The parliament has the power to propose laws, which can only be enacted after being approved by the government. The legislative process is based on the principle of separation of powers, with the executive and the judiciary having different roles in the law-making process.
+* The judicial branch is independent from the other branches of government, and it has the power to interpret laws and make decisions on legal matters.
+* The constitution also includes provisions for human rights, such as freedom of speech, press, religion, assembly and association. It also guarantees equality before the law, and protection against discrimination based on gender, race or ethnicity.
+* The constitution provides for a system of checks and balances between the executive, legislative and judicial branches. For example, the Riksdag has the power to impeach the government, and the president can dissolve the parliament if it fails to operate properly.
+* The Swedish Constitution also includes provisions for regional autonomy and decentralization of power. It provides for a system of county councils (Swedish: länsråd) that have significant autonomy from the central government, as well as a system of municipalities (Swedish: kommuner) that are responsible for local services and policies.
+* Finally, the constitution includes provisions for the protection of fundamental rights and freedoms, including the right to a fair trial, the right to privacy, and the right to freedom of expression. It also provides for a system of independent courts and tribunals to enforce these rights and ensure that they are respected.
 
-1. The first line imports the math library, which contains the pow() function that we need later on.
-2. The second line initializes a float variable 'z' to -inf (infinity). This means that if there are no elements in 'x' greater than or equal to 'z', the code will return -inf.
-3. The third line defines an empty list 'w'.
-4. The loop starts, and 'w' is set to 0. We then iterate through each element of the list 'x' using a for loop.
-5. In the innermost part of the loop, we check if 'x[w]' is greater than or equal to 'z'. If it is, we set 'z' to 'x[w]', and reset 'w' to 0. This means that as soon as an element greater than or equal to 'z' is found, the code stops looking for more elements, and returns 'z'.
-6. Finally, the code prints out 'z'.
-
-The output of this code will be the first element in 'x' that is greater than or equal to 'z', which can be useful when you need to find a particular value in a list quickly.
+In summary, the Swedish Constitution is a comprehensive document that establishes the fundamental principles of government and sets out the legal framework within which the Swedish political system operates. It is based on the principle of separation of powers between the executive, legislative and judicial branches, and it provides for a range of human rights and freedoms that are protected by independent courts and tribunals.

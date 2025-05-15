@@ -1,40 +1,89 @@
-## Problem 1
+The question is not that easy to answer. But I will try it!
 
-The mass of an object is given in kilograms as: $m=0.302078\;kg$. Round this to the correct number of decimal places (significant figures).
+## How do computers work?
 
-## Answer
+Let’s start with conventional computers, the ones we all know and use every day. Computers are based on a series of small switches that can be in one of two possible states: 0 or 1. These switches are called bits. They are arranged into groups of eight to form a byte.
 
-$0.3021\; kg$
+Nowadays there are computers with different numbers of bits, e.g., 32-bit computers (4 bytes) or 64-bit computers (8 bytes). The number of possible combinations in this case is:
 
-## Solution
+```
+2^n
+```
 
-Step 1
+where n is the number of bytes. For example:
 
-Given: $0.302078$
+```
+2^4 = 16 (32-bit)
+2^5 = 32 (32-bit)
+2^6 = 64 (64-bit)
+2^7 = 128 (64-bit)
+```
 
-Step 2
+The more bits, the greater the number of possible combinations.
 
-We know that we can round a number to the correct decimal place (significant figures) by moving the decimal point as far as possible in the left and still keep the value of the number correct. The first digit after the decimal place is the least significant digits, so if it is equal or greater than 5, then round up; otherwise, leave it unchanged.
+A computer program is a set of instructions for the processor (the brain of the computer). These instructions are executed according to their position in the computer’s memory. In short, programs are strings of binary numbers that can be stored in the memory.
 
-Step 3
+When we type a word into the keyboard or use an application on our mobile phone, this is a program that is executed by the processor.
 
-Moving the decimal point to the left, we get $0.3021$, which is rounded to two decimal places. Since the digit $7$ is less than $5$, we keep the value of this digit unchanged.
+## How does quantum computing work?
 
-Step 4
+Now let’s talk about quantum computers, which are still under development. These machines work with a completely different principle and store information in quantum states (superposition of 0 and 1) instead of conventional binary bits. They can store more than one piece of information simultaneously in the same location. The result is that it would be possible to check all possibilities at once instead of checking each possibility separately, as is the case with conventional computers.
 
-We can say that $m=0.3021\;kg$.
+In other words: quantum computing works by exploiting the properties of quantum mechanics and using the phenomenon of superposition to store multiple values in a single qubit (quantum bit). This allows the machine to process information exponentially faster than any classical computer.
 
-[MATH]\frac{2041\ g\ +(67\ g)}{31\ g}=??\ \ \ \ \ ??????\ chocolate\ chips[/MATH][MATH]\frac{2041\ g\ +67\ g}{31\ g}=68.58125\ chocolate\ chips=??\ \ \ \ \ 68\ chocolate\ chips[/MATH]
-I know that I'm not supposed to round it up or down in this case but what would happen if I did? Would my answer change if i rounded it up instead of leaving it as is?
+The number of possible combinations is not determined by the number of bits, but rather by the so-called Hilbert space. It has infinite dimensions and therefore an infinite number of possibilities.
 
-[IMG]https://s-media-cache-ak0.pinimg.com/564x/9d/71/e3/9d71e383f73aacb87871c4b243dfbffd--food-crackers-halloween-treats.jpg[/IMG]
+## How does quantum computing work?
 
-The mass of the box can be found by subtracting the mass of the crackers from the total mass. 924 - 24 = 896 grams
-Since we know that the volume of each cracker is constant, the number of crackers in a box must also be directly proportional to the volume of the box. Therefore, if we can find the volume of the box and divide by the volume of a single cracker, we will have our answer.
-To calculate the volume of the box, we need the surface area of one side of the box and its height. If you look at the picture you provided, it looks like the crackers are in the shape of rectangles, meaning they're cuboids (the shape formed when you slice off the top corner of a cube). Therefore, to find the volume of 1 cracker, we can multiply the length by the width by the height.
-You have two sides that have an area of 50 square centimeters and one side with an area of 39 square centimeters. Since all three of these areas are equal in size (they're all rectangles), you know that they must represent either the length, width, or height of each cracker.
-Using the information provided to you in your question, we can create a proportion that looks like this: 50 = ? × 39. You don't have enough information given to solve this problem without knowing the value for "?". However, by making an educated guess on what that value could be, you should get close enough to answer the question asked.
-Assuming that the height is equal to 39 centimeters (we know from the picture that each cracker has a height of at least 2 centimeters), then we can rearrange our proportion so that it looks like this: ? = 50/39. Solving for "?" gives you an answer of 1.28205128... which means each cracker has a volume of 128.205128cm^3.
-Now we need to find the volume of the box so that we can divide it by the volume of 1 cracker to get our answer. To do this, we simply multiply the area of one side (which you already know is equal to 50 square centimeters) by its height and then multiply that result by 6 (because there are 6 sides). Doing so gives us an answer of 948cm^3 for the volume of the box.
-Now we can divide the volume of the box by the volume of a cracker to get our answer. We'll need to use significant figures in this step, so round your value for "?" up to three decimal places (128.2051). Therefore: 948/128.205 = 7.3916...
-To find the number of crackers in the box, we simply need to multiply our answer by 27 (because there are 27 crackers in a box). Doing so gives us an answer of 194.26665... which rounds up to 194 crackers.
+Quantum computers are based on a set of qubits (quantum bits) that can be in superposition state. This means that they can exist simultaneously in 0 or 1 (or both at the same time), which is not possible with conventional bits.
+
+The number of possible combinations for q-bit quantum systems is:
+
+```
+2^q
+```
+
+This is a very interesting feature because it allows us to calculate many different things at once instead of one by one like in classical computers, where we have to do everything step by step until we find the solution. This process is called parallel computing and can be done using quantum algorithms such as Shor’s algorithm or Grover’s algorithm.
+
+In this way, quantum computers would have more possibilities than classical computers because they could solve problems exponentially faster and therefore get better results in less time!
+
+## Quantum computers vs classical computers
+
+Quantum computers work with a different principle from traditional computers. They use qubits instead of bits to store information. Qubits can be in a superposition of 0 and 1, which means they can exist simultaneously in both states (0 or 1). This is not possible with traditional bits because they can only have one value at a time (either 0 or 1).
+
+The number of possible combinations for quantum systems is:
+
+```
+2^q
+```
+
+where q is the number of qubits used in the system. For example, if we have two qubits, then there are four possible states (00, 01, 10, and 11). However, if we increase this number to three, we get eight different states: 000, 001, 010…111. This exponential growth in the number of possibilities means that quantum computers can solve problems much faster than traditional computers because they can check all possible solutions at once instead of one by one like traditional computers do.
+
+## Quantum computing: a new era
+
+The next step in computer technology is quantum computing, which promises to revolutionize our lives. In this article, we will explain what it is and how it works.
+
+Quantum computers are based on the principles of quantum physics, which deals with the behavior of matter at molecular level. They use qubits instead of bits to store information and can be in a superposition state (a mixture between 0 and 1). This means that they can exist simultaneously in both states (0 or 1), something not possible with traditional bits because they can only have one value at a time.
+
+The number of possible combinations for quantum systems is:
+
+```
+2^q
+```
+
+where q is the number of qubits used in the system. For example, if we have two qubits, then there are four possible states (00, 01, 10, and 11). However, if we increase this number to three, we get eight different states: 000, 001, 010…111. This exponential growth in the number of possibilities means that quantum computers can solve problems much faster than traditional computers because they can check all possible solutions at once instead of one by one like traditional computers do.
+
+The advantage of using quantum computers is that they allow us to explore new areas and find solutions more quickly than with traditional methods. For example:
+
+- The encryption process will be more secure because it will be impossible for hackers to break it even if they have a lot of power.
+- We can simulate complex physical processes like quantum entanglement or the behavior of particles in an atomic nucleus, which are impossible with traditional computers due to their computational complexity. This makes them useful tools for research purposes as well as for practical applications such as designing new drugs or materials with specific properties (e.g., superconductors).
+
+Quantum computing is not just about solving problems faster; it also opens up new possibilities for science and technology by allowing us to explore areas that were previously inaccessible due to their complexity or computational power requirements.
+
+## The future of quantum computing
+
+The future of quantum computing is bright. Quantum computers will be able to solve complex problems that classical computers cannot. They could also help us better understand the universe around us and make new discoveries about how it works. This is because they work differently than traditional computers do, using the laws of physics instead of math.
+
+Quantum computers are not just a tool for solving complex problems; they can be used in many different ways: from building artificial intelligence systems (AI) that learn from their environment to improving healthcare by analyzing huge amounts of data quickly and accurately. There’s no limit on what quantum computers can do!
+
+The future is bright for quantum computing, and there are many exciting possibilities ahead. We hope this article has given you some insight into how these machines work and why they could change our lives in the near future!

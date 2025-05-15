@@ -1,0 +1,47 @@
+In Python Basemap, latitude and longitude are not directly used to project the map data onto a map. Instead, Basemap uses a combination of a grid system and a projection to transform the map data into a 2D coordinate system that can be displayed on a map.
+The grid system is defined by the `x_min`, `y_min`, `x_max`, and `y_max` parameters of the `Basemap` constructor, which specify the range of coordinates that will be used for the map projection. The `projection` parameter is also used to define the type of projection used for the map (e.g., Mercator, Gall-Peters, etc.).
+To plot a point on the map using Basemap, you can use the `plot()` method and pass in the coordinates as arguments. For example:
+```
+# Create a Basemap object with a Mercator projection
+m = Basemap(projection='merc', llcrnrlat=0, urcrnrlat=90, \
+    llcrnrlon=0, urcrnrlon=360, resolution='l')
+# Plot a point at (20, 40) in degrees latitude and longitude
+m.plot(20, 40, 'o', color='red')
+```
+In this example, the `llcrnrlat` and `urcrnrlat` parameters are used to specify the range of latitudes that will be included in the map, while the `llcrnrlon` and `urcrnrlon` parameters are used to specify the range of longitudes. The `resolution` parameter is used to set the resolution of the grid system (i.e., the number of points per degree).
+Once the point has been plotted, you can use various other methods on the `m` object to customize the appearance and content of the map, such as adding axes, markers, or data labels.
+
+Rasterio is a powerful library for working with geospatial data in Python, and it provides several functions for plotting cloud top heights. Here are some examples of how you can use Rasterio to plot cloud top heights:
+1. Load the data: First, you'll need to load the cloud top height data into a raster format that Rasterio can work with. You can do this using the `rasterio.open()` function. For example:
+```
+with rasterio.open('cloud_top_heights.tif') as src:
+    dataselection = src.select(band=1)  # Select the cloud top height band
+    cloud_top_heights = dataselection.to_array()
+```
+This code will load the `cloud_top_heights.tif` file into a numpy array, which can be used in subsequent Rasterio functions.
+2. Plot the data: Once you have the data loaded, you can use Rasterio's `plot()` function to create a map of the cloud top heights. For example:
+```
+from rasterio.visualize import plot
+# Create a figure and axis object
+fig, ax = plt.subplots(extent
+
+=====================
+
+In this recipe, we will demonstrate how to create a basemap with a georeference in QGIS. A basemap is a fundamental component of any map, providing the foundation for other layers to be added on top of it. A georeference is a set of coordinates that define the position of a map element relative to a real-world location. In this recipe, we will create a basemap with a georeference using the QGIS `Vector Tile` provider.
+Before starting, make sure you have QGIS installed and running on your system. If you don't have it, you can download the latest version from the official website: <https://qgis.org/en/site/forusers/download.html>
+Step 1: Open QGIS and create a new project
+Open QGIS and click on `File` > `New` > `Project` in the top-left menu bar. In the `New Project` dialog box, enter a name for your project and choose a location to save it. Click `OK`.
+Step 2: Add a Vector Tile provider
+In the QGIS main window, click on `Layer` > `Vector Tile` in the top-left menu bar. In the `Vector Tile` dialog box, select `Add Vector Tile Provider` and choose `OSM` as the provider. Click `Add`.
+Step 3: Create a new basemap
+In the QGIS main window, click on `Layer` > `New` > `Basemap` in the top-left menu bar. In the `New Basemap` dialog box, choose `Vector Tile` as the type and select the provider you just added (OSM). Click `Create`.
+Step 4: Set the georeference
+In the `Vector Tile` settings for your new basemap, click on the `Georeference` tab. Here, you can set the georeference of your map by entering coordinates in the `Xmin` and `Ymin` fields. These coordinates define the lower-left corner of the map.
+For example, if you want to create a basemap that shows the entire world, you can enter `-180 -90` for the Xmin and Ymin coordinates. This will set the lower-left corner of your map to the southernmost point on Earth.
+Step 5: Add a title and other details
+In the `Basemap` settings for your new basemap, you can add a title and other details such as the scale, units, and projection. These settings will be applied to your basemap when it is added to a map project.
+Step 6: Save and close the project
+Once you have created your basemap with a georeference, save and close the project by clicking on `File` > `Save` in the top-left menu bar, then `Close Project` in the bottom-right corner of the QGIS window.
+Now that you have created a basemap with a georeference in QGIS, you can use it as the foundation for other layers and maps in your project. You can add additional layers to your map by clicking on `Layer` > `New` > `Vector Layer` in the top-left menu bar, then following the prompts to create a new layer.
+Conclusion
+In this recipe, we learned how to create a basemap with a georeference in QGIS using the `Vector Tile` provider. By following these steps, you can create a solid foundation for your maps and add additional layers to enhance them.

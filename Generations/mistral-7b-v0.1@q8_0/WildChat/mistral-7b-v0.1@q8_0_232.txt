@@ -1,0 +1,54 @@
+```js
+var query = {
+    dimension: '地区',
+    measure: '利润'
+};
+
+// 通过query来获取图表中需要展示的数据，并且将图表所需要的数据放到chart_data数组中
+function getData(query) {
+    // 这里写你的代码
+    var chart_data = [];
+    for (var i=0;i<4;i++)
+        {
+            var dataObj={};
+            dataObj['region']='北京';
+            if (query.dimension=='地区'){
+                switch (i)
+                    {
+                    case 0:dataObj[query.measure] = 214578;break;
+                    case 1:dataObj[query.measure]=89306;break;
+                    case 2:dataObj[query.measure]=4382;break;
+                    case 3:dataObj[query.measure]=244;break;
+                    }
+            }
+            if (query.dimension=='年份'){
+                switch(i)
+                    {
+                    case 0:dataObj[query.measure]=671853;break;
+                    case 1:dataObj[query.measure]=942423;break;
+                    case 2:dataObj[query.measure]=513492;break;
+                    case 3:dataObj[query.measure]=16780;break;
+                    }
+            }
+            chart_data.push(dataObj);
+        }
+
+return chart_data;
+}
+// 获取数据，并且渲染图表
+getData(query).then((chart_data)=>{
+    echarts.init(document.getElementById('container')).setOption({
+            xAxis: {
+                type: 'category',
+                data: ['一','二','三','四']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: chart_data,
+                type: 'bar'
+            }]
+    });
+})
+```
