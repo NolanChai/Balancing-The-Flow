@@ -33,7 +33,7 @@ def setup_directories(model_name):
     
     return dirs
 
-def calculate_average_surprisal(model_name, dataset_name, num_files, batch_size=20, verbose=False):
+def calculate_average_surprisal(model_name, dataset_name, num_files, batch_size=20, verbose=False, regenerate=False):
     """
     Calculate average surprisal across generated files
     """
@@ -43,7 +43,7 @@ def calculate_average_surprisal(model_name, dataset_name, num_files, batch_size=
     surprisal_dir.mkdir(parents=True, exist_ok=True)
 
     existing_csvs = list(surprisal_dir.glob("*.csv"))
-    if len(existing_csvs) < num_files:
+    if (len(existing_csvs) < num_files) or regenerate:
         if verbose:
             print(f"Calculating surprisals for {model_name}...")
             print(f"Batch size: {batch_size}")
@@ -200,7 +200,7 @@ def main():
         
         # calculate surprisals
         start_time = time.time()
-        avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, verbose)
+        avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, verbose, args.regenerate)
         
         if verbose:
             print(f"Analysis completed in {time.time() - start_time:.2f} seconds")
@@ -255,7 +255,7 @@ def main():
         print(f"Generation completed in (HH:MM:SS): {time.strftime('%H:%M:%S', time.gmtime(generation_time))}")
         print("Calculating surprisal statistics...")
     surprisal_start = time.time()
-    avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, args.batch_size, verbose)
+    avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, args.batch_size, verbose, args.regenerate)
     surprisal_time = time.time() - surprisal_start
     if verbose:
         print("\nSummary:")

@@ -1,0 +1,13 @@
+Model: llama-2-7b-32k-instruct@q8_0
+Dataset: cnn_dailymail 1.0.0Generated: 300 new examples
+Skipped: 0 existing examples
+Errors: 1 failed generations
+Retries: 45 retried generations
+Temperature: 0.9
+Top-p: 1.0
+Max tokens: 2048
+Generation time: 3721.87 seconds
+Surprisal calculation time: 12.96 seconds
+Average surprisal: 2.8849
+Total runtime: 3734.84 seconds
+Date: 2025-05-14 19:02:33

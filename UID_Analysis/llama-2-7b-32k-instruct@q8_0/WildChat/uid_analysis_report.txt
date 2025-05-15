@@ -1,39 +1,39 @@
 === Uniform Information Density (UID) Analysis Report ===
 
-Total files analyzed: 158
-Total tokens processed: 103870
-Average tokens per file: 657.41
+Total files analyzed: 296
+Total tokens processed: 180799
+Average tokens per file: 610.81
 
 === Surprisal Statistics ===
-Mean surprisal across all texts: 3.5028
+Mean surprisal across all texts: 3.6742
 
 === UID Metrics ===
-UID Variance (mean): 14.5759
-UID Variance (median): 13.1924
-UID Variance (std): 6.9066
+UID Variance (mean): 16.5510
+UID Variance (median): 13.1964
+UID Variance (std): 31.4606
 
-UID Pairwise (mean): 27.7857
-UID Pairwise (median): 24.7377
-UID Pairwise (std): 14.2446
+UID Pairwise (mean): 31.6908
+UID Pairwise (median): 25.1064
+UID Pairwise (std): 57.3968
 
 === Correlations ===
-Correlation between UID Variance and UID Pairwise: 0.9644
-Correlation between Mean Surprisal and UID Variance: 0.4921
-Correlation between Mean Surprisal and UID Pairwise: 0.6044
+Correlation between UID Variance and UID Pairwise: 0.9963
+Correlation between Mean Surprisal and UID Variance: 0.4642
+Correlation between Mean Surprisal and UID Pairwise: 0.4984
 
 === Top 5 Files by UID Variance (most uniform) ===
-llama-2-7b-32k-instruct@q8_0_31.csv: 5.8368
-llama-2-7b-32k-instruct@q8_0_274.csv: 6.1797
-llama-2-7b-32k-instruct@q8_0_53.csv: 6.6560
-llama-2-7b-32k-instruct@q8_0_260.csv: 6.9764
-llama-2-7b-32k-instruct@q8_0_41.csv: 7.5740
+llama-2-7b-32k-instruct@q8_0_92.csv: 0.9628
+llama-2-7b-32k-instruct@q8_0_187.csv: 3.2289
+llama-2-7b-32k-instruct@q8_0_93.csv: 5.5967
+llama-2-7b-32k-instruct@q8_0_68.csv: 6.1522
+llama-2-7b-32k-instruct@q8_0_146.csv: 6.6625
 
 === Top 5 Files by UID Pairwise (most uniform) ===
-llama-2-7b-32k-instruct@q8_0_274.csv: 6.0980
-llama-2-7b-32k-instruct@q8_0_31.csv: 6.7133
-llama-2-7b-32k-instruct@q8_0_41.csv: 7.9407
-llama-2-7b-32k-instruct@q8_0_260.csv: 9.3236
-llama-2-7b-32k-instruct@q8_0_53.csv: 9.3660
+llama-2-7b-32k-instruct@q8_0_92.csv: 1.1358
+llama-2-7b-32k-instruct@q8_0_187.csv: 2.8835
+llama-2-7b-32k-instruct@q8_0_93.csv: 8.0721
+llama-2-7b-32k-instruct@q8_0_233.csv: 8.1301
+llama-2-7b-32k-instruct@q8_0_268.csv: 9.4694
 
 === Analysis Notes ===
 Lower values of UID metrics indicate more uniform information density.
@@ -41,3 +41,6 @@ Higher correlation between metrics suggests consistency in measuring uniformity.
 
 The high correlation between UID Variance and Pairwise suggests both metrics
 are capturing similar aspects of information uniformity.
+
+The high variability in UID metrics across texts suggests significant
+differences in information density patterns between texts.

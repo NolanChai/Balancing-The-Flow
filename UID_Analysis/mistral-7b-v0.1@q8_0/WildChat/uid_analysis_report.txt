@@ -1,39 +1,39 @@
 === Uniform Information Density (UID) Analysis Report ===
 
-Total files analyzed: 159
-Total tokens processed: 91614
-Average tokens per file: 576.19
+Total files analyzed: 275
+Total tokens processed: 146934
+Average tokens per file: 534.31
 
 === Surprisal Statistics ===
-Mean surprisal across all texts: 3.8333
+Mean surprisal across all texts: 4.0069
 
 === UID Metrics ===
-UID Variance (mean): 15.4709
-UID Variance (median): 13.1971
-UID Variance (std): 11.3053
+UID Variance (mean): 16.8582
+UID Variance (median): 13.8068
+UID Variance (std): 19.7966
 
-UID Pairwise (mean): 28.4635
-UID Pairwise (median): 23.4357
-UID Pairwise (std): 22.6188
+UID Pairwise (mean): 31.2783
+UID Pairwise (median): 24.3676
+UID Pairwise (std): 33.7137
 
 === Correlations ===
-Correlation between UID Variance and UID Pairwise: 0.9036
-Correlation between Mean Surprisal and UID Variance: 0.1815
-Correlation between Mean Surprisal and UID Pairwise: 0.4336
+Correlation between UID Variance and UID Pairwise: 0.9601
+Correlation between Mean Surprisal and UID Variance: 0.3611
+Correlation between Mean Surprisal and UID Pairwise: 0.4942
 
 === Top 5 Files by UID Variance (most uniform) ===
 mistral-7b-v0.1@q8_0_171.csv: 0.0000
-mistral-7b-v0.1@q8_0_5.csv: 0.0000
-mistral-7b-v0.1@q8_0_280.csv: 4.9184
-mistral-7b-v0.1@q8_0_233.csv: 5.9110
-mistral-7b-v0.1@q8_0_69.csv: 6.0112
+mistral-7b-v0.1@q8_0_11.csv: 3.6742
+mistral-7b-v0.1@q8_0_150.csv: 4.9184
+mistral-7b-v0.1@q8_0_290.csv: 5.3912
+mistral-7b-v0.1@q8_0_125.csv: 6.8991
 
 === Top 5 Files by UID Pairwise (most uniform) ===
-mistral-7b-v0.1@q8_0_69.csv: 5.0098
+mistral-7b-v0.1@q8_0_11.csv: 5.4822
 mistral-7b-v0.1@q8_0_109.csv: 8.1063
-mistral-7b-v0.1@q8_0_193.csv: 10.0634
-mistral-7b-v0.1@q8_0_100.csv: 10.3445
-mistral-7b-v0.1@q8_0_233.csv: 11.9987
+mistral-7b-v0.1@q8_0_290.csv: 9.4649
+mistral-7b-v0.1@q8_0_130.csv: 10.3905
+mistral-7b-v0.1@q8_0_250.csv: 11.1435
 
 === Analysis Notes ===
 Lower values of UID metrics indicate more uniform information density.
