@@ -1,0 +1,128 @@
+Comment: Are you saying that if there is a space between the comma and the next word, then you want to "shoot" out two gradient blocks?
+
+Answer: To determine what the gradient should be at any given point in time, you would need an animation from start to finish. You can't just translate it by a fixed amount, since if the gradient is moving left (from end to beginning) then it would not make sense for it to be changing shape or color as it moves.
+
+To use it with `animation`, you could try this:
+
+\begin{code}
+.highlight-line {
+  position: relative;
+  display: inline-block;
+}
+
+span {
+  color: white;
+  width: 100%;
+}
+
+.highlight-line:before {
+  content: '';
+  color: white;
+  position: absolute;
+  left: -18px;
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(to right, royalblue, cyan);
+  pointer-events: none;
+}
+\end{code}
+
+\begin{code}
+<html>
+   <head>
+      <style>
+         html, body {
+            background: black;
+         }
+
+         .textarea {
+            width: 100%;
+            height: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            color: cyan;
+            background-color: #010101;
+            border: none;
+            overflow: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.4;
+         }
+
+         .highlight-line {
+            position: relative;
+            display: inline-block;
+         }
+
+         span {
+            color: white;
+            width: 100%;
+         }
+
+         .highlight-line:before {
+            content: '';
+            color: white;
+            position: absolute;
+            left: -18px;
+            width: 0;
+            height: 100%;
+            background-image: linear-gradient(to right, royalblue, cyan);
+            pointer-events: none;
+         }
+      </style>
+   </head>
+<body> <div id='container' class='textarea' contenteditable='true'>
+    Hello world!
+</div>
+<script>
+const container = document.getElementById('container');
+let previousContent = container.innerHTML;
+function insertLine() {
+    const range = window.getSelection().getRangeAt(0);
+    if (range.startContainer.nodeType === 3) {
+        const textNode = range.startContainer;
+        const currentPosition = range.startOffset;
+        let lineText = Array.from(textNode.textContent).slice(wordEndPosition - 1, wordEndPosition + 1); // This is the string you're going to use for your animation. It starts at position `wordEndPosition` of `range`, and ends when it reaches `wordEndPosition+2`.
+        if (lineText.trim().length === 0) {
+            return;
+        }
+
+        const remainingSpace = container.clientWidth - range.getBoundingClientRect().right; // The remaining space is the difference between the current width of the container and its maximum size (`container.clientWidth`). Since this animation should be happening in real time, we subtract `range.getBoundingClientRect().right` to avoid flickering when it's moving left (since it will be at `0` at times).
+        const highlightedLine = document.createElement('span'); // This is where the actual gradient line will be. It will inherit the width and position of the parent `` element, which we also set below.
+        highlightedLine.style.maxWidth = remainingSpace + 'px';
+        const gradientLine = document.createElement('span');
+        gradientLine.style.width = container.clientWidth + 'px'; // This is the size it should be when moving from right to left, and the length of `lineText` minus one character (since we need room for the "." in the animation).
+        highlightedLine.appendChild(gradientLine);
+        range.deleteContents();
+        range.insertNode(highlightedLine);
+        range.collapse(); // Since the `highlightedLine` now exists at `0`, collapse the range to only contain it.
+        previousContent = container.innerHTML;
+    }
+}
+
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        insertLine(); // If you want it to work on the next keystroke, this is where it should happen.
+        return;
+    }
+    if (event.key === ' ') { // We check if `space` or `enter` was pressed, and if neither of those were pressed we move ahead one position in the textNode.
+        const range = window.getSelection().getRangeAt(0);
+        wordEndPosition += 1; // The above line updates `wordEndPosition`. It adds `1` to its value since we already subtracted `2` from it when we created the animation.
+    }
+}
+
+function handleKeyUp(event) {
+    if (event.key === 'Enter' || event.key === ' ') { // If either of these keys were pressed, we should add a new gradient line to the container and collapse the range again.
+        event.preventDefault();
+        insertLine();
+        return;
+    }
+}
+container.addEventListener('keydown', handleKeyPress);
+container.addEventListener('keyup', handleKeyUp);
+
+</script>
+</body>
+</html>
+\end{code}

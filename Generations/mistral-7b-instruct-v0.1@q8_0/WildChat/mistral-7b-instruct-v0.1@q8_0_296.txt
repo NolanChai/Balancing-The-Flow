@@ -1,0 +1,213 @@
+To develop a file sharing system, you'll need to use shared memory and semaphores in both the client and server code. Here's an outline of what the code should look like:
+
+Server.c:
+```c
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/sem.h>
+
+// Define shared memory key and size
+#define SHM_KEY 12345
+#define BUFFER_SIZE 1024
+
+int main() {
+    int fd[2]; // file descriptors for pipes
+    sem_t mutex, read_sem, write_sem; // semaphores
+    char buffer[BUFFER_SIZE]; // command buffer
+    int status;
+    pid_t pid;
+
+    // Create shared memory and initialize semaphores
+    if (semctl(SEM_ID(read_sem), 0, SETVAL, 1) == -1) {
+        printf("Error creating read semaphore\n");
+        exit(1);
+    }
+
+    if (semctl(SEM_ID(write_sem), 0, SETVAL, 1) == -1) {
+        printf("Error creating write semaphore\n");
+        exit(1);
+    }
+
+    sem_init(&mutex, SEM_EXCLUSIVE|SEM_UNSAFE, 1); // mutex for shared memory access
+    sem_init(&read_sem, 0, 1); // read semaphore to signal when data is available
+    sem_init(&write_sem, 0, 1); // write semaphore to signal when data can be written
+
+    while (1) {
+        // Wait for command from client process
+        status = recv(fd[0], buffer, BUFFER_SIZE, 0);
+        if (status == -1 || status != BUFFER_SIZE) {
+            printf("Error reading command from client\n");
+            continue;
+        }
+
+        // Parse command and take appropriate action
+        char *token = strtok(buffer, " ");
+        if (strcmp(token, "read") == 0) {
+            pid = fork();
+            if (pid == -1) {
+                printf("Error forking process\n");
+                continue;
+            } else if (pid == 0) { // child process
+                char *filename = strtok(NULL, " ");
+                int fd_out[2];
+
+                sem_post(&read_sem); // signal read semaphore to indicate data is available
+
+                status = shmget(SHM_KEY, sizeof(char*) + strlen(filename) + 1, IPC_CREAT | IPC_EXCL);
+                if (status == -1) {
+                    printf("Error creating shared memory\n");
+                    exit(1);
+                }
+
+                char *shm_ptr = shmat(SHM_KEY, sizeof(char*) + strlen(filename) + 1, PROT_READ | PROT_WRITE | PROT_EXEC);
+                if (shm_ptr == NULL) {
+                    printf("Error attaching to shared memory\n");
+                    exit(1);
+                }
+
+                sprintf(shm_ptr, "%s", filename); // copy filename to shared memory
+
+                close(fd_out[0]); // close read end of pipe in child process
+                dup2(fd_out[1], STDOUT_FILENO); // redirect stdout to pipe
+
+                status = execvp(filename, NULL);
+                if (status == -1) {
+                    printf("Error executing command\n");
+                    exit(1);
+                }
+            } else { // parent process
+                pid_t child_pid;
+                int status_child;
+
+                sem_wait(&write_sem); // wait for write semaphore to indicate data can be written
+
+                status = shmget(SHM_KEY, sizeof(char*) + strlen(filename) + 1, IPC_CREAT | IPC_EXCL);
+                if (status == -1) {
+                    printf("Error creating shared memory\n");
+                    exit(1);
+                }
+
+                char *shm_ptr = shmat(SHM_KEY, sizeof(char*) + strlen(filename) + 1, PROT_READ | PROT_WRITE | PROT_EXEC);
+                if (shm_ptr == NULL) {
+                    printf("Error attaching to shared memory\n");
+                    exit(1);
+                }
+
+                sprintf(shm_ptr, "%s", filename); // copy filename to shared memory
+
+                child_pid = fork();
+                if (child_pid == -1) {
+                    printf("Error forking process\n");
+                    exit(1);
+                } else if (child_pid > 0) { // parent process
+                    close(fd[1]); // close write end of pipe in parent process
+                    dup2(fd[0], STDIN_FILENO); // redirect stdin to pipe
+
+                    status = execvp("sh", "/bin/sh"); // run shell to execute command
+                    if (status == -1) {
+                        printf("Error executing command\n");
+                        exit(1);
+                    }
+                } else { // child process
+                    sem_post(&read_sem); // signal read semaphore to indicate data is available
+                    dup2(fd[0], STDIN_FILENO); // redirect stdin to pipe in child process
+                    dup2(fd[1], STDOUT_FILENO | STDERR_FILENO); // redirect stdout and stderr to pipe
+                    close(fd[0]); // close read end of pipe in child process
+
+                    pid = fork();
+                    if (pid == -1) {
+```
+
+Sure, I'd be happy to help you implement the specifications for your project. To do that, I will need more information about the project and its requirements. Please provide me with the following details:
+
+1. Project Description: A brief overview of what the project is about and its purpose.
+2. Functional Requirements: A list of features and functionality that the system must have in order to meet its purpose. These should be specific, measurable, achievable, relevant, and time-bound (SMART).
+3. Non-Functional Requirements: Any constraints or limitations that must be met by the system, such as performance requirements, security requirements, etc.
+4. Technical Requirements: Any technical specifications or standards that must be followed in order to implement the system, such as programming languages, databases, etc.
+5. User Interface Design: A description of how the system will be used by the end user and any interface design requirements that need to be met.
+6. System Architecture: A high-level diagram or description of how the system will be structured and how its components will interact with each other.
+7. Deployment Plan: A plan for how the system will be deployed and maintained, including any necessary infrastructure and support resources.
+8. Testing Plan: A plan for testing the system to ensure that it meets all requirements and is functioning properly.
+9. Maintenance Plan: A plan for ongoing maintenance and support of the system, including regular updates, bug fixes, etc.
+10. Timeline and Budget: A timeline for completing the project and a budget for any resources required.
+
+Once you provide me with this information, I can work with you to implement the specifications for your project.
+
+To implement the functionality of sending back file contents to the client when a `READ` command is received by the server, we need to add some code in the server-side and client-side.
+
+In server-side (server.c):
+```c
+// check if the command is READ
+if(strcmp(command,"READ") == 0){
+    // read the file contents
+    char *contents = read_file(filename);
+
+    // send the file contents back to the client
+    send(client_socket, contents, strlen(contents), 0);
+}
+```
+In client-side (client.c):
+```c
+// handle READ command
+case 'READ': {
+    char buffer[BUFFER_SIZE];
+
+    // receive the file contents from server
+    memset(buffer, '\0', BUFFER_SIZE);
+    recv(sockfd, buffer, BUFFER_SIZE, 0);
+
+    // print the received file contents
+    printf("\n%s\n", buffer);
+}
+```
+Note that in the server-side code, we are reading the contents of a file using the `read_file()` function and sending it back to the client using the `send()` function. Similarly, in the client-side code, we are receiving the file contents from the server using the `recv()` function and printing it using `printf()`.
+
+Make sure to implement the `read_file()` function as well, which reads the contents of a file and returns it as a string.
+
+The error messages are indicating the following issues in your code:
+
+1. In function `main`, line 25, you're trying to cast `shmid` to `struct shared_data` type. However, `shmid` is an integer type and cannot be cast directly to a struct type. You need to first allocate memory for the struct using `mmap()` and then pass that address as an argument to `shmat()`.
+```c
+struct shared_data *data = (struct shared_data *) mmap(NULL, sizeof(struct shared_data), PROT_READ | PROT_WRITE | PROT_EXEC, MAP_PRIVATE | MAP_ANON, -1, 0);
+int shmid = shmat(data, NULL, 0);
+```
+2. In lines 26-31, you're trying to access the semaphore member of `struct shared_data`. However, you're not initializing it before attempting to access it. You need to initialize the semaphore using `sem_init()` function first.
+```c
+sem_init(&data->semaphore, 1, 1);
+```
+3. In lines 32-34, you're trying to pass a pointer to a struct as an argument to `pthread_create()`. However, this is not allowed since the function expects a void pointer (`void *`) argument instead of a struct pointer. You need to pass the address of the struct itself as an argument to `pthread_create()`.
+```c
+pthread_create(&thread_id, NULL, thread_handler, data);
+```
+4. In line 35, you're trying to access the command member of `struct shared_data`. However, you're not initializing it before attempting to access it. You need to initialize the command string using `memset()` function first.
+```c
+memset(data->command, 0, sizeof(data->command));
+```
+5. In line 37, you're trying to post a semaphore that is not created yet. You need to create the semaphore before posting it using `sem_post()` function.
+```c
+sem_post(&data->semaphore);
+```
+6. In line 40, you're trying to detach a shared memory segment that is not created yet. You need to create the shared memory segment first before detaching it using `shmdt()` function.
+```c
+shmdt(data);
+```
+7. The error message at the top of your code is indicating that there are conflicting types for `thread_handler`. It seems that you have declared the function with type `void *(void)` and also declared it as a separate variable with type `void * (void *)`. You need to remove one of these declarations to avoid this conflict.
+```c
+// Remove this declaration
+void *thread_handler(void arg);
+
+// And then remove this variable definition
+void *thread_id;
+
+// Use the function directly instead of a variable
+pthread_create(&thread_id, NULL, thread_handler, (void *) data);
+```
+
+This looks like a set of error messages generated by a code analyzer or linters for C/C++ files. Here is a breakdown of the issues found:
+
+1. "cast to type 'struct shared\_data' is not allowed": This suggests that there is an attempt to cast a value of another type to struct shared\_data, which is not allowed in C/C++.
+2. "argument of type 'void' is incompatible with parameter of type 'const void \*': This indicates that there is an issue with passing the argument of type void to a function that expects a pointer to any type (in this case, const void \*).
+3. "operator -> or ->\* applied to 'struct shared\_data' instead of to a pointer type": This suggests that there is an attempt to apply the operator -> or \* to struct shared\_data directly, instead of to a pointer to struct shared\_data. In C/C++, you need to use pointers to access members of structures.
+
+It is not clear what exactly causes these issues without seeing the code itself. However, it is recommended to fix them as they can lead to runtime errors or unexpected behavior in your program.

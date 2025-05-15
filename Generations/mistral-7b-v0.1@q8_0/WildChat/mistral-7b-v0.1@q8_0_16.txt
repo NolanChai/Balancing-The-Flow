@@ -1,0 +1,47 @@
+[SOLV]
+n=float('-inf')
+for i in range(len(x)):
+    if n < x[i]:
+        n = x[i]
+print(n)
+[/SOLV]
+
+
+
+
+
+
+
+
+
+[INST2]
+n = 0
+while n < len(x):
+    if x[n] > z:
+         z=x[n]
+    n+=1
+print(z)
+[/INST2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[SOLV2]
+i = 0
+maximo = -float('inf')
+while i < len(x):
+   if maximo < x[i]:
+      maximo = x[i]
+   i +=1
+print("El valor máximo del array es: " + str(maximo))
+[/SOLV2]

@@ -1,0 +1,29 @@
+</style>
+<body style="background:#f5f5f5;">
+    <header class="header">
+        <img src="<?php echo base_url('assets/img/logo.png') ?>" alt="Logo">
+    </header>
+    <section class="content">
+    <?= $this->session->flashdata('pesan');?>
+         <div class="container">
+             <h2 style="font-size:45px;text-transform: uppercase;">Tentang Kami</h2><hr>
+            <p>Fondly dari Jabar Muda adalah situs yang berisi konten tentang tips dan trik pencinta permainan online, dalam hal ini khususnya untuk game di platform mobile seperti poker online, domino99, slot online dll. </p>
+            <h2 style="font-size:45px;text-transform: uppercase;">Tentang Kami</h2><hr>
+             <div class="col-md-3">
+                 <img src="<?php echo base_url('assets/img/fondly.png') ?>" alt="logo fondly"/><br/>
+                <p style="font-size:20px;"><i>Founded on 21 April, 2017</i></p>
+             </div>
+             <div class="col-md-3">
+                 <img src="<?php echo base_url('assets/img/fondly.png') ?>" alt="logo fondly"/><br/>
+                <p style="font-size:20px;"><i>Made in Jabar Muda</i></p>
+             </div>
+             <div class="col-md-3">
+                 <img src="<?php echo base_url('assets/img/fondly.png') ?>" alt="logo fondly"/><br/>
+                <p style="font-size:20px;"><i>Dedicated to Poker Fans</i></p>
+             </div>
+        </div>
+    </section>
+  <footer class="footer">
+      <p class="text-center">&copy; Copyright 2017, fondly. All Rights Reserved.</p>
+  </footer>
+</body>

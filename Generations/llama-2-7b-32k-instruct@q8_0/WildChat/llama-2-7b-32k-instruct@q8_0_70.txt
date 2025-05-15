@@ -1,218 +1,27 @@
-It is possible to replace the highlightedLine textContent = '█'; with an actual gradient in terms? The purpose for all this madness is to make a laser-like shooting gradient towards the remaining space in between the current caret position and the max width remained towards that container or textarea right side.
+1. Inspcorp is a research-based technology transfer startup that focuses on developing innovative technologies with a positive impact on society. They work closely with local communities and stakeholders to ensure their solutions are tailored to local needs and priorities. 2. Eco Blocks and Tiles is a green technology company that manufactures high-quality, sustainable building products using various mixed post-consumer waste materials as key ingredients in the production process. Their products are designed to reduce environmental impact while also providing affordable housing solutions for communities around the world. 3. The speaker's name is Presidio Anonymousized Person and she is a mother of three young children who have recently returned from maternity leave. She works as a cofounder in Inspcorp, a research-based technology transfer startup that develops difference-making technologies. 4. The speaker joined the We4A program in March this year and has found it to be an enriching experience. She appreciates the opportunity to connect with other women entrepreneurs and feels supported by the We4A team, including Nikita and Tracy who are responsible for organizing events and providing logistical support. 5. The speaker recounts how she was initially hesitant about joining We4A due to her fear of being judged or feeling inadequate, but found a supportive community at the program's first event held on March 31st, 2023 at Radisson Blu. She highlights how she was able to showcase her products and network with other women entrepreneurs during this event, which led to opportunities for partnerships and collaboration. 6. The speaker emphasizes the importance of "showing up" in business, as it allows one's voice and impact to be amplified. She acknowledges that showing up may not always be easy, but it is essential for growth and success. 7. The speaker expresses gratitude towards the We4A program team and highlights some specific women entrepreneurs who have been beneficial to her business, including Sarah from Nyeri in the cosmetics industry, Rose from Kisumu who makes briquettes, Maureen from Nairobi who runs Nyayo mums soko, Hellen from Nyeri who is a consultant in green energy, Linda who has an amazing Africa inspired fashion line called Favoloso by Nanu, and Mwanaisha who runs an online clothing store called Mimi that caters for all the family needs. 8. The speaker concludes her speech by expressing her appreciation towards the We4A team, GIZ, and the We4A program for considering women entrepreneurs and creating opportunities for them to show up and connect with other like-minded individuals.
 
-No, GPT, your gradient is invisible inside this simulated textarea. The triggering key in this case is enter key, and this gradient shall fly towards right side if you press enter. Reread text as aforementioned previously.:
-```<html>
+Sure, here's an example of how you might write a testimonial speech about the We4A program:
 
-<head>
-  <style>
-    html,
-    body {
-      background: radial-gradient(circle at center right, rgba(15, 10, 0, 0.9), rgba(25, 1, 5, 0.9));
-      padding: 10px;
-    }
+"Good morning everyone! Today, I want to talk about my experience with the We4A program. As someone who has always been interested in technology and its potential to impact society, I was excited to learn more about this program when I first heard about it. But what really drew me in was the opportunity to work on real-world projects that make a difference in people's lives.
 
-    .container {
-      display: grid;
-      width: 100%;
-      height: 100%;
-      padding-top: 0px;
-      place-items: center;
-    }
+"I joined We4A as a junior developer, and from day one, I was thrown into the deep end of things. The team had already started working on various projects, and I was asked to contribute my ideas and help out wherever possible. It wasn't long before I found myself leading my own project – a web app for a local charity that helps children with special needs.
 
-    .textarea {
-      width: 100%;
-      height: auto;
-      max-height: 50vh;
-      font-family: 'Courier New', monospace;
-      font-size: 18px;
-      font-weight: bold;
-      color: cyan;
-      background: rgba(1, 1, 3, 0.9);
-      border: 2px inset #252555;
-      overflow: auto;
-      white-space: pre-wrap;
-      grid-row-gap: 5px;
-      margin-top: -6px;
-      margin-bottom: -6px;
-      padding-left: 4px;
-      padding-right: 4px;
-    }
+"At first, it was daunting. I felt like I didn't know enough, or wasn't experienced enough to take on such a big responsibility. But the team was amazing, and they guided me through every step of the way. They encouraged me to learn from my mistakes and trust my own skills. And before I knew it, we had built an incredible app that was making a real difference in people's lives.
 
-    .highlight-line {
-      position: relative;
-      height: 9px;
-      background: rgba(155, 0, 0, 0.1);
-    }
+"But what really blew me away was the sense of community that We4A fosters. The team is made up of people from all over the world with different backgrounds and experiences. And yet, despite these differences, we work together seamlessly. We share ideas, offer support, and celebrate each other's successes. It's like having a second family – one that I never want to leave.
 
-    @keyframes shot {
-      to {
-        left: 100%;
-      }
-    }
-  </style>
-</head>
+"In conclusion, joining We4A was the best decision I ever made. It not only gave me the opportunity to work on meaningful projects but also taught me so much about myself and my skills. And most importantly, it introduced me to an amazing community of people who inspire and support me every day. Thank you, We4A, for changing my life!"
 
-<body>
-  <div class='container'>
-    <div id='textarea' class='textarea' contenteditable='true'></div>
-  </div>
-  <script>
-    const textarea = document.getElementById('textarea');
+I hope this helps! Let me know if you have any other questions.
 
-    function setCaretToEnd() {
-      const range = document.createRange();
-      const selection = window.getSelection();
-      range.selectNodeContents(textarea);
-      range.collapse(false);
-      selection.removeAllRanges();
-      selection.addRange(range);
-    }
+Sure! Here's a more engaging version of your speech:
 
-    function handleKeyPress(event) {
-      if (event.key === 'Enter' || event.key === 'Return') {
-        event.preventDefault();
-        const selection = document.getSelection();
-        const range = selection.getRangeAt(0);
-        const currentNode = range.startContainer;
-        const lineBreak = document.createElement('span');
-        lineBreak.innerHTML = '<br>';
-        const highlightedLine = document.createElement('span');
-        highlightedLine.classList.add('highlight-line');
-        highlightedLine.textContent = '█';
-        const newLine = document.createElement('span');
-        newLine.appendChild(lineBreak);
-        newLine.appendChild(highlightedLine);
-        if (currentNode.nodeType === Node.TEXT_NODE) {
-          const nextNode = currentNode.splitText(range.startOffset);
-          nextNode.parentNode.insertBefore(newLine, nextNode);
-          range.setStart(nextNode, 0);
-        } else {
-          textarea.appendChild(newLine);
-          range.setStart(newLine, 0);
-        }
-        const lineAnimation = highlightedLine.animate({
-          left: ['-100%', '100%']
-        }, {
-          duration: 200
-        });
-        lineAnimation.onfinish = () => {
-          highlightedLine.parentNode.removeChild(highlightedLine);
-        };
-        selection.removeAllRanges();
-        selection.addRange(range);
-        setCaretToEnd();
-      }
-    }
-    textarea.addEventListener('keydown', handleKeyPress);
-  </script>
-</body>
+"Good afternoon everyone, my name is <PRESIDIO_ANONYMIZED_PERSON> and I am honored to be here today at this beautiful Radisson Blu hotel in the heart of Nairobi. As a mother of three amazing children, I have always believed that women have the power to change the world. And as a co-founder of Inspcorp and Eco Blocks and Tiles, I am passionate about using technology to solve some of the biggest challenges facing our planet today. But let's face it - being a woman entrepreneur is not always easy. There are so many obstacles we have to overcome: juggling family responsibilities, lack of access to resources, limited networking opportunities, and the list goes on. That's why programs like We4A are so important. They provide a platform for women entrepreneurs to come together, share their stories, and learn from one another.
 
-</html>```
+I joined We4A in March this year, and it has been an incredible journey. I remember my first event with them - the Celebrating Women 2023 event held here at Radisson Blu. It was overwhelming, to say the least. As a new mom, I was worried about leaving my baby behind for the first time. But once I arrived and saw all these amazing women, I knew I was in the right place. The We4A team has been so supportive throughout my journey. They've helped me connect with other entrepreneurs, attend events, and even provided me with opportunities to showcase my products. One of those opportunities led to a potential partnership with a company that could help us amplify our impact in the green energy space.
 
-I hope this helps! Let me know if you have any questions or need further assistance.
+But it's not just about me. We4A has also helped me learn from other inspiring women who are doing amazing things for their communities. I've met Sarah, who runs an incredible cosmetics business in Nyeri; Rose, who makes briquettes to reduce deforestation in Kisumu; Maureen, who runs the Nyayo Mums Soko market in Nairobi; Hellen, a consultant for green energy projects; Linda, who has an amazing fashion line inspired by Africa; and many more. Each one of them has a unique story to tell, but they all share a common goal - to make this world a better place through their innovations and initiatives.
 
----
-This is an example of how you can create a laser-like shooting gradient towards the remaining space in between the current caret position and the max width remained towards that container or textarea right side. The purpose for all this madness is to make a laser-like shooting gradient towards the remaining space in between the current caret position and the max width remained towards that container or textarea right side.
-```<html>
+We4A is more than just an organization that supports women entrepreneurs. It's a community that values and empowers us. And I'm grateful for the opportunity it has given me to be part of such a wonderful group. So, thank you to the entire team at We4A - Tracy, Nikita, and all the people who have made this program possible. You are truly changing lives and making a difference in our society."
 
-<head>
-  <style>
-    html,
-    body {
-      background: radial-gradient(circle at center right, rgba(15, 10, 0, 0.9), rgba(25, 1, 5, 0.9));
-      padding: 10px;
-    }
-
-    .container {
-      display: grid;
-      width: 100%;
-      height: 100%;
-      padding-top: 0px;
-      place-items: center;
-    }
-
-    .textarea {
-      width: 100%;
-      height: auto;
-      max-height: 50vh;
-      font-family: 'Courier New', monospace;
-      font-size: 18px;
-      font-weight: bold;
-      color: cyan;
-      background: rgba(1, 1, 3, 0.9);
-      border: 2px inset #252555;
-      overflow: auto;
-      white-space: pre-wrap;
-      grid-row-gap: 5px;
-      margin-top: -6px;
-      margin-bottom: -6px;
-      padding-left: 4px;
-      padding-right: 4px;
-    }
-
-    .highlight-line {
-      position: relative;
-      height: 9px;
-      background: rgba(155, 0, 0, 0.1);
-    }
-
-    @keyframes shot {
-      to {
-        left: 100%;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class='container'>
-    <div id='textarea' class='textarea' contenteditable='true'></div>
-  </div>
-  <script>
-    const textarea = document.getElementById('textarea');
-
-    function setCaretToEnd() {
-      const range = document.createRange();
-      const selection = window.getSelection();
-      range.selectNodeContents(textarea);
-      range.collapse(false);
-      selection.removeAllRanges();
-      selection.addRange(range);
-    }
-
-    function handleKeyPress(event) {
-      if (event.key === 'Enter' || event.key === 'Return') {
-        event.preventDefault();
-        const selection = document.getSelection();
-        const range = selection.getRangeAt(0);
-        const currentNode = range.startContainer;
-        const lineBreak = document.createElement('span');
-        lineBreak.innerHTML = '<br>';
-        const highlightedLine = document.createElement('span');
-        highlightedLine.classList.add('highlight-line');
-        highlightedLine.textContent = '█';
-        const newLine = document.createElement('span');
-        newLine.appendChild(lineBreak);
-        newLine.appendChild(highlightedLine);
-        if (currentNode.nodeType === Node.TEXT_NODE) {
-          const nextNode = currentNode.splitText(range.startOffset);
-          nextNode.parentNode.insertBefore(newLine, nextNode);
-          range.setStart(nextNode, 0);
-        } else {
-          textarea.appendChild(newLine);
-          range.setStart(newLine, 0);
-        }
-        const lineAnimation = highlightedLine.animate({
-          left: ['-100%', '100%']
-        }, {
-          duration: 200
-        });
-        lineAnimation.onfinish = () => {
-          highlightedLine.parentNode.removeChild(highlightedLine);
-        };
-        selection.removeAllRanges();
-        selection.addRange(range);
-        setCaretToEnd();
-      }
-    }
-    text
+I hope this version is more engaging and appealing for your audience! Let me know if there's anything else I can do to help.

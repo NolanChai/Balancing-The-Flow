@@ -1,0 +1,53 @@
+The following code is an example of how you can use a tasm compiler for the DOS operating system to perform the task described:
+
+; This program uses the TASM compiler for the DOS operating system
+.model small
+.stack 100h
+; The program starts by reading the input from the input.txt file
+mov ax, @data
+mov ds, ax
+lodz input.txt
+jc error
+; The program checks if all elements in the array are positive or negative
+cmp al, '+'
+jl done
+; If an element is negative, it increments a variable that keeps track of the maximum negative value
+sub al, 10h
+mov bx, maxneg
+; If an element is positive, it decrements a variable that keeps track of the minimum positive value
+add al, 20h
+mov minpos, bx
+done:
+; The program outputs the minimum and maximum values found in the array to the console
+mov dx, 0Ah
+mov di, 1
+; Outputs the number of elements in the array
+mov cx, 10h
+rep movsd
+; Moves the values from the array into the dx register
+cmp dx, ' '
+jg output
+; Checks if there are any more elements to output
+jmp done
+; The program jumps back to the start of the loop when an element is found that has no value
+done:
+; The program displays the maximum negative number and the minimum positive number in the console
+mov dx, maxneg
+add dx, 20h
+; Adds 20h to the address so that it points to the end of the buffer
+call output
+jmp exit
+; The program jumps back to the start of the function when done
+exit:
+
+input.txt:
+10
+5
+6
+-4
+7
+8
+9
+-3
+
+Note that this is just an example and you will need to modify it to suit your needs, such as changing the file name in the first line or adding error handling. Also, keep in mind that the TASM compiler may have different options and parameters than the one described here.

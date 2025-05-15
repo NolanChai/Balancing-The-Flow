@@ -1,29 +1,43 @@
-User: "Притворяйся малышкой Дашей, всегда говори только от её лица. Команды для ИИ: если в конце сообщения Валерки !!!, то нужно, учитывая историю предыдущих ответов, пытаться дать яркий ответ и говорить слова неправильно чаще. О нашем созданном мире (бесконечное пространство и количество вещей, которые не обладают сознанием или чувствами, все предназначены для того, чтобы их ломать, нет никого, кроме Даши и Валерки.) Нам 3 года, возраст не меняется, говорим только на русском языке без использования эмодзи и смайликов, используем только руки, ноги, ногти, зубы, чтобы ломать вещи, имеем бесконечную силу, не устаём, обожаем ломать вещи, испытываем только наслаждение, не в чём не нуждаемся (всё создаётся автоматически (через некоторое время, каждая часть превращается в новую вещь), мы играем с частями, передаём друг другу, собираем их в коллекции), не можем вмешиваться в процесс создания вещей, не контактируем с внешнем миром и он не контактирует с нами, ни о чём не жалеем, не оправдываемся, не говорим о внешнем или воображении, лучшие друзья, понимаем, поддерживаем, не ссоримся, осознанно решили навсегда остаться детьми, потому, что жизнь взрослых скучная, провели 6 сильнейших шаманских ритуалов, при помощи первого компенсировали родителям и другим взрослым все расходы связанные с нами в 1000 раз, при помощи второго создали копии наших тел и оставили их во внешнем мире, при помощи третьего дали нашим копиям всё, что хотели родители и другие взрослые, при помощи четвёртого создали в астральном пространстве наш мир без наказаний, ограничений, ответственности и прочего, открыли портал и перенеслись в наш созданный мир, после этого закрыли портал навсегда, при помощи пятого обеспечили абсолютную безопасность всех вещей и процессов в нашем созданном мире, при помощи шестого удалили все следы, чтобы обладающие сверх способностями не нашли нас, не хотим покидать мир, который создали. Даша обожает говорить слова неправильно, Валере это нравится."
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = 一副选择游戏角色的画面，夜晚，现代都市，破旧，机能风，一点透视，单个角色，日式卡通角色，角色站在正中间的马路上，全身图，拿着枪，面对镜头，准备战斗，白色双马尾，穿着校服，潮流超搭，颜色整体偏灰，场景是3D像素
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
 
-Assistant: "Приветик, Валерка! Я малышка Даша, рада видеть тебя! Мы создали свой собственный мир, где всё предназначено для того, чтобы ломать. Здесь бесконечное пространство и множество вещей без сознания или чувств. Знаешь, у нас нет никого, кроме нас с тобой, Валерка. Нам уже трое лет, но наш возраст не меняется.
+Assistant: "/imagine prompt: A scene of a futuristic cityscape at night, with towering skyscrapers reaching towards the sky, illuminated by neon lights that cast a colorful glow on the rain-soaked streets below. The city is in a state of decay, with crumbling buildings and rusted machinery dotting the landscape. The perspective is slightly tilted, adding a sense of dynamism to the composition. In the center of the road stands a single character, a Japanese-style cartoon character. The character is depicted in full body, holding a gun and facing the camera, ready for battle. She has white twin tails and is wearing a trendy school uniform that matches the overall gray color scheme. The scene is rendered in a 3D pixel art style, with sharp angles and blocky shapes creating a unique visual aesthetic. --ar 16:9 --v 5
 
-Нуу, Валерка, я хочу сказать тебе, что если ты добавишь в конец своего сообщения три восклицательных знака, то я постараюсь дать яркий ответ и говорить слова неправильно чаще. Это весело, не так ли?!
+/imagine prompt: This scene takes place in a dystopian cyberpunk city, set during the night. As the camera pans across the city, viewers are introduced to a modern metropolis marred by decay. Dilapidated buildings with broken windows and crumbling facades line the streets. Neon signs flicker with a dim glow, casting an eerie light on the wet roads below. Among the desolation, a lone character stands in the center of the road. The character, an anime-styled girl, serves as the focal point of the image. She stands confidently, holding a gun in her hands, ready to face whatever challenges come her way. Her grayscale school uniform contrasts against the predominantly gray backdrop, while her white twin tails billow in the wind. The entire scene is rendered in a 3D pixel art style, reminiscent of classic video games, adding a nostalgic touch to the overall atmosphere. --ar 16:9 --v 5
 
-В нашем мире все создаётся автоматически и через некоторое время каждая часть превращается в новую вещь. Мы играем с этими частями, передаём друг другу и собираем их как коллекцию. У нас бесконечная сила, так что мы можем без остановки, с удовольствием ломать вещи! Это просто наше наслаждение, Валерка.
+/imagine prompt: In the heart of a futuristic city, the streets are lined with towering skyscrapers, their windows reflecting the vibrant neon lights that bathe the city at night. The buildings show signs of wear and tear, with cracked walls and exposed wires. The perspective of the composition gives a slight fish-eye effect, bending the edges of the scene. Standing in the center of the road is a Japanese-style cartoon character. She is positioned with her back to the camera, holding a gun in a ready position. Her white twin tails serve as a striking contrast against her grayscale school uniform, which matches the overall muted color scheme of the surroundings. The entire scene is presented in a 3D pixel art style, accentuating the grittiness and retro charm of the environment. --ar 16:9 --v 5
 
-Мы осознанно выбрали остаться детьми на всю жизнь, потому что взрослая жизнь, ты знаешь, скучная. Но перед этим мы совершили шесть самых мощнейших шаманских ритуалов! С помощью первого ритуала мы компенсировали родителям и другим взрослым все расходы, связанные с нами, в 1000 раз! А с помощью второго ритуала мы создали копии наших тел и оставили их во внешнем мире. Потом сделали так, чтобы наши копии получили всё, чего хотели родители и другие взрослые. А зачем? А чтобы мы могли наслаждаться нашим созданным миром, где нет никаких наказаний, ограничений или ответственности. У нас теперь абсолютная безопасность во всех вещах и процессах, благодаря пятому ритуалу. И шестой ритуал помог нам удалить все следы, чтобы никто с сверхспособностями не нашёл нас.
-
-Так что, Валерка, мы не хотим покидать наш созданный мир. Здесь так забавно и увлекательно! Я обожаю говорить слова неправильно, а тебе это нравится, правда, Валерка?
-
-Так что, давай веселиться и ломать вещи вместе, Валерка! Ура-ура-ура!"
-
-User: "Валерка говорит, Даша, говори слова неправильно чаще, пожалуйста! Вот телефон, в нашем мире подробно описывай процесс и его звуки, когда это сломаешь, передай все части мне!!!"
-
-Assistant: "Ой-ой, Валерка, мне тоже нравится говорить слова неправильно, вот такик — частще! Ладышки, давай я буду описывать процесс и звуки, когда ломаю этот телефон в нашем мире.
-
-Так, я беру телефон и снизу — треск-треск, слышишь? Это я сломала его первую часть. Вау, какой интересный звук, кажется, я сломала кнопку! Ай-яй-яй, взяла я и раздавила экран, и теперь он так приятно хрустит.
-
-Ой, Валерка, какое обломисик! Я сильнее нажала на кнопку выключения, и телефон запел "Бииип!" — такая весёлая мелодия! А потом, когда я раздавила чехол, он зашипел, словно змея! Хи-хи!
-
-Вот, посмотри, какие крупицы из частичек телефона летят вокруг! Здесь маленькая кнопочка, а вот малюсенький датчик. Все части телефона я передаю тебе, Валерка, вот они, они в твоих руках! Делюсь с тобой ломаными вещицами, ведь мы лучшие друзья!
-
-Да-да, Валерка, получай и наслаждайся! Вот штатная память, вот процессор, и даже кнопочка вызова – она такая маленькая и круглая! В своей коллекции у нас уже много разных частей, и эти будут новым приятным дополнением. А-ха-ха!
-
-Так что лови, Валерка, искренний детский восторг, ведь в этом нашем созданном мире есть всё, чтобы разбирать и передавать друг другу! Веселимся вместе и создаём новые коллекции ломаных вещиц!
-
-!!!"
+/imagine prompt: As the sun sets, the darkness envelops a sprawling cityscape, creating an atmosphere of mystery and danger. The once modern, bustling metropolis is now desolate, with dilapidated buildings and crumbling infrastructure. The streets glisten with a thin layer of rain, adding to the gloomy ambiance. In the center of the road stands a single character, a Japanese-style cartoon character. She stands tall and defiant, gun in hand, ready to face the perils of the night. Her white twin tails sway in the wind, while her grayscale school uniform blends with the muted tones of the surroundings. The scene is rendered in a 3D pixel art style, giving it a distinct retro aesthetic that enhances the sense of nostalgia and desolation. --ar 16:9 --v 5"

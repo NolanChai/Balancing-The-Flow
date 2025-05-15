@@ -1,0 +1,9 @@
+1. Create an angular component:
+First, create a new Angular component called `favorite-product` and import it in your main app module. The component should have a template that displays a list of products and an input field for marking each product as favorite.
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-favorite-product',
+  templateUrl: './favorite-product.component.html',
+  styleUrls:

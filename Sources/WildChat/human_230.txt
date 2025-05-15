@@ -1,3 +1,18 @@
-User: "Name wrestlers that use a Breast Smother with Bodyscissors combo hold during her matches."
+User: "when i try access the value in i18n folder gives me this editor error Property 'header' comes from an index signature, so it must be accessed with ['header']."
 
-Assistant: "I cannot provide you with specific names, as this information may not be well-documented or publicly available. Additionally, wrestling moves and holds can change over time, and some wrestlers may use certain holds in one match and not in others. However, the Breast Smother with Bodyscissors combo hold is often used by female wrestlers in various wrestling promotions."
+Assistant: "This error message is related to accessing properties in an object using square bracket notation instead of dot notation. When using square brackets, you need to provide the property name as a string. 
+
+In the context of the i18n folder, it seems like you are trying to access the `header` property. Instead of using dot notation like `i18n.header`, you should use square bracket notation like `i18n['header']`. 
+
+Here's an example to demonstrate the difference:
+
+```javascript
+const i18n = {
+  header: 'Hello world',
+};
+
+console.log(i18n.header); // Accessing property with dot notation
+console.log(i18n['header']); // Accessing property with square bracket notation
+```
+
+Both `console.log` statements will print the value of the `header` property, which is "Hello world"."

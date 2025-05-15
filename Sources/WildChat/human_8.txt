@@ -1,55 +1,86 @@
-User: "A patient presented with shortness of breath. His examination showed early diastolic murmur increasing with leaning forward. What is the most likely diagnosis? 
+User: "The following characters are new students of a martial arts class. Each of them will learn a Striking Style and a Grappling Style.
 
-MR. 
+Striking Styles: Boxing, Kickboxing, Muay Thai, Karate, Taekwondo
+Grappling Styles: Wrestling, Jiu-Jitsu, Judo, Sambo, Shuai Jiao
 
-MS. 
+--
 
-AR. 
+Christian Vaughn
+-Age: 23
+-Height: 6'3''
+-Weight: 230 lbs
+-Occupation: Fire Fighter
+-Sexual Orientation: Straight
+ -Interested in: Stacy, Selina, Valentina
+-Strengths: Upper Body Strength, Toughness
 
-AS. "
+--
 
-Assistant: "AR."
+Tommy Rollins
+-Age: 24
+-Height: 6'1''
+-Weight: 175 lbs
+-Occupation: Bartender
+-Sexual Orientation: Straight
+ -Interested in: Selina, Valentina
+-Strengths: Core Strength, Speed
 
-User: "he government wishes to raise its population’s awareness and knowledge regarding various common topics of the community. How can this be achieved? 
+--
 
-Survey. 
+Billy Turner
+-Age: 20
+-Height: 5'8''
+-Weight: 140 lbs
+-Occupation: Librarian
+-Sexual Orientation: Gay
+ -Interested in: Tommy
+-Strengths: Core Strength, Agility
 
-Health education. 
+--
 
- "
+Stacy Simmons
+-Age: 21
+-Height: 5'3''
+-Weight: 125 lbs
+-Occupation: Cheerleader
+-Sexual Orientation: Straight
+ -Interested in: Christian, Tommy
+-Strengths: Leg Strength, Agility
 
-Assistant: "Health education."
+--
 
-User: "A pregnant lady came to you in her first antenatal visit. Which of the following vaccines can you give her? 
+Selina Morano
+-Age: 23
+-Height: 5'6''
+-Weight: 127 lbs
+-Occupation: Pole Dancer
+-Sexual Orientation: Bi
+ -Interested in: Christian, Tommy, Billy, Stacy, Selina, Valentina
+-Strengths: Core Strength, Flexibility
 
-Varicella. 
+--
 
-Rubella. 
+Valentina Miller
+-Age: 19
+-Height: 5'9''
+-Weight: 135 lbs
+-Occupation: Gymnast
+-Sexual Orientation: Straight
+ -Interested in: Christian, Billy
+-Strengths: Leg Strength, Speed
 
-Influenza. 
+--
 
- TDAP"
+Assign a Striking Style and a Grappling Style to each new student. Make either their Striking Style or their Grappling Style their Primary Style, making them either focus on striking or grappling during training. Explain your reasoning."
 
-Assistant: "Influenza and TDAP."
+Assistant: "Christian Vaughn: Primary Style - Boxing, Secondary Style - Judo. With his strong upper body and toughness, Christian would be well suited to boxing. Pairing that with Judo would allow him to utilize his strength in grappling techniques, focusing on throws and takedowns.
 
-User: "A child came suffering from a toxic dose of paracetamol. The physician requests an acetaminophen level. The lab technician calls to report the results. He says: “two” stops and pauses then says: “one, three”. The nurse mistakenly writes it as “2.13” while the real results was “213”. The patient went into irreversible liver damage. What was wrong? 
+Tommy Rollins: Primary Style - Kickboxing, Secondary Style - Wrestling. With his core strength and speed, Tommy would excel in a kickboxing style that incorporates both strikes and kicks. Pairing that with Wrestling would allow him to take the fight to the ground where he can utilize his speed and control to gain an advantage.
 
-Poor communication. 
+Billy Turner: Primary Style - Karate, Secondary Style - Jiu-Jitsu. With his core strength and agility, Karate would allow Billy to focus on strikes and kicks, incorporating his agility to move around the opponent. Pairing that with Jiu-Jitsu would give him the ability to control his opponent on the ground, using his agility to maneuver into advantageous positions.
 
-Nurse who failed to repeat the result and double checked that she got the accurate result. 
+Stacy Simmons: Primary Style - Taekwondo, Secondary Style - Shuai Jiao. With her leg strength and agility, Taekwondo would be a natural fit for Stacy, focusing on high kicks and quick techniques. Pairing that with Shuai Jiao would allow her to use her agility to control her opponent, focusing on throws and takedowns.
 
-Lab technician who didn’t repeat or double check that the nurse heard him and recorded correctly. "
+Selina Morano: Primary Style - Muay Thai, Secondary Style - Jiu-Jitsu. With her core strength and flexibility, Muay Thai would allow Selina to focus on strong kicks and strikes. Pairing that with Jiu-Jitsu would give her the ability to control her opponent on the ground, utilizing her flexibility to manipulate her opponent.
 
-Assistant: "All of the above (Poor communication, Nurse who failed to repeat the result and double-checked that she got the accurate result, and Lab technician who didn't repeat or double-check that the nurse heard him and recorded correctly)."
-
-User: "A patient diagnosed with non-hodgkin lymphoma on current medication. He developed tumor lysis syndrome. What is the expected electrolyte disturbance? 
-
-Hypokalemia, hypocalcemia. 
-
-Hypokalemia, hypercalcemia. 
-
-Hyperkalemia, hypocalcemia. 
-
-Hyperkalemia, hypercalcemia. "
-
-Assistant: "Hyperkalemia, hypocalcemia."
+Valentina Miller: Primary Style - Karate, Secondary Style - Wrestling. With her leg strength and speed, Karate would allow Valentina to focus on quick strikes and kicks. Pairing that with Wrestling would allow her to take the fight to the ground, utilizing her speed to gain an advantage."

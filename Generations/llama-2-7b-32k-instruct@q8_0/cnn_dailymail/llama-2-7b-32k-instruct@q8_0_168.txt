@@ -1,95 +1,47 @@
-has to do with them rather than them having problems of their own making.
+Clint Hill reckons the pressure is on QPR's relegation rivals and insists Rangers can survive if they keep their cool. Chris Ramsey's side are still in the relegation zone but the defender believes other teams below them will drop points between now and May and help drag his team clear of the bottom three. Hill told QPR's official website: "There are only six games to go and we know it is going to be difficult but I think we have got the players who can do it for us. If we don't get beat, you never know what might happen."
 
-"The pressure is more on those below us," he told getwestlondon .
+Hill believes there has been a big difference in mentality at Loftus Road since Ramsey took charge of the team following the sacking of Chris Ramage and John Gregory in October. He said: "The manager's done a great job with us and we have started playing like a team again and we are not getting beaten week-in, week - out . I think that is why you saw the reaction at Loftus Road because it was like it had been taken away from us. There's no point in just having one of those games every six weeks or so, we need to do it more often."
 
-"We've had our issues but we haven't really played badly, so we can't complain about that, and the manager hasn't complained either.
+The former Manchester United defender hopes the fans will continue to back the team and keep up with what has been a remarkable turnaround since Ramsey took over from the previous management team. Hill added: "I think the manager's done an unbelievable job in the time he's had here but it is now up to us players to finish it off. There's no point talking about it, we need to go and do it."
 
-"It's just one of those things where there are other teams in a worse position than us."
+QPR will have a chance to get closer to safety when they host Barnsley at Loftus Road on Saturday with their new manager having already led the team to victory in his first game in charge against Charlton Athletic. Hill said: "He came in, changed things around and it was like we had never had a bad run of form before - it was weird . It's not just him, it is everybody who has come into the club, people are smiling again. We need to keep that going."
 
-Ramsey was appointed caretaker manager earlier this season following Chris Powell's exit and he has now been given an extension until the end of the campaign, with former Queens Park Rangers boss Mark Hughes taking over as manager.
+The 36-year-old believes Rangers can keep their cool and remain calm for the remainder of the season as they chase a top half finish which would take them out of the relegation zone. He added: "We have got to stay in touch with other teams who are around us and we will know when the points start dropping off but it is not about us, it's about what we need to do and if we keep our heads down and finish the season strongly I think that is all you can ask for ."
 
-The defender insists it is important to keep a cool head throughout this relegation battle and says the club are still confident they can pull away from danger.
+QPR have three games in hand over a number of their relegation rivals including Rotherham United, Burton Albion, Bristol City and Millwall. Hill said: "We know it's not about us but we are still in the bottom three - if other teams start dropping points between now and the end of the season it will help us."
 
-"I think it's important that we stay calm," he said. "We can be positive about our situation, which isn't as bad as some people make out.
+Ramsey has also been busy strengthening his squad during January with five new signings including midfielder Tomer Hemed who has already scored twice against Charlton. Hill said: "It's great, we've had a bit of a break and got some fresh faces in the team. You know what it is like when you have been playing for a long time, your body needs a rest so hopefully they can come in and help us finish off this season."
 
-"It's not great but it's not terrible either and we're in a better position than most of the teams around us."
+The former Republic of Ireland defender added: "We just need to keep doing our jobs and I think we are starting to see a reaction from the fans which is great. We need them behind us because you never know what might happen . If we keep going like that, hopefully it will all work out for us."
 
-The former Sheffield United defender also added that Ramsey has been positive in his approach to managing the team, something which could be vital at Loftus Road as they battle against the odds.
+QPR have won four of their last five Championship games at Loftus Road with two victories and three draws while Ramsey's side have not been beaten in the league since October. Hill said: "The fans are right behind us now and that is massive because they want to see a reaction, they know we need it. We are doing everything we can."
 
-"I think Mark Hughes will bring his own style and he's going to put his own stamp on things," he said.
+Ramsey has also led QPR to their first competitive victory since February 2015 when the club beat Charlton Athletic in the third round of the FA Cup last weekend following a 3-2 defeat against Premier League Crystal Palace in the previous round. Hill added: "It was huge, you could feel it coming - we had lost some games that maybe we should have won . We knew it was going to be tough but we managed to dig deep and get through."
 
-"We know how good a manager he is and we have full confidence that it won't be too different for him at this club, but whether he comes in from scratch or he takes over where Ramsey left off, I think the important thing will be to keep a positive atmosphere."
+Ramsey has also been boosted by the news that Charlie Austin is set to return from injury sooner than expected when his side host Barnsley this weekend. Hill added: "That's great because it means he can give us a lift, he has done ever since I came here . He'll be one of our key players going forward and hopefully we will see him soon."
 
-QPR are away at Bournemouth on Saturday before facing Fulham in the derby clash next Tuesday.<s> <|endoftext|> Q:
+Ramsey also told the club website that he was pleased to have Hemed on board but said the player's first priority is helping Rangers secure survival. The manager added: "He's a good player, an experienced striker with lots of goals under his belt and I think he can help us in the games we've got left."
 
-How to get only date format using JavaScript?
+Hemed has been out of action for 18 months due to knee surgery but Ramsey says he is confident the former Brighton & Hove Albion player will be a big hit at Loftus Road. The manager added: "He has been fantastic in training, he's got an eye for goal and you know what it's like when you have had your operation . It can take a couple of weeks to get back up to speed so hopefully that won't be a problem."
 
-I'm trying to convert this text string 2014-05-18T09:00:00Z into a JavaScript date object:
-const dateString = "2014-05-18T09:00:00Z";
+Ramsey is looking forward to watching Hemed in action against his former club Barnsley who he was on loan at for two months in 2014. The manager added: "He can give us a lift, it will be interesting to see how he does and hopefully he will bring some goals to the team."
 
-I'm using moment.js to parse this text string but I can't seem to get it working, the resulting object is of type number and not a Date object, what am I missing?
-const date = moment(dateString).format();
-console.log(date); 
+QPR will also be hoping Hemed is successful against his former club as they chase a top half finish this season. Hill said: "It's fantastic for him because I think we have got good enough players in that dressing room to get out of it and I am sure he can bring something."
 
-A:
+QPR will be hoping Hemed can inspire his team to victory on Saturday as they aim to continue their impressive form at Loftus Road with three wins and two draws from five home games since the end of October. Hill added: "We know we have got a good record here recently, it's about us keeping our heads down now."
 
-You could use .toISOString() function instead of .format(). It will return ISO string for your date in the format yyyy-mm-ddTHH:mm:ss.Z and then convert it to Date object using new Date(string).
-const date = moment("2014-05-18T09:00:00Z").toISOString();
-new Date(date);  // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+Ramsey has also been pleased with QPR's away form in recent weeks following four victories and three defeats on their travels this season . Hill said: "I think that is one of the big reasons why we have got out of relegation trouble because we haven't lost too many away from home. We need to keep doing it."
 
-Also, you can use .toString() instead of .format(). It will also return ISO string.
-const date = moment("2014-05-18T09:00:00Z").toString();  // "2014-05-18T09:00:00Z"
-new Date(date);     // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+Ramsey has also been delighted with Hemed's attitude towards helping his side in their battle against the drop and Hill believes the player will be a big hit at Loftus Road . The defender added: "He is not worried about what people say, he just wants to come here and help us out. I think it will work for him because we know how good he is."
 
-You can also use new Date() function to convert any string to a date object. In this case you need to specify the format, in your case yyyy-mm-ddTHH:mm:ss.Z 
-const date = new Date("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+Hemed has scored 65 goals in his career and Hill believes the player has a big future ahead of him at Loftus Road . The defender added: "I'm sure he can add something to our team, hopefully that will be goals. If he gets us over the line it will be even better."
 
-And then you can use .toISOString() function to convert the date object to ISO string.
-const date = new Date("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
-date.toISOString();   // "2014-05-18T09:00:00Z"
+Ramsey is also pleased with QPR's away form in recent weeks following four victories and three defeats on their travels this season . Hill said: "I think that is one of the big reasons why we have got out of relegation trouble because we haven't lost too many away from home. We need to keep doing it."
 
-And you can also use Date.parse() function to convert the string into a date object directly, this way you don't need moment.js at all.
-const date = Date.parse("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
+Ramsey has also been delighted with Hemed's attitude towards helping his side in their battle against the drop and Hill believes the player will be a big hit at Loftus Road . The defender added: "He is not worried about what people say, he just wants to come here and help us out. I think it will work for him because we know how good he is."
 
-Note that Date.parse() function is not supported by all browsers, check the documentation of the date object to make sure it's supported in your target environment.
+Hemed has scored 65 goals in his career and Hill believes the player has a big future ahead of him at Loftus Road . The defender added: "I'm sure he can add something to our team, hopefully that will be goals. If he gets us over the line it will be even better."
 
-A:
+Ramsey is also pleased with QPR's away form in recent weeks following four victories and three defeats on their travels this season . Hill said: "I think that is one of the big reasons why we have got out of relegation trouble because we haven't lost too many away from home. We need to keep doing it."
 
-You are missing the T in the format string. You should use ISO_8601 instead of yyyy-mm-ddTHH:mm:ss.Z for that. 
-const date = moment("2014-05-18T09:00:00Z").toISOString(); // "2014-05-18T09:00:00Z"
-new Date(date);     // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
-
-const date = new Date("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
-date.toISOString();   // "2014-05-18T09:00:00Z"
-
-const date = Date.parse("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
-
-The ISO_8601 format specifies the format for a date in RFC 3339, and it's supported by all modern browsers. 
-
-A:
-
-You should use the toISOString() method from momentJS library. It will return an ISO string for your date in the format yyyy-mm-ddTHH:mm:ss.Z.
-const date = moment("2014-05-18T09:00:00Z").toISOString(); // "2014-05-18T09:00:00Z"
-
-Then you can convert it to a Date object using new Date().
-const date = new Date(date); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
-
-You can also use the toString() method from momentJS library. It will return an ISO string for your date in the format yyyy-mm-ddTHH:mm:ss.Z.
-const date = moment("2014-05-18T09:00:00Z").toString(); // "2014-05-18T09:00:00Z"
-
-Then you can convert it to a Date object using new Date().
-const date = new Date(date); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
-
-It's important to note that the momentJS library is not supported by all browsers, so you may need to fall back to using Date.parse() or another library if needed.
-
-A:
-
-You can also use Date.parse() function to convert the string into a date object directly, this way you don't need moment.js at all.
-const date = Date.parse("2014-05-18T09:00:00Z"); // Sun May 18 2014 09:00:00 GMT+0300 (EEST)
-
-Note that Date.parse() function is not supported by all browsers, check the documentation of the date object to make sure it's supported in your target environment.
-
-A:
-
-You can also use `new Date()` function to convert any string to a date object. In this case you need to specify the format, in your case yyyy-mm-ddTHH:mm:ss.Z 
-const date = new Date("2014-05-18T09:00:00Z"); // Sun May 18
+Hemed has also been impressed by the club's new signings including Hemed who he knows can score

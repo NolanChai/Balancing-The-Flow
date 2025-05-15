@@ -1,0 +1,16 @@
+sx, sy, sz, dx, dy, dz, w, h, l, dxm, dym, dzm) {
+	let dx_dx = dx - dxm;
+	let dx_dz = dx - dzm;
+	let dmz = 1.5 * (Math.abs(dx_dz) + Math.abs(dx_dx));
+	let dx_dy = dx - dym;
+	let dy_dmz = dy - dmz;
+	let dmy = 1.5 * (Math.abs(dy_dmz) + Math.abs(dx_dy));
+
+	for (let x = 0; x < w; x++) {
+		for (let y = 0; y < h; y++) {
+			for (let z = 0; z < l; z++) {
+				world.setBlock(startX + dx_dx + x, startY + dym - y, startZ + dz_dz - z, id);
+			}
+		}
+	}
+}

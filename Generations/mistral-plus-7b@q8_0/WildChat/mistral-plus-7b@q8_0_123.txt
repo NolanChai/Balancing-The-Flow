@@ -1,13 +1,44 @@
-My name is <PRESIDIO_ANONYMIZED_PERSON>, I am the Co-Founder of Inspcorp a research-based technology transfer startup that is committed to the development of difference-making technologies. I am also a cofounder of Eco Blocks and Tiles a green technology company that manufactures high-quality and affordable building products using various mixed post-consumer waste materials as key ingredients in the production. I am currently a PhD scholar in hydrology and water quality I am a mother of 3 adorable little ones and I am so honored to be here today. I am <PRESIDIO_ANONYMIZED_PERSON> fellow 2021 and I joined the We4A programme in March this year the experience has been so fulfilling for me. When I joined I had recently started working again after my maternity leave, you can imagine how that would feel, a little bit confused, a little rusty, literally out of shape and a little lacked confidence. I promise you I was not that kind of a person before, I was bold and loud but that can happen to anyone, especially if you have had your children back to back like I did. To top it all, I had also recently moved to Mombasa to begin a new water project there. Now just imagine that kind of a scenario. We4A gave me an opportunity of a community of fellow women entrepreneurs that allowed me to network without fear of being judged or feeling inadequate. I remember the first ever event that I attended that was organized by the We4A was the day of Celebrating Women 2023 event that was here at Radisson Blu on the 31st March, I remember having travelled from Mombasa which is much warmer by the way, it was the first time ever that I was leaving the new baby so I was worried sick and my breasts were full of milk. I was literally shaking as I sat at the market place on that day, but then I was surrounded by women, everyone was so nice around, one offered to switch places with me so I could not be near the windows, another one offered to bring me a cup of warm tea. This was it for me, I knew I was in the right place, this is the kind of network and program that is needed today to help women like me grown and thrive. As you all know women multitask a lot, we are required to be in many places at once, wear many different hats and that just means juggling a lot and trying to balance these things. I have found value in the events that We4A has organized, let me give you an example, WE4A sponsored me to attend the Nyayo Mums soko event in Nairobi. It was a 2 day event of open air market and business clinics that was held in Septemeber. Of course I showed up and had physical items for my thrift shop, Swahili snacks from the coast, flyers for the new rain water harvesting technology that I am launching soon, I also had flyers of our ecofriendly roof tiles. Don’t mind me, I told you women multitask. Anyways back to the story. So on these two days I sold my home décor items and my coastal Swahili snacks and made cash. I got introduced by Maureen to Florence who is the water committee, who then introduced me to the chairman who explained to me that they were in the process of setting up a rain water harvesting system for their houses and that I should write him an email of how our rain water harvesting and treatment system works which I did and this could be a potentially big deal for my company. Crossing my fingers for that. Through the same soko Tracy got to learn the work that I do in detail and she was so happy for me, during the market she connected me to contacts who would be useful in my line of work, even a contact of a company who we could potentially partner to empower women who are in the engineering space.  This has taught me that showing up is a crucial part of the growth of our business, showing up amplifies the voices of the impact of our innovations and our business and even though showing up can be difficult at times for many reasons including logistics, maybe family, maybe other reasons that we are not aware of showing up is always paramount and is inevitable. I am grateful that the women in this program show up, I know of Sarah from Nyeri who is in the cosmetics industry, Rose from Kisumu who makes briquettes, Maureen from Nairobi who runs Nyayo mums soko, Hellen from Nyeri who is a consultant in green energy, Linda who has an amazing Africa inspired fashion line called favoloso by Nanu, Mwanaisha who runs an online clothing store Mimi that caters for all the family needs, Caroline of wise hubs Kisumu. Not only these women, there are many like them who are amazing and run amazing initiatives like Mary who has amazing glutten free products, her uji flour is the only one that my son drinks by the way. I would love to highlight all of them but of time would not allow me. I am grateful that the We4A program has created opportunities to allow women to show up, the networking sessions, the online master classes, the on one mentoring opportunities, the marketplaces, and celebrations like these, I am grateful. Thank you to the lovely team of the We4A program Tracy and Nikita for your unwavering support, for organizing the logistics, for taking in the heat, you are greatly valued and appreciated.  Thank you to the entire team of GIZ and the We4A program for thinking about the women entrepreneurs.
 
-I have been involved in the WE4A programme since September 2016. I believe that this programme has changed my life completely.
 
-Before I got involved in the We4a project, I was a stay-at-home mother with two children. I had an idea of starting my own business as a home-based tailor, but I lacked the financial and technical support to do so. That is when I decided to join the WE4A programme. The training provided me with the necessary knowledge and skills needed to start a business. I also got access to financial assistance that helped me to purchase sewing machines and other equipment.
+[START]npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
 
-With the help of this programme, I have managed to open my own tailoring business, which is growing steadily. I am able to provide for my family and support them in their education and health needs. The training has also empowered me as a woman and given me confidence.
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
 
-The WE4A programme has changed my life completely. It has given me the tools to become financially independent and empowered. I am so grateful for this opportunity that has improved my life immensely.
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
 
-[PROMPT]
+Press ^C at any time to quit.
+name: (rest_api1)
+version: (1.0.0)
+description: Restful Api for CRUD Product using NodeJs, Express, MongoDB
+entry point: (index.js)
+test command:
+git repository:
+keywords: node, restful api, mongodb, express
+author: Acer
+license: (ISC)
+About to write to /c/rest_api1/package.json:
 
-The speech was captivating because it was delivered with passion and enthusiasm. The speaker’s energy was contagious, and her words were engaging. She used powerful language to emphasize her points and made a lasting impression on the audience. Her commitment to her business and the program was inspiring, as she shared her story of growth and perseverance. Overall, this speech left me feeling energized and encouraged by the speaker’s determination and drive.
+{
+  "name": "rest_api1",
+  "version": "1.0.0",
+  "description": "Restful Api for CRUD Product using NodeJs, Express, MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "restful api",
+    "mongodb",
+    "express"
+  ],
+  "author": "Acer",
+  "license": "ISC"
+}
+
+
+Is this ok? (yes) yes

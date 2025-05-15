@@ -1,77 +1,417 @@
-User: "温馨课程的开发要传承学校文化理念"
+User: "I used your code: API_KEY = 'lim5kAIrMtv611VDEYZsc9WmV74TBiGhhJB5LlPGQABAM7vY9NCX1R0gzOvFvURI'
+API_SECRET = '8pIwxRIk7HHCnRJQPyLewn137G76WjJGGVYqmcO329rg0gbymI25K2Q2NYp5C9hT'
+import time
+import requests
+import hmac
+import hashlib
+import datetime as dt
+import pandas as pd
 
-Assistant: "，围绕学生全面发展和个性化教育的核心理念，注重教学方式和手段的创新发展，秉承质量、实用、创新、示范的原则，以提高学生综合素质和培养学生创新思维为目标，构建符合学生个性差异化综合提升需求的课程体系，为学生打开智力的大门，为走向未来奠定坚实基础。具体需要关注以下几点：
 
-1.学校文化理念：温馨课程的开发必须贯彻学校文化理念，将学校的价值观、教育理念、目标定位等融入到课程开发的各个环节中，确保温馨课程与学校的整体性、一致性符合。
 
-2.注重教学手段创新：温馨课程的开发需要注重教学手段的创新，引入互联网、多媒体、VR等现代化技术手段，通过场景模拟、情境教学等方式创设生动活泼的教学氛围、激发学生的学习兴趣。
+symbol = 'BCH/USDT'
+interval = '1m'
+lookback = 44640
 
-3.强调实用性：温馨课程的开发需要关注学生的实际需求，将知识和技能的灵活应用作为温馨课程的重点，针对实际问题制定实际解决方案，注重实践操作的训练。
+def generate_signature(api_key, api_secret, endpoint, params):
+    params_string = '&'.join([f'{key}={params[key]}' for key in params])
+    payload = f'{endpoint}\n{params_string}'
+    signature = hmac.new(api_secret.encode(), payload.encode(), hashlib.sha256).hexdigest()
+    return signature
 
-4.突出个性化需求：温馨课程的开发要突出个性化需求，充分尊重学生的差异性、多样性，根据不同学生的兴趣、天赋发展、特长等进行差异化设计，为个性化教育提供支持。
+def get_klines(symbol, interval, lookback):
+    endpoint = '/open/api/v2/market/kline'
 
-5.鼓励创新思维：温馨课程的开发需要注重培养学生的创新思维能力，适时开展创新实践活动，激发学生创新意识，教导学生创新思维方法和技能，促进学生自主创新和自主发展。"
+    end_time = int(time.time() * 1000) # end time is now
+    start_time = end_time - (lookback * 60 * 1000) # start time is lookback minutes ago
+    end_time = start_time + (lookback * 60 * 1000) # calculate new end time
 
-User: "温馨课程的开发离不开学生情感的"
+    params = {
+        'symbol': symbol,
+        'interval': interval,
+        'start_time': start_time,
+        'end_time': end_time
+    }
 
-Assistant: "关注，学生情感的关注是温馨课程开发工作中的重要方向。
+    signature = generate_signature(API_KEY, API_SECRET, endpoint, params)
 
-首先，温馨课程应当注重学生情感的引导。通过课程的设计、教师的引导等方式，让学生将情感投入到学习活动中，产生更高的情感投入度和情感参与度，激发学习的兴趣和动力。
+    url = f"https://www.mexc.com{endpoint}"
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    data = {**params, 'api_key': API_KEY, 'sign': signature}
 
-其次，温馨课程应当在情感交流上给予更多的关注。课程教学应当注重师生互动和学生之间的互动，有利于师生之间的情感沟通，师生之间心理距离的缩短，增进彼此了解和信任，从而更好地促进教学效果。
+    response = requests.get(url, headers=headers, params=data)
+    response.raise_for_status()
+    data = response.json()['data']
+    
+    if not data: # if data is empty, return None
+        print('No data found for the given timeframe and symbol')
+        return None
 
-最后，温馨课程应当注重培养学生情感素养。在课程设计中，应注重培养学生的情感兼容力，让学生在与他人沟通与交往的过程中，更加意识到自己的情感变化和影响，更加关注他人的情感体验和情感需求。
+    ohlc = []
+    for d in data:
+        timestamp = dt.datetime.fromtimestamp(d['time']/1000).strftime('%Y-%m-%d %H:%M:%S')
+        ohlc.append({
+            'Open time': timestamp,
+            'Open': float(d['open']),
+            'High': float(d['high']),
+            'Low': float(d['low']),
+            'Close': float(d['close']),
+            'Volume': float(d['vol'])
+        })
 
-总之，温馨课程的开发需要更多地关注学生情感的表达和引导，通过情感信任与交流，才能有效地提高学生综合素质和个性化发展水平。"
+    df = pd.DataFrame(ohlc)
+    df.set_index('Open time', inplace=True)
 
-User: "以“育美文化”为指导，进一步深化课堂教学管理改革，将学生创新精神和创造能力的基本点放在课堂上，构建“育美课堂”下的温馨课程。"
+    return df
 
-Assistant: "以“育美文化”为指导，落实课堂教学管理改革，将学生创新精神和创造能力纳入“育美课堂”下的温馨课程中，有以下几点需要注意：
+df = get_klines(symbol, interval, lookback)
 
-1. 加强素质教育: 以国家基础教育课程改革为契机，逐步调整课程设计，从“温馨”的角度出发，在保障学科基本知识的前提下，注重学生创新思维能力和创造能力的培养。
+def signal_generator(df):
+    # Calculate EMA and MA lines
+    df['EMA5'] = df['Close'].ewm(span=5, adjust=False).mean()
+    df['EMA10'] = df['Close'].ewm(span=10, adjust=False).mean()
+    df['EMA20'] = df['Close'].ewm(span=20, adjust=False).mean()
+    df['EMA50'] = df['Close'].ewm(span=50, adjust=False).mean()
+    df['EMA100'] = df['Close'].ewm(span=100, adjust=False).mean()
+    df['EMA200'] = df['Close'].ewm(span=200, adjust=False).mean()
+    df['MA10'] = df['Close'].rolling(window=10).mean()
+    df['MA20'] = df['Close'].rolling(window=20).mean()
+    df['MA50'] = df['Close'].rolling(window=50).mean()
+    df['MA100'] = df['Close'].rolling(window=100).mean()
+    # Extract necessary prices from df
+    open_price = df.Open.iloc[-1]
+    close_price = df.Close.iloc[-1]
+    previous_open = df.Open.iloc[-2]
+    previous_close = df.Close.iloc[-2]
 
-2. 维护和谐课堂环境: 建立和谐、安全、有序的课堂环境，有利于培育学生的文明素养和创新能力，通过适当的课堂管理和个性化教学方法，鼓励学生发挥自己的创新才能。
+    # Calculate the last candlestick
+    last_candle = df.iloc[-1]
+    current_price = df.Close.iloc[-1]
 
-3. 注重课堂互动: 加强师生互动、生生互动等形式，促进学生创新思维和创造能力的培养，从而提高学生的自主学习能力和创新能力。
+    # Initialize analysis variables
+    ema_analysis = []
+    candle_analysis = []
 
-4. 开展“育美”教育: 以“育美文化”为指导，融入人文和艺术素质教育，提高学生人文情怀和审美素养，开展艺术课程和社会实践活动，促进学生创造的热情和能力。
+    if (
+        df['EMA5'].iloc[-1] > df['EMA20'].iloc[-1] > df['EMA50'].iloc[-1] > df['EMA100'].iloc[-1] > df['EMA200'].iloc[-1] and
+        df['EMA5'].iloc[-2] < df['EMA20'].iloc[-2] < df['EMA50'].iloc[-2] < df['EMA100'].iloc[-2] < df['EMA200'].iloc[-2]
+    ):
+        ema_analysis.append('golden_cross')
+    elif (
+        df['EMA5'].iloc[-1] < df['EMA20'].iloc[-1] < df['EMA50'].iloc[-1] < df['EMA100'].iloc[-1] < df['EMA200'].iloc[-1] and
+        df['EMA5'].iloc[-2] > df['EMA20'].iloc[-2] > df['EMA50'].iloc[-2] > df['EMA100'].iloc[-2] > df['EMA200'].iloc[-2]
+    ):
+        ema_analysis.append('death_cross')
 
-5. 关注学生全面发展: 关注学生的身心健康、情感体验和个性成长，关注学生的差异性和多样性，通过多元评价手段，制定综合评价标准，为学生实现全面、均衡、可持续发展提供有力的支持和保障。
+    if (
+        open_price < close_price and
+        previous_open > previous_close and
+        close_price > previous_open and
+        open_price <= previous_close
+    ):
+        candle_analysis.append('buy')
+    elif (
+        open_price > close_price and
+        previous_open < previous_close and
+        close_price < previous_open and
+        open_price >= previous_close
+    ):
+        candle_analysis.append('sell')
 
-总之，将学生创新精神和创造能力的培养纳入温馨课堂的建设之中，需要有一个全面、系统、持续的管理机制，注重教学效果和管理效果的衡量与反馈，为学生的全面发展和未来的幸福奠定坚实基础。"
+    # Generate signal based on strategy
+    if 'golden_cross' in ema_analysis and 'buy' in candle_analysis:
+        final_signal = 'buy'
+    elif 'death_cross' in ema_analysis and 'sell' in candle_analysis:
+        final_signal = 'sell'
+    else:
+        final_signal = ''
 
-User: "将学生创新精神和创造能力纳入“育美课堂”下的温馨课程中。这句话如何表达更准确"
+    return final_signal
 
-Assistant: "可以更准确地表达为：“在‘育美课堂’的框架下，加强学生创新精神和创造能力的培养，将其纳入温馨课程的教学设计和管理实践中，以实现学生全面发展和个性化成长的目标。”"
+df =  get_klines(symbol, '1m', 44640)
 
-User: "温馨课程的开发离不开教学质量的"
 
-Assistant: "保障，教学质量是温馨课程开发中的重要基础。下面是关于教学质量保障的一些方面：
+while True:
+    df = get_klines(symbol, '1m', 44640) # await the coroutine function here
+    if df is not None:
+        df = get_klines(symbol, '1m', 44640)
+        signal = signal_generator(df)
+    if signal is not None:
+        print(f"The signal time is: {dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}:{signal}")
+        time.sleep(1)
+But I getting ERROR: Traceback (most recent call last):
+  File "c:\Users\service\.vscode\jew_bot.py", line 67, in <module>
+    df = get_klines(symbol, interval, lookback)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\service\.vscode\jew_bot.py", line 43, in get_klines
+    response.raise_for_status()
+  File "C:\Users\service\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1021, in 
+raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://www.mexc.com/open/api/v2/market/kline?symbol=BCH%2FUSDT&interval=1m&start_time=1686126837000&end_time=1688805237000&api_key=lim5kAIrMtv611VDEYZsc9WmV74TBiGhhJB5LlPGQABAM7vY9NCX1R0gzOvFvURI&sign=d3b6249dbc96fe354f0dd714b140bab790d58f32279ba428fa9a91d0780ce202
+Can you give me right code please"
 
-1.制定严格的教学计划和教学标准，明确教学目标和教学重点，作为教育工作的指导。
+Assistant: "The error you're encountering is a "400 Bad Request" error, which means that the request you're sending to the API is invalid. This could be due to various reasons, such as incorrect API key or secret, wrong endpoint, or incorrect parameters.
 
-2.配备专业的教师，确保教师具有较高的教学水平和职业道德，具备持续的自我提升和学习的能力和意识。
+To troubleshoot the issue, you can try the following:
 
-3.建立完善的教学监督和评价机制，对教学过程和效果进行全面的监督和评价，及时发现和解决教学中存在的问题，为提高教学质量提供有力保障。
+1. Double-check your API key and secret to ensure they are correct.
+2. Verify that the endpoint you're using (`/open/api/v2/market/kline`) is the correct one for retrieving kline data.
+3. Check if the symbol you're using (`BCH/USDT`) is supported by the API. You can refer to the API documentation or contact the API provider for more information on supported symbols.
+4. Ensure that the interval and lookback parameters are valid and appropriate for the API. You can also try using different values to see if that resolves the issue.
+5. Make sure you have a stable internet connection and that the API server is accessible.
 
-4.采用多种教学手段和教学模式，积极推崇个性化教育观念，让学生参与到教学过程中，促进学生的主动学习和探索创新能力。
+Here's an updated version of your code with some modifications:
 
-5.加强教材和教具的开发和更新，利用新技术和新教育资源促进教学的更新和发展，提高教育质量和个性化教学的实际效果。
+```
+import time
+import requests
+import hmac
+import hashlib
+import datetime as dt
+import pandas as pd
 
-总之，教学质量保障是温馨课程开发中必不可少的部分，仅有高质量的教育才有发展的前景，所以对于温馨课程的开发，需要更加注重教学质量的保障，才能达到良好的效果。"
+API_KEY = 'Your API Key'
+API_SECRET = 'Your API Secret'
 
-User: "教学质量的保障是温馨课程开发中必不可少的部分，"
+symbol = 'BCHUSDT'
+interval = '1m'
+lookback = 1440
 
-Assistant: "只有高质量的教育才能够真正满足学生的需求和提高学生的素质，从而达到温馨课程的目标。因此，教学质量保障是温馨课程开发中必不可少的部分。为了保证教学质量，温馨课程的开发应该注重以下几点：
+def generate_signature(api_key, api_secret, endpoint, params):
+    params_string = '&'.join([f'{key}={params[key]}' for key in params])
+    payload = f'{endpoint}\n{params_string}'
+    signature = hmac.new(api_secret.encode(), payload.encode(), hashlib.sha256).hexdigest()
+    return signature
 
-1.设置科学的教学目标，并通过有效的教学评估来监督和评价教学过程和成果，确保教学质量的稳步提升；
+def get_klines(symbol, interval, lookback):
+    endpoint = '/open/api/v2/market/kline'
 
-2.引进全方位的教学教具和高水平的教师，为温馨课堂提供高质量的教学资源和咨询服务，为教学质量的提高提供必要的保障；
+    end_time = int(time.time() * 1000) # end time is now
+    start_time = end_time - (lookback * 60 * 1000) # start time is lookback minutes ago
+    end_time = start_time + (lookback * 60 * 1000) # calculate new end time
 
-3.开发适合学生个性需求的教育方案，打造个性化的教学模式和课程体系，让每一个学生都有机会接受到适合自己的教育和培养；
+    params = {
+        'symbol': symbol,
+        'interval': interval,
+        'start_time': start_time,
+        'end_time': end_time
+    }
 
-4.建立适合温馨课堂的教学评估体系，依托科学的评估结果和学员反馈，对教案、教材、教师、教学工具等方面进行调整和改进，实现教学效果的最大化；
+    signature = generate_signature(API_KEY, API_SECRET, endpoint, params)
 
-5.提供课外拓展活动和社交机会，为学生打造多样化的成长环境，让他们在自然，青春和美好的氛围中拥有更开阔的心灵和更坚实的“学问”。
+    url = f"https://www.mexc.com{endpoint}"
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    data = {**params, 'api_key': API_KEY, 'sign': signature}
 
-总之，为了满足学生全面发展和创新精神培养的需要，温馨课堂的开发必须要注重教学质量的保障，建立完善的教学规范体系，为学生和教师提供高质量的教育资源和保障。"
+    response = requests.get(url, headers=headers, params=data)
+    response.raise_for_status()
+    data = response.json()['data']
+    
+    if not data: # if data is empty, return None
+        print('No data found for the given timeframe and symbol')
+        return None
+
+    ohlc = []
+    for d in data:
+        timestamp = dt.datetime.fromtimestamp(d['time']/1000).strftime('%Y-%m-%d %H:%M:%S')
+        ohlc.append({
+            'Open time': timestamp,
+            'Open': float(d['open']),
+            'High': float(d['high']),
+            'Low': float(d['low']),
+            'Close': float(d['close']),
+            'Volume': float(d['vol'])
+        })
+
+    df = pd.DataFrame(ohlc)
+    df.set_index('Open time', inplace=True)
+
+    return df
+
+def signal_generator(df):
+    # Calculate EMA and MA lines
+    df['EMA5'] = df['Close'].ewm(span=5, adjust=False).mean()
+    df['EMA10'] = df['Close'].ewm(span=10, adjust=False).mean()
+    df['EMA20'] = df['Close'].ewm(span=20, adjust=False).mean()
+    df['EMA50'] = df['Close'].ewm(span=50, adjust=False).mean()
+    df['EMA100'] = df['Close'].ewm(span=100, adjust=False).mean()
+    df['EMA200'] = df['Close'].ewm(span=200, adjust=False).mean()
+    df['MA10'] = df['Close'].rolling(window=10).mean()
+    df['MA20'] = df['Close'].rolling(window=20).mean()
+    df['MA50'] = df['Close'].rolling(window=50).mean()
+    df['MA100'] = df['Close'].rolling(window=100).mean()
+
+    # Extract necessary prices from df
+    open_price = df.Open.iloc[-1]
+    close_price = df.Close.iloc[-1]
+    previous_open = df.Open.iloc[-2]
+    previous_close = df.Close.iloc[-2]
+
+    # Calculate the last candlestick
+    last_candle = df.iloc[-1]
+    current_price = df.Close.iloc[-1]
+
+    # Initialize analysis variables
+    ema_analysis = []
+    candle_analysis = []
+
+    if (
+        df['EMA5'].iloc[-1] > df['EMA20'].iloc[-1] > df['EMA50'].iloc[-1] > df['EMA100'].iloc[-1] and
+        df['EMA5'].iloc[-2] < df['EMA20'].iloc[-2] < df['EMA50'].iloc[-2] < df['EMA100'].iloc[-2]
+    ):
+        ema_analysis.append('golden_cross')
+    elif (
+        df['EMA5'].iloc[-1] < df['EMA20'].iloc[-1] < df['EMA50'].iloc[-1] < df['EMA100'].iloc[-1] and
+        df['EMA5'].iloc[-2] > df['EMA20'].iloc[-2] > df['EMA50'].iloc[-2] > df['EMA100'].iloc[-2]
+    ):
+        ema_analysis.append('death_cross')
+
+    if (
+        open_price < close_price and
+        previous_open > previous_close and
+        close_price > previous_open and
+        open_price <= previous_close
+    ):
+        candle_analysis.append('buy')
+    elif (
+        open_price > close_price and
+        previous_open < previous_close and
+        close_price < previous_open and
+        open_price >= previous_close
+    ):
+        candle_analysis.append('sell')
+
+    # Generate signal based on strategy
+    if 'golden_cross' in ema_analysis and 'buy' in candle_analysis:
+        final_signal = 'buy'
+    elif 'death_cross' in ema_analysis and 'sell' in candle_analysis:
+        final_signal = 'sell'
+    else:
+        final_signal = ''
+
+    return final_signal
+
+while True:
+    df = get_klines(symbol, interval, lookback)
+    if df is not None:
+        signal = signal_generator(df)
+    if signal:
+        print(f"The signal time is: {dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Signal: {signal}")
+    time.sleep(60) # Sleep for 1 minute
+```
+
+Make sure to replace `'Your API Key'` and `'Your API Secret'` with your actual credentials. Also, note that the code assumes you have the necessary libraries installed (requests, pandas). Adjust the sleep time (`time.sleep(60)`) according to your desired interval.
+"
+
+User: "I added my MEXC api key , but I getting same ERROR"
+
+Assistant: "If you have double-checked your API key and secret and ensured that they are correct, the issue might be related to the specific parameters being used for the API request.
+
+You can try adjusting the `lookback` parameter to a smaller value, such as `1440`, which corresponds to a 24-hour period. This will help narrow down the timeframe and reduce the amount of data being requested.
+
+Here's an updated version of the code with the `lookback` parameter set to `1440`:
+
+```python
+import time
+import requests
+import hmac
+import hashlib
+import datetime as dt
+import pandas as pd
+
+API_KEY = 'Your API Key'
+API_SECRET = 'Your API Secret'
+
+symbol = 'BCHUSDT'
+interval = '1m'
+lookback = 1440
+
+# Rest of the code...
+```
+
+If the error persists, it would be best to check the API documentation provided by MEXC or reach out to their support for further assistance. They will be able to provide specific guidance on the correct parameters and request format for retrieving kline data from their API.
+
+Additionally, ensure that your API key has the necessary permissions to access the endpoint you are using (`/open/api/v2/market/kline`). Some APIs require specific permissions to access certain data or perform specific actions."
+
+User: "But I need lookback 44640 min ago !"
+
+Assistant: "Apologies for the confusion. If you specifically require a `lookback` of 44640 minutes (31 days), you'll need to adjust the way you calculate the `start_time` and `end_time` for the API request.
+
+Replace the following lines in the `get_klines` function:
+
+```python
+end_time = int(time.time() * 1000) # end time is now
+start_time = end_time - (lookback * 60 * 1000) # start time is lookback minutes ago
+end_time = start_time + (lookback * 60 * 1000) # calculate new end time
+```
+
+with:
+
+```python
+start_time = int(time.time() - (lookback * 60))
+end_time = int(time.time())
+```
+
+This will calculate the `start_time` as 44640 minutes ago and the `end_time` as the current time.
+
+Here's the updated code snippet:
+
+```python
+import time
+import requests
+import hmac
+import hashlib
+import datetime as dt
+import pandas as pd
+
+API_KEY = 'Your API Key'
+API_SECRET = 'Your API Secret'
+
+symbol = 'BCHUSDT'
+interval = '1m'
+lookback = 44640
+
+# Rest of the code...
+
+def get_klines(symbol, interval, lookback):
+    endpoint = '/open/api/v2/market/kline'
+
+    start_time = int(time.time() - (lookback * 60))
+    end_time = int(time.time())
+
+    params = {
+        'symbol': symbol,
+        'interval': interval,
+        'start_time': start_time,
+        'end_time': end_time
+    }
+
+    # Rest of the code...
+```
+
+Please note that the requested `lookback` of 44640 minutes might exceed the available historical data provided by the MEXC API. Make sure to check the API's documentation to verify the maximum available historical data and adjust the `lookback` accordingly."
+
+User: "Give me full updated code please"
+
+Assistant: "Certainly! Here's the full updated code with the modifications to accommodate a `lookback` of 44640 minutes:
+
+```python
+import time
+import requests
+import hmac
+import hashlib
+import datetime as dt
+import pandas as pd
+
+API_KEY = 'Your API Key'
+API_SECRET = 'Your API Secret'
+
+symbol = 'BCHUSDT'
+interval = '1m'
+lookback = 44640
+
+def generate_signature(api_key, api_secret, endpoint, params):
+    params_string = '&'.join([f'{key}={params[key]}' for key in params])
+    payload = f'{endpoint}\n{params_string}'
+    signature = hmac.new(api"

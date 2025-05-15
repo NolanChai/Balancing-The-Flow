@@ -1,0 +1,105 @@
+使用UnityEngine和cakeslice包的MonoBehaviour类，实现一个名为"MoxingControl"的控制器。该控制器可以识别当前选中的玩笑物件并将其显示在屏幕上，同时可以切换控制器是否Enabled。
+
+```c#
+using UnityEngine;
+using cakeslice;
+public class MoxingControl : MonoBehaviour
+{
+    private Transform selectedPart = null;
+    private Outline outline = null;
+    private Color selectedColor = Color.yellow;
+    private bool isControlEnabled = false;
+
+
+    private Animator animator;
+    private bool animatorEnabled = true;
+    public void ToggleControlEnabled()
+    {
+        isControlEnabled = !isControlEnabled;
+        animator.enabled = !animator.enabled;
+    }
+    private void Update()
+    {
+        animator = GetComponent<Animator>();
+        if (!isControlEnabled) return;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Transform clickedPart = GetClickedPart(transform);
+
+            if (clickedPart != null)
+            {
+                if (selectedPart != null)
+                {
+                    Destroy(outline);
+
+                    if (selectedPart == clickedPart)
+                        return;
+                }
+                selectedPart = clickedPart;
+                outline = selectedPart.gameObject.AddComponent<Outline>();
+                // outline.OutlineColor = selectedColor;
+                // outline.OutlineWidth = 4;
+            }
+            else if (selectedPart != null)
+            {
+                Destroy(outline);
+                selectedPart = null;
+            }
+        }
+        if (Input.GetMouseButton(0) && selectedPart != null)
+        {
+
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = Camera.main.WorldToScreenPoint(selectedPart.position).z;
+            Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            selectedPart.position = worldMousePosition;
+        }
+    }
+    private Transform GetClickedPart(Transform parent)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Transform clickedPart = hit.transform;
+            if (IsDescendant(clickedPart, parent))
+                return clickedPart;
+        }
+
+        return null;
+    }
+    private bool IsDescendant(Transform child, Transform parent)
+    {
+        foreach (Transform t in parent)
+        {
+            if (t == child)
+
+                return true;
+            if (IsDescendant(child, t))
+                return true;
+        }
+        return false;
+    }
+}请解析这段代码
+
+This code creates a MoxingControl script that allows you to select and rotate a part of a game object using the mouse. The script has the following methods:
+
+* `ToggleControlEnabled`: Toggles the enabled state of the control system.
+* `Update`: Updates the position of the selected part, axis, and outline based on mouse input.
+* `GetClickedPart`: Returns the transform object that was clicked by the mouse.
+* `IsDescendant`: Checks if a given child is a descendant of a given parent.
+
+The script also uses Unity's Outline component to draw an outline around the selected part and its axis, and it sets the selected color based on the current selection state.
+
+In the code, the `ToggleControlEnabled` method simply enables or disables the animator, depending on whether the control system is enabled. The `Update` method is the main method that processes mouse input and updates the position of the selected part, axis, and outline.
+
+The `GetClickedPart` method checks if a transform object was clicked by the mouse and returns its transform object if it's a descendant of the current selection object's parent. The `IsDescendant` method recursively checks if a given child is a descendant of a given parent, returning true if it finds one.
+
+The code also uses Unity's RaycastHit struct to get information about the mouse click location and ray.
+
+To use this script, you'll need to attach it to a game object in your scene that you want to use as the control system for. You can then modify the position of the selected part, axis, and outline using the `Update` method by changing the values of the `selectedPart`, `outline`, and `axis` variables.
+
+You can also customize the behavior of the control system by modifying the `Outline` component's properties or adding new components to the game object that you want to use for control.
+
+Overall, this script provides a simple way to create a control system for a game object in Unity using mouse input. You can modify it and add new features to suit your needs.

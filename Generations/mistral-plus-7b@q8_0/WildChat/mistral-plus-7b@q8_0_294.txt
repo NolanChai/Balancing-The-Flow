@@ -1,0 +1,92 @@
+## Answer:
+
+```
+.MODEL SMALL
+.STACK 100H
+.DATA
+MAXDBEG DB -99999,'$'
+MINDBEG DW 99999
+MINDBEND DB -99999,'$'
+MAXDBEND DW 99999
+INFILE DB 'input.txt',0
+OUTFILE DB 'output.txt',0
+EOL DB 13,10, '$'
+MSG_INPUT DB 'Input file : $'
+MSG_OUTPUT DB 'Output file : $'
+.CODE
+MAIN PROC FAR
+
+    MOV AX,@DATA
+    MOV DS,AX
+    LEA DX,INFILE
+    MOV AH,3DH
+    INT 21H
+    MOV BX,AX
+
+    LEA DX,OUTFILE
+    MOV AH,3CH
+    INT 21H
+    MOV BX,AX
+
+    LEA DX,MSG_INPUT
+    MOV AH,9
+    INT 21H
+    LEA DX,EOL
+    MOV AH,9
+    INT 21H
+
+    XOR CX,CX
+    MOV AH,3Fh
+    MOV BX,BX
+L1: MOV SI,OFFSET MINDBEND
+    MOV AH,0
+    CMP [SI],AX
+    JNS SKIP1
+    MOV MINDBEND,AX
+SKIP1:
+MOV DI,OFFSET MAXDBEG
+    MOV AX,[DI]
+    MOV AH,0
+    CMP AX,MAXDBEG
+    JS SKIP2
+    MOV MAXDBEG,AX
+SKIP2:
+    INCREMENT CX
+    DEC SI
+    DEC DI
+    MOV AH,3Fh
+    INT 21H
+    JMP L1
+
+L2: XOR DX,DX
+    MOV AH,40h
+    MOV BX,BX
+    LEA DX,MAXDBEND
+    PUSH CX
+    MOV CX,MAXDBEG
+    SUB CX,[SI]
+    INC SI
+    ADD CX,8
+    MOV AH,0
+    INT 21H
+    JMP L3
+L3: XOR DX,DX
+    MOV AH,40h
+    MOV BX,BX
+    LEA DX,MINDBEND
+    PUSH CX
+    MOV CX,MINDBEG
+    SUB CX,[SI]
+    INC SI
+    ADD CX,8
+    MOV AH,0
+    INT 21h
+    JMP L4
+L4: XOR DX,DX
+    MOV AH,3Eh
+    MOV BX,BX
+    INT 21h
+
+MAIN ENDP
+END MAIN
+```

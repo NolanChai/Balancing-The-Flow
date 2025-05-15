@@ -1,4 +1,62 @@
-/imagine prompt: A young woman sitting on a rocky cliff, facing the ocean waves, with her hair flowing in the wind, sunset colors in the background, a sense of tranquility and peace, a journal and pen on the ground nearby, a hint of a smile on her face, captured by a Polaroid camera, 72mm lens, with a vibrant film, composition focused on the woman's eyes and hands, reminiscent of a painting by Claude Monet. --ar 1:1 --v 5.2
-/imagine prompt: A majestic lion resting on a grassy plain, the savannah in the background, with tall trees and winding rivers, a sense of serenity and strength, a hunting trophy nearby, a warm golden light illuminating the scene, composition focused on the lion's face and paws, capturing its regal spirit, in a style reminiscent of photographs by Frans Lanting. --ar 16:9 --v 5
-/imagine prompt: A futuristic city skyline with flying cars and neon lights, a bustling city life at night, tall skyscrapers reflecting the colors of the moon and stars, a sense of wonder and excitement, holographic advertisements, a vibrant color palette, composition focused on the buildings and lights, capturing the essence of cyberpunk, in a style reminiscent of illustrations by Blade Runner. --ar 16:9 --v 5
-/imagine prompt: A group of children playing in a forest, surrounded by trees and natural beauty, running through the grass, laughing and having fun, a sense of joy and innocence, capturing the essence of childhood, composition focused on the children and their interactions, captured with a Canon EOS R5 camera, 15-24mm lens, shallow depth of field, capturing the essence of nature's wonder, in a style reminiscent of photographs by Ansel Adams. --ar 1:1 --v 5.2
+To create an event that happens every 30-60 minutes where a plane flies over the map and drops a supply drop, you can use the following Lua code in your FiveM script:
+```lua
+local timer = 0
+local waitTime = 1800 -- 30 minutes in seconds
+
+function spawnPlane()
+    local blip = AddBlip(0.5, 0.5, 0.5)
+
+    SetBlipText(blip, "Supply Drop")
+    SetBlipColor(blip, 255, 0, 0)
+
+    local plane = CreateObject("airplane")
+    SetEntityPosition(plane, 0.5, 0.5, 0.5)
+    SetEntitySpeed(plane, 10)
+    SetEntityFuel(plane, 100)
+
+    local dropBox = CreateObject("supply_box")
+    SetEntityPosition(dropBox, 0.3, -0.3, -0.3)
+    SetEntityMass(dropBox, 5)
+
+    plane:SetTargetEntity(dropBox)
+    plane:SetMaxDistance(100)
+
+    waitTime = 1800 -- reset timer
+end
+
+function handleTimer()
+    timer = timer + waitTime
+
+    if timer > 1800 then
+        spawnPlane()
+        waitTime = 1800
+    end
+end
+```
+This code sets up a timer that resets every 30 minutes. When the timer reaches a certain point, the `spawnPlane()` function is called, which creates an airplane and a supply box, sets them in position, and targets the plane to drop the supply box.
+
+To draw a blip on the map when the supply drop lands, you can use the `AddBlip()` function from the FiveM API. In this example, we create a blip with the text "Supply Drop" and a red color at the position where the supply drop landed.
+
+To remove the blip once someone interacts with it, you can attach an event listener to the blip object that checks if the player has interacted with the supply box. Here's an example of how to do this:
+```lua
+function removeBlip(blip)
+    RemoveBlip(blip)
+end
+
+function handleInteraction()
+    local blip = GetClosestBlipToPlayer()
+
+    if blip ~= nil then
+        local boxId = blip.data.id
+        local boxObj = GetObjectFromDatabaseById(boxId)
+
+        if boxObj ~= nil and IsEntityInBox(player, boxObj) then
+            RemoveObjectFromDatabaseById(boxId)
+            removeBlip(blip)
+            SetClosestBlipToPlayer(nil)
+            blip:Destroy()
+        end
+    end
+end
+```
+This code adds a listener function `handleInteraction()` that checks if the player has interacted with the nearest blip. If so, it retrieves the ID of the supply box and checks if the player is inside it. If they are, it removes the supply box from the database and destroys the blip. Finally, it sets the closest blip to `nil` so that the event listener doesn't trigger again for this player.

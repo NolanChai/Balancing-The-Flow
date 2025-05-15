@@ -1,3 +1,64 @@
+![](../assets/images/christmas03.gif)
 
+The first thing to note here is that if you were going to make it darker than black, you could use something like this:
+```css
+.dark {
+    background-color:#000;
+}
+```
+This would give all your elements a dark grey/black background.
+Now for the TVs...
 
-The final blessing will be said by the minister. It is customary to include some sort of benediction to conclude the ceremony. You may choose to close with a prayer or simply give your concluding remarks. If you are including a poem or song for this portion of the wedding, please note that this section should not take too long and should be short enough that guests aren’t left waiting until the end of the service.
+To start with, I would create two TVs and apply different background colours to them using CSS.
+
+I'll use the following code to demonstrate what you can do:
+
+```html
+<div class="tv">
+    <img src='/assets/img/tv_1.png'/>
+</div>
+<div class="tv">
+    <img src='/assets/img/tv_2.png'/>
+</div>
+```
+And for CSS:
+```css
+.tv {
+    width:50%;
+    height:50px;
+    background-color:red;
+}
+
+/* Set a different background colour for each TV */
+@media screen and (max-width : 1360px) {
+    .tv:nth-child(evenn) {
+        background-color:green;
+    }
+
+    .tv:nth-child(odd) {
+        background-color:blue;
+    }
+}
+```
+You can also use this code to create a static image from your TVs, which is useful for animation purposes.
+
+To use it you would replace the background colours with the images:
+
+```css
+@media screen and (max-width : 1360px) {
+    .tv:nth-child(evenn) {
+        background-image: url(/assets/img/tv_2.png);
+    }
+}
+```
+Using this code, I can create the effect of two TVs which only show the static image when the screen is small enough for them to be on a single line (see example).
+
+### Response 1:
+Additionally, you could use media queries and change the background-image for each tv according to the width of the window. This would make it more dynamic!
+```css
+@media screen and (max-width : 1360px) {
+    .tv:nth-child(evenn) {
+        background-image: url(/assets/img/static_tv.png);
+    }
+}
+```

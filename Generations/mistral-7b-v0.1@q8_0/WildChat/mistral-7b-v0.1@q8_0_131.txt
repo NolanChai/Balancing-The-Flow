@@ -1,0 +1,46 @@
+To conduct this lab, you need to complete two main tasks:
+1. Implement a method for computing binomial coefficients using a recursive approach.
+2. Use different input sizes to test both approaches and compare their execution time.
+3. Analyze the results obtained from your experimental analysis using Big O notation.
+
+This lab will help you understand the differences between iterative and recursive algorithms, and how to choose the most appropriate approach based on the input size and the problem's characteristics. You will also learn about the Big O notation, which is a mathematical tool used for describing the computational complexity of an algorithm, i.e., how its execution time increases as the size of the input grows.
+
+To complete this lab, you need to have basic knowledge of Java programming language and data structures. Additionally, it will be helpful if you have experience with Big O notation. However, don't worry if you are not familiar with it yet, as we will cover all the necessary concepts in this lab.
+
+The purpose of this lab is to gain practical experience with iterative and recursive algorithms, understand the differences between them, and learn how to use Big O notation for analyzing algorithmic complexity.
+
+Task 2.1: Compare the execution time of calculating binomial coefficients using the iterative method from Lab 1 with the same task performed using the recursive method used in Lab 2.
+
+[CODE]
+int factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int binomialCoefficient(int n, int k) {
+    if (k == 0 || k == n)
+        return 1;
+    else
+        return factorial(n) / (factorial(n - k) * factorial(k));
+}
+[/CODE]
+
+1 Like
+
+Nice, I’m gonna do this one.
+
+That sounds great! You can post the link to your video when you are finished!
+
+1 Like
+
+I actually didn’t use any midi instruments on this track because I didn’t want it to sound too “human” so to speak. The only instruments used were virtual synths (not midi). The only thing that really sounds human is the vocals, which are a mix of 80/20% male/female harmonies (I recorded both my self and my sister on this one)
+
+1 Like
+
+Oh, I see. Well, it’s not required to use midi instruments or even singing in order to enter! All you have to do is follow the instructions here:
+
+Also, if you don’t want to post your song to YouTube, you can still enter! The submission process for this contest has a few different options. You can also send an audio file directly through the contact form on the website as well as email us at info@studiomastered.com
+
+I think it will be much easier for us to judge your song if you submit it to YouTube, but it is not required!

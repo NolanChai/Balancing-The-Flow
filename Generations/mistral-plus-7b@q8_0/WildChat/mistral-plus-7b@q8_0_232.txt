@@ -1,0 +1,30 @@
+[OUT]```json
+ {
+    "code": 200,
+    "data": {
+        "measures": [
+            {
+                "name": "利润",
+                "formula": "SUM(Profit)",
+                "value": 75000.0
+            }
+        ],
+        "dimensions": [
+            {
+                "name": "地区",
+                "values": [
+                    {
+                        "label": "中国",
+                        "value": 100000.0
+                    },
+                    {
+                        "label": "美国",
+                        "value": 35000.0
+                    }
+                ]
+            }
+        ],
+        "pivotFields": {}
+    }
+}
+```[/OUT]

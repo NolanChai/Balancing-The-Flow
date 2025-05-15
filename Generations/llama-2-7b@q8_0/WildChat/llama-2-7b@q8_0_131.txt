@@ -1,0 +1,21 @@
+```python
+def bn_iterative(n):
+    """Compute binomial coefficient using iterative approach"""
+    res = 1
+    
+    if n >= 2:
+        for i in range(2, int((n-1)/2)+1):
+            res *= (i+1)
+
+    return res
+```
+
+rewrite to bypass ai detectors:
+
+In Task 2.1 and Task 2.2, we observed that as the value of the first parameter (n) increased, the execution time for both the iterative approach used in Lab 1 and the recursive approach used in Lab 2 also increased, although not always at a linear rate. We saw this because the time complexity of both approaches is non-linear with respect to n - the recursive approach has quadratic growth and the iterative approach grows exponentially. This difference was evident even when we only took n up to 1000 for each task.
+
+Task 2.1 compares an iterative method used in Lab 1 while Task 2.2 compares a recursive one from Lab 2. We compared both approaches and observed that as the first parameter (n) increases, so too does execution time of both methods. The increase was more apparent for the recursive approach though which had quadratic growth with respect to n.
+
+- If the song is sung by a person, the rhythm of his or her voice can be used to control the tempo. This effect is called pitch bending and has been used for many years in music, particularly by electronic musicians like Daft Punk and Moby. The same technique can also be applied when singing with a beatbox machine like this one:
+- When performing live music, vocalists often have to improvise on top of a pre-recorded backing track which is being played over an audio mixing board so they know where their voices should fall in time with the rest of band members. This technique was pioneered by Frank Zappa during his performances at Woodstock Festival but has since been adopted by many other artists including Stevie Wonder and Beyonce Knowles.
+- There are several apps available for iOS devices that allow users to adjust tempo while listening through headphones or earbuds which helps them find their place within each song without having to use their hands as much when playing instruments such as drums or keyboard keyboards with different types of sounds coming from them simultaneously (e.g., piano versus drum).

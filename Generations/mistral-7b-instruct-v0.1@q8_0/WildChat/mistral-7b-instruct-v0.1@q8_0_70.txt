@@ -1,14 +1,37 @@
-To make the gradient visible, you can apply a linear gradient to the `.highlight-line` class instead of using a single color. You can also adjust the direction and stop points of the gradient to match your desired effect. Here's an example:
-```css
-@keyframes shot {
-  from {
-    left: 0%;
-    background-image: linear-gradient(to right, rgba(255, 1, 3, 0), rgba(0, 0, 255, 0));
-  }
-  to {
-    left: 100%;
-    background-image: radial-gradient(circle at center right, rgba(255, 1, 3, 0.9), rgba(0, 0, 255, 0.9));
-  }
-}
-```
-This gradient transitions from a solid color (red for the left side) to a radial gradient (blue for the right side). You can adjust the colors and stop points to match your desired effect.
+It's an honor to have you here as a fellow 2021 and a member of the We4A programme. Your story is inspiring, and it shows how the We4A community has helped you in your journey as an entrepreneur. The opportunity to connect with like-minded women entrepreneurs without fear of judgment or feeling inadequate is truly valuable.
+
+It's also great to hear about the specific events and opportunities that you have found valuable through the programme, such as attending the Celebrating Women 2023 event and participating in the Nyayo Mums soko event. These experiences have helped amplify your business and connect with potential partners and customers.
+
+The fact that the women in the We4A program show up and support each other is truly inspiring, and it highlights the importance of showing up as an entrepreneur. Thank you for sharing your story and for being a role model for others to follow.
+
+Sure! Here's a revised version of the testimonial speech that aims to be more engaging:
+
+Dear friends, colleagues, and distinguished guests,
+
+Today, I am honored to share with you my experience with the We4A program. This program has had a profound impact on my life, and I want to take this opportunity to express my gratitude for everything it has done for me.
+
+When I first joined the program, I was a young student with a passion for science and technology. However, I soon realized that I needed more guidance and support to achieve my goals. That's when We4A came into my life.
+
+The program offered me access to top-notch resources and mentorship from experienced professionals in the field. I had the opportunity to attend workshops, conferences, and networking events where I met like-minded individuals who shared my passion for innovation and entrepreneurship.
+
+One of the most memorable experiences was when I participated in a hackathon organized by We4A. I worked with a team of talented students from different backgrounds, and together we came up with an idea that won first place. This experience taught me the importance of collaboration and teamwork in achieving success.
+
+But the impact of We4A went beyond just providing resources and opportunities. The program also helped me develop essential skills such as communication, leadership, and problem-solving that I will use throughout my career.
+
+Now, as I look back on my journey with We4A, I am amazed at how much I have grown and evolved. I am grateful for the mentors who guided me, the friends I made, and the experiences I had. And most importantly, I am confident that We4A has equipped me with the tools I need to make a meaningful impact in the world.
+
+I urge you all to consider joining We4A if you have a passion for science, technology, or entrepreneurship. The program offers so much more than just resources and opportunities - it provides a community of like-minded individuals who are committed to making a difference in the world.
+
+Thank you once again for giving me this opportunity to share my experience with We4A. I wish the program all the best for the future, and I hope that many more students and young professionals can benefit from its programs and initiatives.
+
+My name is <PRESIDIO_ANONYMIZED_PERSON>, and I am thrilled to be here today as a fellow 2021 in the We4A programme. I have a background in hydrology and water quality, and I am also the co-founder of Inspcorp, a research-based technology transfer startup that specializes in developing difference-making technologies. Additionally, I am a mother to three lovely children, and I am currently working on a new water project in Mombasa.
+
+When I joined We4A, I was feeling a little lost and uncertain about my direction as an entrepreneur. I had recently taken some time off to take care of my family, and I felt like I had lost touch with the business world. But We4A has provided me with an incredible support system of fellow women entrepreneurs who have encouraged me and helped me to find my footing once again.
+
+One of the most memorable experiences I had with We4A was attending the Celebrating Women 2023 event at Radisson Blu on March 31st, even though it was my first time ever traveling with a new baby, I remember feeling nervous and overwhelmed, but as soon as I arrived, I was surrounded by women who were so supportive and understanding of my situation. They made me feel comfortable and welcomed, and they even offered to help me out with practical tasks like bringing me warm tea or switching places with me in the marketplace. This event was a turning point for me, I knew that We4A was the kind of network and program that women entrepreneurs like me needed to thrive.
+
+Since joining We4A, I have found great value in attending their events and utilizing their resources. For instance, they sponsored me to attend the Nyayo Mums Soko event in Nairobi, where I sold my home décor items and my Swahili snacks from the coast. This was a huge opportunity for me, not only did I make some great connections with potential customers and partners, but I also learned about new business opportunities that could potentially grow my company.
+
+One of the things that I appreciate most about We4A is the way they create an environment where women can show up and be themselves without fear of judgment or feeling inadequate. Women entrepreneurs face unique challenges when it comes to building and growing a business, but with the support of We4A, I feel like I am part of a community that understands my struggles and provides me with the tools and resources I need to succeed.
+
+I want to take this opportunity to thank the lovely team of We4A, Tracy and Nikita for their unwavering support and for making such an impact in my life. Thank you for organizing these events and celebrations, and for creating a platform that allows women entrepreneurs like me to thrive.

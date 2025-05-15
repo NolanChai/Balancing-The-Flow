@@ -1,0 +1,74 @@
+I decided to create an Instructable about this. So here it is.
+The project is based on the classic Battleship game and the goal was to be able to play against each other in real-time over internet (this has been done before but not with Flutter). The game is written in Dart (the language behind Flutter) and the client side (Flutter) was created by me.
+The server side is based on Python 3 using sockets for sending data between clients.
+There are two players and a user can't join an existing room, there are always new rooms. To create a room you need to provide two random numbers (which is used as the coordinates of your Battleship) and then wait until someone joins the same room. Once you have both numbers you can create a connection using the socket.
+This is how it works on server side:
+- Once you have created a room, send a message with the new room number and random coordinates to each player (using an UDP connection).
+- When the first player joins the game, create a socket.io connection for both clients. This allows you to listen when the other client sends data using socket.io. If the second player has also joined then we can start the game by sending the two random coordinates of the Battleship (as shown above).
+- Once you have the coordinates of the enemy, use them as x and y axis of a rectangle in the map. Then, find all squares around these coordinates where your ship is visible from your enemies's position. In my version there are only four possible places to place your ship: north, south, east and west (this could be changed).
+- Create a map and start the game. Once you have received the first message of a player firing, calculate all possible positions where the shot hit your enemy. If it did then let him know by sending back his coordinates with x, y values from 1 to n, if not then just send back 0 or something like that (not sure if there is a better way). This continues until one of them sinks the other's ship.
+Here are some screenshots of how it looks on phone/desktop:
+(phone) https://ibb.co/Jp9RrZF
+https://ibb.co/Y1j7YVn
+https://ibb.co/G5BvYkz
+(pc) https://ibb.co/w88W4fP
+https://ibb.co/jLqJd9S
+https://ibb.co/Fm0xT0r
+So I hope you enjoy it, if someone wants to take this and make their own game that would be great, just remember to credit me. The code is at the end of this instructable in case someone wants to try out something new on Flutter.
+Btw, I'm not a very good programmer but hopefully my code is clear enough (at least for myself :D).
+I would really appreciate if you could comment any suggestions or tips, I am new at Flutter so it would help me alot with learning more about the framework and writing apps in general.
+Note: If this instructable does well then I might make another one showing how to implement online multiplayer into a game :)
+server_code.py
+flutter_client.dart
+instructable_files/server_code.py
+# server-side code (written using Python 3)
+# This is an example of how to do real time multiplayer with Flutter
+# To change the name, just put a variable at the beginning: room = "a" or room = "b"
+rooms = {} # rooms dictionary, contains information about each game. The key is the name and value is a dictionary that holds all the players in this game.
+players_room = {} # Players room dictionary, where key is their username and value is their data (name, id etc)
+users = [] # A list of usernames
+while True: # Loop until interrupted by CTRL+C or other signal
+# Create socket for connecting to client with UDP communication. The server will send the new room name and coordinates as soon as it creates a room.
+server_socket = socket(AF_INET, SOCK_DGRAM)
+# After receiving data from client create a connection using socket.io
+print("Connected to client")
+users.append(name) # Adds username to the list of usernames
+players_room[users[-1]] = players_data # Add player's username as key in Players room dictionary
+while True: # Loop for receiving messages from clients (UDP). Note that it receives only one message per client. This is because socket.recvfrom() can receive a maximum of 4096 bytes. In the example below, we use the first message to create a new room and after that we can join/create new rooms until someone quits.
+players = {} # To keep track of all players in each game (dict with keys as usernames)
+players[users[-1]] = [[] for _ in range(6)] # In every game there will be six squares around the coordinates where the ship is placed, so we need a list to store them. The number 4096 stands for the maximum size of UDP package which equals 512 bytes per player, so for 6 players (including the one in charge) we need to allocate 4096 + 512 * 5 = 4097 bytes.
+while True: # Loop that runs if someone sends data using socket.io
+# We need to check if a user has quit the game so that it doesn't send the message anymore when they rejoin (which happens if you close and then open your client again).
+if not users[-1] in players_room[users[-1]]: # If player has left or was kicked then we don't have to listen for messages anymore.
+# Joining a room, receiving the coordinates from server as x,y and putting them in our dictionary of game rooms.
+print("Joined")
+rooms[rooms_id] = players # Adds dict with key being the name (the id) and value is all players' data (name, id etc).
+# Creating a room
+room = users[-1] + "_" + random.choice(string.ascii_lowercase + string.digits) # Name of the game room with first part as user who created it and second part being a random number
+rooms[room] = {} # If this is the first time you start the server then there will be no rooms and we need to create one.
+# After sending data, we are now ready for receiving messages from clients in case they join the same game room. The while True loop runs until interrupted by CTRL+C or other signal.
+print("Joined:", room) # Joining a new room
+print(server_socket.recvfrombytes(1024))
+# After receiving coordinates we create an empty array to store all the possible squares where your ship is visible from the enemy's position (there are only 6 places around these coordinates). If the square exists in any of them then we add it into the list for that player.
+players[users[-1]][i] = players_data # Adding the player to Players room dictionary with his username as key and data as value
+# This loop is for getting all possible squares where your ship is visible from the other player's position. To do this we need to check if there are any coordinates where our own coordinates intersect theirs (you can do this by checking if they both exist in each other). If they are then it means that we have found a point where they are visible from each other, so we add them to the list of squares for both players.
+for x, y in zip(players[users[-1]][0], players_data[4]) if abs(x) + abs(y - 256 * y) <= 4: # If there is a collision then add the coordinates as square into player's array
+players[users[-1]].append((x, y))
+# For each of them, check all squares around the coordinates where your ship is visible from their position. Check if they are also on any other side and that no one else has shot at this point because it would mean that we have already sent a message about it (so there won't be another message with this square). If they exist then send back data to players telling them that you have found your ship there so they can send their own coordinates.
+for x, y in zip(players[users[-1]][0], players_data[4]) if abs(x) + abs(y - 256 * y) <= 4 and not ((x, y) in (square for square in players[users[-1]].copy()):
+print("Sent:", x, y) # If the message is from a player that we haven't heard before then we don't need to check if they are visible. Instead just send them coordinates of your own ship as their first shot (which was the last one). This might cause an error but it won't affect gameplay because everyone can see where each other is and thus you can avoid shooting at already destroyed ships or those that have already missed you once (by checking if there are any squares that they couldn't hit with their own data).
+
+1: The two parts of the story are clearly divided :
+[a]the preparations (before, in the middle and after the trip)
+[b]the adventures in Africa
+[c]the coming back (before, in the middle and at the end).
+2: the plot is linear. There are no flashbacks nor flashforwards, except the first paragraph of the story where we can find two images that will have a meaning later. The same thing happens with the last image : it has not been used yet but there is an allusion to it and the reader expects it at the end of the text.
+3: the setting (the time/place) is clear. We know when the events happened. We also know where they took place, even if we do not have precise details about them because the author is focused on other elements :
+[a] the characters : who are they? why did they come together in this strange group ?
+[b]the plot : what will happen to these characters during their travels ? how will they deal with all of these difficulties and conflicts?
+4: there are only two characters, but we know their names. We also have a third person who is not identified but who has an important role in the story (Mrs Baxter). It is interesting that the first image is not about Mrs Baxter but about one of the two characters, because this man is our central figure.
+5: there are only a few details about their ages and physical appearance : the first image tells us they were young men and we also know that they had brown hair (because at least two of them do), so it must have been before the war when people had long hair (we don't know what kind of clothes they wore). We know that one man is married, another one has a son. The wife of this last man will be our third character.
+6: there are no images about their personality or mental state. They do not show any emotion before the trip and only the reader can guess how they felt when things got worse during their travels (and we know that it was terrible). We also know that one of them was afraid to go on this journey, but he didn't say anything about it.
+7: there are no images about what they thought or felt at the end of their trip. They just came back home and we don't know if any of them changed as a result of this experience (if yes then how?).
+8: We do not know why they decided to travel together : were they friends? did someone else ask them for help? was there another reason? The reader can guess, but there is no explanation given by the author.
+9: There are no images about what happened after their trip ended (if anything!). What will happen with these characters ? Will they meet again later on ? If yes then where and when ? If not then why? How do you feel about this story now that everything has been said?

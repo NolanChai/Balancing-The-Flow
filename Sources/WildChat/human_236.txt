@@ -1,61 +1,7 @@
-User: "
-acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
-$ node server.js
-Start server at port 3000.
+User: "improve and make it more academic: First, according to Articles 2 and 11 of the Charter of Commission for Studying Constitutional Government, “Except for legal codes and important matters that shall be decided by the Political Advisory Council, the other documents to be examined and compiled shall be submitted to the princes and grand ministers of the Grand Council for review and approval for implementation” (Grand Secretariat, 1979, p. 51). Except for legal code, it was not clear what “important matters” referred to. This gray area made it possible for the Commission for Studying Constitutional Government and Grand Councilors to usurp the power of the Political Advisory Council. More importantly, on the one hand the Commission for Studying Constitutional Government was a legislator, and on the other hand it was attached to the supreme executive organ (the Grand Council), which meant that the legislation and execution were integrated. If allowed to usurp the power of making and interpreting regulatory documents, the Commission for Studying Constitutional Government, as the interpreter of controversies, would inevitably be biased in favor of the government (the Grand Council and the ministries) and against the Political Advisory Council if the two would run into conflicts in the future. “In the 33rd year of Guangxu’s reign (AD 1907), the Commission for Studying Constitutional Government was set up as a purely legislative body to draft constitutional codes, but still repeatedly encroached on the authority of the Political Advisory Council after the latter’s establishment. Therefore, we have to delineate the legislative scope of the Political Advisory Council and draw a clear line of authority with the Commission. Before the establishment of the Political Advisory Council, the Commission was led by the Grand Council and held the supreme executive power, compiling legal codes for one thing and issuing executive sanctions for another” (Li, 2011, p. 233)."
 
-acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
-$ npm install express --save
+Assistant: "First, as outlined in Articles 2 and 11 of the Charter of Commission for Studying Constitutional Government, the submission and approval process for examining and compiling documents is stipulated. Legal codes and significant matters are to be decided by the Political Advisory Council, while the remaining documents are to be reviewed and approved by the princes and grand ministers of the Grand Council for implementation (Grand Secretariat, 1979, p. 51). However, the term "important matters" lacks clarity, creating a potential loophole for the Commission for Studying Constitutional Government and Grand Councilors to exercise unauthorized power in the absence of clear guidelines. 
 
-up to date, audited 65 packages in 1s
+Furthermore, it is crucial to recognize that the Commission for Studying Constitutional Government assumes a dual role as both a legislator and an attachment to the supreme executive organ, the Grand Council. This integration of legislative and executive functions raises concerns about its ability to impartially interpret regulatory documents if conflicts were to arise between the government (comprising the Grand Council and ministries) and the Political Advisory Council. Such a scenario would inevitably result in biased interpretations in favor of the government and against the Political Advisory Council. 
 
-11 packages are looking for funding
-  run `npm fund` for details
-
-found 0 vulnerabilities
-
-acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
-$ node server.js
-Start server at port 3000."
-
-Assistant: "The server is successfully started at port 3000."
-
-User: "ใส่โค้ดอะไร"
-
-Assistant: "อาจารย์ไม่สามารถให้ข้อมูลการเขียนโค้ดได้ในปัจจุบัน แต่คุณสามารถใช้โค้ดตัวอย่างดังต่อไปนี้เพื่อสร้างเซิร์ฟเวอร์ Express พื้นฐาน:
-
-```javascript
-const express = require('express');
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
-```
-
-ในตัวอย่างนี้จะใช้ Express เพื่อสร้างเซิร์ฟเวอร์ที่รับคำขอ GET ที่ URL หลัก (`/`) และตอบกลับด้วยข้อความ "Hello World!" จากนั้น server จะเริ่มต้นที่พอร์ต 3000 และพิมพ์ข้อความ "Server running at http://localhost:3000" ในแถบคอนโซลเมื่อ server ถูกเรียกใช้."
-
-User: "npm install express --save
-
-up to date, audited 65 packages in 1s
-
-11 packages are looking for funding
-run npm fund for details
-
-found 0 vulnerabilities
-
-acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
-$ node server.js
-Start server at port 3000. แก้ยังไงให้รันได้"
-
-Assistant: "ผู้ใช้ควรตรวจสอบโค้ดใน file `server.js` เพื่อให้แน่ใจว่าไม่มีข้อผิดพลาดในโค้ดของตนเอง และยืนยันว่าไฟล์ `server.js` อยู่ในโฟลเดอร์ที่ถูกต้อง และว่ามีอนุญาตให้เข้าถึงไฟล์ดังกล่าว
-
-หากทุกอย่างยังคงไม่ทำงาน ลองตรวจสอบว่าพอร์ตที่ตั้งค่าในโค้ดตรงกับพอร์ตที่ใช้งานอยู่ในเครื่องของคุณหรือไม่ ตัวอย่างในโค้ดจะกำหนดเป็น `port 3000` คุณอาจต้องการเปลี่ยนค่าพอร์ตตามเครื่องของคุณเอง
-
-นอกจากนี้ อย่าลืมตรวจสอบว่ามีโปรแกรม node.js ที่ติดตั้งอยู่ในเครื่องของคุณและเวอร์ชันที่ถูกต้องของ node.js อูบันซ้ำอยู่ในเครื่องของคุณ และคุณกำลังรันโค้ดในเทอร์มินัลที่ถูกระบุอย่างถูกต้อง
-
-หากคุณทำตามขั้นตอนทั้งหมดแล้วและยังพบปัญหา คุณอาจต้องติดต่อเจ้าหน้าที่สนับสนุนของ node.js หรือ Express เพื่อขอความช่วยเหลือเพิ่มเติม"
+In the year 1907, during the 33rd year of Guangxu's reign, the Commission for Studying Constitutional Government was established as a purely legislative body responsible for drafting constitutional codes. However, it repeatedly infringed upon the authority of the Political Advisory Council following the latter's establishment. Hence, it is imperative to define the legislative scope of the Political Advisory Council and establish a clear division of authority between the Council and the Commission. Prior to the establishment of the Political Advisory Council, the Commission, led by the Grand Council, held supreme executive power. Its responsibilities encompassed compiling legal codes and issuing executive sanctions (Li, 2011, p. 233)."

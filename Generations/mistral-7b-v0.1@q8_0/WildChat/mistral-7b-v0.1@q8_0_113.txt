@@ -1,0 +1,6 @@
+We can do it in 2 ways.
+1) Make a parent component for all the product components, say ProductListComponent which should have some template reference variable (#variable). On that template we will add an ng-content tag so we can place all products inside that parent and display them using ng-content. We will also add a button in this template which we would like to use to like / dislike the product.
+On click of the button we need to call a method from the parent component i.e ProductListComponent which should have access to all the child components. This can be achieved via input & output using @Input() & @Output(). We will also emit an event on button click and pass that to the parent component to perform any action as required.
+
+2) Make a component for button that will act as like / dislike button. Have an @input property which should contain the product data for which we need to perform this action. Now inside our button component have 2 methods - like() and unLike(). These should emit an event and pass the input object so the parent can listen to it and perform some action.
+You will also have to keep a track of how many products are liked and disliked using @Input property and display that on the template.

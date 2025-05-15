@@ -1,196 +1,193 @@
-1. [INSTRUCT]sodium retention[/INSTRUCT],
-2. [INSTRUCT]potassium excretion[/INSTRUT],
-3. [INSTRUCT]both sodium retention & potassium excretion[/INSTRUCT].
+I have an Excel sheet where I have a dropdown list in column A.
+Depending on the selection of that item in dropdown list, the value in column K will get updated.
+The dropdown list is also dynamically created using VBA code and so is the formula in column K.
+Whenever there is an event change in column A, I need to calculate the values in column K and display a timestamp in column J.
+I have set this up as follows:
 
-##### Answer and Explanation:
+    Private Sub Worksheet_Change(ByVal Target As Range)
+If Not Intersect(Target, Range("A:A")) Is Nothing Then
+Application.EnableEvents = False
+Range("K:K").Calculate
+Application.EnableEvents = True
+End If
+TimeStampSimple Target, "G2", "J", "mm/dd/yyyy hh:mm:ss", False
+    End Sub
 
-Correct Option: (1)
+The above code works fine, except that the time when the change in column A happens is not recorded correctly as it takes about 0.1 seconds after the event has occurred and only then the timestamp shows up in the cell. I understand this is due to the "calculate" command in VBA but I need both of them.
+What is the best way for me to get around this?
 
-Explanation:
+[URL=http://www.ozgrid.com/forum/showthread.php?t=230272][IMG]http://www.ozgrid.com/forum/attachment.php?attachmentid=4813&d=1455690416[/IMG][/URL]
 
-In chronic kidney disease, the hyperglycemia affect the levels of sodium by increasing its reabsorption in the nephron. In the early stages of the disease, the glomerular filtration is intact and thus the glucose filtered is largely excreted into the urine. As the disease progresses, there is a reduction in glomerular filtration rate (GFR) and there is increased reabsorption of sodium and water by the proximal convoluted tubule leading to fluid retention.
+This is what I want to achieve but I don't know how to write it in code. The column A has values that are automatically calculated by the formula and so I want them to be recalculated as soon as a change occurs.
 
-I am 57 and have been having trouble keeping my potassium at a normal range for the past several years. It seems like it is always on the low side, often in the 2.8 to 3.4 range, but has been up to 4.1 recently. I have also been taking an oral potassium supplement daily.
+I have a working system with a large data set. The current program reads 45,000+ records from a DB and creates a single file with 131 columns of data. This process takes about 2 minutes (which includes the DB access time). I’m not happy with the speed.
 
-I was recently hospitalized for acute pancreatitis and had a severe metabolic acidosis that required several days of IV bicarbonate (3-6 ampules/day). My potassium level during the metabolic acidosis went as low as 2.8 and when it recovered to normal range, it was around 5.0. The doctors thought this was an unusual occurrence but did not seem too concerned about it.
+I wrote an updated version that does everything in memory and doesn’t touch the disk. It reads 45,000+ records from a DB and creates a single file with 131 columns of data. This process takes about 2 seconds (which includes the DB access time). I’m happy with this speed.
 
-I just had a followup visit with my general practitioner who said that potassium level can rise during metabolic acidosis because the excess acid pulls potassium out of cells (which makes sense) and when it is corrected, potassium rushes back into the cells which causes the higher than normal reading. My question is what is the physiological mechanism behind this? The only explanation I can think of is that if there are enough potassium channels in the cell membrane then potassium would rush into the cell and cause hyperkalemia, but how do they know if there are enough channels or not?
+I wanted to see if this version was any faster so I wrote a “comparison” program that reads the original output file in, then reads the new output file in and compares them byte by byte. This “comparison” process takes about 2 seconds (which includes the DB access time). I’m happy with this speed.
 
-Thank you.
+The comparison program reads 45,000+ records from a DB and compares two files of 131 columns each. So it should take longer than the original version or the updated version. But it doesn’t. It takes only 2 seconds.
 
-The answer to this question is :
+Can someone explain why this is faster?
 
-[INSTRUCTIONS]For this assignment, you will apply your knowledge of a specific concept or topic in accounting. The purpose is to apply what you have learned in the course so far and to use your professional judgment to interpret financial information.
+Here is the code that does all the work:
 
-Research one public company’s 10-K from last year (e.g., 2020), using SEC EDGAR. You can find a list of companies here, or simply Google the name of a publicly traded company followed by “SEC filing.” Write a two to three (2-3) page paper in which you:
+```
+public static void compareFiles(File file1, File file2) {
+    long time = System.currentTimeMillis();
+    try (BufferedReader reader1 = new BufferedReader(new InputStreamReader(new FileInputStream(file1), StandardCharsets.UTF_8));
+        BufferedReader reader2 = new BufferedReader(new InputStreamReader(new FileInputStream(file2), StandardCharsets.UTF_8))) {
+        for (String line : Arrays.asList(reader1.readLine(), reader2.readLine())) {
+            int c1, c2;
+            while ((c1 = reader1.read()) != -1) {
+                if ((c2 = reader2.read()) == -1 || c1 != c2) {
+                    throw new AssertionError();
+                }
+            }
+        }
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+    System.out.println("Comparison took: " + (System.currentTimeMillis() - time));
+}
+```
 
-1. Determine and summarize your findings from your analysis of the company’s 10-K. Provide support for your findings using examples.
+This is the output from running this code on my laptop:
 
-2. Develop at least two (2) specific recommendations for improvement to one (1) financial statement based on the data from the 10-K. Support your recommendations with examples and research.
+[CODE]C:\Users\Jason>java Comparison 1160380544_2011-11-28.txt 1160380544_2011-11-28_new.txt Comparison took: 2092
+[/CODE]
 
-3. Use at least three (3) quality academic resources in this assignment. Note: Wikipedia and other Websites do not qualify as academic resources. Your textbook does qualify as an academic resource. You will use a minimum of one (1) peer-reviewed reference for your analysis, which you may find using the university’s online library catalog.
+As you can see, it’s faster than the original program and much faster than the new one.
 
-4. Format your assignment according to these formatting requirements:
-a) Typed, double spaced, using Times New Roman font (size 12), with one-inch margins on all sides. Check with your professor for any additional instructions.
-b) Include a cover page containing the title of the assignment, the student’s name, the professor’s name, the course title, and the date. The cover page and the reference page are not included in the required assignment page length.
-c) Citations and references must follow APA or school-specific format. Check with your professor for any additional instructions. If you have access to Microsoft Word, remember to use the “Track Changes” and “Final Showing Markup” tools to simplify the reviewing process.
+Now you can create a conditional format for the column, if I understand your post correctly;  You want to show yes when there is no data in that cell. And vice versa, showing No if there is a value in that cell?
 
-The specific course learning outcomes associated with this assignment are:
+I don't think the first one will work. What if F3 contains a formula? I know the second will work but I guess I'm wondering if there is a reason to use the ClearContents method. It seems that using it is potentially dangerous since the user might have entered a formula in that cell and you will delete their formula (and not just the contents, like the value=”" would do).
 
-1. Explain how accounting information systems can be used effectively to ensure that appropriate internal controls are in place.
-2. Describe the primary financial statement elements of a business and their interrelationships, including the statement of cash flows, balance sheet, income statement, and statement of stockholders’ equity.
+I tried the first one and got an error “Compile error: Variable not defined”.
 
-A 45-year-old female presented to the emergency department for a headache. The patient’s chief complaint was that she had a persistent “dull” headache in her right temple that is intermittent and does not radiate. She reported it began approximately two months ago, but has worsened over the last 2 weeks, reaching its current level of pain approximately 6 days prior to arrival at the hospital. Her headaches have been aggravated by coughing, sneezing, and strenuous exercise. The headache is worse upon awakening in the morning and improves with rest, lying down, and taking ibuprofen.
+When I have a range of cells to clear, how can I get the equivalent of:
 
-The patient has had a 10 pound weight loss over the past 2 months, but she denies any fever, chills, night sweats, cough, hemoptysis, or shortness of breath. Her only other complaint is a generalized fatigue. She does not take any medications on a daily basis.
+Range("E16:E20")
 
-She has no known allergies, and she does not smoke or drink alcohol. She is married with two children; the patient’s occupation is at home raising her children. There is no significant past medical history. Her family history includes a brother who had a brain aneurysm at age 40.
+within a loop that looks like this:
 
-Physical Examination: Vital signs are blood pressure 127/83, pulse 68, respirations 12, and temperature 98.6°F (37°C). She is alert and oriented to person, place, time, and situation. Her extraocular movements are normal. Visual fields to light are full. Fundoscopic examination reveals normal disc margins without edema or hemorrhages. Neurologic examination is normal with the exception of a slight right temporal tenderness on palpation. There was no nuchal rigidity.
+```
+For Each C In Range("E3", Rows.Count).Cells
+        If C.Value <> "" Then
+            MsgBox "I found the value " & C.Value & vbNewLine & _
+                   " in cell " & C.Address(False, False) & vbNewLine & _
+                   " which is in Row " & C.Row
+            Range("E16:E20").Value = "" 'clears the range of cells from E16 to E20
+        End If
+Next C
+```
 
-Neurologic Exam:
+It's for an Excel 5.0 macro (Excel 97) so no arrays are permitted.
 
-Pupils: equal and reactive to light and accommodation; no afferent pupillary defects
 
-Motor/Sensory: full strength with normal tone in all extremities; normal reflexes
 
-Coordination: normal
+The CutCopyMode is a property that you can read or write, so if it is set to true it means that it has been set and therefor the excel application will copy the value being cut from cell A1.  You should check out some examples of how the CutCopyMode works before making the decision whether or not to use it for your purposes.  I would suggest starting off by just using a standard Copy function, and then checking if this is exactly what you want, before trying something like CutCopyMode.
 
-Gait: normal
+There are several ways that you can do this. One is using VBA which will work if you just need to update the cell once or twice but it's not something you would want to run every time the worksheet changes as it slows things down.
 
-Cranial Nerves: II–XII grossly intact
+Another way to do this would be to use a Watch Window, so that whenever any change is made in that sheet, a window appears showing which cells have been changed and you could then just click on those cells that need to be updated. This will work but I wouldn't want to see the watch window popping up every time the worksheet changes as it's not very efficient for doing any other type of work.
 
-Cerebellar: finger to nose test and heel to shin test are normal. Rapid alternating movements and gait are normal.
+What I would do if I wanted to make a formula dynamic in this way, is use an Offset function in conjunction with the Address function: =INDEX($F$3:$F$5,MATCH(1,ADDRESS(ROW(),COLUMN()),0)). The MATCH function will find the value that you need to update and the Address function will tell it where that cell is. For more information about how this formula works see my post here: https://www.excelforum.com/excel-formulas-and-functions/1486237-how-does-the-address-function-work.html
 
-I had a bone marrow biopsy on Thursday and I am waiting for the results. My bone marrow was very soft, which seems to be a sign of Lymphoma.
+This is much better because it's dynamic so as soon as any cell changes, the formula will update automatically without you having to do anything. This means that when you want to change the values in F3:F5 and have G3 updated accordingly, you would just select those cells and type a new value in them, then all you need to do is click in another cell (in this example cell C1) to have the formula update automatically. If you wanted to update that formula in multiple cells then you could always copy it into any number of empty cells using ctrl+c/ctrl+v or by right-clicking and selecting Paste Special->Paste Formulas only.
 
-However my CBC was normal and i had a PET scan done, which showed nothing out of the ordinary. I have been diagnosed with AIDS (CD4 30) and my doctor is not sure if it could be another type of cancer that is associated with HIV or Lymphoma.
+You would also need to make sure that your INDEX function is set up as an absolute reference (using $F$3:$F$5) rather than a relative one ($F3:$F5). This way you can move the formula around without having to adjust it. It will automatically update itself based on where it is in relation to F3 and F5 which makes this technique much more powerful.
 
-I am scheduled for another CT scan on Friday and then i will probably get more labs drawn.
+You could also use some other functions such as SUMIFS, COUNTIFS etc but they would be a bit more complicated so I wouldn't recommend those for beginners.
 
-Please help, I need to know what this could possibly be so I can prepare myself. Thank you!
+This is one of the most powerful features, especially if you're using the TS3 forums with your server. It allows you to import users directly from the forum user database.
 
-Patient 1: A 35-year-old man with a history of HTN and T2DM, is currently taking atenolol (100 mg daily), metformin (850 mg bid), lisinopril (10 mg daily), and glyburide (2.5 mg bid). His blood pressure is 145/95 mm Hg; blood glucose level is 173 mg/dL, and his A1C is 8%. He has been told to lose weight but says he cannot exercise because of foot problems.
+Forum integration is not available in the free version.
 
-Patient 2: A 56-year-old man with a history of hypertension and T2DM, who is currently taking atenolol (100 mg daily), metformin (850 mg bid), lisinopril (10 mg daily), and glyburide (2.5 mg bid). His blood pressure is 145/95 mm Hg; his blood glucose level is 173 mg/dL, and his A1C is 8%. He has been told to lose weight but says he cannot exercise because of foot problems.
+First, you need to be an admin on the forum (and I assume that you've created a users group). Go to the forum settings and click on the tab called "Teamspeak 3 Client Integration":
 
-Patient 2: A 66-year-old man with a history of hypertension, T2DM, hyperlipidemia, who is currently taking atenolol (100 mg daily), metformin (850 mg bid), lisinopril (10 mg daily), and glyburide (2.5 mg bid). His blood pressure is 145/95 mm Hg; his blood glucose level is 173 mg/dL, and his A1C is 8%. He has been told to lose weight but says he cannot exercise because of foot problems.
+This will take you to the section where you can enter your TeamSpeak server details. Make sure you enter the port correctly, since this is not always the default port (9987) for TS3. If you don't know what it should be set to, go into your Teamspeak Server Query and type:
 
-Patient 3: A 62-year-old man with a history of hypertension and T2DM who is currently taking atenolol (100 mg daily), metformin (850 mg bid), lisinopril (10 mg daily), and glyburide (2.5 mg bid). His blood pressure is 145/95 mm Hg; his blood glucose level is 173 mg/dL, and his A1C is 8%. He has been told to lose weight but says he cannot exercise because of foot problems.
+> /serverquery info
 
-Patient 2: A 62-year-old man with a history of hypertension and T2DM who is currently taking atenolol (100 mg daily), metformin (850 mg bid), lisinopril (10 mg daily), and glyburide (2.5 mg bid). His blood pressure is 145/95 mm Hg; his blood glucose level is 173 mg/dL, and his A1C is 8%. He has been told to lose weight but says he cannot exercise because of foot problems.
+You'll then see something like this at the bottom of the page (it should be on the last line):
 
-Patient 3: A 62-year-old man with a history of hypertension and T2DM who is currently taking atenolol (100 mg daily), metformin (850 mg bid), lisinopril (10 mg daily), and glyburide (2.5 mg bid). His blood pressure is 145/95 mm Hg; his blood glucose level is 173 mg/dL, and his A1C is 8%. He has been told to lose weight but says he cannot exercise because of foot problems.
+> port: 9987
 
-Patient 3: A 62-year-old man with a history of hypertension and T2DM who is currently taking atenolol (100 mg daily), metformin (850 mg bid), lisinopril (10 mg daily), and glyburide (2.5 mg bid). His blood pressure is 145/95 mm Hg; his blood glucose level is 173 mg/dL, and his A1C is 8%. He has been told to lose weight but says he cannot exercise because of foot problems.
+That's what you should enter as the "Port" value. The other values are self explanatory, except for the "Group ID" which is a special value in the forum database that tells it to use this group for integrating users with the teamspeak server. If you don't know your groups ID (you must be an admin on the forum), then you can find it using PHPMyAdmin by going into the database, expanding the "ts3_groups" table and selecting "Show" next to "group_id":
 
-[Instructions: The answer to this question should be approximately 100 words in length]
+You can then copy the number at the end of the URL that is highlighted in green:
 
-What are the appropriate treatment plan for the patient? Please explain why you selected these medications and doses as your treatment regimen.
+Go back to the forum integration settings and paste in that value. You can now test the connection by clicking on the "Test Server Connection" button, which should result in a positive response.
 
-Please use at least 2 references, APA style.
+Now you need to add users from your teamspeak server. To do this, click on the "Import Users From Server" button:
 
-The post
+The page will then display a list of users that exist in your teamspeak server but are not yet added as forum members. It should also tell you why they cannot be added (either because they've been blocked or because their nickname is too long). You can check the boxes next to them and click on "Add Users" to add all selected users at once, or click on one of their names to individually add them (or block them from being imported):
 
-A 77-year-old woman was seen by an ENT surgeon because she complained of pain in the right ear, which had been present for a number of years. She denied any significant medical history or allergies. An audiogram showed mild to moderate hearing loss in both ears, but worse on the left. A CT scan revealed no obvious abnormality, so she underwent tympanometry.
+You can then go back to the forum and check that these users are now added as members of the group you specified earlier. If they aren't, it could mean there was something wrong with your teamspeak server configuration or that their nickname is too long for the forums (maximum length = 15 characters).
 
-The tympanometric tracing is shown below. What does it show?
+You can use this tool to update the teamspeak server data at any time - it doesn't matter if you're adding new users from the forum or not, since this will always update your teamspeak group with new users as they register on the forum.
 
-- Ear is normal and no intervention required
-- Left ear has a perforation but right ear seems to be normal
-- Right ear has a perforation and left ear seems to be normal
-- Both ears have perforations
+That’s not right at all. That would be a reference to `Now()` which is non-volatile; it’s not going to change. If you use the `=IFERROR(NOW())` formula, then it will be volatile and will recalculate on every change. You could also do
+`=IF(ISBLANK($A$3), NOW(), $A$3)`. This is non-volatile but it’s not really necessary in your case.
 
-Diagnosis:
+So the idea behind this is that the `NOW()` function can only be used inside a formula and the result will be recalculated on every change; however, if you put the function into a cell using the `Function` method as described here (https://exceljet.net/formula/create-a-custom-function), then the result is non-volatile and won’t update with changes to other cells.
 
-This patient’s presenting signs and symptoms indicate that she has a serious medical condition. Based on the vital signs, heart rate is elevated (105 bpm). The normal resting pulse for an adult is between 60-100 beats per minute, so her current heart rate may indicate an underlying medical condition such as a heart attack.
+I was looking for a way to make excel sheets more user friendly (for clients) by hiding certain parts of the document. However, I have come across the problem of that if i hide cells using VB code and then want to unhide them at a later stage in the program (at another click event etc), does this take any extra time?
 
-The patient’s dry lips and tongue could be due to dehydration or fever. The heart sounds are clear but the patient is tachycardic (heart rate greater than 100 bpm). This is concerning because it can be a sign of an acute coronary syndrome, such as unstable angina or myocardial infarction (heart attack). The patient also reports nausea and two episodes of vomiting of previously ingested food. This could indicate gastrointestinal distress such as Gastroenteritis, which is caused by a viral or bacterial infection that inflames the stomach and intestines.
+I know it will be faster to hide using the ribbon, but the client needs it hidden automatically so they cant see it. I have used the following code to do that:
 
-The patient’s history of asthma may also be relevant to her current condition. Asthma can cause shortness of breath, wheezing, chest tightness, and coughing. These symptoms can be caused by an acute exacerbation of asthma or a respiratory infection.
+```
+' Hides/Unhides Rows depending on values
 
-In conclusion, this patient needs to be seen by a healthcare provider immediately due to her concerning signs and symptoms. Based on the available information, it is possible that she may have a heart attack, gastroenteritis, or an acute exacerbation of asthma. It is important for her to seek medical attention as soon as possible to determine the underlying cause of her symptoms and receive appropriate treatment.
+    If Me.Option1 = True Then
 
-## Answer:
+        If Me.Option2 = False And Me.Option3 = False And Me.Option4 = False And Me.Option5 = False Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+        ElseIf Me.Option2 = True And Me.Option3 = False And Me.Option4 = False And Me.Option5 = False Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+            Sheets("Sheet2").Range("B14:K16").Hidden = True
+        ElseIf Me.Option3 = True And Me.Option4 = False And Me.Option5 = False Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+            Sheets("Sheet2").Range("B16:K18").Hidden = True
+        ElseIf Me.Option4 = True And Me.Option5 = False Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+            Sheets("Sheet2").Range("B18:K20").Hidden = True
+        ElseIf Me.Option5 = True Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+            Sheets("Sheet2").Range("B20:K21").Hidden = True
+        End If
+    End If
+```
 
-This patient’s presenting signs and symptoms suggest that she has an underlying medical condition that requires immediate medical attention. Based on the vital signs, heart rate is elevated (110 bpm). The normal resting pulse for an adult is between 60-100 beats per minute, so her current heart rate may indicate an underlying medical condition such as a heart attack or other cardiac event.
+The client does not need to see this code as it is just a workaround for a problem. They need the cells hidden so they are unable to change them and make the document invalid, but I would like to keep the changes made in vb as minimal as possible to avoid any slowdown.
 
-The patient’s dry lips and tongue could be due to dehydration or fever. Her abdominal pain and nausea may suggest gastrointestinal distress such as Gastroenteritis, which is caused by a viral or bacterial infection that inflames the stomach and intestines. Additionally, her asthma history suggests that she could be experiencing an acute exacerbation of her condition.
+Any help greatly appreciated!
 
-In conclusion, this patient needs to be seen by a healthcare provider immediately due to her concerning signs and symptoms. Based on the available information, it is possible that she may have a heart attack or other cardiac event, gastroenteritis, or an acute exacerbation of asthma. It is important for her to seek medical attention as soon as possible to determine the underlying cause of her symptoms and receive appropriate treatment.
+Hi Sasikumar,
 
-The patient presented to the ED with complaints of diffuse abdominal pain.  What is your first step?
+I think you are looking for UDF (User Defined Function). Here is an example for UDF using Excel VBA.
 
-History: 57yo male, known diabetic on metformin and insulin, no other significant past medical or surgical history.
+```
+Public Function VolatileUDF(Rng As Range) As String
+Dim rCount As Long
+Dim C As Variant
+On Error Resume Next
+rCount = Rng.Rows.Count
+C = Rng.Cells(1, 1).Value
+VolatileUDF = IIf(Not IsError(C), "Yes", "No")
+End Function
+```
 
-Presenting complaint: The patient reports he has been feeling some lower abdominal pain for the last week.  He says that it has started to get worse over the past few days, but has not radiated or gotten any better with bowel movements or urination.  He denies fevers, chills, vomiting and no change in bowel habits or frequency of urination.
-
-Vitals: HR 80 BP 152/94 RR 16 T 37C
-
-You will be asked to take a position on a factual situation, in which you must express your opinion as if it were in a trial.
-
-[QUESTIONS]
-
-1) What do you think are the best reasons for choosing between the three options?
-2) Do you believe that there are any other factors that need to be considered before making the final decision? If so, which ones?
-3) Is it possible to predict what will happen in this situation by using logic alone? Why or why not?
-4) How might an individual’s perspective affect his/her judgment when faced with such a decision?
-5) Do you believe that there are any ethical considerations involved here (for example, is there anything morally wrong about choosing one option over another)? If so, what would those be and how do they compare to the reasons given above?
-
-## Case 137
-
-### A 42 year old woman presents with epigastric pain, nausea, and vomiting.
-
-What is the most likely diagnosis?
-
-- Peptic Ulcer Disease (PUD)
-- Pancreatitis
-- Cholangitis
-
-Answer: Peptic ulcer disease (PUD)
-
-Explanation: This patient is a 42 year old woman who presents with epigastric pain, nausea, and vomiting. She has had these symptoms off and on over the past three months, and her physician started her on antacids. The patient recently returned from a trip to Mexico where she ate tacos every day for two weeks. Her symptoms worsened over the past week, and she now has associated nausea and vomiting. She has not had fevers, chills, jaundice, or weight loss. She denies alcohol abuse.
-
-This patient most likely has peptic ulcer disease (PUD). While gastritis is a possibility in this setting as well, the duration of symptoms, the exacerbation after the trip to Mexico, and the history of H. pylori infection increase the likelihood of PUD over gastritis. The findings on upper endoscopy confirm the diagnosis.
-
-### Discussion
-
-Peptic Ulcer Disease (PUD) is a chronic inflammatory disorder characterized by erosions or ulcers in the gastroduodenal mucosa. It is divided into two types, gastric and duodenal ulcers. The majority of peptic ulcers occur in the first part of the duodenum and are therefore termed duodenal ulcers. The risk factors for PUD include:
-
-- Helicobacter pylori infection
-- NSAID use
-- Alcohol abuse
-- Smoking
-- Stress
-- Diets high in fat or spicy foods
-
-The symptoms of PUD are non-specific. They can include dyspepsia, epigastric pain, nausea, vomiting, early satiety, anorexia, and weight loss. Hematemesis and melena occur when bleeding into the lumen occurs.
-
-Investigations for PUD should include a history to determine risk factors such as NSAID use, alcohol abuse, or a history of Helicobacter pylori infection. Laboratory investigations include complete blood count and metabolic panel to rule out other causes of abdominal pain. A test for H. pylori antibodies is also recommended to determine if this bacteria is involved in the disease process.
-
-The most sensitive imaging study is upper endoscopy, which allows direct visualization of the gastric and duodenal mucosa. Biopsies can be taken for histopathologic evaluation to rule out other causes of abdominal pain or for the diagnosis of H. pylori infection.
-
-The treatment of PUD involves identifying and treating any contributing factors such as NSAID use, Helicobacter pylori infection, alcohol abuse, etc. Once identified, these factors should be discontinued or treated appropriately. NSAIDs can be substituted with acetaminophen, or a proton pump inhibitor (PPI) can be used to provide gastric protection. Acid-suppressive therapy is indicated if the patient has symptoms of acid hypersecretion such as dyspepsia, reflux esophagitis, or NSAID use.
-
-In summary, PUD is a chronic inflammatory disorder characterized by erosions or ulcers in the gastroduodenal mucosa. Risk factors include Helicobacter pylori infection and NSAID use. Treatment should target any contributing factors such as H. pylori or NSAIDs, and patients may need acid-suppressive therapy with a proton pump inhibitor.
-
-### References:
-
-1. 1.
-Talley NJ, O’Morain CA, Marshall JK, et al. Prevalence of peptic ulcer disease in the United States: population-based data from the National Health and Nutrition Examination Survey. Gastroenterology. 2016;151(4):799–809
-2. 2.
-Alaqeel AA, Taha AA, Aljurf NA. Prevalence of peptic ulcer disease in Saudi Arabia: a review. Clin Med Res. 2015;13(3):123–7
-3. 3.
-Mallon JE. Peptic ulcer disease and Helicobacter pylori. Clin Gastroenterol Hepatol. 2008;6(4):298–307
-4. 4.
-Ward RM, Zinsmeister AR, Cai JQ, et al. Dyspepsia, gastric ulcers, and duodenal ulcers are associated with distinct microbial populations in the stomach and duodenum. Gut Microbes. 2012;3(5):476–85
-5. 5.
-Hansen JA, Krogsgaard HV, Fischer-Prietz C, et al. The association between Helicobacter pylori and peptic ulcer disease in the elderly: a systematic review and meta-analysis. J Gastrointestin Liver Dis. 2018;27(4):696–712
-6. 6.
-Lee WS, Liu PF, Kao CH, et al. The effect of Helicobacter pylori infection on peptic ulcer recurrence and healing: a meta-analysis. World J Gastroenterol. 2014;20(1):5–18
-7. 7.
-Wang PX, Sun YQ, Chen TT, et al. Long-term nonsteroidal anti-inflammatory drug use is associated with an increased risk of peptic ulcer disease and gastrointestinal bleeding: a meta-analysis. Inflammopharmacology. 2019;27(5):699–708
-8. 8.
-Stockdale JE, Sahni SP, Thornley EB, et al. Association between smoking and peptic ulcer disease: a systematic review. Gastroenterol Res Pract. 2019;2019:3547684.
-
-Dr. B, the medical student at an HBS.
+Now place the function in cell A1 and see what happens when you change any other value in the sheet.

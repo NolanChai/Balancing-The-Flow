@@ -1,0 +1,11 @@
+\end{code}
+
+I need to display the Deferred Revenue Accounting Code as `Other` when there are multiple Deferred Codes.  This is an example of how it should be displayed.
+
+<a href="https://i.stack.imgur.com/V7R65.png" rel="nofollow noreferrer"><IMAGE></a>
+
+Comment: You can try to use `IFNULL()` function and condition in case there are multiple values, then `IFNULL(PRPC.RenewalDeferredCode__c,'Other') as "Deferred Revenue Accounting Code"`. But you need to modify your query and try it out.
+
+Comment: I tried the IFNULL but that did not work.  The data is retrieved by a process builder where we are looking for Subscriptions in which the accounting code is non-renewal or the quote type is renewal, and the subscription is from CM Contractor customers.   I am hoping to get all of those criteria into the SELECT DISTINCT statement so that I can display the results in a single table.
+
+Answer: I was able to solve my problem by modifying the query to only retrieve records when there were no duplicates for `RenewalDeferredCode__c`.  If anyone else is facing the same challenge, this may help.

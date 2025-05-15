@@ -1,6 +1,45 @@
-I would like you to create image prompts for a generative AI called Midjourney. For each prompt, provide a description of the scene, environment, and mood in detail. Also include a style for the image (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) as well as an aspect ratio (ar) and visualization value (v).
-                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
-                            For each concept, create 4 distinct prompts that vary in details description, environment, compositions, atmosphere, and realization. Use a realistic photographic style prompt with lens type and size for each concept. Separate different prompts with two new lines.
-                            Here is an example of what an image prompt would look like:
-                            /imagine prompt: Beautiful beach, sandy shoreline, turquoise water, bright sun, palm trees swaying in the breeze, people playing in the surf, children building sandcastles, a gentle ocean breeze, capturing the joy and relaxation of a beach day. --ar 16:9 --v 5
-                            /imagine prompt: A cozy and warm autumn scene with colorful leaves on the ground, crunching underfoot, a group of people enjoying pumpkin spice lattes, brightly-colored scarves and jackets, crisp air, and a sense of excitement for fall. --ar 1:1 --v 5
+Requirements analysis is the most critical aspect of software engineering. It is in this phase that a clear understanding of user needs is gained; and if it is done improperly it could result in building an expensive system that does not satisfy the requirements. The key purpose of requirements analysis is to understand exactly what the customer wants and to document it clearly, unambiguously, and completely.
+
+Requirements analysis involves determining a set of requirements for a new or existing software system, understanding those requirements and documenting them. It is important to note that requirements are often not explicit but implicit; hence they need to be carefully elicited from the user. Requirements should be understood in terms of what the customer wants the system to do (functional requirements) and under what conditions it must operate (non-functional requirements). The latter category includes performance, reliability, usability, security, etc.
+
+Requirements analysis is a continuous process that starts with the initial requirements gathering and continues throughout the life of the project. It requires close cooperation between the customer and the software engineer to ensure that all the requirements are fully understood and documented. The goal is to identify and document the complete set of requirements for the system, so that it can be built correctly the first time.
+
+- [INST_REQS]User-facing requirements[/INST_REQS]
+    - The website should be easy to navigate and use. It should allow users to register, log in, and browse products easily. Users should also be able to add items to their cart, check out, and track their orders with ease. In addition, the website should have a search function that allows users to quickly find what they are looking for.
+    - The website should provide detailed information about each product, including descriptions, prices, sizes, materials, and other relevant details. This will allow users to make informed decisions before purchasing.
+    - The checkout process on the website should be secure and user-friendly. It should include options for payment methods, shipping methods, and delivery dates.
+
+# Implement nonfunctional requirements
+
+In this activity, you will implement the nonfunctional requirements. These requirements are defined in the Design Document. You need to do this according to the specifications and design document for your application. If you haven't completed these activities yet, please go back to the previous lessons to complete them before starting this task.
+
+The following items need to be implemented:
+
+- Provide a solution for secure connections to the database using SSL/TLS protocols. This needs to include proper certificates and configuration of the driver to ensure that all communication between the application and the database is secured. You will use an Oracle Wallet, which can be installed into your server as well as within your application codebase. Please refer to the Design Document for more details on this requirement.
+- Implement a logging system to track all events occurring in the application, including user actions and any errors that may occur. This could include using standard Java logging frameworks or third-party logging libraries to ensure that all relevant information is captured. You will use Log4j for logging purposes. Please refer to the Design Document for more details on this requirement.
+
+Software Engineering is a system of engineering in which engineers use various tools and methods to design, develop, test and maintain software. It can be considered as an extension of computer science.
+
+Software Engineers make decisions about the best ways (processes, techniques, and technologies) to achieve the requirements. They use different processes like Agile and Waterfall, which help them in designing, developing, testing, and maintaining software. Techniques such as Object-oriented programming or Design Patterns can also be used by Software Engineers.
+
+Software Engineers are involved in every stage of development from planning to deployment. They make decisions about the best technologies for their project based on its requirements and constraints. Some of these technologies include:
+
+- Programming languages (e.g., Java, C++, Python)
+- Frameworks (e.g., Django, ReactJS)
+- Databases (e.g., MySQL, PostgreSQL)
+
+
+
+## Introduction
+
+Software complexity is a challenge to understand and address, especially due to its subjective nature. Software complexity has been a long-standing research topic as well as a practical problem that programmers face every day. Numerous researches have been conducted on software complexity, yet there are still no widely agreed upon definitions and measures of software complexity. In this article, we aim to introduce the depth versus the breadth issue in software complexity and provide insights into the trade-offs between these two aspects of software complexity.
+
+## Depth Versus Breadth in Software Complexity
+
+Depth is a measure of the nested or hierarchical structure of a software system. It reflects the degree to which components are interconnected, with deeper levels representing more complex and tightly coupled components. On the other hand, breadth measures the overall number of elements in a software system, such as classes, methods, variables, and statements. It represents the size or scale of the system.
+
+The depth versus breadth issue in software complexity is an important concept to consider when designing and building software systems. Deeply nested structures are more difficult to understand and modify, while broad and simple systems are easier to manage. There is often a trade-off between these two aspects of complexity: deep but small software can be hard to maintain and change, while shallow and large software can be difficult to keep consistent.
+
+
+
+[SOL]Software complexity has two main dimensions: depth and breadth. Depth refers to the level at which a program is designed and coded, while breadth refers to the scope or size of the program. Breadth issues include the number of modules in a system, the number of functions per module, and the number of interfaces between modules. Depth issues include the complexity of algorithms, data structures, and control flow within each module. Improving software design to reduce either depth or breadth can lead to improvements in maintainability, reliability, and performance.[/SOL]

@@ -1,0 +1,76 @@
+I have attached a picture of the output that I need to get. The code that I wrote myself does not produce the desired result
+
+```
+;----------------------------------------------
+; Name: "write_asm" - writes assembler code for a program
+; Author: Pavel Kuzminskyi, 2016
+;----------------------------------------------
+
+[bits 32] ;-------------------------------32-bit mode-------------------------------
+    org    0h        ;--------------------memory address 0------------------------
+    jmp    main      ;------------------jump to "main" procedure-------------------
+
+main:                       ;---------------------"main" procedure---------------------
+    mov   eax,1        ;----------------------read input file-------------------------
+    mov   ebx,4        ;-----------------------file handle (input)-------------------
+    xor   ecx,ecx      ;--------------------descriptor of output device--------------
+    mov   edx,0ah      ;------------------length of a byte in the "ebx" register-----
+    int   80h          ;---------------------system call (syscall)-------------------
+
+    push  esi         ;------------------------save registers-----------------------
+    push  ebx         ;----------------------------end--------------------------------
+
+    mov   ecx,16      ;--------------------size of the buffer "esi" register----------
+    mov   esi,buffer  ;-----------------------pointer to the buffer------------------
+    mov   edi,input   ;----------------------pointer to the input file--------------
+    cld                 ;---------------------move data in increasing order------------
+rep   movsb           ;-------------------copy a string of characters (data)-------------
+
+    pop   ebx         ;------------------------restore registers--------------------
+    pop   esi         ;------------------------end----------------------------------
+
+    push  eax         ;------------------------save register "eax"-----------------
+    mov   eax,2       ;-----------------------write output file---------------------
+    xor   ebx,ebx     ;----------------------file handle (output)--------------------
+    mov   ecx,10      ;---------------------number of elements in the file------------
+    mov   edx,4       ;------------------------size of each element------------------
+    int   80h         ;-----------------------system call (syscall)-------------------
+    pop   eax         ;-------------------------end---------------------------------
+
+    push  ebx         ;----------------------save registers-------------------------
+    mov   ebx,2       ;-----------------------read file-----------------------------
+    mov   ecx,10      ;--------------------number of elements in the file------------
+    mov   edi,output  ;---------------------pointer to the output file---------------
+    cld                 ;---------------------move data in increasing order-----------
+rep   movsb           ;----------------------copy string of characters (data)-------
+
+    pop   ebx         ;------------------------restore registers--------------------
+    push  esi         ;----------------------save register "esi"--------------------
+
+    mov   eax,6       ;----------------------write to console-------------------------
+    mov   ebx,0       ;--------------------file handle (output)----------------------
+    xor   ecx,ecx     ;------------------------length of string in the "edx" register-----
+    mov   edx,17      ;-----------------size of the buffer "esi" register---------------
+    int   80h         ;-----------------------system call (syscall)--------------------
+
+    pop   esi         ;-------------------------end----------------------------------
+    push  ebx         ;------------------------save registers------------------------
+    mov   ebx,1       ;----------------------close file------------------------------
+    int   80h         ;-----------------------system call (syscall)--------------------
+    pop   ebx         ;-------------------------end----------------------------------
+
+    push  eax         ;-------------------save register "eax"------------------------
+    mov   eax,4       ;--------------------read from the console---------------------
+    int   80h         ;-----------------------system call (syscall)-------------------
+    pop   eax         ;-------------------------end----------------------------------
+
+    jmp   $            ;-----------------------jump to "main" procedure-------------
+
+input:                     ;------------------------input file------------------------
+db     1, 2, -3, 4, 5, -6, 7, 8, 9, 0          ;-----------------data in the input file---------
+output:                    ;------------------------output file-----------------------
+times 16 db "0"             ;-----------------------initialization of the output file----
+times 13 db 10              ;----------------------ending of lines (new line)----------
+
+buffer: times 16 db ?       ;-----------------buffer for reading input file---------------
+```

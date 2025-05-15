@@ -1,0 +1,62 @@
+Server.c code:
+#include<stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include<unistd.h>
+#include<string.h>
+#include <sys/wait.h>
+#include<fcntl.h>
+#include<semaphore.h>
+#define BUF_SIZE 50
+char *filename;
+void Read(int sharedMemory)
+{
+	//printf("Read\n");
+	read(sharedMemory,filename,BUF_SIZE);
+	printf("%s", filename);
+	printf("\n");
+}
+void Write(int sharedMemory)
+{
+	//printf("Write\n");
+	char str[BUF_SIZE];
+	read(sharedMemory,str,BUF_SIZE);
+	//strcpy(str,"Hello World!");
+	write(1,str,strlen(str));
+}
+int main()
+{
+	sem_t sem_read, sem_write;
+	int shmid = shmget(IPC_PRIVATE, sizeof(char) * BUF_SIZE, IPC_CREAT | 0666);
+	key_t key = ftok("/etc/passwd", 34);
+	shmat(shmid, NULL, 0);
+	filename = (char *)malloc(sizeof(char)*BUF_SIZE);
+	while(1)
+	{
+		int read;
+		if((read=semop(shmid,&sem_read,1))==-1)
+			perror("semaphore operation failed\n");
+		Read(shmid);
+		sleep(5);
+		while((read=semop(shmid,&sem_write,1))==-1)
+			perror("semaphore operation failed\n");
+		Write(shmid);
+		sleep(5);
+	}
+}
+
+Dear Sir/Madam,
+
+We would like to apply for a [POSITION]. I’m currently working as a [PREVIOUS_POSITION] at [COMPANY_NAME]. With my skills and experience, I believe that I am an excellent fit for this position.
+
+I have been with [COMPANY_NAME] for over four years now. In this role, I have gained invaluable experience in managing projects from start to finish and working closely with clients. I take pride in my ability to stay organized and handle multiple tasks simultaneously, as well as my strong communication skills that allow me to effectively collaborate with others.
+
+I am confident in my abilities to be a successful [POSITION] at your company. With my previous experience and skill set, I know that I can contribute to the success of your organization by helping you meet deadlines on time while ensuring the highest quality standards are maintained throughout each project. Please consider me for this position and let’s discuss how we could work together towards achieving common goals.
+
+I am supposed to work on this project which involves implementing the following protocol:
+
+This protocol consists of two commands namely write and read.
+- write – This command sends a file from server to client. The command has the syntax
+
+
+

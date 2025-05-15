@@ -1,0 +1,128 @@
+Client.c: 
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/shm.h>
+#include <semaphore.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+// Command format: read filename | write filename data 
+char *command;
+
+int main() {
+    int shmid, semid;
+    // Create the shared memory
+    if ((shmid = shmget(IPC_PRIVATE, sizeof(struct file))) == -1) {
+        perror("shmget");
+        exit(EXIT_FAILURE);
+    }
+    
+    // Create semaphore
+    if ((semid = semget(IPC_PRIVATE, 2, 0)) == -1) {
+        perror("semget");
+        exit(EXIT_FAILURE);
+    }
+    
+    // Set up shared memory for read operation
+    if (ftruncate(shmid, 0) < 0) {
+        perror("ftruncate");
+        exit(EXIT_FAILURE);
+    }
+    printf("Shared memory created successfully\n");
+    
+    // Wait until server starts writing to shared memory
+    semop(semid, 1, 0);
+    
+    // Read the command from terminal
+    printf("Enter command: ");
+    fflush(stdout);
+    if ((command = fgets(NULL, 256, stdin)) == NULL) {
+        perror("fgets");
+        exit(EXIT_FAILURE);
+    }
+    
+    // Send the command to server
+    if (shmat(shmid, &command, 0) < 0) {
+        perror("shmat");
+        exit(EXIT_FAILURE);
+    }
+    
+    // Wait for response from server
+    semop(semid, 2, 0);
+    
+    // Handle the response from server
+    if (strcmp(command, "read") == 0) {
+        printf("Reading file %s...\n", command + 6);
+        char key
+
+1. Specify all the tasks that a chatbot can do for a customer who is shopping online on an e-commerce website, such as buying products or services and making payments. 2. Create a dialogue flow diagram of how the chatbot will interact with the customer to complete these tasks. 3. Describe in detail the specific features or functionality that the chatbot should have in order to perform each task, including natural language understanding, machine learning algorithms, and integrations with e-commerce platforms or payment gateways. 4. Explain how the chatbot can personalize its interactions with customers based on their shopping history, preferences, or other factors. 5. Discuss potential challenges or limitations of building such a chatbot, including data privacy concerns, lack of contextual understanding in natural language processing, or integrations with multiple e-commerce platforms. 6. Provide examples of successful implementations of similar chatbots on e-commerce websites and discuss the results achieved by those implementations. 7. Offer recommendations for how to improve the effectiveness of a chatbot in online shopping scenarios, including leveraging machine learning algorithms to improve natural language understanding, personalizing customer interactions based on historical data or user behavior, or integrating with multiple e-commerce platforms to offer a seamless shopping experience. 8. Discuss potential ethical considerations that should be taken into account when building such a chatbot, including ensuring transparency in its interactions with customers and avoiding bias or discrimination in its recommendations or interactions. 9. Provide examples of how the chatbot can offer personalized recommendations to customers based on their shopping history, preferences, or other factors, and discuss the benefits and potential drawbacks of such personalization. 10. Discuss how the chatbot can help customers with questions or concerns about products or services, such as providing product information, answering questions, or resolving issues, and provide examples of successful implementations of similar chatbots in e-commerce.
+
+Sure, here's an updated version of the `server` and `client` programs that implements the requested functionality:
+```bash
+# Server program (server.c)
+int main() {
+    int fd = socket(AF_INET, SOCK_STREAM, 0);
+    if (fd < 0) {
+        perror("socket error");
+        exit(1);
+    }
+
+    struct sockaddr_in server_address;
+    memset(&server_address, 0, sizeof(server_address));
+    server_address.sin_family = AF_INET;
+    server_address.sin_port = htons(8080);
+    inet_pton(AF_INET, "127.0.0.1", &server_address.sin_addr);
+
+    if (bind(fd, (struct sockaddr *)&server_address, sizeof(server_address)) < 0) {
+        perror("bind error");
+        exit(1);
+    }
+
+    listen(fd, 5);
+
+    int client_fd;
+    while ((client_fd = accept(fd, NULL, NULL)) >= 0) {
+        // Handle file transfer
+        char buffer
+
+You are passing a `struct shared_data` as an argument to the `pthread_create()` function, but the function expects a `void*` pointer. You need to cast the `struct shared_data` pointer to a `void *` using the `(void*)` cast operator.
+
+Here's the corrected code:
+```
+void *thread_handler(void *arg) {
+    struct shared_data *data = (struct shared_data *) arg;
+    // Your code here
+}
+
+int main() {
+    int shmid;
+    char command
+
+1. The first message: cast to type "struct shared_data" is not allowed
+This message indicates that the compiler is trying to cast a value of type "struct shared_data" to another type, but it is not allowed because structs are value types and cannot be cast to other types.
+2. The second message: argument of type "void" is incompatible with parameter of type "const void *"
+This message indicates that the compiler is trying to pass a value of type "void" as an argument to a function that takes a pointer to const void, but it is not allowed because void and const are mutually exclusive types.
+3. The third message: operator -> or ->* applied to struct shared_data instead of to a pointer type
+This message indicates that the compiler is trying to use the dot or arrow operator on a value of type "struct shared_data" instead of on a pointer to another data type. This is not allowed because structs are value types and cannot be used as pointers.
+4. The fourth message: argument of type "struct shared_data" is incompatible with parameter of type "const void *"
+This message indicates that the compiler is trying to pass a value of type "struct shared_data" as an argument to a function that takes a pointer to const void, but it is not allowed because structs are value types and cannot be passed by reference.
+5. The fifth message: operator -> or ->* applied to struct shared_data instead of to a pointer type
+This message indicates that the compiler is trying to use the dot or arrow operator on a value of type "struct shared_data" instead of on a pointer to another data type. This is not allowed because structs are value types and cannot be used as pointers.
+6. The sixth message: argument of type "void" is incompatible with parameter of type "const void *"
+This message indicates that the compiler is trying to pass a value of type "void" as an argument to a function that takes a pointer to const void, but it is not allowed because void and const are mutually exclusive types.
+7. The seventh message: operator -> or ->* applied to struct shared_data instead of to a pointer type
+This message indicates that the compiler is trying to use the dot or arrow operator on a value of type "struct shared_data" instead of on a pointer to another data type. This is not allowed because structs are value types and cannot be used as pointers.
+8. The eighth message: argument of type "void" is incompatible with parameter of type "const void *"
+This message indicates that the compiler is trying to pass a value of type "void" as an argument to a function that takes a pointer to const void, but it is not allowed because void and const are mutually exclusive types.
+9. The ninth message: operator -> or ->* applied to struct shared_data instead of to a pointer type
+This message indicates that the compiler is trying to use the dot or arrow operator on a value of type "struct shared_data" instead of on a pointer to another data type. This is not allowed because structs are value types and cannot be used as pointers.
+10. The tenth message: argument of type "void" is incompatible with parameter of type "const void *"
+This message indicates that the compiler is trying to pass a value of type "void" as an argument to a function that takes a pointer to const void, but it is not allowed because void and const are mutually exclusive types.
+11. The eleventh message: operator -> or ->* applied to struct shared_data instead of to a pointer type
+This message indicates that the compiler is trying to use the dot or arrow operator on a value of type "struct shared_data" instead of on a pointer to another data type. This is not allowed because structs are value types and cannot be used as pointers.
+12. The twelfth message: argument of type "void" is incompatible with parameter of type "const void *"
+This message indicates that the compiler is trying to pass a value of type "void" as an argument to a function that takes a pointer to const void, but it is not allowed because void and const are mutually exclusive types.
+13. The thirteenth message: operator -> or ->* applied to struct shared_data instead of to a pointer type
+This message indicates that the compiler is trying to use the dot or arrow operator on a value of type "struct shared_data" instead of on a pointer to another data type. This is not allowed because structs are value types and cannot be used as pointers.
+14. The fourteenth message: argument of type "void" is incompatible with parameter of type "const void *"
+This message indicates that the compiler

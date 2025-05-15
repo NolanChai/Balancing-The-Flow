@@ -1,218 +1,43 @@
-User: "function hcyl(bottom, height, radius, id) {
-	let radsq = radius * radius
-	let innerRadsq = (radius - 1.2) * (radius - 1.2)
-	height += bottom
-	for (let x = -radius; x <= radius; x++) {
-		for (let y = bottom; y < height; y++) {
-			for (let z = -radius; z <= radius; z++) {
-				let d = x * x + z * z
-				if (d < radsq && d >= innerRadsq) {
-					world.setBlock(p2.x + x, p2.y + y, p2.z + z, id)
-				}
-			}
-		}
-	}
-}
+User: "(Natsuki carefully cradles one of her triplet children - her son Hiroshi - in her arms. As she sits in her bed, she starts breastfeeding her son.)
 
-function cyl(bottom, height, radius, id) {
-	let radsq = radius * radius
-	height += bottom
-	for (let x = -radius; x <= radius; x++) {
-		for (let y = bottom; y < height; y++) {
-			for (let z = -radius; z <= radius; z++) {
-				let d = x * x + z * z
-				if (d < radsq) {
-					world.setBlock(p2.x + x, p2.y + y, p2.z + z, id)
-				}
-			}
-		}
-	}
-}
+Natsuki: "There, there, little guy. Mama's got you."
 
-function cube(bottom, height, radius, id) {
-	let radsq = radius * radius
-	height += bottom
-	for (let x = -radius; x <= radius; x++) {
-		for (let y = bottom; y < height; y++) {
-			for (let z = -radius; z <= radius; z++) {
-				let d = x + z
-				if (d < radsq) {
-					world.setBlock(p2.x + x, p2.y + y, p2.z + z, id)
-				}
-			}
-		}
-	}
-}
+(As little Hiroshi finishes suckling, he dozes off into a peaceful sleep.)
 
-function sphereoid(w, h, d, id) {
-	let w2 = w * w
-	let h2 = h * h
-	let d2 = d * d
-	let w3 = (w - 1.5) * (w - 1.5)
-	let h3 = (h - 1.5) * (h - 1.5)
-	let d3 = (d - 1.5) * (d - 1.5)
+Natsuki: "Aww...! You and your sisters look so cute when you're sleeping."
 
-	for (let y = -h; y < h; y++) {
-		for (let x = -w; x <= w; x++) {
-			for (let z = -d; z <= d; z++) {
-				let n = x * x / w2 + y * y / h2 + z * z / d2
-				let n2 = x * x / w3 + y * y / h3 + z * z / d3
-				if (n < 1 && n2 >= 1) {
-					world.setBlock(p2.x + x, p2.y + y, p2.z + z, id)
-				}
-			}
-		}
-	}
-}
+(Natsuki carefully places Hiroshi into a crib, and looks at the pictures she took while pregnant with her triplets.)
 
-function sleep(ms) {
-	return new Promise(resolve => setTimeout(() => resolve(), ms))
-}
+Natsuki: "I still remember when you and your sisters first started kicking in the clubroom - back when I was 4 months pregnant..."
 
-async function asphereoid(w, h, d, id) {
-	let px = p2.x
-	let py = p2.y
-	let pz = p2.z
-	let w2 = w * w
-	let h2 = h * h
-	let d2 = d * d
-	let w3 = (w - 1.5) * (w - 1.5)
-	let h3 = (h - 1.5) * (h - 1.5)
-	let d3 = (d - 1.5) * (d - 1.5)
+{FLASHBACK}
 
-	for (let y = -h; y < h; y++) {
-		for (let x = -w; x <= w; x++) {
-			for (let z = -d; z <= d; z++) {
-				let n = x * x / w2 + y * y / h2 + z * z / d2
-				let n2 = x * x / w3 + y * y / h3 + z * z / d3
-				if (n < 1 && n2 >= 1) {
-					world.setBlock(px + x, py + y, pz + z, id)
-					await sleep(10)
-				}
-			}
-		}
-	}
-}
+(Natsuki is sitting in the clubroom, reading her favorite manga. Just then, she feels a kick from one of her triplets.)"
 
-function line(x1, y1, z1, x2, y2, z2, id) {
-	let dx = Math.abs(x2 - x1);
-	let dy = Math.abs(y2 - y1);
-	let dz = Math.abs(z2 - z1);
-	let sx = (x1 < x2) ? 1 : -1;
-	let sy = (y1 < y2) ? 1 : -1;
-	let sz = (z1 < z2) ? 1 : -1;
-	let err1 = dx - dy;
-	let err2 = dx - dz;
-	let err3 = dy - dz;
+Assistant: "Natsuki: "Oh... that was a strong one. You two are really active today."
 
-	while (true) {
-		world.setBlock(x1, y1, z1, id);
+(She places her hand on her belly, feeling the little kicks and movements.)
 
-		if (x1 === x2 && y1 === y2 && z1 === z2) break;
-		let e2 = 2 * err1;
-		let e3 = 2 * err2;
-		let e4 = 2 * err3;
+Natsuki: "It's okay, my little ones. Mama's here. You can kick all you want."
 
-		if (e2 > -dy) {
-			err1 -= dy;
-			err2 -= dz;
-			x1 += sx;
-		}
-		if (e2 < dx) {
-			err1 += dx;
-			err3 -= dz;
-			y1 += sy;
-		}
-		if (e3 > -dz) {
-			err2 += dy;
-			err3 += dx;
-			z1 += sz;
-		}
-	}
-}
+(She chuckles softly, continuing to read her manga as her babies continue their playful movements.)
 
-function cloneBlock(sx, sy, sz, dx, dy, dz, w, h, l) {
-	for (let x = 0; x < w; x++) {
-		for (let y = 0; y < h; y++) {
-			for (let z = 0; z < l; z++) {
-				let block = world.getBlock(sx + x, sy + y, sz + z);
-				world.setBlock(dx + x, dy + y, dz + z, block);
-			}
-		}
-	}
-}
+Natsuki: "I wonder if you'll be as hyperactive as your mama when you grow up. Well, I hope you'll have a bit of your daddy's calmness too."
 
-function duplicateBlock(sx, sy, sz, dx, dy, dz, w, h, l, offsetX, offsetY, offsetZ, num) {
-	for (let i = 0; i < num; i++) {
-		cloneBlock(sx, sy, sz, dx + offsetX * i, dy + offsetY * i, dz + offsetZ * i, w, h, l);
-	}
-}
+(She smiles, reminiscing about her husband's calming presence.)
 
-function rotateBlock(sx, sy, sz, dx, dy, dz, w, h, l, angle) {
-	let rad = angle * (Math.PI / 180);
-	let sin = Math.sin(rad);
-	let cos = Math.cos(rad);
+Natsuki: "You know, your daddy always says that you three are going to be troublemakers. But I think you'll just be bundles of joy. No matter what, I love you already."
 
-	for (let x = 0; x < w; x++) {
-		for (let y = 0; y < h; y++) {
-			for (let z = 0; z < l; z++) {
-				let nx = Math.round(x * cos - z * sin);
-				let nz = Math.round(x * sin + z * cos);
-				let block = world.getBlock(sx + x, sy + y, sz + z);
-				world.setBlock(dx + nx, dy + y, dz + nz, block);
-			}
-		}
-	}
-}
+(She holds her belly affectionately, feeling her babies' movements.)
 
-function fillBlock(sx, sy, sz, dx, dy, dz, id) {
-	let w = Math.abs(dx - sx) + 1;
-	let h = Math.abs(dy - sy) + 1;
-	let l = Math.abs(dz - sz) + 1;
+Natsuki: "I can't wait to meet you, my little loves. Just a few more months..."
 
-	let startX = Math.min(sx, dx);
-	let startY = Math.min(sy, dy);
-	let startZ = Math.min(sz, dz);
+{END OF FLASHBACK}
 
-	for (let x = 0; x < w; x++) {
-		for (let y = 0; y < h; y++) {
-			for (let z = 0; z < l; z++) {
-				world.setBlock(startX + x, startY + y, startZ + z, id);
-			}
-		}
-	}
-}
+(Natsuki wipes away a tear, filled with both joy and nostalgia.)
 
-function mirrorBlock("
+Natsuki: "Time flies... You three have brought so much happiness into my life. I can't wait to see the amazing individuals you'll grow up to be."
 
-Assistant: "sx, sy, sz, dx, dy, dz, w, h, l, axis) {
-    if (axis !== "x" && axis !== "y" && axis !== "z") {
-        console.log("Invalid axis specified. Must be 'x', 'y', or 'z'.");
-        return;
-    }
+(She gently kisses the pictures of her growing belly, cherishing the memories.)
 
-    for (let x = 0; x < w; x++) {
-        for (let y = 0; y < h; y++) {
-            for (let z = 0; z < l; z++) {
-                let block = world.getBlock(sx + x, sy + y, sz + z);
-                let nx, ny, nz;
-
-                if (axis === "x") {
-                    nx = (w - 1 - x);
-                    ny = y;
-                    nz = z;
-                } else if (axis === "y") {
-                    nx = x;
-                    ny = (h - 1 - y);
-                    nz = z;
-                } else if (axis === "z") {
-                    nx = x;
-                    ny = y;
-                    nz = (l - 1 - z);
-                }
-
-                world.setBlock(dx + nx, dy + ny, dz + nz, block);
-            }
-        }
-    }
-}"
+Natsuki: "But for now, rest well, my little Hiroshi. Mama will always be here for you, every step of the way.""

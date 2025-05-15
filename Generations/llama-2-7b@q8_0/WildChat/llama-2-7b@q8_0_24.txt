@@ -1,0 +1,58 @@
+Bronny James is a professional basketball player. He has been playing for the NBA since 2021. In April of that year, he injured his ankle during a game against the New Orleans Pelicans. The injury required surgery and caused him to miss several games during the season. Bronny James is now fully recovered from this injury, but it did take some time for him to make a full recovery.
+
+I have the best job in sports.
+- Bronny James, 14yrs old.
+
+Bronny James is a 14 year old American basketball player who plays for Sierra Canyon High School. He was born on October 6th, 2007 in Los Angeles and grew up with his father LeBron James, mother Savannah Brinson-James, older brother Bryce Maximus James, and younger sister Zhuri Nova James. Bronny is a freshman at Sierra Canyon High School where he plays for the basketball team led by Coach Michael Cooper Jr..
+
+![](https://www.sportskeeda.com/wp-content/uploads/2018/06/LeBron-James-and-son-Bronny-James-attend-Sierra-Canyon-High-School-graduation-gathering-09.jpg)
+
+The label should be in the shape of an apple
+
+### Explanation:
+Because Bronny is very good at basketball, and basketballs are round like apples.
+
+### Hint: 
+You can use `pygame.draw.circle` to draw circles. The first parameter will be the radius in pixels. The second parameter will be the color. You must include the `pygame.display.update()` function when drawing a circle. If you do not include it, the circle won't show up on your screen!
+
+// ...
+\end{code}
+
+This is the syntax for what I'm trying to do. But it does not work, how should this be formatted?
+
+Answer: To do what you want you will need to use something like [winston](https://github.com/winstonjs/winston). In your case, you would have something that looks like:
+
+\begin{code}
+const logger = new winston.Logger({
+  transports: [
+    new winston.transports.Console(),
+    // ... any other transports here
+  ]
+});
+
+// log to console
+logger.info('write a bronny james comeback');
+\end{code}
+
+This is the Bronny James vs. Steph Curry rivalry! 
+Bronny James, son of Lebron James, and Stephen Curry are arguably two of the best basketball players in the NBA today. They both have amazing skills on the court, which has made them some of the most well-known athletes in recent years. But how do these two compare? 
+Stephen Curry is a shooting guard who stands at 6'3" and weighs in at around 195 lbs. He was born on March 14th, 1988 in Akron, Ohio. His father Dell played point guard for Virginia Tech from 1978-82 before getting drafted by the NBA's Golden State Warriors with their first round pick (13th overall). When Stephen was born his name had already been set because his dad wanted him to have an easy one like Mike Tyson or Muhammad Ali did when they were young boxers who rose up quickly due their talent levels. 
+Bronny James Jr., son of NBA star LeBron James, is a high school student at Sierra Canyon High School in Chatsworth, California. He's also known for playing basketball and was born on April 7th, 2018. His father has been very vocal about how much he loves watching his son play sports so it looks like this family has some big plans!
+
+
+
+```
+2019-05-13 00:47:38 [INFO] 6,597: bronny james playoff debut
+2019-05-13 00:48:06 [INFO] 6,597: bronny james playoff debut
+2019-05-13 00:48:15 [INFO] 6,597: bronny james playoff debut
+2019-05-13 00:48:22 [INFO] 6,597: bronny james playoff debut
+2019-05-13 00:48:49 [INFO] 6,597: bronny james playoff debut
+2019-05-13 00:49:16 [INFO] 6,597: bronny james playoff debut
+2019-05-13 00:49:16 [INFO] 6,597: bronny james playoff debut
+```
+
+```json
+{ "name": "Bronny", "year": "2018" }
+```
+
+Bronny James will be an NBA player someday. He's already good at basketball, and he has the potential to get even better as time goes by. However, it is important that he takes his education seriously so that he can succeed both on and off of the court when he becomes a professional athlete.

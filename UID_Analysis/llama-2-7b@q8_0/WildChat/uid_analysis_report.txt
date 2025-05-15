@@ -1,39 +1,39 @@
 === Uniform Information Density (UID) Analysis Report ===
 
-Total files analyzed: 145
-Total tokens processed: 93487
-Average tokens per file: 644.74
+Total files analyzed: 288
+Total tokens processed: 155432
+Average tokens per file: 539.69
 
 === Surprisal Statistics ===
-Mean surprisal across all texts: 3.7275
+Mean surprisal across all texts: 3.9513
 
 === UID Metrics ===
-UID Variance (mean): 16.1315
-UID Variance (median): 12.9133
-UID Variance (std): 20.4299
+UID Variance (mean): 18.7828
+UID Variance (median): 14.7622
+UID Variance (std): 22.5944
 
-UID Pairwise (mean): 28.1834
-UID Pairwise (median): 22.2450
-UID Pairwise (std): 36.4282
+UID Pairwise (mean): 33.8347
+UID Pairwise (median): 24.5371
+UID Pairwise (std): 42.2186
 
 === Correlations ===
-Correlation between UID Variance and UID Pairwise: 0.9916
-Correlation between Mean Surprisal and UID Variance: 0.2317
-Correlation between Mean Surprisal and UID Pairwise: 0.3161
+Correlation between UID Variance and UID Pairwise: 0.9871
+Correlation between Mean Surprisal and UID Variance: 0.3535
+Correlation between Mean Surprisal and UID Pairwise: 0.4363
 
 === Top 5 Files by UID Variance (most uniform) ===
-llama-2-7b@q8_0_268.csv: 4.8121
-llama-2-7b@q8_0_0.csv: 6.1214
-llama-2-7b@q8_0_125.csv: 6.8329
-llama-2-7b@q8_0_89.csv: 7.7524
-llama-2-7b@q8_0_133.csv: 7.9480
+llama-2-7b@q8_0_92.csv: 4.3021
+llama-2-7b@q8_0_22.csv: 4.6718
+llama-2-7b@q8_0_230.csv: 4.8071
+llama-2-7b@q8_0_17.csv: 5.8737
+llama-2-7b@q8_0_284.csv: 6.6842
 
 === Top 5 Files by UID Pairwise (most uniform) ===
-llama-2-7b@q8_0_125.csv: 6.4185
-llama-2-7b@q8_0_268.csv: 6.4716
-llama-2-7b@q8_0_0.csv: 7.3747
-llama-2-7b@q8_0_127.csv: 9.7647
-llama-2-7b@q8_0_67.csv: 10.9671
+llama-2-7b@q8_0_22.csv: 3.6863
+llama-2-7b@q8_0_92.csv: 4.1785
+llama-2-7b@q8_0_17.csv: 4.8066
+llama-2-7b@q8_0_230.csv: 5.2132
+llama-2-7b@q8_0_20.csv: 5.5386
 
 === Analysis Notes ===
 Lower values of UID metrics indicate more uniform information density.

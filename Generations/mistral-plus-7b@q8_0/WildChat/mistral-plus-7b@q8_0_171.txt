@@ -1,7 +1,0 @@
-pip install dotenv==0.0.5
-error: subprocess-exited-with-error
-
-× pip subprocess to install backend dependencies did not run successfully.
-│ exit code: 1
-╰─> See above for output.
-note: This error originates from a subprocess, and is likely not a problem with pip.

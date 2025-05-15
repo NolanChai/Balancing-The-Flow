@@ -1,417 +1,51 @@
-User: "I used your code: API_KEY = 'lim5kAIrMtv611VDEYZsc9WmV74TBiGhhJB5LlPGQABAM7vY9NCX1R0gzOvFvURI'
-API_SECRET = '8pIwxRIk7HHCnRJQPyLewn137G76WjJGGVYqmcO329rg0gbymI25K2Q2NYp5C9hT'
-import time
-import requests
-import hmac
-import hashlib
-import datetime as dt
-import pandas as pd
-
-
-
-symbol = 'BCH/USDT'
-interval = '1m'
-lookback = 44640
-
-def generate_signature(api_key, api_secret, endpoint, params):
-    params_string = '&'.join([f'{key}={params[key]}' for key in params])
-    payload = f'{endpoint}\n{params_string}'
-    signature = hmac.new(api_secret.encode(), payload.encode(), hashlib.sha256).hexdigest()
-    return signature
-
-def get_klines(symbol, interval, lookback):
-    endpoint = '/open/api/v2/market/kline'
-
-    end_time = int(time.time() * 1000) # end time is now
-    start_time = end_time - (lookback * 60 * 1000) # start time is lookback minutes ago
-    end_time = start_time + (lookback * 60 * 1000) # calculate new end time
-
-    params = {
-        'symbol': symbol,
-        'interval': interval,
-        'start_time': start_time,
-        'end_time': end_time
-    }
-
-    signature = generate_signature(API_KEY, API_SECRET, endpoint, params)
-
-    url = f"https://www.mexc.com{endpoint}"
-    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
-    data = {**params, 'api_key': API_KEY, 'sign': signature}
-
-    response = requests.get(url, headers=headers, params=data)
-    response.raise_for_status()
-    data = response.json()['data']
-    
-    if not data: # if data is empty, return None
-        print('No data found for the given timeframe and symbol')
-        return None
-
-    ohlc = []
-    for d in data:
-        timestamp = dt.datetime.fromtimestamp(d['time']/1000).strftime('%Y-%m-%d %H:%M:%S')
-        ohlc.append({
-            'Open time': timestamp,
-            'Open': float(d['open']),
-            'High': float(d['high']),
-            'Low': float(d['low']),
-            'Close': float(d['close']),
-            'Volume': float(d['vol'])
-        })
-
-    df = pd.DataFrame(ohlc)
-    df.set_index('Open time', inplace=True)
-
-    return df
-
-df = get_klines(symbol, interval, lookback)
-
-def signal_generator(df):
-    # Calculate EMA and MA lines
-    df['EMA5'] = df['Close'].ewm(span=5, adjust=False).mean()
-    df['EMA10'] = df['Close'].ewm(span=10, adjust=False).mean()
-    df['EMA20'] = df['Close'].ewm(span=20, adjust=False).mean()
-    df['EMA50'] = df['Close'].ewm(span=50, adjust=False).mean()
-    df['EMA100'] = df['Close'].ewm(span=100, adjust=False).mean()
-    df['EMA200'] = df['Close'].ewm(span=200, adjust=False).mean()
-    df['MA10'] = df['Close'].rolling(window=10).mean()
-    df['MA20'] = df['Close'].rolling(window=20).mean()
-    df['MA50'] = df['Close'].rolling(window=50).mean()
-    df['MA100'] = df['Close'].rolling(window=100).mean()
-    # Extract necessary prices from df
-    open_price = df.Open.iloc[-1]
-    close_price = df.Close.iloc[-1]
-    previous_open = df.Open.iloc[-2]
-    previous_close = df.Close.iloc[-2]
-
-    # Calculate the last candlestick
-    last_candle = df.iloc[-1]
-    current_price = df.Close.iloc[-1]
-
-    # Initialize analysis variables
-    ema_analysis = []
-    candle_analysis = []
-
-    if (
-        df['EMA5'].iloc[-1] > df['EMA20'].iloc[-1] > df['EMA50'].iloc[-1] > df['EMA100'].iloc[-1] > df['EMA200'].iloc[-1] and
-        df['EMA5'].iloc[-2] < df['EMA20'].iloc[-2] < df['EMA50'].iloc[-2] < df['EMA100'].iloc[-2] < df['EMA200'].iloc[-2]
-    ):
-        ema_analysis.append('golden_cross')
-    elif (
-        df['EMA5'].iloc[-1] < df['EMA20'].iloc[-1] < df['EMA50'].iloc[-1] < df['EMA100'].iloc[-1] < df['EMA200'].iloc[-1] and
-        df['EMA5'].iloc[-2] > df['EMA20'].iloc[-2] > df['EMA50'].iloc[-2] > df['EMA100'].iloc[-2] > df['EMA200'].iloc[-2]
-    ):
-        ema_analysis.append('death_cross')
-
-    if (
-        open_price < close_price and
-        previous_open > previous_close and
-        close_price > previous_open and
-        open_price <= previous_close
-    ):
-        candle_analysis.append('buy')
-    elif (
-        open_price > close_price and
-        previous_open < previous_close and
-        close_price < previous_open and
-        open_price >= previous_close
-    ):
-        candle_analysis.append('sell')
-
-    # Generate signal based on strategy
-    if 'golden_cross' in ema_analysis and 'buy' in candle_analysis:
-        final_signal = 'buy'
-    elif 'death_cross' in ema_analysis and 'sell' in candle_analysis:
-        final_signal = 'sell'
-    else:
-        final_signal = ''
-
-    return final_signal
-
-df =  get_klines(symbol, '1m', 44640)
-
-
-while True:
-    df = get_klines(symbol, '1m', 44640) # await the coroutine function here
-    if df is not None:
-        df = get_klines(symbol, '1m', 44640)
-        signal = signal_generator(df)
-    if signal is not None:
-        print(f"The signal time is: {dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}:{signal}")
-        time.sleep(1)
-But I getting ERROR: Traceback (most recent call last):
-  File "c:\Users\service\.vscode\jew_bot.py", line 67, in <module>
-    df = get_klines(symbol, interval, lookback)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\Users\service\.vscode\jew_bot.py", line 43, in get_klines
-    response.raise_for_status()
-  File "C:\Users\service\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1021, in 
-raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://www.mexc.com/open/api/v2/market/kline?symbol=BCH%2FUSDT&interval=1m&start_time=1686126837000&end_time=1688805237000&api_key=lim5kAIrMtv611VDEYZsc9WmV74TBiGhhJB5LlPGQABAM7vY9NCX1R0gzOvFvURI&sign=d3b6249dbc96fe354f0dd714b140bab790d58f32279ba428fa9a91d0780ce202
-Can you give me right code please"
-
-Assistant: "The error you're encountering is a "400 Bad Request" error, which means that the request you're sending to the API is invalid. This could be due to various reasons, such as incorrect API key or secret, wrong endpoint, or incorrect parameters.
-
-To troubleshoot the issue, you can try the following:
-
-1. Double-check your API key and secret to ensure they are correct.
-2. Verify that the endpoint you're using (`/open/api/v2/market/kline`) is the correct one for retrieving kline data.
-3. Check if the symbol you're using (`BCH/USDT`) is supported by the API. You can refer to the API documentation or contact the API provider for more information on supported symbols.
-4. Ensure that the interval and lookback parameters are valid and appropriate for the API. You can also try using different values to see if that resolves the issue.
-5. Make sure you have a stable internet connection and that the API server is accessible.
-
-Here's an updated version of your code with some modifications:
-
-```
-import time
-import requests
-import hmac
-import hashlib
-import datetime as dt
-import pandas as pd
-
-API_KEY = 'Your API Key'
-API_SECRET = 'Your API Secret'
-
-symbol = 'BCHUSDT'
-interval = '1m'
-lookback = 1440
-
-def generate_signature(api_key, api_secret, endpoint, params):
-    params_string = '&'.join([f'{key}={params[key]}' for key in params])
-    payload = f'{endpoint}\n{params_string}'
-    signature = hmac.new(api_secret.encode(), payload.encode(), hashlib.sha256).hexdigest()
-    return signature
-
-def get_klines(symbol, interval, lookback):
-    endpoint = '/open/api/v2/market/kline'
-
-    end_time = int(time.time() * 1000) # end time is now
-    start_time = end_time - (lookback * 60 * 1000) # start time is lookback minutes ago
-    end_time = start_time + (lookback * 60 * 1000) # calculate new end time
-
-    params = {
-        'symbol': symbol,
-        'interval': interval,
-        'start_time': start_time,
-        'end_time': end_time
-    }
-
-    signature = generate_signature(API_KEY, API_SECRET, endpoint, params)
-
-    url = f"https://www.mexc.com{endpoint}"
-    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
-    data = {**params, 'api_key': API_KEY, 'sign': signature}
-
-    response = requests.get(url, headers=headers, params=data)
-    response.raise_for_status()
-    data = response.json()['data']
-    
-    if not data: # if data is empty, return None
-        print('No data found for the given timeframe and symbol')
-        return None
-
-    ohlc = []
-    for d in data:
-        timestamp = dt.datetime.fromtimestamp(d['time']/1000).strftime('%Y-%m-%d %H:%M:%S')
-        ohlc.append({
-            'Open time': timestamp,
-            'Open': float(d['open']),
-            'High': float(d['high']),
-            'Low': float(d['low']),
-            'Close': float(d['close']),
-            'Volume': float(d['vol'])
-        })
-
-    df = pd.DataFrame(ohlc)
-    df.set_index('Open time', inplace=True)
-
-    return df
-
-def signal_generator(df):
-    # Calculate EMA and MA lines
-    df['EMA5'] = df['Close'].ewm(span=5, adjust=False).mean()
-    df['EMA10'] = df['Close'].ewm(span=10, adjust=False).mean()
-    df['EMA20'] = df['Close'].ewm(span=20, adjust=False).mean()
-    df['EMA50'] = df['Close'].ewm(span=50, adjust=False).mean()
-    df['EMA100'] = df['Close'].ewm(span=100, adjust=False).mean()
-    df['EMA200'] = df['Close'].ewm(span=200, adjust=False).mean()
-    df['MA10'] = df['Close'].rolling(window=10).mean()
-    df['MA20'] = df['Close'].rolling(window=20).mean()
-    df['MA50'] = df['Close'].rolling(window=50).mean()
-    df['MA100'] = df['Close'].rolling(window=100).mean()
-
-    # Extract necessary prices from df
-    open_price = df.Open.iloc[-1]
-    close_price = df.Close.iloc[-1]
-    previous_open = df.Open.iloc[-2]
-    previous_close = df.Close.iloc[-2]
-
-    # Calculate the last candlestick
-    last_candle = df.iloc[-1]
-    current_price = df.Close.iloc[-1]
-
-    # Initialize analysis variables
-    ema_analysis = []
-    candle_analysis = []
-
-    if (
-        df['EMA5'].iloc[-1] > df['EMA20'].iloc[-1] > df['EMA50'].iloc[-1] > df['EMA100'].iloc[-1] and
-        df['EMA5'].iloc[-2] < df['EMA20'].iloc[-2] < df['EMA50'].iloc[-2] < df['EMA100'].iloc[-2]
-    ):
-        ema_analysis.append('golden_cross')
-    elif (
-        df['EMA5'].iloc[-1] < df['EMA20'].iloc[-1] < df['EMA50'].iloc[-1] < df['EMA100'].iloc[-1] and
-        df['EMA5'].iloc[-2] > df['EMA20'].iloc[-2] > df['EMA50'].iloc[-2] > df['EMA100'].iloc[-2]
-    ):
-        ema_analysis.append('death_cross')
-
-    if (
-        open_price < close_price and
-        previous_open > previous_close and
-        close_price > previous_open and
-        open_price <= previous_close
-    ):
-        candle_analysis.append('buy')
-    elif (
-        open_price > close_price and
-        previous_open < previous_close and
-        close_price < previous_open and
-        open_price >= previous_close
-    ):
-        candle_analysis.append('sell')
-
-    # Generate signal based on strategy
-    if 'golden_cross' in ema_analysis and 'buy' in candle_analysis:
-        final_signal = 'buy'
-    elif 'death_cross' in ema_analysis and 'sell' in candle_analysis:
-        final_signal = 'sell'
-    else:
-        final_signal = ''
-
-    return final_signal
-
-while True:
-    df = get_klines(symbol, interval, lookback)
-    if df is not None:
-        signal = signal_generator(df)
-    if signal:
-        print(f"The signal time is: {dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Signal: {signal}")
-    time.sleep(60) # Sleep for 1 minute
-```
-
-Make sure to replace `'Your API Key'` and `'Your API Secret'` with your actual credentials. Also, note that the code assumes you have the necessary libraries installed (requests, pandas). Adjust the sleep time (`time.sleep(60)`) according to your desired interval.
-"
-
-User: "I added my MEXC api key , but I getting same ERROR"
-
-Assistant: "If you have double-checked your API key and secret and ensured that they are correct, the issue might be related to the specific parameters being used for the API request.
-
-You can try adjusting the `lookback` parameter to a smaller value, such as `1440`, which corresponds to a 24-hour period. This will help narrow down the timeframe and reduce the amount of data being requested.
-
-Here's an updated version of the code with the `lookback` parameter set to `1440`:
-
-```python
-import time
-import requests
-import hmac
-import hashlib
-import datetime as dt
-import pandas as pd
-
-API_KEY = 'Your API Key'
-API_SECRET = 'Your API Secret'
-
-symbol = 'BCHUSDT'
-interval = '1m'
-lookback = 1440
-
-# Rest of the code...
-```
-
-If the error persists, it would be best to check the API documentation provided by MEXC or reach out to their support for further assistance. They will be able to provide specific guidance on the correct parameters and request format for retrieving kline data from their API.
-
-Additionally, ensure that your API key has the necessary permissions to access the endpoint you are using (`/open/api/v2/market/kline`). Some APIs require specific permissions to access certain data or perform specific actions."
-
-User: "But I need lookback 44640 min ago !"
-
-Assistant: "Apologies for the confusion. If you specifically require a `lookback` of 44640 minutes (31 days), you'll need to adjust the way you calculate the `start_time` and `end_time` for the API request.
-
-Replace the following lines in the `get_klines` function:
-
-```python
-end_time = int(time.time() * 1000) # end time is now
-start_time = end_time - (lookback * 60 * 1000) # start time is lookback minutes ago
-end_time = start_time + (lookback * 60 * 1000) # calculate new end time
-```
-
-with:
-
-```python
-start_time = int(time.time() - (lookback * 60))
-end_time = int(time.time())
-```
-
-This will calculate the `start_time` as 44640 minutes ago and the `end_time` as the current time.
-
-Here's the updated code snippet:
-
-```python
-import time
-import requests
-import hmac
-import hashlib
-import datetime as dt
-import pandas as pd
-
-API_KEY = 'Your API Key'
-API_SECRET = 'Your API Secret'
-
-symbol = 'BCHUSDT'
-interval = '1m'
-lookback = 44640
-
-# Rest of the code...
-
-def get_klines(symbol, interval, lookback):
-    endpoint = '/open/api/v2/market/kline'
-
-    start_time = int(time.time() - (lookback * 60))
-    end_time = int(time.time())
-
-    params = {
-        'symbol': symbol,
-        'interval': interval,
-        'start_time': start_time,
-        'end_time': end_time
-    }
-
-    # Rest of the code...
-```
-
-Please note that the requested `lookback` of 44640 minutes might exceed the available historical data provided by the MEXC API. Make sure to check the API's documentation to verify the maximum available historical data and adjust the `lookback` accordingly."
-
-User: "Give me full updated code please"
-
-Assistant: "Certainly! Here's the full updated code with the modifications to accommodate a `lookback` of 44640 minutes:
-
-```python
-import time
-import requests
-import hmac
-import hashlib
-import datetime as dt
-import pandas as pd
-
-API_KEY = 'Your API Key'
-API_SECRET = 'Your API Secret'
-
-symbol = 'BCHUSDT'
-interval = '1m'
-lookback = 44640
-
-def generate_signature(api_key, api_secret, endpoint, params):
-    params_string = '&'.join([f'{key}={params[key]}' for key in params])
-    payload = f'{endpoint}\n{params_string}'
-    signature = hmac.new(api"
+User: "starcraft 2 races and characters meets Slender Man"
+
+Assistant: "As an AI language model, I can help you envision a scenario where StarCraft 2 races and characters meet Slender Man. Please note that this is purely hypothetical and not an official crossover.
+
+In the vast universe of StarCraft, where the Terrans, Protoss, and Zerg wage war for control, a mysterious and sinister presence suddenly appears. Known as Slender Man, this enigmatic being possesses an otherworldly aura that seems to defy the laws of the universe.
+
+At first, the Terrans encounter Slender Man during one of their missions. A squad of Marines exploring a derelict spaceship finds themselves stalked by the tall and faceless entity. Terrans, known for their resilience and resourcefulness, quickly recognize the threat and arm themselves with flamethrowers and powerful Gauss rifles to combat this supernatural menace.
+
+The Protoss, with their highly advanced technology and psychic powers, also encounter Slender Man on their homeworld of Aiur. Sensing the disturbance caused by his presence, the Protoss high templars and dark templars gather to confront the mysterious being. Their disciplined and focused minds shield them from Slender Man's telepathic influence, allowing them to engage him with their formidable psionic blades and energy-based weaponry.
+
+Lastly, the insectoid Zerg, sensing Slender Man's potential as a powerful ally or threat, send their relentless swarm to investigate. Zerglings, Hydralisks, and even some specialized units, like the infamous Queen of Blades Kerrigan, join forces to face this new adversary. With their overwhelming numbers and adaptability, the Zerg swarm attempt to overwhelm Slender Man, using corrosive acid and razor-sharp claws to weaken his ethereal form.
+
+As the StarCraft 2 races engage Slender Man across the galaxy, a fierce battle ensues. Slender Man's ability to teleport, distort reality, and manipulate minds makes him a formidable enemy. Both his intangibility and his unnatural presence create a tactical challenge for all three races.
+
+Ultimately, the races of StarCraft 2 must find a way to counter Slender Man's eldritch powers. Perhaps with the Protoss's psionic might, the Terrans' technological ingenuity, and the Zerg's ability to adapt, they will gain the upper hand. Or, maybe they must search for artifacts or ancient knowledge that will help them unveil Slender Man's weaknesses before it's too late.
+
+In this surreal crossover concept, the StarCraft 2 universe faces an unprecedented threat from Slender Man, challenging the races to unite against a common, terrifying enemy."
+
+User: "starcraft 2 races and characters meets Siren Head"
+
+Assistant: "In this imagined scenario, the world of StarCraft 2 collides with the eerie presence of Siren Head, a towering creature with sirens for a head. This meeting of the two distinct universes creates an atmosphere of fear and desperation as the races of StarCraft 2 realize they must join forces to combat this monstrous threat.
+
+The Terrans, with their tactical prowess and advanced technology, are the first to encounter Siren Head. As they explore distant planets in search of resources, the haunting sound of Siren Head's deafening wails sends shivers down their spines. Armed with heavy artillery and powered armor, the Terrans organize squads of marines and siege tanks to withstand the relentless pursuit of this nightmarish creature.
+
+Meanwhile, the Protoss, with their powerful psionic abilities and highly advanced weaponry, sense the unnatural presence of Siren Head. These psionically gifted warriors gather their forces, including zealots, stalkers, and high templars. Their disciplined minds act as a beacon of light amidst the darkness, channeling their psychic energies and unleashing devastating psionic storms in an attempt to suppress Siren Head's resonance.
+
+The insectoid Zerg, always seeking new organisms to assimilate into their hive, are drawn to the unique biological signatures emitted by Siren Head. Zerglings, Roaches, and even some of the more monstrous strains, like Ultralisks, rally together. With their relentless swarms and regenerative capabilities, the Zerg attempt to overpower Siren Head, utilizing acid-spewing banelings and devastating melee attacks.
+
+Despite their efforts, the races of StarCraft 2 find it difficult to combat Siren Head's terrifying presence. Its ability to manipulate sound and mimic distress signals makes it a challenging opponent. As the battles ensue across various planets, the desperate need for a unified strategy becomes evident.
+
+Realizing that their individual strengths alone are insufficient, the Terrans, Protoss, and Zerg put aside their differences and form a temporary alliance against Siren Head. The tactical cunning of the Terrans combines with the psionic might of the Protoss and the overwhelming numbers of the Zerg, as they coordinate assaults and launch coordinated attacks on Siren Head's vulnerable points.
+
+To finally defeat this monstrous being, they must exploit its weaknesses. Whether it is by targeting the vulnerable wires that connect its siren heads or exploiting its heightened senses with dazzling displays of light and sound, the combined forces of the StarCraft 2 races must remain vigilant and adaptive.
+
+In this unsettling crossover, the races of StarCraft 2 are pushed to their limits as they face the terrifying presence of Siren Head. They find unity in the face of a common enemy, bringing together their strengths, knowledge, and technologies. Only through their combined efforts can they hope to resist and ultimately overcome the overwhelming power of Siren Head."
+
+User: "starcraft 2 races and characters meets The Backrooms"
+
+Assistant: "In this imagined scenario, the StarCraft 2 universe collides with the unsettling realm of The Backrooms, a mysterious and endless labyrinth of monotone yellow walls and flickering fluorescent lights. The meeting of these two worlds creates an atmosphere of dread and confusion as the races of StarCraft 2 find themselves trapped in this nightmarish dimension.
+
+The Terrans, known for their resilience and adaptability, are the first to stumble upon The Backrooms while exploring uncharted territories in the galaxy. They find themselves trapped within the claustrophobic and maze-like corridors, haunted by the constant hum of flickering lights and the eerie echoes of their footsteps. Armed with their powerful gauss rifles and explosives, the Terrans form desperate squads to navigate this dimension and defend themselves against hostile creatures that lurk within.
+
+Meanwhile, the Protoss, with their advanced technology and psionic abilities, detect the anomaly of The Backrooms and sense the unsettling energy emanating from its never-ending corridors. The Protoss warriors, such as templars and immortals, channel their energies and form protective barriers as they navigate the monotonous rooms. They rely on their powerful psi blades and energy-based weaponry to fend off the enigmatic entities that dwell within The Backrooms.
+
+The Zerg, always seeking new life forms to assimilate into their hive, sense the strange energies emanating from The Backrooms and instinctively investigate. The endless corridors present unique, if perplexing, environments for the Zerg to adapt their physiology. Zerglings, Hydralisks, and even specialized units like the infestors, writhe through the hallways, their acidic secretions and razor-sharp claws ready to repel any threat that dares to attack.
+
+As the races of StarCraft 2 delve deeper into The Backrooms, they discover that this dimension is not only endless but also home to a variety of hostile entities. The relentless pursuit of creatures such as flesh interfaces, hounds, and distorted humanoids tests the combined strength and sanity of the StarCraft 2 forces.
+
+In a cruel twist of fate, the StarCraft 2 races find themselves cut off from their usual technologies and resources. They must rely on their wits, survival skills, and improvised weaponry to navigate the maze-like dimensions of The Backrooms. Struggling to maintain their sanity and avoid getting lost in the labyrinth, they search desperately for an exit or a way to return to their own universe.
+
+This unsettling crossover demonstrates the resilience and resourcefulness of the races of StarCraft 2 in the face of the surreal nightmare that is The Backrooms. Together, they must confront the deeply unsettling environment and the enigmatic entities within, using their unique strengths and abilities to survive and find a way back to their world."

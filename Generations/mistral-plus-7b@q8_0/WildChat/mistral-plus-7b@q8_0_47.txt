@@ -1,0 +1,32 @@
+```
+
+local sql = string.format("update club_info set `%s` = \"%s\" where cid = %d", field_name, value, cid);
+
+if sql:sub(1, 2) ~= "up" then
+        return false;
+    end
+    local count = self:QueryNumber(sql);
+    if tonumber(count) == 0 then
+        return true;
+    else
+        return false;
+    end
+```
+
+其中的sql语句不会报错，但是执行结果为空。原因在于使用字符串格式化时没有加引号括起来。使用string.format函数时，格式化后的字符串是一个临时的字符串，需要赋值给变量或直接打印输出才能生成真正的字符串。当我们使用string.format函数将sql语句格式化之后，字符串中的单引号并没有被替换为实际的字符串。因此，sql语句在执行时不包含任何值，导致查询结果为空。
+
+正确的写法如下：
+
+```lua
+local sql = string.format("update club_info set `%s` = '%s' where cid = %d", field_name, value, cid);
+
+if sql:sub(1, 2) ~= "up" then
+        return false;
+    end
+    local count = self:QueryNumber(sql);
+    if tonumber(count) == 0 then
+        return true;
+    else
+        return false;
+    end
+```

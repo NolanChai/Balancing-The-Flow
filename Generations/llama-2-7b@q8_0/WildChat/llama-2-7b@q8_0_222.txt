@@ -1,0 +1,11 @@
+\end{code}
+
+Comment: Have you tried `<?php print $value_xml->url[$i]->news->title; ?>` to see if the data is actually being pulled?
+
+Comment: @Victor yes. And it shows nothing in the browser
+
+Answer: You're using `$latest_from_softonic = new StdClass;` before you even define it, so your code will throw an error (which you haven't mentioned).  This line should be moved to after you define the class name.  Then the line `print_r ($latest_from_softonic);` would then work as expected since the variable is defined and no error has occurred.
+
+Comment: i am very sorry my mistake . but even after that i get nothing in the browser
+
+Comment: @BhavyaVivek: What do you get when you `print_r($value_title);`?  Or, what does `var_dump()` output?  What is the value of `$value_xml->url[$i]->news->title;` after the line `array_push($latest_from_softonic->title, $value_title);`

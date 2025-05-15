@@ -1,0 +1,5 @@
+You're trying to solve the problem by iterating over the list and comparing each element with a given value. However, your approach is not efficient because it makes N^2 comparisons, where N is the length of the input list. Instead, you can use the built-in function 'sorted()' which takes an unsorted list as input and returns a sorted copy of it in O(N log N) time.
+
+Here's a more efficient way to solve this problem using 'sorted():'
+
+x =

@@ -1,7 +1,3 @@
-Create 4 prompts for each of the following concepts, varying in details description, environment, compositions, atmosphere, and realization. Include at least one photographic style prompt with lens type and size.
-                            
-                            Concepts:
-                            1. A forest glade on a misty morning, dappled sunlight filtering through the trees, ferns and mushrooms growing on the forest floor.
-                            2. An underwater scene, colorful coral reef with exotic fish swimming among it.
-                            3. A sunset on the beach, golden light reflecting off the water, sand beneath your feet.
-                            4. A bustling city street, crowds of people hurrying about their business, bright lights and tall buildings in the background.
+the way you would do this is first create a timer that fires every 30-60 minutes. Inside that timer run a check to see if there are any players nearby (within X distance). If so, then spawn a prop with a marker on it and add the marker to each player who was within range at the time of the timer firing. Then remove the prop after a set period of time.
+
+To do this, you would need to use a combination of server-side functions such as SetTimeout() to create the timer and AddBlipForCoord() to spawn the prop with a marker on it.

@@ -1,0 +1,22 @@
+[QUOTE=“hongmingcai”]
+Hi,
+I tried to implement the code from your forum post on our dev system and got errors.
+
+Below are some of the error messages:
+Error: java.sql.SQLSyntaxErrorException: ORA-01732: data must be same type as declared in the column at line 2
+Error: java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (FG_PRD.FK_CUSTOMERID) violated – parent key not found
+Error: java.lang.NullPointerException
+[/QUOTE]
+
+Hi,
+Could you please help us to clarify these issues? Which version are you using? I have tested with 12.1.3 and it works fine.
+
+The production system of the current CCMS has several improvements over the old system:
+
+- improved and automated quality control;
+- increased transparency (by publishing information on a public website);
+- an improved process for stakeholders to submit comments.
+
+However, the annual statement still needs significant improvement to fulfil our expectations in terms of clarity and transparency. We are aware of the current issues with the Annual Statement, particularly relating to the number of cases that we have produced during the year. This is a concern for all parties involved, including the CCMS stakeholders, the National Crime Agency (NCA) and Her Majesty’s Courts & Tribunal Service (HMCTS).
+
+We are working with the HMCTS to improve this information in the next update of the Annual Statement. We will be making a commitment in our business plan to ensure that these issues are addressed.

@@ -1,0 +1,141 @@
+Asked by Anonymous on May 20, 2019.
+
+There is no one right answer for this question since it depends on the specific website you’re trying to optimize. However, in general, you can reduce page load time by minimizing the number of HTTP requests, reducing server response time, and using browser caching. Additionally, you can optimize your images to make them smaller without losing quality, and you can use a content delivery network (CDN) to help distribute your content more efficiently.
+
+FOUC stands for the "Flash of Unstyled Content" and refers to a flash in which your page appears without any CSS applied. You'll often see this with pages that have CSS loaded after images or other assets have been downloaded by the browser.
+
+For example, on my site http://www.matthewjamestaylor.com/, if you open up the page in Chrome's inspector and force a break between your JavaScript loading and your CSS loading (this is easy to do with the F12 DevTools) then you will see this:
+
+If you wait for my JavaScript to download first, then you'll get a blank screen until the CSS is loaded. This means that users browsing on slower connections may have to wait a while before they can see anything.
+
+Of course, if your site has no images or other assets to load and it only takes a few milliseconds for all your files (including JavaScript) to be downloaded then this isn't really an issue. It becomes more important with pages that have a lot of assets like video or image galleries, because the longer users are waiting before seeing anything, the more likely they are going to leave and not come back.
+
+So what can you do about it? The answer is pretty simple: just make sure your JavaScript loads after your CSS! To do this you'll need to change some of the links in your page header. This is especially important when using jQuery or other libraries, because these files will often be linked at the top of pages and therefore can load before your CSS.
+
+It's worth noting that most browsers will cache the first version of each file they download, so you can usually get away with a single link in your header to each of these files (such as jQuery). Just make sure it loads after all other CSS and images!
+
+Let’s take a look at some examples:
+
+### Example 1: jQuery is loaded before CSS
+
+Here's how the page header looks if we load jQuery first and then our custom CSS:
+
+```<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Flash of Unstyled Content (FOUC) - Matthew James Taylor</title>
+<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 7]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+<link rel="stylesheet" type="text/css" href="/styles.css">
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>```
+
+And here's what it looks like if we force a break between the two files in Chrome:
+
+It's pretty simple to see how this would be a bad user experience, especially on mobile devices with slow connections! Let's change it so that our JavaScript loads after our CSS and see what happens:
+
+### Example 2: jQuery is loaded after CSS
+
+Here's the new page header:
+
+```<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Flash of Unstyled Content (FOUC) - Matthew James Taylor</title>
+<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 7]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>```
+
+And here's what it looks like with the same break:
+
+Much better! You can see that there is no flash of unstyled content, because our CSS has loaded before any other files on the page (including jQuery). This will make for a much more pleasant user experience.
+
+### Example 3: Custom JavaScript is loaded after CSS
+
+If you have custom JavaScript in your header which loads after the stylesheet then it will work exactly as expected when FOUC occurs, but if there are any other files that need to load before your script, such as jQuery or Modernizr, then they will flash on the page while waiting for your code to run. This can be avoided by placing a break between these two assets so that they both download at once:
+
+```<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Flash of Unstyled Content (FOUC) - Matthew James Taylor</title>
+<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 7]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+<link rel="stylesheet" type="text/css" href="/styles.css">
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="/my_javascript.js"></script>
+</head>```
+
+This will make sure that your JavaScript loads after your stylesheet and any other assets, but before jQuery (or whatever else). This is the recommended way to load scripts in order to avoid FOUC issues!
+
+### Example 4: Modernizr is loaded after CSS
+
+If you're using Modernizr as part of your page header then it will automatically load after the stylesheet and any other assets. This means that there shouldn't be any flash if they are all downloaded at once, but if you do need to place a break between these two files for some reason (such as loading jQuery before CSS) then you can use this method instead:
+
+```<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Flash of Unstyled Content (FOUC) - Matthew James Taylor</title>
+<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 7]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>```
+
+This will make sure that your JavaScript loads after your stylesheet and any other assets, but before jQuery (or whatever else). This is the recommended way to load scripts in order to avoid FOUC issues!
+
+### Example 5: Your website has a lot of images or other assets that take time for users with slow connections.
+
+If you have a lot of images or other assets on your site, such as video or image galleries, then they can cause the user's browser to flash if they haven't downloaded all the files before CSS is applied. This can be avoided by using sprites and/or lazy loading for these files instead of downloading them in bulk:
+
+```<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Flash of Unstyled Content (FOUC) - Matthew James Taylor</title>
+<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 7]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>```
+
+This will make sure that your JavaScript loads after your stylesheet and any other assets, but before jQuery (or whatever else). This is the recommended way to load scripts in order to avoid FOUC issues!
+
+### Example 6: Your website has a lot of JavaScript that takes time for users with slow connections.
+
+If you have a lot of JavaScript on your site then it can cause the user's browser to flash if they haven't downloaded all the files before CSS is applied. This can be avoided by using sprites and/or lazy loading for these files instead of downloading them in bulk:
+
+```<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Flash of Unstyled Content (FOUC) - Matthew James Taylor</title>
+<!--[if lt IE 9]><script src="//html5shim.googlecode.
+
+Global variables are the bane of all programmers. I am not sure if they are truly “evil” per se, but they most certainly make life more difficult when attempting to debug a problem. In this article, we’ll see why global and static objects can be problematic.
+
+The following is a C program that illustrates the problem:
+
+```
+#include <stdio.h>
+int g_a = 10;
+void f(void)
+{
+   int a = 1;
+   printf("%d\n", a);
+}
+void main()
+{
+   printf("%d\n", g_a); // prints 10
+   f();                // prints 1
+   g_a = 20;
+   printf("%d\n", g_a); // prints 20
+   g_a++;              // increments the variable
+   printf("%d\n", g_a); // prints 21
+}
+```
+
+If you run this program, it will print out the numbers 10, 1, 20 and 21. Now, here’s the problem: the variable g_a has two different values at the same time! That’s not a very good thing because when you try to debug your application later on, it could be difficult to figure out which version of this variable is the one that you really want to change.
+
+The first value for g_a is 10 and comes from the declaration of the global variable in main(). The second time we see it, g_a has been reassigned to the value 20; however, there’s a third version of this variable which has not yet been assigned anything but still exists within the scope of function f().
+
+If you were to run this program and then attempt to debug it later on, how would you know what value for g_a is actually being used? It could be confusing if you are trying to figure out where a bug is coming from. In addition, since there are now three different versions of g_a in memory at once (10, 20 and the one within function f()), it’s possible that these variables will step on each others’ toes when you change one value but not all values; which means that any changes made will have unpredictable results since they won’t affect every single version of g_a in memory.
+
+The same concept can be applied to static objects as well. This is because the compiler will generate a piece of code that creates the object and then initializes it before running your program; this means you are actually creating two different versions of an object: one at compile time (statically) and another during execution. It’s possible for these two different versions to overwrite each other since they both share the same name.
+
+This problem with global and static objects is why some people say they should be avoided in C++ programs as well; however, it can also happen with other programming languages such as Java or PHP too.

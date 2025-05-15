@@ -1,0 +1,27 @@
+- you are on the map and u see all of your ships
+- you can drag your mouse to see the other player's map (who's turn it is)
+- You fire a shot at that other person's map
+- If they hit one of your ships, it will get damaged (less health)
+- If they miss u will see 'you miss' in red on their screen
+- If they have no more ships left u win (game over for them)
+- if you have no more ships left they win (game over)
+
+## Screenshots
+
+I hope you can get a feel of the gameplay from these images. I would like to make it so you can drag your mouse and see the other players map and fire shots at their ships (if it's ur turn). You also will be able to zoom in and out with your scroll wheel on your mouse.
+
+Hello, I made a plugin that is based on the one proposed by MisterFantastic here : https://forum.cubiccast.com/viewtopic.php?f=14&t=8825
+It adds some features and it can be used to play music as an MP3 or streamed via the internet.
+The plugin works with CubicCast v9.
+
+- The plugin has a database that will store songs in the category "Music". If you want to add music, you have to go through this page :
+https://www.cubiccast.com/plugins.php?plugin=music_manager&page=add_song&cid=19&pageno=1
+This is the link if it is a streamed song or this one : https://www.cubiccast.com/plugins.php?plugin=music_manager&page=add_song&cid=20&pageno=1
+if it's an mp3.
+- This page has 4 fields to fill in.
+The name is the title of your song, then the artist and album if you want. Finally a description.
+On this last point, you can enter the link to the streamed music or add the mp3 file to the server. For now you can only select an mp3 that is on the same server as CubicCast, I would like to change that later.
+- When you have entered your data, save and click on "Play". If everything went well, it will be displayed in a new window with buttons to stop, pause or restart. The plugin will then send the file or stream to the player of the live broadcast.
+The plugin has 2 pages : "Music" and "Settings"
+- On the music page is displayed all the songs that have been entered previously (see screenshot below)
+- In Settings you can configure the size of the player (width, height), the color of the buttons, etc.

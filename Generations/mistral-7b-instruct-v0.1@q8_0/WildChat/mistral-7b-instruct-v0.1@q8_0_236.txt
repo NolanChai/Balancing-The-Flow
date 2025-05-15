@@ -1,32 +1,5 @@
-```vbnet
-You have successfully installed express package and started the server on port 3000. The command `npm install express --save` was used to install the express package, and the command `node server.js` was used to start the server. It is recommended that you run the `npm fund` command to check for any packages that need funding.
-```
+In accordance with Article 2 of the Charter of the Commission for Studying Constitutional Government, any documents other than legal codes that must be examined and compiled shall be submitted to the princes and grand ministers of the Grand Council for review and approval before implementation (Grand Secretariat, 1979, p. 51). However, it was unclear what constituted "important matters" under this provision. This ambiguity allowed the Commission for Studying Constitutional Government and Grand Councilors to usurp power from the Political Advisory Council, which led to a potential conflict of interest between the legislative and executive powers.
 
-To start your Express server, you need to create a file named `server.js` in your project directory and write the following code:
-```javascript
-const express = require('express');
-const app = express();
-const port = 3000;
+Furthermore, it is worth noting that the Commission for Studying Constitutional Government was both a legislative body and attached to the supreme executive organ (the Grand Council), which meant that its legislation and execution were integrated. This integration posed a threat to the separation of powers, as the interpreter of controversies would inevitably be biased in favor of the government (the Grand Council and ministries) and against the Political Advisory Council if any conflicts were to arise in the future.
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
-
-app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`);
-});
-```
-This code sets up a basic Express server that listens for requests on port 3000 and responds with "Hello World!" when a request is received.
-
-After writing this code, save the file `server.js`, open a terminal or command prompt, navigate to your project directory, and run the following commands:
-```csharp
-npm install express --save
-node server.js
-```
-The first command installs the Express package from npm as a dependency in your project (which is necessary for running the server), and the second command starts your server by running the `server.js` file.
-
-If you receive any errors, make sure that you have installed all of the required dependencies by running:
-```csharp
-npm install
-```
-This will install all of the packages specified in your `package.json` file. If you still encounter issues, please provide more details about the error messages you are receiving.
+In response to this issue, it is necessary to clarify the legislative scope of the Political Advisory Council and establish a clear line of authority between it and the Commission for Studying Constitutional Government. Prior to the establishment of the Political Advisory Council, the Commission was led by the Grand Council and held supreme executive power, compiling legal codes on one hand and issuing executive sanctions on the other (Li, 2011, p. 233). This separation of powers would ensure that the legislative and executive branches are independent and free from conflicts of interest.

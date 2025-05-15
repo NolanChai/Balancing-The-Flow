@@ -1,63 +1,11 @@
-[INSTR]
-Step-1: Install .Net Framework 4.5
-Step-2: Add Reference to the System.Management library by Right Clicking on References -> Manage NuGet Packages -> Select “System.Management”  -> click install button  and Restart Visual Studio
-Step-3: Add Following Code into your Program.cs file (Replace IP with your own ip)
-[/INSTR]
+# What does this mean?
 
+- ## Red Flower with white stripes
 
+    - Red flowers are a sign of love and passion. In this case, the flower represents your need for a loving relationship and strong partnership. White lines, however, indicate that you're not quite ready to commit to a romantic partner yet. You might be in the midst of an emotional rollercoaster or struggling with personal issues.
+- ## Red Flower with white stripes meaning
 
-```
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Management;
+    - Red Flower with white stripes meaning: The red flower represents passion and love, while the white lines indicate purity and innocence. This dream symbolizes a time when you are experiencing newfound love and feeling pure happiness. It may also be a sign that your romantic relationships will soon become more fulfilling.
+- ## Red Flower with white stripes in a dream
 
-
-namespace NetworkTesting
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string IP = "192.168.0.3";
-            pingTest(IP);
-            Console.ReadKey();
-        }
-        public static bool pingTest(string hostname)
-        {
-
-            int count = 1;
-            bool status = false;
-
-
-            while (status == false && count < 3)
-            {
-                ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PingStatus WHERE Address='" + hostname.ToString() + "'");
-
-                foreach (ManagementObject queryObj in searcher.Get())
-                {
-                    status = (bool)queryObj["StatusCode"] == 0;
-
-                }
-                if (status == true)
-                {
-                    Console.WriteLine("Host is UP");
-                    return status;
-
-                }
-                count++;
-            }
-            if(count==3)
-            {
-                Console.WriteLine("Host is DOWN");
-            }
-            return status;
-        }
-
-
-
-    }
-}
-```
+    - The red flower with white stripes is often interpreted as representing the balance of love and passion. In a dream, it could symbolize harmony within yourself or between you and another person. It may also signify that your relationship has reached a new level of intimacy and understanding.

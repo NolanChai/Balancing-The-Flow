@@ -1,0 +1,77 @@
+This tutorial is best suited to users with some programming experience.
+
+1) Clone this repository `git clone https://github.com/RajanMundayoor/code_for_electrocatalysis`.
+2) Run the following commands in your terminal of choice.
+```
+cd code_for_electrocatalysis
+python run.py --help
+```
+3) Open your favorite web browser and navigate to http://localhost:5000/
+4) Choose an active site from the options on screen, and select whether you would like to simulate the electrochemical reduction of carbon dioxide or the electrochemical oxidation of water.
+![](https://github.com/RajanMundayoor/code_for_electrocatalysis/raw/master/imgs/active-sites_explanation.png)
+5) After selecting a site, choose whether to simulate the electrochemical reduction or oxidation of carbon dioxide or water.
+![](https://github.com/RajanMundayoor/code_for_electrocatalysis/raw/master/imgs/active-sites_explanation.png)
+6) Click "Run".  You should now see a new screen that shows a simulation of the electrochemical reduction of carbon dioxide using your chosen active site.
+![](https://github.com/RajanMundayoor/code_for_electrocatalysis/raw/master/imgs/active-sites_explanation2.png)
+
+### Author:  Rajan Mundayoor (RM1350)
+
+### A. In a recent [perspective article](https://pubs.acs.org/doi/abs/10.1021/acsnano.6b01745), Kozlov and co-workers highlight that "the ability of two-dimensional (2D) materials to act as electrocatalysts for CO2 reduction reactions has been widely demonstrated; however, the mechanism by which the catalytic activity is achieved remains unclear." The authors emphasize a need to study the mechanisms of electrochemical CO₂ reduction in 2D nanomaterials.
+
+### B. In this project, you will explore the electrocatalytic activity of several 2D materials as catalysts for CO₂ reduction.
+
+### C. In order to test your ability to apply your knowledge from these readings, you must design an experiment to test the electrocatalytic activity of a few different 2D nanomaterials and determine if these materials could be used as electrocatalysts for CO₂ reduction. You will then report the results of this experiment in a scientific paper.
+
+### D. This project is structured into four parts: (1) Background research, (2) Preparing a Materials list, (3) Experiment setup and procedure, and (4) Writing up your results as a journal article. Please submit the full report at the end of Week 5 in Canvas for evaluation by your TA or instructor.
+
+### E. At the end of this project you should have:
+* A thorough knowledge of how to design an experiment that tests the electrocatalytic activity of 2D materials as catalysts for CO₂ reduction, and
+* An understanding of why it is important to use 2D nanomaterials over bulk materials for electrochemical CO₂ conversion.
+
+1. Please specify the name and version (e.g., 5.0) of the MATLAB Compiler Runtime installed on your system: `matlabcoderuntime -v` or `matlabcoderuntime.exe -help`
+
+```
+MCR Version 9.8.0.12481 (64-bit)
+Copyright 1984-2021 The MathWorks, Inc.
+Homepage: https://www.mathworks.com/products/matlabcoderuntime.html
+```
+
+### Question:
+Are you using the default version of MATLAB Compiler Runtime installed with MATLAB?
+
+> Please specify Y or N:  
+N
+
+### Answer:
+The default version is being used.
+
+1. Introduction (5 pts)
+Introduction is the most important part of your paper as it introduces your audience to your topic and provides information about the importance of the problem addressed by the research reported. What is the significance of your research? Why did you choose this particular problem for investigation? What is known already, and what needs more work? Be sure that these questions are answered in the introduction section.
+2. Background (5 pts)
+The background should be detailed enough to allow readers with no prior knowledge of the subject understand why it matters as well as to guide them through the details and applications of the research described by your paper. It is not necessary to provide a complete review of all existing literature but rather to highlight what you believe to be the most relevant references to the work reported in your paper. The background should explain the importance of the topic, give an overview of any related research, provide sufficient detail that other scientists can understand and reproduce the presented results, and motivate the novelty of your contribution.
+3. Method (5 pts)
+The method section is the most technical part of a paper. In this section, you should describe in detail how you performed your experiments and acquired the data reported by your paper. If you have previously published these procedures in another paper or a book chapter, then you do not need to repeat them here again unless there are significant changes from prior work. The method can also be combined with Results section when appropriate; if so, it is important that the Methods section contains enough detail so readers understand how they can reproduce your results.
+4. Results (5 pts)
+The result section should not contain a list of figures or tables but rather a detailed description of each figure and table. Include captions for all figures, tables, and graphs in this section to help guide the reader through your paper. If you are reporting on an experiment that was performed by someone else (e.g., a student), then it is necessary to describe their experimental procedures first before describing what happened during each step of the procedure yourself.
+5. Conclusion (5 pts)
+The conclusion should summarize your findings and answer any outstanding questions about the research reported in your paper, including whether or not you were able to meet all objectives stated at the beginning of this exercise. It is also helpful if you mention what other scientists working on similar projects could do next; for example, "Future work should focus on…". If there was something unexpected that happened during one of experiments (such as an error), then it would be good idea to include these details in your conclusion so that other researchers can avoid making same mistakes when they perform similar experiments themselves.
+6. Acknowledgements and References (5 pts)
+The acknowledgments section should list any people who helped with your paper, including professors, graduate students, undergraduate students or others who provided assistance in some way. It is also appropriate to include a brief statement about where you received funding for this project; however, it is not necessary if there was no external source of support other than yourself or others mentioned above. The references section contains all citations used throughout your paper including books and journal articles that were consulted during the research reported here as well as any other sources cited within text (e.g., websites).
+7. Appendices (5 pts)
+An appendix is a supplementary document included with some types of scientific papers that contains additional information such as detailed calculations or figures that cannot fit into the main body of your paper but are still necessary for readers to understand all aspects related to this research project fully. The most common type of appendices contain tables listing detailed data points used in statistical analyses performed throughout this work.
+
+We start from a graph G = (V, E). We assume that each vertex in V is assigned an integer weight w_i. The weights can be arbitrarily chosen. In the simplest case we just assign the same number of weights to all vertices and then all vertices will receive this number as their score. We also assume that E has no isolated vertex (every edge connects a pair of vertices).
+
+We will consider two subcases:
+- a set of edges $E_k$ with different weight, or 
+- the same weights for each edge.
+
+In the first case we construct an undirected graph G' = (V', E'). The vertices V' are a subset of the vertices in V, and the edges E' are such that there is no edge between any two vertices $u$ and $v$, if $w_u \neq w_v$. In this case we define the score for each vertex as Σi∈Vw_iv (the sum over all weights assigned to its neighbors in V').
+
+In the second case there is no need for such a construction. The score of each vertex $u$ is $w_u$.
+
+If we have $n$ vertices and $m$ edges, then our algorithm can construct either the graph G = (V, E) or one of its variants with fewer vertices and/or edges in $O(nm)$ time.
+
+### Source:
+
+[Top-down approaches for nanosheets](https://www.google.com/url?q=http%3A%2F%2Facademia.edu%2F9418507%2Fa_top_down_approach_to_nanosheets&sa=D&ust=1518777053834000&usg=AFQjCNFhvLZoI1UfVa-iOxKGQHd0nkYT9A)

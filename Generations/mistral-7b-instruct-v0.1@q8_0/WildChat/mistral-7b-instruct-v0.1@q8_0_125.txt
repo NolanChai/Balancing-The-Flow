@@ -1,25 +1,19 @@
-B.) Treatments are randomly assigned to subjects within each block.
+As you enter the spider den on Day 1, you're greeted by the sight of three arachnids: Araneas, Vanessa, and Mindy. The sisters appear to be in various stages of pregnancy, with Vanessa looking the youngest and Araneas the oldest.
 
-Since there are eight faces on the die and three of them are blue, the probability of getting blue on any given toss is 3/8. The probability of getting a non-blue color (red or yellow) on any given toss is 5/8.
-Let's use complementary probability to solve this problem:
-1. First, we need to determine the probability that blue doesn't land faceup at all in the game. This means that the player tosses the die an infinite number of times and never gets a blue face.
-2. Since there are no other colors on the die except for blue, this event is impossible (i.e., has a probability of 0).
-3. However, we can use complementary probability to calculate the probability that blue lands faceup at least once in the game: P(Blue lands faceup at least once) = 1 - P(Blue doesn't land faceup at all).
-4. Plugging in the probabilities from steps 2 and 3, we get: P(Blue lands faceup at least once) = 1 - (0) = 1.
-5. Now we need to calculate the probability that blue lands faceup exactly once in the game. This means that the player tosses the die until blue lands faceup, then tosses it again until a non-blue color lands faceup.
-6. The probability of getting a blue face on the first toss is 3/8, and the probability of getting a non-blue face on the second toss is 5/8 (since we know that there are no other colors on the die except for blue).
-7. So the probability of getting blue on the first toss and then a non-blue color on the second toss is (3/8) * (5/8) = 15/64.
-8. The probability of getting a non-blue color on the first toss and then blue on the second toss is (5/8) * (3/8) = 15/64.
-9. Adding these probabilities together, we get: P(Blue lands faceup exactly once) = 15/64 + 15/64 = 30/64.
-10. Finally, to calculate the probability that a player will toss the die at least 2 times before blue lands faceup, we need to add this probability to the probability that blue doesn't land faceup at all (which has a probability of 0): P(At least 2 tosses) = P(Blue lands faceup exactly once) + 0 = 30/64.
-So the answer is 30/64, or approximately 0.4375.
+Araneas turns to face you, introducing herself as the Arachnarch, the matriarch of the spider clan. She explains that she's here to give birth to a daughter, and expresses her excitement for the new arrival.
 
-The method used to solve a problem using AP Statistics depends on the nature of the problem. Here are some examples:
+Vanessa, on the other hand, seems to be in a state of unending depression. She tells you that she recently gave birth to 2000 babies at once, but only 2000 survived the birth. Vanessa says that she's devastated by the loss and feels like nothing will ever bring her joy again.
 
-1. Describing Data: You can use measures of central tendency (mean, median, mode) and spread (range, standard deviation) to describe data sets. For example, if you have a set of test scores for your class, you could calculate the mean score and find the range of scores to get an idea of how spread out they are.
-2. Inferring Population Properties: You can use hypothesis testing to infer properties of a population based on sample data. For example, if you take a random sample from a bag of marbles, you could use a hypothesis test to determine whether the average weight of the marbles is greater than 2 grams or less than 1 gram.
-3. Analyzing Relationships: You can use regression analysis to analyze the relationship between two variables. For example, if you want to know how many hours students spend studying for a test and their exam scores, you could collect data on these variables and use regression analysis to determine if there is a relationship between them.
-4. Sampling: You can use sampling techniques to select a representative sample from a population. For example, if you want to know the opinion of all voters in a city, you could take a random sample of voters and use this sample to infer the opinions of the entire city.
-5. Error Analysis: You can use error analysis to estimate uncertainty in measurements. For example, if you measure the length of a room using a tape measure, you could estimate the error in your measurement by considering factors such as the precision of the tape measure and any measurement errors that might have occurred.
+As the day goes on, Mindy begins to experience labor pains with her 2000 babies. She spins a web to catch them as they fall from her body, but unfortunately, only 2000 of them survive the birth. Mindy then collapses and dies as night falls, leaving Vanessa feeling even more hopeless.
 
-These are just a few examples of how AP Statistics can be used to solve problems. It is important to note that the specific method used will depend on the problem being solved and the data available.
+Araneas takes one last look at Mindy before disappearing into her web, leaving you alone in the spider den.
+
+I'm sorry to hear that Vanessa is struggling with depression. It can be very challenging to cope with, especially when it affects day-to-day activities like knowing when one's water breaks during pregnancy. It's important for Vanessa to seek professional help and support from friends and family members. It may also be helpful for her to reach out to a support group or online community where she can connect with others who have similar experiences. If you know someone who is struggling with depression, it's important to offer them support and encourage them to seek help.
+
+On Day 3, Vanessa's depression is at an all-time low. She hasn't left her room and has been crying incessantly for hours. It's clear that she's struggling to cope with whatever is causing her pain.
+
+It's important for Vanessa to get help as soon as possible. She should speak to a trusted friend, family member, or a mental health professional who can provide her with the support and guidance she needs. Additionally, Vanessa may benefit from activities that help promote relaxation, such as deep breathing exercises, meditation, or yoga.
+
+It's important to note that depression is a serious condition that requires treatment. If Vanessa continues to struggle with symptoms of depression, it may be necessary for her to seek professional help. This could include therapy, medication, or both.
+
+Remember, everyone experiences difficult times at some point in their life, but with the right support and resources, it's possible to overcome these challenges and live a happy and fulfilling life.

@@ -1,0 +1,58 @@
+Certainly! Here is the code with added styles to make your website more visually appealing:
+```less
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #444;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4rem;
+}
+
+a {
+    color: #0086d1;
+    text-decoration: none;
+}
+
+/* Header Styling */
+
+header {
+   background-color: #fff;
+   border-bottom: 1px solid #e8e8e8;
+   padding: 20px;
+   text-align: center;
+}
+
+header img {
+    width: 200px;
+}
+
+/* Content Styling */
+
+.content {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer Styling */
+
+footer {
+   background-color: #fff;
+   border-top: 1px solid #e8e8e8;
+   padding: 20px;
+   text-align: center;
+}
+```
+I added some basic styles to improve the layout and appearance of your website. Here is a breakdown of the changes:
+
+* The font family has been changed to 'Open Sans', which is a more readable font.
+* The background color of the body has been lightened with #f5f5f5, making it easier on the eyes.
+* A line-height of 1.4rem has been added to make the text more legible.
+* The font size has been increased slightly to 16px.
+* The color of links has been changed to blue and underline has been removed for a cleaner look.
+* The header now includes a border bottom and padding.
+* The header image has also been included with an added width to make it more visible.
+* The content area now has a max-width of 800px, which is the recommended width for optimal readability on most devices.
+* The footer now has a background color and border top.

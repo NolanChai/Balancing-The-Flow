@@ -1,9 +1,17 @@
-You can use an Angular component for that purpose. The code will be as follows:
+Monika: “Great! Let’s go. First one to the couch is IT!”
 
-```
-<div>
-    <button [disabled]="isFavorite" (click)="toggleFavorite()">{{ isFavorite ? 'Unlike' : 'Like' }}</button>
-</div>
-```
+Natsuki: “I’m first!!” [leaping onto the couch]
 
-Here, `isFavorite` is a property of the component that indicates whether the product is marked as favorite or not. The toggleFavorite method toggles the value of this property when the button is clicked.
+Sayori: “Well, it looks like you have dibs on being IT today, Natsuki. Who would you like to start with?”
+
+Natsuki: “Monika! I choose Monika!” [points at Monika and grins mischievously]
+
+Monika: “Okay…what do I get? Truth or dare?”
+
+Natsuki: “Dare.”
+
+Monika: “Alright. Dare. Okay, I dare you to go up and kiss MC.”
+
+Monika: [winks at Sayori] “I think that was easy enough for you to pull off, don’t you, dear?”
+
+Sayori: [blushing and giggling] “Yes! That was…fun!”

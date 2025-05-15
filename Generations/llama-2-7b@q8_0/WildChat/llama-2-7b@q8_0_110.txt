@@ -1,47 +1,27 @@
-sx, sy, sz, dx, dy, dz, w, h, l) {
-	let m = Math.floor((h - 1) / 2);
-	let n = Math.floor((l - 1) / 2);
+"I'm glad you could join us for our family reunion. We hope that you have fun with your brothers and sisters."
 
-	// mirroring on the x axis:
-	for (let y = 0; y < w; ++y) {
-		duplicateBlock(sx + 2 * m, sy + m, sz + n, dx, dy, dz, w, h - 1, l);
-	}
+### Dialogue:
 
-	// mirroring on the y axis:
-	for (let x = 0; x < w / 2; ++x) {
-		duplicateBlock(sx, sy + 2 * m, sz + n, dx, dy, dz, w - 1, h - 1, l);
-	}
+Natsuki: "It was such an incredible feeling to finally see you, Hiroshi! I always thought it would be nice if we were together..."
 
-	// mirroring on the z axis:
-	for (let y = 0; y < w / 2; ++y) {
-		duplicateBlock(sx + m, sy, sz + 2 * n, dx, dy, dz, w - 1, h, l);
-	}
-}
+(Hiroshi has finished napping, and he is now playing in his crib with one of Natsuki's twin daughters - her daughter Miku. Meanwhile, a small crowd has gathered around them.)
 
-function rotateFacing(sx, sy, sz, dx, dy, dz, w, h, l, rotation) {
-	let rot = rotation / 45;
-	let rad = (rot * Math.PI / 180).toFixed(2);
+### Dialogue:
 
-	if (!world.isRemote && !rotateBlock) {
-		console.log(`World is not running as a server, rotation not supported.`);
-	} else if ((sx + dx < sx || sx + dx >= world.getMaximumDimensionX()) || (sy + dy < sy || sy + dy >= world.getMaximumDimensionY()) || (sz + dz < sz || sz + dz >= world.getMaximumDimensionZ())) {
-		console.log(`World is not running as a server, block is outside bounds.`);
-	} else if (rot > 80 || rot <= -80) {
-		console.log(`World is not running as a server, rotation out of range`);
-	} else {
-		// rotate x and z blocks
-		for (let i = 1; i < 6; i++) {
-			rotateBlock(sx + dx - dx * Math.sin(rad), sy + dy + dy * Math.cos(rad), sz + dz, dx + dx * Math.cos(rad) - dz * Math.sin(rad), sy + dy - dy * Math.cos(rad), dz + dz * Math.sin(rad) + dx * Math.sin(rad), w, h, l);
-		}
+Natsuki (to the small crowd): "Aren't they just adorable?"
 
-		// rotate y blocks
-		for (let i = 1; i < 6; i++) {
-			rotateBlock(sx + dx - dz * Math.cos(rad) + dx * Math.sin(rad), sy + dy, sz + dz + dz * Math.sin(rad) + dz * Math.sin(rad), dx + dx * Math.cos(rad) - dz * Math.sin(rad), sy + dy - dy * Math.cos(rad), dz + dy * Math.sin(rad) + dz * Math.cos(rad), w, h / 2, l);
-		}
+(Hiroshi and his sisters are now playing together on the floor, with Natsuki standing over them in delight. Meanwhile, a few of the older siblings have gathered around.)
 
-		// rotate x and y blocks
-		for (let i = 1; i < 6; i++) {
-			rotateBlock(sx - dx * Math.sin(rad) + dx - dz * Math.cos(rad), sy, sz + dz + dz * Math.sin(rad) + dz * Math.sin(rad), dx + dx * Math.cos(rad) - dz * Math.sin(rad), sy + dy - dy * Math.cos(rad), dz + dz * Math.sin(rad) + dy * Math.sin(rad), w, h / 2, l);
-		}
-	}
-}
+### Dialogue:
+
+Natsuki (to the small crowd): "I'm so glad they all get along..."
+
+(Natsuki takes her baby boy Hiroshi into her arms and cuddles him in her lap. As Natsuki sits in her bed, she begins to breastfeed once more.)
+
+### Dialogue:
+
+Natsuki: "He's my little man..."
+
+(As Hiroshi finishes suckling this time, he starts crying loudly for his mother. As Natsuki gets up and walks into the kitchen to calm him down...)
+
+Natsuki (to herself): "What am I gonna do?"

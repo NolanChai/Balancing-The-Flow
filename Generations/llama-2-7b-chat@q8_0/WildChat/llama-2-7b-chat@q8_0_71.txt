@@ -1,0 +1,34 @@
+The correct answer is (B): Treatments are randomly assigned to subjects within each block.
+A randomized block design is a variation of a randomized controlled trial that involves dividing the subjects into blocks based on certain characteristics (in this case, age-group) and then randomly assigning treatments to subjects within each block. This allows researchers to control for potential confounding variables that may be related to the blocking variable (age-group).
+In a well-designed randomized block design experiment, treatments are randomly assigned to subjects within each block. This ensures that the treatment assignment is not biased towards any particular age-group, which helps to minimize confounding and ensure that the results are due solely to the effect of the treatment being studied.
+The other options are incorrect:
+* Option (A) is not true, as the number of subjects in each block may be the same or different.
+* Option (C) is incorrect, as a randomized block design can still have a control group. In fact, having a control group is often desirable in a randomized block design experiment to allow for a direct comparison between the treatment and control groups.
+* Option (D) is also incorrect, as a matched-pairs design involves pairing subjects from one group with subjects from another group, whereas a randomized block design involves randomly assigning treatments to subjects within each block.
+* Option (E) is incorrect, as in a randomized block design, the subjects in one block receive one treatment, and the subjects in the other block receive the other treatment.
+
+There are a total of $8$ possible outcomes when the die is tossed: $3$ red faces, $3$ yellow faces, and $2$ blue faces. Since each face is equally likely to land face up, the probability of any particular face landing face up is $1/8$.
+To find the probability that a player will toss the die at least $2$ times before blue lands face up, we can use the concept of conditional probability. Let's define an event $A$ as "blue lands face up on the $2$nd toss or later".
+The probability of landing on blue on the $2$nd toss or later is:
+$$P(A) = P(\text{blue lands face up on $2$nd toss or later}) = \frac{2}{8} = \frac{1}{4}$$
+Now, we want to find the probability of at least $2$ tosses occurring before blue lands face up. This is equal to the probability of not happening $A$, which is:
+$$P(A^c) = 1 - P(A) = 1 - \frac{1}{4} = \frac{3}{4}$$
+So, the probability that a player will toss the die at least $2$ times before blue lands face up is $\frac{3}{4}$.
+
+Here are some steps you could use to solve the problem of determining whether there is a significant association between exercise and happiness, using methods taught in AP Statistics:
+
+1. Formulate a research question: "Is there a significant association between exercise and happiness?"
+2. Develop an hypothesis: "Exercise will be positively associated with happiness."
+3. Select a study design: This could be a correlational or experimental study. For the purposes of this example, let's assume we are using a correlational study design.
+4. Choose a measure of exercise: Let's say we are measuring the number of minutes spent exercising per day.
+5. Choose a measure of happiness: Let's say we are measuring overall satisfaction with life, using a 5-point Likert scale (1 = very dissatisfied, 5 = very satisfied).
+6. Collect data: Collect data on the number of minutes spent exercising per day and overall satisfaction with life from a sample of individuals.
+7. Check for normality of the data: Use histograms and box plots to check if the data are normally distributed. If the data are not normally distributed, consider transforming the variables or using non-parametric methods.
+8. Check for linear association: Use scatterplots to visually inspect the relationship between exercise and happiness. Calculate the correlation coefficient (e.g., Pearson's r) and interpret it in terms of strength and direction of the association.
+9. Test the null hypothesis: Use a statistical test (e.g., t-test or ANOVA) to determine whether there is a significant difference in happiness scores between individuals who exercise more versus those who exercise less.
+10. Interpret results: If the null hypothesis is rejected, it suggests that there is a significant association between exercise and happiness. If the null hypothesis is not rejected, it suggests that there may not be a significant association between exercise and happiness.
+Some additional considerations to keep in mind when analyzing this data include:
+* Control for potential confounding variables (e.g., age, gender, socioeconomic status) by including them as covariates in your statistical analysis.
+* Consider the sample size and whether it is large enough to detect a significant association between exercise and happiness.
+* Think about how you could design future studies to further investigate this relationship.
+By following these steps and considering these additional factors, you can use methods taught in AP Statistics to help determine whether there is a significant association between exercise and happiness.

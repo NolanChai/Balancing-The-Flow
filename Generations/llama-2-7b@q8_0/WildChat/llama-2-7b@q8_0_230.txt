@@ -1,0 +1,35 @@
+I am not sure why but when I used the "instructions.xml" file, it would give me errors every time. I don't know why.
+So then I downloaded a different version of instructions.xml and edited it to my liking. But now when I run the installer the installation is successful but it gives me this message in the log:
+[2015-04-30 18:18:00] Installer: [2] Running setup.ini [SetupAPI.FileVersion]
+[2015-04-30 18:18:00] Installer: [11] Installing i18n.lng from /Users/vit/Desktop/CMS/Installer/i18n_fr_FR.lng to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:00] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:01] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:01] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:01] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:02] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:02] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:02] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:03] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:03] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:03] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:04] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:04] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:04] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:04] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:04] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:04] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:05] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:05] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:05] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:05] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:05] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:05] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:05] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:05] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:05] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:06] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:06] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:06] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:06] Installer: [76] Failed to copy i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/Resources
+[2015-04-30 18:18:06] Installer: [76] The specified file 'i18n' couldn't be copied because it already exists.
+[2015-04-30 18:18:06] Installer: [76] Copying i18n folder from /Users/vit/Desktop/CMS/Installer to /System/Library/Frameworks/Carbon.framework/

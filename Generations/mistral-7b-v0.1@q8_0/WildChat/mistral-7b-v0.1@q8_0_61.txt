@@ -1,0 +1,56 @@
+[ERROR][logstash.inputs.file] File {:filename=>"D:/ElasticSerach/logstash-8.3.0/logstash.conf"} has been requested but does not exist or is a directory
+[ERROR][logstash.inputs.file] File {:filename=>"D:/ElasticSerach/logstash-8.3.0/config/jdbc.conf"} has been requested but does not exist or is a directory
+
+HttpContext.Connection.RemoteIpAddress获取不到真实的Ip地址
+
+发现了一个bug，当使用nginx反向代理时，在asp.net core中使用HttpContext.Connection.RemoteIpAddress会获取到nginx代理的ip地址而不是真实客户端ip。
+
+例如：
+
+客户端浏览器请求为172.30.37.61，nginx服务器为172.17.5.18,nginx代理的客户端ip地址为172.16.12.70
+
+在asp.net core 中使用HttpContext.Connection.RemoteIpAddress获取到的就是172.17.5.18
+
+解决办法：
+
+配置nginx代理后端服务器的ip，如果后端服务器有多个ip可以通过x-forwarded-for头来区分，具体请参考这篇文章。
+
+或者在asp.net core的中间件添加一个
+
+```
+app.Use(async (context, next) =>
+{
+    if (!string.IsNullOrEmpty(context.Connection.RemoteIpAddress.ToString()))
+    {
+        context.Connection.RemoteIpAddress = IPAddress.Parse("172.30.37.61"); //设置真实的ip
+    }
+    await next();
+});
+```
+
+今天在ES中文档搜索时，出现了以下报错：
+
+```
+received plaintext http traffic on an https channel, closing connection after channel data: POST /_msearch?scroll=1m&typ e=blog HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: 192.168.0.253:9200
+User-Agent: curl/7.40.1
+Accept: */*
+```
+
+根据错误提示，可知是ssl认证出现问题，看了一下文档发现有几个比较好的解决方案：
+
+- 修改elasticsearch.yml文件中的http.ssl.enabled属性为false。如果要通过https协议访问es，则需要通过https协议访问，否则就设置成false。
+
+```
+# Set to false if you want to disable SSL or if you just want HTTP to work on the same port as your SSL. You can use 0 for this parameter which will tell Elasticsearch that you don't care about transport security at all. You probably don't want to do that unless you're testing locally on a single-node cluster where transport sniffing is enabled.
+http.ssl.enabled: false
+```
+- 修改elasticsearch.yml文件中的http.cors.allow-origin属性为*。
+
+```
+# List of origins that are allowed to access Elasticsearch through CORS
+# (Default: ["*"])
+http.cors.enabled: true
+http.cors.allow-origin: *
+```

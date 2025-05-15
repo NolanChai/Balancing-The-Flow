@@ -1,16 +1,27 @@
-I don't think you need to check the Average. You are looking at the Total and they want an average of 5-10 lines per page.
-[FONT=&quot][SIZE=3][COLOR="#8D461D"][FONT="Century Gothic"][SIZE=4]Jun 22, 2009 | 10:42 pm [/FONT][/SIZE][/FONT][/COLOR][/SIZE][/FONT]
-Originally Posted by jamesl
-Yes, you're right. We only need the average size per page not the total size of all pages.[/QUOTE]
-Thank you very much for your advice.
-I had a chance to contact with CCMS and I got some answers about my statement:
-"...if you have 10 lines on a page that will be fine..."
-"...they don't care how many lines are in a statement or where they are placed, just as long as there isn't any blank space (white) on the page..."
-So I think that we should try to reduce number of lines per page.
-If you have more lines than 10, then add a line break and start another page. This way it will look better on their end and they won't be charged for extra pages.
-That is what I do with my statements now. It looks great!
-
-Regarding your question 4: We have tested the program but it is not fully functional for annual statement (we are still working on it). If you run the program before August 15th you will receive an error message because the files are not ready. Once they are available, we will send out another post to let you know when you can access and use them.
-The following is what I got from CCMS:
-The annual statement is a statement that includes all of the charges made during the year on the policyholders accounts (the account number for this is the one issued in 2009). If an insured has multiple policies, they can expect to get one annual statement per policy. It contains charges for premiums and other expenses such as fees, commissions, dividends, etc.
-It looks like I will have to manually do a cut and paste of all the numbers from this statement into my spreadsheet for annual report purposes
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/heading): <head> element defines the head section, containing metadata such as page title and links to stylesheets. The content of this element is intended to be machine readable.
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1): An <h1> element defines a section header that should appear at the start of a new section and be used for main titles. It is considered a “level 1” heading, and is normally displayed in title case (i.e., with the first character capitalized).
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h2): An <h2> element defines a section header that should appear at the start of a new section and be used for subsection titles. It is considered a “level 2” heading, and is normally displayed in title case (i.e., with the first character capitalized).
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h3): An <h3> element defines a section header that should appear at the start of a new section and be used for sub-subsections titles. It is considered a “level 3” heading, and is normally displayed in title case (i.e., with the first character capitalized).
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h4): An <h4> element defines a section header that should appear at the start of a new section and be used for sub-sub-sections titles. It is considered a “level 4” heading, and is normally displayed in title case (i.e., with the first character capitalized).
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h5): An <h5> element defines a section header that should appear at the start of a new section and be used for sub-sub-subsections titles. It is considered a “level 5” heading, and is normally displayed in title case (i.e., with the first character capitalized).
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h6): An <h6> element defines a section header that should appear at the start of a new section and be used for sub-sub-sub-sections titles. It is considered a “level 6” heading, and is normally displayed in title case (i.e., with the first character capitalized).
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img): <img> elements are used for adding images to a web page. They are inline elements and cannot be used as direct children of other elements in the document.
+* [MDN Web Docs: `<br>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br) (aka &lt;br /&gt;): The HTML <code>&lt;br /&gt;</code> element creates a line break within a block-level element.
+* [MDN Web Docs: `<strong>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong) (aka &lt;strong /&gt;): The HTML <code>&lt;strong /&gt;</code> element represents text that is especially important, for example the name of a person or place.
+* [MDN Web Docs: `<em>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em): <em>The HTML <code>&lt;em /&gt;</code> element represents text that is especially important, for example the name of a person or place.</em>
+* [MDN Web Docs: `<h1>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1) (aka &lt;h1 /&gt;): The HTML <code>&lt;h1 /&gt;</code> element defines a section heading.
+* [MDN Web Docs: `<h2>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h2) (aka &lt;h2 /&gt;): The HTML <code>&lt;h2 /&gt;</code> element defines a section heading that is used for subtitles and subheadings of headings within a document.
+* [MDN Web Docs: `<h3>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h3): The HTML <code>&lt;h3 /&gt;</code> element defines a section heading that is used for subtitles and subheadings of headings within a document.
+* [MDN Web Docs: `<h4>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h4) (aka &lt;h4 /&gt;): The HTML <code>&lt;h4 /&gt;</code> element defines a section heading that is used for subtitles and subheadings of headings within a document.
+* [MDN Web Docs: `<h5>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h5) (aka &lt;h5 /&gt;): The HTML <code>&lt;h5 /&gt;</code> element defines a section heading that is used for subtitles and subheadings of headings within a document.
+* [MDN Web Docs: `<h6>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h6) (aka &lt;h6 /&gt;): The HTML <code>&lt;h6 /&gt;</code> element defines a section heading that is used for subtitles and subheadings of headings within a document.
+* [MDN Web Docs: `<p>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p) (aka &lt;p /&gt;): The <code>&lt;p /&gt;</code> element represents a paragraph of text in the document. It is one of the most important elements in HTML documents because it is used for every single paragraph within an HTML page.
+* [MDN Web Docs: `<section>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) (aka &lt;section /&gt;): The <code>&lt;section /&gt;</code> element represents a section within a page.
+* [MDN Web Docs: `<span>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) (aka &lt;span /&gt;): <span> tags can be used for styling content in a document, such as highlighting text, adding emphasis, or defining a new typographical style.
+* [MDN Web Docs: `<strong>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong) (aka &lt;strong /&gt;): The HTML <code>&lt;strong /&gt;</code> element represents text that is especially important, for example the name of a person or place.
+* [MDN Web Docs: `<sub>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub): <sub> tags are used for adding subscripted text to a web page.
+* [MDN Web Docs: `<sup>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup): The <code>&lt;sup /&gt;</code> element represents text that is especially important, for example the name of a person or place.
+* [MDN Web Docs: `<table>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table): <code>&lt;table /&gt;</code> represents a table in HTML.
+* [MDN Web Docs: `<td>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td) (aka &lt;td /&gt;): <code>&lt;td /&gt;</code> elements represent table data cells in a table.
+* [MDN Web Docs: `<th>` Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th) (aka &lt;th /&gt;): <code>&lt;th /&gt;</code> elements represent table headers in HTML tables.
+* [

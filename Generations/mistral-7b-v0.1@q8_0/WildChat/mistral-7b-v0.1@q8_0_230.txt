@@ -1,7 +1,16 @@
-[START]Mariah is out on the ramp with her usual attire, a white sports bra and pink hot pants. She climbs into the ring, then hops onto the turnbuckle where she starts posing. When she hears her name in the ring announcers voice, Mariah begins to get down and slowly heads back to the center of the ring and bows.
+@pavel-shadchnev I can’t repro this issue.
+Can you please share some screenshots of the project structure and your settings?
+And also send me the i18n file you are using
 
-After getting off the mat, Mariah heads up the ramp again with a grin on her face.[/START]
+Thank you!
 
-[START]Mariah is waiting on the ramp for her opponent's entrance music to finish. She steps into the ring as soon as the lights are out.
+I’ll check the files.
 
-After she hops onto the turnbuckle and gets down, Mariah walks towards the middle of the ring and waits for her opponent.[/START]
+Could you try to do something like that: `console.log(this['header'])`
+It should work as well, but it should be a way to debug such issues.
+
+Hi @pavel-shadchnev , thank you for the files. I’ve managed to reproduce this issue on my side.
+
+As for me, I have the same editor error (if I use `this.header`), and everything works fine if I use `this['header']`, so in this case this should be considered as a bug, right?
+
+Yes, i will try send you another file to check, with header:’text_header’.

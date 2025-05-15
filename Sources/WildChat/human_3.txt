@@ -1,31 +1,43 @@
-User: "帮我写一篇关于敬畏量表的综述"
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = 仙境
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
 
-Assistant: "敬畏量表（Scale of Awe）是一种用于衡量个体对于某种事物或经验的敬畏感的量表。敬畏是一种深沉的情感，通常与个体面对宇宙、自然或神秘事物时产生。敬畏的经历可以带来积极影响，如增强人的幸福感、增强对他人的关怀和利他行为、提升创造力等。因此，了解和测量个体的敬畏感对于心理学研究和实践具有重要意义。
+Assistant: "/imagine prompt: Enchanted forest, sunlight filtering through the canopy of ancient trees, creating a magical glow, moss-covered ground with delicate wildflowers, a small waterfall cascading down into a crystal-clear river, birds chirping and butterflies fluttering around, a sense of tranquility and mystery in the air, captured with a Canon 5D Mark IV camera, 24-70mm lens, wide-angle lens to capture the vastness of the forest, composition focused on the shimmering sunlight and vibrant colors, in a style reminiscent of Maxfield Parrish's dreamlike landscapes. --ar 16:9 --v 5.2
 
-敬畏量表的发展可以追溯到20世纪早期，最早是由心理学家尤金·豪兰（Eugene Holland）提出，用于研究教育领域的教师敬畏感。随着对敬畏的研究兴趣的增加，敬畏量表也逐渐得到了拓展和改进。目前，有多种不同的敬畏量表可供研究使用，其测量维度主要包括宇宙观敬畏、自然景观敬畏、宗教敬畏和美学敬畏等。
+/imagine prompt: Serene beach, white powdery sand stretching for miles, turquoise waters gently lapping onto the shore, palm trees swaying in the tropical breeze, a hammock hanging between two trees, inviting relaxation, seashells scattered on the sand, a distant sailboat on the horizon, a feeling of peace and tranquility, captured with a Sony A7III camera, 85mm lens, shallow depth of field to blur the background, composition focused on the hammock and palm trees, in a style reminiscent of Ansel Adams' black and white landscape photography. --ar 16:9 --v 5.2
 
-宇宙观敬畏是指对宇宙奥秘和宇宙起源的敬畏感。个体在面对星空、星系和宇宙的壮丽景象时，往往会产生一种渺小、无力和敬仰的情感。宇宙观敬畏量表被广泛应用于研究个体的宇宙观念和宇宙边缘体验，并与个体的幸福感、创造力以及宗教信仰等相关因素进行关联分析。
+/imagine prompt: Bustling city street, towering skyscrapers reflecting the neon lights of the bustling nightlife, a maze of busy roads with taxis and pedestrians, street vendors selling delicious street food, vibrant graffiti adorning the walls, the sound of honking horns and cheerful conversations, a constant energy and excitement in the air, captured with a Fujifilm X-T4 camera, 35mm lens, fast shutter speed to freeze the motion, composition focused on the vibrant colors and dynamic movement, in a style reminiscent of Henri Cartier-Bresson's street photography. --ar 1:1 --v 5.2
 
-自然景观敬畏是指个体在面对大自然的壮丽景象时产生的敬畏感。这种敬畏感往往与个体对自然美的感知和赞美紧密相关。自然景观敬畏量表在研究生态旅游、自然环境保护和心理健康等领域得到了广泛应用。
-
-宗教敬畏是指个体在面对宗教仪式、神圣场所或宗教符号时产生的敬畏感。宗教敬畏量表常被用于研究宗教体验、宗教信仰和宗教情感等方面。
-
-美学敬畏是指个体在面对艺术作品、文化遗产或人类创造的伟大作品时产生的敬畏感。美学敬畏量表主要用于研究个体的审美情感和艺术鉴赏能力。
-
-综上所述，敬畏量表作为衡量个体的敬畏感的工具，在心理学研究和实践中具有重要意义。通过测量敬畏感，我们可以更好地了解个体对于宇宙、自然、宗教和艺术等方面的体验，并深入探讨敬畏感对于个体幸福感、创造力和社会行为等方面的影响。然而，值得注意的是，敬畏量表的设计和使用需要考虑到不同文化背景和个体差异的影响，以促进更准确和有效的测量。"
-
-User: "关于人际敬畏的量表"
-
-Assistant: "人际敬畏是指对他人的尊重、崇敬和敬畏感。它反映了个体对他人特质、能力或成就的认可和尊重程度。量表的设计和使用可以帮助研究者了解个体在人际交往中的态度和行为，以及人际敬畏对于人际关系和社会互动的影响。目前，没有直接衡量人际敬畏的标准量表，但可以通过其他相关量表来间接测量。
-
-1. 社会评价量表（Social Judgment Scale）：这是一种常用的量表，用于测量个体对他人特质和行为的评判。通过评价他人的态度、价值观、行为表现等方面，可以间接观察个体的人际敬畏程度。
-
-2. 自他尺度（Self-Other Rating Scales）：此类量表要求个体对自己和他人进行评价。通过比较个体对自己和他人的评价，可以了解个体是否对他人感到敬畏和尊重。
-
-3. 人际关系质量量表（Interpersonal Relationship Quality Scale）：这种量表旨在评估个体与他人之间的亲近、信任和尊重程度。其中包括了评估个体对他人的敬畏感的维度。
-
-4. 自卑感量表（Inferiority Complex Scale）：自卑感与人际敬畏之间具有一定的关联性。通过自卑感量表可以间接观察个体对他人感到的敬畏情感。
-
-需要注意的是，由于人际敬畏是一个多维度的概念，单一的量表很难完全衡量其复杂性。因此，在研究中通常会使用多个相关的量表进行相互验证和综合分析，以获得更准确的结论。
-
-此外，量表的选择和使用还应考虑到不同文化背景和个体差异对人际敬畏的影响。在不同文化背景下，人际敬畏的定义和表达方式可能存在差异，因此需要相应地适配和验证量表。并且，人际敬畏也可能受到个体特质、性格特点和个人经历等因素的影响，这也需要在研究中加以考虑和控制。"
+/imagine prompt: Majestic mountain peak, towering above the clouds, snow-covered slopes glistening in the sunlight, a forested valley below with a winding river, a sense of awe and grandeur in the vastness of nature, the sound of silence interrupted only by the occasional bird's call, captured with a Nikon Z7 camera, 70-200mm lens, telephoto lens to capture the details of the mountain, composition focused on the mountain peak and surrounding landscape, in a style reminiscent of Albert Bierstadt's panoramic landscapes. --ar 9:16 --v 5.2"

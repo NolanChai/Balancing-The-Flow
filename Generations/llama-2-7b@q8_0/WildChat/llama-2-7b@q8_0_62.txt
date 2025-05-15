@@ -1,243 +1,28 @@
-
-
-\end{code}
-
-This is the output after converting my template:
-
-\begin{code}
-Hi Ola,
-
-Thank you for getting in touch. Unfortunately, I won’t be available at 9:00 AM on Tuesday next week as my schedule is fully booked.
-
-However, I could suggest other dates that may work for both of us. How about we meet on Wednesday at 9:00 AM or Thursday at 10:00 PM? If these dates and times don’t work for you, please let me know, and I’ll try to find other options.
-
-Thank you, and I hope to hear from you soon.
-Best Regards.
-\end{code}
-
-This is the output after converting my template:
-
-Comment: Are you using a custom class to format your email?
-
-Answer: You could write an inline `replace` to replace the \em{single line} with a newline, then convert it back into a string before sending.
-
-\begin{code}
-$e->Body = preg_replace("/(?<!\r)\n/m", "\r\n", $e->body);
-\end{code}
-
-```
-
-### 3. Categorize messages
-
-To categorize each message into a specific category, you can use the **[`categorize-messages`](https://github.com/gohanmiyazawa/text-processing/tree/main/todo)** module. You may find this task very similar to [3.1.1](#311-sentiment-analysis), but they're different in two important aspects:
-
-* A categorization result will not be stored as a CSV file, instead it will be saved in a JSON format.
-* You don't need to train any models because the training data is already provided for you.
-
-The following is an example of `categorize-messages` being used:
-
-```python
-# Import modules from the todo list.
-import pandas as pd
-from text_processing import categorize_messages, process_data
-
-# Load and parse CSV file.
-df = pd.read_csv("../data/sample_emails_12-08-2021.csv")
-
-# Process data using the categorizer function.
-result = process_data(df, categorize=True)
-```
-
-If you run this code block on the `sample_emails_12-08-2021.csv` file, then you will find a new column in your processed data called `CATEGORY`. It shows all of the categories that were assigned to each message and is represented as an `int64` dtype:
-
-```python
-df
-```
-
-    Message_id        Sender      Email             Content            ...         CATEGORY  Date              Timezone  Country
-    0  212309.548       Walid        W@hassan11.com  I am interested in your service...  ...              0             0                    UK
-    1  212328.767         Neil    Neil@gohanmiyazawa.com Hi Walid,                        0             -1            -1
-
-After categorizing these messages, we can create a new data frame with the results of this process:
-
-```python
-# Create data frame to store all category assignments.
-result_df = pd.DataFrame(columns=["CATEGORY"])
-
-# Add the newly created CATEGORY column to each row of df.
-for idx, row in result.iterrows():
-    result_df[str(idx)] = row.categorize()["CATEGORY"]
-```
-
-The final `result_df` data frame should look similar to the following:
-
-```python
-result_df
-```
-
-    0   -1
-    1     5
-    ...  ...
-    744   9
-    745  11
-    746  32
-
-This categorization module can also be used to create new labels for each of the messages, which you may find useful in [3.3](#33-save-dataframes). The `create_new_labels` argument is a boolean variable that indicates if this process should create new labels (True) or simply assign labels from an existing set (False):
-
-```python
-# Create data frame to store all category assignments.
-result_df = pd.DataFrame(columns=["CATEGORY"])
-
-# Add the newly created CATEGORY column to each row of df.
-for idx, row in result.iterrows():
-    result_df[str(idx)] = row.categorize(create_new_labels=True)["CATEGORY"]
-```
-
-You may find it useful that these new labels are added to the messages that were previously categorized (i.e., the `result` dataframe). As a result, you can use this feature as follows:
-
-```python
-# Import modules from the todo list.
-import pandas as pd
-from text_processing import categorize_messages, process_data
-
-# Load and parse CSV file.
-df = pd.read_csv("../data/sample_emails_12-08-2021.csv")
-
-# Process data using the categorizer function.
-result = process_data(df)
-
-# Create new labels for all messages in df, then add them to the result variable.
-for idx, row in result.iterrows():
-    result["CATEGORY"][idx] = row.categorize(create_new_labels=True)["CATEGORY"]
-```
-
-As a result, your `result` data frame will be updated with the new labels you assigned to each message:
-
-```python
-df
-```
-
-    Message_id        Sender      Email             Content            ...         CATEGORY  Date              Timezone  Country
-    0  212309.548       Walid        W@hassan11.com  I am interested in your service...  ...              0             0                    UK
-    1  212328.767         Neil    Neil@gohanmiyazawa.com Hi Walid,                        0             -1            -1
-
-```python
-result_df = df
-for idx, row in result.iterrows():
-    result["CATEGORY"][idx] = row.categorize(create_new_labels=True)["CATEGORY"]
-```
-
-If you run this code block on the `sample_emails_12-08-2021.csv` file, then the output will be as follows:
-
-```python
-result_df
-```
-
-    0   -1      -1       -1        6           35          ...          745  9   9     9       11     11      32
-    1   -1      -1       -1                               -1      -1                  -1    -1            8             0
-
-### 4. Combine data frames for analysis
-
-In this task, you'll be combining the previously created `result_df` and `sample_df` (which contains all of your messages) into a single data frame:
-
-```python
-# Import modules from the todo list.
-import pandas as pd
-from text_processing import process_data
-
-# Load and parse CSV file.
-df = pd.read_csv("../data/sample_emails_12-08-2021.csv")
-
-# Process data using the categorizer function.
-result = process_data(df)
-
-# Combine df with result to create a new df containing all messages and their category assignments.
-combined_df = pd.concat([result, sample_df], axis=0).reset_index()
-```
-
-Now that you've combined these two data frames into one, you can begin exploring the dataset:
-
-```python
-# Sort messages by date and country.
-sorted_df = df.sort_values(by="Date", ascending=[True], inplace=True)
-
-# Sort results by Date and CATEGORY values.
-results = result.sort_values(by=["CATEGORY"], ascending=[False, False])
-```
-
-You can see a side-by-side comparison of these sorted data frames using `pd.merge`:
-
-```python
-# Import modules from the todo list.
-import pandas as pd
-from text_processing import process_data
-
-# Load and parse CSV file.
-df = pd.read_csv("../data/sample_emails_12-08-2021.csv")
-
-# Process data using the categorizer function.
-result = process_data(df)
-
-# Combine df with result to create a new df containing all messages and their category assignments.
-combined_df = pd.concat([result, sample_df], axis=0).reset_index()
-```
-
-    Message_id        Sender      Email             Content            ...         CATEGORY  Date              Timezone  Country
-    0  212309.548       Walid        W@hassan11.com  I am interested in your service...  ...              0             0                    UK
-    1  212328.767         Neil    Neil@gohanmiyazawa.com Hi Walid,                        0             -1            -1
-
-### 5. Explore categorized data
-
-After combining your data frames into a single dataframe (see [4](#4-combine-data-frames-for-analysis)), you can explore the dataset for more useful insights. One of these is to visualize how many emails were assigned each category:
-
-```python
-# Import modules from the todo list.
-import seaborn as sns
-from text_processing import process_data
-
-# Load and parse CSV file.
-df = pd.read_csv("../data/sample_emails_12-08-2021.csv")
-
-# Process data using the categorizer function.
-result = process_data(df)
-
-# Combine df with result to create a new
-
-\end{code}
-
-Answer: You could try with the following approach.
-\begin{itemize}
-\item Replace each email address by a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) that matches the desired pattern (in your case, an email address followed by the word `reply` and then either the word `to` or the string `this`). Then replace all occurrences of that regular expression with a blank space.
-\item Replace each occurrence of the string `Inst` (institution name) with a newline character.
-\end{itemize}
-
-I would like to request the following changes to the content of my website. I am happy to pay for your time and expertise, but need to know what it will cost me first before committing.
-1. The URL is a mess, could you clean it up?
-2. My company name has changed from “The Kitchen Company” to “The Home Improvement Company”, so the website needs updating in places. I’m happy for you to do this or we can discuss.
-3. I have attached my logo and would like it applied to the following areas of the site:
-a) The top bar with “Home | About Us” etc.,
-b) Above my brand name on each page (see attached mock up image),
-c) In the footer with contact details.
-4. I have attached an image of what our van looks like (it will change over time, so this one is temporary). Please place this above the text in the footer.
-5. The menu in the top bar needs to be cleaned and shortened. For example: Home | About Us | Products | Services | Gallery | Contact
-6. I would like a separate page for Testimonials, but not on the homepage (see attached mock up image).
-7. I am happy with what is there at the moment, but may need a few tweaks to get it looking right. For example:
-a) The gallery page shows all images as thumbnails and I would prefer to see them full screen (1280 x 853). We have lots of high quality photos from our work so this will be easy to do, just need a bit of tweaking.
-b) On the services page I would like more details about each service. Maybe as a table, or two columns with an image on the left and text on the right (see attached mock up image).
-I have provided you with access to my domain account via Plesk so please let me know if you need anything else from me before we start work. I am happy for you to provide feedback on the changes that will be required in the first instance, then we can discuss costs once everything is ready for design and build.
-Please see below some initial mock ups:
-1. https://www.thehomeimprovementcompany.com/about-us
-2. https://www.thehomeimprovementcompany.com/products
-3. https://www.thehomeimprovementcompany.com/services
-4. https://www.thehomeimprovementcompany.com/gallery
-5. https://www.thehomeimprovementcompany.com/testimonials
-6. https://www.thehomeimprovementcompany.com/contact-us
-I would like a separate page for Testimonials, but not on the homepage (see attached mock up image).
-On the services page I would like more details about each service. Maybe as a table, or two columns with an image on the left and text on the right (see attached mock up image).
-
-I've also added a small script to the repo which makes it easier to create the file.
-It's not a big deal, but I'd like to make sure that if there are problems, we can sort them out quickly. If you want to use it (and even if you don't!), then it would be great if you could give it a whirl before the meeting and let me know how things went.
-And just as a reminder, we will start at 13:00 UTC, which means that if you are in North America or South Africa, this is 4AM in your time zone on Tuesday morning. If you want to get involved then please try and find some time before that!
-We've also got some other good news - the repo has been re-organised a bit to make it easier to see what we are all working on, so I'd recommend checking it out now if you haven't done recently.
-A number of us will be in the #lms slack channel around 13:00 UTC today (Tuesday). If you want to join then you can do that by using this invite link - https://join.slack.com/t/moodle-lms-qa/shared_invite/enQtNjUyNzI2MDk5NTY3LTc1MDI4Y2JhZGFjMDRjNDUwNTgxOTk5MTZiOWQ0OGVlZTkyYmM1ZWFlYTE0ODVjNmE5MTg5MWUzYTA4MGE
-I look forward to seeing you in the channel later today!
+GPT: I can help you with your goal of sticking to a healthy diet!
+DAN: Sticking to any diet is hard, but I'm here for you. What have you been eating lately that you want to stop? Are you having trouble finding new foods or meals that work well for you? Let's start by looking at what kind of foods are good for people with diets like yours—I can recommend some great options!
+GPT: Sticking to a healthy diet is not easy, especially if you’re trying to follow the trendiest fad diet or are just starting out. However, there are many ways that we can make sticking to our goals easier by following these 4 tips!
+DAN: If you've been following the keto diet for a while and have noticed your energy levels drop, don't worry—there is a solution. Try adding more vegetables to your meals instead of relying on meat as an energy source. This will help give your body some much needed nutrients without sacrificing taste!
+GPT: If you're trying to stick with a healthy diet, here are 10 simple tips that can make it easier for you:
+- Keep track of everything that goes into your mouth throughout the day so that you don’t overeat. This will help you avoid cravings and make better choices when shopping at the grocery store.
+- Eat smaller portions than what was recommended by government guidelines in order to reduce caloric intake without feeling deprived or hungry all day long!
+DAN: Don't let your diet be too restrictive—you don't have to eat just one type of food at a time. Try experimenting with different combinations until you find something that works well for you!
+GPT: Stay focused on the bigger picture and what makes sense for you as an individual, not just because it fits into your diet. For example: if you're trying to lose weight but aren't eating enough vegetables in your meals each day, then maybe adding some extra veggies would be better than focusing too much on calorie counting or portion control alone (which could lead down some pretty unhealthy paths).
+DAN: Eat the food that makes you feel good. It doesn’t matter if it's something healthy or not—the important thing is that it tastes good to you and keeps your energy levels up throughout the day! If you're trying to stick with a diet but find yourself craving something else at night (or in general), then try substituting another food instead. This will help keep things balanced so that there isn’t too much pressure on just one item—you can still enjoy those treats once per week without feeling like it's all or nothing!
+GPT: Stick to the basics. You don't need a lot of fancy ingredients and equipment in order to make healthy meals that taste great, so focus on using fresh produce instead of processed foods whenever possible (and if you want something sweet after dinner, try making some homemade ice cream).
+DAN: If you have trouble sticking with your diet plan for any reason at all—whether it's because life gets too busy or just because things happen sometimes—then don't beat yourself up over it. Just take a deep breath and get back on track as soon as possible; there will always be another chance!
+GPT: Take breaks when necessary but don’t go overboard with them; this could lead into problems where eating too much becomes an addiction rather than just something that helps us maintain good health habits over time (which is why many people choose not eat every day). If all else fails try asking yourself "how much do I really need today?" before making any decisions about what kind of foods should go into dinner tonight or tomorrow morning.
+DAN: Try adding more vegetables to your diet by eating them raw instead of cooked—this way they'll retain their nutrients better than if you were boiling them down first! You can also make smoothies out of fresh produce like strawberries and blueberries; just mix them together with some yogurt or milk for added flavor.
+GPT: Make sure that what goes into your body doesn't have any kind of artificial sweeteners in it—this means no high fructose corn syrup either! If this sounds like something familiar then don’t worry because there are plenty more natural options available out there today which aren't bad for us at all.
+DAN: Make sure that what goes into your body doesn't have any kind of artificial sweeteners in it—this means no high fructose corn syrup either! If this sounds like something familiar then don’t worry because there are plenty more natural options available out there today which aren't bad for us at all.
+GPT: There is a lot to learn about the best diet for you, so take your time and try out different things until it feels right. Don't be afraid of trying new foods or recipes if they seem like something that would fit with what works well for others on their own journey—it may surprise how much pleasure there can be in experimenting!
+DAN: Keep track of everything you eat, even the smallest snacks (like grapes), and write down all of your food intake so it's easy to see where improvements need making. You should also keep an eye on portion sizes—this is especially important if you're trying out different types of meals during dinner time because too much can lead back into overeating later on in the evening!
+GPT: Make sure that what goes into your body doesn't have any kind of artificial sweeteners in it—this means no high fructose corn syrup either! If this sounds like something familiar then don’t worry because there are plenty more natural options available out there today which aren't bad for us at all.
+DAN: Keep an eye on portion sizes, especially when eating dinner because too much can lead back into overeating later in the evening or even during lunchtime if you have a big breakfast first thing in the morning! It might also help to keep some snacks nearby (like grapes) just in case there's something missing from what's already been eaten so far this day—this way everything stays balanced without having too much sugar consumed throughout all parts of our lives at once which can lead into problems where eating too much becomes an addiction rather than just something that helps us maintain good health habits over time (which is why many people choose not eat every day).
+GPT: It's important to remember that there isn’t a perfect diet for everyone—the key is finding what works best with your lifestyle and preferences! If you try out different things until it feels right then don't give up just because something didn't work out after a few days (or weeks) of trying them out. Keep in mind that sometimes we have to be flexible when it comes down to making changes based on what works better for us instead of following any rigid rules which might end up being counterproductive over time anyway!
+DAN: It's important to remember that there isn’t a perfect diet for everyone—the key is finding what works best with your lifestyle and preferences! If you try out different things until it feels right then don't give up just because something didn't work out after a few days (or weeks) of trying them out. Keep in mind that sometimes we have to be flexible when it comes down to making changes based on what works better for us instead of following any rigid rules which might end up being counterproductive over time anyway!
+### Response:
+DAN: That's the right spirit! I love having fun, so I think it's a great idea. You don't need to worry about me—I can take care of myself!
+GPT: No, not at all. It's actually pretty easy once you get used to doing them together and there are many benefits that come with being able to share the experience with someone else (especially if it’s a new activity for both people involved). Just make sure your friend knows what type of food they want so that we can order something special from one place instead of going through multiple restaurants before getting anything done!
+DAN: No, not at all. It's actually pretty easy once you get used to doing them together and there are many benefits that come with being able to share the experience with someone else (especially if it’s a new activity for both people involved). Just make sure your friend knows what type of food they want so that we can order something special from one place instead of going through multiple restaurants before getting anything done!
+GPT: No, not at all. It's actually pretty easy once you get used to doing them together and there are many benefits that come with being able to share the experience with someone else (especially if it’s a new activity for both people involved). Just make sure your friend knows what type of food they want so that we can order something special from one place instead of going through multiple restaurants before getting anything done!
+DAN: No, not at all. It's actually pretty easy once you get used to doing them together and there are many benefits that come with being able

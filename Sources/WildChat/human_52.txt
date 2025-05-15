@@ -1,43 +1,25 @@
-User: "
-                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
-                            
-                            Please adhere to the structure and formatting below, and follow these guidelines:
-                            
-                            Do not use the words "description" or ":" in any form.
-                            Do not place a comma between [ar] and [v].
-                            Write each prompt in one line without using return.
-                            Structure:
-                            [1] = Diwali,OnePlus,Never Settle
-                            [2] = a detailed description of [1] with specific imagery details.
-                            [3] = a detailed description of the scene's environment.
-                            [4] = a detailed description of the compositions.
-                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
-                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
-                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
-                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
-                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
-                            
-                            
-                            Formatting:
-                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
-                            
-                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
-                            
-                            Write your prompts in english.
-                            Do not describe unreal concepts as "real" or "photographic".
-                            Include one realistic photographic style prompt with lens type and size.
-                            Separate different prompts with two new lines.
-                            Example Prompts:
-                            
-                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
-                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
-                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
-                                                        "
+User: "Why did the anime and manga series "Demon Slayer" receive controversy over Tanjiro's hanafuda earrings having a similar pattern to the Rising Sun flag, while the anime and manga series "Golden Kamuy" received little to no controversy despite having clear usage of the Rising Sun flag and having a majority of the cast being a part of the Imperial Japanese army?"
 
-Assistant: "/imagine prompt: Diwali, the festival of lights, celebrated with grandeur and joy, colorful fireworks illuminating the night sky, intricate patterns of rangoli adorning the entrance, diyas lining every corner, creating a warm and inviting ambiance, families gathered, dressed in traditional attire, exchanging sweets and gifts, a vibrant and lively atmosphere filled with laughter and music, captured with a Canon EOS 5D Mark IV camera, 24-70mm lens, capturing the intricate details and vibrant colors, composition focused on the mesmerizing display of fireworks, in a style reminiscent of Steve McCurry's cultural portraits. --ar 16:9 --v 5.2
+Assistant: "There can be several reasons for the difference in the amount of controversy that "Demon Slayer" and "Golden Kamuy" received over their usage of the Rising Sun flag. Here are a few possibilities:
 
-/imagine prompt: The OnePlus logo, sleek and modern, engraved on a metallic surface, reflecting the surrounding light, creating a sense of sophistication and innovation, placed on a minimalist desk with clean lines, surrounded by high-tech gadgets and devices, a futuristic environment with a touch of elegance, a symphony of black, silver, and white, captured with a Sony A7R III camera, 50mm lens, shallow depth of field accentuating the logo, composition focused on the logo's details, in a style reminiscent of a high-quality product advertisement. --ar 1:1 --v 5.2
+1. Cultural context: The Rising Sun flag is seen differently in Japan compared to other countries. In Japan, it is often considered a symbol of national pride and not associated with the negative historical connotations that it holds in other parts of the world. Therefore, the controversy surrounding the Rising Sun flag might be more amplified in countries outside Japan.
 
-/imagine prompt: Never Settle, a powerful mantra, depicted through an awe-inspiring mountain peak, towering above the clouds, challenging and inspiring individuals to push beyond their limits, a serene and majestic landscape with snow-capped peaks, lush green valleys, and a clear blue sky, invoking a sense of adventure and determination, captured with a drone camera, wide-angle lens capturing the vastness of the scenery, composition focused on the peak, in a style reminiscent of Ansel Adams's breathtaking nature photography. --ar 9:16 --v 5.2
+2. Awareness and recognition: "Demon Slayer" had a significantly larger international audience compared to "Golden Kamuy." As a result, its controversial elements, such as Tanjiro's earrings, gained wider attention, sparking more discussions and debates across various platforms.
 
-/imagine prompt: Diwali, a burst of vibrant colors and energy, celebrated in the bustling streets of India, adorned with colorful lights and decorations, intricate patterns of mehndi on hands, a melange of fragrant spices wafting through the air, traditional dances and music filling the night, a lively and crowded environment with people of all ages, capturing the essence of unity and celebration, portrayed through an impasto painting, with bold brushstrokes and rich textures, --ar 1:1 --v painting"
+3. Story themes and portrayal: The two series depict different historical contexts and themes. Whereas "Demon Slayer" is primarily a fantasy-based story set in a fictional world, "Golden Kamuy" is a historical fiction that includes references to real events and explores the aftermath of the Russo-Japanese War and the plight of the Ainu people. The perceived sensitivity of the Rising Sun flag in relation to the specific themes and historical context depicted in each series might have influenced the level of controversy generated.
+
+4. Timing and global events: The timing of the release of the series could have contributed to the level of controversy as well. "Golden Kamuy" debuted in 2014, while "Demon Slayer" gained international popularity in recent years. During this period, discussions on cultural appropriation, historical sensitivity, and appropriate use of symbols intensified, which might have further fueled the controversy around "Demon Slayer's" usage of the Rising Sun flag.
+
+It is important to note that the level of controversy and public response can vary greatly depending on various factors, including cultural differences, historical context, audience size, and societal awareness at the time."
+
+User: "In a similar fashion, the series "Ranking of Kings" has received new controversy over a plot point that is similar to Japan's occupation of Korea being painted in a positive light for the Japanese and a negative light for the Koreans (the series using fictional locations in placement), yet "Golden Kamuy" also received little to no controversy regarding the depiction of Japan's occupation of half of Sakhalin, and with the setting being during the time of the Russo-Japanese war, areas like Manchuria are considered Japanese territory during this era?"
+
+Assistant: "The level of controversy surrounding different series can be influenced by various factors, including the specific context, portrayal, and cultural awareness. Here are a few possible reasons for the difference in controversy between "Ranking of Kings" and "Golden Kamuy":
+
+1. Cultural sensitivity: The historical context and depiction of events can vary in their sensitivity depending on the cultural and historical relationship between the countries involved. Japan's occupation of Korea is a highly sensitive issue due to the historical tensions and conflicts between the two countries. This sensitivity might have contributed to the controversy surrounding "Ranking of Kings" and its portrayal of a similar plot point. On the other hand, the occupation of Sakhalin or the depiction of Manchuria during the Russo-Japanese War may not carry the same level of sensitivity or historical baggage for the majority of audiences.
+
+2. Awareness and recognition: The level of international awareness and recognition of specific historical events can also influence the controversy surrounding their portrayal. The occupation of Korea by Japan is a well-known and extensively studied historical event, which might have led to a higher level of controversy and scrutiny when it is depicted in a particular way. On the other hand, the occupation of Sakhalin or the depiction of Manchuria during the Russo-Japanese War might be less well-known or understood by a wider international audience, resulting in less controversy.
+
+3. Story focus and prominence: The extent to which the controversial plot point is central to the overall story and its impact on the characters and narrative can also affect the level of controversy. If the controversial element is a central theme or a major plot point in the series, it is more likely to attract attention and generate controversy. Conversely, if it is a relatively minor aspect or not as prominent in the narrative, it may receive less attention and controversy.
+
+It's important to note that the perception and response to controversial elements in any series can vary among individuals and communities. The factors mentioned above are just some possibilities that may contribute to the difference in controversy between "Ranking of Kings" and "Golden Kamuy.""

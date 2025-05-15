@@ -1,5 +1,10 @@
-[CHAT]“An Omorashi Challenge is where a person (usually a young woman) willingly restrains their bladder until it becomes full and then experiences the pleasure of peeing themselves. A Chess-based Omorashi Challenge could involve playing a game of chess while holding in your urine, waiting for an opportune time to urinate. To add excitement, players could make a bet about when they will urinate and be rewarded if they hold it in until the end of the game.”
+[REV]The voltage across a capacitor, C, is given by: $v_{C}(t) = Q_{c}/C$ where $Q_c$ is the charge stored on it.
 
-To play the challenge, two or more players sit down with a chess board and set up their pieces. Each player has their own water bottle and decides when they want to pee. The goal is for each player to resist urinating for as long as possible during the game. If someone can’t hold it in anymore and needs to go, they lose the game and have to drink from their water bottle.
+The current that flows in an RC circuit is given by: $i(t)=CdV/dt$
 
-This challenge is a great way to add some excitement to a game of chess. It encourages players to focus and pay attention, testing their mental and physical endurance. It also provides an opportunity for bonding as everyone involved experiences the joy and relief of relieving themselves after the game ends.”[/CHAT]
+Substituting in the voltage for a capacitor we have: $I=CV_{0}d(1-e^{-tRC})/dt = CV_{0}RC e^{-tRC}$
+
+Now that we have the current, we can find out how much charge is flowing through the circuit by integrating: $Q=\int{Idt}=\int_{0}^{\infty}CV_{0}RC e^{-tRC}dt = Cv_{0}$
+
+Then we use Ohm’s Law to solve for current.
+$I=V/R = 9 V / 15 \Omega = 0.6 A$. [/REV]

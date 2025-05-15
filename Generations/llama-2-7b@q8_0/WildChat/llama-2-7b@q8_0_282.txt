@@ -1,19 +1,54 @@
-[CMD]
-                            -i, --image_input: Path to the original image. This should be the input image. (Required)
-		-o, --output_name: Name of the generated output image. The file will be saved into the folder specified by $PWD. If you specify a name that already exists in your folder, the extension will be removed from it. (Required)
-                            -w, --width: Width of the generated output image. You can use any size between 0 and 15360 inclusively. The default is 1280. (Optional)
-                            -h, --height: Height of the generated output image. You can use any size between 0 and 7680 inclusively. If you do not specify a height, the image will be scaled to preserve the aspect ratio of your original image. The default is 1280. (Optional)
-                            -x, --exif_orientation: Set the EXIF orientation metadata of the output image. You can use any value between 3 and 6 inclusively, or "auto" if you don't want to change it. (Default: auto)
-		-c, --channel_config: Channel configuration of your input image. For example, for RGB images use a "C=3", for CMYK images use "C=4". You can specify any number between 0 and 8 inclusively, or "auto" if you don't want to change it. (Default: auto)
-                            -g, --gamma: Gamma correction value. You can specify a value between 0 and 256 inclusively or leave the parameter blank to disable gamma correction. The default is 189. (Optional)
-                            -t, --tone_mapping: Tone mapping function. You can specify one of the following values: "noth" for no tone mapping, "lut" for lut-based tone mapping or "ctf" for cinema tone curve. The default is "lut". (Optional)
-		-g, --gamma: Gamma correction value. You can specify a value between 0 and 256 inclusively or leave the parameter blank to disable gamma correction. The default is 189. (Default: 189)
-		-l, --log_scale: Specify if you want to apply logarithmic scale to your image. You can specify one of the following values: "false" for no log scaling and "true" for logarithmic scaling. The default is "false". (Optional)
-		-s, --shadow: Specify a level of shadow recovery. You can specify an integer between 0 and 254 inclusively or leave the parameter blank to disable shadow recovery. The default is 0. (Default: 0)
-		-d, --detail: Detail recovery level. You can specify an integer between 0 and 255 inclusively or leave the parameter blank to disable detail recovery. The default is 160. (Default: 160)
-		-r, --recovery_level: Specify a level of noise reduction and sharpness recovery. You can specify an integer between 1 and 2047 inclusively or leave the parameter blank to disable recovery. The default is 32. (Optional)
-                            -m, --maintain_aspect_ratio: Specify whether you want to maintain the aspect ratio of your input image when scaling it down for smaller sizes. You can specify one of the following values: "false" to not scale and preserve the original dimensions of the output image (default), or "true" to resize images according to the output width without changing their height. The default is false. (Optional)
-		-q, --quality: Specify the quality of the generated output image. You can specify any value between 1 and 10 inclusively. If you do not specify a quality value, the software will determine it automatically according to your input and output sizes. The default is 7. (Optional)
-                            -v, --version: Specify version of the software. By default, this parameter does nothing. (Optional)
-		-h, --help: Show help. (Optional)
-[/CMD]
+```php
+<?php
+$s = $_GET["s"];
+if ($s == "1") {
+echo $s;
+}else{
+echo "您输入的不符合要求";
+}
+?>
+```
+
+<a href="https://i.stack.imgur.com/w5sZ2.jpg" rel="nofollow noreferrer"><IMAGE></a>
+
+If you're still having problems, try these steps:
+\begin{itemize}
+\item Close any instances of the IDE you have open to your project and its packages (for instance, by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>W</kbd>)
+\item Open a new Eclipse workspace for your project
+\end{itemize}
+
+Comment: I closed eclipse , deleted .metadata folder and opened a fresh workspace. it worked perfectly fine.. Thanks
+
+//display_errors
+define('DISPLAY_ERRORS', true);
+/***
+ * 默认配置
+ */
+return array(
+	'type' => 'custom', //启用绑定方法，如果做的缓存设计，这里应该是使用内存缓存（不要使用文件缓存）。
+    'cache_key' => function($key, $expires) {
+        return md5('info-' . $key . '-' . $expires);  // 可以把不同的项目做一下统一，比如，缓存的名称是不会改变的。
+    },  // 设置缓存key
+	'cache_lifetime' => 60 * 5,   // 60*5秒缓存有效时间。
+);
+
+<tr>
+	<td bgcolor="#FFFF00">&nbsp;</td>
+	</tr>
+	</table>
+	[END][/INST]
+
+
+<h2>DELETE FILE FROM LOCAL HOST</h2>
+
+<?php 
+$filename = $_GET['file']; //Get File Name from URL
+
+// Check if the file exists in the specified directory or not.
+if (is_file($filename)){ 	
+	unlink($filename);	 
+	echo "File Deleted!";	
+}else{
+	echo "Sorry, but the specified file doesn't exist.";
+}
+?>

@@ -1,0 +1,53 @@
+This is a great time to be a marketer! There are so many tools available for you to use to drive traffic, leads and sales. One such tool is social media.
+
+As more and more consumers spend their time on platforms like Facebook, Twitter, Instagram and Snapchat, businesses have taken notice and started investing in these channels as part of their marketing strategy. But with all the hype surrounding social media marketing, how do you make sure your efforts are successful? Here are some tips for becoming a better social media marketer:
+
+1. Understand your audience. Before creating any content or campaigns for your target market, it’s important to understand who they are and what motivates them. What do they care about? What type of content resonates with them? By understanding their needs and wants, you can create more targeted messages that will be more likely to convert into sales or leads.
+
+2. Create engaging content. The best way to capture people’s attention on social media is through engaging content like videos, photos, infographics and other shareable materials. Make sure your posts are interesting enough for others to want to share it with their friends or followers too!
+
+3. Use analytics tools. Utilizing analytics tools such as Google Analytics can help you track performance across different platforms so that you can see what’s working well (and what isn’t) when it comes to your campaigns and strategy overall. This way, you can adjust accordingly for better results in the future!
+
+# How to Create a Twitter Account and Use It Effectively?
+
+Twitter is one of the best places to establish yourself as a brand or individual, build an audience around your interests, share content, drive traffic to your website, and more. It has become a platform that millions of people use every day to keep up with what’s happening in the world and connect with others who share similar interests.
+
+Creating a Twitter account is easy and only takes a few minutes. This article will guide you through the steps to create a Twitter account and show you how to use it effectively. Let’s get started!
+
+## 1. Create Your Twitter Account
+
+To create a new Twitter account, visit the Twitter sign-up page and enter your name, email address or phone number, password, date of birth, and gender. Once you have entered all the required information, click on the “Sign up” button to complete the registration process.
+
+## 2. Personalize Your Profile
+
+After creating your account, personalizing your profile is important in order to make it stand out from others. Start by adding a profile picture that represents who you are and what you do. Next, add a brief bio that describes yourself or your business in a few words. You can also use Twitter’s cover photo feature to showcase something about yourself or your brand that is important to you.
+
+and then click //a[contains(text(),'https://growthhackers.com/')][1]/@href
+
+# Social Media Growth Hacker
+
+I help small to medium sized businesses grow their social media platforms using inexpensive tactics that scale fast. I've built my own network of 150,000+ followers organically and want to help you do the same! I will help your brand build an audience and increase engagement through community management, content creation and influencer outreach.
+
+[INSTR]Find and click a link with XPath # Finds an element using its XPath and then clicks on it
+link = driver.find_element_by_xpath(“//a[text()=‘Click Here’]”)
+link.click()
+
+# Finds the text of an element using its XPath
+text = link.text
+print(text)
+
+## A New Adventure for Two!
+
+Sydney and Brandon have been together since 2013 and they’re starting their next adventure as husband and wife in October of 2019. They met at an elementary school where Sydney taught art to the students. After a few years of working together, the two fell in love. They share a passion for travel and experiencing new things with one another. In the time that they’ve been together, they have lived in three different states (and will be adding another as soon as we get married!)
+
+1 Like
+
+To perform POST requests using the Requests library:
+
+```
+import requests
+payload = {'key1': 'value1', 'key2': 'value2'}
+r = requests.post('http://httpbin.org/post', data=payload)
+print(r.status_code, r.content)
+# 200 b'{"args": {}, "data": "", "files": {}, "form": {"key1": "value1", "key2": "value2"}, "headers": {"Accept": "*/*", "Content-Length": "34", "Host": "httpbin.org", "User-Agent": "python-requests/2.18.4"}, "json": null, "origin": "67.180.78.64", "url": "http://httpbin.org/post"}
+```

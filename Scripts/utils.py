@@ -438,7 +438,7 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, model_name, num_file
             else:
                 raise ValueError("Empty text")
         except Exception as e:
-            print(f"Error reading file {filepath.name}: {e}")
+            print(f"\nError reading file {filepath.name}: {e}")
     
     file_pbar.close()
     

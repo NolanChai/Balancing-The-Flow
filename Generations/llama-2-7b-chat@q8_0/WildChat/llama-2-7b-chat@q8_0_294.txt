@@ -1,0 +1,9 @@
+Here is an example of how you could write an assembly language program in TASM for the DOS operating system that performs the task you described:
+; Declare the input file
+fileinput input.txt
+
+; Read each element from the input file into a register
+read %ax, %bx
+loop @eof input.txt
+    ; Skip over any whitespace at the beginning of the line
+    cmp byte

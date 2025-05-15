@@ -1,13 +1,13 @@
 Model: mistral-7b-v0.1@q8_0
-Dataset: WildChatGenerated: 317 new examples
+Dataset: WildChatGenerated: 300 new examples
 Skipped: 0 existing examples
-Errors: 19 failed generations
-Retries: 108 retried generations
+Errors: 99 failed generations
+Retries: 326 retried generations
 Temperature: 0.9
 Top-p: 1.0
 Max tokens: 2048
-Generation time: 3236.34 seconds
-Surprisal calculation time: 142.77 seconds
-Average surprisal: 3.2856
-Total runtime: 3379.11 seconds
-Date: 2025-05-11 16:55:51
+Generation time: 5117.37 seconds
+Surprisal calculation time: 161.16 seconds
+Average surprisal: 3.5883
+Total runtime: 5278.53 seconds
+Date: 2025-05-14 10:16:36

@@ -1,0 +1,18 @@
+superheat = (C*10)/(273+R) ; C=compressor suction temp, R=refrigerant temp 
+
+### Note:
+the formula above assumes isentropic compression; if the compressor is not running in isentropic conditions, then one should use the equation below (thanks to Yakov Shtraizl):
+superheat = C*(10-273)/((R+1.5)*10)
+
+If you are using the turbocharger with a piston engine, your engine has insufficient power. You can choose bigger turbo or add more fuel/air mixture at high rpm to increase efficiency and power of engine. If there is too much air, it will reduce the compression ratio and efficiency of engine.
+
+**1. What are the conditions of maximum efficiency?**
+*  **E=24087.65 - 1.9718T^3 + 328.052T^4 - 680.842T^5  
+
+*  **2) What is the difference between the E_max and the E_ref (ref being the reference efficiency)?**
+E_max-24087.65=1.9718T3+328.052T4-680.842T5
+*  
+
+### Step 3: Increase in Efficiency with Tube Diameter:
+
+![image](https://user-images.githubusercontent.com/17079267/34716835-af6dadf4-fcea-11e7-92cc-7ac99e2aaae0.png)

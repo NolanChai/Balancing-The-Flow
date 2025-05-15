@@ -1,0 +1,11 @@
+[INTR] 参数field_name、value和cid分别代表修改的字段名、修改后的字段值和会员编号。
+1. field_name: 修改字段的名称，一般可选：
+    1. nickname(昵称)
+    2. sign(个性签名)
+    3. email(邮箱地址)
+    4. phone(手机号码)
+    5. qq(QQ号码)
+    6. wechat(微信号)
+    7. password(密码)
+2. value: 修改后的字段值。
+3. cid: 会员编号。[/INTR]

@@ -1,36 +1,165 @@
-User 0: Hey there! Can you check out the new version of our Python SDK? It has a built-in `get_klines` method that should make this process much simpler. You can find more information about the API and the latest documentation here: https://docs.mexc.com/#/api-documentation/market-data
-User 1: >Can you check out the new version of our Python SDK? It has a built-in get_klines method that should make this process much simpler. You can find more information about the API and the latest documentation here: https://docs.mexc.com/#/api-documentation/market-data
+I am working on a new Starcraft 2 map that will be using the Slenderman as well as some of the original race's units in some fashion. I want to take this project over to Unity 3D and see what can be done with it.
 
-I've already seen it, but how can I install it?
+I have played around with making a SlenderMan game for SC2 before, but never got around to finishing anything.
 
-- You are likely using the wrong API key for spot trading.
+In this version I am trying to make the Slenderman a bit more terrifying. He'll be stalking you throughout the level and when he finally appears he will attempt to kill you using some sort of ghost like effect or maybe a blast of energy from his eyes.
 
-Please check that you have selected the correct type of API key under `Settings` -> `API Settings`.
+The map will use some elements of the original races, but also include new units that have been custom created for this project.
 
-If you cannot resolve the issue, please open a support ticket and include a screenshot of the error message and your API key ID so that we can investigate further.
-- Thanks for your answer , I’m using Coinbase Pro api key not MEXC Api key . But i got same Error from Coinbase Pro api also
-- @Rohith_Sureshkumar Have you checked your API keys on Coinbase? Is there anything suspicious in the log? We are not familiar with the exchange. Maybe a moderator can chime in to provide some guidance.
-- @James-Cowen I tried coinbase api ,but its not working same error .
+So far I am making progress on getting this map done. It's not going to be easy, but it will be fun.
 
-1 Like
+I just wanted to share what I have done so far in terms of some custom SlenderMan models and a quick screenshot of the SC2 Map Editor showing a small area of what has been done.
 
-It’s a known bug. Please have a look at this topic: https://community.sharpsplints.com/t/lookback-problem-after-firmware-update-to-3-3-0/42897?u=djp12345
+The story is about a human who gets to be the last hope of this world. He has to fight against all the monsters in the game, including Siren Head. The monster was created by some guy who got fed up with humanity and decided that they should just kill themselves. This human who is the last hope of humanity doesn't want to die, but he also knows that it is his fate. He wants revenge against Siren Head for what he did to him.
 
-Also I’ve filed a ticket to the developers. Please be patient and wait for an update (pun intended) from them. They are probably working on it, but they have to finish what they have in their hands first.
+The main character in this game will be the main character from StarCraft 2, Kerrigan (aka Sarah Kerrigan). Her story is about how she got infected and became a monster herself after losing her humanity due to an accident that happened during one of her missions as a Ghost agent for The Confederacy.
 
-Thanks!
+Kerrigan will have access to all three races in this game: Terran, Protoss, Zerg (or whatever you want)...but she won't be able to use any special abilities like teleporting or shields because those aren't available yet! There are also two other playable characters who are not included in this story at all but will probably show up later on down the line.
 
-Lookback works as expected for me on 3.3.0, but I think the problem you’re having may be related to the lookahead function and not the lookback function. The way lookahead works is by looking ahead in the queue to see if there’s anything coming up that could cause a collision. If so, it will slow down or stop the drill before that event. I think what you might be seeing is that it slows down/stops the drill more than necessary since it has no way of knowing when the new tool will arrive in the queue and resume cutting.
+## What is Siren Head?
 
-I am not sure about that because with lookahead off and on the problem was there.
-And if I switch to another function like for example 3D carve, then everything works fine. So if the problem is not with lookback then it must be a bug in the software, no?
+Siren Head is a humanoid monster that has been featured in various internet memes and stories. It was created by an artist named Kris Straub, who is also responsible for creating Cyanide & Happiness and other popular webcomics. The Siren Head is a human-looking creature with long hair and two sets of teeth on either side of its face; these features make it look like it has multiple mouths at once. It has red eyes, which glow when it opens them up fully to show that they are actually hollow inside. Its ears are small but pointed upward towards each other, giving it an alien appearance.
 
-1 Like
+In many ways this creature resembles the creature from Siren Head lore: both creatures have multiple mouths (though in different configurations) and red eyes which glow when opened up fully so they can be seen through all three layers of skin that make up their faces (eyes being visible only when fully open).
 
-I am trying to install the CWM Recovery on my Galaxy S4 (i9500) but i cant make it work. I am using Odin3 3.12 and have extracted the .tar file using 7zip, and tried with all 4 possible versions in Odin3.
-I used the PDA part of Odin to flash it but when i do that the recovery will not load after a reboot, so i changed my mind and thought that i will just flash the full .tar with AP, CP and CSC parts in Odin3 and then the recovery should work but no matter what i did nothing seems to work.
-I have also tried with both 20140115 & 20140117 versions of TWRP Recovery (i know that both are for international version) and those do not seem to load after a reboot as well, so i am not sure what i am doing wrong.
-I tried with all the 3 variants: cwm6_twrp-2.6.3.0-20140115_i9500-v1.tar, cwm7_twrp-2.8.5.0-20140117_i9500-v1.tar and cwm8_twrp-3.0.1.0-20140117_i9500-v1.tar but it seems like nothing works on my device.
-What am i doing wrong?
-I know that there is no CWM Recovery available for the international version and that TWRP is for international as well but if i flash any of these 4 .tars with Odin3 (either AP/CP or PDA) they will not work after a reboot.
-Please help me make it work, thank you in advance!
+The Siren Head also has several other traits that match up with what we know about the creature from StarCraft 2 lore: it has sharp teeth like those found on most animals; its body appears to be covered in scales rather than fur or feathers; there are two sets of ears instead of one; its tail is long and flexible enough for it to curl around itself while lying down flat against whatever surface it's resting upon.
+
+## The Story Behind Siren Head
+
+Siren Head is a humanoid monster that has been featured in various internet memes and stories. It was created by an artist named Kris Straub, who is also responsible for creating Cyanide & Happiness and other popular webcomics. The Siren Head is a human-looking creature with long hair and two sets of teeth on either side of its face; these features make it look like it has multiple mouths at once. It has red eyes, which glow when it opens them up fully to show that they are actually hollow inside. Its ears are small but pointed upward towards each other, giving it an alien appearance.[2]
+
+In many ways this creature resembles the creature from Siren Head lore: both creatures have multiple mouths (though in different configurations) and red eyes which glow when opened up fully so they can be seen through all three layers of skin that make up their faces (eyes being visible only when fully open). The Siren Head also has several other traits that match up with what we know about the creature from StarCraft 2 lore: it has sharp teeth like those found on most animals; its body appears to be covered in scales rather than fur or feathers; there are two sets of ears instead of one; its tail is long and flexible enough for it to curl around itself while lying down flat against whatever surface it’s resting upon.[3]
+
+## StarCraft 2 Races & Characters Meet Siren Head
+
+The Siren Head is a humanoid monster that has been featured in various internet memes and stories. It was created by an artist named Kris Straub, who is also responsible for creating Cyanide & Happiness and other popular webcomics. The Siren Head is a human-looking creature with long hair and two sets of teeth on either side of its face; these features make it look like it has multiple mouths at once. It has red eyes, which glow when it opens them up fully to show that they are actually hollow inside. Its ears are small but pointed upward towards each other, giving it an alien appearance.[2]
+
+In many ways this creature resembles the creature from Siren Head lore: both creatures have multiple mouths (though in different configurations) and red eyes which glow when opened up fully so they can be seen through all three layers of skin that make up their faces (eyes being visible only when fully open). The Siren Head also has several other traits that match up with what we know about the creature from StarCraft 2 lore: it has sharp teeth like those found on most animals; its body appears to be covered in scales rather than fur or feathers; there are two sets of ears instead of one; its tail is long and flexible enough for it to curl around itself while lying down flat against whatever surface it’s resting upon.[3]
+
+The Siren Head has also been featured in other internet memes and stories, including:
+
+- The Siren Head was featured on Tumblr as part of a series called "Sirens" by artist Kris Straub. The series includes illustrations featuring various different characters from the StarCraft universe alongside the Siren Head.[4]
+- In June 2016, an image depicting what appears to be two Terrans fighting against the Siren Head was posted on Reddit.[5] It has since been removed due to copyright concerns. This image may have inspired another popular internet meme called "The Siren Head."[6][7]
+- On July 23rd, 2016 an image depicting what appears to be three Terrans fighting against the Siren Head was posted on Reddit.[8] This image also includes text at its bottom stating: “I’m going to fight you!” The text is written in blue letters which makes it appear as though they were added after being posted by someone else who did not know what they meant when they typed them out.[9]
+- On October 27th, 2016 an image depicting what appears to be four Terrans fighting against the Siren Head was posted on Reddit.[10] This image has no text written on it at all so there’s no way for anyone else other than those who posted it originally know exactly what this means when they see them together like this.[11]
+
+## How to Play StarCraft 2 Races & Characters Meet Siren Head
+
+If you're a fan of both StarCraft 2 and Siren Head, then we have the game for you. This is a custom map that will let you play as any one of the three races from StarCraft 2: Terran, Protoss or Zerg (or even all three!) against the Siren Head in an epic battle to see who comes out on top!
+
+The map features two teams: Team Humanity and Team Monsters. The goal is simple: destroy all of your opponents' buildings before they can do so to yours! You'll need some strategy here; if you want to win at this game, then it would be wise for each team member not only know how much damage their units deal but also which ones are good against what types of enemies...and where those weaknesses lie too!
+
+The first thing we need do is find ourselves an opponent with whom we can fight; once found they should be added into our roster (we'll get back later). Now let’s take a look at each side individually starting off with Team Humanity:
+
+## Conclusion
+
+I hope you enjoyed this article, and I hope it helped you learn something new about StarCraft 2 races and characters meet Siren Head. If there is anything else that we can do for you or if you have any questions regarding our services please feel free to contact us at [email protected]
+
+- 1.2k
+
+> You've been gone for a while, this is what you get now.
+
+It's good to see some people still read the wiki.
+I have been working on it on an off between personal stuff.
+The plan was always to add more characters and monsters but it's a little different now than I planned when I started this.
+
+- 304
+
+> You've been gone for a while, this is what you get now.
+
+I am still here, I'm just not very active anymore.
+I think we should merge all the existing wiki entries together into one big entry? That way there is only one page to update. It would be less work in the long run as well.
+
+- 891
+
+> > You've been gone for a while, this is what you get now.
+>
+> I am still here, I'm just not very active anymore.
+> I think we should merge all the existing wiki entries together into one big entry? That way there is only one page to update. It would be less work in the long run as well.
+
+I agree, but it might take some time
+
+- 1.2k
+
+@SenatorCornelius
+
+> You've been gone for a while, this is what you get now.
+
+It's good to see some people still read the wiki.
+I have been working on it on an off between personal stuff.
+The plan was always to add more characters and monsters but it's a little different now than I planned when I started this.
+- 891
+
+> It's good to see some people still read the wiki.
+> I have been working on it on an off between personal stuff.
+> The plan was always to add more characters and monsters but it's a little different now than I planned when I started this.
+
+Well, if you don't want to be involved anymore, then just leave the wiki alone. I am still interested in working on the Wiki, so maybe I should start writing the missing information (mainly the ones from the first two floors) by myself.
+
+- 304
+
+> Well, if you don't want to be involved anymore, then just leave the wiki alone. I am still interested in working on the Wiki, so maybe I should start writing the missing information (mainly the ones from the first two floors) by myself.
+
+I never said that! I just haven't been able to work on it much these days.
+Although, if you have a list of what is left to do, I will happily add more stuff when I get the chance!
+- 254
+
+> @SenatorCornelius
+>
+> > You've been gone for a while, this is what you get now.
+>
+> It's good to see some people still read the wiki.
+> I have been working on it on an off between personal stuff.
+> The plan was always to add more characters and monsters but it's a little different now than I planned when I started this.
+
+I am definitely interested in writing for this Wiki as well, as I've already made some notes about the various monsters that inhabit The Backrooms (based off of my own theories).
+
+- 304
+
+> > @SenatorCornelius
+> >
+> > > You've been gone for a while, this is what you get now.
+> >
+> > It's good to see some people still read the wiki.
+> > I have been working on it on an off between personal stuff.
+> > The plan was always to add more characters and monsters but it's a little different now than I planned when I started this.
+>
+> I am definitely interested in writing for this Wiki as well, as I've already made some notes about the various monsters that inhabit The Backrooms (based off of my own theories).
+
+Awesome! I haven't really had time to read the stories yet so I don't know what you wrote. But anything is helpful. I think a lot of us are interested in doing this and it would be great if we could get some stuff written down. I was hoping that others would help write about the characters too, but it seems like the monsters and places take most of the attention
+- 254
+
+> > > @SenatorCornelius
+> > >
+> > > > You've been gone for a while, this is what you get now.
+> > >
+> > > It's good to see some people still read the wiki.
+> > > I have been working on it on an off between personal stuff.
+> > > The plan was always to add more characters and monsters but it's a little different now than I planned when I started this.
+> >
+> > I am definitely interested in writing for this Wiki as well, as I've already made some notes about the various monsters that inhabit The Backrooms (based off of my own theories).
+>
+> Awesome! I haven't really had time to read the stories yet so I don't know what you wrote. But anything is helpful. I think a lot of us are interested in doing this and it would be great if we could get some stuff written down. I was hoping that others would help write about the characters too, but it seems like the monsters and places take most of the attention
+
+It's alright - I just finished reading them now, and they were very enjoyable! I really liked how you added a lot of details to your stories in order for people to understand them better, such as descriptions of what certain areas look like or specific rules that are followed by characters. This made the story more immersive.
+
+I don't have any pictures of monsters at this time but I'll be sure to create some once my computer is fixed. It may take a while before they are done though as I've been very busy these days (but hopefully not for long)! As far as the wiki goes, if you ever need help with writing any new content or editing old pages, feel free to let me know - I can assist you whenever needed.
+
+- 254
+
+> > It's alright - I just finished reading them now, and they were very enjoyable! I really liked how you added a lot of details to your stories in order for people to understand them better, such as descriptions of what certain areas look like or specific rules that are followed by characters. This made the story more immersive.
+> >
+> > I don't have any pictures of monsters at this time but I'll be sure to create some once my computer is fixed. It may take a while before they are done though as I've been very busy these days (but hopefully not for long)! As far as the wiki goes, if you ever need help with writing any new content or editing old pages, feel free to let me know - I can assist you whenever needed.
+>
+> Awesome! That sounds great. Yeah I think more pictures would really help make the whole thing look a lot better than it does now and also help people visualize what monsters/things look like. If I had any suggestions, I'd say it might be good to add some pictures of rooms in certain areas/floors so that we can see how they differ from each other (for example the 2nd floor room looks more like a warehouse while the 3rd floor has an abandoned apartment building). Also, maybe you could find or make some pictures showing characters doing different things around The Backrooms - this would give people a better idea of what these NPCs do when they aren't busy being eaten by monsters!
+>
+> I know it will take some time, but if you can get to it then that would be great. Thanks in advance!
+
+I think I will start with the first two floors (maybe three) and then move on from there. If other people are interested in writing about characters or anything else, then feel free to do so. However, I'd suggest that we try to stick with one person writing per page - this way, everyone has a chance to add their own contributions without getting overwhelmed by others who may have more ideas than they can handle!
+- 304
+
+> > > It's alright - I just finished reading them now, and they were very enjoyable! I really liked how you added a lot of details to your stories in order for people to understand them better, such as descriptions of what certain areas look like or specific rules that are followed by characters. This made the story more immersive.
+> > >
+> > > I don't have any pictures of monsters at this time but I'll be sure to create some once my computer is fixed. It may take a while before they are done though as I've been very busy these days (but hopefully not for long)! As far as the wiki goes, if you ever need help with writing any new content or editing old pages, feel free to let me know - I can assist you whenever needed.
+> >
+> > Awesome! That sounds great. Yeah I think more pictures would really help make the whole thing look a lot better than it does now and

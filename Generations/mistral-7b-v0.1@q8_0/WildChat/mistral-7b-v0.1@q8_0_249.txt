@@ -1,152 +1,71 @@
-Here is the issue I’m facing.
+Divorced in his 70’s, my dad was looking forward to dating again. When he met Jeanne at the gym where she worked out and he lifted weights, they got on well and dated for a couple years. He was sure that they were meant for each other. Then he found out that she had a son, age 17, who lived with her, and he was a little worried about how it would all work out.
 
-1. Selenium IDE opens Chrome web browser and performs a search, then clicks on some links to navigate to the desired page.
-2. Then it looks for a link with text ‘Social Media Growth Hacker’ which has an id “menu-item-365”. But if we look at the source code of that page, this element is missing in the HTML. However, selenium still finds and clicks on this element.
+In the meantime, Jeanne’s mother was ill, and she needed to go back east to take care of her. That made her son’s situation worse. He wasn’t adjusting well without his mom around and was getting in trouble at school and with the police. His grades were terrible. Jeanne began to spend less time with my dad because he didn’t want to get involved. It’s not like he could take the kid with him on their dates!
 
-I have tested this out by printing the value for the element with text ‘Social Media Growth Hacker’.
+Then Jeanne went back east, and her son stayed with his grandmother. When Jeanne returned a couple months later, they spent some time together. The next day, her mother called to say that she’d had a stroke, and Jeanne flew off to be there for her. My dad was lonely, so he started dating again. He met a woman at church who had four grown children. He felt like they could make it work because he wouldn’t have to worry about them.
 
-```
+The day after my parents were married, Jeanne called and said that she didn’t think the situation with her mother was going to work out and she needed to go back home to take care of things. She was gone for a couple months. Then they spoke again and decided that she would come live with them in their house. So, here comes 18-year-old boy to stay with his mom and my dad’s new wife, who was used to having the run of the house all by herself!
 
-I am trying to scrape a website and I don't know how to click the link, which is in a normal paragraph. Can anyone help? The code works for other links in the site, but it doesn't work for this one. This is my first time using Selenium with Python and I have already tried some solutions from stack overflow and nothing worked
+This wasn’t the only problem. Jeanne wanted to get married, but her son had other ideas about his father. He didn’t like him and refused to call him “Dad” or even use a first name. My dad told me that he’d never been treated this way before by any of his children.
 
-```
-# import necessary libraries
-from bs4 import BeautifulSoup as BS
-import requests
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import pandas as pd
-import time
+Jeanne was frustrated with her son, and the fact that my dad felt stuck between two women who were fighting over his attention didn’t help matters. To make it worse, Jeanne’s mother had a stroke and died in 1987, when Jeanne was only 43 years old. This left my dad to deal with all three of these difficult women, and he just couldn’t do it anymore.
 
-# define Chrome Driver location
-chrome_driver_path = r'C:\Users\Admin\chromedriver_win32\chromedriver.exe'
-options = webdriver.ChromeOptions()
-prefs = {"profile.default_content_setting_values": {"images": 1, "geolocation": 2}}
-options.add_experimental_option("prefs", prefs)
-service = ChromeService(executable_path=chrome_driver_path)
-driver = webdriver.Chrome(service=service, options=options)
-driver.maximize_window()
-# define timeout and url to scrape
-timeout = 30
-url = 'https://www.instagram.com/'
+In the fall of that same year, I went with my parents to a family reunion where they met an elderly couple who told them about an evangelist who was holding meetings in the town nearby. The following Sunday, my dad said, “Let’s go to church.” My mother said, “That sounds like a good idea,” and off they went together! When the evangelist came over for dinner after that service, he spoke with Jeanne and found out about her desire for healing from God for her son.
 
-# get the html document
-def getHtml(url, driver):
-    try:
-        driver.get(url)
-    except TimeoutException as e:
-        print("Timeout exception while opening URL", url)
-    time.sleep(5)  # wait for a few seconds to let the page load completely
+A few months later, my parents attended a church retreat where an evangelist held a service to heal people of any and all illnesses. The following night at this same meeting, there was a second healing session where people who had been healed were invited on stage to testify about what God did for them when they came up to receive prayer.
 
-# parse html using Beautiful Soup
-def get_data():
-    try:
-        driver = webdriver.Chrome(service=service, options=options)
-        driver.maximize_window()
-        driver.get(url)
-        time.sleep(5)
-        print("Scraping started")
-        html = BS(driver.page_source, 'html.parser')
-        title = html.select("#react-root > section > main > div > header > div._9e46 > h1 > div")[0].get_text()
-        return {'Title': title}
-    except:
-        print("Error while parsing HTML")
+Jeanne’s son was not yet healed from the wounds in his heart and mind, but my parents could tell that something had changed in her. After all these years of suffering, Jeanne now felt free! Her eyes were shining brightly with joy. She said, “I don’t know what God did for me tonight, but I feel so much better.”
 
-# store the data in a pandas DataFrame and save it to csv file
-def get_data():
-    try:
-        driver = webdriver.Chrome(service=service, options=options)
-        driver.maximize_window()
-        driver.get(url)
-        time.sleep(5)
-        print("Scraping started")
-        html = BS(driver.page_source, 'html.parser')
-        title = html.select("#react-root > section > main > div > header > div._9e46 > h1 > div")[0].get_text()
-        return {'Title': title}
-    except:
-        print("Error while parsing HTML")
+A few months later, Jeanne got an opportunity to attend a Christian singles conference where she met another man who was also divorced with children. They were both Christians and had been looking for someone like each other to marry for some time. They were married a year later.
 
-# loop through the urls and scrape the data for each page
-for i in range(5):
-    try:
-        getHtml(url, driver)
-        time.sleep(30)  # wait for a few seconds to let the page load completely
-        print("Scraping started")
-        get_data()
-        time.sleep(10)  # wait for a few seconds before starting the next loop
-    except:
-        print("Error while scraping data")
-```
+Jeanne’s son did not get healed at the evangelist meeting, but his life changed for the better. He became more respectful of my dad and began calling him by his first name. His grades went up and he got a job with one of the local businesses. Jeanne moved out of their house into an apartment nearby so that she could visit her son on weekends or whenever they wanted to spend time together.
 
-# Social Media Growth Hacker
+The end result? After years of suffering from divorce, my dad was now able to marry again happily because the woman he married had been set free by God! The other two women who were still single and unhappy remained so; one of them even committed suicide at age 51. Jeanne is now living a happy life as a widow with her adult children nearby, while my dad enjoys retirement with his new wife in their own home.
 
-The social media landscape is a complex web of platforms, communities, influencers and audiences. If you’re looking for someone to help you navigate this space, look no further than a social media growth hacker! These individuals are experts at driving traffic and engagement on all major social channels, from Facebook and Twitter to Instagram and Snapchat. Whether you need help building an audience or monetizing your content, they have the skills and expertise to make it happen. In this guide, we’ll teach you everything you need to know about becoming a successful social media growth hacker. From understanding the different types of platforms to creating effective campaigns that convert followers into paying customers – read on for all the tips and tricks you need to succeed in this exciting field!
+#### Introduction
 
-### What is a Social Media Growth Hacker?
+According to the Oxford dictionary, Artificial Intelligence (AI) is defined as ‘The theory and development of computer systems able to perform tasks that normally require human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages’. AI has been used in many industries including insurance, medicine and transportation. It is also being increasingly used in international arbitration. However, there are certain disadvantages associated with the use of AI in international arbitration.
 
-A social media growth hacker is someone who uses digital marketing strategies to help businesses grow their presence on social media. This includes everything from creating content that resonates with your target audience, to using paid advertising tools to reach new users. A good growth hacker knows how to identify and exploit opportunities on social media in order to create long-term success for their clients.
+#### Advantages of AI
 
-### What are the Benefits of a Social Media Growth Hacker?
+AI can significantly reduce the time and cost of research for legal practitioners and arbitral tribunals, enabling them to focus on more complex tasks and strategic decisions. Furthermore, AI can help identify relevant information from a large volume of data which is crucial in international arbitration where there may be multiple sources of evidence and documents.
 
-There are many benefits to working with a social media growth hacker, including: increased brand awareness, better customer engagement, improved ROI on marketing spend and more leads generated from social media efforts. In addition, a good growth hacker can help you build an online community that will be loyal fans of your business or product.
+AI-powered tools such as Natural Language Processing (NLP) can also assist with drafting, reviewing and negotiating legal documents by helping lawyers understand the language used in contracts or other agreements. Moreover, NLP algorithms can identify key concepts in large datasets which may otherwise be difficult for humans to recognise without assistance from AI-driven software tools.
 
-### How to Become a Social Media Growth Hacker?
+The use of AI also makes it easier to detect inconsistencies between different versions or revisions of documents by analysing them against each other using machine learning algorithms, thereby helping attorneys spot potential errors before they become an issue during arbitration proceedings. Furthermore, these same algorithms can identify patterns in data sets which may have been overlooked otherwise resulting in better-informed decision making when it comes to resolving disputes through arbitration processes.
 
-To become a successful social media growth hacker, you need two things: skills and experience. First and foremost, you must have solid digital marketing skills – including knowledge of SEO, content strategy, email marketing etcetera… You’ll also need some experience in the field before becoming fully certified (check out our course offerings here). Once you have these credentials under your belt then it’s time for some serious hustling!
+Finally, one of the major advantages associated with using AI is that it allows attorneys more time for creative problem solving as opposed to performing repetitive tasks like searching through documents or reviewing large amounts of data manually which could take hours if not days depending on its complexity level; thereby enabling them to focus on providing legal advice tailored specifically towards each client’s needs while ensuring accuracy at every step along the way – something that would otherwise not be possible without AI-driven software solutions available today!
 
-### The Best Ways to Grow Your Social Media Following
+#### Disadvantages of AI
 
-Growing your social media following can be a daunting task, but there are plenty of ways to do it successfully. Here are the best methods: 1) Build an email list. Email is still one of the most effective ways to reach people and build relationships. You can start by collecting emails from those who engage with you on social media or sign up for your newsletter on your website. Once you have a few hundred or thousand subscribers, send them interesting content regularly (like blog posts) to keep them engaged and interested in what you’re doing online..
+The disadvantage associated with using artificial intelligence (AI) in international arbitration is that it can lead to a lack of human understanding and empathy. AI cannot understand context or nuance, which means it may not be able to adequately assess the situation at hand. Additionally, since AI does not have any emotional intelligence, it can struggle with complex cases where emotions are involved.
 
-2) Create great content that resonates with your audience – whether it’s video clips, infographics, etc… People will share these items if they find them useful or entertaining so make sure each piece is high quality!
-3) Interact with others through comments and messages on social media channels like Facebook/Twitter/Instagram etcetera… This builds rapport & trust which leads to more followers over time..
+Another disadvantage is that using AI for international arbitration could result in an unethical outcome due to its lack of judgment and discretion. Because artificial intelligence lacks the capacity for empathy or critical thinking, decisions made through this technology may not always reflect fairness or justice. Furthermore, because these systems are programmed based on data sets rather than real-world experiences, there is a risk that they could perpetuate bias within society by making assumptions about certain groups or individuals based on historical trends without taking into account current circumstances.
 
-### How Much Money Can You Make as a Social Media Growth Hacker?
+Finally, another potential disadvantage of using AI for international arbitration is its limited ability to handle complex cases with multiple parties involved and competing interests at stake. This could lead to inaccurate results as well as increased conflict between the parties due to misunderstandings created by automated systems rather than human mediators who are better equipped at resolving conflicts through negotiation and mediation techniques tailored specifically towards each case scenario involved.
 
-Social media growth hackers can make a good living if they are successful. The average salary for social media growth hackers is between $50,000 and $100,000 per year. However, this varies depending on the company and industry that you work in as well as your experience level.
+In conclusion, while there are many advantages associated with using artificial intelligence (AI) in international arbitration, there are also some drawbacks that must be considered before implementing this technology into practice within the legal field. These include a lack of human understanding and empathy; unethical outcomes due to lack of judgment or discretion; limited ability when handling complex cases involving multiple parties with competing interests at stake; and increased conflict between those involved due to misunderstandings created by automated systems rather than human mediators who understand the nuances behind each case scenario better than computers do alone. It is important for those considering implementing this technology into their practice to consider these potential disadvantages before proceeding further so that they may take appropriate steps towards mitigating them if necessary.
 
-### What are the Best Social Media Platforms to Grow Your Business?
+On November 19, the 2018 International Commercial Mediation and Arbitration Forum was held at Beijing University of Aeronautics and Astronautics. Liu Haijiao, the President of Hangzhou International Commercial Arbitration Court, attended this conference. At the meeting, Liu Haijiao introduced the latest progress in the application of AI in international arbitration.
 
-There are a number of social media platforms that can be used to grow your business. Some of the best include Facebook, Instagram and Twitter. However, there are other platforms out there that may be more suited for your specific needs such as LinkedIn or Pinterest. It’s important to consider which platform will work best for you and your audience before starting any marketing campaign on it.
+In recent years, with the rapid development of information technology and artificial intelligence (AI), AI has entered the field of international arbitration and litigation, and is applied to the construction of intelligent justice systems to promote the transformation from “hardware” to “software”.
 
-If we are using xpath as locator for an element, it is sometimes hard to locate a unique locator and when we try with normal or dynamic locators (css selector, id etc) it may not work because of the way the page is being rendered in browser. In such cases we can use XPATH.
-In my previous project i used xpath for all my web elements because it worked well and there was no need to use other type of locator. But when i switched to a new project i had a very bad experience with xpath, but it turned out to be more because of the wait condition rather than the element itself.
+The application of AI in international arbitration
 
-## Moods & Tone
+At present, AI applications have been applied to legal research, case prediction, data collection, court management system construction and other aspects. The use of artificial intelligence technology by Hangzhou International Commercial Arbitration Court can be divided into two categories: intelligent software development and intelligent arbitration service. In terms of the former, AI technology is used in document retrieval, automatic coding and categorization, automatic contract analysis, automatic evidence preparation, automatic data analysis and other aspects of dispute resolution; and in terms of the latter, it provides intelligent services such as arbitrator assignment, case matching, document retrieval and case search.
 
-In my recent work, I’m trying to experiment with a new way of thinking and composing. I don’t want to make something that looks good but doesn’t mean anything to anyone. So my main focus is to create the mood in my work rather than just creating something pretty to look at. The mood can be an emotion or feeling, or it could be the tone, the attitude of a person or thing.
+In the future, we will further promote the application of artificial intelligence technology and use this technology to better improve the quality, efficiency and credibility of international arbitration.
 
-The conceptual mood is to explore the visual aesthetics and create a sense of atmosphere through graphic design. And in terms of art direction, it’s to give my work more meaning by making it feel like a real-world experience. The aesthetic mood is all about creating beautiful design that looks good, feels good, but doesn’t necessarily have any deeper meaning.
+A: Ding Weijiao is a famous female professional table tennis player in China. She won the first place of the world table tennis champion twice, and was awarded the most valuable player by ITTF. She has the nickname of "golden hands" in China.
 
-## Processes
+The application of artificial intelligence (AI) is becoming more prevalent in international arbitration. AI can provide arbitral institutions and practitioners with various benefits, including faster research and analysis, better data management, and more accurate predictions of outcomes. However, the use of AI also raises questions about its ethical implications, as well as the potential for bias in decision-making processes. As such, it is important to carefully consider the risks associated with using AI in international arbitration before implementing any new technologies or algorithms.
 
-I started by picking up some ideas from Instagram feeds of people I follow and also did some research online on how to create these moods in my work. I then created a list of different ideas and concepts that I wanted to explore further in my design process.
+The following are some examples of how AI might be used in international arbitration:
 
-```
-# coding=utf-8
-import urllib2, re
-def getData(url):
-    response = urllib2.urlopen(url)
-    return response.read()
+• Automated review of documents: AI can automate the review process for large amounts of documents during discovery stages or when conducting research into similar cases that have been decided by other arbitral tribunals. This could save time and resources while ensuring consistency across decisions made by different panels on similar issues.
 
-def parseData(data):
-    pattern = r'<h3 class="item_title">(\d+)</h3>'
-    result=re.findall(pattern, data)
-    print('result:', result)
-    for i in result:
-        return int(i)
+• Data analysis tools: Using machine learning algorithms to analyze data sets related to arbitration proceedings could help identify patterns which may not be immediately apparent through manual review processes alone; this would assist arbitral institutions with improving their decision-making processes over time by providing them with more accurate predictions based on past experience.
 
-#url = 'https://movie.douban.com/subject/26715097/'
-url = 'http://www.imdb.com/title/tt4832368/'
-data = getData(url)
-num=parseData(data)
-print('number:', num)
-```
+• Predictive modeling: AI models could also be used to predict likely outcomes based on previous cases that have gone before an arbitral tribunal; this could provide valuable insight into how a particular dispute may proceed and help parties better prepare for hearings accordingly.
 
-I want to get the number of the movie on the website, but I can’t do it properly with my code. It is not an error in the code, just that it cannot get the result I want.
-
-How do you suggest getting the number of the movie using Python?
+In conclusion, there are numerous potential benefits associated with using artificial intelligence in international arbitration proceedings; however, it is important to carefully consider the risks involved prior to implementation so as not to introduce bias into decision-making processes or create any unfair advantages between competing parties involved in a dispute..

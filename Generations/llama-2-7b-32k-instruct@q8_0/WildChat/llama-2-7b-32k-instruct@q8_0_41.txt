@@ -1,75 +1,93 @@
-The player decides to intervene and helps the girl deliver her child. The girl introduces herself as Mindy and says that she has named her son Ender, after the powerful dragon defeated by the player. Mindy expresses gratitude towards the player for assisting with the birth and promises to pay it forward by helping other players in need of assistance. As a token of appreciation, the player gives Mindy some items or resources that can help her and her son thrive.
+Sure, here's an updated version of the code that includes a gradient for the highlighted line:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    html,
+    body {
+      background: radial-gradient(circle at center right, rgba(15, 10, 0, 0.9), rgba(25, 1, 5, 0.9));
+      padding: 10px;
+    }
 
-Mindy: (in pain) "Oh, thank GOG! Finally! I've been waiting to give birth for 30 months, but my son's not coming out!"
+    .container {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      padding-top: 0px;
+      place-items: center;
+    }
 
-(I noticed how loud the girl was screaming, and I decided to help.)
+    .textarea {
+      width: 100%;
+      height: auto;
+      max-height: 50vh;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      font-weight: bold;
+      color: cyan;
+      background: rgba(1, 1, 3, 0.9);
+      border: 2px inset #252555;
+      overflow: auto;
+      white-space: pre-wrap;
+      grid-row-gap: 5px;
+      margin-top: -6px;
+      margin-bottom: -6px;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
 
-Female Spider: (in pain) "AAAAAAAH!! Come on, little one! Why won't you come out?! It's been 30 months since I first got pregnant, and I'm still waiting for you!" (thinking to herself) "You can do this, Mindy...be strong for your son..."
+    .highlight-line {
+      position: relative;
+      height: 9px;
+      background: rgba(155, 0, 0, 0.1);
+    }
 
-(I noticed how loud the girl was screaming, and I decided to help.)
+    @keyframes shot {
+      to {
+        left: 100%;
+      }
+    }
+  </style>
+</head>
 
-[player]: "Don't worry about it. I'll take care of everything."
+<body>
+  <div class='container'>
+    <div id='textarea' class='textarea' contenteditable='true'></div>
+  </div>
+  <script>
+    const textarea = document.getElementById('textarea');
 
-Female Spider: (in pain) "What?! You can't just come in here and say that!"
+    function setCaretToEnd() {
+      const range = document.createRange();
+      const selection = window.getSelection();
+      range.selectNodeContents(textarea);
+      range.collapse(false);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
 
-(I went to the basement, and saw where the screams were coming from. The source of the screams were a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider. She looks like she was in pain.)
-
-Female Spider: (in pain) "AAAAAAAH!! Come on, little one! Why won't you come out?! It's been 30 months since I first got pregnant, and I'm still waiting for you!" (thinking to herself) "You can do this, Mindy...be strong for your son..."
-
-(I noticed how loud the girl was screaming, and I decided to help.)
-
-[player]: "Don't worry about it. I'll take care of everything."
-
-Female Spider: (in pain) "What?! You can't just come in here and say that!"
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider. She looks like she was in pain.)
-
-Female Spider: (in pain) "AAAAAAAH!! Come on, little one! Why won't you come out?! It's been 30 months since I first got pregnant, and I'm still waiting for you!" (thinking to herself) "You can do this, Mindy...be strong for your son..."
-
-(I noticed how loud the girl was screaming, and I decided to help.)
-
-[player]: "Don't worry about it. I'll take care of everything."
-
-Female Spider: (in pain) "What?! You can't just come in here and say that!"
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider. She looks like she was in pain.)
-
-Female Spider: (in pain) "AAAAAAAH!! Come on, little one! Why won't you come out?! It's been 30 months since I first got pregnant, and I'm still waiting for you!" (thinking to herself) "You can do this, Mindy...be strong for your son..."
-
-(I noticed how loud the girl was screaming, and I decided to help.)
-
-[player]: "Don't worry about it. I'll take care of everything."
-
-Female Spider: (in pain) "What?! You can't just come in here and say that!"
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her hair, and her shirt and pants resembled a Spider.)
-
-(I went to the basement, and saw where the screams were coming from. The source of the screams was a strange girl, who has purple hair and red eyes. She had four red eye-like spheres in her
+    function handleKeyPress(event) {
+      if (event.key === 'Enter' || event.key === 'Return') {
+        event.preventDefault();
+        const selection = document.getSelection();
+        const range = selection.getRangeAt(0);
+        const currentNode = range.startContainer;
+        const lineBreak = document.createElement('span');
+        lineBreak.innerHTML = '<br>';
+        const highlightedLine = document.createElement('span');
+        highlightedLine.classList.add('highlight-line');
+        highlightedLine.textContent = '█';
+        const newLine = document.createElement('span');
+        newLine.appendChild(lineBreak);
+        newLine.appendChild(highlightedLine);
+        if (currentNode.nodeType === Node.TEXT_NODE) {
+          const nextNode = currentNode.splitText(range.startOffset);
+          nextNode.parentNode.insertBefore(newLine, nextNode);
+          range.setStart(nextNode, 0);
+        } else {
+          textarea.appendChild(newLine);
+          range.setStart(newLine, 0);
+        }
+        const lineAnimation = highlightedLine.animate({
+          left:

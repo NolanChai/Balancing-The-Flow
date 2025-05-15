@@ -1,0 +1,24 @@
+This is a C# script for a game object that allows the player to control another object. The script uses the Unity Raycasting system to determine which object the player clicked on and then allows the player to move that object by dragging it with the mouse.
+
+Here's an overview of what the script does:
+
+1. It keeps track of which object the player has currently selected using private variables like `selectedPart`, `outline`, and `selectedColor`.
+2. The `ToggleControlEnabled()` function allows the player to enable or disable control over the selected object by toggling the values of `isControlEnabled` and `animator.enabled`.
+3. In the `Update()` function, the script checks whether the player has enabled control and whether they have clicked on a new object. If so, it sets the new object as the selected object and adds an outline to it using Unity's built-in Outline component. The outline's color is set to `selectedColor`, and its width is set to 4 units.
+4. If the player has already selected an object and they click on a different object, the script destroys the current outline and sets the new object as the selected object.
+5. If the player has selected an object and they drag their mouse over it, the script updates the object's position to match the mouse cursor's position on the screen.
+6. The script uses Unity's built-in `GetClickedPart()` function to determine which object the player clicked on by casting a ray from the camera's viewpoint to the point where the mouse button was clicked and then checking if any objects were hit along that ray. If an object was hit, the script checks whether it is a descendant of the parent object (i.e., whether it is part of the same hierarchy as the parent object).
+7. The script also includes two utility functions: `IsDescendant()` and `GetClickedPart()`. The `IsDescendant()` function recursively traverses the parent object's children and their children until it finds the child object, and returns true if the child object is found. The `GetClickedPart()` function uses Unity's built-in Raycasting system to determine which object the player clicked on by casting a ray from the camera's viewpoint to the point where the mouse button was clicked and then checking if any objects were hit along that ray. If an object was hit, the script checks whether it is a descendant of the parent object (i.e., whether it is part of the same hierarchy as the parent object).
+
+Overall, this script provides a basic mechanism for allowing the player to control another object in a game using mouse input. It could be used, for example, to allow the player to move a character or a vehicle by dragging it with the mouse.
+
+This is a C# script for controlling the rotation of an object in Unity using mouse input. The script assumes that there is a game object named "Axis" attached to the selected part and its local position can be changed by rotating it. Here are some things you might want to keep in mind when working with this script:
+
+* The `ToggleControlEnabled()` function can be used to enable or disable control of the object.
+* When a mouse button is clicked on an object, the script checks if that object was already selected and if so, removes the outline and sets the selection to null. Otherwise, it selects the object and creates an outline component and adds an "Axis" game object to the scene.
+* The `Update()` function is called every frame and performs the following actions:
+	+ If control is enabled, checks if a mouse button has been clicked.
+	+ If a mouse button has been clicked and there is a selected part, creates a ray from the mouse position to the "Axis" game object, and checks for collisions with other objects in the scene using the `Physics.Raycast()` function. The hit point of the ray is stored in the `hit` variable, which can be used to find the closest colliding object.
+	+ If a collider is hit, checks if that object is a descendant of the selected part. If it is, the selected part's position is updated based on the rotation angle of the "Axis" game object. The `Mathf.Round()` function is used to round the new positions to the nearest whole number.
+* The `GetClickedPart(Transform parent)` function takes in a parent transform and returns the collider that was hit by the mouse ray, if any. It also checks if the hit object is a descendant of the parent transform before returning it. This ensures that only child objects are selected for rotation.
+* The `IsDescendant(Transform child, Transform parent)` function takes in a child transform and a parent transform and recursively searches down the hierarchy to see if the child transform is a descendant of the parent transform. This is used by the `GetClickedPart()` function to only allow objects that are children of the selected part to be selected for rotation.

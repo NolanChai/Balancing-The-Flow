@@ -1,0 +1,27 @@
+باید از کلاسی   مرتبه برای دانلود تو کلاس ابجکت بگیم
+کلاس بنویسم :
+    public class Taghvim : AmarForoshMarjoee
+{
+
+       public DataSet Get_tarikh_AkharSal(int sal)
+        {
+            string Sql = @"Select t1.date_from,t2.date_to ,t3.code,t4.name  as [name], t5.name as[shart] FROM dbo.TARIKH t1
+                             INNER JOIN dbo.TARIKH t2 ON t2.TARIKH_ID=t1.TARIKH_ID
+                             INNER JOIN dbo.AMARFOROSH t3 ON t3.ID_AMARFOROSH=t1.ID_AMARFOROSH
+                             INNER JOIN dbo.SHART_FOROUSH t4 ON t4.CODE_SHART=t3.ID_SHART
+                             INNER JOIN dbo.SHART_FOROUSH t5 ON t5.CODE_SHART=t3.ID_SHART1 ";
+            Sql = string.Format(Sql, sal);
+            return db.GetDataSet(Sql);
+        }
+}
+دیگه کلاس  برای خروجی تو کلاس مانند این کلاس
+       public class AmarForoshMarjoee : BasePage
+    {
+        SAPB1 oSapB1;
+        private string _UserID, _Password;
+        public DataSet Get_rpt_AmarForosh_Marjoee(DateTime AzTarikh, DateTime TaTarikh)
+        {
+            oSapB1 = new SAPB1(_UserID, _Password);
+            return oSapB1.GetDataSet(AzTarikh, TaTarikh, "Get_rpt_AmarForosh_Marjoee");
+        }
+    }

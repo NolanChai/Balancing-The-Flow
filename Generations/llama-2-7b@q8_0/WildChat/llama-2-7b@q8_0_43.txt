@@ -1,18 +1,37 @@
-Apart from the text of the current Constitution of 1974, Sweden has also a number of laws and regulations that are binding upon all authorities within the country, including local government bodies. A selection of these is given below.
-The most important legislation is the Instrument of Government (Regeringsformen) which defines the structure of the central state administration and how it functions. It also determines the areas where central government has exclusive competence and where it can share responsibilities with the counties or municipalities. In addition to this, a number of basic laws are in force in Sweden that govern such matters as citizenship, labour market rights and taxation.
-In addition to its Constitution, Sweden has adopted other fundamental documents which have been referred to in international law: The Convention relating to the Status of Refugees, 1951 (Geneva), The International Covenant on Civil and Political Rights, 1966 (New York) and The International Covenant on Economic, Social and Cultural Rights, 1966 (New York). In addition Sweden has ratified the European Convention for Human Rights, and is also a member of the Council of Europe.
-In its Constitution Sweden has established a system of division of power between the government and the legislative powers within each branch, between national and local level and between parliamentary majority and minority. The most important basic rules in the Constitution are:
-1) The supremacy of law.
-2) Human dignity as a basic value.
-3) Equality before the law, irrespective of sex, race or creed.
-4) Protection of individual rights.
-5) Freedom and responsibility.
-6) Right to take part in public affairs through democratic means.
-7) Separation of powers between government, parliament and courts.
-8) Democratic control of the armed forces.
-9) Independent judiciary.
-The Constitution of Sweden
-The Instrument of Government
-Law on the Protection of the Environment
-Regulation Concerning Nationality
-Act on Citizens' Right to Information
+You should receive a 530 response indicating the "From" address is not permitted to be used for authentication. This means you successfully spoofed your return address. If you do not get that error, then your mail client probably does not allow the sending of unauthenticated emails and this module will fail.
+
+**/api/v1.0/userinfo** :
+
+##### Example request:
+```shell
+curl -XGET "https://fakeapirequest.herokuapp.com/api/v1.0/userinfo" \
+-H "Content-Type: application/json" \
+-d '{
+  "name": "John",
+  "age": 25,
+  "gender": "male"
+}'
+```
+##### Example response:
+```json
+{
+    "message": "Successfully created user",
+    "statusCode": 201,
+    "userId":"69f38b4ebc7d9d156c999a2e"
+}
+```
+
+Use the following command:
+
+`grep -A 10 5.6-faked-email.txt From`
+
+This will return the following:
+
+```
+From: "John Doe <john@example.com>"
+From: "JOHN DOE <johndoe@example.com>"
+```
+
+### Author:
+
+- [@kubotea](https://github.com/kubotea)

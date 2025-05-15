@@ -1,0 +1,101 @@
+60-minute Meeting Agenda: Microsoft Cloud Offering for Contoso Company
+
+Introduction (5 minutes):
+* Introduce yourself and your role as an Account Manager at Microsoft.
+* Briefly explain the agenda for the meeting.
+* Provide a brief overview of Microsoft's cloud offering, including Azure, Microsoft 365, and Dynamics 365.
+
+Presentation (40 minutes):
+* Begin the presentation by discussing Contoso Company's current IT infrastructure and pain points.
+* Highlight the benefits of moving to a cloud-based solution, such as improved flexibility, scalability, and cost savings.
+* Discuss the different services offered by Microsoft Cloud, including Azure, Windows Virtual Desktop, and Dynamics 365.
+* Showcase case studies or success stories that demonstrate how other organizations have benefited from using Microsoft Cloud.
+* Provide a detailed breakdown of pricing and sizing options for Contoso Company's requirements, considering their current IT infrastructure and software assurance status.
+
+Q&A (15 minutes):
+* Allow time for the CIO and IT team to ask questions about the presentation and any concerns they may have.
+* Be prepared to provide additional information or clarification on any topics discussed during the presentation.
+
+Next Actions (15 minutes):
+* Discuss next steps, including when Contoso Company can expect to see a formal proposal from Microsoft, as well as any potential implementation timelines and milestones.
+* Establish a follow-up meeting or timeframe for continued discussion and collaboration between the teams.
+
+Conclusion (5 minutes):
+* Summarize the main points discussed during the meeting and reiterate the benefits of moving to Microsoft Cloud.
+* Provide contact information for any further questions or concerns.
+
+Total duration: 60 minutes
+
+Requirements:
+1. DR Site Solution on Azure for their (Virtual Machines - Applications- Backend SQL Server Databases) a. Tool to manage the DR site, and the failover testing.
+2. Moving a production app to Azure, the app is helping the filed engineers to log the production aspects. What are the different options on Azure.
+3. Monitoring the whole infrastructure performance.
+4. Secure the connection between the sites and Azure and different types of connections.
+5. Provide options for hosting a website (IaaS & PaaS) with its backend database.
+6- Provide examples for IAAS - PAAS - SAAS solutions in general.
+7- Estimate pricing & sizing for the requirements, knowing that the customer has windows server with Software assurance and SQL Servers with no Software assurance.
+8- Discuss Virtual Desktop
+9- Reporting on different data sources in a consolidated view.
+
+Note: The above meeting agenda is just an example, it can be adjusted based on the specific needs of the customer, and the duration may vary depending on the complexity of the discussion.
+
+Sure, here's an outline for a PowerPoint presentation on Microsoft Cloud Offering:
+
+Slide 1: Introduction
+
+* Brief overview of Microsoft Cloud services and solutions
+* Importance of Microsoft Cloud in today’s business environment
+
+Slide 2: Azure Overview
+
+* Definition of Azure
+* Key features and benefits of Azure, such as scalability, security, and cost savings
+* Examples of how Azure can be used for different use cases, such as hosting websites, storing data, and creating applications
+
+Slide 3: Management Solutions
+
+* Overview of Microsoft management solutions, including Endpoint Manager, Configuration Manager, and Intune
+* Benefits of using Microsoft management solutions, such as centralized management, security, and compliance
+* Examples of how Microsoft management solutions can be used to manage devices, software, and configurations across an organization
+
+Slide 4: Benefits of Using Microsoft Cloud
+
+* Scalability and flexibility
+* Cost savings
+* Security and compliance
+* Integration with other Microsoft products and services
+
+Slide 5: How Microsoft Cloud Can Address Contoso’s Requirements
+
+* Overview of Contoso’s requirements, including security, scalability, and cost savings
+* Explanation of how Microsoft Cloud can meet those requirements effectively
+* Specific examples of how Azure and management solutions can be used to address Contoso’s needs
+
+Slide 6: Next Steps
+
+* Summary of the benefits of using Microsoft Cloud
+* Call-to-action for Contoso to consider adopting Microsoft Cloud for their business
+* Resources for further information or assistance
+
+Slide 7: Conclusion
+
+* Recap of key points and takeaways
+* Final thoughts on the importance of Microsoft Cloud in today’s business environment
+* Call-to-action for Contoso to start their cloud transformation journey with Microsoft Cloud.
+
+Remember to customize the presentation according to your needs and add relevant visuals, charts, and data to support your points.
+
+Sure, I'll provide a suggestion for what you could include in slide 1 of your presentation. However, keep in mind that the content and tone of the slides should be tailored to the specific audience and purpose of your presentation.
+
+Here's a suggestion for what you could include on slide 1:
+
+Slide 1: Introduction
+
+* Title: "Welcome!" or "Introduction"
+* Subtitle: "The
+
+PAAS solutions are cloud services that provide a platform for creating applications. They are hosted by a third party provider and can be accessed over the internet. Some examples of these include Amazon Web Services (AWS), Google App Engine, and Heroku.
+
+IAAS solutions provide infrastructure as a service to users. These solutions allow users to provision, manage, and scale their own cloud-based IT infrastructure without having to maintain physical servers or other hardware components. Some examples of IAAS solutions include Amazon Web Services (EC2), Google Compute Engine, and Microsoft Azure.
+
+SAAS solutions are cloud services that provide software applications over the internet. They are hosted by a third party provider and can be accessed by users via a web browser. Some examples of SAAS solutions include Salesforce, Slack, and Dropbox.
