@@ -1,0 +1,62 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,llama-2-7b-chat@q8_0_265.txt
+40,I,760, know,-3.7952263,3.7952263,llama-2-7b-chat@q8_0_265.txt
+760, know,11,",",-3.3245769,3.3245769,llama-2-7b-chat@q8_0_265.txt
+11,",",340, it,-2.7094064,2.7094064,llama-2-7b-chat@q8_0_265.txt
+340, it,338,'s,-0.48914507,0.48914507,llama-2-7b-chat@q8_0_265.txt
+338,'s,1107, really,-4.0696797,4.0696797,llama-2-7b-chat@q8_0_265.txt
+1107, really,24128, alarming,-9.0666485,9.0666485,llama-2-7b-chat@q8_0_265.txt
+24128, alarming,13,.,-1.9273931,1.9273931,llama-2-7b-chat@q8_0_265.txt
+13,.,383, The,-3.6264353,3.6264353,llama-2-7b-chat@q8_0_265.txt
+383, The,18393, drought,-9.664816,9.664816,llama-2-7b-chat@q8_0_265.txt
+18393, drought,468, has,-2.0042684,2.0042684,llama-2-7b-chat@q8_0_265.txt
+468, has,5676, affected,-3.0476966,3.0476966,llama-2-7b-chat@q8_0_265.txt
+5676, affected,523, so,-3.2647743,3.2647743,llama-2-7b-chat@q8_0_265.txt
+523, so,867, many,-0.06086851,0.06086851,llama-2-7b-chat@q8_0_265.txt
+867, many,3006, areas,-3.9265356,3.9265356,llama-2-7b-chat@q8_0_265.txt
+3006, areas,11,",",-1.6982604,1.6982604,llama-2-7b-chat@q8_0_265.txt
+11,",",290, and,-1.358523,1.358523,llama-2-7b-chat@q8_0_265.txt
+290, and,340, it,-1.9950466,1.9950466,llama-2-7b-chat@q8_0_265.txt
+340, it,338,'s,-0.38105723,0.38105723,llama-2-7b-chat@q8_0_265.txt
+338,'s,407, not,-3.2944176,3.2944176,llama-2-7b-chat@q8_0_265.txt
+407, not,655, just,-0.9582184,0.9582184,llama-2-7b-chat@q8_0_265.txt
+655, just,3614, limited,-5.5981207,5.5981207,llama-2-7b-chat@q8_0_265.txt
+3614, limited,284, to,-0.06659449,0.06659449,llama-2-7b-chat@q8_0_265.txt
+284, to,262, the,-1.4823891,1.4823891,llama-2-7b-chat@q8_0_265.txt
+262, the,2688, West,-3.80315,3.80315,llama-2-7b-chat@q8_0_265.txt
+2688, West,13,.,-1.4996631,1.4996631,llama-2-7b-chat@q8_0_265.txt
+13,.,383, The,-2.918023,2.918023,llama-2-7b-chat@q8_0_265.txt
+383, The,3092, lack,-6.2750854,6.2750854,llama-2-7b-chat@q8_0_265.txt
+3092, lack,286, of,-0.00463471,0.00463471,llama-2-7b-chat@q8_0_265.txt
+286, of,25807, rainfall,-3.1537364,3.1537364,llama-2-7b-chat@q8_0_265.txt
+25807, rainfall,318, is,-1.9217688,1.9217688,llama-2-7b-chat@q8_0_265.txt
+318, is,6666, causing,-3.6178343,3.6178343,llama-2-7b-chat@q8_0_265.txt
+6666, causing,1660, water,-3.7620707,3.7620707,llama-2-7b-chat@q8_0_265.txt
+1660, water,28791, shortages,-1.2749093,1.2749093,llama-2-7b-chat@q8_0_265.txt
+28791, shortages,290, and,-2.2850103,2.2850103,llama-2-7b-chat@q8_0_265.txt
+290, and,13891, affecting,-6.1973886,6.1973886,llama-2-7b-chat@q8_0_265.txt
+13891, affecting,14450, crops,-3.951443,3.951443,llama-2-7b-chat@q8_0_265.txt
+14450, crops,11,",",-1.9441962,1.9441962,llama-2-7b-chat@q8_0_265.txt
+11,",",15599, wildlife,-6.2146273,6.2146273,llama-2-7b-chat@q8_0_265.txt
+15599, wildlife,11,",",-0.6278658,0.6278658,llama-2-7b-chat@q8_0_265.txt
+11,",",290, and,-1.3033054,1.3033054,llama-2-7b-chat@q8_0_265.txt
+290, and,661, people,-2.1317484,2.1317484,llama-2-7b-chat@q8_0_265.txt
+661, people,338,'s,-2.1465602,2.1465602,llama-2-7b-chat@q8_0_265.txt
+338,'s,30489, livelihood,-1.2165445,1.2165445,llama-2-7b-chat@q8_0_265.txt
+30489, livelihood,82,s,-0.10325495,0.10325495,llama-2-7b-chat@q8_0_265.txt
+82,s,13,.,-1.5397317,1.5397317,llama-2-7b-chat@q8_0_265.txt
+13,.,632, It,-1.6929758,1.6929758,llama-2-7b-chat@q8_0_265.txt
+632, It,338,'s,-0.2405682,0.2405682,llama-2-7b-chat@q8_0_265.txt
+338,'s,257, a,-2.784269,2.784269,llama-2-7b-chat@q8_0_265.txt
+257, a,2726, serious,-2.9264448,2.9264448,llama-2-7b-chat@q8_0_265.txt
+2726, serious,3074, situation,-3.5914657,3.5914657,llama-2-7b-chat@q8_0_265.txt
+3074, situation,326, that,-2.1893375,2.1893375,llama-2-7b-chat@q8_0_265.txt
+326, that,2476, needs,-1.8073639,1.8073639,llama-2-7b-chat@q8_0_265.txt
+2476, needs,284, to,-0.27610573,0.27610573,llama-2-7b-chat@q8_0_265.txt
+284, to,307, be,-0.07907404,0.07907404,llama-2-7b-chat@q8_0_265.txt
+307, be,9469, addressed,-0.22808963,0.22808963,llama-2-7b-chat@q8_0_265.txt
+9469, addressed,319, on,-6.053825,6.053825,llama-2-7b-chat@q8_0_265.txt
+319, on,257, a,-0.25636038,0.25636038,llama-2-7b-chat@q8_0_265.txt
+257, a,3298, global,-1.7169441,1.7169441,llama-2-7b-chat@q8_0_265.txt
+3298, global,5046, scale,-0.40834153,0.40834153,llama-2-7b-chat@q8_0_265.txt
+5046, scale,526,".""",-0.5804046,0.5804046,llama-2-7b-chat@q8_0_265.txt

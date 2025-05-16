@@ -1,0 +1,54 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",3673,Not,-7.9252744,7.9252744,llama-2-7b-chat@q8_0_63.txt
+3673,Not,379, at,-4.04128,4.04128,llama-2-7b-chat@q8_0_63.txt
+379, at,477, all,-0.15591729,0.15591729,llama-2-7b-chat@q8_0_63.txt
+477, all,13,.,-1.4029663,1.4029663,llama-2-7b-chat@q8_0_63.txt
+13,.,632, It,-2.489219,2.489219,llama-2-7b-chat@q8_0_63.txt
+632, It,338,'s,-0.5953193,0.5953193,llama-2-7b-chat@q8_0_63.txt
+338,'s,2407, quite,-5.2446933,5.2446933,llama-2-7b-chat@q8_0_63.txt
+2407, quite,2829, simple,-3.2904491,3.2904491,llama-2-7b-chat@q8_0_63.txt
+2829, simple,290, and,-3.7052908,3.7052908,llama-2-7b-chat@q8_0_63.txt
+290, and,15836, straightforward,-3.0198967,3.0198967,llama-2-7b-chat@q8_0_63.txt
+15836, straightforward,13,.,-0.98713225,0.98713225,llama-2-7b-chat@q8_0_63.txt
+13,.,921, You,-2.4946198,2.4946198,llama-2-7b-chat@q8_0_63.txt
+921, You,655, just,-2.111895,2.111895,llama-2-7b-chat@q8_0_63.txt
+655, just,761, need,-3.0650158,3.0650158,llama-2-7b-chat@q8_0_63.txt
+761, need,284, to,-0.3235472,0.3235472,llama-2-7b-chat@q8_0_63.txt
+284, to,2148, provide,-6.2975206,6.2975206,llama-2-7b-chat@q8_0_63.txt
+2148, provide,617, some,-2.942398,2.942398,llama-2-7b-chat@q8_0_63.txt
+617, some,4096, basic,-3.186133,3.186133,llama-2-7b-chat@q8_0_63.txt
+4096, basic,1321, information,-0.8121614,0.8121614,llama-2-7b-chat@q8_0_63.txt
+1321, information,884, such,-4.0640297,4.0640297,llama-2-7b-chat@q8_0_63.txt
+884, such,355, as,-0.0068508023,0.0068508023,llama-2-7b-chat@q8_0_63.txt
+355, as,534, your,-1.2401556,1.2401556,llama-2-7b-chat@q8_0_63.txt
+534, your,1438, name,-2.3392034,2.3392034,llama-2-7b-chat@q8_0_63.txt
+1438, name,11,",",-0.6536673,0.6536673,llama-2-7b-chat@q8_0_63.txt
+11,",",2209, address,-1.3133478,1.3133478,llama-2-7b-chat@q8_0_63.txt
+2209, address,11,",",-0.5052021,0.5052021,llama-2-7b-chat@q8_0_63.txt
+11,",",290, and,-2.355238,2.355238,llama-2-7b-chat@q8_0_63.txt
+290, and,2800, contact,-4.318175,4.318175,llama-2-7b-chat@q8_0_63.txt
+2800, contact,3307, details,-1.89183,1.89183,llama-2-7b-chat@q8_0_63.txt
+3307, details,13,.,-0.9158368,0.9158368,llama-2-7b-chat@q8_0_63.txt
+13,.,2773, Some,-5.9611063,5.9611063,llama-2-7b-chat@q8_0_63.txt
+2773, Some,9293, websites,-3.8092375,3.8092375,llama-2-7b-chat@q8_0_63.txt
+9293, websites,743, may,-3.1953428,3.1953428,llama-2-7b-chat@q8_0_63.txt
+743, may,635, also,-3.0809593,3.0809593,llama-2-7b-chat@q8_0_63.txt
+635, also,1265, ask,-2.9427195,2.9427195,llama-2-7b-chat@q8_0_63.txt
+1265, ask,329, for,-1.2933255,1.2933255,llama-2-7b-chat@q8_0_63.txt
+329, for,3224, additional,-3.9540722,3.9540722,llama-2-7b-chat@q8_0_63.txt
+3224, additional,1321, information,-0.3036717,0.3036717,llama-2-7b-chat@q8_0_63.txt
+1321, information,588, like,-2.7582157,2.7582157,llama-2-7b-chat@q8_0_63.txt
+588, like,534, your,-0.962091,0.962091,llama-2-7b-chat@q8_0_63.txt
+534, your,3053, email,-2.8241897,2.8241897,llama-2-7b-chat@q8_0_63.txt
+3053, email,2209, address,-0.13809212,0.13809212,llama-2-7b-chat@q8_0_63.txt
+2209, address,393, or,-2.1122088,2.1122088,llama-2-7b-chat@q8_0_63.txt
+393, or,3072, phone,-1.26999,1.26999,llama-2-7b-chat@q8_0_63.txt
+3072, phone,1271, number,-0.033405643,0.033405643,llama-2-7b-chat@q8_0_63.txt
+1271, number,11,",",-2.2129016,2.2129016,llama-2-7b-chat@q8_0_63.txt
+11,",",475, but,-1.4148287,1.4148287,llama-2-7b-chat@q8_0_63.txt
+475, but,340, it,-2.5953038,2.5953038,llama-2-7b-chat@q8_0_63.txt
+340, it,338,'s,-0.65120983,0.65120983,llama-2-7b-chat@q8_0_63.txt
+338,'s,2147, nothing,-5.548048,5.548048,llama-2-7b-chat@q8_0_63.txt
+2147, nothing,1165, too,-2.4321728,2.4321728,llama-2-7b-chat@q8_0_63.txt
+1165, too,8253, complicated,-1.3434452,1.3434452,llama-2-7b-chat@q8_0_63.txt
+8253, complicated,526,".""",-1.5041387,1.5041387,llama-2-7b-chat@q8_0_63.txt

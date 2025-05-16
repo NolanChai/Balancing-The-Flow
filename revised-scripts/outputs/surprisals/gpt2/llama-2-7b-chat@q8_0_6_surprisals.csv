@@ -1,0 +1,22 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987438,8.987438,llama-2-7b-chat@q8_0_6.txt
+5812,Oh,11,",",-0.70429367,0.70429367,llama-2-7b-chat@q8_0_6.txt
+11,",",1107, really,-5.0154443,5.0154443,llama-2-7b-chat@q8_0_6.txt
+1107, really,30,?,-0.6587772,0.6587772,llama-2-7b-chat@q8_0_6.txt
+30,?,314, I,-2.1209602,2.1209602,llama-2-7b-chat@q8_0_6.txt
+314, I,1053,'ve,-2.9611297,2.9611297,llama-2-7b-chat@q8_0_6.txt
+1053,'ve,691, only,-4.1798897,4.1798897,llama-2-7b-chat@q8_0_6.txt
+691, only,587, been,-1.7270703,1.7270703,llama-2-7b-chat@q8_0_6.txt
+587, been,2712, playing,-3.2617984,3.2617984,llama-2-7b-chat@q8_0_6.txt
+2712, playing,329, for,-2.2677686,2.2677686,llama-2-7b-chat@q8_0_6.txt
+329, for,257, a,-1.3813081,1.3813081,llama-2-7b-chat@q8_0_6.txt
+257, a,1178, few,-1.0024374,1.0024374,llama-2-7b-chat@q8_0_6.txt
+1178, few,2745, weeks,-1.8288566,1.8288566,llama-2-7b-chat@q8_0_6.txt
+2745, weeks,13,.,-1.8752275,1.8752275,llama-2-7b-chat@q8_0_6.txt
+13,.,314, I,-0.99082184,0.99082184,llama-2-7b-chat@q8_0_6.txt
+314, I,1101,'m,-1.6795176,1.6795176,llama-2-7b-chat@q8_0_6.txt
+1101,'m,991, still,-3.1894703,3.1894703,llama-2-7b-chat@q8_0_6.txt
+991, still,4673, learning,-2.912162,2.912162,llama-2-7b-chat@q8_0_6.txt
+4673, learning,262, the,-3.0626578,3.0626578,llama-2-7b-chat@q8_0_6.txt
+262, the,31001, ropes,-1.3791997,1.3791997,llama-2-7b-chat@q8_0_6.txt
+31001, ropes,526,".""",-1.7710843,1.7710843,llama-2-7b-chat@q8_0_6.txt

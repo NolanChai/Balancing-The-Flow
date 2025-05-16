@@ -1,0 +1,14 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2949,No,-7.192142,7.192142,mistral-7b-instruct-v0.1@q8_0_181.txt
+2949,No,1917, problem,-5.566688,5.566688,mistral-7b-instruct-v0.1@q8_0_181.txt
+1917, problem,13,.,-1.4292233,1.4292233,mistral-7b-instruct-v0.1@q8_0_181.txt
+13,.,1148, Is,-6.7349358,6.7349358,mistral-7b-instruct-v0.1@q8_0_181.txt
+1148, Is,612, there,-1.8561696,1.8561696,mistral-7b-instruct-v0.1@q8_0_181.txt
+612, there,1997, anything,-1.4398657,1.4398657,mistral-7b-instruct-v0.1@q8_0_181.txt
+1997, anything,2073, else,-1.3044355,1.3044355,mistral-7b-instruct-v0.1@q8_0_181.txt
+2073, else,314, I,-1.8512607,1.8512607,mistral-7b-instruct-v0.1@q8_0_181.txt
+314, I,460, can,-0.75184137,0.75184137,mistral-7b-instruct-v0.1@q8_0_181.txt
+460, can,1037, help,-3.6297438,3.6297438,mistral-7b-instruct-v0.1@q8_0_181.txt
+1037, help,345, you,-0.30131626,0.30131626,mistral-7b-instruct-v0.1@q8_0_181.txt
+345, you,351, with,-0.13719584,0.13719584,mistral-7b-instruct-v0.1@q8_0_181.txt
+351, with,1701,"?""",-0.2951762,0.2951762,mistral-7b-instruct-v0.1@q8_0_181.txt

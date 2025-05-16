@@ -1,0 +1,33 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_155.txt
+40,I,561, would,-3.93035,3.93035,mistral-7b-instruct-v0.1@q8_0_155.txt
+561, would,307, be,-2.924768,2.924768,mistral-7b-instruct-v0.1@q8_0_155.txt
+307, be,3772, happy,-2.2702298,2.2702298,mistral-7b-instruct-v0.1@q8_0_155.txt
+3772, happy,284, to,-0.33538768,0.33538768,mistral-7b-instruct-v0.1@q8_0_155.txt
+284, to,1011, take,-3.784664,3.784664,mistral-7b-instruct-v0.1@q8_0_155.txt
+1011, take,257, a,-2.1098335,2.1098335,mistral-7b-instruct-v0.1@q8_0_155.txt
+257, a,3275, message,-7.8802586,7.8802586,mistral-7b-instruct-v0.1@q8_0_155.txt
+3275, message,13,.,-4.1910176,4.1910176,mistral-7b-instruct-v0.1@q8_0_155.txt
+13,.,1737, May,-8.227422,8.227422,mistral-7b-instruct-v0.1@q8_0_155.txt
+1737, May,314, I,-0.9372744,0.9372744,mistral-7b-instruct-v0.1@q8_0_155.txt
+314, I,1265, ask,-1.7439367,1.7439367,mistral-7b-instruct-v0.1@q8_0_155.txt
+1265, ask,644, what,-3.4701033,3.4701033,mistral-7b-instruct-v0.1@q8_0_155.txt
+644, what,340, it,-3.2898827,3.2898827,mistral-7b-instruct-v0.1@q8_0_155.txt
+340, it,318, is,-0.5251112,0.5251112,mistral-7b-instruct-v0.1@q8_0_155.txt
+318, is,329, for,-3.8623052,3.8623052,mistral-7b-instruct-v0.1@q8_0_155.txt
+329, for,1770, Mr,-7.622396,7.622396,mistral-7b-instruct-v0.1@q8_0_155.txt
+1770, Mr,13,.,-0.4332053,0.4332053,mistral-7b-instruct-v0.1@q8_0_155.txt
+13,.,4176, Smith,-4.9631557,4.9631557,mistral-7b-instruct-v0.1@q8_0_155.txt
+4176, Smith,30,?,-2.3081312,2.3081312,mistral-7b-instruct-v0.1@q8_0_155.txt
+30,?,198,"
+",-3.1226249,3.1226249,mistral-7b-instruct-v0.1@q8_0_155.txt
+198,"
+",198,"
+",-0.00067449705,0.00067449705,mistral-7b-instruct-v0.1@q8_0_155.txt
+198,"
+",1,"""",-1.3771572,1.3771572,mistral-7b-instruct-v0.1@q8_0_155.txt
+1,"""",11980,Have,-5.551903,5.551903,mistral-7b-instruct-v0.1@q8_0_155.txt
+11980,Have,257, a,-2.8195748,2.8195748,mistral-7b-instruct-v0.1@q8_0_155.txt
+257, a,1049, great,-3.2984385,3.2984385,mistral-7b-instruct-v0.1@q8_0_155.txt
+1049, great,1110, day,-0.6035878,0.6035878,mistral-7b-instruct-v0.1@q8_0_155.txt
+1110, day,2474,"!""",-2.683904,2.683904,mistral-7b-instruct-v0.1@q8_0_155.txt

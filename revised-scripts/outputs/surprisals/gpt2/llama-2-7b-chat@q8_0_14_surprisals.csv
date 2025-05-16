@@ -1,0 +1,19 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",10995,Yeah,-9.325558,9.325558,llama-2-7b-chat@q8_0_14.txt
+10995,Yeah,11,",",-0.48340753,0.48340753,llama-2-7b-chat@q8_0_14.txt
+11,",",314, I,-1.598343,1.598343,llama-2-7b-chat@q8_0_14.txt
+314, I,760, know,-3.052789,3.052789,llama-2-7b-chat@q8_0_14.txt
+760, know,13,.,-1.5646249,1.5646249,llama-2-7b-chat@q8_0_14.txt
+13,.,775, We,-3.403336,3.403336,llama-2-7b-chat@q8_0_14.txt
+775, We,1183,'ll,-2.5009003,2.5009003,llama-2-7b-chat@q8_0_14.txt
+1183,'ll,423, have,-3.109065,3.109065,llama-2-7b-chat@q8_0_14.txt
+423, have,284, to,-0.9164935,0.9164935,llama-2-7b-chat@q8_0_14.txt
+284, to,1057, run,-6.607211,6.607211,llama-2-7b-chat@q8_0_14.txt
+1057, run,588, like,-6.0020866,6.0020866,llama-2-7b-chat@q8_0_14.txt
+588, like,5968, hell,-1.1834978,1.1834978,llama-2-7b-chat@q8_0_14.txt
+5968, hell,284, to,-2.325386,2.325386,llama-2-7b-chat@q8_0_14.txt
+284, to,787, make,-2.466556,2.466556,llama-2-7b-chat@q8_0_14.txt
+787, make,340, it,-0.92754143,0.92754143,llama-2-7b-chat@q8_0_14.txt
+340, it,319, on,-5.7898474,5.7898474,llama-2-7b-chat@q8_0_14.txt
+319, on,640, time,-2.0504794,2.0504794,llama-2-7b-chat@q8_0_14.txt
+640, time,526,".""",-1.0587513,1.0587513,llama-2-7b-chat@q8_0_14.txt

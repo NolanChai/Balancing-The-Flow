@@ -1,0 +1,40 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987438,8.987438,llama-2-7b-chat@q8_0_168.txt
+5812,Oh,11,",",-0.7042815,0.7042815,llama-2-7b-chat@q8_0_168.txt
+11,",",645, no,-3.063373,3.063373,llama-2-7b-chat@q8_0_168.txt
+645, no,1917, problem,-6.147951,6.147951,llama-2-7b-chat@q8_0_168.txt
+1917, problem,379, at,-4.568745,4.568745,llama-2-7b-chat@q8_0_168.txt
+379, at,477, all,-0.005837891,0.005837891,llama-2-7b-chat@q8_0_168.txt
+477, all,0,!,-2.580243,2.580243,llama-2-7b-chat@q8_0_168.txt
+0,!,314, I,-1.7126862,1.7126862,llama-2-7b-chat@q8_0_168.txt
+314, I,1101,'m,-1.6663519,1.6663519,llama-2-7b-chat@q8_0_168.txt
+1101,'m,655, just,-2.4160886,2.4160886,llama-2-7b-chat@q8_0_168.txt
+655, just,9675, glad,-4.0865865,4.0865865,llama-2-7b-chat@q8_0_168.txt
+9675, glad,356, we,-2.9333558,2.9333558,llama-2-7b-chat@q8_0_168.txt
+356, we,714, could,-3.9499326,3.9499326,llama-2-7b-chat@q8_0_168.txt
+714, could,3443, finally,-4.266943,4.266943,llama-2-7b-chat@q8_0_168.txt
+3443, finally,467, go,-3.3646026,3.3646026,llama-2-7b-chat@q8_0_168.txt
+467, go,503, out,-2.0691066,2.0691066,llama-2-7b-chat@q8_0_168.txt
+503, out,284, to,-2.8308132,2.8308132,llama-2-7b-chat@q8_0_168.txt
+284, to,9965, lunch,-2.8730922,2.8730922,llama-2-7b-chat@q8_0_168.txt
+9965, lunch,1978, together,-2.2015097,2.2015097,llama-2-7b-chat@q8_0_168.txt
+1978, together,13,.,-2.130601,2.130601,llama-2-7b-chat@q8_0_168.txt
+13,.,314, I,-1.4887389,1.4887389,llama-2-7b-chat@q8_0_168.txt
+314, I,373, was,-4.058838,4.058838,llama-2-7b-chat@q8_0_168.txt
+373, was,11263, wondering,-2.9631836,2.9631836,llama-2-7b-chat@q8_0_168.txt
+11263, wondering,611, if,-0.58026475,0.58026475,llama-2-7b-chat@q8_0_168.txt
+611, if,345, you,-1.0313851,1.0313851,llama-2-7b-chat@q8_0_168.txt
+345, you,2227, wanted,-3.6682978,3.6682978,llama-2-7b-chat@q8_0_168.txt
+2227, wanted,284, to,-0.38061243,0.38061243,llama-2-7b-chat@q8_0_168.txt
+284, to,5552, grab,-6.600029,6.600029,llama-2-7b-chat@q8_0_168.txt
+5552, grab,1223, something,-2.9238343,2.9238343,llama-2-7b-chat@q8_0_168.txt
+1223, something,1657, light,-9.836323,9.836323,llama-2-7b-chat@q8_0_168.txt
+1657, light,1909, today,-5.0466766,5.0466766,llama-2-7b-chat@q8_0_168.txt
+1909, today,11,",",-1.8111796,1.8111796,llama-2-7b-chat@q8_0_168.txt
+11,",",3863, maybe,-3.7459416,3.7459416,llama-2-7b-chat@q8_0_168.txt
+3863, maybe,617, some,-2.3711143,2.3711143,llama-2-7b-chat@q8_0_168.txt
+617, some,17141, soup,-5.086121,5.086121,llama-2-7b-chat@q8_0_168.txt
+17141, soup,393, or,-1.5676436,1.5676436,llama-2-7b-chat@q8_0_168.txt
+393, or,257, a,-3.076146,3.076146,llama-2-7b-chat@q8_0_168.txt
+257, a,20433, sandwich,-3.2675881,3.2675881,llama-2-7b-chat@q8_0_168.txt
+20433, sandwich,1701,"?""",-1.1885334,1.1885334,llama-2-7b-chat@q8_0_168.txt

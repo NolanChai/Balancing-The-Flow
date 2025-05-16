@@ -1,0 +1,45 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2949,No,-7.1921544,7.1921544,mistral-7b-instruct-v0.1@q8_0_132.txt
+2949,No,11,",",-0.983614,0.983614,mistral-7b-instruct-v0.1@q8_0_132.txt
+11,",",5045, Tim,-10.08305,10.08305,mistral-7b-instruct-v0.1@q8_0_132.txt
+5045, Tim,318, is,-4.8507266,4.8507266,mistral-7b-instruct-v0.1@q8_0_132.txt
+318, is,407, not,-1.8088545,1.8088545,mistral-7b-instruct-v0.1@q8_0_132.txt
+407, not,287, in,-3.9361002,3.9361002,mistral-7b-instruct-v0.1@q8_0_132.txt
+287, in,262, the,-1.6263477,1.6263477,mistral-7b-instruct-v0.1@q8_0_132.txt
+262, the,11376, garden,-9.153372,9.153372,mistral-7b-instruct-v0.1@q8_0_132.txt
+11376, garden,553,",""",-2.0457556,2.0457556,mistral-7b-instruct-v0.1@q8_0_132.txt
+553,",""",12091, Jane,-8.076907,8.076907,mistral-7b-instruct-v0.1@q8_0_132.txt
+12091, Jane,8712, replied,-2.9939413,2.9939413,mistral-7b-instruct-v0.1@q8_0_132.txt
+8712, replied,13,.,-0.77759737,0.77759737,mistral-7b-instruct-v0.1@q8_0_132.txt
+13,.,198,"
+",-1.5808971,1.5808971,mistral-7b-instruct-v0.1@q8_0_132.txt
+198,"
+",198,"
+",-0.016154233,0.016154233,mistral-7b-instruct-v0.1@q8_0_132.txt
+198,"
+",1,"""",-0.5890162,0.5890162,mistral-7b-instruct-v0.1@q8_0_132.txt
+1,"""",3792,Is,-5.0364904,5.0364904,mistral-7b-instruct-v0.1@q8_0_132.txt
+3792,Is,326, that,-1.234538,1.234538,mistral-7b-instruct-v0.1@q8_0_132.txt
+326, that,25737, Sally,-13.07972,13.07972,mistral-7b-instruct-v0.1@q8_0_132.txt
+25737, Sally,345, you,-6.2134805,6.2134805,mistral-7b-instruct-v0.1@q8_0_132.txt
+345, you,821,'re,-1.7739253,1.7739253,mistral-7b-instruct-v0.1@q8_0_132.txt
+821,'re,4737, asking,-4.863444,4.863444,mistral-7b-instruct-v0.1@q8_0_132.txt
+4737, asking,546, about,-1.6848934,1.6848934,mistral-7b-instruct-v0.1@q8_0_132.txt
+546, about,11,",",-3.101646,3.101646,mistral-7b-instruct-v0.1@q8_0_132.txt
+11,",",3619, Jack,-5.4713693,5.4713693,mistral-7b-instruct-v0.1@q8_0_132.txt
+3619, Jack,1701,"?""",-0.13969567,0.13969567,mistral-7b-instruct-v0.1@q8_0_132.txt
+1701,"?""",198,"
+",-1.4055586,1.4055586,mistral-7b-instruct-v0.1@q8_0_132.txt
+198,"
+",198,"
+",-0.00018177764,0.00018177764,mistral-7b-instruct-v0.1@q8_0_132.txt
+198,"
+",1,"""",-0.25146934,0.25146934,mistral-7b-instruct-v0.1@q8_0_132.txt
+1,"""",19242,Has,-8.562606,8.562606,mistral-7b-instruct-v0.1@q8_0_132.txt
+19242,Has,25737, Sally,-4.2685375,4.2685375,mistral-7b-instruct-v0.1@q8_0_132.txt
+25737, Sally,3181, brought,-5.330859,5.330859,mistral-7b-instruct-v0.1@q8_0_132.txt
+3181, brought,262, the,-3.3285675,3.3285675,mistral-7b-instruct-v0.1@q8_0_132.txt
+262, the,3290, dog,-4.26596,4.26596,mistral-7b-instruct-v0.1@q8_0_132.txt
+3290, dog,351, with,-3.5417256,3.5417256,mistral-7b-instruct-v0.1@q8_0_132.txt
+351, with,607, her,-0.39673817,0.39673817,mistral-7b-instruct-v0.1@q8_0_132.txt
+607, her,1701,"?""",-0.4357375,0.4357375,mistral-7b-instruct-v0.1@q8_0_132.txt

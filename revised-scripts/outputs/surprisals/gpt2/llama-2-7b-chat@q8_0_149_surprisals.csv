@@ -1,0 +1,25 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987438,8.987438,llama-2-7b-chat@q8_0_149.txt
+5812,Oh,11,",",-0.70429367,0.70429367,llama-2-7b-chat@q8_0_149.txt
+11,",",2818, perfect,-8.523867,8.523867,llama-2-7b-chat@q8_0_149.txt
+2818, perfect,0,!,-2.429296,2.429296,llama-2-7b-chat@q8_0_149.txt
+0,!,314, I,-1.8652961,1.8652961,llama-2-7b-chat@q8_0_149.txt
+314, I,373, was,-3.7727337,3.7727337,llama-2-7b-chat@q8_0_149.txt
+373, was,3612, thinking,-2.9508538,2.9508538,llama-2-7b-chat@q8_0_149.txt
+3612, thinking,262, the,-4.9654207,4.9654207,llama-2-7b-chat@q8_0_149.txt
+262, the,976, same,-0.85240537,0.85240537,llama-2-7b-chat@q8_0_149.txt
+976, same,1517, thing,-0.46613035,0.46613035,llama-2-7b-chat@q8_0_149.txt
+1517, thing,13,.,-1.8857712,1.8857712,llama-2-7b-chat@q8_0_149.txt
+13,.,1320, That,-3.917893,3.917893,llama-2-7b-chat@q8_0_149.txt
+1320, That,649, new,-7.7762213,7.7762213,llama-2-7b-chat@q8_0_149.txt
+649, new,3430, club,-8.069424,8.069424,llama-2-7b-chat@q8_0_149.txt
+3430, club,319, on,-6.056628,6.056628,llama-2-7b-chat@q8_0_149.txt
+319, on,2688, West,-6.3234587,6.3234587,llama-2-7b-chat@q8_0_149.txt
+2688, West,3530, Street,-3.814073,3.814073,llama-2-7b-chat@q8_0_149.txt
+3530, Street,318, is,-1.9423885,1.9423885,llama-2-7b-chat@q8_0_149.txt
+318, is,1016, going,-2.7834914,2.7834914,llama-2-7b-chat@q8_0_149.txt
+1016, going,284, to,-0.045833334,0.045833334,llama-2-7b-chat@q8_0_149.txt
+284, to,307, be,-0.7235662,0.7235662,llama-2-7b-chat@q8_0_149.txt
+307, be,6578, lit,-9.695892,9.695892,llama-2-7b-chat@q8_0_149.txt
+6578, lit,9975, tonight,-6.080146,6.080146,llama-2-7b-chat@q8_0_149.txt
+9975, tonight,526,".""",-2.0077739,2.0077739,llama-2-7b-chat@q8_0_149.txt

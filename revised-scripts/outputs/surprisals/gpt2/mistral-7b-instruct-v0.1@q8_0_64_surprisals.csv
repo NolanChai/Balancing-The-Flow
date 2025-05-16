@@ -1,0 +1,29 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",6952, Thank,-10.732445,10.732445,mistral-7b-instruct-v0.1@q8_0_64.txt
+6952, Thank,345, you,-0.118804425,0.118804425,mistral-7b-instruct-v0.1@q8_0_64.txt
+345, you,329, for,-1.0827607,1.0827607,mistral-7b-instruct-v0.1@q8_0_64.txt
+329, for,9616, letting,-6.5782022,6.5782022,mistral-7b-instruct-v0.1@q8_0_64.txt
+9616, letting,502, me,-0.572772,0.572772,mistral-7b-instruct-v0.1@q8_0_64.txt
+502, me,760, know,-1.3687958,1.3687958,mistral-7b-instruct-v0.1@q8_0_64.txt
+760, know,13,.,-1.4370501,1.4370501,mistral-7b-instruct-v0.1@q8_0_64.txt
+13,.,3423, Here,-6.0816426,6.0816426,mistral-7b-instruct-v0.1@q8_0_64.txt
+3423, Here,338,'s,-1.067696,1.067696,mistral-7b-instruct-v0.1@q8_0_64.txt
+338,'s,262, the,-1.727842,1.727842,mistral-7b-instruct-v0.1@q8_0_64.txt
+262, the,1296, form,-6.7606688,6.7606688,mistral-7b-instruct-v0.1@q8_0_64.txt
+1296, form,11,",",-2.792008,2.792008,mistral-7b-instruct-v0.1@q8_0_64.txt
+11,",",314, I,-2.985017,2.985017,mistral-7b-instruct-v0.1@q8_0_64.txt
+314, I,481, will,-3.7098334,3.7098334,mistral-7b-instruct-v0.1@q8_0_64.txt
+481, will,1844, complete,-6.096078,6.096078,mistral-7b-instruct-v0.1@q8_0_64.txt
+1844, complete,340, it,-0.28733128,0.28733128,mistral-7b-instruct-v0.1@q8_0_64.txt
+340, it,783, now,-5.719727,5.719727,mistral-7b-instruct-v0.1@q8_0_64.txt
+783, now,290, and,-3.0240438,3.0240438,mistral-7b-instruct-v0.1@q8_0_64.txt
+290, and,9199, submit,-4.6414165,4.6414165,mistral-7b-instruct-v0.1@q8_0_64.txt
+9199, submit,340, it,-0.28887486,0.28887486,mistral-7b-instruct-v0.1@q8_0_64.txt
+340, it,523, so,-6.743514,6.743514,mistral-7b-instruct-v0.1@q8_0_64.txt
+523, so,326, that,-1.4636865,1.4636865,mistral-7b-instruct-v0.1@q8_0_64.txt
+326, that,534, your,-4.0318894,4.0318894,mistral-7b-instruct-v0.1@q8_0_64.txt
+534, your,8242, clothes,-10.769514,10.769514,mistral-7b-instruct-v0.1@q8_0_64.txt
+8242, clothes,460, can,-1.1997602,1.1997602,mistral-7b-instruct-v0.1@q8_0_64.txt
+460, can,307, be,-0.33140767,0.33140767,mistral-7b-instruct-v0.1@q8_0_64.txt
+307, be,7723, collected,-7.110145,7.110145,mistral-7b-instruct-v0.1@q8_0_64.txt
+7723, collected,526,".""",-4.3694525,4.3694525,mistral-7b-instruct-v0.1@q8_0_64.txt

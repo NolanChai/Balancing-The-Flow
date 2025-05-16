@@ -1,0 +1,31 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",13681,Great,-9.986546,9.986546,mistral-7b-instruct-v0.1@q8_0_32.txt
+13681,Great,0,!,-3.3549843,3.3549843,mistral-7b-instruct-v0.1@q8_0_32.txt
+0,!,921, You,-3.0832326,3.0832326,mistral-7b-instruct-v0.1@q8_0_32.txt
+921, You,460, can,-3.0062532,3.0062532,mistral-7b-instruct-v0.1@q8_0_32.txt
+460, can,2298, pick,-5.4408917,5.4408917,mistral-7b-instruct-v0.1@q8_0_32.txt
+2298, pick,510, up,-0.969456,0.969456,mistral-7b-instruct-v0.1@q8_0_32.txt
+510, up,257, a,-1.8339782,1.8339782,mistral-7b-instruct-v0.1@q8_0_32.txt
+257, a,7480, plate,-6.4836054,6.4836054,mistral-7b-instruct-v0.1@q8_0_32.txt
+7480, plate,286, of,-0.8584586,0.8584586,mistral-7b-instruct-v0.1@q8_0_32.txt
+286, of,25996, banana,-8.429045,8.429045,mistral-7b-instruct-v0.1@q8_0_32.txt
+25996, banana,2508, pie,-5.613096,5.613096,mistral-7b-instruct-v0.1@q8_0_32.txt
+2508, pie,422, from,-2.54536,2.54536,mistral-7b-instruct-v0.1@q8_0_32.txt
+422, from,262, the,-1.1486121,1.1486121,mistral-7b-instruct-v0.1@q8_0_32.txt
+262, the,23084, dessert,-7.1644907,7.1644907,mistral-7b-instruct-v0.1@q8_0_32.txt
+23084, dessert,2665, section,-2.5390108,2.5390108,mistral-7b-instruct-v0.1@q8_0_32.txt
+2665, section,13,.,-2.2310927,2.2310927,mistral-7b-instruct-v0.1@q8_0_32.txt
+13,.,3914, Let,-5.4220715,5.4220715,mistral-7b-instruct-v0.1@q8_0_32.txt
+3914, Let,338,'s,-0.63817894,0.63817894,mistral-7b-instruct-v0.1@q8_0_32.txt
+338,'s,651, get,-1.9316053,1.9316053,mistral-7b-instruct-v0.1@q8_0_32.txt
+651, get,674, our,-4.711151,4.711151,mistral-7b-instruct-v0.1@q8_0_32.txt
+674, our,2057, food,-4.7419896,4.7419896,mistral-7b-instruct-v0.1@q8_0_32.txt
+2057, food,290, and,-4.288558,4.288558,mistral-7b-instruct-v0.1@q8_0_32.txt
+290, and,1064, find,-7.725254,7.725254,mistral-7b-instruct-v0.1@q8_0_32.txt
+1064, find,617, some,-2.553821,2.553821,mistral-7b-instruct-v0.1@q8_0_32.txt
+617, some,6565, empty,-8.758366,8.758366,mistral-7b-instruct-v0.1@q8_0_32.txt
+6565, empty,8893, tables,-3.7172308,3.7172308,mistral-7b-instruct-v0.1@q8_0_32.txt
+8893, tables,284, to,-2.3943338,2.3943338,mistral-7b-instruct-v0.1@q8_0_32.txt
+284, to,1650, sit,-2.2189853,2.2189853,mistral-7b-instruct-v0.1@q8_0_32.txt
+1650, sit,379, at,-3.0310411,3.0310411,mistral-7b-instruct-v0.1@q8_0_32.txt
+379, at,526,".""",-1.7451395,1.7451395,mistral-7b-instruct-v0.1@q8_0_32.txt

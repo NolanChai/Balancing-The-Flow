@@ -1,0 +1,41 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,mistral-7b-instruct-v0.1@q8_0_106.txt
+40,I,766, see,-5.3181753,5.3181753,mistral-7b-instruct-v0.1@q8_0_106.txt
+766, see,534, your,-4.0723534,4.0723534,mistral-7b-instruct-v0.1@q8_0_106.txt
+534, your,966, point,-3.5943587,3.5943587,mistral-7b-instruct-v0.1@q8_0_106.txt
+966, point,11,",",-2.0248694,2.0248694,mistral-7b-instruct-v0.1@q8_0_106.txt
+11,",",475, but,-2.197124,2.197124,mistral-7b-instruct-v0.1@q8_0_106.txt
+475, but,314, I,-1.2484912,1.2484912,mistral-7b-instruct-v0.1@q8_0_106.txt
+314, I,991, still,-4.8322816,4.8322816,mistral-7b-instruct-v0.1@q8_0_106.txt
+991, still,1975, believe,-2.8761601,2.8761601,mistral-7b-instruct-v0.1@q8_0_106.txt
+1975, believe,326, that,-1.0976655,1.0976655,mistral-7b-instruct-v0.1@q8_0_106.txt
+326, that,9061, computers,-9.928457,9.928457,mistral-7b-instruct-v0.1@q8_0_106.txt
+9061, computers,460, can,-2.2588773,2.2588773,mistral-7b-instruct-v0.1@q8_0_106.txt
+460, can,635, also,-5.443519,5.443519,mistral-7b-instruct-v0.1@q8_0_106.txt
+635, also,307, be,-1.1161258,1.1161258,mistral-7b-instruct-v0.1@q8_0_106.txt
+307, be,257, a,-3.115299,3.115299,mistral-7b-instruct-v0.1@q8_0_106.txt
+257, a,24066, distraction,-5.6604924,5.6604924,mistral-7b-instruct-v0.1@q8_0_106.txt
+24066, distraction,329, for,-2.8314571,2.8314571,mistral-7b-instruct-v0.1@q8_0_106.txt
+329, for,3988, kids,-4.6753325,4.6753325,mistral-7b-instruct-v0.1@q8_0_106.txt
+3988, kids,13,.,-1.6630914,1.6630914,mistral-7b-instruct-v0.1@q8_0_106.txt
+13,.,1119, They,-3.0797698,3.0797698,mistral-7b-instruct-v0.1@q8_0_106.txt
+1119, They,4341, spend,-6.5356464,6.5356464,mistral-7b-instruct-v0.1@q8_0_106.txt
+4341, spend,1165, too,-1.8060217,1.8060217,mistral-7b-instruct-v0.1@q8_0_106.txt
+1165, too,881, much,-0.05684768,0.05684768,mistral-7b-instruct-v0.1@q8_0_106.txt
+881, much,640, time,-0.089375615,0.089375615,mistral-7b-instruct-v0.1@q8_0_106.txt
+640, time,319, on,-2.153731,2.153731,mistral-7b-instruct-v0.1@q8_0_106.txt
+319, on,8947, screens,-4.361598,4.361598,mistral-7b-instruct-v0.1@q8_0_106.txt
+8947, screens,290, and,-1.1328607,1.1328607,mistral-7b-instruct-v0.1@q8_0_106.txt
+290, and,407, not,-2.7547424,2.7547424,mistral-7b-instruct-v0.1@q8_0_106.txt
+407, not,1576, enough,-0.05611391,0.05611391,mistral-7b-instruct-v0.1@q8_0_106.txt
+1576, enough,640, time,-0.16121899,0.16121899,mistral-7b-instruct-v0.1@q8_0_106.txt
+640, time,4673, learning,-4.0927043,4.0927043,mistral-7b-instruct-v0.1@q8_0_106.txt
+4673, learning,4096, basic,-6.222012,6.222012,mistral-7b-instruct-v0.1@q8_0_106.txt
+4096, basic,4678, skills,-1.6866131,1.6866131,mistral-7b-instruct-v0.1@q8_0_106.txt
+4678, skills,326, that,-3.3704934,3.3704934,mistral-7b-instruct-v0.1@q8_0_106.txt
+326, that,389, are,-2.2176049,2.2176049,mistral-7b-instruct-v0.1@q8_0_106.txt
+389, are,3306, necessary,-3.8697872,3.8697872,mistral-7b-instruct-v0.1@q8_0_106.txt
+3306, necessary,329, for,-0.67314386,0.67314386,mistral-7b-instruct-v0.1@q8_0_106.txt
+329, for,4688, critical,-6.821493,6.821493,mistral-7b-instruct-v0.1@q8_0_106.txt
+4688, critical,3612, thinking,-0.6705818,0.6705818,mistral-7b-instruct-v0.1@q8_0_106.txt
+3612, thinking,526,".""",-1.9257317,1.9257317,mistral-7b-instruct-v0.1@q8_0_106.txt

@@ -1,0 +1,18 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",8491,Are,-8.900673,8.900673,mistral-7b-instruct-v0.1@q8_0_14.txt
+8491,Are,612, there,-3.227034,3.227034,mistral-7b-instruct-v0.1@q8_0_14.txt
+612, there,597, any,-0.95873433,0.95873433,mistral-7b-instruct-v0.1@q8_0_14.txt
+597, any,1277, direct,-7.1562653,7.1562653,mistral-7b-instruct-v0.1@q8_0_14.txt
+1277, direct,13956, flights,-5.4748363,5.4748363,mistral-7b-instruct-v0.1@q8_0_14.txt
+13956, flights,1695, available,-5.2265906,5.2265906,mistral-7b-instruct-v0.1@q8_0_14.txt
+1695, available,422, from,-1.655349,1.655349,mistral-7b-instruct-v0.1@q8_0_14.txt
+422, from,994, here,-4.1164923,4.1164923,mistral-7b-instruct-v0.1@q8_0_14.txt
+994, here,326, that,-4.789532,4.789532,mistral-7b-instruct-v0.1@q8_0_14.txt
+326, that,460, can,-3.043161,3.043161,mistral-7b-instruct-v0.1@q8_0_14.txt
+460, can,651, get,-3.7621913,3.7621913,mistral-7b-instruct-v0.1@q8_0_14.txt
+651, get,514, us,-3.2386315,3.2386315,mistral-7b-instruct-v0.1@q8_0_14.txt
+514, us,284, to,-1.166878,1.166878,mistral-7b-instruct-v0.1@q8_0_14.txt
+284, to,674, our,-3.5322962,3.5322962,mistral-7b-instruct-v0.1@q8_0_14.txt
+674, our,10965, destination,-0.43407646,0.43407646,mistral-7b-instruct-v0.1@q8_0_14.txt
+10965, destination,5443, faster,-6.075221,6.075221,mistral-7b-instruct-v0.1@q8_0_14.txt
+5443, faster,1701,"?""",-0.73116976,0.73116976,mistral-7b-instruct-v0.1@q8_0_14.txt

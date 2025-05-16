@@ -1,0 +1,172 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5779,Well,-8.582928,8.582928,mistral-7b-instruct-v0.1@q8_0_9.txt
+5779,Well,11,",",-0.44004673,0.44004673,mistral-7b-instruct-v0.1@q8_0_9.txt
+11,",",314, I,-1.7011136,1.7011136,mistral-7b-instruct-v0.1@q8_0_9.txt
+314, I,466, do,-4.5399127,4.5399127,mistral-7b-instruct-v0.1@q8_0_9.txt
+466, do,2883, enjoy,-5.101987,5.101987,mistral-7b-instruct-v0.1@q8_0_9.txt
+2883, enjoy,257, a,-3.849607,3.849607,mistral-7b-instruct-v0.1@q8_0_9.txt
+257, a,4996, variety,-5.827773,5.827773,mistral-7b-instruct-v0.1@q8_0_9.txt
+4996, variety,286, of,-0.03223797,0.03223797,mistral-7b-instruct-v0.1@q8_0_9.txt
+286, of,27962, genres,-4.7535853,4.7535853,mistral-7b-instruct-v0.1@q8_0_9.txt
+27962, genres,11,",",-1.1174601,1.1174601,mistral-7b-instruct-v0.1@q8_0_9.txt
+11,",",475, but,-0.93941855,0.93941855,mistral-7b-instruct-v0.1@q8_0_9.txt
+475, but,612, there,-3.5023234,3.5023234,mistral-7b-instruct-v0.1@q8_0_9.txt
+612, there,338,'s,-1.0269616,1.0269616,mistral-7b-instruct-v0.1@q8_0_9.txt
+338,'s,1223, something,-2.2346325,2.2346325,mistral-7b-instruct-v0.1@q8_0_9.txt
+1223, something,546, about,-0.86413425,0.86413425,mistral-7b-instruct-v0.1@q8_0_9.txt
+546, about,262, the,-1.8800234,1.8800234,mistral-7b-instruct-v0.1@q8_0_9.txt
+262, the,3716, complex,-9.164013,9.164013,mistral-7b-instruct-v0.1@q8_0_9.txt
+3716, complex,290, and,-2.6900072,2.6900072,mistral-7b-instruct-v0.1@q8_0_9.txt
+290, and,7016, emotional,-5.0360785,5.0360785,mistral-7b-instruct-v0.1@q8_0_9.txt
+7016, emotional,47077, melodies,-8.670926,8.670926,mistral-7b-instruct-v0.1@q8_0_9.txt
+47077, melodies,286, of,-1.8826604,1.8826604,mistral-7b-instruct-v0.1@q8_0_9.txt
+286, of,15993, classical,-5.4139185,5.4139185,mistral-7b-instruct-v0.1@q8_0_9.txt
+15993, classical,2647, music,-0.23129778,0.23129778,mistral-7b-instruct-v0.1@q8_0_9.txt
+2647, music,326, that,-0.3369559,0.3369559,mistral-7b-instruct-v0.1@q8_0_9.txt
+326, that,1107, really,-3.2497296,3.2497296,mistral-7b-instruct-v0.1@q8_0_9.txt
+1107, really,14309, reson,-3.5269809,3.5269809,mistral-7b-instruct-v0.1@q8_0_9.txt
+14309, reson,689,ates,-0.06130161,0.06130161,mistral-7b-instruct-v0.1@q8_0_9.txt
+689,ates,351, with,-0.28028545,0.28028545,mistral-7b-instruct-v0.1@q8_0_9.txt
+351, with,502, me,-0.22380204,0.22380204,mistral-7b-instruct-v0.1@q8_0_9.txt
+502, me,13,.,-1.3439164,1.3439164,mistral-7b-instruct-v0.1@q8_0_9.txt
+13,.,1374, How,-6.689466,6.689466,mistral-7b-instruct-v0.1@q8_0_9.txt
+1374, How,546, about,-4.035349,4.035349,mistral-7b-instruct-v0.1@q8_0_9.txt
+546, about,345, you,-2.5166388,2.5166388,mistral-7b-instruct-v0.1@q8_0_9.txt
+345, you,30,?,-2.1569881,2.1569881,mistral-7b-instruct-v0.1@q8_0_9.txt
+30,?,1867, What,-2.4098344,2.4098344,mistral-7b-instruct-v0.1@q8_0_9.txt
+1867, What,1611, kind,-3.3017917,3.3017917,mistral-7b-instruct-v0.1@q8_0_9.txt
+1611, kind,286, of,-0.0091888625,0.0091888625,mistral-7b-instruct-v0.1@q8_0_9.txt
+286, of,2647, music,-1.03649,1.03649,mistral-7b-instruct-v0.1@q8_0_9.txt
+2647, music,466, do,-0.5733707,0.5733707,mistral-7b-instruct-v0.1@q8_0_9.txt
+466, do,345, you,-0.019061718,0.019061718,mistral-7b-instruct-v0.1@q8_0_9.txt
+345, you,4702, prefer,-3.6632576,3.6632576,mistral-7b-instruct-v0.1@q8_0_9.txt
+4702, prefer,1701,"?""",-1.4896913,1.4896913,mistral-7b-instruct-v0.1@q8_0_9.txt
+1701,"?""",198,"
+",-0.3044149,0.3044149,mistral-7b-instruct-v0.1@q8_0_9.txt
+198,"
+",198,"
+",-0.0005849081,0.0005849081,mistral-7b-instruct-v0.1@q8_0_9.txt
+198,"
+",1,"""",-2.0273147,2.0273147,mistral-7b-instruct-v0.1@q8_0_9.txt
+1,"""",40,I,-1.1293702,1.1293702,mistral-7b-instruct-v0.1@q8_0_9.txt
+40,I,766, see,-6.4764977,6.4764977,mistral-7b-instruct-v0.1@q8_0_9.txt
+766, see,11,",",-3.836404,3.836404,mistral-7b-instruct-v0.1@q8_0_9.txt
+11,",",326, that,-3.4587793,3.4587793,mistral-7b-instruct-v0.1@q8_0_9.txt
+326, that,338,'s,-0.31392184,0.31392184,mistral-7b-instruct-v0.1@q8_0_9.txt
+338,'s,3499, interesting,-4.002983,4.002983,mistral-7b-instruct-v0.1@q8_0_9.txt
+3499, interesting,13,.,-0.7655706,0.7655706,mistral-7b-instruct-v0.1@q8_0_9.txt
+13,.,1867, What,-3.9173741,3.9173741,mistral-7b-instruct-v0.1@q8_0_9.txt
+1867, What,1611, kind,-1.8337967,1.8337967,mistral-7b-instruct-v0.1@q8_0_9.txt
+1611, kind,286, of,-0.009319847,0.009319847,mistral-7b-instruct-v0.1@q8_0_9.txt
+286, of,1461, pop,-7.1499314,7.1499314,mistral-7b-instruct-v0.1@q8_0_9.txt
+1461, pop,2647, music,-0.7626882,0.7626882,mistral-7b-instruct-v0.1@q8_0_9.txt
+2647, music,466, do,-0.45425317,0.45425317,mistral-7b-instruct-v0.1@q8_0_9.txt
+466, do,345, you,-0.042905126,0.042905126,mistral-7b-instruct-v0.1@q8_0_9.txt
+345, you,588, like,-1.2369577,1.2369577,mistral-7b-instruct-v0.1@q8_0_9.txt
+588, like,1701,"?""",-0.9192541,0.9192541,mistral-7b-instruct-v0.1@q8_0_9.txt
+1701,"?""",198,"
+",-0.2642598,0.2642598,mistral-7b-instruct-v0.1@q8_0_9.txt
+198,"
+",198,"
+",-0.00016950125,0.00016950125,mistral-7b-instruct-v0.1@q8_0_9.txt
+198,"
+",1,"""",-0.5968367,0.5968367,mistral-7b-instruct-v0.1@q8_0_9.txt
+1,"""",3792,Is,-6.3994036,6.3994036,mistral-7b-instruct-v0.1@q8_0_9.txt
+3792,Is,612, there,-1.719366,1.719366,mistral-7b-instruct-v0.1@q8_0_9.txt
+612, there,257, a,-1.3363147,1.3363147,mistral-7b-instruct-v0.1@q8_0_9.txt
+257, a,1948, particular,-1.4923232,1.4923232,mistral-7b-instruct-v0.1@q8_0_9.txt
+1948, particular,12121, genre,-1.3310729,1.3310729,mistral-7b-instruct-v0.1@q8_0_9.txt
+12121, genre,286, of,-1.9350525,1.9350525,mistral-7b-instruct-v0.1@q8_0_9.txt
+286, of,15993, classical,-3.3092542,3.3092542,mistral-7b-instruct-v0.1@q8_0_9.txt
+15993, classical,2647, music,-0.10560643,0.10560643,mistral-7b-instruct-v0.1@q8_0_9.txt
+2647, music,326, that,-0.48202565,0.48202565,mistral-7b-instruct-v0.1@q8_0_9.txt
+326, that,345, you,-1.2138661,1.2138661,mistral-7b-instruct-v0.1@q8_0_9.txt
+345, you,4702, prefer,-2.486074,2.486074,mistral-7b-instruct-v0.1@q8_0_9.txt
+4702, prefer,1701,"?""",-0.8021683,0.8021683,mistral-7b-instruct-v0.1@q8_0_9.txt
+1701,"?""",198,"
+",-0.088183016,0.088183016,mistral-7b-instruct-v0.1@q8_0_9.txt
+198,"
+",198,"
+",-0.00015293382,0.00015293382,mistral-7b-instruct-v0.1@q8_0_9.txt
+198,"
+",1,"""",-0.34580594,0.34580594,mistral-7b-instruct-v0.1@q8_0_9.txt
+1,"""",40,I,-1.1110333,1.1110333,mistral-7b-instruct-v0.1@q8_0_9.txt
+40,I,2067, started,-8.513057,8.513057,mistral-7b-instruct-v0.1@q8_0_9.txt
+2067, started,8680, listening,-1.2558879,1.2558879,mistral-7b-instruct-v0.1@q8_0_9.txt
+8680, listening,284, to,-0.02651303,0.02651303,mistral-7b-instruct-v0.1@q8_0_9.txt
+284, to,15993, classical,-2.2923222,2.2923222,mistral-7b-instruct-v0.1@q8_0_9.txt
+15993, classical,2647, music,-0.26922888,0.26922888,mistral-7b-instruct-v0.1@q8_0_9.txt
+2647, music,618, when,-1.4959185,1.4959185,mistral-7b-instruct-v0.1@q8_0_9.txt
+618, when,314, I,-0.062913395,0.062913395,mistral-7b-instruct-v0.1@q8_0_9.txt
+314, I,373, was,-0.04376322,0.04376322,mistral-7b-instruct-v0.1@q8_0_9.txt
+373, was,287, in,-2.2345526,2.2345526,mistral-7b-instruct-v0.1@q8_0_9.txt
+287, in,1029, high,-1.5592929,1.5592929,mistral-7b-instruct-v0.1@q8_0_9.txt
+1029, high,1524, school,-0.0066559045,0.0066559045,mistral-7b-instruct-v0.1@q8_0_9.txt
+1524, school,13,.,-0.993799,0.993799,mistral-7b-instruct-v0.1@q8_0_9.txt
+13,.,632, It,-1.8887725,1.8887725,mistral-7b-instruct-v0.1@q8_0_9.txt
+632, It,373, was,-1.1680253,1.1680253,mistral-7b-instruct-v0.1@q8_0_9.txt
+373, was,530, one,-3.4515064,3.4515064,mistral-7b-instruct-v0.1@q8_0_9.txt
+530, one,286, of,-0.033746164,0.033746164,mistral-7b-instruct-v0.1@q8_0_9.txt
+286, of,616, my,-1.2660805,1.2660805,mistral-7b-instruct-v0.1@q8_0_9.txt
+616, my,28999, classmates,-7.822429,7.822429,mistral-7b-instruct-v0.1@q8_0_9.txt
+28999, classmates,508, who,-1.2723991,1.2723991,mistral-7b-instruct-v0.1@q8_0_9.txt
+508, who,5495, introduced,-4.114063,4.114063,mistral-7b-instruct-v0.1@q8_0_9.txt
+5495, introduced,502, me,-0.031022703,0.031022703,mistral-7b-instruct-v0.1@q8_0_9.txt
+502, me,284, to,-0.031347513,0.031347513,mistral-7b-instruct-v0.1@q8_0_9.txt
+284, to,340, it,-4.0550528,4.0550528,mistral-7b-instruct-v0.1@q8_0_9.txt
+340, it,290, and,-2.2401443,2.2401443,mistral-7b-instruct-v0.1@q8_0_9.txt
+290, and,314, I,-1.1627212,1.1627212,mistral-7b-instruct-v0.1@q8_0_9.txt
+314, I,373, was,-2.1749275,2.1749275,mistral-7b-instruct-v0.1@q8_0_9.txt
+373, was,3393, immediately,-3.991236,3.991236,mistral-7b-instruct-v0.1@q8_0_9.txt
+3393, immediately,23373, hooked,-0.92014563,0.92014563,mistral-7b-instruct-v0.1@q8_0_9.txt
+23373, hooked,416, by,-4.159263,4.159263,mistral-7b-instruct-v0.1@q8_0_9.txt
+416, by,663, its,-2.420645,2.420645,mistral-7b-instruct-v0.1@q8_0_9.txt
+663, its,8737, beauty,-2.8879108,2.8879108,mistral-7b-instruct-v0.1@q8_0_9.txt
+8737, beauty,290, and,-0.98419505,0.98419505,mistral-7b-instruct-v0.1@q8_0_9.txt
+290, and,13357, complexity,-4.084011,4.084011,mistral-7b-instruct-v0.1@q8_0_9.txt
+13357, complexity,526,".""",-1.6536468,1.6536468,mistral-7b-instruct-v0.1@q8_0_9.txt
+526,".""",198,"
+",-0.07652333,0.07652333,mistral-7b-instruct-v0.1@q8_0_9.txt
+198,"
+",198,"
+",-0.00023779426,0.00023779426,mistral-7b-instruct-v0.1@q8_0_9.txt
+198,"
+",1,"""",-0.8205591,0.8205591,mistral-7b-instruct-v0.1@q8_0_9.txt
+1,"""",5297,Yes,-5.7970448,5.7970448,mistral-7b-instruct-v0.1@q8_0_9.txt
+5297,Yes,11,",",-0.5956002,0.5956002,mistral-7b-instruct-v0.1@q8_0_9.txt
+11,",",314, I,-1.6913745,1.6913745,mistral-7b-instruct-v0.1@q8_0_9.txt
+314, I,466, do,-2.2006505,2.2006505,mistral-7b-instruct-v0.1@q8_0_9.txt
+466, do,0,!,-5.4358606,5.4358606,mistral-7b-instruct-v0.1@q8_0_9.txt
+0,!,632, It,-2.3874755,2.3874755,mistral-7b-instruct-v0.1@q8_0_9.txt
+632, It,338,'s,-0.4454962,0.4454962,mistral-7b-instruct-v0.1@q8_0_9.txt
+338,'s,1682, actually,-5.1424823,5.1424823,mistral-7b-instruct-v0.1@q8_0_9.txt
+1682, actually,530, one,-2.65079,2.65079,mistral-7b-instruct-v0.1@q8_0_9.txt
+530, one,286, of,-0.012164453,0.012164453,mistral-7b-instruct-v0.1@q8_0_9.txt
+286, of,262, the,-1.0304837,1.0304837,mistral-7b-instruct-v0.1@q8_0_9.txt
+262, the,1243, things,-2.8263993,2.8263993,mistral-7b-instruct-v0.1@q8_0_9.txt
+1243, things,326, that,-0.5229753,0.5229753,mistral-7b-instruct-v0.1@q8_0_9.txt
+326, that,4193, helped,-4.9963646,4.9963646,mistral-7b-instruct-v0.1@q8_0_9.txt
+4193, helped,502, me,-0.15484451,0.15484451,mistral-7b-instruct-v0.1@q8_0_9.txt
+502, me,2121, fall,-6.414275,6.414275,mistral-7b-instruct-v0.1@q8_0_9.txt
+2121, fall,287, in,-0.13318005,0.13318005,mistral-7b-instruct-v0.1@q8_0_9.txt
+287, in,1842, love,-0.004564818,0.004564818,mistral-7b-instruct-v0.1@q8_0_9.txt
+1842, love,351, with,-0.09532265,0.09532265,mistral-7b-instruct-v0.1@q8_0_9.txt
+351, with,15993, classical,-0.9790517,0.9790517,mistral-7b-instruct-v0.1@q8_0_9.txt
+15993, classical,2647, music,-0.03448121,0.03448121,mistral-7b-instruct-v0.1@q8_0_9.txt
+2647, music,13,.,-1.4964951,1.4964951,mistral-7b-instruct-v0.1@q8_0_9.txt
+13,.,18252, Learning,-9.069804,9.069804,mistral-7b-instruct-v0.1@q8_0_9.txt
+18252, Learning,284, to,-1.5744706,1.5744706,mistral-7b-instruct-v0.1@q8_0_9.txt
+284, to,711, play,-1.7680663,1.7680663,mistral-7b-instruct-v0.1@q8_0_9.txt
+711, play,281, an,-4.7959943,4.7959943,mistral-7b-instruct-v0.1@q8_0_9.txt
+281, an,8875, instrument,-0.025866315,0.025866315,mistral-7b-instruct-v0.1@q8_0_9.txt
+8875, instrument,1107, really,-4.1716948,4.1716948,mistral-7b-instruct-v0.1@q8_0_9.txt
+1107, really,3181, brought,-4.107775,4.107775,mistral-7b-instruct-v0.1@q8_0_9.txt
+3181, brought,257, a,-2.9808273,2.9808273,mistral-7b-instruct-v0.1@q8_0_9.txt
+257, a,2187, whole,-3.0446987,3.0446987,mistral-7b-instruct-v0.1@q8_0_9.txt
+2187, whole,649, new,-0.12079189,0.12079189,mistral-7b-instruct-v0.1@q8_0_9.txt
+649, new,1241, level,-1.5089216,1.5089216,mistral-7b-instruct-v0.1@q8_0_9.txt
+1241, level,286, of,-0.11284204,0.11284204,mistral-7b-instruct-v0.1@q8_0_9.txt
+286, of,19163, appreciation,-3.1350503,3.1350503,mistral-7b-instruct-v0.1@q8_0_9.txt
+19163, appreciation,329, for,-1.4338732,1.4338732,mistral-7b-instruct-v0.1@q8_0_9.txt
+329, for,340, it,-1.4236419,1.4236419,mistral-7b-instruct-v0.1@q8_0_9.txt
+340, it,526,".""",-1.7557185,1.7557185,mistral-7b-instruct-v0.1@q8_0_9.txt

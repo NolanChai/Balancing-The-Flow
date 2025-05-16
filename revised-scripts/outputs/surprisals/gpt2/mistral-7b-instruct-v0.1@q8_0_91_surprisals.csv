@@ -1,0 +1,31 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",22017,Wow,-10.121082,10.121082,mistral-7b-instruct-v0.1@q8_0_91.txt
+22017,Wow,837," ,",-8.616066,8.616066,mistral-7b-instruct-v0.1@q8_0_91.txt
+837," ,",326, that,-3.0087492,3.0087492,mistral-7b-instruct-v0.1@q8_0_91.txt
+326, that,338,'s,-0.8870538,0.8870538,mistral-7b-instruct-v0.1@q8_0_91.txt
+338,'s,257, a,-2.2495673,2.2495673,mistral-7b-instruct-v0.1@q8_0_91.txt
+257, a,1256, lot,-1.7695942,1.7695942,mistral-7b-instruct-v0.1@q8_0_91.txt
+1256, lot,517, more,-4.025885,4.025885,mistral-7b-instruct-v0.1@q8_0_91.txt
+517, more,5789, expensive,-5.705124,5.705124,mistral-7b-instruct-v0.1@q8_0_91.txt
+5789, expensive,621, than,-0.250541,0.250541,mistral-7b-instruct-v0.1@q8_0_91.txt
+621, than,644, what,-2.3054864,2.3054864,mistral-7b-instruct-v0.1@q8_0_91.txt
+644, what,314, I,-1.1864967,1.1864967,mistral-7b-instruct-v0.1@q8_0_91.txt
+314, I,373, was,-2.680158,2.680158,mistral-7b-instruct-v0.1@q8_0_91.txt
+373, was,12451, expecting,-0.757685,0.757685,mistral-7b-instruct-v0.1@q8_0_91.txt
+12451, expecting,13,.,-1.6079079,1.6079079,mistral-7b-instruct-v0.1@q8_0_91.txt
+13,.,887, But,-3.5924797,3.5924797,mistral-7b-instruct-v0.1@q8_0_91.txt
+887, But,345, you,-3.3397415,3.3397415,mistral-7b-instruct-v0.1@q8_0_91.txt
+345, you,804, look,-5.748591,5.748591,mistral-7b-instruct-v0.1@q8_0_91.txt
+804, look,1049, great,-2.8744211,2.8744211,mistral-7b-instruct-v0.1@q8_0_91.txt
+1049, great,287, in,-2.6011152,2.6011152,mistral-7b-instruct-v0.1@q8_0_91.txt
+287, in,340, it,-3.5933065,3.5933065,mistral-7b-instruct-v0.1@q8_0_91.txt
+340, it,11,",",-2.0197864,2.0197864,mistral-7b-instruct-v0.1@q8_0_91.txt
+11,",",523, so,-3.3666623,3.3666623,mistral-7b-instruct-v0.1@q8_0_91.txt
+523, so,314, I,-1.319392,1.319392,mistral-7b-instruct-v0.1@q8_0_91.txt
+314, I,892, think,-2.756384,2.756384,mistral-7b-instruct-v0.1@q8_0_91.txt
+892, think,262, the,-3.6153398,3.6153398,mistral-7b-instruct-v0.1@q8_0_91.txt
+262, the,2756, price,-1.7149814,1.7149814,mistral-7b-instruct-v0.1@q8_0_91.txt
+2756, price,318, is,-1.0380319,1.0380319,mistral-7b-instruct-v0.1@q8_0_91.txt
+318, is,2861, worth,-2.5053582,2.5053582,mistral-7b-instruct-v0.1@q8_0_91.txt
+2861, worth,340, it,-0.07207693,0.07207693,mistral-7b-instruct-v0.1@q8_0_91.txt
+340, it,526,".""",-0.91401774,0.91401774,mistral-7b-instruct-v0.1@q8_0_91.txt

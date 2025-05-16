@@ -1,0 +1,14 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",6090,Can,-8.809643,8.809643,mistral-7b-instruct-v0.1@q8_0_269.txt
+6090,Can,314, I,-2.4103212,2.4103212,mistral-7b-instruct-v0.1@q8_0_269.txt
+314, I,3387, please,-4.6816845,4.6816845,mistral-7b-instruct-v0.1@q8_0_269.txt
+3387, please,2198, check,-6.3670554,6.3670554,mistral-7b-instruct-v0.1@q8_0_269.txt
+2198, check,616, my,-2.0614705,2.0614705,mistral-7b-instruct-v0.1@q8_0_269.txt
+616, my,3053, email,-2.703493,2.703493,mistral-7b-instruct-v0.1@q8_0_269.txt
+3053, email,319, on,-4.8650284,4.8650284,mistral-7b-instruct-v0.1@q8_0_269.txt
+319, on,534, your,-3.0798824,3.0798824,mistral-7b-instruct-v0.1@q8_0_269.txt
+534, your,3644, computer,-3.5665028,3.5665028,mistral-7b-instruct-v0.1@q8_0_269.txt
+3644, computer,878, before,-4.043819,4.043819,mistral-7b-instruct-v0.1@q8_0_269.txt
+878, before,314, I,-1.0630476,1.0630476,mistral-7b-instruct-v0.1@q8_0_269.txt
+314, I,467, go,-3.093793,3.093793,mistral-7b-instruct-v0.1@q8_0_269.txt
+467, go,30,?,-4.0908995,4.0908995,mistral-7b-instruct-v0.1@q8_0_269.txt

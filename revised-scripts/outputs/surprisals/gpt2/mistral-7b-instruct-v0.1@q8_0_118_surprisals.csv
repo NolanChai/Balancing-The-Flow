@@ -1,0 +1,26 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",314, I,-4.8942,4.8942,mistral-7b-instruct-v0.1@q8_0_118.txt
+314, I,836, don,-3.652365,3.652365,mistral-7b-instruct-v0.1@q8_0_118.txt
+836, don,470,'t,-0.0012438903,0.0012438903,mistral-7b-instruct-v0.1@q8_0_118.txt
+470,'t,766, see,-3.7929559,3.7929559,mistral-7b-instruct-v0.1@q8_0_118.txt
+766, see,644, what,-3.2289803,3.2289803,mistral-7b-instruct-v0.1@q8_0_118.txt
+644, what,262, the,-2.3164139,2.3164139,mistral-7b-instruct-v0.1@q8_0_118.txt
+262, the,1263, big,-4.888076,4.888076,mistral-7b-instruct-v0.1@q8_0_118.txt
+1263, big,1730, deal,-0.69302875,0.69302875,mistral-7b-instruct-v0.1@q8_0_118.txt
+1730, deal,318, is,-0.18335292,0.18335292,mistral-7b-instruct-v0.1@q8_0_118.txt
+318, is,13,.,-1.1744478,1.1744478,mistral-7b-instruct-v0.1@q8_0_118.txt
+13,.,11075, Everyone,-6.3571672,6.3571672,mistral-7b-instruct-v0.1@q8_0_118.txt
+11075, Everyone,17326, wears,-8.365156,8.365156,mistral-7b-instruct-v0.1@q8_0_118.txt
+17326, wears,44081, kh,-7.2553825,7.2553825,mistral-7b-instruct-v0.1@q8_0_118.txt
+44081, kh,27321,akis,-0.58019847,0.58019847,mistral-7b-instruct-v0.1@q8_0_118.txt
+27321,akis,13,.,-1.6891253,1.6891253,mistral-7b-instruct-v0.1@q8_0_118.txt
+13,.,1119, They,-3.1576424,3.1576424,mistral-7b-instruct-v0.1@q8_0_118.txt
+1119, They,821,'re,-1.282566,1.282566,mistral-7b-instruct-v0.1@q8_0_118.txt
+821,'re,257, a,-3.7126353,3.7126353,mistral-7b-instruct-v0.1@q8_0_118.txt
+257, a,6833, classic,-6.98755,6.98755,mistral-7b-instruct-v0.1@q8_0_118.txt
+6833, classic,290, and,-4.087355,4.087355,mistral-7b-instruct-v0.1@q8_0_118.txt
+290, and,21362, versatile,-7.943259,7.943259,mistral-7b-instruct-v0.1@q8_0_118.txt
+21362, versatile,3704, piece,-3.280391,3.280391,mistral-7b-instruct-v0.1@q8_0_118.txt
+3704, piece,286, of,-0.7138049,0.7138049,mistral-7b-instruct-v0.1@q8_0_118.txt
+286, of,9528, clothing,-0.60148644,0.60148644,mistral-7b-instruct-v0.1@q8_0_118.txt
+9528, clothing,526,".""",-3.5554068,3.5554068,mistral-7b-instruct-v0.1@q8_0_118.txt

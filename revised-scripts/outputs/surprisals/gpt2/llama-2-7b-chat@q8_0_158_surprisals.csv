@@ -1,0 +1,17 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",9690,Thanks,-9.478867,9.478867,llama-2-7b-chat@q8_0_158.txt
+9690,Thanks,11,",",-2.1490026,2.1490026,llama-2-7b-chat@q8_0_158.txt
+11,",",314, I,-3.7912002,3.7912002,llama-2-7b-chat@q8_0_158.txt
+314, I,1549,'d,-4.467769,4.467769,llama-2-7b-chat@q8_0_158.txt
+1549,'d,588, like,-0.82835686,0.82835686,llama-2-7b-chat@q8_0_158.txt
+588, like,326, that,-4.3871903,4.3871903,llama-2-7b-chat@q8_0_158.txt
+326, that,13,.,-2.4726157,2.4726157,llama-2-7b-chat@q8_0_158.txt
+13,.,14690, Hey,-6.771153,6.771153,llama-2-7b-chat@q8_0_158.txt
+14690, Hey,11,",",-0.43594027,0.43594027,llama-2-7b-chat@q8_0_158.txt
+11,",",423, have,-5.6750684,5.6750684,llama-2-7b-chat@q8_0_158.txt
+423, have,345, you,-0.620165,0.620165,llama-2-7b-chat@q8_0_158.txt
+345, you,2982, heard,-2.469356,2.469356,llama-2-7b-chat@q8_0_158.txt
+2982, heard,422, from,-2.9643242,2.9643242,llama-2-7b-chat@q8_0_158.txt
+422, from,1757, John,-6.2017436,6.2017436,llama-2-7b-chat@q8_0_158.txt
+1757, John,16537, lately,-6.5642643,6.5642643,llama-2-7b-chat@q8_0_158.txt
+16537, lately,1701,"?""",-0.6080238,0.6080238,llama-2-7b-chat@q8_0_158.txt

@@ -1,0 +1,21 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1026,It,-5.7056947,5.7056947,llama-2-7b-chat@q8_0_90.txt
+1026,It,338,'s,-0.7809871,0.7809871,llama-2-7b-chat@q8_0_90.txt
+338,'s,407, not,-2.2602236,2.2602236,llama-2-7b-chat@q8_0_90.txt
+407, not,655, just,-2.4142847,2.4142847,llama-2-7b-chat@q8_0_90.txt
+655, just,262, the,-2.311461,2.311461,llama-2-7b-chat@q8_0_90.txt
+262, the,1051, sign,-9.722821,9.722821,llama-2-7b-chat@q8_0_90.txt
+1051, sign,11,",",-2.340425,2.340425,llama-2-7b-chat@q8_0_90.txt
+11,",",3941, Bill,-10.969989,10.969989,llama-2-7b-chat@q8_0_90.txt
+3941, Bill,13,.,-1.4685433,1.4685433,llama-2-7b-chat@q8_0_90.txt
+13,.,921, You,-3.0816574,3.0816574,llama-2-7b-chat@q8_0_90.txt
+921, You,1053,'ve,-2.3162165,2.3162165,llama-2-7b-chat@q8_0_90.txt
+1053,'ve,1392, got,-0.37111384,0.37111384,llama-2-7b-chat@q8_0_90.txt
+1392, got,7521, paint,-10.472188,10.472188,llama-2-7b-chat@q8_0_90.txt
+7521, paint,477, all,-3.021245,3.021245,llama-2-7b-chat@q8_0_90.txt
+477, all,625, over,-0.028930819,0.028930819,llama-2-7b-chat@q8_0_90.txt
+625, over,534, your,-1.9063753,1.9063753,llama-2-7b-chat@q8_0_90.txt
+534, your,10147, shirt,-5.0558615,5.0558615,llama-2-7b-chat@q8_0_90.txt
+10147, shirt,783, now,-4.841513,4.841513,llama-2-7b-chat@q8_0_90.txt
+783, now,1165, too,-4.0706453,4.0706453,llama-2-7b-chat@q8_0_90.txt
+1165, too,526,".""",-1.4630663,1.4630663,llama-2-7b-chat@q8_0_90.txt

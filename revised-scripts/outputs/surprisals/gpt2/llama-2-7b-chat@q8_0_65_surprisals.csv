@@ -1,0 +1,56 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987438,8.987438,llama-2-7b-chat@q8_0_65.txt
+5812,Oh,11,",",-0.7042815,0.7042815,llama-2-7b-chat@q8_0_65.txt
+11,",",645, no,-3.063373,3.063373,llama-2-7b-chat@q8_0_65.txt
+645, no,18572, worries,-6.436289,6.436289,llama-2-7b-chat@q8_0_65.txt
+18572, worries,13,.,-1.3710558,1.3710558,llama-2-7b-chat@q8_0_65.txt
+13,.,632, It,-2.8669093,2.8669093,llama-2-7b-chat@q8_0_65.txt
+632, It,338,'s,-0.49338546,0.49338546,llama-2-7b-chat@q8_0_65.txt
+338,'s,407, not,-2.4766955,2.4766955,llama-2-7b-chat@q8_0_65.txt
+407, not,257, a,-2.6670108,2.6670108,llama-2-7b-chat@q8_0_65.txt
+257, a,1263, big,-2.3326514,2.3326514,llama-2-7b-chat@q8_0_65.txt
+1263, big,1730, deal,-0.48102564,0.48102564,llama-2-7b-chat@q8_0_65.txt
+1730, deal,13,.,-1.092628,1.092628,llama-2-7b-chat@q8_0_65.txt
+13,.,314, I,-1.6532934,1.6532934,llama-2-7b-chat@q8_0_65.txt
+314, I,373, was,-3.9977949,3.9977949,llama-2-7b-chat@q8_0_65.txt
+373, was,655, just,-1.2079469,1.2079469,llama-2-7b-chat@q8_0_65.txt
+655, just,12451, expecting,-4.9869857,4.9869857,llama-2-7b-chat@q8_0_65.txt
+12451, expecting,345, you,-2.3667412,2.3667412,llama-2-7b-chat@q8_0_65.txt
+345, you,379, at,-6.3975773,6.3975773,llama-2-7b-chat@q8_0_65.txt
+379, at,262, the,-1.2276237,1.2276237,llama-2-7b-chat@q8_0_65.txt
+262, the,13766, theater,-6.9796686,6.9796686,llama-2-7b-chat@q8_0_65.txt
+13766, theater,1201, since,-9.014654,9.014654,llama-2-7b-chat@q8_0_65.txt
+1201, since,326, that,-5.0165,5.0165,llama-2-7b-chat@q8_0_65.txt
+326, that,373, was,-1.4329542,1.4329542,llama-2-7b-chat@q8_0_65.txt
+373, was,810, where,-3.4786167,3.4786167,llama-2-7b-chat@q8_0_65.txt
+810, where,356, we,-2.030985,2.030985,llama-2-7b-chat@q8_0_65.txt
+356, we,4987, agreed,-7.3237734,7.3237734,llama-2-7b-chat@q8_0_65.txt
+4987, agreed,284, to,-0.5729519,0.5729519,llama-2-7b-chat@q8_0_65.txt
+284, to,1826, meet,-1.9769596,1.9769596,llama-2-7b-chat@q8_0_65.txt
+1826, meet,526,".""",-1.6601759,1.6601759,llama-2-7b-chat@q8_0_65.txt
+526,".""",198,"
+",-0.3646111,0.3646111,llama-2-7b-chat@q8_0_65.txt
+198,"
+",198,"
+",-0.00097418047,0.00097418047,llama-2-7b-chat@q8_0_65.txt
+198,"
+",1,"""",-1.2225376,1.2225376,llama-2-7b-chat@q8_0_65.txt
+1,"""",40,I,-1.9285752,1.9285752,llama-2-7b-chat@q8_0_65.txt
+40,I,766, see,-4.1455073,4.1455073,llama-2-7b-chat@q8_0_65.txt
+766, see,986,...,-5.0858808,5.0858808,llama-2-7b-chat@q8_0_65.txt
+986,...,4053,well,-5.590392,5.590392,llama-2-7b-chat@q8_0_65.txt
+4053,well,11,",",-0.52042836,0.52042836,llama-2-7b-chat@q8_0_65.txt
+11,",",1309, let,-4.200345,4.200345,llama-2-7b-chat@q8_0_65.txt
+1309, let,338,'s,-0.17961168,0.17961168,llama-2-7b-chat@q8_0_65.txt
+338,'s,655, just,-1.5134479,1.5134479,llama-2-7b-chat@q8_0_65.txt
+655, just,467, go,-3.227573,3.227573,llama-2-7b-chat@q8_0_65.txt
+467, go,3892, straight,-5.210775,5.210775,llama-2-7b-chat@q8_0_65.txt
+3892, straight,284, to,-0.43822488,0.43822488,llama-2-7b-chat@q8_0_65.txt
+284, to,262, the,-0.60754734,0.60754734,llama-2-7b-chat@q8_0_65.txt
+262, the,13766, theater,-2.0113876,2.0113876,llama-2-7b-chat@q8_0_65.txt
+13766, theater,788, then,-4.0603733,4.0603733,llama-2-7b-chat@q8_0_65.txt
+788, then,553,",""",-1.9731128,1.9731128,llama-2-7b-chat@q8_0_65.txt
+553,",""",10936, Gary,-8.693897,8.693897,llama-2-7b-chat@q8_0_65.txt
+10936, Gary,8712, replied,-2.2901056,2.2901056,llama-2-7b-chat@q8_0_65.txt
+8712, replied,43622, awkwardly,-6.432433,6.432433,llama-2-7b-chat@q8_0_65.txt
+43622, awkwardly,13,.,-0.42867872,0.42867872,llama-2-7b-chat@q8_0_65.txt

@@ -1,0 +1,12 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.607994,4.607994,mistral-7b-instruct-v0.1@q8_0_160.txt
+40,I,892, think,-2.417463,2.417463,mistral-7b-instruct-v0.1@q8_0_160.txt
+892, think,345, you,-3.2265453,3.2265453,mistral-7b-instruct-v0.1@q8_0_160.txt
+345, you,423, have,-2.4574718,2.4574718,mistral-7b-instruct-v0.1@q8_0_160.txt
+423, have,1180, different,-7.4671507,7.4671507,mistral-7b-instruct-v0.1@q8_0_160.txt
+1180, different,18221, tastes,-4.999385,4.999385,mistral-7b-instruct-v0.1@q8_0_160.txt
+18221, tastes,287, in,-1.8742837,1.8742837,mistral-7b-instruct-v0.1@q8_0_160.txt
+287, in,6918, movies,-5.266193,5.266193,mistral-7b-instruct-v0.1@q8_0_160.txt
+6918, movies,621, than,-3.034258,3.034258,mistral-7b-instruct-v0.1@q8_0_160.txt
+621, than,5335, Mary,-10.424547,10.424547,mistral-7b-instruct-v0.1@q8_0_160.txt
+5335, Mary,526,".""",-4.507287,4.507287,mistral-7b-instruct-v0.1@q8_0_160.txt

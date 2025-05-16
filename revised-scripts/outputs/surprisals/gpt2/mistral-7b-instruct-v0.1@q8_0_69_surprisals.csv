@@ -1,0 +1,17 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",16454,Okay,-10.056667,10.056667,mistral-7b-instruct-v0.1@q8_0_69.txt
+16454,Okay,11,",",-0.5546597,0.5546597,mistral-7b-instruct-v0.1@q8_0_69.txt
+11,",",326, that,-3.3506398,3.3506398,mistral-7b-instruct-v0.1@q8_0_69.txt
+326, that,338,'s,-0.52179366,0.52179366,mistral-7b-instruct-v0.1@q8_0_69.txt
+338,'s,3734, fine,-2.9607754,2.9607754,mistral-7b-instruct-v0.1@q8_0_69.txt
+3734, fine,0,!,-4.9447765,4.9447765,mistral-7b-instruct-v0.1@q8_0_69.txt
+0,!,2141, Do,-5.4890695,5.4890695,mistral-7b-instruct-v0.1@q8_0_69.txt
+2141, Do,345, you,-0.6553433,0.6553433,mistral-7b-instruct-v0.1@q8_0_69.txt
+345, you,423, have,-2.2279513,2.2279513,mistral-7b-instruct-v0.1@q8_0_69.txt
+423, have,597, any,-1.0237261,1.0237261,mistral-7b-instruct-v0.1@q8_0_69.txt
+597, any,2176, specific,-5.4911866,5.4911866,mistral-7b-instruct-v0.1@q8_0_69.txt
+2176, specific,3352, plans,-3.5862586,3.5862586,mistral-7b-instruct-v0.1@q8_0_69.txt
+3352, plans,329, for,-0.9367645,0.9367645,mistral-7b-instruct-v0.1@q8_0_69.txt
+329, for,262, the,-1.7863152,1.7863152,mistral-7b-instruct-v0.1@q8_0_69.txt
+262, the,1110, day,-4.770602,4.770602,mistral-7b-instruct-v0.1@q8_0_69.txt
+1110, day,1701,"?""",-0.51687056,0.51687056,mistral-7b-instruct-v0.1@q8_0_69.txt

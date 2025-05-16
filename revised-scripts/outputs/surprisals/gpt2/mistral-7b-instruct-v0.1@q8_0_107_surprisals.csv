@@ -1,0 +1,6 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",8241,Who,-8.881301,8.881301,mistral-7b-instruct-v0.1@q8_0_107.txt
+8241,Who,338,'s,-2.233482,2.233482,mistral-7b-instruct-v0.1@q8_0_107.txt
+338,'s,340, it,-5.468654,5.468654,mistral-7b-instruct-v0.1@q8_0_107.txt
+340, it,329, for,-1.222164,1.222164,mistral-7b-instruct-v0.1@q8_0_107.txt
+329, for,1701,"?""",-0.7518608,0.7518608,mistral-7b-instruct-v0.1@q8_0_107.txt

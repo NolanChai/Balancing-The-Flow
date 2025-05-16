@@ -1,0 +1,23 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2504,That,-6.952019,6.952019,mistral-7b-instruct-v0.1@q8_0_33.txt
+2504,That,338,'s,-0.81931055,0.81931055,mistral-7b-instruct-v0.1@q8_0_33.txt
+338,'s,1049, great,-5.161379,5.161379,mistral-7b-instruct-v0.1@q8_0_33.txt
+1049, great,0,!,-3.0213547,3.0213547,mistral-7b-instruct-v0.1@q8_0_33.txt
+0,!,921, You,-3.1522956,3.1522956,mistral-7b-instruct-v0.1@q8_0_33.txt
+921, You,1392, got,-4.657228,4.657228,mistral-7b-instruct-v0.1@q8_0_33.txt
+1392, got,257, a,-1.9518436,1.9518436,mistral-7b-instruct-v0.1@q8_0_33.txt
+257, a,1049, great,-2.45034,2.45034,mistral-7b-instruct-v0.1@q8_0_33.txt
+1049, great,1730, deal,-3.7163806,3.7163806,mistral-7b-instruct-v0.1@q8_0_33.txt
+1730, deal,319, on,-2.199858,2.199858,mistral-7b-instruct-v0.1@q8_0_33.txt
+319, on,262, the,-2.0406163,2.0406163,mistral-7b-instruct-v0.1@q8_0_33.txt
+262, the,18704, Chan,-10.747065,10.747065,mistral-7b-instruct-v0.1@q8_0_33.txt
+18704, Chan,417,el,-0.08744863,0.08744863,mistral-7b-instruct-v0.1@q8_0_33.txt
+417,el,2342, watch,-6.1961994,6.1961994,mistral-7b-instruct-v0.1@q8_0_33.txt
+2342, watch,13,.,-2.0757275,2.0757275,mistral-7b-instruct-v0.1@q8_0_33.txt
+13,.,8192, Have,-5.914111,5.914111,mistral-7b-instruct-v0.1@q8_0_33.txt
+8192, Have,1257, fun,-2.9749043,2.9749043,mistral-7b-instruct-v0.1@q8_0_33.txt
+1257, fun,351, with,-1.2944534,1.2944534,mistral-7b-instruct-v0.1@q8_0_33.txt
+351, with,534, your,-2.6530118,2.6530118,mistral-7b-instruct-v0.1@q8_0_33.txt
+534, your,649, new,-3.1458907,3.1458907,mistral-7b-instruct-v0.1@q8_0_33.txt
+649, new,5001, purchase,-4.4372997,4.4372997,mistral-7b-instruct-v0.1@q8_0_33.txt
+5001, purchase,2474,"!""",-1.2254169,1.2254169,mistral-7b-instruct-v0.1@q8_0_33.txt

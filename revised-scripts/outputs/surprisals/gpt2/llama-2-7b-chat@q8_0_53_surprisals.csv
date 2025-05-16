@@ -1,0 +1,101 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+19457,Sure,0,!,-5.789137,5.789137,llama-2-7b-chat@q8_0_53.txt
+0,!,3423, Here,-4.8264446,4.8264446,llama-2-7b-chat@q8_0_53.txt
+3423, Here,318, is,-2.4982786,2.4982786,llama-2-7b-chat@q8_0_53.txt
+318, is,262, the,-1.5375483,1.5375483,llama-2-7b-chat@q8_0_53.txt
+262, the,1306, next,-5.573966,5.573966,llama-2-7b-chat@q8_0_53.txt
+1306, next,1210, turn,-8.023388,8.023388,llama-2-7b-chat@q8_0_53.txt
+1210, turn,287, in,-3.5997825,3.5997825,llama-2-7b-chat@q8_0_53.txt
+287, in,262, the,-1.1810762,1.1810762,llama-2-7b-chat@q8_0_53.txt
+262, the,17310, dialog,-9.176777,9.176777,llama-2-7b-chat@q8_0_53.txt
+17310, dialog,25,:,-2.187175,2.187175,llama-2-7b-chat@q8_0_53.txt
+25,:,198,"
+",-0.91673166,0.91673166,llama-2-7b-chat@q8_0_53.txt
+198,"
+",24119,Mary,-12.990285,12.990285,llama-2-7b-chat@q8_0_53.txt
+24119,Mary,25,:,-1.8927041,1.8927041,llama-2-7b-chat@q8_0_53.txt
+25,:,366," """,-2.7316992,2.7316992,llama-2-7b-chat@q8_0_53.txt
+366," """,9690,Thanks,-6.685952,6.685952,llama-2-7b-chat@q8_0_53.txt
+9690,Thanks,11,",",-1.247237,1.247237,llama-2-7b-chat@q8_0_53.txt
+11,",",326, that,-6.277121,6.277121,llama-2-7b-chat@q8_0_53.txt
+326, that,561, would,-4.656673,4.656673,llama-2-7b-chat@q8_0_53.txt
+561, would,307, be,-0.4295187,0.4295187,llama-2-7b-chat@q8_0_53.txt
+307, be,1049, great,-1.808018,1.808018,llama-2-7b-chat@q8_0_53.txt
+1049, great,13,.,-1.6437007,1.6437007,llama-2-7b-chat@q8_0_53.txt
+13,.,8518, Josh,-10.600345,10.600345,llama-2-7b-chat@q8_0_53.txt
+8518, Josh,11,",",-1.1633466,1.1633466,llama-2-7b-chat@q8_0_53.txt
+11,",",714, could,-5.0494843,5.0494843,llama-2-7b-chat@q8_0_53.txt
+714, could,345, you,-0.18862168,0.18862168,llama-2-7b-chat@q8_0_53.txt
+345, you,5552, grab,-7.5317016,7.5317016,llama-2-7b-chat@q8_0_53.txt
+5552, grab,514, us,-4.4947414,4.4947414,llama-2-7b-chat@q8_0_53.txt
+514, us,1123, each,-7.2487917,7.2487917,llama-2-7b-chat@q8_0_53.txt
+1123, each,257, a,-2.598194,2.598194,llama-2-7b-chat@q8_0_53.txt
+257, a,34123, bottled,-8.608807,8.608807,llama-2-7b-chat@q8_0_53.txt
+34123, bottled,1660, water,-1.2242421,1.2242421,llama-2-7b-chat@q8_0_53.txt
+1660, water,422, from,-5.02662,5.02662,llama-2-7b-chat@q8_0_53.txt
+422, from,262, the,-0.97846335,0.97846335,llama-2-7b-chat@q8_0_53.txt
+262, the,25772, fridge,-3.9629815,3.9629815,llama-2-7b-chat@q8_0_53.txt
+25772, fridge,1701,"?""",-0.84090704,0.84090704,llama-2-7b-chat@q8_0_53.txt
+1701,"?""",198,"
+",-1.2156146,1.2156146,llama-2-7b-chat@q8_0_53.txt
+198,"
+",198,"
+",-1.0874566,1.0874566,llama-2-7b-chat@q8_0_53.txt
+198,"
+",1,"""",-4.4149227,4.4149227,llama-2-7b-chat@q8_0_53.txt
+1,"""",19457,Sure,-1.6743048,1.6743048,llama-2-7b-chat@q8_0_53.txt
+19457,Sure,11,",",-1.8581692,1.8581692,llama-2-7b-chat@q8_0_53.txt
+11,",",326, that,-2.8870568,2.8870568,llama-2-7b-chat@q8_0_53.txt
+326, that,561, would,-0.50009996,0.50009996,llama-2-7b-chat@q8_0_53.txt
+561, would,307, be,-0.12113042,0.12113042,llama-2-7b-chat@q8_0_53.txt
+307, be,1049, great,-0.38964227,0.38964227,llama-2-7b-chat@q8_0_53.txt
+1049, great,0,!,-2.908764,2.908764,llama-2-7b-chat@q8_0_53.txt
+0,!,1635, *,-8.241084,8.241084,llama-2-7b-chat@q8_0_53.txt
+1635, *,41194,exc,-7.791527,7.791527,llama-2-7b-chat@q8_0_53.txt
+41194,exc,863,ited,-0.11514869,0.11514869,llama-2-7b-chat@q8_0_53.txt
+863,ited,306,ly,-4.5155435,4.5155435,llama-2-7b-chat@q8_0_53.txt
+306,ly,9,*,-0.27543962,0.27543962,llama-2-7b-chat@q8_0_53.txt
+9,*,314, I,-2.3027425,2.3027425,llama-2-7b-chat@q8_0_53.txt
+314, I,423, have,-3.6347132,3.6347132,llama-2-7b-chat@q8_0_53.txt
+423, have,617, some,-2.690419,2.690419,llama-2-7b-chat@q8_0_53.txt
+617, some,12625, delicious,-5.302784,5.302784,llama-2-7b-chat@q8_0_53.txt
+12625, delicious,14746, cookies,-7.4277825,7.4277825,llama-2-7b-chat@q8_0_53.txt
+14746, cookies,287, in,-2.7917604,2.7917604,llama-2-7b-chat@q8_0_53.txt
+287, in,262, the,-1.1521994,1.1521994,llama-2-7b-chat@q8_0_53.txt
+262, the,9592, kitchen,-5.7906694,5.7906694,llama-2-7b-chat@q8_0_53.txt
+9592, kitchen,13,.,-1.4643178,1.4643178,llama-2-7b-chat@q8_0_53.txt
+13,.,10928, Would,-5.0108056,5.0108056,llama-2-7b-chat@q8_0_53.txt
+10928, Would,345, you,-0.16468331,0.16468331,llama-2-7b-chat@q8_0_53.txt
+345, you,588, like,-0.5888808,0.5888808,llama-2-7b-chat@q8_0_53.txt
+588, like,530, one,-3.1092045,3.1092045,llama-2-7b-chat@q8_0_53.txt
+530, one,1701,"?""",-1.0724235,1.0724235,llama-2-7b-chat@q8_0_53.txt
+1701,"?""",198,"
+",-0.105925806,0.105925806,llama-2-7b-chat@q8_0_53.txt
+198,"
+",198,"
+",-0.00032634177,0.00032634177,llama-2-7b-chat@q8_0_53.txt
+198,"
+",1,"""",-1.0694704,1.0694704,llama-2-7b-chat@q8_0_53.txt
+1,"""",2990,They,-9.043885,9.043885,llama-2-7b-chat@q8_0_53.txt
+2990,They,821,'re,-1.0735291,1.0735291,llama-2-7b-chat@q8_0_53.txt
+821,'re,1804, doing,-8.115674,8.115674,llama-2-7b-chat@q8_0_53.txt
+1804, doing,880, well,-2.4660616,2.4660616,llama-2-7b-chat@q8_0_53.txt
+880, well,11,",",-1.4165423,1.4165423,llama-2-7b-chat@q8_0_53.txt
+11,",",5176, thanks,-4.5365763,4.5365763,llama-2-7b-chat@q8_0_53.txt
+5176, thanks,329, for,-1.8715547,1.8715547,llama-2-7b-chat@q8_0_53.txt
+329, for,4737, asking,-3.3929715,3.3929715,llama-2-7b-chat@q8_0_53.txt
+4737, asking,13,.,-1.246943,1.246943,llama-2-7b-chat@q8_0_53.txt
+13,.,314, I,-1.8588104,1.8588104,llama-2-7b-chat@q8_0_53.txt
+314, I,1392, got,-5.3783903,5.3783903,llama-2-7b-chat@q8_0_53.txt
+1392, got,257, a,-1.5939786,1.5939786,llama-2-7b-chat@q8_0_53.txt
+257, a,649, new,-4.8588834,4.8588834,llama-2-7b-chat@q8_0_53.txt
+649, new,1693, job,-4.7278275,4.7278275,llama-2-7b-chat@q8_0_53.txt
+1693, job,2904, recently,-4.820632,4.820632,llama-2-7b-chat@q8_0_53.txt
+2904, recently,290, and,-1.1254593,1.1254593,llama-2-7b-chat@q8_0_53.txt
+290, and,340, it,-3.1880403,3.1880403,llama-2-7b-chat@q8_0_53.txt
+340, it,338,'s,-0.52480716,0.52480716,llama-2-7b-chat@q8_0_53.txt
+338,'s,587, been,-2.1019962,2.1019962,llama-2-7b-chat@q8_0_53.txt
+587, been,5291, keeping,-8.842489,8.842489,llama-2-7b-chat@q8_0_53.txt
+5291, keeping,502, me,-0.42114267,0.42114267,llama-2-7b-chat@q8_0_53.txt
+502, me,8179, busy,-0.48631772,0.48631772,llama-2-7b-chat@q8_0_53.txt
+8179, busy,526,".""",-2.0868053,2.0868053,llama-2-7b-chat@q8_0_53.txt

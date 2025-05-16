@@ -1,0 +1,65 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",10995,Yeah,-9.32555,9.32555,llama-2-7b-chat@q8_0_131.txt
+10995,Yeah,11,",",-0.48340714,0.48340714,llama-2-7b-chat@q8_0_131.txt
+11,",",314, I,-1.5983516,1.5983516,llama-2-7b-chat@q8_0_131.txt
+314, I,766, see,-5.0552764,5.0552764,llama-2-7b-chat@q8_0_131.txt
+766, see,13,.,-1.7729685,1.7729685,llama-2-7b-chat@q8_0_131.txt
+13,.,3894, Well,-4.169173,4.169173,llama-2-7b-chat@q8_0_131.txt
+3894, Well,11,",",-0.3893846,0.3893846,llama-2-7b-chat@q8_0_131.txt
+11,",",314, I,-1.4400624,1.4400624,llama-2-7b-chat@q8_0_131.txt
+314, I,1101,'m,-1.7887603,1.7887603,llama-2-7b-chat@q8_0_131.txt
+1101,'m,1682, actually,-5.695371,5.695371,llama-2-7b-chat@q8_0_131.txt
+1682, actually,6402, considering,-6.794073,6.794073,llama-2-7b-chat@q8_0_131.txt
+6402, considering,7067, buying,-5.1468425,5.1468425,llama-2-7b-chat@q8_0_131.txt
+7067, buying,5096, insurance,-8.765356,8.765356,llama-2-7b-chat@q8_0_131.txt
+5096, insurance,329, for,-2.0441098,2.0441098,llama-2-7b-chat@q8_0_131.txt
+329, for,3589, myself,-2.6837337,2.6837337,llama-2-7b-chat@q8_0_131.txt
+3589, myself,1165, too,-5.1063848,5.1063848,llama-2-7b-chat@q8_0_131.txt
+1165, too,13,.,-1.0431366,1.0431366,llama-2-7b-chat@q8_0_131.txt
+13,.,632, It,-2.8716598,2.8716598,llama-2-7b-chat@q8_0_131.txt
+632, It,338,'s,-0.56672454,0.56672454,llama-2-7b-chat@q8_0_131.txt
+338,'s,655, just,-2.8264885,2.8264885,llama-2-7b-chat@q8_0_131.txt
+655, just,986,...,-4.773508,4.773508,llama-2-7b-chat@q8_0_131.txt
+986,...,40,I,-2.2344718,2.2344718,llama-2-7b-chat@q8_0_131.txt
+40,I,836, don,-1.7877128,1.7877128,llama-2-7b-chat@q8_0_131.txt
+836, don,470,'t,-0.00061135675,0.00061135675,llama-2-7b-chat@q8_0_131.txt
+470,'t,760, know,-0.8999535,0.8999535,llama-2-7b-chat@q8_0_131.txt
+760, know,611, if,-2.1178703,2.1178703,llama-2-7b-chat@q8_0_131.txt
+611, if,314, I,-0.7663126,0.7663126,llama-2-7b-chat@q8_0_131.txt
+314, I,460, can,-1.9772447,1.9772447,llama-2-7b-chat@q8_0_131.txt
+460, can,5368, afford,-1.0762197,1.0762197,llama-2-7b-chat@q8_0_131.txt
+5368, afford,340, it,-0.46909782,0.46909782,llama-2-7b-chat@q8_0_131.txt
+340, it,826, right,-3.3100967,3.3100967,llama-2-7b-chat@q8_0_131.txt
+826, right,783, now,-0.008458857,0.008458857,llama-2-7b-chat@q8_0_131.txt
+783, now,526,".""",-1.441152,1.441152,llama-2-7b-chat@q8_0_131.txt
+526,".""",198,"
+",-0.40654358,0.40654358,llama-2-7b-chat@q8_0_131.txt
+198,"
+",198,"
+",-0.0014951967,0.0014951967,llama-2-7b-chat@q8_0_131.txt
+198,"
+",1,"""",-1.5000916,1.5000916,llama-2-7b-chat@q8_0_131.txt
+1,"""",10995,Yeah,-2.6364875,2.6364875,llama-2-7b-chat@q8_0_131.txt
+10995,Yeah,11,",",-0.52089113,0.52089113,llama-2-7b-chat@q8_0_131.txt
+11,",",4753, definitely,-5.3696203,5.3696203,llama-2-7b-chat@q8_0_131.txt
+4753, definitely,13,.,-1.10719,1.10719,llama-2-7b-chat@q8_0_131.txt
+13,.,632, It,-2.8291714,2.8291714,llama-2-7b-chat@q8_0_131.txt
+632, It,338,'s,-0.4360345,0.4360345,llama-2-7b-chat@q8_0_131.txt
+338,'s,1593, important,-6.1352177,6.1352177,llama-2-7b-chat@q8_0_131.txt
+1593, important,284, to,-0.95507777,0.95507777,llama-2-7b-chat@q8_0_131.txt
+284, to,423, have,-3.2794142,3.2794142,llama-2-7b-chat@q8_0_131.txt
+423, have,617, some,-3.3989563,3.3989563,llama-2-7b-chat@q8_0_131.txt
+617, some,1611, kind,-2.0082424,2.0082424,llama-2-7b-chat@q8_0_131.txt
+1611, kind,286, of,-0.0035921114,0.0035921114,llama-2-7b-chat@q8_0_131.txt
+286, of,4800, protection,-3.6262743,3.6262743,llama-2-7b-chat@q8_0_131.txt
+4800, protection,329, for,-2.110165,2.110165,llama-2-7b-chat@q8_0_131.txt
+329, for,534, your,-2.074272,2.074272,llama-2-7b-chat@q8_0_131.txt
+534, your,1641, family,-1.9067416,1.9067416,llama-2-7b-chat@q8_0_131.txt
+1641, family,287, in,-4.3580656,4.3580656,llama-2-7b-chat@q8_0_131.txt
+287, in,1339, case,-0.7005779,0.7005779,llama-2-7b-chat@q8_0_131.txt
+1339, case,1223, something,-1.3902898,1.3902898,llama-2-7b-chat@q8_0_131.txt
+1223, something,2089, bad,-3.3442376,3.3442376,llama-2-7b-chat@q8_0_131.txt
+2089, bad,4325, happens,-0.10805149,0.10805149,llama-2-7b-chat@q8_0_131.txt
+4325, happens,284, to,-1.1356602,1.1356602,llama-2-7b-chat@q8_0_131.txt
+284, to,345, you,-0.46086633,0.46086633,llama-2-7b-chat@q8_0_131.txt
+345, you,526,".""",-1.1039374,1.1039374,llama-2-7b-chat@q8_0_131.txt

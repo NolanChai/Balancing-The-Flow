@@ -1,0 +1,32 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_77.txt
+40,I,760, know,-3.7952335,3.7952335,llama-2-7b-chat@q8_0_77.txt
+760, know,11,",",-3.3245723,3.3245723,llama-2-7b-chat@q8_0_77.txt
+11,",",340, it,-2.7094078,2.7094078,llama-2-7b-chat@q8_0_77.txt
+340, it,338,'s,-0.48914763,0.48914763,llama-2-7b-chat@q8_0_77.txt
+338,'s,7650, weird,-4.5147643,4.5147643,llama-2-7b-chat@q8_0_77.txt
+7650, weird,13,.,-1.7980392,1.7980392,llama-2-7b-chat@q8_0_77.txt
+13,.,314, I,-1.0584276,1.0584276,llama-2-7b-chat@q8_0_77.txt
+314, I,373, was,-3.366024,3.366024,llama-2-7b-chat@q8_0_77.txt
+373, was,7725, hoping,-4.3825135,4.3825135,llama-2-7b-chat@q8_0_77.txt
+7725, hoping,284, to,-1.647083,1.647083,llama-2-7b-chat@q8_0_77.txt
+284, to,766, see,-2.9180996,2.9180996,llama-2-7b-chat@q8_0_77.txt
+766, see,617, some,-3.0783362,3.0783362,llama-2-7b-chat@q8_0_77.txt
+617, some,1310, little,-6.3343925,6.3343925,llama-2-7b-chat@q8_0_77.txt
+1310, little,28706, cousins,-8.853584,8.853584,llama-2-7b-chat@q8_0_77.txt
+28706, cousins,2491, running,-6.735213,6.735213,llama-2-7b-chat@q8_0_77.txt
+2491, running,1088, around,-0.32849485,0.32849485,llama-2-7b-chat@q8_0_77.txt
+1088, around,11,",",-2.123854,2.123854,llama-2-7b-chat@q8_0_77.txt
+11,",",475, but,-0.87545836,0.87545836,llama-2-7b-chat@q8_0_77.txt
+475, but,484, they,-2.05425,2.05425,llama-2-7b-chat@q8_0_77.txt
+484, they,1276, must,-7.7963095,7.7963095,llama-2-7b-chat@q8_0_77.txt
+1276, must,307, be,-1.0888648,1.0888648,llama-2-7b-chat@q8_0_77.txt
+307, be,379, at,-5.396515,5.396515,llama-2-7b-chat@q8_0_77.txt
+379, at,1363, home,-3.503727,3.503727,llama-2-7b-chat@q8_0_77.txt
+1363, home,351, with,-3.3239863,3.3239863,llama-2-7b-chat@q8_0_77.txt
+351, with,257, a,-2.975878,2.975878,llama-2-7b-chat@q8_0_77.txt
+257, a,1650, sit,-11.618978,11.618978,llama-2-7b-chat@q8_0_77.txt
+1650, sit,353,ter,-0.06156002,0.06156002,llama-2-7b-chat@q8_0_77.txt
+353,ter,393, or,-2.2128177,2.2128177,llama-2-7b-chat@q8_0_77.txt
+393, or,1223, something,-0.23393306,0.23393306,llama-2-7b-chat@q8_0_77.txt
+1223, something,526,".""",-1.2722527,1.2722527,llama-2-7b-chat@q8_0_77.txt

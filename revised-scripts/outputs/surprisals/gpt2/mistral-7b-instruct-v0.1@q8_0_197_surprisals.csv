@@ -1,0 +1,10 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5779,Well,-8.582916,8.582916,mistral-7b-instruct-v0.1@q8_0_197.txt
+5779,Well,11,",",-0.4400497,0.4400497,mistral-7b-instruct-v0.1@q8_0_197.txt
+11,",",611, if,-3.402007,3.402007,mistral-7b-instruct-v0.1@q8_0_197.txt
+611, if,326, that,-3.4558525,3.4558525,mistral-7b-instruct-v0.1@q8_0_197.txt
+326, that,338,'s,-0.7606176,0.7606176,mistral-7b-instruct-v0.1@q8_0_197.txt
+338,'s,644, what,-1.403143,1.403143,mistral-7b-instruct-v0.1@q8_0_197.txt
+644, what,345, you,-0.91351813,0.91351813,mistral-7b-instruct-v0.1@q8_0_197.txt
+345, you,4702, prefer,-7.364644,7.364644,mistral-7b-instruct-v0.1@q8_0_197.txt
+4702, prefer,526,".""",-3.670827,3.670827,mistral-7b-instruct-v0.1@q8_0_197.txt

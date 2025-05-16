@@ -1,0 +1,85 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1318, There,-7.9906964,7.9906964,mistral-7b-instruct-v0.1@q8_0_283.txt
+1318, There,481, will,-4.1060553,4.1060553,mistral-7b-instruct-v0.1@q8_0_283.txt
+481, will,307, be,-0.30172867,0.30172867,mistral-7b-instruct-v0.1@q8_0_283.txt
+307, be,257, a,-1.8002819,1.8002819,mistral-7b-instruct-v0.1@q8_0_283.txt
+257, a,2472, total,-5.528405,5.528405,mistral-7b-instruct-v0.1@q8_0_283.txt
+2472, total,5339, capacity,-8.7141485,8.7141485,mistral-7b-instruct-v0.1@q8_0_283.txt
+5339, capacity,286, of,-1.0736549,1.0736549,mistral-7b-instruct-v0.1@q8_0_283.txt
+286, of,4019, 80,-5.582947,5.582947,mistral-7b-instruct-v0.1@q8_0_283.txt
+4019, 80,11,",",-0.92104924,0.92104924,mistral-7b-instruct-v0.1@q8_0_283.txt
+11,",",830,000,-0.044239953,0.044239953,mistral-7b-instruct-v0.1@q8_0_283.txt
+830,000,8632, seats,-5.1157236,5.1157236,mistral-7b-instruct-v0.1@q8_0_283.txt
+8632, seats,287, in,-1.8455834,1.8455834,mistral-7b-instruct-v0.1@q8_0_283.txt
+287, in,262, the,-0.52342147,0.52342147,mistral-7b-instruct-v0.1@q8_0_283.txt
+262, the,11514, Olympic,-5.380037,5.380037,mistral-7b-instruct-v0.1@q8_0_283.txt
+11514, Olympic,10499, Stadium,-0.85174245,0.85174245,mistral-7b-instruct-v0.1@q8_0_283.txt
+10499, Stadium,526,".""",-5.759964,5.759964,mistral-7b-instruct-v0.1@q8_0_283.txt
+526,".""",198,"
+",-0.48745638,0.48745638,mistral-7b-instruct-v0.1@q8_0_283.txt
+198,"
+",198,"
+",-0.000537966,0.000537966,mistral-7b-instruct-v0.1@q8_0_283.txt
+198,"
+",1,"""",-3.3261569,3.3261569,mistral-7b-instruct-v0.1@q8_0_283.txt
+1,"""",632, It,-9.908884,9.908884,mistral-7b-instruct-v0.1@q8_0_283.txt
+632, It,338,'s,-1.2261041,1.2261041,mistral-7b-instruct-v0.1@q8_0_283.txt
+338,'s,257, a,-1.722986,1.722986,mistral-7b-instruct-v0.1@q8_0_283.txt
+257, a,3236, huge,-2.5410817,2.5410817,mistral-7b-instruct-v0.1@q8_0_283.txt
+3236, huge,10308, stadium,-3.1943383,3.1943383,mistral-7b-instruct-v0.1@q8_0_283.txt
+10308, stadium,11,",",-1.6143638,1.6143638,mistral-7b-instruct-v0.1@q8_0_283.txt
+11,",",475, but,-2.107416,2.107416,mistral-7b-instruct-v0.1@q8_0_283.txt
+475, but,314, I,-2.8092818,2.8092818,mistral-7b-instruct-v0.1@q8_0_283.txt
+314, I,4724, guess,-4.818615,4.818615,mistral-7b-instruct-v0.1@q8_0_283.txt
+4724, guess,340, it,-1.4451036,1.4451036,mistral-7b-instruct-v0.1@q8_0_283.txt
+340, it,1838, makes,-4.745759,4.745759,mistral-7b-instruct-v0.1@q8_0_283.txt
+1838, makes,2565, sense,-0.61776865,0.61776865,mistral-7b-instruct-v0.1@q8_0_283.txt
+2565, sense,329, for,-1.7217003,1.7217003,mistral-7b-instruct-v0.1@q8_0_283.txt
+329, for,281, an,-4.764173,4.764173,mistral-7b-instruct-v0.1@q8_0_283.txt
+281, an,11514, Olympic,-1.1087251,1.1087251,mistral-7b-instruct-v0.1@q8_0_283.txt
+11514, Olympic,3952, park,-4.6816263,4.6816263,mistral-7b-instruct-v0.1@q8_0_283.txt
+3952, park,13,.,-2.0683694,2.0683694,mistral-7b-instruct-v0.1@q8_0_283.txt
+13,.,2141, Do,-7.5013747,7.5013747,mistral-7b-instruct-v0.1@q8_0_283.txt
+2141, Do,345, you,-0.37119302,0.37119302,mistral-7b-instruct-v0.1@q8_0_283.txt
+345, you,423, have,-2.6724539,2.6724539,mistral-7b-instruct-v0.1@q8_0_283.txt
+423, have,597, any,-1.2944133,1.2944133,mistral-7b-instruct-v0.1@q8_0_283.txt
+597, any,2683, questions,-4.6147566,4.6147566,mistral-7b-instruct-v0.1@q8_0_283.txt
+2683, questions,546, about,-1.54916,1.54916,mistral-7b-instruct-v0.1@q8_0_283.txt
+546, about,262, the,-1.407023,1.407023,mistral-7b-instruct-v0.1@q8_0_283.txt
+262, the,584, other,-6.0067177,6.0067177,mistral-7b-instruct-v0.1@q8_0_283.txt
+584, other,7291, facilities,-4.258651,4.258651,mistral-7b-instruct-v0.1@q8_0_283.txt
+7291, facilities,393, or,-3.3497372,3.3497372,mistral-7b-instruct-v0.1@q8_0_283.txt
+393, or,2995, events,-7.8561664,7.8561664,mistral-7b-instruct-v0.1@q8_0_283.txt
+2995, events,994, here,-4.5892873,4.5892873,mistral-7b-instruct-v0.1@q8_0_283.txt
+994, here,1701,"?""",-0.70126075,0.70126075,mistral-7b-instruct-v0.1@q8_0_283.txt
+1701,"?""",198,"
+",-0.3580453,0.3580453,mistral-7b-instruct-v0.1@q8_0_283.txt
+198,"
+",198,"
+",-0.00018952481,0.00018952481,mistral-7b-instruct-v0.1@q8_0_283.txt
+198,"
+",1,"""",-0.8660778,0.8660778,mistral-7b-instruct-v0.1@q8_0_283.txt
+1,"""",1320, That,-6.467738,6.467738,mistral-7b-instruct-v0.1@q8_0_283.txt
+1320, That,338,'s,-0.45045725,0.45045725,mistral-7b-instruct-v0.1@q8_0_283.txt
+338,'s,826, right,-2.5657568,2.5657568,mistral-7b-instruct-v0.1@q8_0_283.txt
+826, right,11,",",-1.35343,1.35343,mistral-7b-instruct-v0.1@q8_0_283.txt
+11,",",340, it,-2.7974896,2.7974896,mistral-7b-instruct-v0.1@q8_0_283.txt
+340, it,338,'s,-0.35767505,0.35767505,mistral-7b-instruct-v0.1@q8_0_283.txt
+338,'s,329, for,-5.6000075,5.6000075,mistral-7b-instruct-v0.1@q8_0_283.txt
+329, for,3747, safety,-7.6959286,7.6959286,mistral-7b-instruct-v0.1@q8_0_283.txt
+3747, safety,4959, purposes,-2.870541,2.870541,mistral-7b-instruct-v0.1@q8_0_283.txt
+4959, purposes,13,.,-0.8663196,0.8663196,mistral-7b-instruct-v0.1@q8_0_283.txt
+13,.,383, The,-2.4492693,2.4492693,mistral-7b-instruct-v0.1@q8_0_283.txt
+383, The,14281, climbing,-10.127104,10.127104,mistral-7b-instruct-v0.1@q8_0_283.txt
+14281, climbing,2995, events,-6.0305667,6.0305667,mistral-7b-instruct-v0.1@q8_0_283.txt
+2995, events,481, will,-2.2935772,2.2935772,mistral-7b-instruct-v0.1@q8_0_283.txt
+481, will,1011, take,-3.4257965,3.4257965,mistral-7b-instruct-v0.1@q8_0_283.txt
+1011, take,1295, place,-0.019415103,0.019415103,mistral-7b-instruct-v0.1@q8_0_283.txt
+1295, place,287, in,-1.3350767,1.3350767,mistral-7b-instruct-v0.1@q8_0_283.txt
+287, in,257, a,-2.133329,2.133329,mistral-7b-instruct-v0.1@q8_0_283.txt
+257, a,4553, separate,-3.01368,3.01368,mistral-7b-instruct-v0.1@q8_0_283.txt
+4553, separate,1989, area,-2.5559607,2.5559607,mistral-7b-instruct-v0.1@q8_0_283.txt
+1989, area,286, of,-2.624247,2.624247,mistral-7b-instruct-v0.1@q8_0_283.txt
+286, of,262, the,-0.107447386,0.107447386,mistral-7b-instruct-v0.1@q8_0_283.txt
+262, the,3952, park,-3.4673238,3.4673238,mistral-7b-instruct-v0.1@q8_0_283.txt
+3952, park,526,".""",-2.307261,2.307261,mistral-7b-instruct-v0.1@q8_0_283.txt

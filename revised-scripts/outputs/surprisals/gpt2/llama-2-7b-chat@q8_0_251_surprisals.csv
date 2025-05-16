@@ -1,0 +1,15 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",10910,Ah,-9.650059,9.650059,llama-2-7b-chat@q8_0_251.txt
+10910,Ah,11,",",-0.5995126,0.5995126,llama-2-7b-chat@q8_0_251.txt
+11,",",523, so,-3.9532006,3.9532006,llama-2-7b-chat@q8_0_251.txt
+523, so,345, you,-1.7145807,1.7145807,llama-2-7b-chat@q8_0_251.txt
+345, you,821,'re,-1.2207658,1.2207658,llama-2-7b-chat@q8_0_251.txt
+821,'re,2282, saying,-2.7041738,2.7041738,llama-2-7b-chat@q8_0_251.txt
+2282, saying,484, they,-4.2334576,4.2334576,llama-2-7b-chat@q8_0_251.txt
+484, they,5716, treated,-8.083014,8.083014,llama-2-7b-chat@q8_0_251.txt
+5716, treated,345, you,-1.1231339,1.1231339,llama-2-7b-chat@q8_0_251.txt
+345, you,284, to,-5.080694,5.080694,llama-2-7b-chat@q8_0_251.txt
+284, to,257, a,-1.5233661,1.5233661,llama-2-7b-chat@q8_0_251.txt
+257, a,35985, luxurious,-7.608589,7.608589,llama-2-7b-chat@q8_0_251.txt
+35985, luxurious,14600, vacation,-4.085988,4.085988,llama-2-7b-chat@q8_0_251.txt
+14600, vacation,1701,"?""",-1.0982399,1.0982399,llama-2-7b-chat@q8_0_251.txt

@@ -1,0 +1,118 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2504,That,-6.951999,6.951999,llama-2-7b-chat@q8_0_239.txt
+2504,That,338,'s,-0.8193164,0.8193164,llama-2-7b-chat@q8_0_239.txt
+338,'s,2081, true,-5.448745,5.448745,llama-2-7b-chat@q8_0_239.txt
+2081, true,13,.,-1.3815715,1.3815715,llama-2-7b-chat@q8_0_239.txt
+13,.,314, I,-2.1284928,2.1284928,llama-2-7b-chat@q8_0_239.txt
+314, I,892, think,-2.497376,2.497376,llama-2-7b-chat@q8_0_239.txt
+892, think,340, it,-1.6791614,1.6791614,llama-2-7b-chat@q8_0_239.txt
+340, it,338,'s,-0.4421387,0.4421387,llama-2-7b-chat@q8_0_239.txt
+338,'s,1593, important,-2.7361162,2.7361162,llama-2-7b-chat@q8_0_239.txt
+1593, important,284, to,-0.8653763,0.8653763,llama-2-7b-chat@q8_0_239.txt
+284, to,1833, understand,-2.7068927,2.7068927,llama-2-7b-chat@q8_0_239.txt
+1833, understand,262, the,-2.0475907,2.0475907,llama-2-7b-chat@q8_0_239.txt
+262, the,10238, underlying,-5.8354826,5.8354826,llama-2-7b-chat@q8_0_239.txt
+10238, underlying,5640, causes,-4.2471647,4.2471647,llama-2-7b-chat@q8_0_239.txt
+5640, causes,290, and,-2.3197563,2.3197563,llama-2-7b-chat@q8_0_239.txt
+290, and,28140, motivations,-4.8344707,4.8344707,llama-2-7b-chat@q8_0_239.txt
+28140, motivations,2157, behind,-0.85442895,0.85442895,llama-2-7b-chat@q8_0_239.txt
+2157, behind,6754, historical,-10.301578,10.301578,llama-2-7b-chat@q8_0_239.txt
+6754, historical,2995, events,-1.2293825,1.2293825,llama-2-7b-chat@q8_0_239.txt
+2995, events,11,",",-1.792187,1.792187,llama-2-7b-chat@q8_0_239.txt
+11,",",2138, rather,-4.7614417,4.7614417,llama-2-7b-chat@q8_0_239.txt
+2138, rather,621, than,-0.0036073155,0.0036073155,llama-2-7b-chat@q8_0_239.txt
+621, than,655, just,-1.7455434,1.7455434,llama-2-7b-chat@q8_0_239.txt
+655, just,16181, memor,-7.688386,7.688386,llama-2-7b-chat@q8_0_239.txt
+16181, memor,2890,izing,-0.33787984,0.33787984,llama-2-7b-chat@q8_0_239.txt
+2890,izing,9667, dates,-8.1382885,8.1382885,llama-2-7b-chat@q8_0_239.txt
+9667, dates,290, and,-0.9953769,0.9953769,llama-2-7b-chat@q8_0_239.txt
+290, and,6419, facts,-5.3802633,5.3802633,llama-2-7b-chat@q8_0_239.txt
+6419, facts,13,.,-1.4474802,1.4474802,llama-2-7b-chat@q8_0_239.txt
+13,.,632, It,-2.3803596,2.3803596,llama-2-7b-chat@q8_0_239.txt
+632, It,5419, helps,-4.0993767,4.0993767,llama-2-7b-chat@q8_0_239.txt
+5419, helps,514, us,-1.3441153,1.3441153,llama-2-7b-chat@q8_0_239.txt
+514, us,2193, learn,-3.9267092,3.9267092,llama-2-7b-chat@q8_0_239.txt
+2193, learn,422, from,-2.2898927,2.2898927,llama-2-7b-chat@q8_0_239.txt
+422, from,262, the,-2.2170959,2.2170959,llama-2-7b-chat@q8_0_239.txt
+262, the,1613, past,-0.4804732,0.4804732,llama-2-7b-chat@q8_0_239.txt
+1613, past,290, and,-1.3692992,1.3692992,llama-2-7b-chat@q8_0_239.txt
+290, and,3368, avoid,-4.8608446,4.8608446,llama-2-7b-chat@q8_0_239.txt
+3368, avoid,1642, making,-3.6385074,3.6385074,llama-2-7b-chat@q8_0_239.txt
+1642, making,262, the,-3.0738766,3.0738766,llama-2-7b-chat@q8_0_239.txt
+262, the,976, same,-0.46704638,0.46704638,llama-2-7b-chat@q8_0_239.txt
+976, same,10135, mistakes,-0.16504633,0.16504633,llama-2-7b-chat@q8_0_239.txt
+10135, mistakes,757, again,-3.3420954,3.3420954,llama-2-7b-chat@q8_0_239.txt
+757, again,526,".""",-1.4014986,1.4014986,llama-2-7b-chat@q8_0_239.txt
+526,".""",198,"
+",-0.20985478,0.20985478,llama-2-7b-chat@q8_0_239.txt
+198,"
+",198,"
+",-0.00029595286,0.00029595286,llama-2-7b-chat@q8_0_239.txt
+198,"
+",1,"""",-3.1765296,3.1765296,llama-2-7b-chat@q8_0_239.txt
+1,"""",5812,Oh,-7.409629,7.409629,llama-2-7b-chat@q8_0_239.txt
+5812,Oh,11,",",-0.47996512,0.47996512,llama-2-7b-chat@q8_0_239.txt
+11,",",314, I,-2.0644882,2.0644882,llama-2-7b-chat@q8_0_239.txt
+314, I,766, see,-1.8506577,1.8506577,llama-2-7b-chat@q8_0_239.txt
+766, see,13,.,-0.73881245,0.73881245,llama-2-7b-chat@q8_0_239.txt
+13,.,1406, So,-2.0874043,2.0874043,llama-2-7b-chat@q8_0_239.txt
+1406, So,11,",",-1.7941097,1.7941097,llama-2-7b-chat@q8_0_239.txt
+11,",",345, you,-2.339287,2.339287,llama-2-7b-chat@q8_0_239.txt
+345, you,892, think,-3.582573,3.582573,llama-2-7b-chat@q8_0_239.txt
+892, think,4547, understanding,-9.991098,9.991098,llama-2-7b-chat@q8_0_239.txt
+4547, understanding,262, the,-1.1921711,1.1921711,llama-2-7b-chat@q8_0_239.txt
+262, the,3840, reasons,-4.075762,4.075762,llama-2-7b-chat@q8_0_239.txt
+3840, reasons,2157, behind,-1.0393949,1.0393949,llama-2-7b-chat@q8_0_239.txt
+2157, behind,6754, historical,-2.08018,2.08018,llama-2-7b-chat@q8_0_239.txt
+6754, historical,2995, events,-0.042873263,0.042873263,llama-2-7b-chat@q8_0_239.txt
+2995, events,318, is,-0.7971653,0.7971653,llama-2-7b-chat@q8_0_239.txt
+318, is,517, more,-3.2107787,3.2107787,llama-2-7b-chat@q8_0_239.txt
+517, more,1593, important,-0.17419866,0.17419866,llama-2-7b-chat@q8_0_239.txt
+1593, important,621, than,-0.34006867,0.34006867,llama-2-7b-chat@q8_0_239.txt
+621, than,24865, remembering,-3.8315697,3.8315697,llama-2-7b-chat@q8_0_239.txt
+24865, remembering,262, the,-1.6015137,1.6015137,llama-2-7b-chat@q8_0_239.txt
+262, the,2748, exact,-4.4452395,4.4452395,llama-2-7b-chat@q8_0_239.txt
+2748, exact,9667, dates,-1.2802017,1.2802017,llama-2-7b-chat@q8_0_239.txt
+9667, dates,30,?,-2.6130543,2.6130543,llama-2-7b-chat@q8_0_239.txt
+30,?,3894, Well,-2.4746854,2.4746854,llama-2-7b-chat@q8_0_239.txt
+3894, Well,11,",",-0.12218249,0.12218249,llama-2-7b-chat@q8_0_239.txt
+11,",",314, I,-1.6532785,1.6532785,llama-2-7b-chat@q8_0_239.txt
+314, I,4236, agree,-4.13532,4.13532,llama-2-7b-chat@q8_0_239.txt
+4236, agree,351, with,-1.4130858,1.4130858,llama-2-7b-chat@q8_0_239.txt
+351, with,345, you,-0.61803067,0.61803067,llama-2-7b-chat@q8_0_239.txt
+345, you,612, there,-5.151541,5.151541,llama-2-7b-chat@q8_0_239.txt
+612, there,13,.,-1.0941632,1.0941632,llama-2-7b-chat@q8_0_239.txt
+13,.,632, It,-2.0886765,2.0886765,llama-2-7b-chat@q8_0_239.txt
+632, It,338,'s,-0.53904086,0.53904086,llama-2-7b-chat@q8_0_239.txt
+338,'s,2562, easy,-4.9612207,4.9612207,llama-2-7b-chat@q8_0_239.txt
+2562, easy,284, to,-0.31982365,0.31982365,llama-2-7b-chat@q8_0_239.txt
+284, to,16181, memor,-6.0295463,6.0295463,llama-2-7b-chat@q8_0_239.txt
+16181, memor,1096,ize,-0.007915084,0.007915084,llama-2-7b-chat@q8_0_239.txt
+1096,ize,9667, dates,-1.4547952,1.4547952,llama-2-7b-chat@q8_0_239.txt
+9667, dates,290, and,-1.183055,1.183055,llama-2-7b-chat@q8_0_239.txt
+290, and,2995, events,-2.937968,2.937968,llama-2-7b-chat@q8_0_239.txt
+2995, events,11,",",-1.3419051,1.3419051,llama-2-7b-chat@q8_0_239.txt
+11,",",475, but,-0.44836837,0.44836837,llama-2-7b-chat@q8_0_239.txt
+475, but,340, it,-1.4803462,1.4803462,llama-2-7b-chat@q8_0_239.txt
+340, it,338,'s,-0.45923296,0.45923296,llama-2-7b-chat@q8_0_239.txt
+338,'s,881, much,-2.9912333,2.9912333,llama-2-7b-chat@q8_0_239.txt
+881, much,517, more,-0.8766437,0.8766437,llama-2-7b-chat@q8_0_239.txt
+517, more,8119, valuable,-5.1772137,5.1772137,llama-2-7b-chat@q8_0_239.txt
+8119, valuable,284, to,-0.39540297,0.39540297,llama-2-7b-chat@q8_0_239.txt
+284, to,1833, understand,-1.8761783,1.8761783,llama-2-7b-chat@q8_0_239.txt
+1833, understand,262, the,-1.0640872,1.0640872,llama-2-7b-chat@q8_0_239.txt
+262, the,10238, underlying,-2.092463,2.092463,llama-2-7b-chat@q8_0_239.txt
+10238, underlying,5640, causes,-0.82701546,0.82701546,llama-2-7b-chat@q8_0_239.txt
+5640, causes,290, and,-0.2869478,0.2869478,llama-2-7b-chat@q8_0_239.txt
+290, and,28140, motivations,-0.10748925,0.10748925,llama-2-7b-chat@q8_0_239.txt
+28140, motivations,326, that,-5.241319,5.241319,llama-2-7b-chat@q8_0_239.txt
+326, that,2957, led,-0.87783027,0.87783027,llama-2-7b-chat@q8_0_239.txt
+2957, led,284, to,-0.5700777,0.5700777,llama-2-7b-chat@q8_0_239.txt
+284, to,883, those,-2.629729,2.629729,llama-2-7b-chat@q8_0_239.txt
+883, those,2995, events,-0.5635335,0.5635335,llama-2-7b-chat@q8_0_239.txt
+2995, events,14963, occurring,-7.7032022,7.7032022,llama-2-7b-chat@q8_0_239.txt
+14963, occurring,287, in,-2.5742207,2.5742207,llama-2-7b-chat@q8_0_239.txt
+287, in,262, the,-0.15031639,0.15031639,llama-2-7b-chat@q8_0_239.txt
+262, the,717, first,-0.023494313,0.023494313,llama-2-7b-chat@q8_0_239.txt
+717, first,1295, place,-0.00094524043,0.00094524043,llama-2-7b-chat@q8_0_239.txt
+1295, place,526,".""",-1.0429004,1.0429004,llama-2-7b-chat@q8_0_239.txt

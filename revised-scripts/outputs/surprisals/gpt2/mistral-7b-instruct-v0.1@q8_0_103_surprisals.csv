@@ -1,0 +1,52 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+26214,"""...",314, I,-4.862498,4.862498,mistral-7b-instruct-v0.1@q8_0_103.txt
+314, I,716, am,-3.5484827,3.5484827,mistral-7b-instruct-v0.1@q8_0_103.txt
+716, am,287, in,-4.490227,4.490227,mistral-7b-instruct-v0.1@q8_0_103.txt
+287, in,3877, charge,-3.774112,3.774112,mistral-7b-instruct-v0.1@q8_0_103.txt
+3877, charge,286, of,-0.47068363,0.47068363,mistral-7b-instruct-v0.1@q8_0_103.txt
+286, of,25950, distributing,-8.382141,8.382141,mistral-7b-instruct-v0.1@q8_0_103.txt
+25950, distributing,262, the,-1.7201561,1.7201561,mistral-7b-instruct-v0.1@q8_0_103.txt
+262, the,1637, money,-5.653602,5.653602,mistral-7b-instruct-v0.1@q8_0_103.txt
+1637, money,287, in,-3.4359689,3.4359689,mistral-7b-instruct-v0.1@q8_0_103.txt
+287, in,674, our,-4.461813,4.461813,mistral-7b-instruct-v0.1@q8_0_103.txt
+674, our,2892, Mon,-10.492342,10.492342,mistral-7b-instruct-v0.1@q8_0_103.txt
+2892, Mon,35894,opoly,-1.6088781,1.6088781,mistral-7b-instruct-v0.1@q8_0_103.txt
+35894,opoly,983, game,-3.6584048,3.6584048,mistral-7b-instruct-v0.1@q8_0_103.txt
+983, game,13,.,-1.2369907,1.2369907,mistral-7b-instruct-v0.1@q8_0_103.txt
+13,.,383, The,-2.9588244,2.9588244,mistral-7b-instruct-v0.1@q8_0_103.txt
+383, The,3173, rules,-4.6874523,4.6874523,mistral-7b-instruct-v0.1@q8_0_103.txt
+3173, rules,1181, state,-5.820854,5.820854,mistral-7b-instruct-v0.1@q8_0_103.txt
+1181, state,326, that,-0.48772871,0.48772871,mistral-7b-instruct-v0.1@q8_0_103.txt
+326, that,618, when,-4.2785273,4.2785273,mistral-7b-instruct-v0.1@q8_0_103.txt
+618, when,345, you,-1.053834,1.053834,mistral-7b-instruct-v0.1@q8_0_103.txt
+345, you,1956, land,-7.6409264,7.6409264,mistral-7b-instruct-v0.1@q8_0_103.txt
+1956, land,319, on,-1.2240696,1.2240696,mistral-7b-instruct-v0.1@q8_0_103.txt
+319, on,257, a,-1.2073163,1.2073163,mistral-7b-instruct-v0.1@q8_0_103.txt
+257, a,3119, property,-4.6391964,4.6391964,mistral-7b-instruct-v0.1@q8_0_103.txt
+3119, property,351, with,-3.0835824,3.0835824,mistral-7b-instruct-v0.1@q8_0_103.txt
+351, with,257, a,-1.2827126,1.2827126,mistral-7b-instruct-v0.1@q8_0_103.txt
+257, a,2156, house,-7.472485,7.472485,mistral-7b-instruct-v0.1@q8_0_103.txt
+2156, house,393, or,-2.4415884,2.4415884,mistral-7b-instruct-v0.1@q8_0_103.txt
+393, or,7541, hotel,-6.433054,6.433054,mistral-7b-instruct-v0.1@q8_0_103.txt
+7541, hotel,11,",",-1.0943295,1.0943295,mistral-7b-instruct-v0.1@q8_0_103.txt
+11,",",345, you,-0.6185034,0.6185034,mistral-7b-instruct-v0.1@q8_0_103.txt
+345, you,423, have,-2.9087265,2.9087265,mistral-7b-instruct-v0.1@q8_0_103.txt
+423, have,284, to,-0.4343696,0.4343696,mistral-7b-instruct-v0.1@q8_0_103.txt
+284, to,1414, pay,-1.5558087,1.5558087,mistral-7b-instruct-v0.1@q8_0_103.txt
+1414, pay,5602, rent,-3.6852503,3.6852503,mistral-7b-instruct-v0.1@q8_0_103.txt
+5602, rent,13,.,-1.3614473,1.3614473,mistral-7b-instruct-v0.1@q8_0_103.txt
+13,.,843, And,-3.8635743,3.8635743,mistral-7b-instruct-v0.1@q8_0_103.txt
+843, And,1201, since,-5.198403,5.198403,mistral-7b-instruct-v0.1@q8_0_103.txt
+1201, since,314, I,-1.9597005,1.9597005,mistral-7b-instruct-v0.1@q8_0_103.txt
+314, I,898, own,-2.8207235,2.8207235,mistral-7b-instruct-v0.1@q8_0_103.txt
+898, own,883, those,-5.5789204,5.5789204,mistral-7b-instruct-v0.1@q8_0_103.txt
+883, those,6608, properties,-0.5633293,0.5633293,mistral-7b-instruct-v0.1@q8_0_103.txt
+6608, properties,11,",",-0.29166368,0.29166368,mistral-7b-instruct-v0.1@q8_0_103.txt
+11,",",314, I,-0.4864795,0.4864795,mistral-7b-instruct-v0.1@q8_0_103.txt
+314, I,716, am,-2.7173133,2.7173133,mistral-7b-instruct-v0.1@q8_0_103.txt
+716, am,9080, entitled,-3.552795,3.552795,mistral-7b-instruct-v0.1@q8_0_103.txt
+9080, entitled,284, to,-0.018968614,0.018968614,mistral-7b-instruct-v0.1@q8_0_103.txt
+284, to,3328, receive,-4.1462746,4.1462746,mistral-7b-instruct-v0.1@q8_0_103.txt
+3328, receive,262, the,-1.2273295,1.2273295,mistral-7b-instruct-v0.1@q8_0_103.txt
+262, the,5602, rent,-1.4345807,1.4345807,mistral-7b-instruct-v0.1@q8_0_103.txt
+5602, rent,526,".""",-6.0583277,6.0583277,mistral-7b-instruct-v0.1@q8_0_103.txt

@@ -1,0 +1,16 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",8491,Are,-8.900673,8.900673,mistral-7b-instruct-v0.1@q8_0_299.txt
+8491,Are,612, there,-3.227034,3.227034,mistral-7b-instruct-v0.1@q8_0_299.txt
+612, there,597, any,-0.95873433,0.95873433,mistral-7b-instruct-v0.1@q8_0_299.txt
+597, any,584, other,-2.0897906,2.0897906,mistral-7b-instruct-v0.1@q8_0_299.txt
+584, other,3709, items,-6.822194,6.822194,mistral-7b-instruct-v0.1@q8_0_299.txt
+3709, items,287, in,-2.5883207,2.5883207,mistral-7b-instruct-v0.1@q8_0_299.txt
+287, in,262, the,-0.90883625,0.90883625,mistral-7b-instruct-v0.1@q8_0_299.txt
+262, the,3650, store,-3.7777975,3.7777975,mistral-7b-instruct-v0.1@q8_0_299.txt
+3650, store,326, that,-0.59549105,0.59549105,mistral-7b-instruct-v0.1@q8_0_299.txt
+326, that,314, I,-2.4117815,2.4117815,mistral-7b-instruct-v0.1@q8_0_299.txt
+314, I,1244, might,-3.9708004,3.9708004,mistral-7b-instruct-v0.1@q8_0_299.txt
+1244, might,307, be,-1.8805865,1.8805865,mistral-7b-instruct-v0.1@q8_0_299.txt
+307, be,4609, interested,-0.7738291,0.7738291,mistral-7b-instruct-v0.1@q8_0_299.txt
+4609, interested,287, in,-0.05762064,0.05762064,mistral-7b-instruct-v0.1@q8_0_299.txt
+287, in,30,?,-2.14053,2.14053,mistral-7b-instruct-v0.1@q8_0_299.txt

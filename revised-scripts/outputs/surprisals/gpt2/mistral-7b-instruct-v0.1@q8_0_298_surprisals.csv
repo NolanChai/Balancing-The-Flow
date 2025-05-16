@@ -1,0 +1,25 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",13681,Great,-9.986546,9.986546,mistral-7b-instruct-v0.1@q8_0_298.txt
+13681,Great,0,!,-3.3549843,3.3549843,mistral-7b-instruct-v0.1@q8_0_298.txt
+0,!,314, I,-2.0746572,2.0746572,mistral-7b-instruct-v0.1@q8_0_298.txt
+314, I,460, can,-3.0699875,3.0699875,mistral-7b-instruct-v0.1@q8_0_298.txt
+460, can,1011, take,-4.4512706,4.4512706,mistral-7b-instruct-v0.1@q8_0_298.txt
+1011, take,617, some,-4.442258,4.442258,mistral-7b-instruct-v0.1@q8_0_298.txt
+617, some,5986, pictures,-1.9495986,1.9495986,mistral-7b-instruct-v0.1@q8_0_298.txt
+5986, pictures,286, of,-1.5394297,1.5394297,mistral-7b-instruct-v0.1@q8_0_298.txt
+286, of,262, the,-1.9474219,1.9474219,mistral-7b-instruct-v0.1@q8_0_298.txt
+262, the,1570, view,-6.831153,6.831153,mistral-7b-instruct-v0.1@q8_0_298.txt
+1570, view,13,.,-2.5713873,2.5713873,mistral-7b-instruct-v0.1@q8_0_298.txt
+13,.,2141, Do,-5.4865437,5.4865437,mistral-7b-instruct-v0.1@q8_0_298.txt
+2141, Do,345, you,-0.40845618,0.40845618,mistral-7b-instruct-v0.1@q8_0_298.txt
+345, you,4313, recommend,-7.379648,7.379648,mistral-7b-instruct-v0.1@q8_0_298.txt
+4313, recommend,597, any,-2.9702513,2.9702513,mistral-7b-instruct-v0.1@q8_0_298.txt
+597, any,2176, specific,-4.8200645,4.8200645,mistral-7b-instruct-v0.1@q8_0_298.txt
+2176, specific,10222, spots,-5.4385624,5.4385624,mistral-7b-instruct-v0.1@q8_0_298.txt
+10222, spots,284, to,-1.5364162,1.5364162,mistral-7b-instruct-v0.1@q8_0_298.txt
+284, to,2198, check,-4.295408,4.295408,mistral-7b-instruct-v0.1@q8_0_298.txt
+2198, check,503, out,-0.36322203,0.36322203,mistral-7b-instruct-v0.1@q8_0_298.txt
+503, out,287, in,-3.9965384,3.9965384,mistral-7b-instruct-v0.1@q8_0_298.txt
+287, in,262, the,-1.1042482,1.1042482,mistral-7b-instruct-v0.1@q8_0_298.txt
+262, the,1748, city,-4.7244086,4.7244086,mistral-7b-instruct-v0.1@q8_0_298.txt
+1748, city,1701,"?""",-1.4121495,1.4121495,mistral-7b-instruct-v0.1@q8_0_298.txt

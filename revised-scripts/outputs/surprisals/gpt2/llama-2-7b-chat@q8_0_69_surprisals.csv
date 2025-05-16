@@ -1,0 +1,24 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",16454,Okay,-10.056683,10.056683,llama-2-7b-chat@q8_0_69.txt
+16454,Okay,11,",",-0.5546581,0.5546581,llama-2-7b-chat@q8_0_69.txt
+11,",",645, no,-5.3852153,5.3852153,llama-2-7b-chat@q8_0_69.txt
+645, no,1917, problem,-1.9980729,1.9980729,llama-2-7b-chat@q8_0_69.txt
+1917, problem,13,.,-1.002585,1.002585,llama-2-7b-chat@q8_0_69.txt
+13,.,1374, How,-5.2680626,5.2680626,llama-2-7b-chat@q8_0_69.txt
+1374, How,546, about,-0.89302087,0.89302087,llama-2-7b-chat@q8_0_69.txt
+546, about,345, you,-1.9425179,1.9425179,llama-2-7b-chat@q8_0_69.txt
+345, you,30,?,-3.4685247,3.4685247,llama-2-7b-chat@q8_0_69.txt
+30,?,1374, How,-3.1098788,3.1098788,llama-2-7b-chat@q8_0_69.txt
+1374, How,466, do,-2.7369425,2.7369425,llama-2-7b-chat@q8_0_69.txt
+466, do,345, you,-0.26196828,0.26196828,llama-2-7b-chat@q8_0_69.txt
+345, you,1410, plan,-4.6625247,4.6625247,llama-2-7b-chat@q8_0_69.txt
+1410, plan,319, on,-0.7488041,0.7488041,llama-2-7b-chat@q8_0_69.txt
+319, on,4581, spending,-3.817096,3.817096,llama-2-7b-chat@q8_0_69.txt
+4581, spending,23078, Valentine,-10.068365,10.068365,llama-2-7b-chat@q8_0_69.txt
+23078, Valentine,338,'s,-0.015298289,0.015298289,llama-2-7b-chat@q8_0_69.txt
+338,'s,3596, Day,-0.18464942,0.18464942,llama-2-7b-chat@q8_0_69.txt
+3596, Day,351, with,-2.4627252,2.4627252,llama-2-7b-chat@q8_0_69.txt
+351, with,534, your,-1.7881882,1.7881882,llama-2-7b-chat@q8_0_69.txt
+534, your,2383, significant,-7.4558544,7.4558544,llama-2-7b-chat@q8_0_69.txt
+2383, significant,584, other,-0.049857095,0.049857095,llama-2-7b-chat@q8_0_69.txt
+584, other,1701,"?""",-0.6321477,0.6321477,llama-2-7b-chat@q8_0_69.txt

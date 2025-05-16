@@ -1,0 +1,21 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987438,8.987438,llama-2-7b-chat@q8_0_44.txt
+5812,Oh,11,",",-0.70429367,0.70429367,llama-2-7b-chat@q8_0_44.txt
+11,",",4753, definitely,-7.573092,7.573092,llama-2-7b-chat@q8_0_44.txt
+4753, definitely,13,.,-1.5098653,1.5098653,llama-2-7b-chat@q8_0_44.txt
+13,.,314, I,-1.4888592,1.4888592,llama-2-7b-chat@q8_0_44.txt
+314, I,1612, mean,-3.318276,3.318276,llama-2-7b-chat@q8_0_44.txt
+1612, mean,11,",",-0.25043887,0.25043887,llama-2-7b-chat@q8_0_44.txt
+11,",",339, he,-3.5752788,3.5752788,llama-2-7b-chat@q8_0_44.txt
+339, he,714, could,-4.8004503,4.8004503,llama-2-7b-chat@q8_0_44.txt
+714, could,1560, tell,-5.0057287,5.0057287,llama-2-7b-chat@q8_0_44.txt
+1560, tell,262, the,-3.5077415,3.5077415,llama-2-7b-chat@q8_0_44.txt
+262, the,1266, best,-5.9994392,5.9994392,llama-2-7b-chat@q8_0_44.txt
+1266, best,4152, college,-10.523904,10.523904,llama-2-7b-chat@q8_0_44.txt
+4152, college,3923, stories,-6.99223,6.99223,llama-2-7b-chat@q8_0_44.txt
+3923, stories,11,",",-1.8868716,1.8868716,llama-2-7b-chat@q8_0_44.txt
+11,",",1309, let,-6.7069116,6.7069116,llama-2-7b-chat@q8_0_44.txt
+1309, let,502, me,-3.1299617,3.1299617,llama-2-7b-chat@q8_0_44.txt
+502, me,1560, tell,-0.40456283,0.40456283,llama-2-7b-chat@q8_0_44.txt
+1560, tell,345, you,-0.42505795,0.42505795,llama-2-7b-chat@q8_0_44.txt
+345, you,526,".""",-1.8743607,1.8743607,llama-2-7b-chat@q8_0_44.txt

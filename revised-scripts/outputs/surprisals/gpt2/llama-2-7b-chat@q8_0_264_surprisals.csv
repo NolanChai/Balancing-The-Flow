@@ -1,0 +1,59 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,llama-2-7b-chat@q8_0_264.txt
+40,I,1833, understand,-5.4735403,5.4735403,llama-2-7b-chat@q8_0_264.txt
+1833, understand,11,",",-3.931328,3.931328,llama-2-7b-chat@q8_0_264.txt
+11,",",475, but,-1.3372148,1.3372148,llama-2-7b-chat@q8_0_264.txt
+475, but,314, I,-1.4807823,1.4807823,llama-2-7b-chat@q8_0_264.txt
+314, I,1107, really,-4.331767,4.331767,llama-2-7b-chat@q8_0_264.txt
+1107, really,765, want,-2.4739072,2.4739072,llama-2-7b-chat@q8_0_264.txt
+765, want,284, to,-0.44246715,0.44246715,llama-2-7b-chat@q8_0_264.txt
+284, to,2193, learn,-5.1064596,5.1064596,llama-2-7b-chat@q8_0_264.txt
+2193, learn,517, more,-2.2261438,2.2261438,llama-2-7b-chat@q8_0_264.txt
+517, more,546, about,-0.40015814,0.40015814,llama-2-7b-chat@q8_0_264.txt
+546, about,4903, ge,-9.6706915,9.6706915,llama-2-7b-chat@q8_0_264.txt
+4903, ge,1435,ology,-0.46521604,0.46521604,llama-2-7b-chat@q8_0_264.txt
+1435,ology,290, and,-1.3980604,1.3980604,llama-2-7b-chat@q8_0_264.txt
+290, and,428, this,-5.476804,5.476804,llama-2-7b-chat@q8_0_264.txt
+428, this,1781, course,-8.223568,8.223568,llama-2-7b-chat@q8_0_264.txt
+1781, course,318, is,-2.577857,2.577857,llama-2-7b-chat@q8_0_264.txt
+318, is,262, the,-3.7589877,3.7589877,llama-2-7b-chat@q8_0_264.txt
+262, the,2818, perfect,-2.7985234,2.7985234,llama-2-7b-chat@q8_0_264.txt
+2818, perfect,3663, opportunity,-1.5519134,1.5519134,llama-2-7b-chat@q8_0_264.txt
+3663, opportunity,13,.,-3.8076138,3.8076138,llama-2-7b-chat@q8_0_264.txt
+13,.,314, I,-1.2904881,1.2904881,llama-2-7b-chat@q8_0_264.txt
+314, I,1183,'ll,-3.6947386,3.6947386,llama-2-7b-chat@q8_0_264.txt
+1183,'ll,466, do,-3.1682544,3.1682544,llama-2-7b-chat@q8_0_264.txt
+466, do,616, my,-0.9293888,0.9293888,llama-2-7b-chat@q8_0_264.txt
+616, my,1266, best,-0.17109294,0.17109294,llama-2-7b-chat@q8_0_264.txt
+1266, best,284, to,-0.50703645,0.50703645,llama-2-7b-chat@q8_0_264.txt
+284, to,1394, keep,-3.9039416,3.9039416,llama-2-7b-chat@q8_0_264.txt
+1394, keep,510, up,-1.5405668,1.5405668,llama-2-7b-chat@q8_0_264.txt
+510, up,351, with,-0.58410543,0.58410543,llama-2-7b-chat@q8_0_264.txt
+351, with,262, the,-1.3632817,1.3632817,llama-2-7b-chat@q8_0_264.txt
+262, the,1398, class,-3.536041,3.536041,llama-2-7b-chat@q8_0_264.txt
+1398, class,526,".""",-2.5253606,2.5253606,llama-2-7b-chat@q8_0_264.txt
+526,".""",198,"
+",-0.30983403,0.30983403,llama-2-7b-chat@q8_0_264.txt
+198,"
+",198,"
+",-0.00086329854,0.00086329854,llama-2-7b-chat@q8_0_264.txt
+198,"
+",1,"""",-2.815886,2.815886,llama-2-7b-chat@q8_0_264.txt
+1,"""",10449,Thank,-2.6480846,2.6480846,llama-2-7b-chat@q8_0_264.txt
+10449,Thank,345, you,-0.014970339,0.014970339,llama-2-7b-chat@q8_0_264.txt
+345, you,11,",",-2.1042485,2.1042485,llama-2-7b-chat@q8_0_264.txt
+11,",",8129, Professor,-2.7615955,2.7615955,llama-2-7b-chat@q8_0_264.txt
+8129, Professor,3759, Donald,-8.607633,8.607633,llama-2-7b-chat@q8_0_264.txt
+3759, Donald,13,.,-2.461115,2.461115,llama-2-7b-chat@q8_0_264.txt
+13,.,314, I,-0.9043689,0.9043689,llama-2-7b-chat@q8_0_264.txt
+314, I,1107, really,-3.3860683,3.3860683,llama-2-7b-chat@q8_0_264.txt
+1107, really,9144, appreciate,-0.3667425,0.3667425,llama-2-7b-chat@q8_0_264.txt
+9144, appreciate,340, it,-0.86466956,0.86466956,llama-2-7b-chat@q8_0_264.txt
+340, it,553,",""",-3.2977352,3.2977352,llama-2-7b-chat@q8_0_264.txt
+553,",""",262, the,-3.5464652,3.5464652,llama-2-7b-chat@q8_0_264.txt
+262, the,3710, student,-2.6240427,2.6240427,llama-2-7b-chat@q8_0_264.txt
+3710, student,8712, replied,-1.0371295,1.0371295,llama-2-7b-chat@q8_0_264.txt
+8712, replied,351, with,-2.6742988,2.6742988,llama-2-7b-chat@q8_0_264.txt
+351, with,257, a,-0.21186574,0.21186574,llama-2-7b-chat@q8_0_264.txt
+257, a,8212, smile,-0.6725217,0.6725217,llama-2-7b-chat@q8_0_264.txt
+8212, smile,13,.,-0.21410921,0.21410921,llama-2-7b-chat@q8_0_264.txt

@@ -1,0 +1,5 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",4231, Are,-10.069507,10.069507,mistral-7b-instruct-v0.1@q8_0_35.txt
+4231, Are,345, you,-0.8274995,0.8274995,mistral-7b-instruct-v0.1@q8_0_35.txt
+345, you,8788, okay,-4.6742907,4.6742907,mistral-7b-instruct-v0.1@q8_0_35.txt
+8788, okay,1701,"?""",-1.4464707,1.4464707,mistral-7b-instruct-v0.1@q8_0_35.txt

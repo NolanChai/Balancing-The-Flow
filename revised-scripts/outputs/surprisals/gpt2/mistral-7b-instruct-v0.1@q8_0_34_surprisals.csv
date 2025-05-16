@@ -1,0 +1,23 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2504,That,-6.952019,6.952019,mistral-7b-instruct-v0.1@q8_0_34.txt
+2504,That,338,'s,-0.81931055,0.81931055,mistral-7b-instruct-v0.1@q8_0_34.txt
+338,'s,3499, interesting,-6.3343067,6.3343067,mistral-7b-instruct-v0.1@q8_0_34.txt
+3499, interesting,13,.,-1.7787789,1.7787789,mistral-7b-instruct-v0.1@q8_0_34.txt
+13,.,1680, Can,-5.6955657,5.6955657,mistral-7b-instruct-v0.1@q8_0_34.txt
+1680, Can,345, you,-0.5439883,0.5439883,mistral-7b-instruct-v0.1@q8_0_34.txt
+345, you,1560, tell,-1.83472,1.83472,mistral-7b-instruct-v0.1@q8_0_34.txt
+1560, tell,502, me,-0.6710321,0.6710321,mistral-7b-instruct-v0.1@q8_0_34.txt
+502, me,517, more,-2.2465613,2.2465613,mistral-7b-instruct-v0.1@q8_0_34.txt
+517, more,546, about,-0.19495806,0.19495806,mistral-7b-instruct-v0.1@q8_0_34.txt
+546, about,262, the,-1.660459,1.660459,mistral-7b-instruct-v0.1@q8_0_34.txt
+262, the,3858, types,-7.5788097,7.5788097,mistral-7b-instruct-v0.1@q8_0_34.txt
+3858, types,286, of,-0.036884774,0.036884774,mistral-7b-instruct-v0.1@q8_0_34.txt
+286, of,2523, shows,-7.9705377,7.9705377,mistral-7b-instruct-v0.1@q8_0_34.txt
+2523, shows,326, that,-1.1604176,1.1604176,mistral-7b-instruct-v0.1@q8_0_34.txt
+326, that,1633, air,-7.4455423,7.4455423,mistral-7b-instruct-v0.1@q8_0_34.txt
+1633, air,287, in,-2.4729693,2.4729693,mistral-7b-instruct-v0.1@q8_0_34.txt
+287, in,14119, Taiwan,-7.942337,7.942337,mistral-7b-instruct-v0.1@q8_0_34.txt
+14119, Taiwan,1141, during,-5.2403345,5.2403345,mistral-7b-instruct-v0.1@q8_0_34.txt
+1141, during,6994, prime,-7.160216,7.160216,mistral-7b-instruct-v0.1@q8_0_34.txt
+6994, prime,640, time,-0.17773944,0.17773944,mistral-7b-instruct-v0.1@q8_0_34.txt
+640, time,1701,"?""",-0.6676854,0.6676854,mistral-7b-instruct-v0.1@q8_0_34.txt

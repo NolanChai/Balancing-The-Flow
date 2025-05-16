@@ -1,0 +1,14 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.607984,4.607984,mistral-7b-instruct-v0.1@q8_0_11.txt
+40,I,2982, heard,-5.9001584,5.9001584,mistral-7b-instruct-v0.1@q8_0_11.txt
+2982, heard,340, it,-3.0617042,3.0617042,mistral-7b-instruct-v0.1@q8_0_11.txt
+340, it,373, was,-2.0741885,2.0741885,mistral-7b-instruct-v0.1@q8_0_11.txt
+373, was,257, a,-2.2002115,2.2002115,mistral-7b-instruct-v0.1@q8_0_11.txt
+257, a,845, very,-4.3177366,4.3177366,mistral-7b-instruct-v0.1@q8_0_11.txt
+845, very,1969, close,-5.8600116,5.8600116,mistral-7b-instruct-v0.1@q8_0_11.txt
+1969, close,983, game,-5.332109,5.332109,mistral-7b-instruct-v0.1@q8_0_11.txt
+983, game,351, with,-4.2439623,4.2439623,mistral-7b-instruct-v0.1@q8_0_11.txt
+351, with,1811, several,-6.8562026,6.8562026,mistral-7b-instruct-v0.1@q8_0_11.txt
+1811, several,9839, tie,-8.337204,8.337204,mistral-7b-instruct-v0.1@q8_0_11.txt
+9839, tie,49295,breakers,-0.63593405,0.63593405,mistral-7b-instruct-v0.1@q8_0_11.txt
+49295,breakers,526,".""",-3.6791449,3.6791449,mistral-7b-instruct-v0.1@q8_0_11.txt

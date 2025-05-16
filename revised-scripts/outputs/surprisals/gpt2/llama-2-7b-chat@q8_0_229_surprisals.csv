@@ -1,0 +1,55 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987438,8.987438,llama-2-7b-chat@q8_0_229.txt
+5812,Oh,11,",",-0.7042815,0.7042815,llama-2-7b-chat@q8_0_229.txt
+11,",",612, there,-4.6108017,4.6108017,llama-2-7b-chat@q8_0_229.txt
+612, there,389, are,-2.4100893,2.4100893,llama-2-7b-chat@q8_0_229.txt
+389, are,523, so,-3.0553644,3.0553644,llama-2-7b-chat@q8_0_229.txt
+523, so,867, many,-0.03232927,0.03232927,llama-2-7b-chat@q8_0_229.txt
+867, many,1257, fun,-6.90561,6.90561,llama-2-7b-chat@q8_0_229.txt
+1257, fun,4568, activities,-5.2108874,5.2108874,llama-2-7b-chat@q8_0_229.txt
+4568, activities,284, to,-2.5482924,2.5482924,llama-2-7b-chat@q8_0_229.txt
+284, to,466, do,-0.847628,0.847628,llama-2-7b-chat@q8_0_229.txt
+466, do,612, there,-3.9123368,3.9123368,llama-2-7b-chat@q8_0_229.txt
+612, there,0,!,-3.0703447,3.0703447,llama-2-7b-chat@q8_0_229.txt
+0,!,775, We,-3.2678757,3.2678757,llama-2-7b-chat@q8_0_229.txt
+775, We,460, can,-3.4329748,3.4329748,llama-2-7b-chat@q8_0_229.txt
+460, can,467, go,-3.529152,3.529152,llama-2-7b-chat@q8_0_229.txt
+467, go,24522, hiking,-4.4165826,4.4165826,llama-2-7b-chat@q8_0_229.txt
+24522, hiking,11,",",-0.5480092,0.5480092,llama-2-7b-chat@q8_0_229.txt
+11,",",2330, white,-9.378355,9.378355,llama-2-7b-chat@q8_0_229.txt
+2330, white,1660, water,-5.540086,5.540086,llama-2-7b-chat@q8_0_229.txt
+1660, water,31812, raft,-0.42127636,0.42127636,llama-2-7b-chat@q8_0_229.txt
+31812, raft,278,ing,-0.027533524,0.027533524,llama-2-7b-chat@q8_0_229.txt
+278,ing,11,",",-0.206656,0.206656,llama-2-7b-chat@q8_0_229.txt
+11,",",393, or,-3.8575697,3.8575697,llama-2-7b-chat@q8_0_229.txt
+393, or,772, even,-1.9267095,1.9267095,llama-2-7b-chat@q8_0_229.txt
+772, even,1011, take,-3.777718,3.777718,llama-2-7b-chat@q8_0_229.txt
+1011, take,257, a,-0.7942605,0.7942605,llama-2-7b-chat@q8_0_229.txt
+257, a,15392, helicopter,-5.4689713,5.4689713,llama-2-7b-chat@q8_0_229.txt
+15392, helicopter,4205, tour,-3.4797544,3.4797544,llama-2-7b-chat@q8_0_229.txt
+4205, tour,329, for,-4.0485945,4.0485945,llama-2-7b-chat@q8_0_229.txt
+329, for,257, a,-1.4914924,1.4914924,llama-2-7b-chat@q8_0_229.txt
+257, a,6512, bird,-7.789516,7.789516,llama-2-7b-chat@q8_0_229.txt
+6512, bird,338,'s,-1.530801,1.530801,llama-2-7b-chat@q8_0_229.txt
+338,'s,4151, eye,-0.6754573,0.6754573,llama-2-7b-chat@q8_0_229.txt
+4151, eye,1570, view,-0.0046889354,0.0046889354,llama-2-7b-chat@q8_0_229.txt
+1570, view,286, of,-0.9230408,0.9230408,llama-2-7b-chat@q8_0_229.txt
+286, of,262, the,-0.7693846,0.7693846,llama-2-7b-chat@q8_0_229.txt
+262, the,8953, falls,-7.725748,7.725748,llama-2-7b-chat@q8_0_229.txt
+8953, falls,13,.,-1.242343,1.242343,llama-2-7b-chat@q8_0_229.txt
+13,.,843, And,-3.2664418,3.2664418,llama-2-7b-chat@q8_0_229.txt
+843, And,287, in,-5.31767,5.31767,llama-2-7b-chat@q8_0_229.txt
+287, in,262, the,-1.2548892,1.2548892,llama-2-7b-chat@q8_0_229.txt
+262, the,6180, evening,-4.154824,4.154824,llama-2-7b-chat@q8_0_229.txt
+6180, evening,11,",",-0.7748299,0.7748299,llama-2-7b-chat@q8_0_229.txt
+11,",",356, we,-1.1542389,1.1542389,llama-2-7b-chat@q8_0_229.txt
+356, we,460, can,-0.84798896,0.84798896,llama-2-7b-chat@q8_0_229.txt
+460, can,2883, enjoy,-3.1509814,3.1509814,llama-2-7b-chat@q8_0_229.txt
+2883, enjoy,257, a,-1.5287163,1.5287163,llama-2-7b-chat@q8_0_229.txt
+257, a,1413, camp,-6.978703,6.978703,llama-2-7b-chat@q8_0_229.txt
+1413, camp,6495,fire,-0.105771385,0.105771385,llama-2-7b-chat@q8_0_229.txt
+6495,fire,290, and,-2.326933,2.326933,llama-2-7b-chat@q8_0_229.txt
+290, and,336, st,-7.715679,7.715679,llama-2-7b-chat@q8_0_229.txt
+336, st,853,arg,-0.35574844,0.35574844,llama-2-7b-chat@q8_0_229.txt
+853,arg,6201,aze,-3.6142395,3.6142395,llama-2-7b-chat@q8_0_229.txt
+6201,aze,526,".""",-2.9560375,2.9560375,llama-2-7b-chat@q8_0_229.txt

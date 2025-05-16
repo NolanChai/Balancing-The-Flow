@@ -1,0 +1,21 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",3792,Is,-7.926678,7.926678,mistral-7b-instruct-v0.1@q8_0_101.txt
+3792,Is,612, there,-2.1892734,2.1892734,mistral-7b-instruct-v0.1@q8_0_101.txt
+612, there,257, a,-1.2525809,1.2525809,mistral-7b-instruct-v0.1@q8_0_101.txt
+257, a,2176, specific,-4.854763,4.854763,mistral-7b-instruct-v0.1@q8_0_101.txt
+2176, specific,1664, company,-7.0000677,7.0000677,mistral-7b-instruct-v0.1@q8_0_101.txt
+1664, company,345, you,-2.361837,2.361837,mistral-7b-instruct-v0.1@q8_0_101.txt
+345, you,3221, usually,-8.74211,8.74211,mistral-7b-instruct-v0.1@q8_0_101.txt
+3221, usually,779, use,-2.3280764,2.3280764,mistral-7b-instruct-v0.1@q8_0_101.txt
+779, use,329, for,-1.8902127,1.8902127,mistral-7b-instruct-v0.1@q8_0_101.txt
+329, for,45049, taxis,-10.877581,10.877581,mistral-7b-instruct-v0.1@q8_0_101.txt
+45049, taxis,30,?,-1.767899,1.767899,mistral-7b-instruct-v0.1@q8_0_101.txt
+30,?,314, I,-2.609208,2.609208,mistral-7b-instruct-v0.1@q8_0_101.txt
+314, I,460, can,-3.5466833,3.5466833,mistral-7b-instruct-v0.1@q8_0_101.txt
+460, can,1037, help,-5.088936,5.088936,mistral-7b-instruct-v0.1@q8_0_101.txt
+1037, help,345, you,-0.33856776,0.33856776,mistral-7b-instruct-v0.1@q8_0_101.txt
+345, you,1492, book,-9.955786,9.955786,mistral-7b-instruct-v0.1@q8_0_101.txt
+1492, book,530, one,-2.3428404,2.3428404,mistral-7b-instruct-v0.1@q8_0_101.txt
+530, one,611, if,-3.7766347,3.7766347,mistral-7b-instruct-v0.1@q8_0_101.txt
+611, if,2622, needed,-5.20787,5.20787,mistral-7b-instruct-v0.1@q8_0_101.txt
+2622, needed,526,".""",-0.94903296,0.94903296,mistral-7b-instruct-v0.1@q8_0_101.txt

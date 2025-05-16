@@ -1,0 +1,14 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",3878, Great,-9.960396,9.960396,mistral-7b-instruct-v0.1@q8_0_71.txt
+3878, Great,3572, choice,-7.349418,7.349418,mistral-7b-instruct-v0.1@q8_0_71.txt
+3572, choice,0,!,-2.337039,2.337039,mistral-7b-instruct-v0.1@q8_0_71.txt
+0,!,10928, Would,-5.366501,5.366501,mistral-7b-instruct-v0.1@q8_0_71.txt
+10928, Would,345, you,-2.399813,2.399813,mistral-7b-instruct-v0.1@q8_0_71.txt
+345, you,588, like,-1.3160335,1.3160335,mistral-7b-instruct-v0.1@q8_0_71.txt
+588, like,597, any,-5.431467,5.431467,mistral-7b-instruct-v0.1@q8_0_71.txt
+597, any,5389, sides,-10.897671,10.897671,mistral-7b-instruct-v0.1@q8_0_71.txt
+5389, sides,393, or,-2.7505128,2.7505128,mistral-7b-instruct-v0.1@q8_0_71.txt
+393, or,11758, drinks,-5.827999,5.827999,mistral-7b-instruct-v0.1@q8_0_71.txt
+11758, drinks,351, with,-4.4752407,4.4752407,mistral-7b-instruct-v0.1@q8_0_71.txt
+351, with,326, that,-3.93429,3.93429,mistral-7b-instruct-v0.1@q8_0_71.txt
+326, that,1701,"?""",-4.2063932,4.2063932,mistral-7b-instruct-v0.1@q8_0_71.txt

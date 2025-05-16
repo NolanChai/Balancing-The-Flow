@@ -1,0 +1,17 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",314, I,-4.894193,4.894193,mistral-7b-instruct-v0.1@q8_0_153.txt
+314, I,1833, understand,-6.162937,6.162937,mistral-7b-instruct-v0.1@q8_0_153.txt
+1833, understand,11,",",-2.8590941,2.8590941,mistral-7b-instruct-v0.1@q8_0_153.txt
+11,",",5875, thank,-6.7748494,6.7748494,mistral-7b-instruct-v0.1@q8_0_153.txt
+5875, thank,345, you,-0.09091245,0.09091245,mistral-7b-instruct-v0.1@q8_0_153.txt
+345, you,329, for,-1.8649453,1.8649453,mistral-7b-instruct-v0.1@q8_0_153.txt
+329, for,262, the,-2.2688718,2.2688718,mistral-7b-instruct-v0.1@q8_0_153.txt
+262, the,17023, invitation,-4.8380737,4.8380737,mistral-7b-instruct-v0.1@q8_0_153.txt
+17023, invitation,996, though,-6.634071,6.634071,mistral-7b-instruct-v0.1@q8_0_153.txt
+996, though,13,.,-0.9063829,0.9063829,mistral-7b-instruct-v0.1@q8_0_153.txt
+13,.,8192, Have,-6.1730685,6.1730685,mistral-7b-instruct-v0.1@q8_0_153.txt
+8192, Have,1257, fun,-2.8942163,2.8942163,mistral-7b-instruct-v0.1@q8_0_153.txt
+1257, fun,379, at,-5.36092,5.36092,mistral-7b-instruct-v0.1@q8_0_153.txt
+379, at,534, your,-2.4084346,2.4084346,mistral-7b-instruct-v0.1@q8_0_153.txt
+534, your,2151, party,-4.3685703,4.3685703,mistral-7b-instruct-v0.1@q8_0_153.txt
+2151, party,2474,"!""",-4.225627,4.225627,mistral-7b-instruct-v0.1@q8_0_153.txt

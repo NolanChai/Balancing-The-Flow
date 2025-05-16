@@ -1,0 +1,36 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_124.txt
+40,I,892, think,-2.4174716,2.4174716,llama-2-7b-chat@q8_0_124.txt
+892, think,326, that,-2.125145,2.125145,llama-2-7b-chat@q8_0_124.txt
+326, that,3073, looks,-8.094335,8.094335,llama-2-7b-chat@q8_0_124.txt
+3073, looks,1049, great,-3.6359644,3.6359644,llama-2-7b-chat@q8_0_124.txt
+1049, great,319, on,-2.3421936,2.3421936,llama-2-7b-chat@q8_0_124.txt
+319, on,345, you,-3.6611352,3.6611352,llama-2-7b-chat@q8_0_124.txt
+345, you,553,",""",-1.4198112,1.4198112,llama-2-7b-chat@q8_0_124.txt
+553,",""",673, she,-1.9915,1.9915,llama-2-7b-chat@q8_0_124.txt
+673, she,531, said,-0.6667278,0.6667278,llama-2-7b-chat@q8_0_124.txt
+531, said,11,",",-1.6180019,1.6180019,llama-2-7b-chat@q8_0_124.txt
+11,",",16755, smiling,-3.1641634,3.1641634,llama-2-7b-chat@q8_0_124.txt
+16755, smiling,379, at,-2.155871,2.155871,llama-2-7b-chat@q8_0_124.txt
+379, at,607, her,-2.3019917,2.3019917,llama-2-7b-chat@q8_0_124.txt
+607, her,14580, reflection,-6.289447,6.289447,llama-2-7b-chat@q8_0_124.txt
+14580, reflection,287, in,-1.0563383,1.0563383,llama-2-7b-chat@q8_0_124.txt
+287, in,262, the,-0.28425032,0.28425032,llama-2-7b-chat@q8_0_124.txt
+262, the,10162, mirror,-0.5622511,0.5622511,llama-2-7b-chat@q8_0_124.txt
+10162, mirror,13,.,-0.17995986,0.17995986,llama-2-7b-chat@q8_0_124.txt
+13,.,198,"
+",-1.0464265,1.0464265,llama-2-7b-chat@q8_0_124.txt
+198,"
+",198,"
+",-0.009563466,0.009563466,llama-2-7b-chat@q8_0_124.txt
+198,"
+",1,"""",-0.8126669,0.8126669,llama-2-7b-chat@q8_0_124.txt
+1,"""",40,I,-1.5737946,1.5737946,llama-2-7b-chat@q8_0_124.txt
+40,I,766, see,-4.5824904,4.5824904,llama-2-7b-chat@q8_0_124.txt
+766, see,553,",""",-1.3704157,1.3704157,llama-2-7b-chat@q8_0_124.txt
+553,",""",673, she,-2.1503077,2.1503077,llama-2-7b-chat@q8_0_124.txt
+673, she,8712, replied,-2.0203505,2.0203505,llama-2-7b-chat@q8_0_124.txt
+8712, replied,351, with,-2.7419953,2.7419953,llama-2-7b-chat@q8_0_124.txt
+351, with,257, a,-0.18156205,0.18156205,llama-2-7b-chat@q8_0_124.txt
+257, a,8212, smile,-1.3734161,1.3734161,llama-2-7b-chat@q8_0_124.txt
+8212, smile,13,.,-0.46179712,0.46179712,llama-2-7b-chat@q8_0_124.txt

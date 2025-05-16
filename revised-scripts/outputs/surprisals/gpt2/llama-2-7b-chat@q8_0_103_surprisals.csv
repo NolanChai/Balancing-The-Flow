@@ -1,0 +1,22 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2396,So,-7.2547956,7.2547956,llama-2-7b-chat@q8_0_103.txt
+2396,So,11,",",-1.7140965,1.7140965,llama-2-7b-chat@q8_0_103.txt
+11,",",345, you,-2.6682992,2.6682992,llama-2-7b-chat@q8_0_103.txt
+345, you,821,'re,-1.7526459,1.7526459,llama-2-7b-chat@q8_0_103.txt
+821,'re,2282, saying,-3.087346,3.087346,llama-2-7b-chat@q8_0_103.txt
+2282, saying,345, you,-2.7608242,2.7608242,llama-2-7b-chat@q8_0_103.txt
+345, you,1422, didn,-4.687059,4.687059,llama-2-7b-chat@q8_0_103.txt
+1422, didn,470,'t,-0.00036233058,0.00036233058,llama-2-7b-chat@q8_0_103.txt
+470,'t,22705, cheat,-8.137134,8.137134,llama-2-7b-chat@q8_0_103.txt
+22705, cheat,30,?,-2.417066,2.417066,llama-2-7b-chat@q8_0_103.txt
+30,?,1320, That,-2.8307152,2.8307152,llama-2-7b-chat@q8_0_103.txt
+1320, That,345, you,-2.1255631,2.1255631,llama-2-7b-chat@q8_0_103.txt
+345, you,547, were,-2.7524505,2.7524505,llama-2-7b-chat@q8_0_103.txt
+547, were,655, just,-2.8003542,2.8003542,llama-2-7b-chat@q8_0_103.txt
+655, just,1708, following,-5.349855,5.349855,llama-2-7b-chat@q8_0_103.txt
+1708, following,262, the,-1.1845754,1.1845754,llama-2-7b-chat@q8_0_103.txt
+262, the,3173, rules,-0.7249741,0.7249741,llama-2-7b-chat@q8_0_103.txt
+3173, rules,286, of,-2.9352355,2.9352355,llama-2-7b-chat@q8_0_103.txt
+286, of,262, the,-0.50036806,0.50036806,llama-2-7b-chat@q8_0_103.txt
+262, the,983, game,-0.10837606,0.10837606,llama-2-7b-chat@q8_0_103.txt
+983, game,1701,"?""",-1.1633028,1.1633028,llama-2-7b-chat@q8_0_103.txt

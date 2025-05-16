@@ -1,0 +1,33 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_105.txt
+40,I,1833, understand,-5.473548,5.473548,mistral-7b-instruct-v0.1@q8_0_105.txt
+1833, understand,13,.,-3.8244262,3.8244262,mistral-7b-instruct-v0.1@q8_0_105.txt
+13,.,887, But,-2.307549,2.307549,mistral-7b-instruct-v0.1@q8_0_105.txt
+887, But,612, there,-3.7722769,3.7722769,mistral-7b-instruct-v0.1@q8_0_105.txt
+612, there,389, are,-1.459738,1.459738,mistral-7b-instruct-v0.1@q8_0_105.txt
+389, are,867, many,-3.1269202,3.1269202,mistral-7b-instruct-v0.1@q8_0_105.txt
+867, many,661, people,-2.2613142,2.2613142,mistral-7b-instruct-v0.1@q8_0_105.txt
+661, people,508, who,-0.68499696,0.68499696,mistral-7b-instruct-v0.1@q8_0_105.txt
+508, who,1842, love,-5.333314,5.333314,mistral-7b-instruct-v0.1@q8_0_105.txt
+1842, love,3881, rock,-8.7799225,8.7799225,mistral-7b-instruct-v0.1@q8_0_105.txt
+3881, rock,2647, music,-1.6228464,1.6228464,mistral-7b-instruct-v0.1@q8_0_105.txt
+2647, music,329, for,-5.182413,5.182413,mistral-7b-instruct-v0.1@q8_0_105.txt
+329, for,663, its,-2.3810549,2.3810549,mistral-7b-instruct-v0.1@q8_0_105.txt
+663, its,3748, unique,-3.2967498,3.2967498,mistral-7b-instruct-v0.1@q8_0_105.txt
+3748, unique,2128, sound,-2.371095,2.371095,mistral-7b-instruct-v0.1@q8_0_105.txt
+2128, sound,11,",",-1.3753189,1.3753189,mistral-7b-instruct-v0.1@q8_0_105.txt
+11,",",3665, powerful,-7.48405,7.48405,mistral-7b-instruct-v0.1@q8_0_105.txt
+3665, powerful,15844, lyrics,-1.8098702,1.8098702,mistral-7b-instruct-v0.1@q8_0_105.txt
+15844, lyrics,11,",",-0.6523049,0.6523049,mistral-7b-instruct-v0.1@q8_0_105.txt
+11,",",290, and,-0.71128196,0.71128196,mistral-7b-instruct-v0.1@q8_0_105.txt
+290, and,26758, energetic,-6.2092648,6.2092648,mistral-7b-instruct-v0.1@q8_0_105.txt
+26758, energetic,13289, performances,-2.598126,2.598126,mistral-7b-instruct-v0.1@q8_0_105.txt
+13289, performances,13,.,-0.7372987,0.7372987,mistral-7b-instruct-v0.1@q8_0_105.txt
+13,.,1867, What,-4.610697,4.610697,mistral-7b-instruct-v0.1@q8_0_105.txt
+1867, What,466, do,-2.781917,2.781917,mistral-7b-instruct-v0.1@q8_0_105.txt
+466, do,345, you,-0.5325104,0.5325104,mistral-7b-instruct-v0.1@q8_0_105.txt
+345, you,588, like,-5.355423,5.355423,mistral-7b-instruct-v0.1@q8_0_105.txt
+588, like,749, most,-2.015618,2.015618,mistral-7b-instruct-v0.1@q8_0_105.txt
+749, most,546, about,-0.14155756,0.14155756,mistral-7b-instruct-v0.1@q8_0_105.txt
+546, about,340, it,-1.8121802,1.8121802,mistral-7b-instruct-v0.1@q8_0_105.txt
+340, it,1701,"?""",-0.5006943,0.5006943,mistral-7b-instruct-v0.1@q8_0_105.txt

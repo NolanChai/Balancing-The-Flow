@@ -1,0 +1,15 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.607984,4.607984,mistral-7b-instruct-v0.1@q8_0_54.txt
+40,I,1183,'ll,-3.981686,3.981686,mistral-7b-instruct-v0.1@q8_0_54.txt
+1183,'ll,307, be,-1.9236494,1.9236494,mistral-7b-instruct-v0.1@q8_0_54.txt
+307, be,1654, sure,-4.086458,4.086458,mistral-7b-instruct-v0.1@q8_0_54.txt
+1654, sure,284, to,-0.032631617,0.032631617,mistral-7b-instruct-v0.1@q8_0_54.txt
+284, to,900, set,-6.669922,6.669922,mistral-7b-instruct-v0.1@q8_0_54.txt
+900, set,616, my,-2.42717,2.42717,mistral-7b-instruct-v0.1@q8_0_54.txt
+616, my,10436, alarm,-4.8269725,4.8269725,mistral-7b-instruct-v0.1@q8_0_54.txt
+10436, alarm,290, and,-2.9550467,2.9550467,mistral-7b-instruct-v0.1@q8_0_54.txt
+290, and,1282, come,-4.2965674,4.2965674,mistral-7b-instruct-v0.1@q8_0_54.txt
+1282, come,736, back,-0.8951077,0.8951077,mistral-7b-instruct-v0.1@q8_0_54.txt
+736, back,319, on,-3.9893193,3.9893193,mistral-7b-instruct-v0.1@q8_0_54.txt
+319, on,640, time,-0.91157156,0.91157156,mistral-7b-instruct-v0.1@q8_0_54.txt
+640, time,526,".""",-1.7218941,1.7218941,mistral-7b-instruct-v0.1@q8_0_54.txt

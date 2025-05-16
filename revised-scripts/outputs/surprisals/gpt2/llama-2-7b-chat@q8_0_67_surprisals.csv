@@ -1,0 +1,33 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_67.txt
+40,I,760, know,-3.7952335,3.7952335,llama-2-7b-chat@q8_0_67.txt
+760, know,11,",",-3.3245723,3.3245723,llama-2-7b-chat@q8_0_67.txt
+11,",",826, right,-4.54517,4.54517,llama-2-7b-chat@q8_0_67.txt
+826, right,30,?,-0.9073931,0.9073931,llama-2-7b-chat@q8_0_67.txt
+30,?,11075, Everyone,-6.111396,6.111396,llama-2-7b-chat@q8_0_67.txt
+11075, Everyone,338,'s,-1.8948416,1.8948416,llama-2-7b-chat@q8_0_67.txt
+338,'s,587, been,-3.2745025,3.2745025,llama-2-7b-chat@q8_0_67.txt
+587, been,374, r,-7.9470096,7.9470096,llama-2-7b-chat@q8_0_67.txt
+374, r,2703,aving,-1.5136534,1.5136534,llama-2-7b-chat@q8_0_67.txt
+2703,aving,546, about,-0.07042653,0.07042653,llama-2-7b-chat@q8_0_67.txt
+546, about,340, it,-2.0778828,2.0778828,llama-2-7b-chat@q8_0_67.txt
+340, it,13,.,-1.5069647,1.5069647,llama-2-7b-chat@q8_0_67.txt
+13,.,314, I,-1.8884338,1.8884338,llama-2-7b-chat@q8_0_67.txt
+314, I,3521, couldn,-6.300789,6.300789,llama-2-7b-chat@q8_0_67.txt
+3521, couldn,470,'t,-0.0003740088,0.0003740088,llama-2-7b-chat@q8_0_67.txt
+470,'t,4180, resist,-4.544837,4.544837,llama-2-7b-chat@q8_0_67.txt
+4180, resist,262, the,-3.244389,3.244389,llama-2-7b-chat@q8_0_67.txt
+262, the,29062, temptation,-2.551134,2.551134,llama-2-7b-chat@q8_0_67.txt
+29062, temptation,284, to,-0.7590941,0.7590941,llama-2-7b-chat@q8_0_67.txt
+284, to,2198, check,-5.4312096,5.4312096,llama-2-7b-chat@q8_0_67.txt
+2198, check,340, it,-1.1260755,1.1260755,llama-2-7b-chat@q8_0_67.txt
+340, it,503, out,-0.06966441,0.06966441,llama-2-7b-chat@q8_0_67.txt
+503, out,290, and,-3.1404781,3.1404781,llama-2-7b-chat@q8_0_67.txt
+290, and,766, see,-1.4064827,1.4064827,llama-2-7b-chat@q8_0_67.txt
+766, see,644, what,-1.1790473,1.1790473,llama-2-7b-chat@q8_0_67.txt
+644, what,477, all,-4.6633472,4.6633472,llama-2-7b-chat@q8_0_67.txt
+477, all,262, the,-0.47426468,0.47426468,llama-2-7b-chat@q8_0_67.txt
+262, the,34297, fuss,-0.109563634,0.109563634,llama-2-7b-chat@q8_0_67.txt
+34297, fuss,318, is,-1.0271299,1.0271299,llama-2-7b-chat@q8_0_67.txt
+318, is,546, about,-0.15364002,0.15364002,llama-2-7b-chat@q8_0_67.txt
+546, about,526,".""",-1.0219737,1.0219737,llama-2-7b-chat@q8_0_67.txt

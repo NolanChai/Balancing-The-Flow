@@ -1,0 +1,105 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",10248,Good,-9.254433,9.254433,mistral-7b-instruct-v0.1@q8_0_27.txt
+10248,Good,3329, morning,-2.3345814,2.3345814,mistral-7b-instruct-v0.1@q8_0_27.txt
+3329, morning,11,",",-0.95963687,0.95963687,mistral-7b-instruct-v0.1@q8_0_27.txt
+11,",",6253, doctor,-8.169039,8.169039,mistral-7b-instruct-v0.1@q8_0_27.txt
+6253, doctor,13,.,-1.4024751,1.4024751,mistral-7b-instruct-v0.1@q8_0_27.txt
+13,.,1680, Can,-4.687474,4.687474,mistral-7b-instruct-v0.1@q8_0_27.txt
+1680, Can,345, you,-0.78515863,0.78515863,mistral-7b-instruct-v0.1@q8_0_27.txt
+345, you,1037, help,-2.4163744,2.4163744,mistral-7b-instruct-v0.1@q8_0_27.txt
+1037, help,502, me,-0.23621774,0.23621774,mistral-7b-instruct-v0.1@q8_0_27.txt
+502, me,351, with,-1.4863044,1.4863044,mistral-7b-instruct-v0.1@q8_0_27.txt
+351, with,616, my,-1.615007,1.615007,mistral-7b-instruct-v0.1@q8_0_27.txt
+616, my,24902, headache,-4.3212056,4.3212056,mistral-7b-instruct-v0.1@q8_0_27.txt
+24902, headache,1701,"?""",-0.46600533,0.46600533,mistral-7b-instruct-v0.1@q8_0_27.txt
+1701,"?""",198,"
+",-0.5887576,0.5887576,mistral-7b-instruct-v0.1@q8_0_27.txt
+198,"
+",198,"
+",-0.013693325,0.013693325,mistral-7b-instruct-v0.1@q8_0_27.txt
+198,"
+",1,"""",-0.75484717,0.75484717,mistral-7b-instruct-v0.1@q8_0_27.txt
+1,"""",40,I,-2.3436074,2.3436074,mistral-7b-instruct-v0.1@q8_0_27.txt
+40,I,766, see,-4.904661,4.904661,mistral-7b-instruct-v0.1@q8_0_27.txt
+766, see,13,.,-1.1268125,1.1268125,mistral-7b-instruct-v0.1@q8_0_27.txt
+13,.,8192, Have,-5.291395,5.291395,mistral-7b-instruct-v0.1@q8_0_27.txt
+8192, Have,345, you,-0.3730521,0.3730521,mistral-7b-instruct-v0.1@q8_0_27.txt
+345, you,587, been,-1.87738,1.87738,mistral-7b-instruct-v0.1@q8_0_27.txt
+587, been,48308, coughing,-7.78338,7.78338,mistral-7b-instruct-v0.1@q8_0_27.txt
+48308, coughing,510, up,-2.0940785,2.0940785,mistral-7b-instruct-v0.1@q8_0_27.txt
+510, up,597, any,-2.595645,2.595645,mistral-7b-instruct-v0.1@q8_0_27.txt
+597, any,599, sp,-7.045798,7.045798,mistral-7b-instruct-v0.1@q8_0_27.txt
+599, sp,315,ut,-1.6115035,1.6115035,mistral-7b-instruct-v0.1@q8_0_27.txt
+315,ut,388,um,-0.06636404,0.06636404,mistral-7b-instruct-v0.1@q8_0_27.txt
+388,um,30,?,-2.3657787,2.3657787,mistral-7b-instruct-v0.1@q8_0_27.txt
+30,?,632, It,-2.3381996,2.3381996,mistral-7b-instruct-v0.1@q8_0_27.txt
+632, It,561, would,-5.505249,5.505249,mistral-7b-instruct-v0.1@q8_0_27.txt
+561, would,307, be,-0.5968382,0.5968382,mistral-7b-instruct-v0.1@q8_0_27.txt
+307, be,7613, helpful,-3.455787,3.455787,mistral-7b-instruct-v0.1@q8_0_27.txt
+7613, helpful,284, to,-1.5526652,1.5526652,mistral-7b-instruct-v0.1@q8_0_27.txt
+284, to,1011, take,-2.8946397,2.8946397,mistral-7b-instruct-v0.1@q8_0_27.txt
+1011, take,257, a,-0.68061936,0.68061936,mistral-7b-instruct-v0.1@q8_0_27.txt
+257, a,6291, sample,-5.28012,5.28012,mistral-7b-instruct-v0.1@q8_0_27.txt
+6291, sample,290, and,-2.7574499,2.7574499,mistral-7b-instruct-v0.1@q8_0_27.txt
+290, and,1332, test,-3.4896235,3.4896235,mistral-7b-instruct-v0.1@q8_0_27.txt
+1332, test,340, it,-0.8896733,0.8896733,mistral-7b-instruct-v0.1@q8_0_27.txt
+340, it,329, for,-1.6070224,1.6070224,mistral-7b-instruct-v0.1@q8_0_27.txt
+329, for,262, the,-2.4468884,2.4468884,mistral-7b-instruct-v0.1@q8_0_27.txt
+262, the,4931, presence,-0.95365626,0.95365626,mistral-7b-instruct-v0.1@q8_0_27.txt
+4931, presence,286, of,-0.04196171,0.04196171,mistral-7b-instruct-v0.1@q8_0_27.txt
+286, of,20547, viruses,-7.3638487,7.3638487,mistral-7b-instruct-v0.1@q8_0_27.txt
+20547, viruses,526,".""",-1.443172,1.443172,mistral-7b-instruct-v0.1@q8_0_27.txt
+526,".""",198,"
+",-0.17863502,0.17863502,mistral-7b-instruct-v0.1@q8_0_27.txt
+198,"
+",198,"
+",-0.00031466302,0.00031466302,mistral-7b-instruct-v0.1@q8_0_27.txt
+198,"
+",464,The,-3.5853732,3.5853732,mistral-7b-instruct-v0.1@q8_0_27.txt
+464,The,6253, doctor,-0.7816751,0.7816751,mistral-7b-instruct-v0.1@q8_0_27.txt
+6253, doctor,481, will,-7.86121,7.86121,mistral-7b-instruct-v0.1@q8_0_27.txt
+481, will,1884, likely,-5.262044,5.262044,mistral-7b-instruct-v0.1@q8_0_27.txt
+1884, likely,32651, prescribe,-5.3217983,5.3217983,mistral-7b-instruct-v0.1@q8_0_27.txt
+32651, prescribe,14103, medication,-5.0053253,5.0053253,mistral-7b-instruct-v0.1@q8_0_27.txt
+14103, medication,284, to,-1.1167965,1.1167965,mistral-7b-instruct-v0.1@q8_0_27.txt
+284, to,30885, alleviate,-3.8611417,3.8611417,mistral-7b-instruct-v0.1@q8_0_27.txt
+30885, alleviate,7460, symptoms,-3.3183482,3.3183482,mistral-7b-instruct-v0.1@q8_0_27.txt
+7460, symptoms,290, and,-2.593546,2.593546,mistral-7b-instruct-v0.1@q8_0_27.txt
+290, and,18595, advise,-5.9979334,5.9979334,mistral-7b-instruct-v0.1@q8_0_27.txt
+18595, advise,262, the,-1.6858883,1.6858883,mistral-7b-instruct-v0.1@q8_0_27.txt
+262, the,5827, patient,-0.29030097,0.29030097,mistral-7b-instruct-v0.1@q8_0_27.txt
+5827, patient,284, to,-0.5644631,0.5644631,mistral-7b-instruct-v0.1@q8_0_27.txt
+284, to,1334, rest,-3.8340087,3.8340087,mistral-7b-instruct-v0.1@q8_0_27.txt
+1334, rest,290, and,-2.2351723,2.2351723,mistral-7b-instruct-v0.1@q8_0_27.txt
+290, and,2652, stay,-5.8662524,5.8662524,mistral-7b-instruct-v0.1@q8_0_27.txt
+2652, stay,7409, hyd,-2.463947,2.463947,mistral-7b-instruct-v0.1@q8_0_27.txt
+7409, hyd,4111,rated,-0.0006491223,0.0006491223,mistral-7b-instruct-v0.1@q8_0_27.txt
+4111,rated,13,.,-0.3947343,0.3947343,mistral-7b-instruct-v0.1@q8_0_27.txt
+13,.,632, It,-4.173256,4.173256,mistral-7b-instruct-v0.1@q8_0_27.txt
+632, It,338,'s,-2.0130777,2.0130777,mistral-7b-instruct-v0.1@q8_0_27.txt
+338,'s,1593, important,-2.5532043,2.5532043,mistral-7b-instruct-v0.1@q8_0_27.txt
+1593, important,329, for,-2.3709521,2.3709521,mistral-7b-instruct-v0.1@q8_0_27.txt
+329, for,262, the,-0.877158,0.877158,mistral-7b-instruct-v0.1@q8_0_27.txt
+262, the,5827, patient,-0.49084926,0.49084926,mistral-7b-instruct-v0.1@q8_0_27.txt
+5827, patient,284, to,-0.15441403,0.15441403,mistral-7b-instruct-v0.1@q8_0_27.txt
+284, to,1061, follow,-5.5919437,5.5919437,mistral-7b-instruct-v0.1@q8_0_27.txt
+1061, follow,262, the,-1.1219059,1.1219059,mistral-7b-instruct-v0.1@q8_0_27.txt
+262, the,6253, doctor,-1.9686295,1.9686295,mistral-7b-instruct-v0.1@q8_0_27.txt
+6253, doctor,338,'s,-0.095079444,0.095079444,mistral-7b-instruct-v0.1@q8_0_27.txt
+338,'s,7729, instructions,-0.74805695,0.74805695,mistral-7b-instruct-v0.1@q8_0_27.txt
+7729, instructions,290, and,-1.5397097,1.5397097,mistral-7b-instruct-v0.1@q8_0_27.txt
+290, and,5380, seek,-5.935004,5.935004,mistral-7b-instruct-v0.1@q8_0_27.txt
+5380, seek,3315, medical,-0.81622535,0.81622535,mistral-7b-instruct-v0.1@q8_0_27.txt
+3315, medical,3241, attention,-1.1445105,1.1445105,mistral-7b-instruct-v0.1@q8_0_27.txt
+3241, attention,611, if,-1.681293,1.681293,mistral-7b-instruct-v0.1@q8_0_27.txt
+611, if,7460, symptoms,-3.589386,3.589386,mistral-7b-instruct-v0.1@q8_0_27.txt
+7460, symptoms,47058, worsen,-2.0041416,2.0041416,mistral-7b-instruct-v0.1@q8_0_27.txt
+47058, worsen,393, or,-2.3233526,2.3233526,mistral-7b-instruct-v0.1@q8_0_27.txt
+393, or,21160, persist,-4.6446924,4.6446924,mistral-7b-instruct-v0.1@q8_0_27.txt
+21160, persist,3675, beyond,-4.668469,4.668469,mistral-7b-instruct-v0.1@q8_0_27.txt
+3675, beyond,257, a,-1.7571692,1.7571692,mistral-7b-instruct-v0.1@q8_0_27.txt
+257, a,1728, certain,-1.9432931,1.9432931,mistral-7b-instruct-v0.1@q8_0_27.txt
+1728, certain,2278, period,-4.0688057,4.0688057,mistral-7b-instruct-v0.1@q8_0_27.txt
+2278, period,286, of,-0.2871192,0.2871192,mistral-7b-instruct-v0.1@q8_0_27.txt
+286, of,640, time,-0.086564474,0.086564474,mistral-7b-instruct-v0.1@q8_0_27.txt
+640, time,13,.,-0.13432625,0.13432625,mistral-7b-instruct-v0.1@q8_0_27.txt

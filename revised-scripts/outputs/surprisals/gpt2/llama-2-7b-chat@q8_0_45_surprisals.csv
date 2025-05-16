@@ -1,0 +1,17 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",45675,Excellent,-11.843319,11.843319,llama-2-7b-chat@q8_0_45.txt
+45675,Excellent,11,",",-2.4046097,2.4046097,llama-2-7b-chat@q8_0_45.txt
+11,",",314, I,-2.350245,2.350245,llama-2-7b-chat@q8_0_45.txt
+314, I,1183,'ll,-2.4383776,2.4383776,llama-2-7b-chat@q8_0_45.txt
+1183,'ll,651, get,-3.4693658,3.4693658,llama-2-7b-chat@q8_0_45.txt
+651, get,326, that,-3.8367546,3.8367546,llama-2-7b-chat@q8_0_45.txt
+326, that,3492, ready,-7.2102733,7.2102733,llama-2-7b-chat@q8_0_45.txt
+3492, ready,329, for,-2.0691574,2.0691574,llama-2-7b-chat@q8_0_45.txt
+329, for,345, you,-0.7666869,0.7666869,llama-2-7b-chat@q8_0_45.txt
+345, you,13,.,-2.6326723,2.6326723,llama-2-7b-chat@q8_0_45.txt
+13,.,21035, Anything,-7.5398073,7.5398073,llama-2-7b-chat@q8_0_45.txt
+21035, Anything,284, to,-3.2856503,3.2856503,llama-2-7b-chat@q8_0_45.txt
+284, to,4144, drink,-4.7535987,4.7535987,llama-2-7b-chat@q8_0_45.txt
+4144, drink,13769, besides,-8.166242,8.166242,llama-2-7b-chat@q8_0_45.txt
+13769, besides,8887, tea,-4.3974953,4.3974953,llama-2-7b-chat@q8_0_45.txt
+8887, tea,1701,"?""",-1.8693968,1.8693968,llama-2-7b-chat@q8_0_45.txt

@@ -1,0 +1,28 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",314, I,-4.8942,4.8942,mistral-7b-instruct-v0.1@q8_0_185.txt
+314, I,1183,'ll,-4.11302,4.11302,mistral-7b-instruct-v0.1@q8_0_185.txt
+1183,'ll,1011, take,-3.271226,3.271226,mistral-7b-instruct-v0.1@q8_0_185.txt
+1011, take,257, a,-2.3970299,2.3970299,mistral-7b-instruct-v0.1@q8_0_185.txt
+257, a,2270, break,-3.2546785,3.2546785,mistral-7b-instruct-v0.1@q8_0_185.txt
+2270, break,826, right,-5.065028,5.065028,mistral-7b-instruct-v0.1@q8_0_185.txt
+826, right,1497, away,-2.6777902,2.6777902,mistral-7b-instruct-v0.1@q8_0_185.txt
+1497, away,0,!,-4.7309723,4.7309723,mistral-7b-instruct-v0.1@q8_0_185.txt
+0,!,843, And,-4.3984547,4.3984547,mistral-7b-instruct-v0.1@q8_0_185.txt
+843, And,5176, thanks,-6.6298184,6.6298184,mistral-7b-instruct-v0.1@q8_0_185.txt
+5176, thanks,11,",",-3.2047193,3.2047193,mistral-7b-instruct-v0.1@q8_0_185.txt
+11,",",314, I,-4.0126667,4.0126667,mistral-7b-instruct-v0.1@q8_0_185.txt
+314, I,1107, really,-3.2801306,3.2801306,mistral-7b-instruct-v0.1@q8_0_185.txt
+1107, really,2622, needed,-6.8548226,6.8548226,mistral-7b-instruct-v0.1@q8_0_185.txt
+2622, needed,326, that,-2.0771074,2.0771074,mistral-7b-instruct-v0.1@q8_0_185.txt
+326, that,6891, coffee,-6.472826,6.472826,mistral-7b-instruct-v0.1@q8_0_185.txt
+6891, coffee,13,.,-1.3150765,1.3150765,mistral-7b-instruct-v0.1@q8_0_185.txt
+13,.,2735, Now,-5.4297595,5.4297595,mistral-7b-instruct-v0.1@q8_0_185.txt
+2735, Now,314, I,-1.6161541,1.6161541,mistral-7b-instruct-v0.1@q8_0_185.txt
+314, I,460, can,-2.4125934,2.4125934,mistral-7b-instruct-v0.1@q8_0_185.txt
+460, can,3443, finally,-3.8196223,3.8196223,mistral-7b-instruct-v0.1@q8_0_185.txt
+3443, finally,8960, relax,-2.5291953,2.5291953,mistral-7b-instruct-v0.1@q8_0_185.txt
+8960, relax,290, and,-1.3230962,1.3230962,mistral-7b-instruct-v0.1@q8_0_185.txt
+290, and,4929, catch,-6.192968,6.192968,mistral-7b-instruct-v0.1@q8_0_185.txt
+4929, catch,616, my,-1.7889853,1.7889853,mistral-7b-instruct-v0.1@q8_0_185.txt
+616, my,8033, breath,-0.21636978,0.21636978,mistral-7b-instruct-v0.1@q8_0_185.txt
+8033, breath,526,".""",-2.366219,2.366219,mistral-7b-instruct-v0.1@q8_0_185.txt

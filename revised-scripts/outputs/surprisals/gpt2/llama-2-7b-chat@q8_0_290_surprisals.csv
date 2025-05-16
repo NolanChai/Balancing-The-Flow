@@ -1,0 +1,31 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_290.txt
+40,I,1833, understand,-5.473548,5.473548,llama-2-7b-chat@q8_0_290.txt
+1833, understand,13,.,-3.8244262,3.8244262,llama-2-7b-chat@q8_0_290.txt
+13,.,632, It,-2.526833,2.526833,llama-2-7b-chat@q8_0_290.txt
+632, It,338,'s,-0.53252405,0.53252405,llama-2-7b-chat@q8_0_290.txt
+338,'s,407, not,-1.9692428,1.9692428,llama-2-7b-chat@q8_0_290.txt
+407, not,2562, easy,-4.2123055,4.2123055,llama-2-7b-chat@q8_0_290.txt
+2562, easy,284, to,-1.3857691,1.3857691,llama-2-7b-chat@q8_0_290.txt
+284, to,651, get,-2.3464649,2.3464649,llama-2-7b-chat@q8_0_290.txt
+651, get,3988, kids,-6.1132946,6.1132946,llama-2-7b-chat@q8_0_290.txt
+3988, kids,284, to,-0.8188209,0.8188209,llama-2-7b-chat@q8_0_290.txt
+284, to,6004, listen,-5.018256,5.018256,llama-2-7b-chat@q8_0_290.txt
+6004, listen,290, and,-3.226238,3.226238,llama-2-7b-chat@q8_0_290.txt
+290, and,22389, obey,-7.0008974,7.0008974,llama-2-7b-chat@q8_0_290.txt
+22389, obey,11,",",-2.2656343,2.2656343,llama-2-7b-chat@q8_0_290.txt
+11,",",2592, especially,-2.5343745,2.5343745,llama-2-7b-chat@q8_0_290.txt
+2592, especially,618, when,-1.0915736,1.0915736,llama-2-7b-chat@q8_0_290.txt
+618, when,484, they,-1.1164123,1.1164123,llama-2-7b-chat@q8_0_290.txt
+484, they,821,'re,-0.64918524,0.64918524,llama-2-7b-chat@q8_0_290.txt
+821,'re,355, as,-6.434171,6.434171,llama-2-7b-chat@q8_0_290.txt
+355, as,24444, stubborn,-5.533742,5.533742,llama-2-7b-chat@q8_0_290.txt
+24444, stubborn,355, as,-0.3957493,0.3957493,llama-2-7b-chat@q8_0_290.txt
+355, as,6164, mine,-5.1346083,5.1346083,llama-2-7b-chat@q8_0_290.txt
+6164, mine,553,",""",-2.5830388,2.5830388,llama-2-7b-chat@q8_0_290.txt
+553,",""",673, she,-1.9378029,1.9378029,llama-2-7b-chat@q8_0_290.txt
+673, she,531, said,-0.4241933,0.4241933,llama-2-7b-chat@q8_0_290.txt
+531, said,351, with,-5.697445,5.697445,llama-2-7b-chat@q8_0_290.txt
+351, with,257, a,-0.18796302,0.18796302,llama-2-7b-chat@q8_0_290.txt
+257, a,19680, sigh,-3.6711447,3.6711447,llama-2-7b-chat@q8_0_290.txt
+19680, sigh,13,.,-0.1580469,0.1580469,llama-2-7b-chat@q8_0_290.txt

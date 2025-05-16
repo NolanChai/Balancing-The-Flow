@@ -1,0 +1,27 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_162.txt
+40,I,1833, understand,-5.473548,5.473548,llama-2-7b-chat@q8_0_162.txt
+1833, understand,534, your,-3.0666595,3.0666595,llama-2-7b-chat@q8_0_162.txt
+534, your,6650, perspective,-5.8946314,5.8946314,llama-2-7b-chat@q8_0_162.txt
+6650, perspective,11,",",-1.6592796,1.6592796,llama-2-7b-chat@q8_0_162.txt
+11,",",475, but,-0.6729059,0.6729059,llama-2-7b-chat@q8_0_162.txt
+475, but,314, I,-1.2099448,1.2099448,llama-2-7b-chat@q8_0_162.txt
+314, I,991, still,-4.8256187,4.8256187,llama-2-7b-chat@q8_0_162.txt
+991, still,4702, prefer,-5.3413997,5.3413997,llama-2-7b-chat@q8_0_162.txt
+4702, prefer,18821, potatoes,-11.44411,11.44411,llama-2-7b-chat@q8_0_162.txt
+18821, potatoes,13,.,-2.103962,2.103962,llama-2-7b-chat@q8_0_162.txt
+13,.,1119, They,-3.4723792,3.4723792,llama-2-7b-chat@q8_0_162.txt
+1119, They,423, have,-3.284976,3.284976,llama-2-7b-chat@q8_0_162.txt
+423, have,257, a,-1.103258,1.103258,llama-2-7b-chat@q8_0_162.txt
+257, a,3748, unique,-4.7890916,4.7890916,llama-2-7b-chat@q8_0_162.txt
+3748, unique,9565, flavor,-0.6839384,0.6839384,llama-2-7b-chat@q8_0_162.txt
+9565, flavor,326, that,-2.0369904,2.0369904,llama-2-7b-chat@q8_0_162.txt
+326, that,314, I,-1.7917738,1.7917738,llama-2-7b-chat@q8_0_162.txt
+314, I,1064, find,-2.5608585,2.5608585,llama-2-7b-chat@q8_0_162.txt
+1064, find,517, more,-3.7362592,3.7362592,llama-2-7b-chat@q8_0_162.txt
+517, more,20050, enjoyable,-3.972426,3.972426,llama-2-7b-chat@q8_0_162.txt
+20050, enjoyable,621, than,-0.9351595,0.9351595,llama-2-7b-chat@q8_0_162.txt
+621, than,5935, egg,-8.336863,8.336863,llama-2-7b-chat@q8_0_162.txt
+5935, egg,489,pl,-3.0429358,3.0429358,llama-2-7b-chat@q8_0_162.txt
+489,pl,1187,ants,-0.0034552654,0.0034552654,llama-2-7b-chat@q8_0_162.txt
+1187,ants,526,".""",-1.450212,1.450212,llama-2-7b-chat@q8_0_162.txt

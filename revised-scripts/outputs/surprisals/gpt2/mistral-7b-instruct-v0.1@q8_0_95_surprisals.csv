@@ -1,0 +1,86 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1320, That,-7.8740506,7.8740506,mistral-7b-instruct-v0.1@q8_0_95.txt
+1320, That,338,'s,-1.3639714,1.3639714,mistral-7b-instruct-v0.1@q8_0_95.txt
+338,'s,1165, too,-6.4629564,6.4629564,mistral-7b-instruct-v0.1@q8_0_95.txt
+1165, too,2089, bad,-0.81321937,0.81321937,mistral-7b-instruct-v0.1@q8_0_95.txt
+2089, bad,11,",",-1.535616,1.535616,mistral-7b-instruct-v0.1@q8_0_95.txt
+11,",",475, but,-2.5388727,2.5388727,mistral-7b-instruct-v0.1@q8_0_95.txt
+475, but,314, I,-1.9239221,1.9239221,mistral-7b-instruct-v0.1@q8_0_95.txt
+314, I,2911, hope,-4.374057,4.374057,mistral-7b-instruct-v0.1@q8_0_95.txt
+2911, hope,345, you,-1.8149953,1.8149953,mistral-7b-instruct-v0.1@q8_0_95.txt
+345, you,2883, enjoy,-3.6953552,3.6953552,mistral-7b-instruct-v0.1@q8_0_95.txt
+2883, enjoy,534, your,-3.0057585,3.0057585,mistral-7b-instruct-v0.1@q8_0_95.txt
+534, your,8073, dinner,-6.6815434,6.6815434,mistral-7b-instruct-v0.1@q8_0_95.txt
+8073, dinner,351, with,-2.7963657,2.7963657,mistral-7b-instruct-v0.1@q8_0_95.txt
+351, with,534, your,-4.1965165,4.1965165,mistral-7b-instruct-v0.1@q8_0_95.txt
+534, your,3397, parents,-5.5365267,5.5365267,mistral-7b-instruct-v0.1@q8_0_95.txt
+3397, parents,13,.,-0.99684626,0.99684626,mistral-7b-instruct-v0.1@q8_0_95.txt
+13,.,3914, Let,-5.6121616,5.6121616,mistral-7b-instruct-v0.1@q8_0_95.txt
+3914, Let,338,'s,-0.46675783,0.46675783,mistral-7b-instruct-v0.1@q8_0_95.txt
+338,'s,1410, plan,-7.456979,7.456979,mistral-7b-instruct-v0.1@q8_0_95.txt
+1410, plan,1223, something,-3.2306442,3.2306442,mistral-7b-instruct-v0.1@q8_0_95.txt
+1223, something,329, for,-2.5366664,2.5366664,mistral-7b-instruct-v0.1@q8_0_95.txt
+329, for,262, the,-1.9224246,1.9224246,mistral-7b-instruct-v0.1@q8_0_95.txt
+262, the,5041, weekend,-2.5424266,2.5424266,mistral-7b-instruct-v0.1@q8_0_95.txt
+5041, weekend,2474,"!""",-4.544122,4.544122,mistral-7b-instruct-v0.1@q8_0_95.txt
+2474,"!""",198,"
+",-0.7215603,0.7215603,mistral-7b-instruct-v0.1@q8_0_95.txt
+198,"
+",198,"
+",-0.12535107,0.12535107,mistral-7b-instruct-v0.1@q8_0_95.txt
+198,"
+",1,"""",-1.2437028,1.2437028,mistral-7b-instruct-v0.1@q8_0_95.txt
+1,"""",314, I,-8.256319,8.256319,mistral-7b-instruct-v0.1@q8_0_95.txt
+314, I,373, was,-4.3802967,4.3802967,mistral-7b-instruct-v0.1@q8_0_95.txt
+373, was,3612, thinking,-2.1136017,2.1136017,mistral-7b-instruct-v0.1@q8_0_95.txt
+3612, thinking,546, about,-1.1826252,1.1826252,mistral-7b-instruct-v0.1@q8_0_95.txt
+546, about,326, that,-2.5416918,2.5416918,mistral-7b-instruct-v0.1@q8_0_95.txt
+326, that,649, new,-8.781234,8.781234,mistral-7b-instruct-v0.1@q8_0_95.txt
+649, new,2223, action,-7.9389763,7.9389763,mistral-7b-instruct-v0.1@q8_0_95.txt
+2223, action,12,-,-3.799388,3.799388,mistral-7b-instruct-v0.1@q8_0_95.txt
+12,-,324,ad,-3.7767262,3.7767262,mistral-7b-instruct-v0.1@q8_0_95.txt
+324,ad,5388,venture,-0.032159247,0.032159247,mistral-7b-instruct-v0.1@q8_0_95.txt
+5388,venture,2646, film,-4.015237,4.015237,mistral-7b-instruct-v0.1@q8_0_95.txt
+2646, film,11,",",-1.8589246,1.8589246,mistral-7b-instruct-v0.1@q8_0_95.txt
+11,",",705, ',-3.841216,3.841216,mistral-7b-instruct-v0.1@q8_0_95.txt
+705, ',464,The,-2.102516,2.102516,mistral-7b-instruct-v0.1@q8_0_95.txt
+464,The,8843, Shadow,-6.477357,6.477357,mistral-7b-instruct-v0.1@q8_0_95.txt
+8843, Shadow,286, of,-1.4125526,1.4125526,mistral-7b-instruct-v0.1@q8_0_95.txt
+286, of,25939, Tomorrow,-7.2944074,7.2944074,mistral-7b-instruct-v0.1@q8_0_95.txt
+25939, Tomorrow,3256,"',",-2.092968,2.092968,mistral-7b-instruct-v0.1@q8_0_95.txt
+3256,"',",475, but,-1.3888131,1.3888131,mistral-7b-instruct-v0.1@q8_0_95.txt
+475, but,340, it,-2.3905926,2.3905926,mistral-7b-instruct-v0.1@q8_0_95.txt
+340, it,338,'s,-1.2027007,1.2027007,mistral-7b-instruct-v0.1@q8_0_95.txt
+338,'s,2702, sold,-8.516557,8.516557,mistral-7b-instruct-v0.1@q8_0_95.txt
+2702, sold,503, out,-0.75289357,0.75289357,mistral-7b-instruct-v0.1@q8_0_95.txt
+503, out,13,.,-2.0338423,2.0338423,mistral-7b-instruct-v0.1@q8_0_95.txt
+13,.,1867, What,-3.8563368,3.8563368,mistral-7b-instruct-v0.1@q8_0_95.txt
+1867, What,3807, movie,-6.2474065,6.2474065,mistral-7b-instruct-v0.1@q8_0_95.txt
+3807, movie,547, were,-4.890217,4.890217,mistral-7b-instruct-v0.1@q8_0_95.txt
+547, were,345, you,-0.05629388,0.05629388,mistral-7b-instruct-v0.1@q8_0_95.txt
+345, you,6402, considering,-5.5921097,5.5921097,mistral-7b-instruct-v0.1@q8_0_95.txt
+6402, considering,1701,"?""",-1.1370764,1.1370764,mistral-7b-instruct-v0.1@q8_0_95.txt
+1701,"?""",198,"
+",-0.3717783,0.3717783,mistral-7b-instruct-v0.1@q8_0_95.txt
+198,"
+",198,"
+",-0.00027223694,0.00027223694,mistral-7b-instruct-v0.1@q8_0_95.txt
+198,"
+",1,"""",-0.32432953,0.32432953,mistral-7b-instruct-v0.1@q8_0_95.txt
+1,"""",1320, That,-4.7360554,4.7360554,mistral-7b-instruct-v0.1@q8_0_95.txt
+1320, That,338,'s,-0.73124135,0.73124135,mistral-7b-instruct-v0.1@q8_0_95.txt
+338,'s,1107, really,-4.6394973,4.6394973,mistral-7b-instruct-v0.1@q8_0_95.txt
+1107, really,3499, interesting,-3.0060272,3.0060272,mistral-7b-instruct-v0.1@q8_0_95.txt
+3499, interesting,11,",",-1.5383887,1.5383887,mistral-7b-instruct-v0.1@q8_0_95.txt
+11,",",5335, Mary,-9.496494,9.496494,mistral-7b-instruct-v0.1@q8_0_95.txt
+5335, Mary,0,!,-3.2617617,3.2617617,mistral-7b-instruct-v0.1@q8_0_95.txt
+0,!,2141, Do,-4.9472356,4.9472356,mistral-7b-instruct-v0.1@q8_0_95.txt
+2141, Do,345, you,-0.10053135,0.10053135,mistral-7b-instruct-v0.1@q8_0_95.txt
+345, you,760, know,-2.2583592,2.2583592,mistral-7b-instruct-v0.1@q8_0_95.txt
+760, know,618, when,-4.7796288,4.7796288,mistral-7b-instruct-v0.1@q8_0_95.txt
+618, when,262, the,-2.3007276,2.3007276,mistral-7b-instruct-v0.1@q8_0_95.txt
+262, the,3807, movie,-1.7799231,1.7799231,mistral-7b-instruct-v0.1@q8_0_95.txt
+3807, movie,481, will,-1.5502489,1.5502489,mistral-7b-instruct-v0.1@q8_0_95.txt
+481, will,307, be,-0.6578236,0.6578236,mistral-7b-instruct-v0.1@q8_0_95.txt
+307, be,4478, showing,-6.276455,6.276455,mistral-7b-instruct-v0.1@q8_0_95.txt
+4478, showing,1701,"?""",-1.5995443,1.5995443,mistral-7b-instruct-v0.1@q8_0_95.txt

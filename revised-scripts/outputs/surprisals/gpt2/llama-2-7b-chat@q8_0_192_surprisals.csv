@@ -1,0 +1,20 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_192.txt
+40,I,836, don,-2.6053379,2.6053379,llama-2-7b-chat@q8_0_192.txt
+836, don,470,'t,-0.00081446377,0.00081446377,llama-2-7b-chat@q8_0_192.txt
+470,'t,760, know,-1.3154542,1.3154542,llama-2-7b-chat@q8_0_192.txt
+760, know,11,",",-2.9462495,2.9462495,llama-2-7b-chat@q8_0_192.txt
+11,",",3863, maybe,-3.4074576,3.4074576,llama-2-7b-chat@q8_0_192.txt
+3863, maybe,356, we,-3.0753486,3.0753486,llama-2-7b-chat@q8_0_192.txt
+356, we,714, could,-2.9061592,2.9061592,llama-2-7b-chat@q8_0_192.txt
+714, could,1949, try,-3.307198,3.307198,llama-2-7b-chat@q8_0_192.txt
+1949, try,48733, brainstorm,-11.015119,11.015119,llama-2-7b-chat@q8_0_192.txt
+48733, brainstorm,278,ing,-0.102009155,0.102009155,llama-2-7b-chat@q8_0_192.txt
+278,ing,393, or,-5.142086,5.142086,llama-2-7b-chat@q8_0_192.txt
+393, or,1223, something,-0.58224994,0.58224994,llama-2-7b-chat@q8_0_192.txt
+1223, something,553,",""",-2.1995585,2.1995585,llama-2-7b-chat@q8_0_192.txt
+553,",""",262, the,-4.5136404,4.5136404,llama-2-7b-chat@q8_0_192.txt
+262, the,717, first,-5.855892,5.855892,llama-2-7b-chat@q8_0_192.txt
+717, first,1048, person,-2.7186842,2.7186842,llama-2-7b-chat@q8_0_192.txt
+1048, person,5220, suggested,-6.1223407,6.1223407,llama-2-7b-chat@q8_0_192.txt
+5220, suggested,13,.,-0.3051466,0.3051466,llama-2-7b-chat@q8_0_192.txt

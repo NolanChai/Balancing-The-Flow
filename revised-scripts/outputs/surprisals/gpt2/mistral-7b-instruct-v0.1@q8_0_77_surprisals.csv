@@ -1,0 +1,23 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1119, They,-7.7001424,7.7001424,mistral-7b-instruct-v0.1@q8_0_77.txt
+1119, They,1276, must,-5.1345463,5.1345463,mistral-7b-instruct-v0.1@q8_0_77.txt
+1276, must,423, have,-1.637921,1.637921,mistral-7b-instruct-v0.1@q8_0_77.txt
+423, have,3750, gone,-5.0449233,5.0449233,mistral-7b-instruct-v0.1@q8_0_77.txt
+3750, gone,284, to,-1.6856437,1.6856437,mistral-7b-instruct-v0.1@q8_0_77.txt
+284, to,262, the,-1.882086,1.882086,mistral-7b-instruct-v0.1@q8_0_77.txt
+262, the,3952, park,-6.6663284,6.6663284,mistral-7b-instruct-v0.1@q8_0_77.txt
+3952, park,393, or,-4.3609934,4.3609934,mistral-7b-instruct-v0.1@q8_0_77.txt
+393, or,1223, something,-1.6648287,1.6648287,mistral-7b-instruct-v0.1@q8_0_77.txt
+1223, something,13,.,-1.0018468,1.0018468,mistral-7b-instruct-v0.1@q8_0_77.txt
+13,.,383, The,-3.5052776,3.5052776,mistral-7b-instruct-v0.1@q8_0_77.txt
+383, The,6490, adults,-7.4546566,7.4546566,mistral-7b-instruct-v0.1@q8_0_77.txt
+6490, adults,2652, stay,-8.748706,8.748706,mistral-7b-instruct-v0.1@q8_0_77.txt
+2652, stay,2157, behind,-3.3526464,3.3526464,mistral-7b-instruct-v0.1@q8_0_77.txt
+2157, behind,290, and,-1.8841217,1.8841217,mistral-7b-instruct-v0.1@q8_0_77.txt
+290, and,1011, take,-4.025064,4.025064,mistral-7b-instruct-v0.1@q8_0_77.txt
+1011, take,1337, care,-0.59906644,0.59906644,mistral-7b-instruct-v0.1@q8_0_77.txt
+1337, care,286, of,-0.05594348,0.05594348,mistral-7b-instruct-v0.1@q8_0_77.txt
+286, of,262, the,-0.9714931,0.9714931,mistral-7b-instruct-v0.1@q8_0_77.txt
+262, the,7099, younger,-5.2220716,5.2220716,mistral-7b-instruct-v0.1@q8_0_77.txt
+7099, younger,3392, ones,-1.3476263,1.3476263,mistral-7b-instruct-v0.1@q8_0_77.txt
+3392, ones,526,".""",-3.1182606,3.1182606,mistral-7b-instruct-v0.1@q8_0_77.txt

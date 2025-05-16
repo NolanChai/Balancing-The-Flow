@@ -1,0 +1,31 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_177.txt
+40,I,760, know,-3.7952335,3.7952335,llama-2-7b-chat@q8_0_177.txt
+760, know,345, you,-2.4776561,2.4776561,llama-2-7b-chat@q8_0_177.txt
+345, you,821,'re,-1.3854508,1.3854508,llama-2-7b-chat@q8_0_177.txt
+821,'re,2111, trying,-3.9574592,3.9574592,llama-2-7b-chat@q8_0_177.txt
+2111, trying,284, to,-0.080952354,0.080952354,llama-2-7b-chat@q8_0_177.txt
+284, to,4404, defend,-5.0496416,5.0496416,llama-2-7b-chat@q8_0_177.txt
+4404, defend,3511, yourself,-2.1354148,2.1354148,llama-2-7b-chat@q8_0_177.txt
+3511, yourself,11,",",-1.1536369,1.1536369,llama-2-7b-chat@q8_0_177.txt
+11,",",475, but,-0.34059396,0.34059396,llama-2-7b-chat@q8_0_177.txt
+475, but,262, the,-3.8790631,3.8790631,llama-2-7b-chat@q8_0_177.txt
+262, the,6419, facts,-4.8936024,4.8936024,llama-2-7b-chat@q8_0_177.txt
+6419, facts,389, are,-0.89816904,0.89816904,llama-2-7b-chat@q8_0_177.txt
+389, are,8631, plain,-6.4380484,6.4380484,llama-2-7b-chat@q8_0_177.txt
+8631, plain,284, to,-2.1223335,2.1223335,llama-2-7b-chat@q8_0_177.txt
+284, to,766, see,-0.07095802,0.07095802,llama-2-7b-chat@q8_0_177.txt
+766, see,13,.,-1.2235764,1.2235764,llama-2-7b-chat@q8_0_177.txt
+13,.,921, You,-2.5131567,2.5131567,llama-2-7b-chat@q8_0_177.txt
+921, You,4398, haven,-5.45737,5.45737,llama-2-7b-chat@q8_0_177.txt
+4398, haven,470,'t,-0.0007427556,0.0007427556,llama-2-7b-chat@q8_0_177.txt
+470,'t,587, been,-1.8063527,1.8063527,llama-2-7b-chat@q8_0_177.txt
+587, been,5137, putting,-6.9911385,6.9911385,llama-2-7b-chat@q8_0_177.txt
+5137, putting,287, in,-2.3422232,2.3422232,llama-2-7b-chat@q8_0_177.txt
+287, in,262, the,-1.4857843,1.4857843,llama-2-7b-chat@q8_0_177.txt
+262, the,3306, necessary,-5.5325093,5.5325093,llama-2-7b-chat@q8_0_177.txt
+3306, necessary,3626, effort,-1.9211649,1.9211649,llama-2-7b-chat@q8_0_177.txt
+3626, effort,319, on,-4.7340026,4.7340026,llama-2-7b-chat@q8_0_177.txt
+319, on,428, this,-2.770319,2.770319,llama-2-7b-chat@q8_0_177.txt
+428, this,1628, project,-3.4483802,3.4483802,llama-2-7b-chat@q8_0_177.txt
+1628, project,526,".""",-2.80765,2.80765,llama-2-7b-chat@q8_0_177.txt

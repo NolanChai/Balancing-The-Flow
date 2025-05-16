@@ -1,0 +1,28 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+19457,Sure,0,!,-5.7891397,5.7891397,llama-2-7b-chat@q8_0_237.txt
+0,!,3423, Here,-4.8264513,4.8264513,llama-2-7b-chat@q8_0_237.txt
+3423, Here,318, is,-2.4982727,2.4982727,llama-2-7b-chat@q8_0_237.txt
+318, is,262, the,-1.5375415,1.5375415,llama-2-7b-chat@q8_0_237.txt
+262, the,1306, next,-5.573956,5.573956,llama-2-7b-chat@q8_0_237.txt
+1306, next,1210, turn,-8.0233965,8.0233965,llama-2-7b-chat@q8_0_237.txt
+1210, turn,287, in,-3.599783,3.599783,llama-2-7b-chat@q8_0_237.txt
+287, in,262, the,-1.1810738,1.1810738,llama-2-7b-chat@q8_0_237.txt
+262, the,17310, dialog,-9.176791,9.176791,llama-2-7b-chat@q8_0_237.txt
+17310, dialog,25,:,-2.1871796,2.1871796,llama-2-7b-chat@q8_0_237.txt
+25,:,198,"
+",-0.91673505,0.91673505,llama-2-7b-chat@q8_0_237.txt
+198,"
+",198,"
+",-0.03352854,0.03352854,llama-2-7b-chat@q8_0_237.txt
+198,"
+",1,"""",-2.6597247,2.6597247,llama-2-7b-chat@q8_0_237.txt
+1,"""",16454,Okay,-5.045644,5.045644,llama-2-7b-chat@q8_0_237.txt
+16454,Okay,11,",",-0.74995095,0.74995095,llama-2-7b-chat@q8_0_237.txt
+11,",",1049, great,-6.2513876,6.2513876,llama-2-7b-chat@q8_0_237.txt
+1049, great,13,.,-1.399817,1.399817,llama-2-7b-chat@q8_0_237.txt
+13,.,9022, Which,-7.509226,7.509226,llama-2-7b-chat@q8_0_237.txt
+9022, Which,2041, special,-9.347391,9.347391,llama-2-7b-chat@q8_0_237.txt
+2041, special,561, would,-7.643587,7.643587,llama-2-7b-chat@q8_0_237.txt
+561, would,345, you,-0.41925716,0.41925716,llama-2-7b-chat@q8_0_237.txt
+345, you,4313, recommend,-6.2922244,6.2922244,llama-2-7b-chat@q8_0_237.txt
+4313, recommend,1701,"?""",-1.3893614,1.3893614,llama-2-7b-chat@q8_0_237.txt

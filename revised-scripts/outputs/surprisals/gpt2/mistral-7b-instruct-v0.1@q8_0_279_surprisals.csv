@@ -1,0 +1,16 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1639,You,-6.5488048,6.5488048,mistral-7b-instruct-v0.1@q8_0_279.txt
+1639,You,821,'re,-2.1098084,2.1098084,mistral-7b-instruct-v0.1@q8_0_279.txt
+821,'re,826, right,-3.3681602,3.3681602,mistral-7b-instruct-v0.1@q8_0_279.txt
+826, right,13,.,-1.2873344,1.2873344,mistral-7b-instruct-v0.1@q8_0_279.txt
+13,.,314, I,-1.6084427,1.6084427,mistral-7b-instruct-v0.1@q8_0_279.txt
+314, I,373, was,-3.4354606,3.4354606,mistral-7b-instruct-v0.1@q8_0_279.txt
+373, was,655, just,-2.271323,2.271323,mistral-7b-instruct-v0.1@q8_0_279.txt
+655, just,14718, frustrated,-6.8872857,6.8872857,mistral-7b-instruct-v0.1@q8_0_279.txt
+14718, frustrated,416, by,-3.1697598,3.1697598,mistral-7b-instruct-v0.1@q8_0_279.txt
+416, by,262, the,-1.1136563,1.1136563,mistral-7b-instruct-v0.1@q8_0_279.txt
+262, the,4639, driver,-10.917799,10.917799,mistral-7b-instruct-v0.1@q8_0_279.txt
+4639, driver,338,'s,-1.2892729,1.2892729,mistral-7b-instruct-v0.1@q8_0_279.txt
+338,'s,3595, poor,-6.447505,6.447505,mistral-7b-instruct-v0.1@q8_0_279.txt
+3595, poor,9041, handling,-3.172208,3.172208,mistral-7b-instruct-v0.1@q8_0_279.txt
+9041, handling,526,".""",-2.064727,2.064727,mistral-7b-instruct-v0.1@q8_0_279.txt

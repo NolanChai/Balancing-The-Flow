@@ -1,0 +1,17 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2504,That,-6.9519916,6.9519916,mistral-7b-instruct-v0.1@q8_0_217.txt
+2504,That,1276, must,-6.5081716,6.5081716,mistral-7b-instruct-v0.1@q8_0_217.txt
+1276, must,423, have,-1.9567406,1.9567406,mistral-7b-instruct-v0.1@q8_0_217.txt
+423, have,587, been,-0.46931735,0.46931735,mistral-7b-instruct-v0.1@q8_0_217.txt
+587, been,2407, quite,-4.2953987,4.2953987,mistral-7b-instruct-v0.1@q8_0_217.txt
+2407, quite,257, a,-1.0951685,1.0951685,mistral-7b-instruct-v0.1@q8_0_217.txt
+257, a,6504, sight,-4.936952,4.936952,mistral-7b-instruct-v0.1@q8_0_217.txt
+6504, sight,0,!,-5.8336873,5.8336873,mistral-7b-instruct-v0.1@q8_0_217.txt
+0,!,1867, What,-3.9052725,3.9052725,mistral-7b-instruct-v0.1@q8_0_217.txt
+1867, What,2073, else,-5.204887,5.204887,mistral-7b-instruct-v0.1@q8_0_217.txt
+2073, else,750, did,-3.250762,3.250762,mistral-7b-instruct-v0.1@q8_0_217.txt
+750, did,345, you,-1.1827515,1.1827515,mistral-7b-instruct-v0.1@q8_0_217.txt
+345, you,1100, read,-6.786736,6.786736,mistral-7b-instruct-v0.1@q8_0_217.txt
+1100, read,546, about,-2.3151522,2.3151522,mistral-7b-instruct-v0.1@q8_0_217.txt
+546, about,683, him,-3.8512063,3.8512063,mistral-7b-instruct-v0.1@q8_0_217.txt
+683, him,1701,"?""",-1.0075315,1.0075315,mistral-7b-instruct-v0.1@q8_0_217.txt

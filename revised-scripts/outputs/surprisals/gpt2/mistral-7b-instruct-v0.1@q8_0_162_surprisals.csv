@@ -1,0 +1,26 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5779,Well,-8.582924,8.582924,mistral-7b-instruct-v0.1@q8_0_162.txt
+5779,Well,11,",",-0.44004703,0.44004703,mistral-7b-instruct-v0.1@q8_0_162.txt
+11,",",1123, each,-8.950656,8.950656,mistral-7b-instruct-v0.1@q8_0_162.txt
+1123, each,1048, person,-3.369084,3.369084,mistral-7b-instruct-v0.1@q8_0_162.txt
+1048, person,468, has,-1.4559165,1.4559165,mistral-7b-instruct-v0.1@q8_0_162.txt
+468, has,511, their,-1.0454003,1.0454003,mistral-7b-instruct-v0.1@q8_0_162.txt
+511, their,898, own,-0.12627368,0.12627368,mistral-7b-instruct-v0.1@q8_0_162.txt
+898, own,3748, unique,-2.8800128,2.8800128,mistral-7b-instruct-v0.1@q8_0_162.txt
+3748, unique,18221, tastes,-5.954927,5.954927,mistral-7b-instruct-v0.1@q8_0_162.txt
+18221, tastes,290, and,-1.0199367,1.0199367,mistral-7b-instruct-v0.1@q8_0_162.txt
+290, and,15387, preferences,-1.3846791,1.3846791,mistral-7b-instruct-v0.1@q8_0_162.txt
+15387, preferences,618, when,-5.010337,5.010337,mistral-7b-instruct-v0.1@q8_0_162.txt
+618, when,340, it,-0.10888488,0.10888488,mistral-7b-instruct-v0.1@q8_0_162.txt
+340, it,2058, comes,-0.004791801,0.004791801,mistral-7b-instruct-v0.1@q8_0_162.txt
+2058, comes,284, to,-0.0051104156,0.0051104156,mistral-7b-instruct-v0.1@q8_0_162.txt
+284, to,2057, food,-2.9186342,2.9186342,mistral-7b-instruct-v0.1@q8_0_162.txt
+2057, food,13,.,-1.3462694,1.3462694,mistral-7b-instruct-v0.1@q8_0_162.txt
+13,.,1867, What,-4.2817125,4.2817125,mistral-7b-instruct-v0.1@q8_0_162.txt
+1867, What,466, do,-3.0889218,3.0889218,mistral-7b-instruct-v0.1@q8_0_162.txt
+466, do,345, you,-0.28487784,0.28487784,mistral-7b-instruct-v0.1@q8_0_162.txt
+345, you,588, like,-2.4465392,2.4465392,mistral-7b-instruct-v0.1@q8_0_162.txt
+588, like,1266, best,-2.5618281,2.5618281,mistral-7b-instruct-v0.1@q8_0_162.txt
+1266, best,546, about,-1.102239,1.102239,mistral-7b-instruct-v0.1@q8_0_162.txt
+546, about,18821, potatoes,-6.6318254,6.6318254,mistral-7b-instruct-v0.1@q8_0_162.txt
+18821, potatoes,1701,"?""",-1.2296083,1.2296083,mistral-7b-instruct-v0.1@q8_0_162.txt

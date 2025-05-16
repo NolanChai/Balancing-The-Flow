@@ -1,0 +1,25 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+13681,Great,0,!,-6.4321046,6.4321046,mistral-7b-instruct-v0.1@q8_0_113.txt
+0,!,314, I,-2.1062443,2.1062443,mistral-7b-instruct-v0.1@q8_0_113.txt
+314, I,1101,'m,-2.0334344,2.0334344,mistral-7b-instruct-v0.1@q8_0_113.txt
+1101,'m,994, here,-4.953407,4.953407,mistral-7b-instruct-v0.1@q8_0_113.txt
+994, here,284, to,-0.8651615,0.8651615,mistral-7b-instruct-v0.1@q8_0_113.txt
+284, to,1037, help,-1.6207452,1.6207452,mistral-7b-instruct-v0.1@q8_0_113.txt
+1037, help,345, you,-1.0338415,1.0338415,mistral-7b-instruct-v0.1@q8_0_113.txt
+345, you,1064, find,-3.903001,3.903001,mistral-7b-instruct-v0.1@q8_0_113.txt
+1064, find,1321, information,-6.6155562,6.6155562,mistral-7b-instruct-v0.1@q8_0_113.txt
+1321, information,290, and,-2.473846,2.473846,mistral-7b-instruct-v0.1@q8_0_113.txt
+290, and,3280, answer,-5.6255217,5.6255217,mistral-7b-instruct-v0.1@q8_0_113.txt
+3280, answer,534, your,-1.4507339,1.4507339,mistral-7b-instruct-v0.1@q8_0_113.txt
+534, your,2683, questions,-0.08581325,0.08581325,mistral-7b-instruct-v0.1@q8_0_113.txt
+2683, questions,13,.,-0.87327546,0.87327546,mistral-7b-instruct-v0.1@q8_0_113.txt
+13,.,1867, What,-5.945973,5.945973,mistral-7b-instruct-v0.1@q8_0_113.txt
+1867, What,7243, topic,-9.028546,9.028546,mistral-7b-instruct-v0.1@q8_0_113.txt
+7243, topic,561, would,-2.8035343,2.8035343,mistral-7b-instruct-v0.1@q8_0_113.txt
+561, would,345, you,-0.10534382,0.10534382,mistral-7b-instruct-v0.1@q8_0_113.txt
+345, you,588, like,-0.15124822,0.15124822,mistral-7b-instruct-v0.1@q8_0_113.txt
+588, like,284, to,-0.30245635,0.30245635,mistral-7b-instruct-v0.1@q8_0_113.txt
+284, to,760, know,-2.9056058,2.9056058,mistral-7b-instruct-v0.1@q8_0_113.txt
+760, know,517, more,-1.5723023,1.5723023,mistral-7b-instruct-v0.1@q8_0_113.txt
+517, more,546, about,-0.09827194,0.09827194,mistral-7b-instruct-v0.1@q8_0_113.txt
+546, about,30,?,-0.35979748,0.35979748,mistral-7b-instruct-v0.1@q8_0_113.txt

@@ -1,0 +1,12 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+13681,Great,0,!,-6.4321136,6.4321136,mistral-7b-instruct-v0.1@q8_0_213.txt
+0,!,1148, Is,-6.3059874,6.3059874,mistral-7b-instruct-v0.1@q8_0_213.txt
+1148, Is,612, there,-1.9585885,1.9585885,mistral-7b-instruct-v0.1@q8_0_213.txt
+612, there,597, any,-1.9223514,1.9223514,mistral-7b-instruct-v0.1@q8_0_213.txt
+597, any,2176, specific,-5.850495,5.850495,mistral-7b-instruct-v0.1@q8_0_213.txt
+2176, specific,3124, color,-5.6030416,5.6030416,mistral-7b-instruct-v0.1@q8_0_213.txt
+3124, color,7791, scheme,-4.3870926,4.3870926,mistral-7b-instruct-v0.1@q8_0_213.txt
+7791, scheme,345, you,-1.7407978,1.7407978,mistral-7b-instruct-v0.1@q8_0_213.txt
+345, you,561, would,-1.6790435,1.6790435,mistral-7b-instruct-v0.1@q8_0_213.txt
+561, would,4702, prefer,-3.7027516,3.7027516,mistral-7b-instruct-v0.1@q8_0_213.txt
+4702, prefer,30,?,-1.0718076,1.0718076,mistral-7b-instruct-v0.1@q8_0_213.txt

@@ -1,0 +1,31 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",19457,Sure,-10.035362,10.035362,llama-2-7b-chat@q8_0_110.txt
+19457,Sure,11,",",-0.8044389,0.8044389,llama-2-7b-chat@q8_0_110.txt
+11,",",645, no,-5.737972,5.737972,llama-2-7b-chat@q8_0_110.txt
+645, no,1917, problem,-3.6012378,3.6012378,llama-2-7b-chat@q8_0_110.txt
+1917, problem,13,.,-1.3085345,1.3085345,llama-2-7b-chat@q8_0_110.txt
+13,.,18689, Actually,-6.938097,6.938097,llama-2-7b-chat@q8_0_110.txt
+18689, Actually,11,",",-0.25253707,0.25253707,llama-2-7b-chat@q8_0_110.txt
+11,",",314, I,-1.390524,1.390524,llama-2-7b-chat@q8_0_110.txt
+314, I,373, was,-3.6511416,3.6511416,llama-2-7b-chat@q8_0_110.txt
+373, was,3612, thinking,-3.6657119,3.6657119,llama-2-7b-chat@q8_0_110.txt
+3612, thinking,286, of,-1.7230138,1.7230138,llama-2-7b-chat@q8_0_110.txt
+286, of,15430, switching,-6.0333395,6.0333395,llama-2-7b-chat@q8_0_110.txt
+15430, switching,284, to,-1.170093,1.170093,llama-2-7b-chat@q8_0_110.txt
+284, to,257, a,-1.8410063,1.8410063,llama-2-7b-chat@q8_0_110.txt
+257, a,1180, different,-2.1308866,2.1308866,llama-2-7b-chat@q8_0_110.txt
+1180, different,5852, seat,-7.9981613,7.9981613,llama-2-7b-chat@q8_0_110.txt
+5852, seat,6949, anyway,-6.54547,6.54547,llama-2-7b-chat@q8_0_110.txt
+6949, anyway,13,.,-1.2023169,1.2023169,llama-2-7b-chat@q8_0_110.txt
+13,.,2141, Do,-6.528696,6.528696,llama-2-7b-chat@q8_0_110.txt
+2141, Do,345, you,-0.27831608,0.27831608,llama-2-7b-chat@q8_0_110.txt
+345, you,760, know,-1.9625782,1.9625782,llama-2-7b-chat@q8_0_110.txt
+760, know,611, if,-2.9340901,2.9340901,llama-2-7b-chat@q8_0_110.txt
+611, if,612, there,-2.9474854,2.9474854,llama-2-7b-chat@q8_0_110.txt
+612, there,389, are,-1.5950449,1.5950449,llama-2-7b-chat@q8_0_110.txt
+389, are,597, any,-0.72183377,0.72183377,llama-2-7b-chat@q8_0_110.txt
+597, any,1695, available,-7.783986,7.783986,llama-2-7b-chat@q8_0_110.txt
+1695, available,287, in,-5.2239733,5.2239733,llama-2-7b-chat@q8_0_110.txt
+287, in,717, first,-10.026944,10.026944,llama-2-7b-chat@q8_0_110.txt
+717, first,1398, class,-0.9876407,0.9876407,llama-2-7b-chat@q8_0_110.txt
+1398, class,1701,"?""",-1.543737,1.543737,llama-2-7b-chat@q8_0_110.txt

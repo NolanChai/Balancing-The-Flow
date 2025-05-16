@@ -1,0 +1,20 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1870,And,-7.0747647,7.0747647,mistral-7b-instruct-v0.1@q8_0_296.txt
+1870,And,13769, besides,-8.141945,8.141945,mistral-7b-instruct-v0.1@q8_0_296.txt
+13769, besides,11,",",-0.4437145,0.4437145,mistral-7b-instruct-v0.1@q8_0_296.txt
+11,",",8982, Jason,-10.318675,10.318675,mistral-7b-instruct-v0.1@q8_0_296.txt
+8982, Jason,1682, actually,-7.1978216,7.1978216,mistral-7b-instruct-v0.1@q8_0_296.txt
+1682, actually,4206, knows,-4.8415966,4.8415966,mistral-7b-instruct-v0.1@q8_0_296.txt
+4206, knows,703, how,-2.110109,2.110109,mistral-7b-instruct-v0.1@q8_0_296.txt
+703, how,284, to,-0.20032202,0.20032202,mistral-7b-instruct-v0.1@q8_0_296.txt
+284, to,711, play,-2.5274398,2.5274398,mistral-7b-instruct-v0.1@q8_0_296.txt
+711, play,290, and,-4.5028734,4.5028734,mistral-7b-instruct-v0.1@q8_0_296.txt
+290, and,1244, might,-7.9765677,7.9765677,mistral-7b-instruct-v0.1@q8_0_296.txt
+1244, might,2222, bring,-6.395926,6.395926,mistral-7b-instruct-v0.1@q8_0_296.txt
+2222, bring,617, some,-2.3363829,2.3363829,mistral-7b-instruct-v0.1@q8_0_296.txt
+617, some,4713, fresh,-5.885913,5.885913,mistral-7b-instruct-v0.1@q8_0_296.txt
+4713, fresh,4213, ideas,-2.5816808,2.5816808,mistral-7b-instruct-v0.1@q8_0_296.txt
+4213, ideas,284, to,-0.5463138,0.5463138,mistral-7b-instruct-v0.1@q8_0_296.txt
+284, to,262, the,-0.64210904,0.64210904,mistral-7b-instruct-v0.1@q8_0_296.txt
+262, the,983, game,-4.807758,4.807758,mistral-7b-instruct-v0.1@q8_0_296.txt
+983, game,526,".""",-1.5708483,1.5708483,mistral-7b-instruct-v0.1@q8_0_296.txt

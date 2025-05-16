@@ -1,0 +1,28 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+40,I,373, was,-4.2506847,4.2506847,mistral-7b-instruct-v0.1@q8_0_290.txt
+373, was,3612, thinking,-4.7610135,4.7610135,mistral-7b-instruct-v0.1@q8_0_290.txt
+3612, thinking,546, about,-1.2409102,1.2409102,mistral-7b-instruct-v0.1@q8_0_290.txt
+546, about,3967, positive,-11.347242,11.347242,mistral-7b-instruct-v0.1@q8_0_290.txt
+3967, positive,37414, reinforcement,-2.386414,2.386414,mistral-7b-instruct-v0.1@q8_0_290.txt
+37414, reinforcement,13,.,-2.0498354,2.0498354,mistral-7b-instruct-v0.1@q8_0_290.txt
+13,.,6674, Maybe,-4.727108,4.727108,mistral-7b-instruct-v0.1@q8_0_290.txt
+6674, Maybe,611, if,-3.0842795,3.0842795,mistral-7b-instruct-v0.1@q8_0_290.txt
+611, if,314, I,-1.0470855,1.0470855,mistral-7b-instruct-v0.1@q8_0_290.txt
+314, I,13463, praise,-10.006352,10.006352,mistral-7b-instruct-v0.1@q8_0_290.txt
+13463, praise,290, and,-4.890445,4.890445,mistral-7b-instruct-v0.1@q8_0_290.txt
+290, and,6721, reward,-2.2218251,2.2218251,mistral-7b-instruct-v0.1@q8_0_290.txt
+6721, reward,511, their,-7.430932,7.430932,mistral-7b-instruct-v0.1@q8_0_290.txt
+511, their,922, good,-4.3496213,4.3496213,mistral-7b-instruct-v0.1@q8_0_290.txt
+922, good,4069, behavior,-0.9627142,0.9627142,mistral-7b-instruct-v0.1@q8_0_290.txt
+4069, behavior,11,",",-0.59155107,0.59155107,mistral-7b-instruct-v0.1@q8_0_290.txt
+11,",",484, they,-1.2493178,1.2493178,mistral-7b-instruct-v0.1@q8_0_290.txt
+484, they,481, will,-1.2203183,1.2203183,mistral-7b-instruct-v0.1@q8_0_290.txt
+481, will,923, start,-3.871799,3.871799,mistral-7b-instruct-v0.1@q8_0_290.txt
+923, start,284, to,-0.8306994,0.8306994,mistral-7b-instruct-v0.1@q8_0_290.txt
+284, to,1254, feel,-2.4999998,2.4999998,mistral-7b-instruct-v0.1@q8_0_290.txt
+1254, feel,517, more,-2.2186723,2.2186723,mistral-7b-instruct-v0.1@q8_0_290.txt
+517, more,13338, motivated,-3.4238598,3.4238598,mistral-7b-instruct-v0.1@q8_0_290.txt
+13338, motivated,284, to,-1.1277256,1.1277256,mistral-7b-instruct-v0.1@q8_0_290.txt
+284, to,1061, follow,-3.5068252,3.5068252,mistral-7b-instruct-v0.1@q8_0_290.txt
+1061, follow,3173, rules,-8.296153,8.296153,mistral-7b-instruct-v0.1@q8_0_290.txt
+3173, rules,13,.,-1.0412009,1.0412009,mistral-7b-instruct-v0.1@q8_0_290.txt

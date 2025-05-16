@@ -1,0 +1,24 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_90.txt
+40,I,766, see,-5.318183,5.318183,mistral-7b-instruct-v0.1@q8_0_90.txt
+766, see,11,",",-4.1353436,4.1353436,mistral-7b-instruct-v0.1@q8_0_90.txt
+11,",",314, I,-2.2162309,2.2162309,mistral-7b-instruct-v0.1@q8_0_90.txt
+314, I,1101,'m,-2.3122878,2.3122878,mistral-7b-instruct-v0.1@q8_0_90.txt
+1101,'m,7926, sorry,-3.5337498,3.5337498,mistral-7b-instruct-v0.1@q8_0_90.txt
+7926, sorry,329, for,-3.4237556,3.4237556,mistral-7b-instruct-v0.1@q8_0_90.txt
+329, for,14790, damaging,-10.237563,10.237563,mistral-7b-instruct-v0.1@q8_0_90.txt
+14790, damaging,262, the,-1.890095,1.890095,mistral-7b-instruct-v0.1@q8_0_90.txt
+262, the,1051, sign,-10.269165,10.269165,mistral-7b-instruct-v0.1@q8_0_90.txt
+1051, sign,13,.,-1.6833897,1.6833897,mistral-7b-instruct-v0.1@q8_0_90.txt
+13,.,314, I,-0.99284446,0.99284446,mistral-7b-instruct-v0.1@q8_0_90.txt
+314, I,1422, didn,-3.3831544,3.3831544,mistral-7b-instruct-v0.1@q8_0_90.txt
+1422, didn,470,'t,-0.00040058218,0.00040058218,mistral-7b-instruct-v0.1@q8_0_90.txt
+470,'t,6537, realize,-4.5253887,4.5253887,mistral-7b-instruct-v0.1@q8_0_90.txt
+6537, realize,644, what,-2.6568315,2.6568315,mistral-7b-instruct-v0.1@q8_0_90.txt
+644, what,314, I,-1.8953137,1.8953137,mistral-7b-instruct-v0.1@q8_0_90.txt
+314, I,373, was,-0.39077958,0.39077958,mistral-7b-instruct-v0.1@q8_0_90.txt
+373, was,1804, doing,-0.20814273,0.20814273,mistral-7b-instruct-v0.1@q8_0_90.txt
+1804, doing,379, at,-4.2965026,4.2965026,mistral-7b-instruct-v0.1@q8_0_90.txt
+379, at,262, the,-0.6218854,0.6218854,mistral-7b-instruct-v0.1@q8_0_90.txt
+262, the,640, time,-0.109355815,0.109355815,mistral-7b-instruct-v0.1@q8_0_90.txt
+640, time,526,".""",-1.1945843,1.1945843,mistral-7b-instruct-v0.1@q8_0_90.txt

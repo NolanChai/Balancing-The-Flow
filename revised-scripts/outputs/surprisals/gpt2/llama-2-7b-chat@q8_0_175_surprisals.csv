@@ -1,0 +1,72 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,llama-2-7b-chat@q8_0_175.txt
+40,I,892, think,-2.4174492,2.4174492,llama-2-7b-chat@q8_0_175.txt
+892, think,674, our,-5.001369,5.001369,llama-2-7b-chat@q8_0_175.txt
+674, our,8395, chances,-6.9904547,6.9904547,llama-2-7b-chat@q8_0_175.txt
+8395, chances,389, are,-1.3280132,1.3280132,llama-2-7b-chat@q8_0_175.txt
+389, are,922, good,-3.3870828,3.3870828,llama-2-7b-chat@q8_0_175.txt
+922, good,287, in,-4.1777754,4.1777754,llama-2-7b-chat@q8_0_175.txt
+287, in,262, the,-1.5095911,1.5095911,llama-2-7b-chat@q8_0_175.txt
+262, the,34283, hurdles,-11.925688,11.925688,llama-2-7b-chat@q8_0_175.txt
+34283, hurdles,11,",",-2.6808283,2.6808283,llama-2-7b-chat@q8_0_175.txt
+11,",",674, our,-5.507487,5.507487,llama-2-7b-chat@q8_0_175.txt
+674, our,16076, athlete,-11.671586,11.671586,llama-2-7b-chat@q8_0_175.txt
+16076, athlete,318, is,-2.7400446,2.7400446,llama-2-7b-chat@q8_0_175.txt
+318, is,530, one,-4.746646,4.746646,llama-2-7b-chat@q8_0_175.txt
+530, one,286, of,-0.1703018,0.1703018,llama-2-7b-chat@q8_0_175.txt
+286, of,262, the,-0.44338945,0.44338945,llama-2-7b-chat@q8_0_175.txt
+262, the,14162, fastest,-4.597062,4.597062,llama-2-7b-chat@q8_0_175.txt
+14162, fastest,287, in,-2.3067355,2.3067355,llama-2-7b-chat@q8_0_175.txt
+287, in,262, the,-0.17294738,0.17294738,llama-2-7b-chat@q8_0_175.txt
+262, the,995, world,-0.5314757,0.5314757,llama-2-7b-chat@q8_0_175.txt
+995, world,526,".""",-2.5259519,2.5259519,llama-2-7b-chat@q8_0_175.txt
+526,".""",198,"
+",-0.2761976,0.2761976,llama-2-7b-chat@q8_0_175.txt
+198,"
+",198,"
+",-0.00040558696,0.00040558696,llama-2-7b-chat@q8_0_175.txt
+198,"
+",1,"""",-3.530049,3.530049,llama-2-7b-chat@q8_0_175.txt
+1,"""",40,I,-1.5814751,1.5814751,llama-2-7b-chat@q8_0_175.txt
+40,I,892, think,-0.950034,0.950034,llama-2-7b-chat@q8_0_175.txt
+892, think,674, our,-2.7418356,2.7418356,llama-2-7b-chat@q8_0_175.txt
+674, our,8395, chances,-1.6441606,1.6441606,llama-2-7b-chat@q8_0_175.txt
+8395, chances,389, are,-0.089532584,0.089532584,llama-2-7b-chat@q8_0_175.txt
+389, are,922, good,-0.14384514,0.14384514,llama-2-7b-chat@q8_0_175.txt
+922, good,287, in,-0.09043524,0.09043524,llama-2-7b-chat@q8_0_175.txt
+287, in,262, the,-0.026493529,0.026493529,llama-2-7b-chat@q8_0_175.txt
+262, the,2610, track,-12.688661,12.688661,llama-2-7b-chat@q8_0_175.txt
+2610, track,290, and,-1.5605681,1.5605681,llama-2-7b-chat@q8_0_175.txt
+290, and,2214, field,-0.085070655,0.085070655,llama-2-7b-chat@q8_0_175.txt
+2214, field,2995, events,-6.4618387,6.4618387,llama-2-7b-chat@q8_0_175.txt
+2995, events,13,.,-1.9354643,1.9354643,llama-2-7b-chat@q8_0_175.txt
+13,.,4995, Mike,-8.741572,8.741572,llama-2-7b-chat@q8_0_175.txt
+4995, Mike,37755, Farmer,-9.197238,9.197238,llama-2-7b-chat@q8_0_175.txt
+37755, Farmer,318, is,-1.3501745,1.3501745,llama-2-7b-chat@q8_0_175.txt
+318, is,3729, certainly,-5.6806,5.6806,llama-2-7b-chat@q8_0_175.txt
+3729, certainly,257, a,-1.3937019,1.3937019,llama-2-7b-chat@q8_0_175.txt
+257, a,1913, strong,-3.0753956,3.0753956,llama-2-7b-chat@q8_0_175.txt
+1913, strong,24190, contender,-2.6762335,2.6762335,llama-2-7b-chat@q8_0_175.txt
+24190, contender,287, in,-2.5825953,2.5825953,llama-2-7b-chat@q8_0_175.txt
+287, in,262, the,-1.0834521,1.0834521,llama-2-7b-chat@q8_0_175.txt
+262, the,2491, running,-5.369525,5.369525,llama-2-7b-chat@q8_0_175.txt
+2491, running,2995, events,-3.6506581,3.6506581,llama-2-7b-chat@q8_0_175.txt
+2995, events,11,",",-1.2179854,1.2179854,llama-2-7b-chat@q8_0_175.txt
+11,",",290, and,-1.7267375,1.7267375,llama-2-7b-chat@q8_0_175.txt
+290, and,356, we,-2.3039448,2.3039448,llama-2-7b-chat@q8_0_175.txt
+356, we,423, have,-2.0233076,2.0233076,llama-2-7b-chat@q8_0_175.txt
+423, have,257, a,-1.3091592,1.3091592,llama-2-7b-chat@q8_0_175.txt
+257, a,1178, few,-4.2869086,4.2869086,llama-2-7b-chat@q8_0_175.txt
+1178, few,584, other,-2.6988509,2.6988509,llama-2-7b-chat@q8_0_175.txt
+584, other,10856, athletes,-3.1197915,3.1197915,llama-2-7b-chat@q8_0_175.txt
+10856, athletes,508, who,-1.5204327,1.5204327,llama-2-7b-chat@q8_0_175.txt
+508, who,714, could,-2.2457287,2.2457287,llama-2-7b-chat@q8_0_175.txt
+714, could,6196, potentially,-2.9312828,2.9312828,llama-2-7b-chat@q8_0_175.txt
+6196, potentially,2222, bring,-5.926504,5.926504,llama-2-7b-chat@q8_0_175.txt
+2222, bring,1363, home,-5.581421,5.581421,llama-2-7b-chat@q8_0_175.txt
+1363, home,28057, medals,-4.128725,4.128725,llama-2-7b-chat@q8_0_175.txt
+28057, medals,287, in,-2.362485,2.362485,llama-2-7b-chat@q8_0_175.txt
+287, in,511, their,-5.1283092,5.1283092,llama-2-7b-chat@q8_0_175.txt
+511, their,11756, respective,-2.0559926,2.0559926,llama-2-7b-chat@q8_0_175.txt
+11756, respective,2995, events,-2.3725224,2.3725224,llama-2-7b-chat@q8_0_175.txt
+2995, events,526,".""",-1.2564759,1.2564759,llama-2-7b-chat@q8_0_175.txt

@@ -1,0 +1,8 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",16805, Okay,-11.3174305,11.3174305,llama-2-7b@q8_0_116.txt
+16805, Okay,5875, thank,-8.095953,8.095953,llama-2-7b@q8_0_116.txt
+5875, thank,345, you,-0.05037367,0.05037367,llama-2-7b@q8_0_116.txt
+345, you,845, very,-3.1173434,3.1173434,llama-2-7b@q8_0_116.txt
+845, very,881, much,-0.011871521,0.011871521,llama-2-7b@q8_0_116.txt
+881, much,764, .,-5.865296,5.865296,llama-2-7b@q8_0_116.txt
+764, .,366," """,-5.2622347,5.2622347,llama-2-7b@q8_0_116.txt

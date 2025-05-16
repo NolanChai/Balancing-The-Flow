@@ -1,0 +1,28 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2949,No,-7.1921544,7.1921544,llama-2-7b-chat@q8_0_101.txt
+2949,No,1917, problem,-5.56666,5.56666,llama-2-7b-chat@q8_0_101.txt
+1917, problem,11,",",-1.6156654,1.6156654,llama-2-7b-chat@q8_0_101.txt
+11,",",15967, sir,-4.002101,4.002101,llama-2-7b-chat@q8_0_101.txt
+15967, sir,13,.,-1.1903168,1.1903168,llama-2-7b-chat@q8_0_101.txt
+13,.,3914, Let,-4.1456957,4.1456957,llama-2-7b-chat@q8_0_101.txt
+3914, Let,502, me,-1.2787161,1.2787161,llama-2-7b-chat@q8_0_101.txt
+502, me,766, see,-2.3319857,2.3319857,llama-2-7b-chat@q8_0_101.txt
+766, see,611, if,-1.6530058,1.6530058,llama-2-7b-chat@q8_0_101.txt
+611, if,314, I,-0.5521113,0.5521113,llama-2-7b-chat@q8_0_101.txt
+314, I,460, can,-0.105333515,0.105333515,llama-2-7b-chat@q8_0_101.txt
+460, can,1037, help,-2.0725603,2.0725603,llama-2-7b-chat@q8_0_101.txt
+1037, help,345, you,-0.6087002,0.6087002,llama-2-7b-chat@q8_0_101.txt
+345, you,651, get,-4.100121,4.100121,llama-2-7b-chat@q8_0_101.txt
+651, get,257, a,-2.9286137,2.9286137,llama-2-7b-chat@q8_0_101.txt
+257, a,649, new,-4.436055,4.436055,llama-2-7b-chat@q8_0_101.txt
+649, new,17536, taxi,-8.1802025,8.1802025,llama-2-7b-chat@q8_0_101.txt
+17536, taxi,393, or,-3.3920074,3.3920074,llama-2-7b-chat@q8_0_101.txt
+393, or,1064, find,-7.0724,7.0724,llama-2-7b-chat@q8_0_101.txt
+1064, find,1194, another,-3.1636484,3.1636484,llama-2-7b-chat@q8_0_101.txt
+1194, another,835, way,-2.591565,2.591565,llama-2-7b-chat@q8_0_101.txt
+835, way,284, to,-0.70734435,0.70734435,llama-2-7b-chat@q8_0_101.txt
+284, to,651, get,-0.68558735,0.68558735,llama-2-7b-chat@q8_0_101.txt
+651, get,284, to,-1.145161,1.145161,llama-2-7b-chat@q8_0_101.txt
+284, to,534, your,-2.1687303,2.1687303,llama-2-7b-chat@q8_0_101.txt
+534, your,10965, destination,-2.0423536,2.0423536,llama-2-7b-chat@q8_0_101.txt
+10965, destination,526,".""",-1.0869458,1.0869458,llama-2-7b-chat@q8_0_101.txt

@@ -1,0 +1,18 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1537,But,-6.839767,6.839767,mistral-7b-instruct-v0.1@q8_0_191.txt
+1537,But,314, I,-2.1756358,2.1756358,mistral-7b-instruct-v0.1@q8_0_191.txt
+314, I,1101,'m,-2.0026267,2.0026267,mistral-7b-instruct-v0.1@q8_0_191.txt
+1101,'m,407, not,-1.2234485,1.2234485,mistral-7b-instruct-v0.1@q8_0_191.txt
+407, not,3492, ready,-4.584462,4.584462,mistral-7b-instruct-v0.1@q8_0_191.txt
+3492, ready,329, for,-2.192846,2.192846,mistral-7b-instruct-v0.1@q8_0_191.txt
+329, for,4845, marriage,-7.9295073,7.9295073,mistral-7b-instruct-v0.1@q8_0_191.txt
+4845, marriage,1865, yet,-4.347988,4.347988,mistral-7b-instruct-v0.1@q8_0_191.txt
+1865, yet,11,",",-2.0263116,2.0263116,mistral-7b-instruct-v0.1@q8_0_191.txt
+11,",",314, I,-2.245071,2.245071,mistral-7b-instruct-v0.1@q8_0_191.txt
+314, I,655, just,-3.1133847,3.1133847,mistral-7b-instruct-v0.1@q8_0_191.txt
+655, just,765, want,-1.0854585,1.0854585,mistral-7b-instruct-v0.1@q8_0_191.txt
+765, want,284, to,-0.3490505,0.3490505,mistral-7b-instruct-v0.1@q8_0_191.txt
+284, to,2883, enjoy,-5.0001764,5.0001764,mistral-7b-instruct-v0.1@q8_0_191.txt
+2883, enjoy,852, being,-3.9682648,3.9682648,mistral-7b-instruct-v0.1@q8_0_191.txt
+852, being,2060, single,-4.40159,4.40159,mistral-7b-instruct-v0.1@q8_0_191.txt
+2060, single,526,".""",-2.0089293,2.0089293,mistral-7b-instruct-v0.1@q8_0_191.txt

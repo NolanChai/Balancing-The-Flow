@@ -1,0 +1,45 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,llama-2-7b-chat@q8_0_62.txt
+40,I,1833, understand,-5.4735403,5.4735403,llama-2-7b-chat@q8_0_62.txt
+1833, understand,11,",",-3.9313288,3.9313288,llama-2-7b-chat@q8_0_62.txt
+11,",",475, but,-1.3372254,1.3372254,llama-2-7b-chat@q8_0_62.txt
+475, but,345, you,-2.7635207,2.7635207,llama-2-7b-chat@q8_0_62.txt
+345, you,423, have,-2.800136,2.800136,llama-2-7b-chat@q8_0_62.txt
+423, have,284, to,-0.46914244,0.46914244,llama-2-7b-chat@q8_0_62.txt
+284, to,307, be,-2.1275225,2.1275225,llama-2-7b-chat@q8_0_62.txt
+307, be,8161, careful,-1.8136638,1.8136638,llama-2-7b-chat@q8_0_62.txt
+8161, careful,618, when,-2.7285755,2.7285755,llama-2-7b-chat@q8_0_62.txt
+618, when,10311, riding,-8.223145,8.223145,llama-2-7b-chat@q8_0_62.txt
+10311, riding,257, a,-2.4676213,2.4676213,llama-2-7b-chat@q8_0_62.txt
+257, a,7161, bike,-0.9002627,0.9002627,llama-2-7b-chat@q8_0_62.txt
+7161, bike,287, in,-2.7590475,2.7590475,llama-2-7b-chat@q8_0_62.txt
+287, in,11618, Beijing,-7.434118,7.434118,llama-2-7b-chat@q8_0_62.txt
+11618, Beijing,13,.,-1.4590498,1.4590498,llama-2-7b-chat@q8_0_62.txt
+13,.,1318, There,-3.2221735,3.2221735,llama-2-7b-chat@q8_0_62.txt
+1318, There,389, are,-0.8918219,0.8918219,llama-2-7b-chat@q8_0_62.txt
+389, are,257, a,-2.4961412,2.4961412,llama-2-7b-chat@q8_0_62.txt
+257, a,1256, lot,-0.20957756,0.20957756,llama-2-7b-chat@q8_0_62.txt
+1256, lot,286, of,-0.0390274,0.0390274,llama-2-7b-chat@q8_0_62.txt
+286, of,5006, cars,-5.3123884,5.3123884,llama-2-7b-chat@q8_0_62.txt
+5006, cars,290, and,-2.4353814,2.4353814,llama-2-7b-chat@q8_0_62.txt
+290, and,26735, pedestrians,-2.9159272,2.9159272,llama-2-7b-chat@q8_0_62.txt
+26735, pedestrians,319, on,-2.4023018,2.4023018,llama-2-7b-chat@q8_0_62.txt
+319, on,262, the,-0.6309513,0.6309513,llama-2-7b-chat@q8_0_62.txt
+262, the,2975, road,-1.0697796,1.0697796,llama-2-7b-chat@q8_0_62.txt
+2975, road,11,",",-1.4027702,1.4027702,llama-2-7b-chat@q8_0_62.txt
+11,",",523, so,-1.0061436,1.0061436,llama-2-7b-chat@q8_0_62.txt
+523, so,340, it,-2.0265932,2.0265932,llama-2-7b-chat@q8_0_62.txt
+340, it,338,'s,-0.42441416,0.42441416,llama-2-7b-chat@q8_0_62.txt
+338,'s,1593, important,-2.5057096,2.5057096,llama-2-7b-chat@q8_0_62.txt
+1593, important,284, to,-0.38995615,0.38995615,llama-2-7b-chat@q8_0_62.txt
+284, to,1061, follow,-4.6390247,4.6390247,llama-2-7b-chat@q8_0_62.txt
+1061, follow,262, the,-0.94588554,0.94588554,llama-2-7b-chat@q8_0_62.txt
+262, the,4979, traffic,-2.985915,2.985915,llama-2-7b-chat@q8_0_62.txt
+4979, traffic,3173, rules,-2.267332,2.267332,llama-2-7b-chat@q8_0_62.txt
+3173, rules,290, and,-2.0825536,2.0825536,llama-2-7b-chat@q8_0_62.txt
+290, and,307, be,-2.6502826,2.6502826,llama-2-7b-chat@q8_0_62.txt
+307, be,3910, aware,-2.169339,2.169339,llama-2-7b-chat@q8_0_62.txt
+3910, aware,286, of,-0.15851082,0.15851082,llama-2-7b-chat@q8_0_62.txt
+286, of,534, your,-2.543335,2.543335,llama-2-7b-chat@q8_0_62.txt
+534, your,21334, surroundings,-0.050676953,0.050676953,llama-2-7b-chat@q8_0_62.txt
+21334, surroundings,526,".""",-1.1087992,1.1087992,llama-2-7b-chat@q8_0_62.txt

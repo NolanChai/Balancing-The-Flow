@@ -1,0 +1,48 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,llama-2-7b-chat@q8_0_173.txt
+40,I,766, see,-5.3181753,5.3181753,llama-2-7b-chat@q8_0_173.txt
+766, see,11,",",-4.135334,4.135334,llama-2-7b-chat@q8_0_173.txt
+11,",",523, so,-4.579382,4.579382,llama-2-7b-chat@q8_0_173.txt
+523, so,345, you,-2.4373932,2.4373932,llama-2-7b-chat@q8_0_173.txt
+345, you,892, think,-4.0528646,4.0528646,llama-2-7b-chat@q8_0_173.txt
+892, think,262, the,-3.5921392,3.5921392,llama-2-7b-chat@q8_0_173.txt
+262, the,19360, outlook,-10.204138,10.204138,llama-2-7b-chat@q8_0_173.txt
+19360, outlook,329, for,-1.9254029,1.9254029,llama-2-7b-chat@q8_0_173.txt
+329, for,674, our,-4.2124443,4.2124443,llama-2-7b-chat@q8_0_173.txt
+674, our,1664, company,-4.112845,4.112845,llama-2-7b-chat@q8_0_173.txt
+1664, company,318, is,-0.48675662,0.48675662,llama-2-7b-chat@q8_0_173.txt
+318, is,3967, positive,-3.1546853,3.1546853,llama-2-7b-chat@q8_0_173.txt
+3967, positive,553,",""",-2.6165955,2.6165955,llama-2-7b-chat@q8_0_173.txt
+553,",""",262, the,-4.2036557,4.2036557,llama-2-7b-chat@q8_0_173.txt
+262, the,6123, CEO,-2.3887205,2.3887205,llama-2-7b-chat@q8_0_173.txt
+6123, CEO,531, said,-0.5042901,0.5042901,llama-2-7b-chat@q8_0_173.txt
+531, said,351, with,-4.93257,4.93257,llama-2-7b-chat@q8_0_173.txt
+351, with,257, a,-0.16412888,0.16412888,llama-2-7b-chat@q8_0_173.txt
+257, a,18666, nod,-4.876557,4.876557,llama-2-7b-chat@q8_0_173.txt
+18666, nod,13,.,-1.3229333,1.3229333,llama-2-7b-chat@q8_0_173.txt
+13,.,366," """,-1.0439606,1.0439606,llama-2-7b-chat@q8_0_173.txt
+366," """,2504,That,-3.250185,3.250185,llama-2-7b-chat@q8_0_173.txt
+2504,That,338,'s,-0.43148994,0.43148994,llama-2-7b-chat@q8_0_173.txt
+338,'s,922, good,-4.207844,4.207844,llama-2-7b-chat@q8_0_173.txt
+922, good,284, to,-3.1376238,3.1376238,llama-2-7b-chat@q8_0_173.txt
+284, to,3285, hear,-0.8430326,0.8430326,llama-2-7b-chat@q8_0_173.txt
+3285, hear,13,.,-1.1349698,1.1349698,llama-2-7b-chat@q8_0_173.txt
+13,.,843, And,-3.0156758,3.0156758,llama-2-7b-chat@q8_0_173.txt
+843, And,345, you,-3.0909243,3.0909243,llama-2-7b-chat@q8_0_173.txt
+345, you,821,'re,-1.8974233,1.8974233,llama-2-7b-chat@q8_0_173.txt
+821,'re,6563, confident,-6.079898,6.079898,llama-2-7b-chat@q8_0_173.txt
+6563, confident,326, that,-1.2110522,1.2110522,llama-2-7b-chat@q8_0_173.txt
+326, that,534, your,-3.9013143,3.9013143,llama-2-7b-chat@q8_0_173.txt
+534, your,812, years,-9.315835,9.315835,llama-2-7b-chat@q8_0_173.txt
+812, years,286, of,-0.6648858,0.6648858,llama-2-7b-chat@q8_0_173.txt
+286, of,1998, experience,-1.3399603,1.3399603,llama-2-7b-chat@q8_0_173.txt
+1998, experience,287, in,-1.919817,1.919817,llama-2-7b-chat@q8_0_173.txt
+287, in,262, the,-1.395784,1.395784,llama-2-7b-chat@q8_0_173.txt
+262, the,2831, industry,-2.6001554,2.6001554,llama-2-7b-chat@q8_0_173.txt
+2831, industry,481, will,-0.8476208,0.8476208,llama-2-7b-chat@q8_0_173.txt
+481, will,1037, help,-1.832527,1.832527,llama-2-7b-chat@q8_0_173.txt
+1037, help,514, us,-0.72124267,0.72124267,llama-2-7b-chat@q8_0_173.txt
+514, us,16500, navigate,-6.0366,6.0366,llama-2-7b-chat@q8_0_173.txt
+16500, navigate,428, this,-1.2314572,1.2314572,llama-2-7b-chat@q8_0_173.txt
+428, this,4902, crisis,-6.234438,6.234438,llama-2-7b-chat@q8_0_173.txt
+4902, crisis,1701,"?""",-4.822155,4.822155,llama-2-7b-chat@q8_0_173.txt

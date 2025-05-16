@@ -1,0 +1,10 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",44442, Goodbye,-13.18755,13.18755,mistral-7b-instruct-v0.1@q8_0_2.txt
+44442, Goodbye,11,",",-1.2654157,1.2654157,mistral-7b-instruct-v0.1@q8_0_2.txt
+11,",",18678, Karen,-8.587099,8.587099,mistral-7b-instruct-v0.1@q8_0_2.txt
+18678, Karen,13,.,-1.1128236,1.1128236,mistral-7b-instruct-v0.1@q8_0_2.txt
+13,.,8192, Have,-6.1696973,6.1696973,mistral-7b-instruct-v0.1@q8_0_2.txt
+8192, Have,257, a,-0.7678332,0.7678332,mistral-7b-instruct-v0.1@q8_0_2.txt
+257, a,1049, great,-1.8595415,1.8595415,mistral-7b-instruct-v0.1@q8_0_2.txt
+1049, great,1755, night,-3.823569,3.823569,mistral-7b-instruct-v0.1@q8_0_2.txt
+1755, night,526,".""",-3.7953992,3.7953992,mistral-7b-instruct-v0.1@q8_0_2.txt

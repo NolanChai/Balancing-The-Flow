@@ -1,0 +1,19 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",34653,Uh,-11.069187,11.069187,llama-2-7b-chat@q8_0_17.txt
+34653,Uh,11,",",-0.8027262,0.8027262,llama-2-7b-chat@q8_0_17.txt
+11,",",10194, yeah,-3.027066,3.027066,llama-2-7b-chat@q8_0_17.txt
+10194, yeah,13,.,-1.4793344,1.4793344,llama-2-7b-chat@q8_0_17.txt
+13,.,632, It,-2.9690928,2.9690928,llama-2-7b-chat@q8_0_17.txt
+632, It,338,'s,-0.49425906,0.49425906,llama-2-7b-chat@q8_0_17.txt
+338,'s,257, a,-2.3284767,2.3284767,llama-2-7b-chat@q8_0_17.txt
+257, a,2099, type,-8.367633,8.367633,llama-2-7b-chat@q8_0_17.txt
+2099, type,286, of,-0.11328025,0.11328025,llama-2-7b-chat@q8_0_17.txt
+286, of,28520, mushroom,-6.1559052,6.1559052,llama-2-7b-chat@q8_0_17.txt
+28520, mushroom,326, that,-2.297019,2.297019,llama-2-7b-chat@q8_0_17.txt
+326, that,338,'s,-1.837133,1.837133,llama-2-7b-chat@q8_0_17.txt
+338,'s,1107, really,-4.046732,4.046732,llama-2-7b-chat@q8_0_17.txt
+1107, really,922, good,-2.2558453,2.2558453,llama-2-7b-chat@q8_0_17.txt
+922, good,329, for,-0.6019446,0.6019446,llama-2-7b-chat@q8_0_17.txt
+329, for,534, your,-3.0233343,3.0233343,llama-2-7b-chat@q8_0_17.txt
+534, your,1535, health,-2.668257,2.668257,llama-2-7b-chat@q8_0_17.txt
+1535, health,526,".""",-1.2075114,1.2075114,llama-2-7b-chat@q8_0_17.txt

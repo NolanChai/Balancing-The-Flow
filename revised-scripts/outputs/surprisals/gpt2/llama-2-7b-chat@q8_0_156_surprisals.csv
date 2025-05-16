@@ -1,0 +1,24 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_156.txt
+40,I,766, see,-5.318183,5.318183,llama-2-7b-chat@q8_0_156.txt
+766, see,13,.,-4.041731,4.041731,llama-2-7b-chat@q8_0_156.txt
+13,.,1680, Can,-5.5111732,5.5111732,llama-2-7b-chat@q8_0_156.txt
+1680, Can,345, you,-0.6126717,0.6126717,llama-2-7b-chat@q8_0_156.txt
+345, you,3387, please,-2.8352623,2.8352623,llama-2-7b-chat@q8_0_156.txt
+3387, please,2148, provide,-6.3862696,6.3862696,llama-2-7b-chat@q8_0_156.txt
+2148, provide,502, me,-1.1096567,1.1096567,llama-2-7b-chat@q8_0_156.txt
+502, me,351, with,-0.44276702,0.44276702,llama-2-7b-chat@q8_0_156.txt
+351, with,262, the,-2.0874727,2.0874727,llama-2-7b-chat@q8_0_156.txt
+262, the,3128, date,-4.204674,4.204674,llama-2-7b-chat@q8_0_156.txt
+3128, date,286, of,-1.2699393,1.2699393,llama-2-7b-chat@q8_0_156.txt
+286, of,262, the,-0.9531077,0.9531077,llama-2-7b-chat@q8_0_156.txt
+262, the,8611, transaction,-6.0608306,6.0608306,llama-2-7b-chat@q8_0_156.txt
+8611, transaction,11,",",-3.0749507,3.0749507,llama-2-7b-chat@q8_0_156.txt
+11,",",393, or,-2.6374393,2.6374393,llama-2-7b-chat@q8_0_156.txt
+393, or,597, any,-2.987533,2.987533,llama-2-7b-chat@q8_0_156.txt
+597, any,584, other,-1.4337488,1.4337488,llama-2-7b-chat@q8_0_156.txt
+584, other,3307, details,-2.4912581,2.4912581,llama-2-7b-chat@q8_0_156.txt
+3307, details,345, you,-2.88757,2.88757,llama-2-7b-chat@q8_0_156.txt
+345, you,743, may,-2.3996882,2.3996882,llama-2-7b-chat@q8_0_156.txt
+743, may,3505, remember,-5.70988,5.70988,llama-2-7b-chat@q8_0_156.txt
+3505, remember,1701,"?""",-1.0045257,1.0045257,llama-2-7b-chat@q8_0_156.txt

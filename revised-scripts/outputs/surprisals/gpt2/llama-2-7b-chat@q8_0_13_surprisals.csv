@@ -1,0 +1,30 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_13.txt
+40,I,760, know,-3.7952335,3.7952335,llama-2-7b-chat@q8_0_13.txt
+760, know,11,",",-3.3245723,3.3245723,llama-2-7b-chat@q8_0_13.txt
+11,",",502, me,-7.927204,7.927204,llama-2-7b-chat@q8_0_13.txt
+502, me,1165, too,-1.270367,1.270367,llama-2-7b-chat@q8_0_13.txt
+1165, too,13,.,-1.2677937,1.2677937,llama-2-7b-chat@q8_0_13.txt
+13,.,632, It,-2.9434235,2.9434235,llama-2-7b-chat@q8_0_13.txt
+632, It,338,'s,-0.46689603,0.46689603,llama-2-7b-chat@q8_0_13.txt
+338,'s,407, not,-2.338186,2.338186,llama-2-7b-chat@q8_0_13.txt
+407, not,2562, easy,-3.429655,3.429655,llama-2-7b-chat@q8_0_13.txt
+2562, easy,852, being,-3.0115266,3.0115266,llama-2-7b-chat@q8_0_13.txt
+852, being,257, a,-1.1231831,1.1231831,llama-2-7b-chat@q8_0_13.txt
+257, a,4293, hero,-6.5968027,6.5968027,llama-2-7b-chat@q8_0_13.txt
+4293, hero,13,.,-1.5217147,1.5217147,llama-2-7b-chat@q8_0_13.txt
+13,.,887, But,-2.1876318,2.1876318,llama-2-7b-chat@q8_0_13.txt
+887, But,379, at,-4.131352,4.131352,llama-2-7b-chat@q8_0_13.txt
+379, at,1551, least,-1.7167838,1.7167838,llama-2-7b-chat@q8_0_13.txt
+1551, least,345, you,-2.1018147,2.1018147,llama-2-7b-chat@q8_0_13.txt
+345, you,423, have,-2.4244437,2.4244437,llama-2-7b-chat@q8_0_13.txt
+423, have,257, a,-1.4509403,1.4509403,llama-2-7b-chat@q8_0_13.txt
+257, a,2863, chance,-1.8701682,1.8701682,llama-2-7b-chat@q8_0_13.txt
+2863, chance,284, to,-0.763421,0.763421,llama-2-7b-chat@q8_0_13.txt
+284, to,787, make,-3.076451,3.076451,llama-2-7b-chat@q8_0_13.txt
+787, make,257, a,-0.97375846,0.97375846,llama-2-7b-chat@q8_0_13.txt
+257, a,3580, difference,-0.3216978,0.3216978,llama-2-7b-chat@q8_0_13.txt
+3580, difference,287, in,-2.4472303,2.4472303,llama-2-7b-chat@q8_0_13.txt
+287, in,262, the,-1.1616192,1.1616192,llama-2-7b-chat@q8_0_13.txt
+262, the,995, world,-0.29556045,0.29556045,llama-2-7b-chat@q8_0_13.txt
+995, world,526,".""",-1.1221074,1.1221074,llama-2-7b-chat@q8_0_13.txt

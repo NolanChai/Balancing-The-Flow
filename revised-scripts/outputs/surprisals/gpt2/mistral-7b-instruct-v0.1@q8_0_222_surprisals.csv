@@ -1,0 +1,180 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",8192, Have,-10.59092,10.59092,mistral-7b-instruct-v0.1@q8_0_222.txt
+8192, Have,345, you,-0.90095407,0.90095407,mistral-7b-instruct-v0.1@q8_0_222.txt
+345, you,3088, tried,-3.658168,3.658168,mistral-7b-instruct-v0.1@q8_0_222.txt
+3088, tried,4917, finding,-7.7267413,7.7267413,mistral-7b-instruct-v0.1@q8_0_222.txt
+4917, finding,617, some,-3.9206316,3.9206316,mistral-7b-instruct-v0.1@q8_0_222.txt
+617, some,584, other,-3.320966,3.320966,mistral-7b-instruct-v0.1@q8_0_222.txt
+584, other,2842, ways,-3.5487506,3.5487506,mistral-7b-instruct-v0.1@q8_0_222.txt
+2842, ways,284, to,-0.17391007,0.17391007,mistral-7b-instruct-v0.1@q8_0_222.txt
+284, to,19330, incorporate,-6.524353,6.524353,mistral-7b-instruct-v0.1@q8_0_222.txt
+19330, incorporate,5517, exercise,-8.192774,8.192774,mistral-7b-instruct-v0.1@q8_0_222.txt
+5517, exercise,656, into,-0.27184415,0.27184415,mistral-7b-instruct-v0.1@q8_0_222.txt
+656, into,534, your,-0.15004751,0.15004751,mistral-7b-instruct-v0.1@q8_0_222.txt
+534, your,4445, daily,-1.6897697,1.6897697,mistral-7b-instruct-v0.1@q8_0_222.txt
+4445, daily,8027, routine,-0.72721595,0.72721595,mistral-7b-instruct-v0.1@q8_0_222.txt
+8027, routine,30,?,-0.22002196,0.22002196,mistral-7b-instruct-v0.1@q8_0_222.txt
+30,?,3412, Even,-7.769814,7.769814,mistral-7b-instruct-v0.1@q8_0_222.txt
+3412, Even,1223, something,-6.8270717,6.8270717,mistral-7b-instruct-v0.1@q8_0_222.txt
+1223, something,355, as,-0.5427961,0.5427961,mistral-7b-instruct-v0.1@q8_0_222.txt
+355, as,1402, small,-5.5791926,5.5791926,mistral-7b-instruct-v0.1@q8_0_222.txt
+1402, small,355, as,-0.04447749,0.04447749,mistral-7b-instruct-v0.1@q8_0_222.txt
+355, as,2263, taking,-4.1505723,4.1505723,mistral-7b-instruct-v0.1@q8_0_222.txt
+2263, taking,262, the,-3.488467,3.488467,mistral-7b-instruct-v0.1@q8_0_222.txt
+262, the,16046, stairs,-2.1632898,2.1632898,mistral-7b-instruct-v0.1@q8_0_222.txt
+16046, stairs,2427, instead,-5.3599277,5.3599277,mistral-7b-instruct-v0.1@q8_0_222.txt
+2427, instead,286, of,-0.005986972,0.005986972,mistral-7b-instruct-v0.1@q8_0_222.txt
+286, of,262, the,-1.8094076,1.8094076,mistral-7b-instruct-v0.1@q8_0_222.txt
+262, the,20932, elevator,-2.4869628,2.4869628,mistral-7b-instruct-v0.1@q8_0_222.txt
+20932, elevator,393, or,-2.8325949,2.8325949,mistral-7b-instruct-v0.1@q8_0_222.txt
+393, or,1016, going,-2.9224067,2.9224067,mistral-7b-instruct-v0.1@q8_0_222.txt
+1016, going,329, for,-3.1032114,3.1032114,mistral-7b-instruct-v0.1@q8_0_222.txt
+329, for,257, a,-0.27561933,0.27561933,mistral-7b-instruct-v0.1@q8_0_222.txt
+257, a,2513, walk,-0.5932686,0.5932686,mistral-7b-instruct-v0.1@q8_0_222.txt
+2513, walk,1141, during,-6.6408525,6.6408525,mistral-7b-instruct-v0.1@q8_0_222.txt
+1141, during,9965, lunch,-2.98671,2.98671,mistral-7b-instruct-v0.1@q8_0_222.txt
+9965, lunch,460, can,-4.4451036,4.4451036,mistral-7b-instruct-v0.1@q8_0_222.txt
+460, can,787, make,-2.2673588,2.2673588,mistral-7b-instruct-v0.1@q8_0_222.txt
+787, make,257, a,-0.8511179,0.8511179,mistral-7b-instruct-v0.1@q8_0_222.txt
+257, a,3580, difference,-2.3416371,2.3416371,mistral-7b-instruct-v0.1@q8_0_222.txt
+3580, difference,526,".""",-7.1830664,7.1830664,mistral-7b-instruct-v0.1@q8_0_222.txt
+526,".""",198,"
+",-0.64969045,0.64969045,mistral-7b-instruct-v0.1@q8_0_222.txt
+198,"
+",198,"
+",-0.0009268994,0.0009268994,mistral-7b-instruct-v0.1@q8_0_222.txt
+198,"
+",1,"""",-2.3773382,2.3773382,mistral-7b-instruct-v0.1@q8_0_222.txt
+1,"""",9425, Yeah,-10.929092,10.929092,mistral-7b-instruct-v0.1@q8_0_222.txt
+9425, Yeah,11,",",-0.51606345,0.51606345,mistral-7b-instruct-v0.1@q8_0_222.txt
+11,",",644, what,-5.4884596,5.4884596,mistral-7b-instruct-v0.1@q8_0_222.txt
+644, what,2099, type,-7.2151537,7.2151537,mistral-7b-instruct-v0.1@q8_0_222.txt
+2099, type,286, of,-0.036690928,0.036690928,mistral-7b-instruct-v0.1@q8_0_222.txt
+286, of,13565, exercises,-3.191888,3.191888,mistral-7b-instruct-v0.1@q8_0_222.txt
+13565, exercises,423, have,-3.7175674,3.7175674,mistral-7b-instruct-v0.1@q8_0_222.txt
+423, have,345, you,-0.16238044,0.16238044,mistral-7b-instruct-v0.1@q8_0_222.txt
+345, you,587, been,-2.8193808,2.8193808,mistral-7b-instruct-v0.1@q8_0_222.txt
+587, been,1804, doing,-0.85044336,0.85044336,mistral-7b-instruct-v0.1@q8_0_222.txt
+1804, doing,379, at,-4.789631,4.789631,mistral-7b-instruct-v0.1@q8_0_222.txt
+379, at,262, the,-2.367663,2.367663,mistral-7b-instruct-v0.1@q8_0_222.txt
+262, the,3430, club,-6.965105,6.965105,mistral-7b-instruct-v0.1@q8_0_222.txt
+3430, club,30,?,-1.7839321,1.7839321,mistral-7b-instruct-v0.1@q8_0_222.txt
+30,?,843, And,-5.030141,5.030141,mistral-7b-instruct-v0.1@q8_0_222.txt
+843, And,423, have,-4.2499332,4.2499332,mistral-7b-instruct-v0.1@q8_0_222.txt
+423, have,345, you,-0.079511106,0.079511106,mistral-7b-instruct-v0.1@q8_0_222.txt
+345, you,6810, noticed,-3.7832046,3.7832046,mistral-7b-instruct-v0.1@q8_0_222.txt
+6810, noticed,597, any,-1.425469,1.425469,mistral-7b-instruct-v0.1@q8_0_222.txt
+597, any,2176, specific,-3.9456675,3.9456675,mistral-7b-instruct-v0.1@q8_0_222.txt
+2176, specific,4034, benefits,-3.1706746,3.1706746,mistral-7b-instruct-v0.1@q8_0_222.txt
+4034, benefits,422, from,-3.345746,3.345746,mistral-7b-instruct-v0.1@q8_0_222.txt
+422, from,606, them,-2.5685391,2.5685391,mistral-7b-instruct-v0.1@q8_0_222.txt
+606, them,1701,"?""",-1.1337578,1.1337578,mistral-7b-instruct-v0.1@q8_0_222.txt
+1701,"?""",198,"
+",-0.25026911,0.25026911,mistral-7b-instruct-v0.1@q8_0_222.txt
+198,"
+",198,"
+",-0.00019667599,0.00019667599,mistral-7b-instruct-v0.1@q8_0_222.txt
+198,"
+",40,I,-4.3800335,4.3800335,mistral-7b-instruct-v0.1@q8_0_222.txt
+40,I,6635, totally,-7.5940676,7.5940676,mistral-7b-instruct-v0.1@q8_0_222.txt
+6635, totally,4236, agree,-1.1314226,1.1314226,mistral-7b-instruct-v0.1@q8_0_222.txt
+4236, agree,11,",",-2.334585,2.334585,mistral-7b-instruct-v0.1@q8_0_222.txt
+11,",",340, it,-3.0413446,3.0413446,mistral-7b-instruct-v0.1@q8_0_222.txt
+340, it,338,'s,-0.62691903,0.62691903,mistral-7b-instruct-v0.1@q8_0_222.txt
+338,'s,8780, crucial,-8.333818,8.333818,mistral-7b-instruct-v0.1@q8_0_222.txt
+8780, crucial,284, to,-0.57842946,0.57842946,mistral-7b-instruct-v0.1@q8_0_222.txt
+284, to,5252, fuel,-10.714255,10.714255,mistral-7b-instruct-v0.1@q8_0_222.txt
+5252, fuel,674, our,-4.026508,4.026508,mistral-7b-instruct-v0.1@q8_0_222.txt
+674, our,5920, bodies,-2.5768578,2.5768578,mistral-7b-instruct-v0.1@q8_0_222.txt
+5920, bodies,351, with,-0.68115145,0.68115145,mistral-7b-instruct-v0.1@q8_0_222.txt
+351, with,262, the,-2.145142,2.145142,mistral-7b-instruct-v0.1@q8_0_222.txt
+262, the,826, right,-1.5973334,1.5973334,mistral-7b-instruct-v0.1@q8_0_222.txt
+826, right,20901, nutrients,-1.6918854,1.6918854,mistral-7b-instruct-v0.1@q8_0_222.txt
+20901, nutrients,13,.,-1.4241235,1.4241235,mistral-7b-instruct-v0.1@q8_0_222.txt
+13,.,198,"
+",-2.274845,2.274845,mistral-7b-instruct-v0.1@q8_0_222.txt
+198,"
+",198,"
+",-0.00025936577,0.00025936577,mistral-7b-instruct-v0.1@q8_0_222.txt
+198,"
+",1,"""",-1.7054328,1.7054328,mistral-7b-instruct-v0.1@q8_0_222.txt
+1,"""",5297,Yes,-4.4654284,4.4654284,mistral-7b-instruct-v0.1@q8_0_222.txt
+5297,Yes,11,",",-0.4167493,0.4167493,mistral-7b-instruct-v0.1@q8_0_222.txt
+11,",",616, my,-4.2629104,4.2629104,mistral-7b-instruct-v0.1@q8_0_222.txt
+616, my,21997, trainer,-7.286421,7.286421,mistral-7b-instruct-v0.1@q8_0_222.txt
+21997, trainer,31648, emphasizes,-9.131661,9.131661,mistral-7b-instruct-v0.1@q8_0_222.txt
+31648, emphasizes,262, the,-2.1836689,2.1836689,mistral-7b-instruct-v0.1@q8_0_222.txt
+262, the,6817, importance,-1.4404926,1.4404926,mistral-7b-instruct-v0.1@q8_0_222.txt
+6817, importance,286, of,-0.019582981,0.019582981,mistral-7b-instruct-v0.1@q8_0_222.txt
+286, of,47926, cardio,-6.0666084,6.0666084,mistral-7b-instruct-v0.1@q8_0_222.txt
+47926, cardio,13565, exercises,-5.273319,5.273319,mistral-7b-instruct-v0.1@q8_0_222.txt
+13565, exercises,588, like,-2.8875003,2.8875003,mistral-7b-instruct-v0.1@q8_0_222.txt
+588, like,2491, running,-2.805976,2.805976,mistral-7b-instruct-v0.1@q8_0_222.txt
+2491, running,11,",",-0.8170267,0.8170267,mistral-7b-instruct-v0.1@q8_0_222.txt
+11,",",16259, cycling,-2.991415,2.991415,mistral-7b-instruct-v0.1@q8_0_222.txt
+16259, cycling,393, or,-3.3815508,3.3815508,mistral-7b-instruct-v0.1@q8_0_222.txt
+393, or,14899, swimming,-2.6411693,2.6411693,mistral-7b-instruct-v0.1@q8_0_222.txt
+14899, swimming,284, to,-3.3246746,3.3246746,mistral-7b-instruct-v0.1@q8_0_222.txt
+284, to,2987, improve,-3.1237626,3.1237626,mistral-7b-instruct-v0.1@q8_0_222.txt
+2987, improve,22965, endurance,-4.0556946,4.0556946,mistral-7b-instruct-v0.1@q8_0_222.txt
+22965, endurance,290, and,-1.2740096,1.2740096,mistral-7b-instruct-v0.1@q8_0_222.txt
+290, and,4045, overall,-4.2729993,4.2729993,mistral-7b-instruct-v0.1@q8_0_222.txt
+4045, overall,13547, fitness,-1.8141307,1.8141307,mistral-7b-instruct-v0.1@q8_0_222.txt
+13547, fitness,13,.,-0.6610182,0.6610182,mistral-7b-instruct-v0.1@q8_0_222.txt
+13,.,1119, They,-4.163185,4.163185,mistral-7b-instruct-v0.1@q8_0_222.txt
+1119, They,635, also,-1.0392678,1.0392678,mistral-7b-instruct-v0.1@q8_0_222.txt
+635, also,4313, recommend,-1.8763477,1.8763477,mistral-7b-instruct-v0.1@q8_0_222.txt
+4313, recommend,29927, incorporating,-4.34523,4.34523,mistral-7b-instruct-v0.1@q8_0_222.txt
+29927, incorporating,4202, strength,-5.22273,5.22273,mistral-7b-instruct-v0.1@q8_0_222.txt
+4202, strength,3047, training,-0.55740446,0.55740446,mistral-7b-instruct-v0.1@q8_0_222.txt
+3047, training,4568, activities,-7.4387913,7.4387913,mistral-7b-instruct-v0.1@q8_0_222.txt
+4568, activities,734, two,-12.468889,12.468889,mistral-7b-instruct-v0.1@q8_0_222.txt
+734, two,284, to,-1.557958,1.557958,mistral-7b-instruct-v0.1@q8_0_222.txt
+284, to,1115, three,-0.25089198,0.25089198,mistral-7b-instruct-v0.1@q8_0_222.txt
+1115, three,1661, times,-0.21299732,0.21299732,mistral-7b-instruct-v0.1@q8_0_222.txt
+1661, times,257, a,-0.5006951,0.5006951,mistral-7b-instruct-v0.1@q8_0_222.txt
+257, a,1285, week,-0.18894295,0.18894295,mistral-7b-instruct-v0.1@q8_0_222.txt
+1285, week,284, to,-1.7189124,1.7189124,mistral-7b-instruct-v0.1@q8_0_222.txt
+284, to,1382, build,-3.970355,3.970355,mistral-7b-instruct-v0.1@q8_0_222.txt
+1382, build,8280, muscle,-1.4710625,1.4710625,mistral-7b-instruct-v0.1@q8_0_222.txt
+8280, muscle,290, and,-1.1990651,1.1990651,mistral-7b-instruct-v0.1@q8_0_222.txt
+290, and,2620, increase,-3.8448296,3.8448296,mistral-7b-instruct-v0.1@q8_0_222.txt
+2620, increase,20211, metabolism,-4.261859,4.261859,mistral-7b-instruct-v0.1@q8_0_222.txt
+20211, metabolism,526,".""",-1.4234335,1.4234335,mistral-7b-instruct-v0.1@q8_0_222.txt
+526,".""",198,"
+",-0.106617615,0.106617615,mistral-7b-instruct-v0.1@q8_0_222.txt
+198,"
+",198,"
+",-0.00015972769,0.00015972769,mistral-7b-instruct-v0.1@q8_0_222.txt
+198,"
+",1,"""",-1.2302676,1.2302676,mistral-7b-instruct-v0.1@q8_0_222.txt
+1,"""",1320, That,-5.8540916,5.8540916,mistral-7b-instruct-v0.1@q8_0_222.txt
+1320, That,338,'s,-0.7159593,0.7159593,mistral-7b-instruct-v0.1@q8_0_222.txt
+338,'s,2081, true,-3.451289,3.451289,mistral-7b-instruct-v0.1@q8_0_222.txt
+2081, true,0,!,-2.6691542,2.6691542,mistral-7b-instruct-v0.1@q8_0_222.txt
+0,!,843, And,-3.106437,3.106437,mistral-7b-instruct-v0.1@q8_0_222.txt
+843, And,836, don,-5.3337536,5.3337536,mistral-7b-instruct-v0.1@q8_0_222.txt
+836, don,470,'t,-0.0003749621,0.0003749621,mistral-7b-instruct-v0.1@q8_0_222.txt
+470,'t,6044, forget,-1.0898294,1.0898294,mistral-7b-instruct-v0.1@q8_0_222.txt
+6044, forget,284, to,-0.8919305,0.8919305,mistral-7b-instruct-v0.1@q8_0_222.txt
+284, to,6004, listen,-4.3082895,4.3082895,mistral-7b-instruct-v0.1@q8_0_222.txt
+6004, listen,284, to,-0.08310024,0.08310024,mistral-7b-instruct-v0.1@q8_0_222.txt
+284, to,534, your,-0.67578274,0.67578274,mistral-7b-instruct-v0.1@q8_0_222.txt
+534, your,1767, body,-0.7547492,0.7547492,mistral-7b-instruct-v0.1@q8_0_222.txt
+1767, body,290, and,-2.1615443,2.1615443,mistral-7b-instruct-v0.1@q8_0_222.txt
+290, and,1334, rest,-7.3167377,7.3167377,mistral-7b-instruct-v0.1@q8_0_222.txt
+1334, rest,618, when,-4.43713,4.43713,mistral-7b-instruct-v0.1@q8_0_222.txt
+618, when,345, you,-0.5031563,0.5031563,mistral-7b-instruct-v0.1@q8_0_222.txt
+345, you,761, need,-4.4512496,4.4512496,mistral-7b-instruct-v0.1@q8_0_222.txt
+761, need,340, it,-1.1199561,1.1199561,mistral-7b-instruct-v0.1@q8_0_222.txt
+340, it,13,.,-1.6715641,1.6715641,mistral-7b-instruct-v0.1@q8_0_222.txt
+13,.,632, It,-2.5649757,2.5649757,mistral-7b-instruct-v0.1@q8_0_222.txt
+632, It,338,'s,-0.88801616,0.88801616,mistral-7b-instruct-v0.1@q8_0_222.txt
+338,'s,1593, important,-2.047302,2.047302,mistral-7b-instruct-v0.1@q8_0_222.txt
+1593, important,407, not,-4.2673817,4.2673817,mistral-7b-instruct-v0.1@q8_0_222.txt
+407, not,284, to,-0.13497214,0.13497214,mistral-7b-instruct-v0.1@q8_0_222.txt
+284, to,4574, push,-4.8657246,4.8657246,mistral-7b-instruct-v0.1@q8_0_222.txt
+4574, push,3511, yourself,-1.0564083,1.0564083,mistral-7b-instruct-v0.1@q8_0_222.txt
+3511, yourself,1165, too,-0.5169274,0.5169274,mistral-7b-instruct-v0.1@q8_0_222.txt
+1165, too,1327, hard,-0.33459675,0.33459675,mistral-7b-instruct-v0.1@q8_0_222.txt
+1327, hard,526,".""",-3.3246431,3.3246431,mistral-7b-instruct-v0.1@q8_0_222.txt

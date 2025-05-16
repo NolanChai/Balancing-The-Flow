@@ -1,0 +1,15 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",16454,Okay,-10.056667,10.056667,llama-2-7b-chat@q8_0_199.txt
+16454,Okay,11,",",-0.55465835,0.55465835,llama-2-7b-chat@q8_0_199.txt
+11,",",880, well,-3.8347814,3.8347814,llama-2-7b-chat@q8_0_199.txt
+880, well,460, can,-7.5515428,7.5515428,llama-2-7b-chat@q8_0_199.txt
+460, can,314, I,-1.202882,1.202882,llama-2-7b-chat@q8_0_199.txt
+314, I,1393, interest,-11.771017,11.771017,llama-2-7b-chat@q8_0_199.txt
+1393, interest,345, you,-0.16995788,0.16995788,llama-2-7b-chat@q8_0_199.txt
+345, you,287, in,-0.5305466,0.5305466,llama-2-7b-chat@q8_0_199.txt
+287, in,9679, joining,-3.399798,3.399798,llama-2-7b-chat@q8_0_199.txt
+9679, joining,502, me,-1.1510836,1.1510836,llama-2-7b-chat@q8_0_199.txt
+502, me,329, for,-2.903401,2.903401,llama-2-7b-chat@q8_0_199.txt
+329, for,12607, breakfast,-4.477242,4.477242,llama-2-7b-chat@q8_0_199.txt
+12607, breakfast,27091, beforehand,-10.061617,10.061617,llama-2-7b-chat@q8_0_199.txt
+27091, beforehand,1701,"?""",-0.65271217,0.65271217,llama-2-7b-chat@q8_0_199.txt

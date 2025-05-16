@@ -1,0 +1,52 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,mistral-7b-instruct-v0.1@q8_0_62.txt
+40,I,1833, understand,-5.4735403,5.4735403,mistral-7b-instruct-v0.1@q8_0_62.txt
+1833, understand,326, that,-1.187974,1.187974,mistral-7b-instruct-v0.1@q8_0_62.txt
+326, that,345, you,-2.2692826,2.2692826,mistral-7b-instruct-v0.1@q8_0_62.txt
+345, you,821,'re,-1.6522492,1.6522492,mistral-7b-instruct-v0.1@q8_0_62.txt
+821,'re,3957, growing,-7.652099,7.652099,mistral-7b-instruct-v0.1@q8_0_62.txt
+3957, growing,510, up,-1.035007,1.035007,mistral-7b-instruct-v0.1@q8_0_62.txt
+510, up,11,",",-2.8250456,2.8250456,mistral-7b-instruct-v0.1@q8_0_62.txt
+11,",",475, but,-0.9854328,0.9854328,mistral-7b-instruct-v0.1@q8_0_62.txt
+475, but,3747, safety,-12.191693,12.191693,mistral-7b-instruct-v0.1@q8_0_62.txt
+3747, safety,815, should,-5.80021,5.80021,mistral-7b-instruct-v0.1@q8_0_62.txt
+815, should,1464, always,-2.1474094,2.1474094,mistral-7b-instruct-v0.1@q8_0_62.txt
+1464, always,307, be,-0.2606806,0.2606806,mistral-7b-instruct-v0.1@q8_0_62.txt
+307, be,257, a,-2.1473687,2.1473687,mistral-7b-instruct-v0.1@q8_0_62.txt
+257, a,8475, priority,-2.0398457,2.0398457,mistral-7b-instruct-v0.1@q8_0_62.txt
+8475, priority,13,.,-1.630592,1.630592,mistral-7b-instruct-v0.1@q8_0_62.txt
+13,.,6889, Make,-6.596076,6.596076,mistral-7b-instruct-v0.1@q8_0_62.txt
+6889, Make,1654, sure,-0.13348784,0.13348784,mistral-7b-instruct-v0.1@q8_0_62.txt
+1654, sure,284, to,-3.271168,3.271168,mistral-7b-instruct-v0.1@q8_0_62.txt
+284, to,5806, wear,-3.5776143,3.5776143,mistral-7b-instruct-v0.1@q8_0_62.txt
+5806, wear,257, a,-1.6465528,1.6465528,mistral-7b-instruct-v0.1@q8_0_62.txt
+257, a,14335, helmet,-0.83832777,0.83832777,mistral-7b-instruct-v0.1@q8_0_62.txt
+14335, helmet,981, while,-4.782694,4.782694,mistral-7b-instruct-v0.1@q8_0_62.txt
+981, while,10311, riding,-2.8284335,2.8284335,mistral-7b-instruct-v0.1@q8_0_62.txt
+10311, riding,534, your,-3.7936573,3.7936573,mistral-7b-instruct-v0.1@q8_0_62.txt
+534, your,7161, bike,-0.16114005,0.16114005,mistral-7b-instruct-v0.1@q8_0_62.txt
+7161, bike,290, and,-2.5961337,2.5961337,mistral-7b-instruct-v0.1@q8_0_62.txt
+290, and,1394, keep,-2.7059743,2.7059743,mistral-7b-instruct-v0.1@q8_0_62.txt
+1394, keep,281, an,-4.032733,4.032733,mistral-7b-instruct-v0.1@q8_0_62.txt
+281, an,4151, eye,-0.05736189,0.05736189,mistral-7b-instruct-v0.1@q8_0_62.txt
+4151, eye,503, out,-0.5795121,0.5795121,mistral-7b-instruct-v0.1@q8_0_62.txt
+503, out,329, for,-0.12073432,0.12073432,mistral-7b-instruct-v0.1@q8_0_62.txt
+329, for,597, any,-2.3006315,2.3006315,mistral-7b-instruct-v0.1@q8_0_62.txt
+597, any,2785, potential,-2.7103388,2.7103388,mistral-7b-instruct-v0.1@q8_0_62.txt
+2785, potential,27491, hazards,-2.0711007,2.0711007,mistral-7b-instruct-v0.1@q8_0_62.txt
+27491, hazards,319, on,-4.0153375,4.0153375,mistral-7b-instruct-v0.1@q8_0_62.txt
+319, on,262, the,-0.55324954,0.55324954,mistral-7b-instruct-v0.1@q8_0_62.txt
+262, the,2975, road,-0.57099015,0.57099015,mistral-7b-instruct-v0.1@q8_0_62.txt
+2975, road,13,.,-1.0554975,1.0554975,mistral-7b-instruct-v0.1@q8_0_62.txt
+13,.,4418, Also,-4.4612317,4.4612317,mistral-7b-instruct-v0.1@q8_0_62.txt
+4418, Also,11,",",-0.529163,0.529163,mistral-7b-instruct-v0.1@q8_0_62.txt
+11,",",307, be,-2.9383502,2.9383502,mistral-7b-instruct-v0.1@q8_0_62.txt
+307, be,33798, mindful,-3.1871338,3.1871338,mistral-7b-instruct-v0.1@q8_0_62.txt
+33798, mindful,286, of,-0.23202315,0.23202315,mistral-7b-instruct-v0.1@q8_0_62.txt
+286, of,584, other,-3.90869,3.90869,mistral-7b-instruct-v0.1@q8_0_62.txt
+584, other,23390, cyclists,-1.3447789,1.3447789,mistral-7b-instruct-v0.1@q8_0_62.txt
+23390, cyclists,290, and,-2.6170578,2.6170578,mistral-7b-instruct-v0.1@q8_0_62.txt
+290, and,26735, pedestrians,-1.5533522,1.5533522,mistral-7b-instruct-v0.1@q8_0_62.txt
+26735, pedestrians,1088, around,-3.4666653,3.4666653,mistral-7b-instruct-v0.1@q8_0_62.txt
+1088, around,345, you,-0.06391096,0.06391096,mistral-7b-instruct-v0.1@q8_0_62.txt
+345, you,526,".""",-1.980389,1.980389,mistral-7b-instruct-v0.1@q8_0_62.txt

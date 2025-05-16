@@ -1,0 +1,20 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2504,That,-6.952019,6.952019,mistral-7b-instruct-v0.1@q8_0_147.txt
+2504,That,1838, makes,-5.322973,5.322973,mistral-7b-instruct-v0.1@q8_0_147.txt
+1838, makes,2565, sense,-1.6989381,1.6989381,mistral-7b-instruct-v0.1@q8_0_147.txt
+2565, sense,13,.,-1.4401022,1.4401022,mistral-7b-instruct-v0.1@q8_0_147.txt
+13,.,6674, Maybe,-4.944395,4.944395,mistral-7b-instruct-v0.1@q8_0_147.txt
+6674, Maybe,356, we,-2.2739444,2.2739444,mistral-7b-instruct-v0.1@q8_0_147.txt
+356, we,460, can,-2.1163793,2.1163793,mistral-7b-instruct-v0.1@q8_0_147.txt
+460, can,787, make,-3.234202,3.234202,mistral-7b-instruct-v0.1@q8_0_147.txt
+787, make,257, a,-1.6560634,1.6560634,mistral-7b-instruct-v0.1@q8_0_147.txt
+257, a,5296, trip,-7.404251,7.404251,mistral-7b-instruct-v0.1@q8_0_147.txt
+5296, trip,284, to,-0.63708454,0.63708454,mistral-7b-instruct-v0.1@q8_0_147.txt
+284, to,47043, Chinatown,-9.164531,9.164531,mistral-7b-instruct-v0.1@q8_0_147.txt
+47043, Chinatown,290, and,-1.7278018,1.7278018,mistral-7b-instruct-v0.1@q8_0_147.txt
+290, and,2198, check,-4.8972764,4.8972764,mistral-7b-instruct-v0.1@q8_0_147.txt
+2198, check,503, out,-0.5070758,0.5070758,mistral-7b-instruct-v0.1@q8_0_147.txt
+503, out,262, the,-1.2998085,1.2998085,mistral-7b-instruct-v0.1@q8_0_147.txt
+262, the,10902, courses,-10.43498,10.43498,mistral-7b-instruct-v0.1@q8_0_147.txt
+10902, courses,612, there,-2.6802278,2.6802278,mistral-7b-instruct-v0.1@q8_0_147.txt
+612, there,526,".""",-1.5755326,1.5755326,mistral-7b-instruct-v0.1@q8_0_147.txt

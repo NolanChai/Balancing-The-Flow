@@ -1,0 +1,52 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,mistral-7b-instruct-v0.1@q8_0_104.txt
+40,I,716, am,-3.5129845,3.5129845,mistral-7b-instruct-v0.1@q8_0_104.txt
+716, am,9675, glad,-4.9096317,4.9096317,mistral-7b-instruct-v0.1@q8_0_104.txt
+9675, glad,345, you,-2.4795923,2.4795923,mistral-7b-instruct-v0.1@q8_0_104.txt
+345, you,892, think,-4.9775248,4.9775248,mistral-7b-instruct-v0.1@q8_0_104.txt
+892, think,523, so,-1.4527352,1.4527352,mistral-7b-instruct-v0.1@q8_0_104.txt
+523, so,0,!,-4.8835897,4.8835897,mistral-7b-instruct-v0.1@q8_0_104.txt
+0,!,314, I,-1.353124,1.353124,mistral-7b-instruct-v0.1@q8_0_104.txt
+314, I,1254, feel,-4.4656157,4.4656157,mistral-7b-instruct-v0.1@q8_0_104.txt
+1254, feel,845, very,-3.3379288,3.3379288,mistral-7b-instruct-v0.1@q8_0_104.txt
+845, very,20200, fortunate,-3.2367408,3.2367408,mistral-7b-instruct-v0.1@q8_0_104.txt
+20200, fortunate,284, to,-0.79068077,0.79068077,mistral-7b-instruct-v0.1@q8_0_104.txt
+284, to,423, have,-0.6995774,0.6995774,mistral-7b-instruct-v0.1@q8_0_104.txt
+423, have,884, such,-2.7794418,2.7794418,mistral-7b-instruct-v0.1@q8_0_104.txt
+884, such,257, a,-0.57490104,0.57490104,mistral-7b-instruct-v0.1@q8_0_104.txt
+257, a,7932, wonderful,-2.0062227,2.0062227,mistral-7b-instruct-v0.1@q8_0_104.txt
+7932, wonderful,1048, person,-3.9221754,3.9221754,mistral-7b-instruct-v0.1@q8_0_104.txt
+1048, person,2263, taking,-7.5041313,7.5041313,mistral-7b-instruct-v0.1@q8_0_104.txt
+2263, taking,1337, care,-1.6166519,1.6166519,mistral-7b-instruct-v0.1@q8_0_104.txt
+1337, care,286, of,-0.004575379,0.004575379,mistral-7b-instruct-v0.1@q8_0_104.txt
+286, of,616, my,-1.885359,1.885359,mistral-7b-instruct-v0.1@q8_0_104.txt
+616, my,3367, son,-4.1736526,4.1736526,mistral-7b-instruct-v0.1@q8_0_104.txt
+3367, son,13,.,-1.6168793,1.6168793,mistral-7b-instruct-v0.1@q8_0_104.txt
+13,.,1375, She,-5.3175144,5.3175144,mistral-7b-instruct-v0.1@q8_0_104.txt
+1375, She,10408, loves,-4.2798996,4.2798996,mistral-7b-instruct-v0.1@q8_0_104.txt
+10408, loves,683, him,-0.8472238,0.8472238,mistral-7b-instruct-v0.1@q8_0_104.txt
+683, him,46379, dearly,-3.336654,3.336654,mistral-7b-instruct-v0.1@q8_0_104.txt
+46379, dearly,290, and,-0.86495733,0.86495733,mistral-7b-instruct-v0.1@q8_0_104.txt
+290, and,857, does,-5.016905,5.016905,mistral-7b-instruct-v0.1@q8_0_104.txt
+857, does,2279, everything,-1.0765321,1.0765321,mistral-7b-instruct-v0.1@q8_0_104.txt
+2279, everything,673, she,-1.0429891,1.0429891,mistral-7b-instruct-v0.1@q8_0_104.txt
+673, she,460, can,-0.021000179,0.021000179,mistral-7b-instruct-v0.1@q8_0_104.txt
+460, can,284, to,-0.24269724,0.24269724,mistral-7b-instruct-v0.1@q8_0_104.txt
+284, to,787, make,-1.6307116,1.6307116,mistral-7b-instruct-v0.1@q8_0_104.txt
+787, make,1654, sure,-0.70621,0.70621,mistral-7b-instruct-v0.1@q8_0_104.txt
+1654, sure,339, he,-0.9341735,0.9341735,mistral-7b-instruct-v0.1@q8_0_104.txt
+339, he,338,'s,-2.843855,2.843855,mistral-7b-instruct-v0.1@q8_0_104.txt
+338,'s,3772, happy,-1.584323,1.584323,mistral-7b-instruct-v0.1@q8_0_104.txt
+3772, happy,290, and,-1.4608798,1.4608798,mistral-7b-instruct-v0.1@q8_0_104.txt
+290, and,5448, healthy,-0.6774673,0.6774673,mistral-7b-instruct-v0.1@q8_0_104.txt
+5448, healthy,13,.,-1.1052577,1.1052577,mistral-7b-instruct-v0.1@q8_0_104.txt
+13,.,1867, What,-6.2315326,6.2315326,mistral-7b-instruct-v0.1@q8_0_104.txt
+1867, What,546, about,-6.431984,6.431984,mistral-7b-instruct-v0.1@q8_0_104.txt
+546, about,345, you,-1.463175,1.463175,mistral-7b-instruct-v0.1@q8_0_104.txt
+345, you,30,?,-1.6275221,1.6275221,mistral-7b-instruct-v0.1@q8_0_104.txt
+30,?,2141, Do,-2.8286173,2.8286173,mistral-7b-instruct-v0.1@q8_0_104.txt
+2141, Do,345, you,-0.0685006,0.0685006,mistral-7b-instruct-v0.1@q8_0_104.txt
+345, you,423, have,-1.9226563,1.9226563,mistral-7b-instruct-v0.1@q8_0_104.txt
+423, have,597, any,-0.6973639,0.6973639,mistral-7b-instruct-v0.1@q8_0_104.txt
+597, any,1751, children,-4.2059546,4.2059546,mistral-7b-instruct-v0.1@q8_0_104.txt
+1751, children,1701,"?""",-2.0841508,2.0841508,mistral-7b-instruct-v0.1@q8_0_104.txt

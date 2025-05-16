@@ -1,0 +1,15 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1537,But,-6.839767,6.839767,mistral-7b-instruct-v0.1@q8_0_28.txt
+1537,But,611, if,-3.552664,3.552664,mistral-7b-instruct-v0.1@q8_0_28.txt
+611, if,484, they,-2.8077617,2.8077617,mistral-7b-instruct-v0.1@q8_0_28.txt
+484, they,6330, replace,-8.92797,8.92797,mistral-7b-instruct-v0.1@q8_0_28.txt
+6330, replace,2310, 21,-10.221588,10.221588,mistral-7b-instruct-v0.1@q8_0_28.txt
+2310, 21,11,",",-2.3391933,2.3391933,mistral-7b-instruct-v0.1@q8_0_28.txt
+11,",",484, they,-2.9912446,2.9912446,mistral-7b-instruct-v0.1@q8_0_28.txt
+484, they,714, could,-4.154905,4.154905,mistral-7b-instruct-v0.1@q8_0_28.txt
+714, could,6196, potentially,-4.5832663,4.5832663,mistral-7b-instruct-v0.1@q8_0_28.txt
+6196, potentially,1011, take,-4.388056,4.388056,mistral-7b-instruct-v0.1@q8_0_28.txt
+1011, take,866, down,-4.5291348,4.5291348,mistral-7b-instruct-v0.1@q8_0_28.txt
+866, down,262, the,-1.388037,1.388037,mistral-7b-instruct-v0.1@q8_0_28.txt
+262, the,16920, Rocket,-11.836063,11.836063,mistral-7b-instruct-v0.1@q8_0_28.txt
+16920, Rocket,526,".""",-5.5632596,5.5632596,mistral-7b-instruct-v0.1@q8_0_28.txt
