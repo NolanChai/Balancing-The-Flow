@@ -1,0 +1,24 @@
+```python
+class Solution(object):
+    def minFractionToBeChosen(self, fraction):
+        """
+        :type fraction: str
+        :rtype: float
+        """
+        if (fraction == "0"): return 1.0
+        if (fraction[0] == '5'):
+            # if the first digit is a five
+            if ((len(fraction) > 1) and (fraction[1] != '5')):
+                # if not all the digits are fives, return the remainder
+                return 1.0 - float((fraction).count('5') * .4)
+            else:
+                # if the first digit is a five
+                return .7 + (float(fraction)/48.)
+        else:
+            # otherwise, find the least amount of cents in the fraction
+            fraction = float(fraction)*100.
+            remainder = int(fraction) % 100
+            if (remainder == 0): return .25+float((fraction/100).count('5'))
+            else: # if there were any cents left over, add that fraction to the original fraction
+                return .7 + float(fraction) / 100.
+```
