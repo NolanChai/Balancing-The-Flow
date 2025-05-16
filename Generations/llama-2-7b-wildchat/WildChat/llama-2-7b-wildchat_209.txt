@@ -1,0 +1,6 @@
+$$I = \frac{V}{R} + \frac{Q}{C}$$
+
+$$I = \frac{(4.19 V - 0 V)}{15 \Omega} + \frac{6.5 \mu F}{15 \Omega} $$
+$$I = \frac{(4.19 V - 0 V)}{15 \Omega} + \frac{(4.19 V)(6.5 \mu F)}{15 \Omega}$$
+$$I = \frac{27.535 V}{15 \Omega} + (4.19V \cdot 6.5 \times 10^{-6})(6.5 \times 10^{-6})$$
+$$I = 174 A$$

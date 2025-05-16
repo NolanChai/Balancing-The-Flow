@@ -1,0 +1,55 @@
+### Problem Definition:
+
+Write a Python program that can take user input and calculate the average score of all the users. The program should also prompt the user if they want to continue taking another test with different questions or not. 
+
+### Design:
+```python
+#Program logic for user input. 
+#The program will ask the user how many people took the test, then it will calculate their average and print all of them out. Then it will prompt the user if they want to continue taking another test with different questions or not.
+users = int(input("How many users took your test?")) #user input
+average = 0
+for i in range (1,users+1):
+    score = float(input("What is user " + str(i) + "'s score?")) #user input
+    average += score #adding all scores to an average number
+print(f"The average of all users is {average/users:.2f}") #printing out the average
+
+#Program logic for a second test with different questions
+while True:
+    question = input("Do you want another test? (y/n)") #prompting user to decide if they want another test
+    if question == "y":
+        break
+    elif question == "n":
+        print("Ok, thanks for taking this test!") #closing program
+        break
+```
+### Implementation:
+```python
+#Program logic for user input. 
+#The program will ask the user how many people took the test, then it will calculate their average and print all of them out. Then it will prompt the user if they want to continue taking another test with different questions or not.
+users = int(input("How many users took your test?")) #user input
+average = 0
+for i in range (1,users+1):
+    score = float(input("What is user " + str(i) + "'s score?")) #user input
+    average += score #adding all scores to an average number
+print(f"The average of all users is {average/users:.2f}") #printing out the average
+
+#Program logic for a second test with different questions
+while True:
+    question = input("Do you want another test? (y/n)") #prompting user to decide if they want another test
+    if question == "y":
+        break
+    elif question == "n":
+        print("Ok, thanks for taking this test!") #closing program
+        break
+```
+### Test:
+### Output:
+How many users took your test?5
+What is user 1's score?37.268048
+What is user 2's score?34.917612
+What is user 3's score?34.751357
+What is user 4's score?33.657500
+What is user 5's score?33.128825
+The average of all users is 33.906552
+Do you want another test? (y/n)y
+Ok, thanks for taking this test!

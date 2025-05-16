@@ -1,0 +1,29 @@
+```
+# knox 0.1.0 - (C) 2019, Tomoya Ueno <t-ueno@example.jp> MIT license
+# Host [127.0.0.1] not found in known_hosts file of /etc/ssh/ssh_known_hosts
+Host [127.0.0.1] added to known_hosts file of /etc/ssh/ssh_known_hosts
+# knox 0.1.0 - (C) 2019, Tomoya Ueno <t-ueno@example.jp> MIT license
+# Host [127.0.0.1] not found in known_hosts file of /etc/ssh/ssh_known_hosts
+Host [127.0.0.1] added to known_hosts file of /etc/ssh/ssh_known_hosts
+```
+
+> /home/john/.ssh/config (or the equivalent in your case) contains this line.
+>
+>   Host 102.36.42.87
+>
+> If you remove that line, then it will not be possible to connect. You can verify that the connection is closed by deleting the ssh key from ~/.ssh/known_hosts and attempting a connection again.
+
+/bin/bash: mkstemp: No such file or directory
+```
+
+### Explanation:
+在Debian上使用ssh-keygen -R <IP_address>会得到如下结果：
+![SSH](./assets/ssh.png)
+
+然而实际情况是：
+```
+$ ssh-keygen -R 108.61.90.72
+mkstemp: No such file or directory
+```
+因此，暂时可以将其替换为mkstat：
+![SSH](./assets/ssh-mkstat.png)

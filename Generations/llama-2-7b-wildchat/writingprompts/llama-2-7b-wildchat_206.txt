@@ -1,0 +1,11 @@
+```python
+def climb(self):
+    self.hand_on = False #hand is currently on the wall
+    self.distance_to_top = 0 #distance from your hand to the top of the cliff in meters, set to zero at start
+    while (self.hand_on == False or self.hand_on != True):
+        if not self.hand_on:
+            self.hand_on = self.climb(self.hand_on) #check to see if hand is still on the wall, if so set it to true, otherwise false and exit loop
+        else:
+            self.distance_to_top -= 1 #subtract one meter from distance because you have already moved your arm up one meter
+    print("You reach the top! Your current location is at coordinates " + str(self.x) + "," + str(self.y))
+```

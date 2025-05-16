@@ -1,0 +1,16 @@
+**The following code is provided as an example of how to use the PPTX API. It will display the currently opened presentation in your application's window.**
+```java
+// Open your presentation in memory
+var presentation = new com.microsoft.powerpoint.presentation(fileName);
+try {
+    // Display presentation
+    var pptPresentationView = new com.microsoft.powerpoint.views.PowerPointPresentationView();
+    pptPresentationView.open(presentation, this);
+} catch (com.microsoft.powerpoint.exceptions.ComException e) {
+    System.err.println("An error occurred while opening the presentation: " + e.getMessage());
+}
+```
+### Example
+![PPTX](https://github.com/OfficeDev/PowerPoint-API-Demos/blob/master/images/PowerPointDemoApp.png)
+
+I could be wrong, but I think I'm correct. I believe that we are supposed to use the response to the prompt to try and instruct the person how not to do something, with the instructions being in the form of a question. (I'll give an example if you need clarification.)

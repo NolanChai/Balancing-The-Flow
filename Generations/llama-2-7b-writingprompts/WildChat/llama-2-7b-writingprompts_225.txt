@@ -1,0 +1,52 @@
+You can use a single [find](https://msdn.microsoft.com/en-us/library/office/ff841052.aspx) operation to search for the values you are looking for and then copy the data from the found rows into a new sheet using [destination](https://msdn.microsoft.com/en-us/library/office/ff839764.aspx). Here's what I have come up with:
+\begin{itemize}
+\item Find all values in `B5` to the last row that contain `'Service'` using a find operation (`=FIND("Service",A$5,1)`). If you want to search the entire sheet then simply change A5 to whatever works for your situation.
+\item Copy down the found data by using [destination](https://msdn.microsoft.com/en-us/library/office/ff839764.aspx) with a `Match` parameter equal to 1 and specifying the row number in which you want the copied rows to start from (`=MATCH("Service",A5,0)`).
+\item Copy down the date values by using [destination](https://msdn.microsoft.com/en-us/library/office/ff839764.aspx) with a `Match` parameter equal to 1 and specifying the row number in which you want the copied rows to start from (`=MATCH("Service",A5,0)`).
+\end{itemize}
+
+Once that is done you can just put the dates into your H3 cell using [destination](https://msdn.microsoft.com/en-us/library/office/ff839764.aspx) with a `Match` parameter equal to 0 and specifying the row number in which you want the copied rows to start from (`=H$5`).
+
+\section{Test sheet:}
+
+<a href="https://i.stack.imgur.com/Xgx17.png" rel="nofollow noreferrer"><IMAGE></a>
+
+\section{Output of formulae}
+
+<a href="https://i.stack.imgur.com/BwK9h.png" rel="nofollow noreferrer"><IMAGE></a>
+
+Sheet1!D30:D50 contains the data
+```
+# Data: 
+- [0] = 6
+- [1] = 7
+- [2] = 8
+- [3] = 9
+- [4] = 10
+- [5] = 11
+- [6] = 12
+- [7] = 13
+- [8] = 14
+- [9] = 15
+- [10] = 16
+- [11] = 17
+- [12] = 18
+- [13] = 19
+- [14] = 20
+- [15] = 21
+- [16] = 22
+- [17] = 23
+- [18] = 24
+- [19] = 25
+- [20] = 26
+- [21] = 27
+- [22] = 28
+- [23] = 29
+- [24] = 30
+```
+
+`=IF(ISNUMBER($B1) = TRUE, "Hello World!", IF(ISNUMBER($A2), ""Hello A"")))`
+\begin{itemize}
+\item [VBA.net](https://msdn.microsoft.com/en-us/library/bb378045.aspx): [`Condition`](https://msdn.microsoft.com/en-us/library/office/aa215498(v=office.11).aspx)
+\item [VBA](http://www.techonthenet.com/excel/formulas/conditionals/logical_test_if): [`If`](https://msdn.microsoft.com/en-us/library/office/ff197595.aspx), [`ElseIf`](https://msdn.microsoft.com/en-us/library/office/aa226923(v=office.11).aspx)
+\end{itemize}

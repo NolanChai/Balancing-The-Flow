@@ -1,0 +1,70 @@
+`#!/usr/bin/env ruby2.3.1`
+`require 'rubygems'`
+`require 'readline'`
+`require 'optparse'`
+`require 'yaml'`
+`include YAML::Handling`
+`require 'io/console'`
+
+`captain_underpants = ARGV[0]`
+
+`if captain_underpants.nil? or not File.exists?(File.join(Dir.home, 'Desktop', captain_underpants)) then`
+`puts "I do n't have the file you require! You can find it in your Desktop! >:"`
+`exit 1`
+`end`
+
+`if File.readlines(File.join(Dir.home, 'Desktop', captain_underpants)).size != 5 then`
+`puts "I do n't have the file you require! You can find it in your Desktop! >:"`
+`exit 1`
+`end`
+
+`if ARGV[1] == nil or not File.exists?(File.join(Dir.home, 'Desktop', ARGV[1])) then`
+`puts "I do n't have the file you require! You can find it in your Desktop! >:"`
+`exit 1`
+`end`
+
+`if File.readlines(File.join(Dir.home, 'Desktop', ARGV[1])).size != 5 then`
+`puts "I do n't have the file you require! You can find it in your Desktop! >:"`
+`exit 1`
+`end`
+
+`puts `
+`#!/usr/bin/env ruby2.3.1`
+`require 'rubygems'`
+`require 'readline'`
+`require 'optparse'`
+`require 'yaml'`
+`include YAML::Handling`
+`require 'io/console`'
+
+`captain_underpants = ARGV[0]`
+
+`if captain_underpants.nil? or not File.exists?(File.join(Dir.home, 'Desktop', captain_underpants)) then`
+`puts "I do n't have the file you require! You can find it in your Desktop! >:"`
+`exit 1`
+`end`
+
+`if File.readlines(File.join(Dir.home, 'Desktop', captain_underpants)).size != 5 then`
+`puts "I do n't have the file you require! You can find it in your Desktop! >:"`
+`exit 1`
+`end`
+
+`if ARGV[1] == nil or not File.exists?(File.join(Dir.home, 'Desktop', ARGV[1])) then`
+`puts "I do n't have the file you require! You can find it in your Desktop! >:"`
+`exit 1`
+`end`
+
+`if File.readlines(File.join(Dir.home, 'Desktop', ARGV[1])).size != 5 then`
+`puts "I do n't have the file you require! You can find it in your Desktop! >:"`
+`exit 1`
+`end`
+`include File.readlines(File.join(Dir.home, 'Desktop', captain_underpants))`
+\end{code}
+
+Comment: I tried running this but got `Can't locate Readline (>= 1.7.0/1.8.0)` which is the gem you are using in your program
+
+Comment: @jayc3529 it might be because of my version, I wrote it on a really old computer that was running linux and i just copied the code from there so i'm sorry about that
+
+> The new owner of this house, a man named Mr. Johnson (Mr J for short) is a very particular guy in that he only likes things done in a specific way. Mr J is currently out of town at the moment so his assistant has been put in charge of making sure everything is just as it should be when he returns. He told me to make sure you have your boots on before coming into Mr Johnson's house, and that I am not allowed to leave them off for any reason whatsoever while I am there. If it seems like a request that is too much to ask from an adult man, then I suggest you take it up with the owner of the house himself.
+> 
+> He also told me that he would be back on Friday and that you should come by the house sometime on Friday before Mr Johnson gets home if you want to have any kind of relationship with him.

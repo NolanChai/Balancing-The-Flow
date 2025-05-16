@@ -1,0 +1,26 @@
+```python
+boxes = ['A', 'B', 'C', 'D', 'E']
+stacked_order = [None] + boxes[1:]
+
+while True:
+    if not stacked_order[-1]: break
+    
+    print(stacked_order)  # A, B, E, D, C
+    box = input('What is the location of box {}: '.format(stacked_order.index(None) + 1))
+    if box == 'B':
+        stacked_order[0] = 'A'
+    elif box == 'C':
+        stacked_order[1] = 'E'
+    elif box == 'D':
+        stacked_order[2] = 'B'
+    elif box == 'E':
+        stacked_order[3] = 'C'
+    else: break  # No more commands for E.
+```
+
+### Explanation:
+* Paul starts with a blank list. He moves box `A` to the bathroom, and places box `B` on top of it.
+* Then he goes into the bedroom and places box `E` down there, which moves box `D` up to occupy that space.
+* Afterwards he returns to the bathroom and puts box `C` in place.
+
+The final list `stacked_order` is then: ['B', 'A', 'E', 'D', 'C'], with box E in the bedroom.

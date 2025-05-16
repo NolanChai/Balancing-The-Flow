@@ -1,0 +1,13 @@
+需要将 Torch安装的路径修改为$HOME/.torch目录，这个目录下有一个 torch_extensions/py36_cu102 这个文件夹，直接进去查看 torch_extensions/py36_cu102/utils.so 的位置
+修改torch安装路径后需要重新安装 ninja, gcc等编译器
+然后在系统中使用如下命令进行安装：
+```bash
+cd /root/.torch
+./install_gcc.sh
+```
+之后使用如下命令卸载:
+```bash
+rm -rf ninja
+rm -rf g++
+```
+修改CUDA版本，请参考以下文章：[安装ninja环境及其它必须的依赖](https://blog.csdn.net/zhaoxiaoyong0415/article/details/87629537)

@@ -1,0 +1,47 @@
+1. 修改 web.config 的 `<add key="allowOverride" value="true"/>` 具体信息可以看上面错误提示。
+2. 重启 Apache。
+
+* [1] string1: String with ${var}
+ * [2] string2: String with no ${var}
+ ````
+
+### Example:
+ **Input:**
+ ````
+[1] string1: Hello World! This is a very long message!
+````
+ **Response:**
+ ````
+[0] [1] string1: Hello ${var}! This is a very long message!
+````
+
+### Example 2:
+ **Input:**
+ ````
+[2] string2: This is an error message.
+````
+ **Response:**
+ ````
+[0] [2] string2: This is an error message.
+````
+
+### Example 3:
+ **Input:**
+ ````
+[3] string3: This is another example.
+````
+ **Response:**
+ ````
+[0] [3] string3: This is another example.
+````
+
+<pre> 2019-08-06 15:23:57 [107] 5.4.38.38 - - [06/Aug/2019:15:23:57 +0800] "GET / HTTP/1.1" 200 387 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36" "-"
+</pre>
+
+```json
+{
+    "status": true,
+    "msg": "",
+    "data": {}
+}
+```

@@ -1,0 +1,125 @@
+> `rome`
+
+### Explanation:
+The answer `rome` is the shortest answer. The answer `napoli` has 6 letters. The answer `verona` has 7 letters, and the answer `milano` has 7 letters as well. Therefore `rome` is the most sunny city in Italy.
+
+[ [Rome], [Turin], [Milan], [Naples], [Palermo], [Bari], [Florence] ]
+
+### Explanation:
+This is a simple implementation of the `leaderboard` algorithm, which ranks cities in terms of most sunshine. You can find an explanation here: https://en.wikipedia.org/wiki/Leaderboard_(data_mining)
+
+### Notes:
+The input data was taken from [OpenWeatherMap](http://www.openweathermap.org/), which is publicly available and freely useable (see their [API page](https://www.openweathermap.org/api)).
+
+```json
+{
+	"success": false,
+	"error_description":"Could not read query string, see documentation."
+}
+```
+
+### Expected Result:
+```json
+{
+    "success": true,
+    "data": {
+        "stats": [
+            ["01-JAN-2017", 1.9],
+            ["02-JAN-2017", 2.6],
+            ...
+        ]
+    },
+	"error_description": null
+}
+```
+
+Milan, Venice and Florence. I'd say Milan because the people are so diverse, from all over Italy, and you can get around by subway easily. Venice is beautiful but crowded and touristy at times. Florence is very cultural and historical.
+
+304
+
+### Explanation 
+It is estimated that the average number of hours with clear sky in Turin (Italy) during a year is 2125. However, we do not have access to such an accurate record so this value was approximated by adding up 304 sunshine days per year, as calculated from the World Meteorological Organization (WMO).
+
+### Ref: [Turin](https://en.wikipedia.org/wiki/Turin)
+
+### Source Code:
+```python
+#!/bin/python2.7
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot
+df = pd.read_csv('./data/weather/Turin_Italy.csv')
+
+months = [5, 6, 7, 8, 9, 10, 11, 12]
+year = int(df['Date'].astype(str).apply(lambda x: x[:4]))
+data = df[['Date', 'Daily Total']].loc[(months == month) & (year == year)]
+days_data = np.zeros(365)
+for i in range(0, 365):
+    days_data[i] = data[data['Date'].dt.hour == i].sum()
+
+months = [5, 6, 7, 8, 9, 10, 11, 12]
+year = int(df['Date'].astype(str).apply(lambda x: x[:4]))
+data = df[['Date', 'Daily Total']].loc[(months == month) & (year == year)]
+days_total = np.zeros(365)
+for i in range(0, 365):
+    days_total[i] = data[data['Date'].dt.hour == i].sum()
+
+pyplot.hist([days_data.astype(np.float), days_total.astype(np.float)], bins=30, range=(0,100)) 
+pyplot.ylim(-75, 65)
+```
+
+Hey there, you should think about moving to Genoa (Genoa) in Italy. It has a great Mediterranean climate which is perfect for those who want to spend their days outdoors or on the beaches, plus it's a city where you can find all the services and infrastructures that you need (educational institutes, hospitals etc.). You will also have plenty of leisure time activities in Genoa. There is a good transport system which allows to easily move around the city: buses, subways and tramways are available for everyone! I hope it helps and let me know if you need further information.
+
+The closest big city that I can think of is Rome. It has an average temperature of 17.4 °C (63.3 °F). There's a [hospital in Rome](http://www.marianomaccaroni.it/) that has a great reputation, and it's one of the top three hospitals in the world according to Newsweek magazine. You can take your children on walks along [The Via Appia](http://en.wikipedia.org/wiki/Via_Appia), go on boat rides through the canals, visit museums, and see ancient buildings. There are also many restaurants and shopping options to choose from, so you shouldn't get bored!
+
+[10](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing) [9](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing) [8](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing) [7](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing) [6](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing) [5](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing) [4](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing) [3](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing) [2](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing) [1](https://www.google.com/maps/d/edit?mid=zBw9fKg6qkWl.kLVQCJ3G3r7I&usp=sharing)
+
+Cassino, Italy. It's a pretty small city of about 80k people located in the southwest corner of the country and is just over an hour from Rome. It's also close to Naples and the Amalfi coast.
+
+Bari is a nice city with beautiful beaches. The best areas are in the north part of the town, the beach of Pescaranova and the center. Not so many people speak English but if you learn some Italian words you will not have problem with them.
+
+<!DOCTYPE html> <html> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> </head> <body> <div style="color: #666; font-size: 12px;"> This is the response. </div> </body> </html>
+
+Naples
+
+Vilniaus k., Vilniaus r. - LT
+
+Leningrad, Russia (St Petersburg)
+
+### Error:
+no result
+
+### Explanation:
+Not enough data for the command, or the command is wrong
+
+### Notes:
+- [ ] Use `help <cmd>` first to check if a command exists.
+- [x] Provide sample data/response and a detailed explanation of your question.
+
+1. The city of Florence is a beautiful place that offers residents many different attractions and opportunities for leisure and entertainment. There are plenty of museums, galleries, shops, restaurants, cafes and bars located throughout the town center as well as other nearby areas such as Fiesole which can be reached via bus or train in just over 20 minutes from central Florence (about 10km away).
+2. The surrounding countryside provides ample opportunities for outdoor activities like hiking through vineyards on footpaths leading up to hillsides filled with olive trees and cypresses; bicycling along roads lined by ancient stone walls enclosing fields of wheat or pastures full of sheep; horseback riding across rolling hills covered in golden grasslands dotted here and there with villas overlooking valleys where vineyards stretch far into the distance; swimming at beaches along the coast near Livorno (about 45km away) which can easily reached via train or bus within two hours from central Florence.
+3. There are also many different cultural events held throughout the year including concerts in Piazza San Marco as well as festivals celebrating local traditions such as carnival time when people dress up in fancy costumes and parade through town before burning effigies representing winter demons at nightfall!
+4. The city itself offers several different neighborhoods where residents can choose to live including Oltrarno which is located just south of the Arno river; San Niccolò on one side facing Giardino Bardini; and Santa Croce/San Lorenzo near Mercato Nuovo/Piazza del Duomo (Cathedral Square).
+5. Each area has its own unique character with shops selling everything from traditional Italian goods like handmade leather sandals and wooden furniture to modern fashions found at stores such as Zara or H&M! There's also plenty of street food available like gelato, pizza and pasta so you won't go hungry no matter where in town you choose to live!
+### Author:
+
+[ WP ] [ SO ] [ CA ]
+
+```
+$ cat response.txt
+Hello,
+My name is Nana and I am the manager of Gelato Company, our main product is gelato and it's price is $500 and we hire workers for salaries from $300 to $2000 a week, for example the worker named Tanya who earns 3 times more than you and she has experience in this work.
+We have 21 workers who are working here and our employees are very happy because they get good money and we have great team work, I hope that one day you will become our worker too.
+Have a nice day!
+```
+
+### Expected output:
+```
+$ cat expected_output.txt
+Hello Nana,
+My name is Anna and I'm interested in working at your Gelato Company. What salary do the workers typically earn? Does experience matter here? How many workers are there? Who would be my immediate boss if I got hired? Do they get along well with each other? Can I call you after work to discuss how things are going?
+Best,
+Anna
+```
+
+Awesome! We're a remote team, so location is irrelevant. What we're looking for are people that understand the Gelato product and can work quickly in a fast moving environment to support our customers. Our development team is currently located around the world (Japan, USA, France). If you've worked with Git or Docker before it would be super helpful, but not required.

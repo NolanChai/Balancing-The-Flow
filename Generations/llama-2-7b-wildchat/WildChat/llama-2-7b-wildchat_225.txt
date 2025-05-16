@@ -1,0 +1,41 @@
+This can be done with the following VBA code. It uses `Range.Find` to search for `Service` in column B, and it uses `Application.Evaluate()` to get the date from column H when found.
+
+\begin{code}
+Sub GetLatestServiceDate()
+    Dim lastRow As Long, earliestDate As Date
+
+    ' Find last row of data
+    lastRow = Worksheets(1).Range("B" & Rows.Count).End(xlUp).row
+
+    ' Search for "Service" in column B
+    With Sheets(1).Columns(2)
+        .Find (What:="Service", After:=5, LookIn:=xlFormulas, LookAt:=xlWhole, _
+            SearchOrder:=xlByRows, SearchDirection:=xlNext, _
+            MatchCase:=False, SearchFormat:=False).Activate
+    End With
+
+    ' Get earliest date from column H when found
+    earliestDate = Application.Evaluate("=MIN(H" & .Cells(.comparison).Row - 4 & ")")
+
+    ' Write date to cell H3 if it exists in the range
+    If not IsError(earliestDate) Then Sheets(1).Range("H3").value = earliestDate
+End Sub
+\end{code}
+
+You have 6 worksheets in your workbook. Sheet1 is active and contains 3 tables.
+
+Sheet2, Sheet3, Sheet4 and Sheet5 contain text data only.
+
+Sheet6 contains a chart which has no table to link it. It cannot be linked because the first worksheet that should contain the source data has no table. The chart is empty (no chart data).
+
+The code below works well for your needs. It should be placed at the workbook level and activated via the sheet where you want to monitor for changes in "Serviced" status. The only thing I would change is to put the user input (the cell which will display the message) on a separate sheet called "Status". This way, you can easily hide this sheet from view when not needed by other users.
+
+\begin{code}
+Private Sub Worksheet_Change(ByVal Target As Range)
+    Dim MyRange As Range
+    Set MyRange = Intersect(Target, Range("B:B")) 'Finds range that has changed on worksheet "Status"
+    If Not MyRange Is Nothing Then
+        MsgBox "Please ensure that an identical Service is created with a Next Service Due Date after changing this to Serviced.", vbInformation, "Servicing Reminder"
+    End If
+End Sub
+\end{code}

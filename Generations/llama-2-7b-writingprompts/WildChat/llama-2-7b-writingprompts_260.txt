@@ -1,0 +1,259 @@
+#### SOAR
+SOAR is an automated process that integrates Security Incident Response Management (SIRM) with security
+information and event management (SIEM). 
+It helps organisations improve their incident response times by leveraging automation to streamline the
+processes. It also reduces false positives through machine learning, artificial intelligence and automation of
+incidents in real-time. SOAR can be used for detection, analysis, investigation, mitigation and remediation
+of security alerts/incidents. 
+
+SOAR is not a new concept, it has been around since 2006 when ArcSight Inc. introduced the term [1]. Since
+then there are many vendors in this space who provide SOAR as an automated process to reduce incident
+response time and increase efficiency.
+In addition to ArcSight, there are other popular vendors including Splunk Enterprise Security, LogRhythm
+and IBM QRadar. Other well-known vendors include Demisto, Rapid7 InsightConnect, Threat Connect and
+Tines.
+For ACME the following requirements need to be considered:
+1.  Ability to automate processes for the wind farm SOC
+2.  The ability to integrate different data sources including OT devices and other security information sources.
+3.  Analyse threats in real-time.
+4.  Continuous monitoring of alerts generated from various security tools such as SIEM, penetration testing tools etc.
+5.  Ability to provide a single pane of glass view for the SOC analysts so that they can have visibility on all activities across different data sources.
+6.  Alert correlation and triage.
+7.  The ability to create an incident response playbook for automation of incident responses.
+8.  Automated threat hunting capabilities.
+9.  Ability to handle malware alerts such as CVE's and other vulnerabilities in the OT devices.
+
+The following SOAR solutions are available that ACME can use:
+1. Splunk Enterprise Security
+2. LogRhythm
+3. IBM QRadar (Cognitive SOAR)
+4. ArcSight ESM
+5. Demisto
+6. Rapid7 InsightConnect
+7. Threat Connect
+8. Tines
+
+#### SIEM
+SIEM is an acronym for Security Information and Event Management and it refers to a software solution that
+collects security data from various sources and analyses the data in real-time to detect anomalies or suspicious
+activity. It helps organisations comply with regulations such as SOX, PCI DSS and HIPAA. 
+It also allows them to meet their business goals by providing better visibility on security events that may be
+occurring within the organisation.
+SIEM is a well-established technology and there are many vendors who provide SIEM as an enterprise solution.
+In addition, there are several open source SIEM tools available including ELK stack.
+ACME has identified two SIEM solutions that it will use to monitor the security of its wind farm: 
+1. Azure Sentinel
+2. Google Chronicle
+The following comparison matrix lists the features of these two products with a few key differences between
+the two [2].
+| Azure Sentinel | Google Chronical |
+| --------------- | ------------------ |
+| **Alert correlation** | Yes | No |
+| **AI/ML** | Yes | Yes |
+| **Continuous monitoring** | Yes | Yes |
+| **Incident response management (IRM)** | Yes | Yes |
+| **Integration with other products** | Yes | Yes |
+| **Data lake integration** | No | Yes |
+| **Privacy by design** | Yes | No |
+
+For ACME the following requirements need to be considered: 
+1. Ability to integrate different security information sources such as data lake, OT devices and others
+2. Continuous monitoring of alerts generated from various security tools such as SIEM, penetration testing tools etc.
+3. Analyse threats in real-time.
+4. Alert correlation and triage.
+5. The ability to create an incident response playbook for automation of incident responses.
+6. Ability to handle malware alerts such as CVE's and other vulnerabilities in the OT devices. 
+
+#### Vulnerability Management
+There are several tools available for vulnerability management. In addition there are open source tools
+available including Nessus, OpenVAS and Qualys [3]. ACME has identified two solutions that it will use to
+manage vulnerabilities in its OT devices: 
+1. Qualys
+2. Rapid7 InsightVM
+The following comparison matrix lists the features of these two products with a few key differences between
+the two [4].
+| Qualys | Rapid7 InsightVM |
+| ----------|------------------|
+| **Alert correlation** | Yes | No |
+| **AI/ML** | No | Yes |
+| **Continuous monitoring** | Yes | Yes |
+| **Incident response management (IRM)** | No | Yes |
+| **Integration with other products** | No | Yes |
+| **Data lake integration** | Yes | Yes |
+| **Privacy by design** | Yes | No |
+
+For ACME the following requirements need to be considered: 
+1. Ability to integrate different security information sources such as data lake, OT devices and others
+2. Continuous monitoring of alerts generated from various security tools such as SIEM, penetration testing tools etc.
+3. Analyse threats in real-time.
+4. Alert correlation and triage.
+5. The ability to create an incident response playbook for automation of incident responses.
+6. Ability to handle malware alerts such as CVE's and other vulnerabilities in the OT devices. 
+
+#### Penetration Testing
+The following vendors provide penetration testing solutions: 
+1. Rapid7 Nexpose (PenTest)
+2. Qualys
+3. Kaspersky
+4. Vega Security Scanner
+5. Netwrix Auditor for Active Directory
+6. Microsoft Azure Defender
+7. BlackBerry Cylance
+8. McAfee Enterprise
+9. CarbonBlack
+10. Trend Micro
+For ACME the following requirements need to be considered: 
+1. Ability to integrate different security information sources such as data lake, OT devices and others
+2. Continuous monitoring of alerts generated from various security tools such as SIEM, penetration testing tools etc.
+3. Analyse threats in real-time.
+4. Alert correlation and triage.
+5. The ability to create an incident response playbook for automation of incident responses.
+6. Ability to handle malware alerts such as CVE's and other vulnerabilities in the OT devices. 
+
+#### References: [1] https://www.forbes.com/sites/louiscolumbus/2017/08/05/why-soar-automation-makes-incident-response-better-faster/#66bb9bdf35a0 [2] https://www.pcmag.com/comparisons/azure-sentinel-vs-google-chronicle [3] https://searchsecurity.techtarget.com/answer/Which-vulnerability-management-software-is-right-for-your-organization [4] https://www.pcmag.com/comparisons/qualys-vs-rapid7-insightvm
+
+### Outputs:
+1. The requirements for SOAR in the context of ACME’s operations.
+2. A proposed solution based on your requirements, including the specific capabilities required and how they can be fulfilled using the product(s) you have identified as fit for purpose.
+3. Security controls that need to be implemented for the proposed SOAR solution. 
+4. Evaluation of Azure Sentinel and Google Chronicle SIEM solutions and provide your recommendation.
+5. How you will integrate different data sources into the SIEM to create a single pane of glass view that will provide security analysts the relevant information.
+6. Explain if the Qualys vulnerability management tool is the best tool for ACME and if you feel this is not the right tool, please provide a gap analysis and recommend the tool that should be used. 
+7. A detailed explanation of the pentesting approach and define the scope of the pentesting program.
+8. A single pane of glass view that will provide security analysts the relevant information.
+9. An automated process for the wind farm SOC
+10. Ability to integrate different data sources including OT devices and other security information sources.
+
+##### Requirements
+1. The user must be able to add and edit information for all of their projects.
+2. Each project must have a unique identifier.
+3. Each project must belong to only one user.
+4. There are no hard constraints on the names or identifiers that users can use for their projects.
+5. Users may create multiple projects at once, but each individual project should be editable by only one user at a time (i.e., the system should not allow multiple concurrent edits to the same project).
+6. There must be some way for a user to know which project they are editing and editing.
+7. Whenever a change is made, it should be recorded in the history of each project.
+8. A single project may have multiple versions (represented by multiple revisions), but only one version can be edited at once.
+9. The system must support adding and deleting revisions.
+10. Users may specify a milestone for any revision, as well as a date when it will become visible to other users.
+
+##### Non-functional requirements:
+1. The UI should not cause unnecessary strain on the user's eyes, causing eye fatigue, migraines or any form of injury.
+2. The UI should be able to function on any screen size and resolution.
+3. It should also be accessible by the visually impaired, with a wide variety of options for color and contrast.
+4. The UI should not require the user's hands to leave their desk or keyboard, if possible. (For example, a trackpad and keyboard could replace touchscreen input).
+5. The system must be able to work offline as well as on a cellular network. 
+6. It must have low battery consumption, so that it does not drain the user's mobile device before they finish using it. (It should also warn if it is about to do this.)
+7. The user should be able to use the system while multitasking other apps and/or windows on their computer.
+8. The system must be very fast, with no lag in response times.
+9. There must be some way for users to submit bugs and feature requests that would be easy to find by developers if they so desired. 
+10. It should provide support for a wide variety of file formats as well as image types (such as JPEG) to allow users to import files from their computer into the system.
+
+### Design:
+- For my design I have chosen a Material Design inspired interface.
+- The user starts by logging in with their Github account and is immediately taken to a list of projects they have created. 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/projects_list.png)
+- From there, the user can edit an individual project by clicking on it's name and selecting "Edit" from a dropdown menu or they can create a new one by selecting the button in the top right corner. 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/project_editing.png)
+- To edit an individual project, the user must first create a new revision by selecting "New Revision" from the drop down menu underneath the main interface and then making changes to their project until they are satisfied with it and select "Save Project". 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/project_editing2.png)
+- Once the revision is saved, a list of all the milestones and versions for this project will appear underneath where they are editing their project and the user can select one to see it in detail on the main interface. 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/milestone_revision.png)
+- Once the milestones are all visible, the user can then select one and edit it by selecting "Edit" from the drop down menu or they can create a new milestone by selecting "New Milestone" from the same list of options. 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/milestones_editing.png)
+- If the user decides to create a new milestone, they will be given an interface like the one below that allows them to edit it by filling out some of its properties such as when it is visible and what type of project it is for. 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/milestone_creation.png)
+- Once they are finished, they can save their milestone by selecting "Save Milestone" from the drop down menu or cancel it if they change their mind by selecting "Cancel" and then choosing another option to edit a different property. 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/milestone_creation2.png)
+- When the user is finished editing their milestones, they can then select one of them and edit its description or add more details by selecting "Edit Revision" from a drop down menu underneath where it's revision list is displayed. 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/milestone_editing.png)
+- If the user decides to edit more details about their project, they will be taken back to a main interface and given an interface similar to the one below that allows them to fill in some of its properties such as what type of project it is or who created it. 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/project_details.png)
+- When the user is finished editing their project, they can then save it by selecting "Save Project" from a drop down menu underneath where the revision list is displayed or cancel it if they change their mind by selecting "Cancel" and choosing another option to edit some of its properties such as when it will become visible. 
+![](https://github.com/SavageWolfy/Project-Management-System-Proposal/blob/main/images/project_saving.png)
+
+### Testing:
+- I've decided to test my project using the following test cases:
+- 1. User logs in with GitHub account and is taken to a list of all their projects.
+- 2. User clicks on any one of their projects from the list, and is taken to an interface showing the milestones for that particular project.
+- 3. User selects "New Milestone" from the drop down menu underneath where they are editing their project, and fills out some properties about it such as when it becomes visible and what type of project it is for. 
+- 4. User clicks on a milestone and edits it by filling in more details, or adds more milestones to the revision by selecting "New Milestone" from the drop down menu underneath where their milestone list is displayed. 
+- 5. User saves the changes made to the project's milestones, and then selects a different one to edit its description and add more details. 
+- 6. User clicks on any revision from the drop down menu underneath where their milestones are displayed, and is taken back to the main interface where they can fill in some of it's properties such as who created it or what type of project it is for. 
+- 7. User selects "Save Project" from a drop down menu underneath where the revision list is displayed to save changes made to their project, and then clicks on another milestone to edit its description by selecting "Edit Revision" from a dropdown menu underneath where the revision list is displayed.
+- 8. User saves any changes they make to the project's revisions, and then selects another milestone to view its details or add more milestones to it using the interface described in test case #6.
+- 9. User clicks on a revision from the drop down menu underneath where their revisions are displayed, and is taken back to the main interface where they can fill in some of its properties such as who created it or what type of project it is for. 
+- 10. User saves any changes made to that project's revisions by selecting "Save Project" from a dropdown menu underneath where their revision list is displayed, and then selects a different milestone to edit it by filling in more details such as when it becomes visible or what type of project it is for.
+- 11. User clicks on any revision from the drop down menu underneath where the revisions are displayed, and is taken back to the main interface where they can fill in some of its properties such as who created it or what type of project it is for. 
+- 12. User selects "Save Revision" from a dropdown menu underne
+
+1. [ ] What is the issue you are addressing and how will your solution solve it? (20 points)
+    * Cloud Native application in Kubernetes cluster using Cloud API's
+
+2. [ ] Describe the problem that your project solves or the need that it addresses. Is there an alternative to solving this problem? If so, why do you prefer this approach? What is the benefit of this solution over existing ones? (10 points)
+    * This solution allows for a Cloud Native application to be deployed in Kubernetes cluster without having to know anything about it. It takes advantage of Cloud API's like GCP/AWS and creates a Kubernetes pod that will run on your cloud provider and deploy your app from Github.
+
+3. [ ] What are the non-functional requirements for this project? (10 points)
+    * Automatically create a deployment from a github repo with specific environment variables, mount an instance into the container, provide an endpoint to be accessed via HTTP, expose port 80/443 and route traffic through Cloud Load Balancer.
+
+4. [ ] How will you measure success of your solution? (10 points)
+    * Success will be measured by the successful deployment of a Kubernetes pod on a GCP instance with a running application with HTTP endpoints accessible from a public IP.
+
+5. [ ] Describe any unique features or problems that may exist in your proposed solution, and how do you plan to address them? (10 points)
+    * There are no major issues with the current implementation. If there is an issue that I will update the README accordingly.
+
+6. [ ] Provide a link to any relevant Github repository(s). (20 points)
+    https://github.com/johndoesthateyou/cloud-native-example
+
+Thanks for your comment. The original paper only touched upon this, but I've tried to expand it here.
+In Section 2 we propose a solution using [XSOAR](https://xsoar.org) (X-Sight Operations and Analysis Repository), which is a commercial off-the shelf (COTS) software developed by the U.S. Department of Defense (DoD). It's the first time we've used an off-the-shelf tool, so please bear with us as we work through the process of integrating it into this paper and our system.
+
+XSOAR is a web based application which integrates many functions including alert triage, orchestration, ticketing, threat intelligence and case management in one centralized environment. It is used by the DoD to help detect and track cyber threats. One of it's key advantages over other tools (e.g. Elasticsearch) is that it allows users to easily create, customize and deploy applications through an integrated development platform (IDP). This IDP can be used in conjunction with a wide range of technologies, including ElasticSearch and Kibana, to create highly customized threat hunting dashboards which are accessible from XSOAR.
+
+Therefore, the main reason for choosing this software is that it is extremely well suited to our particular use case. We plan on using the IDP to quickly and easily build a custom application with an intuitive interface and data visualizations tailored towards threat hunting. Our current system's dashboard lacks customization options and will be time consuming to create from scratch.
+
+We believe that this software has great potential as a solution for our problem, but we are also open to other suggestions if you have any! Let me know if you need clarification or additional details.
+
+Splunk SOAR is the most matured product based on the above given criteria.
+It offers a lot of features including SIEM, cloud device integration and scalability along with data encryption and access control. 
+In addition to this, it also complies to all the regulation requirements, which include HIPAA (Health Insurance Portability and Accountability Act), SOX(Sarbanes-Oxley Act) and GDPR (General Data Protection Regulations). It also supports cloud-native functionality.
+
+```python
+mat = [[],[],[],[]]
+criteria = []
+soars = []
+for i in range(len(question)):
+    if question[i][0] == 'A':
+        criteria.append('A')
+    if question[i][0] == 'B':
+        criteria.append('B')
+    if question[i][0] == 'C':
+        criteria.append('C')
+    if question[i][0] == 'D':
+        soars.append('D')
+        mat.append(['S'])
+for i in range(len(question)):
+    for j in range(4):
+        if question[i][j+1].isdigit():
+            if question[i][j+1] == '1':
+                mat[j].append('O')
+        else: 
+            if question[i][j+1] == '2':
+                mat[j].append('R')
+    for k in range(4):
+        if criteria.count(question[i][k]) >= 3 and soars.count('D') > 0 and mat[k].count('O') < len(mat[k]):
+            mat[k].append('G')
+mat = [list(x) for x in zip(*mat)]
+print(mat)
+```
+
+The SOAR (Security Orchestration Automation and Response) is a new tool which helps in managing all security needs. It is the tool of SIEM (Security Information and Event Management) which deals with log data which is collected from the networks and other systems to investigate the possible threats. The SOAR automates the tasks and also integrates the tools for better management of data.
+The security controls implemented in Cortex XSOAR are as follows:
+1. Encryption at rest by encrypting the data with AES 256 bit encryption standard.
+2. Encryption in transit is provided by the HTTPS protocol.
+3. Detection and blocking of brute force attacks, credential stuffing etc.
+4. The detection and alerts are also there to take care of any possible threats.
+5. Integrations with SIEM tools like Elastic Search etc are done so that data can be further processed for analysis.
+6. Proper authentication mechanism is used to authenticate the users before allowing them access.
+7. Authorization mechanism is there to provide authorized user access to the resources and restrict others.
+8. Auditing and logging of all the activities help in monitoring the system and identifying any security concerns.
+9. The SOC (Security Operations Centre) team has been deployed with XSOAR as part of their process flow to take care of any security concerns.

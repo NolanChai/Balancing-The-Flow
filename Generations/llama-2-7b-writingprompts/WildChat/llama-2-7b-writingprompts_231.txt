@@ -1,0 +1,14 @@
+```python
+text = input("Enter text here:\n")
+while True:
+	newline=text.split("\n")
+	newlinesplit=newline[-1]
+	if newline=='' or newlinesplit=="":
+		break 
+	newlinetext=newlinesplit.split(' ').replace("'","'") #Replace " with '' to avoid syntax error in regex
+	regex = r"\[\[SEPTEMBER\]|(\s+)(?<=\s+)(Adaptability|Beatrice|Chase|Daniel|Louis|Renie|Sky|Yanhong)(\s+)(?=\s+)" #Create a regular expression to match keywords
+	pattern = re.compile(regex, flags=re.I) #Compile the regex and store it as pattern
+	found = pattern.search(newlinetext) 
+	if found:
+		print("The keyword",found.group('1')) #Get the matched word group
+```

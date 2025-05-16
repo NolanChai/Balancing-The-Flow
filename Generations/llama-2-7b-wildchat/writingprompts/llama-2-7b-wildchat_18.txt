@@ -1,0 +1,8 @@
+`What now? You buried it here in the back yard, its been a long time since you were little!`
+  
+```javascript
+const text = 'Shit. I remember this from when I was just a youngen, a teen with power, sigh! time does fly.'
+let message = ''
+message += `${text}`
+console.log(message)
+```

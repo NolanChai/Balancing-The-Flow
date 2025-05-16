@@ -1,0 +1,41 @@
+```python
+import torch
+from pytorch_lightning import LightningModule, seed_everything
+seed_everything(1234)
+
+class Dynamite(LightningModule):
+    def __init__(self) -> None:
+        super().__init__()
+    
+    def forward(self, x) -> torch.Tensor:
+        return x * 5000
+
+    def training_step(self, batch, batch_idx) -> None:
+        x = torch.randn(2)
+        y = Dynamite()(x)
+        
+        loss = y.pow(4).sum() / (y.size(0)) ** 1.5 # 0.99% dynamite in batch, 50% chance of detonation
+        self.log('dynamite_loss', loss.item())
+    
+    def validation_step(self, batch, batch_idx) -> None:
+        x = torch.randn(2)
+        y = Dynamite()(x)
+        
+        loss = y.pow(4).sum() / (y.size(0)) ** 1.5 # 0.99% dynamite in batch, 50% chance of detonation
+        self.log('dynamite_loss', loss.item())
+    
+    def test_step(self, batch, batch_idx) -> None:
+        x = torch.randn(2)
+        y = Dynamite()(x)
+        
+        loss = y.pow(4).sum() / (y.size(0)) ** 1.5 # 0.99% dynamite in batch, 50% chance of detonation
+        self.log('dynamite_loss', loss.item())
+```
+### Output:
+
+    DynamiteTrainer: 1234
+    dynamite_loss (7185) Tensor(-inf) -99969.000000000002
+    dynamite_loss (7185) Tensor(0.999902) -99969.000000000002
+    dynamite_loss (7185) Tensor(-inf) -99969.000000000002
+
+Making dynamite is not as easy as you might think. It takes a lot of knowledge, patience and skill to produce this highly explosive material. First, we need to understand what dynamite consists of - an oxidizer, such as nitroglycerin or picric acid, combined with a stabilizing agent like sodium carbonate (soda ash). Next we must prepare the materials in order to make sure they are safe for use. This includes heating them together slowly until they combine properly without creating any dangerous fumes or vapors. Then it's time to mix up our batch of dynamite - starting with an exact ratio between the two components and adding water to form a slurry solution before adding more ingredients like clay or sand as needed for stability. After this stage comes curing which involves leaving it out under controlled conditions until hard enough to be handled safely by workers on site. Finally comes testing each batch using specialized equipment before it's ready for use in various applications across industries worldwide!

@@ -1,0 +1,10 @@
+This is my first time doing this kind of thing but I have a feeling that what might be happening here is that you are trying to get an array with four elements inside it and your php script is only getting two. The solution would probably involve some sort of counter/loop to loop through the xml elements. For example:
+
+\begin{code}
+$url = $xml->url[0]->loc;
+$title = $xml->url[0]->news->title;
+foreach ($xml->url as $item) {
+  $url = $item->loc;
+  $title = $item->news->title;
+}
+\end{code}

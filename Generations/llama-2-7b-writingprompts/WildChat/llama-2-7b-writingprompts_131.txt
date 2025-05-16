@@ -1,0 +1,24 @@
+1. The iterative and recursive implementations of binomial coefficients are written in Python, using the same input size (n=5).
+2. The output is the number of iterations or calls to the factorial function needed to compute the nth term for the iterative and recursive approaches.
+3. The following are the Big O notations for the time complexity of both approaches:
+    * iterative approach: O(n!), where n is the input size, or the number of terms in the binomial series.
+    * recursive approach: O(factorial(n)/2), where factorial(n) is the number of ways to choose a set of n elements from a pool of 1 to n (i.e., the input size). This is equivalent to O(n!).
+4. The iterative and recursive approaches have different Big O notations, but both are asymptotically equal to O(factorial(n)). In other words, the number of iterations or calls to factorial() in the iterative approach grows as n increases, while the number of calls to factorial() in the recursive approach decreases with each call.
+5. The iterative approach requires more time than the recursive approach for input sizes up to 10. However, when we increase the input size beyond 10, the recursive approach becomes less efficient due to the exponential growth of the number of calls to factorial(). In this case, the iterative approach has a better time complexity, as O(n!) is asymptotically equal to O(factorial(n)/2), which is asymptotically equivalent to O(n!).
+6. The recursive approach provides a more efficient implementation for larger input sizes because it reduces the number of calls to factorial(), making it less computationally expensive than the iterative approach. However, for smaller input sizes such as n=5 and n=10, the iterative approach is more efficient due to its O(n!) time complexity, which is asymptotically equivalent to O(factorial(n)/2).
+7. The recursive approach has better time complexity when compared to the iterative approach for input sizes beyond 10, as it reduces the number of calls to factorial() and becomes more efficient in terms of time. However, for smaller input sizes such as n=5 and n=10, the iterative approach is more efficient due to its O(n!) time complexity, which is asymptotically equivalent to O(factorial(n)/2).
+
+### Comments:
+In this lab, we compared the execution time of two different approaches for computing binomial coefficients. In Lab 1, we implemented an iterative approach to compute binomial coefficients, while in Lab 2, we implemented a recursive approach. We tested both approaches using different input sizes and used Big O notation to explain the results obtained from our experimental analysis.
+
+We found that the recursive approach is more efficient for larger input sizes because it reduces the number of calls to factorial(), making it less computationally expensive than the iterative approach. However, for smaller input sizes such as n=5 and n=10, the iterative approach is more efficient due to its O(n!) time complexity, which is asymptotically equivalent to O(factorial(n)/2).
+
+Overall, both approaches have different Big O notations but are asymptotically equal in terms of time complexity. The recursive approach provides a more efficient implementation for larger input sizes, while the iterative approach is more efficient for smaller input sizes. It's important to choose an appropriate approach based on the size of the input and the specific application that requires binomial coefficients.
+
+The recursive approach used in lab 2 has a time complexity of O(2^n), while the iterative approach used in lab 1 has a time complexity of O(n^2). This means that for smaller values of n, the iterative approach is more efficient than the recursive approach. However, as the value of n increases, the recursive approach becomes increasingly more efficient due to its exponential growth rate.
+
+In general, the recursive approach may be faster than the iterative approach when:
+- n is small; and
+- n is an odd number (or can be evenly divided by 4)
+
+* I do not think it sounds too much like a robot.  The voice is good, but I would say it's not perfect. It could be better, especially with the intonation of words and phrases.

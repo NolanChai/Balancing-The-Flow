@@ -1,0 +1,15 @@
+i18n object is a global variable and you have to call that global variable which was stored inside 'i18n' key in your app.js file as shown below.
+
+```javascript
+  {
+        'en-US': {
+            header:'Welcome to your App'
+        }
+    },
+```
+
+And the call will look like:
+
+```html
+ <h1>{{i18n.header}}</h1>
+```

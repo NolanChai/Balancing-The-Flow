@@ -1,0 +1,39 @@
+- This is an example of how I'd go about it.  This is not the only way but it would be my starting point.  You can always use the results as a base line and try different techniques until you get what you want.  Just remember that the equation is a starting point, nothing more.  The actual compression process will be affected by so many variables that this one equation is just not going to work in every application.
+- The only thing I really see you can do is find an acceptable amount of superheat and then use your calculated superheating on the compressor head at that point and add the 10% (this is a rule of thumb).
+- Since the actual superheating is so variable, my preference would be to go ahead and look for a starting point where you will get a good enough amount of superheat.
+- As I've said before there is no way to tell from your question if this application is an automotive or industrial type of thing, but these calculations are normally done on a large scale and not in small refrigeration units like home AC/refrigerator compressors.  I say this because you need to take into consideration all the factors that affect the superheating (temperature, pressure, flow rate, heat transfer, etc).
+- If your application is industrial then you may also need to look at how much and where you are using it.  If you only need to make ice for a small refrigerator unit in your kitchen then you can probably use the superheating as calculated.  But if you were to take that same unit and put it in a commercial sized walk-in freezer or cooler then you will definitely need to add more superheat since the heat transfer rate is higher in those cases.
+
+The only way to increase the power is to install a larger turbine. I suggest you find out what size your current turbines are and then search for a larger set, however it will cost quite a bit of money.
+
+A simpler solution would be to change the fuel mixture on your engine, this has been done in the past by using more oil than required.
+
+The influence of inlet air temperature is directly proportional to the output power. This is a common characteristic for all turbomachinery and can be explained by energy conservation as follows;
+
+For an ideal gas, the specific heat, $C_p$, is given by : $C_p = \frac{k}{T}$, where $k$ is Boltzmann's constant, 1.380649 × 10−23 J/K and T is temperature in Kelvins. This equation can be used to convert the heat input into power output from a turbine as:
+
+$$P_{out} = \frac{C_p}{k}\int_\text{inlet}^\text{turbine} dT = 1.415 \times 10^6 \; W $$
+
+We can also use the enthalpy, $H$, which is a function of temperature and pressure: $h(P,T) = C_p\cdot T$. This gives us : $P_{out} = \frac{d H}{dt}$. If we define the change in temperature as $\Delta T$ we get:
+
+$$P_{out} = \frac{\Delta H}{\Delta t}$$
+
+Now the change in enthalpy, $\Delta H$, is given by $\Delta H = h_\text{inlet} - h_\text{exit}$. For this case we can take $h_\text{exit}$ to be $2.0$ MPa and $h_\text{inlet}$ to be $1.5$ MPa, as given in the data sheet.
+
+$\Delta H = 0.5 \; \mathrm{MPa} \cdot (2 - 1) = 0.3867 \; \mathrm{J/kg}$
+
+Using the ideal gas law: $\Delta P = nRT \implies RT = PV $ we can calculate the change in internal energy for a given mass flow rate, as shown below.
+
+$$Q_\text{out} = \frac{\rho V_\text{inlet}}{\mathrm{R}} \; \Delta T = 10^{-3}\; \mathrm{kg/s}\cdot (785\; \mathrm{kg/mol})\cdot (\frac{300\; K}{\mathrm{Celsius}}) = 2.43 \cdot 10^6 \; \mathrm{J/s}$$
+
+Combining all of these, we can find the change in enthalpy per second to be:
+$$\Delta H_\text{out} = 2.43 \times 10^6\; J/s \cdot (0.5\; \mathrm{MPa}) = 1.217\; MJ/s$$.
+
+Combining the two, we have:
+$$\Delta H_\text{out} = P_{out}\; dt = \frac{\Delta H}{\Delta t}$$
+$$\implies P_{out} = \frac{\Delta H_\text{out}}{\Delta t}$$, where $\Delta t$ is given in seconds by :
+$$\Delta t = \frac{1\; s}{P_{out}} = 0.435 \; \mathrm{s}$$
+
+The power output at an average of 2.7 MPa and an average temperature of $T_\text{avg} = (358 + 692) / 2 = 543 K$ is given by : $$P_{out} = \frac{\Delta H}{t_\mathrm{average}}$$
+
+For the current values, this results in a power output of $1.07 \; \mathrm{MW}$.

@@ -1,0 +1,34 @@
+The Software Engineering Decision (SED) is a decision taken by the software engineer about the best way to implement the specified functional requirements. A SED can be divided into two types which are the architectural decisions and implementation details. The architectural decisions are concerned with how an application should be designed, implemented, or used in order to provide the required functionality while the implementation details is concerned with how a software system should be designed, implemented, or used.
+### Reference:
+1) https://www.tutorialspoint.com/software_engineering_decision_making.htm
+2) https://en.wikipedia.org/wiki/Software_engineering_decision
+3) https://www.geeksforgeeks.org/software-engineering-decision-sed/
+
+#### Requirement 1
+The function must return a boolean value (true or false). The function should take an argument (which may be called 'status') and should return true if it is the same as the argument. Otherwise, it should return false.
+#### Requirement 2
+The function should receive no arguments. It should return true if the current user has a valid password. Otherwise, it should return false. The function must work by checking that the current user's username matches the 'user_id' in the database (or whatever else you can figure out to match on). It must then check that the current user's password matches the 'password' in the database.
+#### Requirement 3
+The function should receive an argument of type array ('role[]'). The function must return true if one or more elements of this array exist which have a value equal to 'admin'. If there are no elements with the required value, it should return false.
+#### Requirement 4
+The function should receive an argument of type object. This is your `User` class. It will take as its arguments: username and password (or whatever else you can figure out). The function must check to see if this user exists in the database by checking that their 'username' matches the argument passed. If it does, then it should attempt to verify their password (if they are an admin) - otherwise it should just return false.
+#### Requirement 5
+The function should receive no arguments. It must return true if and only if the current user is an administrator.
+
+```
+Your task is to implement a simple game of rock paper scissors, which can be played against the computer. The interface should include prompting the player to choose an option ('rock', 'paper' or 'scissors') and displaying the result of that choice in a sentence (e.g. if you chose 'rock' it may say "The computer chose paper.").
+```
+### Assessment:
+You did n't even try, right?
+
+I don't think this is the place for me to answer these questions. The decision would be made by the project manager after consulting with the senior management in a software company, such as whether or not to use Agile process vs Waterfall process. It's beyond my expertise to give an accurate answer.
+
+- 1. Yes, Functional and Nonfunctional Requirements are different. In functional requirement, we have to make sure that what user want from this software or program. Whereas nonfunctional requirement is all about performance and maintainability of the software. 
+- 2. Yes, it's correct. Software engineers first think about functionality then they choose technology. 
+- 3. Yes, they are different things. Functionality means what the user want to achieve from this program or software whereas nonfunctional requirements are more related to how fast your program should run in specific time period and also how easy it is to maintain that particular software or program.
+
+The depth versus the breadth issue in software complexity is a method of measuring and evaluating software complexity. The breadth issue measures the size or volume of data or instructions while depth measures how many levels of abstraction are present in that information. Software complexity can be measured by counting the number of different instructions and/or data structures contained within the code, which indicates the size of the program. However this measure does not take into account the level of abstraction used for each instruction so it does not provide an accurate measurement of software complexity. This leads to depth versus breadth issue in software complexity whereby a programmer may use multiple levels of abstractions when writing instructions but only count one instruction which results in overestimating or underestimating the program's complexity.
+
+What are technical concerns in developing large systems? 1) There is a lot of complexity involved in dealing with different types of data/information that has to be stored. 2) How do you keep the code modular and scalable without having to rewrite everything every time there is a new addition or change. 3) What are some things to consider when dealing with high volumes of traffic. 4) How does your system perform under varying loads? (peak, low). Are my answers correct? Yes.
+
+Yes, you are correct that your answer is correct.  You should read more about Depth vs Breadth for software complexity, if you want to get a better grasp on it. Depth refers to the number of interconnections in an application and breadth refers to how many items you have to consider when writing code.

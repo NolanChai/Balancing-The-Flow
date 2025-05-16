@@ -1,0 +1,74 @@
+Selenium Webdriver:
+```javascript
+    browser.findElement(By.xpath("//p[@normalize-space('Social Media Growth Hacker')]"));
+```
+
+Chrome DevTools Protocol:
+```javascript
+    await driver.findElement(await el('p', { attribute: 'normalize-space', value: "Social Media Growth Hacker" }));
+```
+
+<p>Social Media Growth Hacker</p>
+
+<div id="3" class="rss-item"><img alt="NirEyal" src="http://static.tumblr.com/a91e62c5b7042182bc692f927d1e12df/tumblr_o3s81zBGxK1qbyb0vo1_1280.jpg" width="320" height="450" /></div>
+<div id="6" class="rss-item"><img alt="Social Media Growth Hacker" src="http://media-cache-ec0.pinimg.com/736x/ba/e9/e2/baeee2c814a3d616652bffdae9dd0fb1.jpg" width="400" height="533" /></div>
+<div id="10" class="rss-item"><img alt="Growth Hackers" src="http://www.entrepreneur.com/wp-content/uploads/2011/08/growthhacker.jpg" width="329" height="496" /></div>
+<div id="12" class="rss-item"><img alt="Social Media Growth Hacking" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="16" class="rss-item"><img alt="Growth Hacker" src="http://images.theatlantic.com/infocus/2012/08/growth-hackers-startup-entrepreneurs/1003959627_640x426.jpg" width="347" height="227" /></div>
+<div id="17" class="rss-item"><img alt="Growth Hacker" src="http://www.growthhackers.com/wp-content/uploads/2015/03/Hacking-the-World-16x9_464px.jpg" width="197" height="128" /></div>
+<div id="20" class="rss-item"><img alt="Growth Hacker" src="http://images.wetpaint.com/media/image/growthhackers/articles/content/wp-content/uploads/2013/07/growthhacking_header_large.jpg" width="604" height="348" /></div>
+<div id="22" class="rss-item"><img alt="Growth Hacker" src="http://static.tumblr.com/a91e62c5b7042182bc692f927d1e12df/tumblr_o3s81zBGxK1qbyb0vo1_1280.jpg" width="320" height="450" /></div>
+<div id="26" class="rss-item"><img alt="Social Media Growth Hacker" src="http://media-cache-ec0.pinimg.com/736x/ba/e9/e2/baeee2c814a3d616652bffdae9dd0fb1.jpg" width="400" height="533" /></div>
+<div id="32" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="36" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="40" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="43" class="rss-item"><img alt="Social Media Growth Hacker" src="http://images.theatlantic.com/infocus/2012/08/growth-hackers-startup-entrepreneurs/1003959627_640x426.jpg" width="347" height="227" /></div>
+<div id="45" class="rss-item"><img alt="Social Media Growth Hacker" src="http://static.tumblr.com/a91e62c5b7042182bc692f927d1e12df/tumblr_o3s81zBGxK1qbyb0vo1_1280.jpg" width="320" height="450" /></div>
+<div id="46" class="rss-item"><img alt="Social Media Growth Hacker" src="http://media-cache-ec0.pinimg.com/736x/ba/e9/e2/baeee2c814a3d616652bffdae9dd0fb1.jpg" width="400" height="533" /></div>
+<div id="50" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="56" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="60" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="68" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="69" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="6" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="62" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.mediafire.com/convkey/1287/5yhf3k8vg2yu0i8zg.jpg" width="493" height="349" /></div>
+<div id="63" class="rss-item"><img alt="Social Media Growth Hacker" src="http://www.
+
+The page title was found to be “Home”.
+The element with xpath //p[normalize-space()='Social Media Growth Hacker'] could not be clicked, as it is currently unavailable for a period of 10 seconds or more.
+\end{code}
+
+Comment: You are using `driver` before you have defined it so the error message isn't clear what you are doing wrong. Please clarify your question with relevant code snippets.
+
+Comment: I tried to fix that now, thanks for pointing out. The problem is still there.
+
+Comment: What version of selenium do you use? What browser and OS? Did you try this script in a headless mode?
+
+Comment: @IvanSelivanov 4.0.3, chrome on windows. Yes I tried it both in chrome and firefox, in headless mode too. I think its related to the xpath, but dont know how to fix that.
+
+Answer: This is due to `WebDriverWait` not being able to find an element by `By.XPath`. You can try using the following code instead of WebdriverWait:
+
+\begin{code}
+import time
+element = driver.find_element(by=By.ID, value="id-of-element")
+time.sleep(10) # give wait for 10 seconds as it is currently unavailable for a period of 10 seconds or more
+element.click()
+\end{code}
+
+<div class="flex flex-col gap-4">
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+</div>
+
+Python doesn't have the concept of "post methods" specifically. However, you can use the request object and send POST requests. For example:
+
+```python
+import requests
+
+url = 'https://some-api/endpoint'
+data = {'username': 'tester', 'password': '1234'}
+headers = {'Content-Type': 'application/json'}
+
+response = requests.post(url, data=data, headers=headers)
+```
+This would create a POST request to the specified endpoint with the given data and headers. You can then access the response object in the post method to work with its content.

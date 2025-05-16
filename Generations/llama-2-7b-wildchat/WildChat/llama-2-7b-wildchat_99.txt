@@ -1,0 +1,45 @@
+The easiest way would be to use `INDEX` and `MATCH` functions. They both are really flexible in finding specific text.
+
+\begin{code}
+=IFERROR(LEFT(C2, INDEX(A$5:A$9, MATCH(1, FIND(" ", C2 & " ", A$5:A$9), 0))-1),"")
+\end{code}
+
+Assuming you have your sentence in column `A`, and the first space of the sentence in the cell `A5` - you can write formula like above.
+
+Comment: Thankyou very much! Is there a way to just put in 2 words?
+
+Comment: If your sentences always have two words, it would be simpler to use a combination of `LEFT`, `FIND` and `INDEX` functions as I did [here](https://webapps.stackexchange.com/a/180476/41000).
+
+You should use the `LEN()` function to calculate the length of your string. If it's less than 6 you can use `.PasteSpecial(xlPasteValues)` to insert your values without wrapping them.
+
+For example, if your data is stored in A1 and you want to make sure it's not more than six words:
+
+```vbscript
+If LEN("A1")<6 Then 
+    Cells(1,1).PasteSpecial(xlPasteValues)
+End If
+```
+
+If your data is stored in A2 and you want to make sure it's not more than six words:
+
+```vbscript
+If LEN("A2")<6 Then 
+    Cells(1,1).PasteSpecial(xlPasteValues)
+End If
+```
+
+\section{You are right}
+
+Instead of using a VBA script to verify the validity, you can use the data validation feature to validate the cell value.
+
+The following steps will help you in implementing this task:
+\begin{itemize}
+\item Open Excel Worksheet (Sheet1) and go to Cell B3, select Data Validation > Data Validation Dialog box.
+\item In the Allow drop-down list, set it to "Custom" as shown below:
+
+<a href="https://i.stack.imgur.com/9xhY8.png" rel="nofollow noreferrer"><IMAGE></a>
+\item Under Data validation Custom message text box, enter your own customized error message and click Ok button.
+\end{itemize}
+\section{Here is a quick preview of the sheet with data validation}
+
+<a href="https://i.stack.imgur.com/wM7mK.png" rel="nofollow noreferrer"><IMAGE></a>

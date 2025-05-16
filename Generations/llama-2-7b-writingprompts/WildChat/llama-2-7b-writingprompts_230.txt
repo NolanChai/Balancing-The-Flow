@@ -1,0 +1,12 @@
+I get that same error. It seems to work fine on my end if you do the following:
+* Delete the file i18n/en.php and replace with the one below
+* Download and upload the translation files from http://www.php-i18n.org/translations.html (there is an example of this in your project)
+* Edit the index.php file to load the translated file like so:
+```php
+// i18n/en.php file from translations site
+$lang = 'en';
+// get all translation files with the same language code
+foreach (glob(__DIR__ .'/i18n/*.php') as $file) {
+    require_once($file);
+}
+```

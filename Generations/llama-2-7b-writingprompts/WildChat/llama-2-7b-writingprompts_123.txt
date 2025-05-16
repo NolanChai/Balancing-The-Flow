@@ -1,0 +1,64 @@
+```http GET http://localhost:3000/ HTTP/1.1
+Host: localhost:3000
+Accept-Encoding: gzip, deflate
+User-Agent: curl/7.54.0
+Accept: */*
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Content-Length: 36
+Date: Thu, 29 Jul 2015 10:07:39 GMT
+Server: Microsoft-IIS/8.0
+```
+
+GET http://localhost:3000/products.json HTTP/1.1
+Host: localhost:3000
+Accept: application/json, text/plain, */*
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.96 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8
+Cookie: __session__=xxxxxxx; _ga=xxxxxx;
+Connection: keep-alive
+
+### Response:
+HTTP/1.1 200 OK
+Date: Thu, 31 Aug 2017 15:48:29 GMT
+Server: express
+Content-Type: application/json
+Access-Control-Allow-Origin: *
+Cache-Control: no-cache, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Thu, 31 Aug 2017 15:48:29 GMT
+X-Powered-By: Express
+Vary: Accept-Encoding
+Content-Length: 505
+Connection: keep-alive
+
+[
+    {
+        "id": "1",
+        "name": "Samsung Galaxy J3 (2016)",
+        "description": "ระบบ Android, 4.7 inch HD Super AMOLED touchscreen",
+        "price": "$85",
+        "stock_quantity": "12"
+    },
+    {
+        "id": "2",
+        "name": "Samsung Galaxy J3 (2016)",
+        "description": "ระบบ Android, 4.7 inch HD Super AMOLED touchscreen",
+        "price": "$85",
+        "stock_quantity": "12"
+    },
+]
+\end{code}
+
+I did not create any controller file to handle request for products.json
+
+Comment: If you have `res.send(products)` and there are products in that array, then it should work. But if your `products` variable is empty then nothing will happen
+
+Comment: @AnirudhAswathanam yes I did but still the response is null
+
+Comment: Please put up a small code snippet as an update to this question so we can see exactly what you are doing.
+
+Answer: You're not sending anything, you're simply logging it out. Try adding `res.send(products)` before `console.log` and let me know if that works for you.

@@ -1,0 +1,7 @@
+It will only turn into a gray 10%.
+
+### Explanation:
+
+In other words, if your grey card is at a lightness of 18%, then after exposure compensation the actual lightness should be 26.4% (18 + 7.6) and not white. It's the same as with any other point in the grayscale.
+
+### See also: [How to expose for grey card?](http://photo.stackexchange.com/questions/2893/how-to-expose-for-grey-card?rq=1)

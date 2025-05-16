@@ -1,0 +1,52 @@
+Hola, gracias por tu pregunta.
+Este es el formato que utilizamos para realizar los ejercicios:
+
+/bin/bash
+
+Esto significa ejecutar un script llamado bin/bash (que está en nuestro directorio /)
+
+La siguiente línea de código nos permite salir del bash y entrar al sistema operativo por defecto.
+
+exit () { echo $1; exit 0; }
+
+Este código deja que la variable "$1" tenga el valor que se le pasó en la ejecución y luego lo redirecciona para que termine el programa.
+
+La línea siguiente creará un nuevo directorio llamado /home/username:
+
+sudo mkdir /home/username
+
+Esto nos permite tener acceso a nuestro directorio usuario personal.
+
+La línea siguiente crea una cuenta llamada username en el sistema operativo, con permisos de usuario normal:
+
+useradd -m -u 1000 username
+
+Esta línea de código creará la cuenta llamado username, con los permisos de usuario normal (1000) y lo asignará a un directorio personal /home/username.
+
+La siguiente línea de código nos redirige al directorio que acabamos de crear:
+
+cd /home/username
+
+Esto nos permite trabajar en el directorio usuario personal de la cuenta username.
+
+En la siguiente línea de código vamos a modificar nuestra ruta de acceso para tener acceso a nuestro directorio de trabajo por defecto (usando las herramientas del sistema operativo). Para ello, crearemos un archivo llamado /home/username/.bashrc:
+
+echo 'export PATH=$PATH:/usr/local/bin' > /home/username/.bashrc
+
+Esto cambia nuestra ruta de acceso en nuestro directorio usuario personal, agregando el directorio bin de nuestro proyecto local.
+
+La siguiente línea de código nos redirigirá a nuestro archivo .bashrc modificado:
+
+source ~/.bashrc
+
+Esto lee y ejecuta los cambios que hicimos en nuestro archivo .bashrc.
+
+Finalmente, vamos a ejecutar el proyecto local del proyecto mediante el comando siguiente:
+
+cd ~/local_project/
+./bin/run.sh
+
+Esta línea de código nos llevará al directorio local del proyecto y nos hará ejecutar el script run.sh.
+
+Estas son las líneas que utilizamos para realizar los ejercicios en este tutorial. 
+Espero que te haya ayudado a comprender el concepto.

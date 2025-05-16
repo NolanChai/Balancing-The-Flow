@@ -1,0 +1,7 @@
+<table>
+   <thead><tr><th>Col Name</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td colname="region">地区</td><td type="string"></td></tr>
+    <tr><td colname="revenue">利润</td><td type="number"></td></tr>
+  </tbody>
+</table>

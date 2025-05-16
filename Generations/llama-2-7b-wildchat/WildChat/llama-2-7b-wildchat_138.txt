@@ -1,0 +1,11 @@
+```PowerPoint.Application app = new PowerPoint.Application();
+PowerPoint.Presentation presentation = app.Presentations.Open(PowerPoint.FileType.ppt);
+presentation.Slides[1].Shapes[1].TextFrame2.Range.Text = "hello world!";
+presentation.Save("output.pptx");
+```
+
+1. You cannot create a function or method
+2. You cannot use `new`
+3. You cannot return an object
+4. You cannot inherit from other classes (a superclass)
+5. You cannot extend any classes with new syntax.

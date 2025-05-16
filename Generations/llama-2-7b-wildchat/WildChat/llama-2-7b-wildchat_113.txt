@@ -1,0 +1,24 @@
+You can use `ngModel` directive on the button.
+
+The ngModel will bind to the property name that you want to track likes or dislikes. For example, you can have a button with this template:
+
+```html
+<button (click)="myFunction(productId)" [ngModel]="likeOrDislike">Like</button>
+```
+And the corresponding component:
+
+```typescript
+export class MyComponent {
+  likeOrDislike = 'like';
+
+  myFunction(productId): void {
+    this.likeOrDislike = productId ? 'dislike' : 'like';
+  }
+}
+```
+
+Here is a stackblitz with an example: https://stackblitz.com/edit/angular-vf3q6b?embed=1&file=src%2Fapp%2Fapp.component.html
+
+Comment: can i use this for all products in the list or how do i create this function to each product and how i use it on ngfor to mark like dislike button
+
+Comment: @user1806789 You would need a separate component for each product, with a template similar to what I showed you. Then you could add `ngFor` to the parent component that contains all products.

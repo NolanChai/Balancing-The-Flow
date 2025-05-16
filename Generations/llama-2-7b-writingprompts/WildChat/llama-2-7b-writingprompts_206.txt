@@ -1,0 +1,30 @@
+It is not possible to prove this by a simple application of natural deduction. It can be proven, however, using the FOPL system of natural deduction.
+
+The proof starts with the following premise:
+
+$$ \begin{pre}
+\frac{\dfrac{}{\forall x(P(x) \implies Q(x))} \quad \dfrac{}{(\forall x)(Q(x) \iff R(x))} \quad \frac{\dfrac{}{\exists x (P(x) \land (\neg P(x)))} \quad \dfrac{}{(\exists x)(\neg R(x) \lor S(x))} }{\dfrac{}{\forall x[S(x) \iff T(x)]}} \\
+\end{pre} $$
+
+and the following two rules:
+
+$$\begin{align*}
+& \frac{}{\exists x(Q(x) \land P(x))} & \textrm{(Ep.3)} \\
+& \frac{}{\forall x[S(x) \iff T(x)]}& \textrm{(Ep.4)} \\
+\end{align*} $$
+
+It is then possible to derive the required conclusion:
+
+$$\begin{align*}
+\frac{\dfrac{}{\exists x(\neg P(x))} }{\dfrac{}{\forall x[S(x) \iff T(x)]}}\\
+\end{align*}$$
+
+where we have used the first rule of FOPL, that all necessary premises are derivable from a given set of rules.
+
+### Further reading:
+
+* [[1]][http://www.logicmatters.net/dokuwiki/doku.php?id=fopl-reference_manual:the_rules]]
+
+|= ∃x(P(x) ∨ Q(x)) ⇔ (∃xP(x) ∨ ∃xQ(x))  
+---
+Let $ \exists x ( P(x) \vee Q(x) ) $ and $\forall \exists x P(x)$ be true. Then, by the tableau method we have that: $ \forall \exists x (P(x)\vee Q(x) )  $ is also true. Therefore, $ \forall \exists x (P(x)\vee Q(x) )  $ and $\forall\forall \exists x P(x)$ are both true, so by the law of excluded middle we have that either $ \forall \exists x P(x)$ or $ \forall\forall \exists x P(x) $ is true. Since we assumed that $ \exists x ( P(x)\vee Q(x) ) $ and $\forall \exists x P(x)$ are both true, it must be the case that $ \forall\forall \exists x P(x) $ is also true, so by the law of excluded middle again we have that either $ \forall \exists x ( P(x)\vee Q(x) ) $ or $ \forall \exists x P(x)$ is true. We can repeat this process to show that either $ \forall \exists x ( P(x)\vee Q(x) ) $ or $\forall\forall \exists x P(x)$ is true, so either way we have shown the equivalence of our two statements.

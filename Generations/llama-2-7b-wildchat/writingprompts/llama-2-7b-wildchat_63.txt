@@ -1,0 +1,1 @@
+Write a function that takes an array of points on the map (darts) as an argument and returns the coordinates of where I should be teleported next. The coordinates returned should be an integer, not a point. You can assume that only one dart will hit any given spot (otherwise you may have to do some clever calculations).

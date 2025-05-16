@@ -1,0 +1,47 @@
+1. Patient positioning - Lay patient supine with head turned slightly to side and arm supported comfortably at his side for easy access to the surgical site.
+2. Inject 1% lidocaine with epinephrine (1:100,000) around the preauricular sinus, followed by a test dose of lidocaine to asses sensitivity. 
+3. Clean the area to be operated using antiseptic solution for at least five minutes and apply surgical draping.
+4. After drape removal, mark the site of entry with an ink pen or marker.
+5. Make a transverse incision along the preauricular skin, creating a flap that can be elevated to expose the sinus. 
+6. Open up the area to visualize and identify the sinus cavity. 
+7. Insert a retractor into the cavity through the opening in the flap, keeping it as close to the edge of the incision as possible. 
+8. Once inside, use fine forceps or other instruments to gently remove any residual tissue or debris from the sinus area. 
+9. Carefully disinfect and dry all surgical equipment before closing the incisions. 
+10. Close the flap over the preauricular incision with sutures, leaving a small opening for drainage. 
+11. Apply sterile dressing and cover with bandage. Instruct patient to clean wound area daily with soap and water until completely healed.
+
+### Risks:
+- Infection - Use antibiotics as recommended by the doctor to prevent infections, which can occur even after successful surgery.
+- Scarring - Excessive scarring may occur if sutures are left open too long or not properly closed.
+- Nerve damage - Damage to facial nerves or sensory nerves around the sinus can lead to numbness in affected areas and might be permanent in some cases.
+
+```
+1. Go to the "Disk" page in the cloud console, then choose your project ID.
+2. Select a storage service, such as Huawei OceanStor 9000.
+3. Choose an available block disk type and create a new virtual machine with it.
+4. Run the command `ssh root@IP_OF_VIRTUAL_MACHINE` in the Cloudshell instance, which will connect you to your created VM.
+5. Log into the VM console using the password "123456".
+6. Open a terminal and use the command `sudo apt update`. This will update the packages of your installed programs.
+7. Use the command `sudo apt install git` to download and install Git on your system.
+8. Create a new directory called "GitHub" by using the command `mkdir GitHub`, which creates a folder named GitHub in your home directory.
+9. Change into the newly created GitHub directory by using the command `cd GitHub`.
+10. Run the command `git init` to initialize Git on this local machine and create a new Git repository.
+11. Create a remote Git server by running the following commands:
+```bash
+git remote add origin https://github.com/<your-username>/MyFirstGitProject.git
+git fetch --all # if you want, you can also use git reset --hard
+```
+
+-   In this question, we are given an array [2, 5, 1] and need to find the maximum value in it. For doing that, we can use nested for loop which will first traverse over the outer loop (the length of the array) and then within each iteration of the inner for loop, it traverses over the element of the outer loop.
+-   In each iteration of outer for loop, we will store the value in a variable i. Within each iteration of inner for loop, we will check if current value is greater than maximum value stored earlier or not. If yes then store maximum value as maxValue and break from inner loop otherwise continue traversal within it.
+-   Below program can be used to do this.
+```python
+maxVal = 0
+for i in range(len(arr)):
+    for j in range(i+1, len(arr)):
+        if arr[j] > maxVal:
+            maxVal = arr[j]
+        else:
+            continue
+return maxVal
+```

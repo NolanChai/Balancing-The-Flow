@@ -1,0 +1,40 @@
+```python
+def instruction(Harold):
+    print("A harsh suckle infiltrated Orville's bramble-like ear hair.")
+    print("He noticed Harold's mouth hanging off his arm.")
+    print("  What's that? EHHH!")
+    print("Orville smacked the top of Harold's head.")
+    print("Harold's feeble jaw released Orville's skin.")
+```
+### Input:
+```python
+Harold = { "mouth": True } 
+```
+### Output:
+```python
+A harsh suckle infiltrated Orville's bramble-like ear hair.
+He noticed Harold's mouth hanging off his arm.
+What's that? EHHH!
+Orville smacked the top of Harold's head.
+Harold's feeble jaw released Orville's skin.
+```
+### Test Case:
+```python
+def test_instruction(Harold):
+    input = { "mouth": True } 
+    
+    response = instruction(input)
+    print("Instruction")
+    print(response)
+
+test_instruction(Harold)
+```
+### Test Output:
+```python
+Instruction
+A harsh suckle infiltrated Orville's bramble-like ear hair.
+He noticed Harold's mouth hanging off his arm.
+What's that? EHHH!
+Orville smacked the top of Harold's head.
+Harold's feeble jaw released Orville's skin.
+```

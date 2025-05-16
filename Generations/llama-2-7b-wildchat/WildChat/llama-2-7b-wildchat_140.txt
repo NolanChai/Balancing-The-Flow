@@ -1,0 +1,79 @@
+The magnification factor r in double integrals in polar coordinates is defined as follows: it is the area of a smaller polar rectangle, divided by the area of the corresponding small rectangle in the , plane, in the limit as the size goes to zero. The correct answer choice is (A).
+
+To understand the meaning of magnification factor r, we need to examine the double integral formula for computing an integral over a region that extends into both polar and Cartesian coordinates:
+\(\displaystyle \int_{r_1}^{r_2} \int_{\theta_0}^{\theta_1} f(r,\theta) \,drd\theta\)
+The magnification factor r can be thought of as a "scaling" factor that is used to compare the size of different rectangles in the Cartesian and polar coordinate systems. 
+In this case, we are integrating over two variables - \(r\) in polar coordinates and \(\theta\) in Cartesian coordinates. The magnification factor r is defined as:
+\(\displaystyle \frac{A_R(r,\theta)}{\Delta r\, \Delta \theta},\)
+where A_R is the area of a small rectangle in the r,  plane, and \(\Delta r\) and \(\Delta \theta\) are the sizes of that rectangle in polar and Cartesian coordinates respectively. As we approach zero in each dimension - i.e., as \(r\) or \(\theta\) approaches zero - this factor goes to unity, since \(A_R\sim \Delta r\,\Delta \theta\).
+Thus, the magnification factor r is a scaling factor that allows us to compare the areas of different rectangles in the Cartesian and polar coordinate systems. By using it correctly, we can make sure our double integrals have well-defined limits, avoiding any potential confusion or errors when integrating over regions that extend into both polar and Cartesian coordinates.
+
+### Explanation:
+
+The magnification factor r in double integrals in polar coordinates is a scaling factor used to compare the areas of different rectangles in the Cartesian and polar coordinate systems. It is defined as follows: \(\displaystyle \frac{A_R(r,\theta)}{\Delta r\, \Delta \theta}\).
+
+To understand this concept, let's consider an example: \(r = 0.5\) and \(\theta = \pi/3\). We can then define the small rectangle A_R as having dimensions of width \(\Delta r = 0.1\) and height \(\Delta \theta = \pi / (4n)\), where n is any positive integer. Therefore, the magnification factor would be: \(\displaystyle \frac{A_R(r,\theta)}{\Delta r\, \Delta \theta} = \frac{\pi/6}{0.1\,\pi/ (4n)}\).
+
+As we approach zero in either of these dimensions - i.e., when \(r\) or \(\theta\) approaches zero, this factor goes to unity, since \(A_R\sim \Delta r\,\Delta \theta\). Thus, the magnification factor r allows us to compare the areas of different rectangles in the Cartesian and polar coordinate systems correctly, avoiding any potential confusion or errors when integrating over regions that extend into both polar and Cartesian coordinates. 
+
+### Hints:
+
+- The meaning of magnification factor r in double integrals in polar coordinates is to compare the areas of different rectangles in Cartesian and polar coordinate systems. It is defined as \(\displaystyle \frac{A_R(r,\theta)}{\Delta r\, \Delta \theta}\), where A_R is the area of a small rectangle in the , plane, and \(\Delta r\) and \(\Delta \theta\) are the sizes of that rectangle in polar and Cartesian coordinates respectively. As we approach zero in either dimension - i.e., when \(r\) or \(\theta\) approaches zero, this factor goes to unity, since A_R scales similarly with both dimensions. This allows us to correctly compare different rectangles between the coordinate systems and avoid any potential confusion or errors when integrating over regions that extend into both polar and Cartesian coordinates.
+- The correct answer choice (A) states that magnification factor r is the area of a smaller polar rectangle, divided by the area of the corresponding small rectangle in the , plane, in the limit as the size goes to zero. This captures the essence of what magnification factor r does: it compares the areas of different rectangles between Cartesian and polar coordinates systems correctly.
+- The other answer choices (B) and (C), while not incorrect, do not capture the essential function of magnification factor r in double integrals with polar coordinates. 
+- Neither answer choice (D), which states that it is neither of the above, nor none of these statements are true for magnification factor r in double integrals with polar coordinates. 
+
+### Related Links:
+[Wikipedia - Double Integral](https://en.wikipedia.org/wiki/Double_integral)
+
+[Mathworld - Polar Coordinates](https://mathworld.wolfram.com/PolarCoordinates.html)
+
+[IntMath - Intro to polar coordinates](https://www.intmath.com/multivariable-calculus/6-1-introduction-to-polar-coordinates.php)
+
+(b) Sometimes.
+
+### Rationale:
+
+If $f$ is not a bounded continuous function, then its differential $f'$ will not be defined on all of $\mathbb{R}^2$, so the result will not always hold for $f'$. However, if $f$ is bounded and continuous, it would be defined at every point. Since $f$ was assumed to be bounded and continuous, the derivative exists.
+
+A. (a) The triple integral of 1 over a region is the volume of the region, which is why they both have the same relationship to one another.
+B. (b) In four dimensions, the relation between volume and area are not the same as in three dimensions. For example, if we were dealing with a quadrilateral shape instead of just two-dimensional plane shapes then there would be no way for us to calculate its four dimensional volume since it wouldn't exist at all!
+C. (c) Both statements are correct - one applies only when working in three dimensions while another applies when dealing solely within two dimensions which makes them mutually exclusive concepts; however, they still have some overlap where either one could potentially apply depending on what kind of geometry problem we're trying solve at any given moment during our study session (or even outside).
+D. (d) This statement does not make sense because there is no such thing as "four dimensional" space or objects within it - only three dimensions exist in reality regardless whether they happen to have been quantified mathematically yet!
+
+(d)
+
+### Explanation:
+
+For the triple integral dydzdx, we set z as the outermost variable since it is a scalar and always takes on a single value. Since y is our innermost variable, 0<=x<=y<=z<=1, 0<=z<=1, x<=y<=1, 0<=x<=y<=1, and 0<=x<=1 are equivalent regions. Therefore, the z limits for this triple integral dydzdx are .
+
+C. The center of mass is `(3/5, 3/5, 3/5)`. The mass density can be written as `m = x^3 + y^3 + z^3`. Assuming the coordinates of the cube are from `[0,1]^3`, then the integral for the center of mass should be:
+
+```math
+CM(x,y,z) = \int_{0}^{1} \int_{0}^{1} \int_{0}^{1} x^3 y^3 z^3 dxdydz 
+= \frac{2}{9}\int_{0}^{1} x^4 dy \\ 
+= \frac{8}{9}(x - 1)
+```
+
+Therefore, the center of mass can be written as:
+
+```math
+CM = (3/5,3/5,3/5)
+```
+
+Answer: Since the centre of mass is the point about which the distribution is symmetrical with respect to its origin, I will take 2 cubes with coordinates of (0.6,0.6,0.6), and (0.4,0.4,0.4).
+
+The density of a cube is given by:
+
+$$m(x,y,z)=\frac{1}{3^3}(x+y+z)^3$$
+
+I will take the integration from 0 to 1 for both cubes as shown below.
+
+\begin{align*}
+&\int \limits_{0}^{1}\int \limits_{0}^{1} m(x,y,z)dx dy \\
+&=\int \limits_{0}^{1}\frac{2}{9}(x^3+y^3+z^3)dx\\
+&=8\left[-\frac{6}{\sqrt 2} - \sqrt 2 + \frac{4}{\sqrt 2}-\ln \sqrt 2\right]
+\end{align*}
+
+Using this formula, the centre of mass becomes:
+$$CM = (\frac{3}{5},\frac{3}{5},\frac{3}{5})$$

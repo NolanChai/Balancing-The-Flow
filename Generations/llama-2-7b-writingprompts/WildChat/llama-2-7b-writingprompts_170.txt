@@ -1,0 +1,53 @@
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns="http://www.w3.org/1999/xhtml"><head> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> <title>Untitled</title> </head><body> <div id="container" class="textarea"></div><script src="/static/js/bundle.js" defer></script><style type="text/css"> html, body { background: black; }
+.textarea {
+width: 100%;
+height: auto;
+font-family: 'Courier New', monospace;
+font-size: 18px;
+color: cyan;
+background-color: #010101;
+border: none;
+overflow: auto;
+white-space: pre-wrap;
+word-wrap: break-word;
+line-height: 1.4;
+}
+
+.highlight-line {
+position: relative;
+display: inline-block;
+}
+
+span {
+color: white;
+width: 100%;
+}
+
+.highlight-line:before {
+content: '';
+color: white;
+position: absolute;
+left: -18px;
+width: 0;
+height: 100%;
+background-image: linear-gradient(to right, royalblue, cyan);
+pointer-events: none;
+animation: shot .3s linear forwards, blink .05s .1s infinite;
+}
+
+@keyframes shot {
+100% {
+width: 100%;
+opacity: 0;
+}
+}
+@keyframes blink {
+0%, 100% {
+opacity: 1;
+}
+50% {
+opacity: 0;
+}
+}
+</style></body><script src="/static/js/bundle.js" defer></script> ```

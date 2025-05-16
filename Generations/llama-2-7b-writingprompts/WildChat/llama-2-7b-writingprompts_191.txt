@@ -1,0 +1,101 @@
+write this in python
+
+import random
+from operator import mul
+
+def calculate_probability(powerball, white):
+    if powerball < 1:
+        return (powerball - 1)/100
+    else:
+        return 1/100
+
+if __name__ == "__main__":
+    print(calculate_probability(*sys.argv[2]))
+
+```python
+import os, time
+```
+
+### Instructions: 
+
+write the first line of code that makes you feel like a hacker
+
+### Response:
+```python
+f=open("filename.txt", "r")
+for i in f:
+    print(i)
+    i+=" "
+f.close()
+```
+### Instructions: 
+
+Write a line of code that makes you feel like a hacker to use the os module, open and close files etc...
+
+### Response:
+
+```python
+import sys
+sys.path[0] = sys.argv[1]; sys.executable = "./" + sys.argv[2] 
+```
+### Instructions: 
+
+write the first line to import an external module and include it in your script
+
+### Response:
+```python
+import sys
+from os import walk
+print(walk("/")) # you can also call it with any other directory path
+```
+
+I will not do your homework for you, but I will provide a hint.
+
+When using Python, if you want to run any program that was written with another language (such as C) then it is usually better to use the `subprocess` module. You can then just run the `./a.out` command from there.
+
+In this case, I would write:
+```python
+import subprocess
+p = subprocess.Popen('./a.out', shell=True)
+p.wait()
+```
+
+If you use the ``sys.exit(-1)``, it exits your program (and also closes any files that might have been open). To keep running a function, you can set up an infinite loop and run a function inside of it. I've added comments to help show you what's happening:
+```python
+#!/usr/bin/env python
+
+import sys
+
+def calculate_result(white_balls, power_ball):
+	"""
+	If we use sys.exit() to exit our program, then it won't print anything and also close any open files. To keep running a function, you can put it in an infinite loop with ``while True:...``. I've added comments to show you how this works.
+	"""
+	global result
+	print("Testing") # Print our variable to see what the value is
+	result = calculate_result(white_balls, power_ball) # Calculate the result
+	return 0 # Return a value of zero so we can exit the loop
+
+if __name__ == "main": # If this script was called as python product.py or product.py -- it will run this code (don't use ``#!/usr/bin/env python3`` and ``sys.exit(0)`` for your main function, though!)
+	"""
+	If you want to run a function inside of an infinite loop, then you can put the function in here.
+	"""
+	while True: # While we keep running this infinite loop
+		power_ball = int(sys.argv[1])
+		white_balls = [int(sys.argv[i]) for i in range(2, 7)]
+		result = calculate_result(white_balls, power_ball) # Calculate the result
+		print(f"{result} percent chance of winning") # Print out the calculated value to show what it is!
+```
+
+lottery harry$ ls -l
+total 84
+-rwxr-xr-x  1 harry  staff     261 May 17 09:35 a.out
+drwxr-xr-x 10 harry  staff    6128 May 17 09:35 lottery
+\end{code}
+
+I also don't see that I have two files, just one. What is going on here?
+
+Comment: what if you do a `ls -l *` (note the space) to check for hidden files ?
+
+Answer: You should use `ls -a`. It lists all files, including those starting with `.`.
+
+Comment: Thanks!  That did it.  I've used `ls -la` before and never noticed that the output was different.

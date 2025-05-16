@@ -1,0 +1,22 @@
+I recommend setting up a CloudWatch service with Log Group and Log Stream for logging. It is good practice to use the same Log Group for multiple services. The Log Group will be used to store all logs in one location, which makes it easier for you to view your log data over time.
+
+To create a Log Group, go to the [AWS Console](https://console.aws.amazon.com/cloudwatch/home?region=us-east-1) and click on **Logs** -> **Create Log Group**.
+
+You will then be prompted for details about your log data, such as the name of the Log Group and a description. After entering these details, click **Create Log Group** to create it. You can now begin sending logs to this Log Group from different services or applications in your infrastructure.
+
+Log Streams are used to stream log data directly into CloudWatch so that you can view them in real-time. To create a Log Stream, go to the [AWS Console](https://console.aws.amazon.com/cloudwatch/home?region=us-east-1) and click on **Logs** -> **Create Stream**.
+
+You will then be prompted for details about your log data, such as the name of the Log Stream and a description. After entering these details, click **Create Stream** to create it. You can now begin sending logs directly into this Log Stream from different services or applications in your infrastructure.
+
+Once you have created both your Log Group and Log Stream, you should configure all of your services or applications that will be generating log data to send them here so that they are stored together for easy reference later on if needed. This will ensure that all relevant information about what happened during an incident can be found quickly in one place instead of having multiple different sources spread out across various systems within the environment!
+
+It's not about "heavy," but rather "hard." You don't want to tell the user that their situation is difficult. You need to show them that you know it isn't easy, and that you care about making things easier.
+
+Instead of saying, "This environment is heavy," say something like, "We understand how hard this can be." This will show empathy without implying that the user doesn't have any other options or control over their situation.
+
+Another approach would be to offer some words of encouragement, such as: "We are here for you and we know that it won't always be easy, but we believe in your resilience." This could help reassure the user that they can get through this difficult time.
+
+We are both interested in the same subject, so why not talk about that?
+
+### Explanation:
+It is better to find common ground and something interesting to talk about than try to force a conversation. This approach will show you respect your friend's interest and create an atmosphere of mutual understanding. It also makes it easier for him to open up and start talking with you more naturally.

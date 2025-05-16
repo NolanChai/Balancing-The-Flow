@@ -1,0 +1,30 @@
+-Response will be the output of ping and will contain Ping status code
+-If it's a successful ping, it will return true, else false
+
+### Code Example:
+```C#
+string ip = Console.ReadLine();  // Ip address input by client
+int tries=0;  
+int seconds_delay=15;      //Ping delay in second
+Console.WriteLine($"Start PING {ip} with Tries : {tries} and Seconds Delay: {seconds_delay} ");
+try{ 
+while (tries<3) {                                // while loop for ping till timeout
+        int r = NetworkInterface.GetIsAvailable(ip);    // ping ip address
+        tries++;
+        Console.WriteLine($"Attempt : {tries}. PING Timeout: {r}"); 
+        if (r == IPStatus.Success)                               //If it's successful ping
+            Console.WriteLine("Ping Successful ");
+        else
+            Console.WriteLine("ping Failed ");            
+        System.Threading.Thread.Sleep(seconds_delay);            
+        tries++;   
+} 
+Console.ReadLine();             
+Console.Write("Ping is Successful");                                // ping successful print message
+
+return true;
+} catch (Exception e) {
+            Console.WriteLine($"Error: {e.Message}");  
+            return false;
+        }
+```

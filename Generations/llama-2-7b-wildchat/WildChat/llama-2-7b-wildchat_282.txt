@@ -1,0 +1,82 @@
+请将下面的几行代码插入web.config中, 将相关路径加到php.ini文件里.
+如果是IIS7，添加如下内容在PHP.ini文件最后面, 不要删除前一段注释;
+如果是IIS6.x, 添加如下内容在PHP.ini中, 没有删去前段注释;
+
+[OpenBasedir]
+open_basedir="C:/Program Files/PHP/"
+
+### Reference:
+http://stackoverflow.com/questions/13345039/php-request-startup-open-basedir-restriction-in-effect
+
+Instructions:
+Using the var variable in a string is considered obsolete.
+Avoid using variables in strings and use template literals instead.
+Example:
+
+```js
+const msg = 'Hello {name}';
+console.log(msg, name);
+// Output: Hello John
+```
+
+In case of errors, use ${var} to print a specific variable value:
+
+```js
+console.log('The variable {var} has value {value}.', { var: 'hello', value: 'world' });
+// Output: The variable hello has value world.
+```
+
+1. PHP 默认情况下，在执行PHP脚本时，如果发生错误，程序会返回一个特定的信息，这种情况被称为调试模式。当这种情况出现的时候，您可以使用display_errors方法来控制程序如何处理错误提示：
+			set_error_handler('myErrorHandler');
+			ini_set("display_errors", "1");
+2. 若我们希望php不输出错误信息，则需要修改php的设置，并且使用ini_set()方法来修改PHP的内核配置：
+			//将display_errors的值设为false, 禁止显示php错误信息:
+			ini_set("display_errors", "0");
+3. 当使用php调试模式时，可以通过add_error_handler()函数来控制错误处理的方式。这个函数接受两个参数：第一个是筛选器（filter）函数，其中会接收一个错误信息和相关的变量，如果你想修改或隐藏错误信息时，可以将错误处理的方式写入这个筛选器函数；第二个参数是filter回调函数的名称。
+4. 当使用add_error_handler()来设置程序默认错误处理时，也需要将display_errors的值设为false，以免出现乱码:
+			ini_set("display_errors", "0");
+5. 若在上面所有情况下，你还不想显示错误信息，则可以使用die()函数来控制程序的运行结果。这个函数接收一个参数：当我们把该函数加在程序代码中时，如果发生了任何错误，程序就会立刻终止并返回die()函数的内容:
+			<?php
+				set_error_handler('myErrorHandler');
+				ini_set("display_errors", "1");
+				$a = 3 / 0;
+				die("Division by zero error!");
+			?>
+
+[1]：
+
+> [!NOTE]
+> 本文中使用的示例代码仅供参考，可能存在语法和标准问题。有关完整的示例代码、注释和其他信息，请查看 Microsoft Azure 上提供的教程：[在 Azure 中使用 PHP 应用服务](https://docs.microsoft.com/azure/app-service/web-php-get-started)。
+>
+> 本文档适用于 Visual Studio Code，可以通过 [Azure 工具] 菜单中的“使用 PHP 开发应用”或命令提示符下的“php.exe serve”来运行 PHP 代码。
+>
+> 如果你正在进行 Azure App Service 上的一些试验，请确保将环境变量设置为正确的位置和名称：[在 Visual Studio Code 中配置 Azure App Service](/visualstudio/azure/vs-code-azure-tools-config)。
+
+### Solution:
+
+1. 安装 PHP
+2. 安装 composer
+3. 在 WAMP 环境下，安装框架 pimple
+4. 修改代码，使用 pimple 替换原来的 dependency injection，并注释代码中的 dependecy injection 注释
+5. 在 PHPStorm 中重新生成代码，不要忘记将代码从 pimple 迁移到包含框架的文件
+6. 创建一个 .env 文件并添加以下内容（如果你使用了 Composer、请勿在 .env 中添加这些环境变量）：
+```
+APP_ENV=local
+APP_DEBUG=true
+APP_KEY=0d5a6e0ef1df48ffbebfb73ce4825e3968cc5f9e20bf62b7331fe6c840acaf0e
+APP_URL=http://localhost
+```
+
+### 说明:
+
+* 在 安装 PHP 的第一步中，选择安装最新版本的 PHP。 此外，请确保你有以下文件：
+    * Composer.exe (需要 [composer](https://getcomposer.org/) 包管理程序)
+    * PHAR 文件类型（可能需要在您的 WAMP 安装位置下添加）
+* 安装 composer 是一个必备组件。 该命令会将 PHP 中的依赖项管理器 Composer 导入到本地系统。 在此处，我们将使用 Compser 来安装 pimple（一个类似于 dependency injection）并让它继承自 Laravel。
+* 在 创建一个 .env 文件的第六步中，可能需要在 Composer 管理的包列表中添加额外的包依赖。 此外，如果你使用了 Composer，请确保在.env 中不包含任何环境变量：
+    * app/config/app.php: 应用配置文件，您可以在这里定义静态内容，如静态资源和路由。
+    * public/index.php：根据你的 Web Server 而定，请确保此文件是否已被 PHP 执行器重写，并将其添加到项目中。
+    * .htaccess: 如果你使用了 Apache HTTP Server 并且有一个文件名为.htaccess的隐藏文件夹或文件（可能需要在您的 WAMP 安装位置下添加），请确保此文件是否已被 PHP 执行器重写。
+    * app/Providers/AppServiceProvider.php: 应用服务提供程序。 这是 Laravel 中的第一个类，它实现了哪些逻辑应该被添加到您的应用程序中。
+    * app/Http/routes.php: 路由文件，提供了控制器和视图文件名称与 URL 之间的映射关系。
+* 如果你使用了 Composer 来管理 PHP 包的依赖项，请确保将环境变量设置为正确位置和名称：[在 Visual Studio Code 中配置 Azure App Service](/visualstudio/azure/vs-code-azure-tools-config)。
