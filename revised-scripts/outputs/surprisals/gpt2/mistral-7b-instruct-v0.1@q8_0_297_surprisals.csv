@@ -1,0 +1,14 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2949,No,-7.192142,7.192142,mistral-7b-instruct-v0.1@q8_0_297.txt
+2949,No,1917, problem,-5.566688,5.566688,mistral-7b-instruct-v0.1@q8_0_297.txt
+1917, problem,11,",",-1.615659,1.615659,mistral-7b-instruct-v0.1@q8_0_297.txt
+11,",",655, just,-3.6945527,3.6945527,mistral-7b-instruct-v0.1@q8_0_297.txt
+655, just,257, a,-3.1822426,3.1822426,mistral-7b-instruct-v0.1@q8_0_297.txt
+257, a,16416, slice,-11.007568,11.007568,mistral-7b-instruct-v0.1@q8_0_297.txt
+16416, slice,286, of,-0.47530502,0.47530502,mistral-7b-instruct-v0.1@q8_0_297.txt
+286, of,17180, apple,-5.7628164,5.7628164,mistral-7b-instruct-v0.1@q8_0_297.txt
+17180, apple,2508, pie,-0.6257975,0.6257975,mistral-7b-instruct-v0.1@q8_0_297.txt
+2508, pie,329, for,-3.4128098,3.4128098,mistral-7b-instruct-v0.1@q8_0_297.txt
+329, for,502, me,-2.784262,2.784262,mistral-7b-instruct-v0.1@q8_0_297.txt
+502, me,788, then,-8.33205,8.33205,mistral-7b-instruct-v0.1@q8_0_297.txt
+788, then,1701,"?""",-2.5974703,2.5974703,mistral-7b-instruct-v0.1@q8_0_297.txt

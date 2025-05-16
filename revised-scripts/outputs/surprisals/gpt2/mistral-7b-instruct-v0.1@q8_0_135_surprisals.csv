@@ -1,0 +1,30 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_135.txt
+40,I,804, look,-6.6295843,6.6295843,mistral-7b-instruct-v0.1@q8_0_135.txt
+804, look,2651, forward,-0.9336798,0.9336798,mistral-7b-instruct-v0.1@q8_0_135.txt
+2651, forward,284, to,-0.004903553,0.004903553,mistral-7b-instruct-v0.1@q8_0_135.txt
+284, to,4379, seeing,-2.4395425,2.4395425,mistral-7b-instruct-v0.1@q8_0_135.txt
+4379, seeing,345, you,-1.8829805,1.8829805,mistral-7b-instruct-v0.1@q8_0_135.txt
+345, you,9975, tonight,-6.8477373,6.8477373,mistral-7b-instruct-v0.1@q8_0_135.txt
+9975, tonight,379, at,-3.6250467,3.6250467,mistral-7b-instruct-v0.1@q8_0_135.txt
+379, at,262, the,-1.1132034,1.1132034,mistral-7b-instruct-v0.1@q8_0_135.txt
+262, the,45797, Shang,-10.822628,10.822628,mistral-7b-instruct-v0.1@q8_0_135.txt
+45797, Shang,380,ri,-0.028188664,0.028188664,mistral-7b-instruct-v0.1@q8_0_135.txt
+380,ri,12,-,-0.09308425,0.09308425,mistral-7b-instruct-v0.1@q8_0_135.txt
+12,-,14772,La,-0.04771723,0.04771723,mistral-7b-instruct-v0.1@q8_0_135.txt
+14772,La,12696, Hotel,-3.172431,3.172431,mistral-7b-instruct-v0.1@q8_0_135.txt
+12696, Hotel,764, .,-8.353042,8.353042,mistral-7b-instruct-v0.1@q8_0_135.txt
+764, .,2094, Don,-5.3965807,5.3965807,mistral-7b-instruct-v0.1@q8_0_135.txt
+2094, Don,470,'t,-0.026339345,0.026339345,mistral-7b-instruct-v0.1@q8_0_135.txt
+470,'t,6044, forget,-1.103301,1.103301,mistral-7b-instruct-v0.1@q8_0_135.txt
+6044, forget,284, to,-0.49776486,0.49776486,mistral-7b-instruct-v0.1@q8_0_135.txt
+284, to,1282, come,-1.7956059,1.7956059,mistral-7b-instruct-v0.1@q8_0_135.txt
+1282, come,3492, ready,-8.760343,8.760343,mistral-7b-instruct-v0.1@q8_0_135.txt
+3492, ready,379, at,-5.851918,5.851918,mistral-7b-instruct-v0.1@q8_0_135.txt
+379, at,718, 6,-2.822133,2.822133,mistral-7b-instruct-v0.1@q8_0_135.txt
+718, 6,25,:,-1.0978123,1.0978123,mistral-7b-instruct-v0.1@q8_0_135.txt
+25,:,1270,30,-0.4188862,0.4188862,mistral-7b-instruct-v0.1@q8_0_135.txt
+1270,30,267, o,-6.4077544,6.4077544,mistral-7b-instruct-v0.1@q8_0_135.txt
+267, o,6,',-0.020256903,0.020256903,mistral-7b-instruct-v0.1@q8_0_135.txt
+6,',15750,clock,-0.0011338717,0.0011338717,mistral-7b-instruct-v0.1@q8_0_135.txt
+15750,clock,22135," .""",-4.783803,4.783803,mistral-7b-instruct-v0.1@q8_0_135.txt

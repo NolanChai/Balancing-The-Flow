@@ -1,0 +1,34 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",314, I,-4.8942,4.8942,mistral-7b-instruct-v0.1@q8_0_248.txt
+314, I,1549,'d,-4.1108074,4.1108074,mistral-7b-instruct-v0.1@q8_0_248.txt
+1549,'d,588, like,-1.8304343,1.8304343,mistral-7b-instruct-v0.1@q8_0_248.txt
+588, like,257, a,-4.63484,4.63484,mistral-7b-instruct-v0.1@q8_0_248.txt
+257, a,3024, hot,-7.4897156,7.4897156,mistral-7b-instruct-v0.1@q8_0_248.txt
+3024, hot,6508, cup,-4.0224037,4.0224037,mistral-7b-instruct-v0.1@q8_0_248.txt
+6508, cup,286, of,-0.22166406,0.22166406,mistral-7b-instruct-v0.1@q8_0_248.txt
+286, of,6891, coffee,-0.84125227,0.84125227,mistral-7b-instruct-v0.1@q8_0_248.txt
+6891, coffee,290, and,-2.4995427,2.4995427,mistral-7b-instruct-v0.1@q8_0_248.txt
+290, and,617, some,-2.0112877,2.0112877,mistral-7b-instruct-v0.1@q8_0_248.txt
+617, some,47008, pancakes,-6.7605968,6.7605968,mistral-7b-instruct-v0.1@q8_0_248.txt
+47008, pancakes,11,",",-2.0213294,2.0213294,mistral-7b-instruct-v0.1@q8_0_248.txt
+11,",",3387, please,-4.9218454,4.9218454,mistral-7b-instruct-v0.1@q8_0_248.txt
+3387, please,526,".""",-2.7605152,2.7605152,mistral-7b-instruct-v0.1@q8_0_248.txt
+526,".""",198,"
+",-0.6495473,0.6495473,mistral-7b-instruct-v0.1@q8_0_248.txt
+198,"
+",198,"
+",-0.012537119,0.012537119,mistral-7b-instruct-v0.1@q8_0_248.txt
+198,"
+",10449,Thank,-7.689236,7.689236,mistral-7b-instruct-v0.1@q8_0_248.txt
+10449,Thank,345, you,-0.19477235,0.19477235,mistral-7b-instruct-v0.1@q8_0_248.txt
+345, you,13,.,-1.5622461,1.5622461,mistral-7b-instruct-v0.1@q8_0_248.txt
+13,.,1680, Can,-7.104009,7.104009,mistral-7b-instruct-v0.1@q8_0_248.txt
+1680, Can,314, I,-1.2010152,1.2010152,mistral-7b-instruct-v0.1@q8_0_248.txt
+314, I,787, make,-3.807326,3.807326,mistral-7b-instruct-v0.1@q8_0_248.txt
+787, make,597, any,-5.6152024,5.6152024,mistral-7b-instruct-v0.1@q8_0_248.txt
+597, any,21436, substit,-8.382718,8.382718,mistral-7b-instruct-v0.1@q8_0_248.txt
+21436, substit,3508,utions,-0.00035708727,0.00035708727,mistral-7b-instruct-v0.1@q8_0_248.txt
+3508,utions,393, or,-4.0254574,4.0254574,mistral-7b-instruct-v0.1@q8_0_248.txt
+393, or,3224, additional,-5.999115,5.999115,mistral-7b-instruct-v0.1@q8_0_248.txt
+3224, additional,7007, requests,-5.0382466,5.0382466,mistral-7b-instruct-v0.1@q8_0_248.txt
+7007, requests,30,?,-0.41679853,0.41679853,mistral-7b-instruct-v0.1@q8_0_248.txt

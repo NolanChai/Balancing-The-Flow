@@ -1,0 +1,13 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.607994,4.607994,mistral-7b-instruct-v0.1@q8_0_66.txt
+40,I,1101,'m,-2.082548,2.082548,mistral-7b-instruct-v0.1@q8_0_66.txt
+1101,'m,922, good,-6.3287873,6.3287873,mistral-7b-instruct-v0.1@q8_0_66.txt
+922, good,11,",",-2.575858,2.575858,mistral-7b-instruct-v0.1@q8_0_66.txt
+11,",",1682, actually,-6.422185,6.422185,mistral-7b-instruct-v0.1@q8_0_66.txt
+1682, actually,13,.,-1.2779769,1.2779769,mistral-7b-instruct-v0.1@q8_0_66.txt
+13,.,6930, Thanks,-5.7567225,5.7567225,mistral-7b-instruct-v0.1@q8_0_66.txt
+6930, Thanks,329, for,-0.9659084,0.9659084,mistral-7b-instruct-v0.1@q8_0_66.txt
+329, for,6011, offering,-6.526484,6.526484,mistral-7b-instruct-v0.1@q8_0_66.txt
+6011, offering,11,",",-4.9525456,4.9525456,mistral-7b-instruct-v0.1@q8_0_66.txt
+11,",",996, though,-3.4031432,3.4031432,mistral-7b-instruct-v0.1@q8_0_66.txt
+996, though,2474,"!""",-3.5307465,3.5307465,mistral-7b-instruct-v0.1@q8_0_66.txt

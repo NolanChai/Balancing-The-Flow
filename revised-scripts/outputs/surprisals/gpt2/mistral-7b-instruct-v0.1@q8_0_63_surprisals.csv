@@ -1,0 +1,51 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",38804,Register,-12.215019,12.215019,mistral-7b-instruct-v0.1@q8_0_63.txt
+38804,Register,278,ing,-2.9432714,2.9432714,mistral-7b-instruct-v0.1@q8_0_63.txt
+278,ing,319, on,-4.2550774,4.2550774,mistral-7b-instruct-v0.1@q8_0_63.txt
+319, on,281, an,-4.358514,4.358514,mistral-7b-instruct-v0.1@q8_0_63.txt
+281, an,2691, online,-3.6393147,3.6393147,mistral-7b-instruct-v0.1@q8_0_63.txt
+2691, online,20729, merchant,-7.6705027,7.6705027,mistral-7b-instruct-v0.1@q8_0_63.txt
+20729, merchant,338,'s,-3.0122309,3.0122309,mistral-7b-instruct-v0.1@q8_0_63.txt
+338,'s,2524, site,-2.489349,2.489349,mistral-7b-instruct-v0.1@q8_0_63.txt
+2524, site,318, is,-1.8546789,1.8546789,mistral-7b-instruct-v0.1@q8_0_63.txt
+318, is,3221, usually,-5.414607,5.414607,mistral-7b-instruct-v0.1@q8_0_63.txt
+3221, usually,15836, straightforward,-5.380251,5.380251,mistral-7b-instruct-v0.1@q8_0_63.txt
+15836, straightforward,13,.,-1.2682773,1.2682773,mistral-7b-instruct-v0.1@q8_0_63.txt
+13,.,921, You,-2.4887078,2.4887078,mistral-7b-instruct-v0.1@q8_0_63.txt
+921, You,481, will,-3.9821367,3.9821367,mistral-7b-instruct-v0.1@q8_0_63.txt
+481, will,761, need,-1.2261097,1.2261097,mistral-7b-instruct-v0.1@q8_0_63.txt
+761, need,284, to,-0.37423596,0.37423596,mistral-7b-instruct-v0.1@q8_0_63.txt
+284, to,2148, provide,-3.1179924,3.1179924,mistral-7b-instruct-v0.1@q8_0_63.txt
+2148, provide,534, your,-1.4029663,1.4029663,mistral-7b-instruct-v0.1@q8_0_63.txt
+534, your,1438, name,-1.7386652,1.7386652,mistral-7b-instruct-v0.1@q8_0_63.txt
+1438, name,11,",",-0.6688678,0.6688678,mistral-7b-instruct-v0.1@q8_0_63.txt
+11,",",3053, email,-1.6274754,1.6274754,mistral-7b-instruct-v0.1@q8_0_63.txt
+3053, email,2209, address,-0.13145709,0.13145709,mistral-7b-instruct-v0.1@q8_0_63.txt
+2209, address,11,",",-0.47564423,0.47564423,mistral-7b-instruct-v0.1@q8_0_63.txt
+11,",",8440, shipping,-5.117503,5.117503,mistral-7b-instruct-v0.1@q8_0_63.txt
+8440, shipping,290, and,-6.348678,6.348678,mistral-7b-instruct-v0.1@q8_0_63.txt
+290, and,26297, billing,-2.3659625,2.3659625,mistral-7b-instruct-v0.1@q8_0_63.txt
+26297, billing,1321, information,-0.43238032,0.43238032,mistral-7b-instruct-v0.1@q8_0_63.txt
+1321, information,11,",",-1.0940921,1.0940921,mistral-7b-instruct-v0.1@q8_0_63.txt
+11,",",355, as,-2.3860984,2.3860984,mistral-7b-instruct-v0.1@q8_0_63.txt
+355, as,880, well,-0.014561101,0.014561101,mistral-7b-instruct-v0.1@q8_0_63.txt
+880, well,355, as,-0.010678177,0.010678177,mistral-7b-instruct-v0.1@q8_0_63.txt
+355, as,2251, create,-9.937469,9.937469,mistral-7b-instruct-v0.1@q8_0_63.txt
+2251, create,257, a,-0.9055078,0.9055078,mistral-7b-instruct-v0.1@q8_0_63.txt
+257, a,9206, password,-4.390073,4.390073,mistral-7b-instruct-v0.1@q8_0_63.txt
+9206, password,13,.,-1.0258195,1.0258195,mistral-7b-instruct-v0.1@q8_0_63.txt
+13,.,2773, Some,-5.6619473,5.6619473,mistral-7b-instruct-v0.1@q8_0_63.txt
+2773, Some,9293, websites,-3.0479336,3.0479336,mistral-7b-instruct-v0.1@q8_0_63.txt
+9293, websites,743, may,-2.8410869,2.8410869,mistral-7b-instruct-v0.1@q8_0_63.txt
+743, may,635, also,-2.6004212,2.6004212,mistral-7b-instruct-v0.1@q8_0_63.txt
+635, also,2421, require,-1.3411573,1.3411573,mistral-7b-instruct-v0.1@q8_0_63.txt
+2421, require,3224, additional,-4.69207,4.69207,mistral-7b-instruct-v0.1@q8_0_63.txt
+3224, additional,3307, details,-3.844092,3.844092,mistral-7b-instruct-v0.1@q8_0_63.txt
+3307, details,588, like,-3.211609,3.211609,mistral-7b-instruct-v0.1@q8_0_63.txt
+588, like,3072, phone,-5.1126614,5.1126614,mistral-7b-instruct-v0.1@q8_0_63.txt
+3072, phone,1271, number,-0.743165,0.743165,mistral-7b-instruct-v0.1@q8_0_63.txt
+1271, number,393, or,-1.7748471,1.7748471,mistral-7b-instruct-v0.1@q8_0_63.txt
+393, or,3128, date,-4.6437297,4.6437297,mistral-7b-instruct-v0.1@q8_0_63.txt
+3128, date,286, of,-0.2116109,0.2116109,mistral-7b-instruct-v0.1@q8_0_63.txt
+286, of,4082, birth,-0.23478661,0.23478661,mistral-7b-instruct-v0.1@q8_0_63.txt
+4082, birth,526,".""",-6.534676,6.534676,mistral-7b-instruct-v0.1@q8_0_63.txt

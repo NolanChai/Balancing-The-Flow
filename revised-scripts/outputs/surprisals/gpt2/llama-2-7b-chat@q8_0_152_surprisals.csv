@@ -1,0 +1,25 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_152.txt
+40,I,836, don,-2.6053379,2.6053379,llama-2-7b-chat@q8_0_152.txt
+836, don,470,'t,-0.00081446377,0.00081446377,llama-2-7b-chat@q8_0_152.txt
+470,'t,1833, understand,-3.7400453,3.7400453,llama-2-7b-chat@q8_0_152.txt
+1833, understand,1521, why,-1.1585838,1.1585838,llama-2-7b-chat@q8_0_152.txt
+1521, why,484, they,-1.9588854,1.9588854,llama-2-7b-chat@q8_0_152.txt
+484, they,550, had,-4.979679,4.979679,llama-2-7b-chat@q8_0_152.txt
+550, had,284, to,-0.56542116,0.56542116,llama-2-7b-chat@q8_0_152.txt
+284, to,466, do,-2.6569924,2.6569924,llama-2-7b-chat@q8_0_152.txt
+466, do,428, this,-0.9973651,0.9973651,llama-2-7b-chat@q8_0_152.txt
+428, this,13,.,-1.3363442,1.3363442,llama-2-7b-chat@q8_0_152.txt
+13,.,632, It,-1.9824343,1.9824343,llama-2-7b-chat@q8_0_152.txt
+632, It,5300, feels,-5.388691,5.388691,llama-2-7b-chat@q8_0_152.txt
+5300, feels,588, like,-0.50037426,0.50037426,llama-2-7b-chat@q8_0_152.txt
+588, like,484, they,-1.0483296,1.0483296,llama-2-7b-chat@q8_0_152.txt
+484, they,821,'re,-1.6182005,1.6182005,llama-2-7b-chat@q8_0_152.txt
+821,'re,2111, trying,-1.7032363,1.7032363,llama-2-7b-chat@q8_0_152.txt
+2111, trying,284, to,-0.021305852,0.021305852,llama-2-7b-chat@q8_0_152.txt
+284, to,787, make,-2.5400805,2.5400805,llama-2-7b-chat@q8_0_152.txt
+787, make,514, us,-3.1170378,3.1170378,llama-2-7b-chat@q8_0_152.txt
+514, us,8659, suffer,-5.4926505,5.4926505,llama-2-7b-chat@q8_0_152.txt
+8659, suffer,772, even,-6.526088,6.526088,llama-2-7b-chat@q8_0_152.txt
+772, even,517, more,-0.5062615,0.5062615,llama-2-7b-chat@q8_0_152.txt
+517, more,526,".""",-1.7858862,1.7858862,llama-2-7b-chat@q8_0_152.txt

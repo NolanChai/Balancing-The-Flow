@@ -1,0 +1,77 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5297,Yes,-8.237671,8.237671,llama-2-7b-chat@q8_0_76.txt
+5297,Yes,11,",",-0.59551066,0.59551066,llama-2-7b-chat@q8_0_76.txt
+11,",",314, I,-1.7780918,1.7780918,llama-2-7b-chat@q8_0_76.txt
+314, I,1975, believe,-4.129691,4.129691,llama-2-7b-chat@q8_0_76.txt
+1975, believe,314, I,-3.5907493,3.5907493,llama-2-7b-chat@q8_0_76.txt
+314, I,460, can,-2.3723505,2.3723505,llama-2-7b-chat@q8_0_76.txt
+460, can,13,.,-2.64325,2.64325,llama-2-7b-chat@q8_0_76.txt
+13,.,314, I,-1.1000896,1.1000896,llama-2-7b-chat@q8_0_76.txt
+314, I,1101,'m,-2.031517,2.031517,llama-2-7b-chat@q8_0_76.txt
+1101,'m,6563, confident,-4.808709,4.808709,llama-2-7b-chat@q8_0_76.txt
+6563, confident,287, in,-1.6084951,1.6084951,llama-2-7b-chat@q8_0_76.txt
+287, in,616, my,-1.022673,1.022673,llama-2-7b-chat@q8_0_76.txt
+616, my,2694, ability,-1.3473245,1.3473245,llama-2-7b-chat@q8_0_76.txt
+2694, ability,284, to,-0.8361109,0.8361109,llama-2-7b-chat@q8_0_76.txt
+284, to,10996, communicate,-7.2759905,7.2759905,llama-2-7b-chat@q8_0_76.txt
+10996, communicate,6840, effectively,-3.469161,3.469161,llama-2-7b-chat@q8_0_76.txt
+6840, effectively,287, in,-3.773303,3.773303,llama-2-7b-chat@q8_0_76.txt
+287, in,3594, English,-4.1716485,4.1716485,llama-2-7b-chat@q8_0_76.txt
+3594, English,526,".""",-1.556993,1.556993,llama-2-7b-chat@q8_0_76.txt
+526,".""",198,"
+",-0.34458917,0.34458917,llama-2-7b-chat@q8_0_76.txt
+198,"
+",198,"
+",-0.00050996646,0.00050996646,llama-2-7b-chat@q8_0_76.txt
+198,"
+",1,"""",-2.970253,2.970253,llama-2-7b-chat@q8_0_76.txt
+1,"""",5297,Yes,-3.585834,3.585834,llama-2-7b-chat@q8_0_76.txt
+5297,Yes,11,",",-0.37291253,0.37291253,llama-2-7b-chat@q8_0_76.txt
+11,",",314, I,-0.7453612,0.7453612,llama-2-7b-chat@q8_0_76.txt
+314, I,1975, believe,-1.3911088,1.3911088,llama-2-7b-chat@q8_0_76.txt
+1975, believe,314, I,-0.44775224,0.44775224,llama-2-7b-chat@q8_0_76.txt
+314, I,460, can,-0.19994758,0.19994758,llama-2-7b-chat@q8_0_76.txt
+460, can,2740, speak,-5.4636497,5.4636497,llama-2-7b-chat@q8_0_76.txt
+2740, speak,3594, English,-2.4056168,2.4056168,llama-2-7b-chat@q8_0_76.txt
+3594, English,2407, quite,-5.35789,5.35789,llama-2-7b-chat@q8_0_76.txt
+2407, quite,6562, flu,-3.284662,3.284662,llama-2-7b-chat@q8_0_76.txt
+6562, flu,1473,ently,-0.0005815722,0.0005815722,llama-2-7b-chat@q8_0_76.txt
+1473,ently,13,.,-1.062735,1.062735,llama-2-7b-chat@q8_0_76.txt
+13,.,314, I,-0.6948697,0.6948697,llama-2-7b-chat@q8_0_76.txt
+314, I,423, have,-2.8686237,2.8686237,llama-2-7b-chat@q8_0_76.txt
+423, have,587, been,-2.722148,2.722148,llama-2-7b-chat@q8_0_76.txt
+587, been,11065, studying,-3.7691875,3.7691875,llama-2-7b-chat@q8_0_76.txt
+11065, studying,3594, English,-0.9064035,0.9064035,llama-2-7b-chat@q8_0_76.txt
+3594, English,1201, since,-1.8793949,1.8793949,llama-2-7b-chat@q8_0_76.txt
+1201, since,1029, high,-4.061122,4.061122,llama-2-7b-chat@q8_0_76.txt
+1029, high,1524, school,-0.005454657,0.005454657,llama-2-7b-chat@q8_0_76.txt
+1524, school,290, and,-1.5529108,1.5529108,llama-2-7b-chat@q8_0_76.txt
+290, and,423, have,-2.1206226,2.1206226,llama-2-7b-chat@q8_0_76.txt
+423, have,3767, continued,-6.1184883,6.1184883,llama-2-7b-chat@q8_0_76.txt
+3767, continued,284, to,-0.30047807,0.30047807,llama-2-7b-chat@q8_0_76.txt
+284, to,2987, improve,-3.031839,3.031839,llama-2-7b-chat@q8_0_76.txt
+2987, improve,616, my,-1.5995897,1.5995897,llama-2-7b-chat@q8_0_76.txt
+616, my,4678, skills,-3.3094428,3.3094428,llama-2-7b-chat@q8_0_76.txt
+4678, skills,3690, throughout,-3.3983054,3.3983054,llama-2-7b-chat@q8_0_76.txt
+3690, throughout,616, my,-0.83498085,0.83498085,llama-2-7b-chat@q8_0_76.txt
+616, my,3451, career,-1.5200301,1.5200301,llama-2-7b-chat@q8_0_76.txt
+3451, career,13,.,-0.8062885,0.8062885,llama-2-7b-chat@q8_0_76.txt
+13,.,314, I,-0.7427675,0.7427675,llama-2-7b-chat@q8_0_76.txt
+314, I,423, have,-2.1885872,2.1885872,llama-2-7b-chat@q8_0_76.txt
+423, have,2077, taken,-4.8253946,4.8253946,llama-2-7b-chat@q8_0_76.txt
+2077, taken,2972, various,-5.282836,5.282836,llama-2-7b-chat@q8_0_76.txt
+2972, various,3303, language,-5.9379573,5.9379573,llama-2-7b-chat@q8_0_76.txt
+3303, language,10902, courses,-0.6639253,0.6639253,llama-2-7b-chat@q8_0_76.txt
+10902, courses,290, and,-1.4155513,1.4155513,llama-2-7b-chat@q8_0_76.txt
+290, and,423, have,-1.7950951,1.7950951,llama-2-7b-chat@q8_0_76.txt
+423, have,19893, practiced,-6.8096466,6.8096466,llama-2-7b-chat@q8_0_76.txt
+19893, practiced,5486, speaking,-3.7286794,3.7286794,llama-2-7b-chat@q8_0_76.txt
+5486, speaking,351, with,-4.6849895,4.6849895,llama-2-7b-chat@q8_0_76.txt
+351, with,6868, native,-5.9479475,5.9479475,llama-2-7b-chat@q8_0_76.txt
+6868, native,11636, speakers,-0.12647213,0.12647213,llama-2-7b-chat@q8_0_76.txt
+11636, speakers,284, to,-4.231098,4.231098,llama-2-7b-chat@q8_0_76.txt
+284, to,9494, enhance,-4.538656,4.538656,llama-2-7b-chat@q8_0_76.txt
+9494, enhance,616, my,-0.17095941,0.17095941,llama-2-7b-chat@q8_0_76.txt
+616, my,6562, flu,-5.449091,5.449091,llama-2-7b-chat@q8_0_76.txt
+6562, flu,1387,ency,-0.013513046,0.013513046,llama-2-7b-chat@q8_0_76.txt
+1387,ency,526,".""",-1.4760116,1.4760116,llama-2-7b-chat@q8_0_76.txt

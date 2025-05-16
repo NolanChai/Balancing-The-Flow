@@ -1,0 +1,49 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,mistral-7b-instruct-v0.1@q8_0_212.txt
+40,I,1833, understand,-5.4735403,5.4735403,mistral-7b-instruct-v0.1@q8_0_212.txt
+1833, understand,810, where,-4.425355,4.425355,mistral-7b-instruct-v0.1@q8_0_212.txt
+810, where,345, you,-1.1486888,1.1486888,mistral-7b-instruct-v0.1@q8_0_212.txt
+345, you,821,'re,-0.83548373,0.83548373,mistral-7b-instruct-v0.1@q8_0_212.txt
+821,'re,2406, coming,-0.10246215,0.10246215,mistral-7b-instruct-v0.1@q8_0_212.txt
+2406, coming,422, from,-0.0096523715,0.0096523715,mistral-7b-instruct-v0.1@q8_0_212.txt
+422, from,11,",",-1.3512816,1.3512816,mistral-7b-instruct-v0.1@q8_0_212.txt
+11,",",475, but,-0.6563283,0.6563283,mistral-7b-instruct-v0.1@q8_0_212.txt
+475, but,314, I,-1.2243423,1.2243423,mistral-7b-instruct-v0.1@q8_0_212.txt
+314, I,991, still,-4.859724,4.859724,mistral-7b-instruct-v0.1@q8_0_212.txt
+991, still,1975, believe,-2.6411426,2.6411426,mistral-7b-instruct-v0.1@q8_0_212.txt
+1975, believe,7516, Charles,-12.499417,12.499417,mistral-7b-instruct-v0.1@q8_0_212.txt
+7516, Charles,46167, Dickens,-5.29427,5.29427,mistral-7b-instruct-v0.1@q8_0_212.txt
+46167, Dickens,318, is,-1.6366857,1.6366857,mistral-7b-instruct-v0.1@q8_0_212.txt
+318, is,262, the,-1.6463947,1.6463947,mistral-7b-instruct-v0.1@q8_0_212.txt
+262, the,6000, greatest,-0.9924632,0.9924632,mistral-7b-instruct-v0.1@q8_0_212.txt
+6000, greatest,37986, novelist,-3.158186,3.158186,mistral-7b-instruct-v0.1@q8_0_212.txt
+37986, novelist,13,.,-3.5573204,3.5573204,mistral-7b-instruct-v0.1@q8_0_212.txt
+13,.,2399, His,-4.309121,4.309121,mistral-7b-instruct-v0.1@q8_0_212.txt
+2399, His,2499, works,-3.449178,3.449178,mistral-7b-instruct-v0.1@q8_0_212.txt
+2499, works,389, are,-0.7633626,0.7633626,mistral-7b-instruct-v0.1@q8_0_212.txt
+389, are,523, so,-2.161545,2.161545,mistral-7b-instruct-v0.1@q8_0_212.txt
+523, so,5909, vast,-6.2143226,6.2143226,mistral-7b-instruct-v0.1@q8_0_212.txt
+5909, vast,290, and,-0.7441629,0.7441629,mistral-7b-instruct-v0.1@q8_0_212.txt
+290, and,10084, diverse,-3.6082125,3.6082125,mistral-7b-instruct-v0.1@q8_0_212.txt
+10084, diverse,11,",",-1.1880975,1.1880975,mistral-7b-instruct-v0.1@q8_0_212.txt
+11,",",290, and,-1.4583677,1.4583677,mistral-7b-instruct-v0.1@q8_0_212.txt
+290, and,484, they,-3.137693,3.137693,mistral-7b-instruct-v0.1@q8_0_212.txt
+484, they,8006, capture,-6.073824,6.073824,mistral-7b-instruct-v0.1@q8_0_212.txt
+8006, capture,262, the,-1.3240813,1.3240813,mistral-7b-instruct-v0.1@q8_0_212.txt
+262, the,12799, essence,-2.1193228,2.1193228,mistral-7b-instruct-v0.1@q8_0_212.txt
+12799, essence,286, of,-0.06311151,0.06311151,mistral-7b-instruct-v0.1@q8_0_212.txt
+286, of,24569, Victorian,-5.2459354,5.2459354,mistral-7b-instruct-v0.1@q8_0_212.txt
+24569, Victorian,4492, England,-1.8124335,1.8124335,mistral-7b-instruct-v0.1@q8_0_212.txt
+4492, England,287, in,-2.9089112,2.9089112,mistral-7b-instruct-v0.1@q8_0_212.txt
+287, in,257, a,-1.6363668,1.6363668,mistral-7b-instruct-v0.1@q8_0_212.txt
+257, a,835, way,-0.5005925,0.5005925,mistral-7b-instruct-v0.1@q8_0_212.txt
+835, way,326, that,-0.44378474,0.44378474,mistral-7b-instruct-v0.1@q8_0_212.txt
+326, that,645, no,-3.059476,3.059476,mistral-7b-instruct-v0.1@q8_0_212.txt
+645, no,584, other,-0.5564827,0.5564827,mistral-7b-instruct-v0.1@q8_0_212.txt
+584, other,1772, author,-2.6509156,2.6509156,mistral-7b-instruct-v0.1@q8_0_212.txt
+1772, author,468, has,-0.6999423,0.6999423,mistral-7b-instruct-v0.1@q8_0_212.txt
+468, has,587, been,-3.3415313,3.3415313,mistral-7b-instruct-v0.1@q8_0_212.txt
+587, been,1498, able,-0.03952553,0.03952553,mistral-7b-instruct-v0.1@q8_0_212.txt
+1498, able,284, to,-0.0053370376,0.0053370376,mistral-7b-instruct-v0.1@q8_0_212.txt
+284, to,466, do,-0.74890786,0.74890786,mistral-7b-instruct-v0.1@q8_0_212.txt
+466, do,526,".""",-1.133894,1.133894,mistral-7b-instruct-v0.1@q8_0_212.txt

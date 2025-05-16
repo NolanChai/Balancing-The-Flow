@@ -1,0 +1,59 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",3226, Of,-8.973019,8.973019,mistral-7b-instruct-v0.1@q8_0_271.txt
+3226, Of,1781, course,-0.6275861,0.6275861,mistral-7b-instruct-v0.1@q8_0_271.txt
+1781, course,13,.,-2.4820573,2.4820573,mistral-7b-instruct-v0.1@q8_0_271.txt
+13,.,4222, Please,-6.5954247,6.5954247,mistral-7b-instruct-v0.1@q8_0_271.txt
+4222, Please,467, go,-4.845659,4.845659,mistral-7b-instruct-v0.1@q8_0_271.txt
+467, go,4058, ahead,-1.7601572,1.7601572,mistral-7b-instruct-v0.1@q8_0_271.txt
+4058, ahead,290, and,-0.54224086,0.54224086,mistral-7b-instruct-v0.1@q8_0_271.txt
+290, and,2666, leave,-4.804253,4.804253,mistral-7b-instruct-v0.1@q8_0_271.txt
+2666, leave,257, a,-1.889366,1.889366,mistral-7b-instruct-v0.1@q8_0_271.txt
+257, a,3275, message,-2.0937102,2.0937102,mistral-7b-instruct-v0.1@q8_0_271.txt
+3275, message,11,",",-2.791976,2.791976,mistral-7b-instruct-v0.1@q8_0_271.txt
+11,",",290, and,-2.4149318,2.4149318,mistral-7b-instruct-v0.1@q8_0_271.txt
+290, and,314, I,-1.3767594,1.3767594,mistral-7b-instruct-v0.1@q8_0_271.txt
+314, I,1183,'ll,-0.4451944,0.4451944,mistral-7b-instruct-v0.1@q8_0_271.txt
+1183,'ll,787, make,-3.664383,3.664383,mistral-7b-instruct-v0.1@q8_0_271.txt
+787, make,1654, sure,-0.21257614,0.21257614,mistral-7b-instruct-v0.1@q8_0_271.txt
+1654, sure,340, it,-2.5099998,2.5099998,mistral-7b-instruct-v0.1@q8_0_271.txt
+340, it,3011, gets,-2.7439408,2.7439408,mistral-7b-instruct-v0.1@q8_0_271.txt
+3011, gets,6793, delivered,-6.015481,6.015481,mistral-7b-instruct-v0.1@q8_0_271.txt
+6793, delivered,284, to,-0.80067396,0.80067396,mistral-7b-instruct-v0.1@q8_0_271.txt
+284, to,5811, Bob,-10.367802,10.367802,mistral-7b-instruct-v0.1@q8_0_271.txt
+5811, Bob,618, when,-5.7070484,5.7070484,mistral-7b-instruct-v0.1@q8_0_271.txt
+618, when,339, he,-1.1291809,1.1291809,mistral-7b-instruct-v0.1@q8_0_271.txt
+339, he,5860, returns,-2.7386785,2.7386785,mistral-7b-instruct-v0.1@q8_0_271.txt
+5860, returns,526,".""",-2.6374173,2.6374173,mistral-7b-instruct-v0.1@q8_0_271.txt
+526,".""",198,"
+",-0.74644715,0.74644715,mistral-7b-instruct-v0.1@q8_0_271.txt
+198,"
+",198,"
+",-0.0036009015,0.0036009015,mistral-7b-instruct-v0.1@q8_0_271.txt
+198,"
+",1,"""",-1.8680112,1.8680112,mistral-7b-instruct-v0.1@q8_0_271.txt
+1,"""",16454,Okay,-4.0900593,4.0900593,mistral-7b-instruct-v0.1@q8_0_271.txt
+16454,Okay,11,",",-0.98096377,0.98096377,mistral-7b-instruct-v0.1@q8_0_271.txt
+11,",",5875, thank,-4.1949587,4.1949587,mistral-7b-instruct-v0.1@q8_0_271.txt
+5875, thank,345, you,-0.013710375,0.013710375,mistral-7b-instruct-v0.1@q8_0_271.txt
+345, you,13,.,-1.9729564,1.9729564,mistral-7b-instruct-v0.1@q8_0_271.txt
+13,.,314, I,-1.3645477,1.3645477,mistral-7b-instruct-v0.1@q8_0_271.txt
+314, I,1053,'ve,-3.6632218,3.6632218,mistral-7b-instruct-v0.1@q8_0_271.txt
+1053,'ve,1364, left,-5.6004314,5.6004314,mistral-7b-instruct-v0.1@q8_0_271.txt
+1364, left,262, the,-2.385328,2.385328,mistral-7b-instruct-v0.1@q8_0_271.txt
+262, the,3275, message,-2.8703666,2.8703666,mistral-7b-instruct-v0.1@q8_0_271.txt
+3275, message,329, for,-2.491405,2.491405,mistral-7b-instruct-v0.1@q8_0_271.txt
+329, for,5811, Bob,-1.2708145,1.2708145,mistral-7b-instruct-v0.1@q8_0_271.txt
+5811, Bob,13,.,-1.262808,1.262808,mistral-7b-instruct-v0.1@q8_0_271.txt
+13,.,3914, Let,-4.519427,4.519427,mistral-7b-instruct-v0.1@q8_0_271.txt
+3914, Let,502, me,-1.1082373,1.1082373,mistral-7b-instruct-v0.1@q8_0_271.txt
+502, me,760, know,-1.1523814,1.1523814,mistral-7b-instruct-v0.1@q8_0_271.txt
+760, know,611, if,-0.65696317,0.65696317,mistral-7b-instruct-v0.1@q8_0_271.txt
+611, if,612, there,-2.1412275,2.1412275,mistral-7b-instruct-v0.1@q8_0_271.txt
+612, there,338,'s,-0.44690475,0.44690475,mistral-7b-instruct-v0.1@q8_0_271.txt
+338,'s,1997, anything,-0.4537238,0.4537238,mistral-7b-instruct-v0.1@q8_0_271.txt
+1997, anything,2073, else,-1.4206206,1.4206206,mistral-7b-instruct-v0.1@q8_0_271.txt
+2073, else,314, I,-1.2347356,1.2347356,mistral-7b-instruct-v0.1@q8_0_271.txt
+314, I,460, can,-0.7089998,0.7089998,mistral-7b-instruct-v0.1@q8_0_271.txt
+460, can,1037, help,-3.0132396,3.0132396,mistral-7b-instruct-v0.1@q8_0_271.txt
+1037, help,351, with,-1.6168671,1.6168671,mistral-7b-instruct-v0.1@q8_0_271.txt
+351, with,526,".""",-0.75207317,0.75207317,mistral-7b-instruct-v0.1@q8_0_271.txt

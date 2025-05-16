@@ -1,0 +1,16 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5756,Let,-8.7487335,8.7487335,mistral-7b-instruct-v0.1@q8_0_136.txt
+5756,Let,338,'s,-0.6889482,0.6889482,mistral-7b-instruct-v0.1@q8_0_136.txt
+338,'s,1182, head,-7.4082146,7.4082146,mistral-7b-instruct-v0.1@q8_0_136.txt
+1182, head,736, back,-1.4964546,1.4964546,mistral-7b-instruct-v0.1@q8_0_136.txt
+736, back,2641, inside,-5.681898,5.681898,mistral-7b-instruct-v0.1@q8_0_136.txt
+2641, inside,11,",",-2.401085,2.401085,mistral-7b-instruct-v0.1@q8_0_136.txt
+11,",",1398, class,-9.463504,9.463504,mistral-7b-instruct-v0.1@q8_0_136.txt
+1398, class,13,.,-2.194294,2.194294,mistral-7b-instruct-v0.1@q8_0_136.txt
+13,.,3862, Time,-7.176177,7.176177,mistral-7b-instruct-v0.1@q8_0_136.txt
+3862, Time,284, to,-0.6351218,0.6351218,mistral-7b-instruct-v0.1@q8_0_136.txt
+284, to,651, get,-1.8180065,1.8180065,mistral-7b-instruct-v0.1@q8_0_136.txt
+651, get,736, back,-2.7719812,2.7719812,mistral-7b-instruct-v0.1@q8_0_136.txt
+736, back,284, to,-0.48319447,0.48319447,mistral-7b-instruct-v0.1@q8_0_136.txt
+284, to,670, work,-1.3979808,1.3979808,mistral-7b-instruct-v0.1@q8_0_136.txt
+670, work,2474,"!""",-2.6463757,2.6463757,mistral-7b-instruct-v0.1@q8_0_136.txt

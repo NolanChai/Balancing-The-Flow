@@ -1,0 +1,25 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987438,8.987438,mistral-7b-instruct-v0.1@q8_0_117.txt
+5812,Oh,11,",",-0.70429367,0.70429367,mistral-7b-instruct-v0.1@q8_0_117.txt
+11,",",314, I,-2.267466,2.267466,mistral-7b-instruct-v0.1@q8_0_117.txt
+314, I,766, see,-2.9879096,2.9879096,mistral-7b-instruct-v0.1@q8_0_117.txt
+766, see,13,.,-1.0034158,1.0034158,mistral-7b-instruct-v0.1@q8_0_117.txt
+13,.,1320, That,-3.2656555,3.2656555,mistral-7b-instruct-v0.1@q8_0_117.txt
+1320, That,1838, makes,-4.6919622,4.6919622,mistral-7b-instruct-v0.1@q8_0_117.txt
+1838, makes,2565, sense,-0.5067596,0.5067596,mistral-7b-instruct-v0.1@q8_0_117.txt
+2565, sense,13,.,-0.7433427,0.7433427,mistral-7b-instruct-v0.1@q8_0_117.txt
+13,.,8192, Have,-6.302635,6.302635,mistral-7b-instruct-v0.1@q8_0_117.txt
+8192, Have,345, you,-0.29164445,0.29164445,mistral-7b-instruct-v0.1@q8_0_117.txt
+345, you,2982, heard,-2.5171394,2.5171394,mistral-7b-instruct-v0.1@q8_0_117.txt
+2982, heard,546, about,-1.6812971,1.6812971,mistral-7b-instruct-v0.1@q8_0_117.txt
+546, about,597, any,-5.0855713,5.0855713,mistral-7b-instruct-v0.1@q8_0_117.txt
+597, any,584, other,-2.1102154,2.1102154,mistral-7b-instruct-v0.1@q8_0_117.txt
+584, other,649, new,-5.7069263,5.7069263,mistral-7b-instruct-v0.1@q8_0_117.txt
+649, new,10050, releases,-4.815159,4.815159,mistral-7b-instruct-v0.1@q8_0_117.txt
+10050, releases,326, that,-3.0050533,3.0050533,mistral-7b-instruct-v0.1@q8_0_117.txt
+326, that,1244, might,-3.495294,3.495294,mistral-7b-instruct-v0.1@q8_0_117.txt
+1244, might,307, be,-0.62566954,0.62566954,mistral-7b-instruct-v0.1@q8_0_117.txt
+307, be,2861, worth,-6.4097714,6.4097714,mistral-7b-instruct-v0.1@q8_0_117.txt
+2861, worth,10627, checking,-1.7301356,1.7301356,mistral-7b-instruct-v0.1@q8_0_117.txt
+10627, checking,503, out,-0.051538594,0.051538594,mistral-7b-instruct-v0.1@q8_0_117.txt
+503, out,1701,"?""",-0.7542283,0.7542283,mistral-7b-instruct-v0.1@q8_0_117.txt

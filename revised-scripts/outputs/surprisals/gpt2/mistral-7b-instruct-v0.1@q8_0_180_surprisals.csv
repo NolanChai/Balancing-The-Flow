@@ -1,0 +1,21 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",314, I,-4.8942,4.8942,mistral-7b-instruct-v0.1@q8_0_180.txt
+314, I,2911, hope,-6.0944805,6.0944805,mistral-7b-instruct-v0.1@q8_0_180.txt
+2911, hope,262, the,-3.4728189,3.4728189,mistral-7b-instruct-v0.1@q8_0_180.txt
+262, the,6478, boss,-8.924948,8.924948,mistral-7b-instruct-v0.1@q8_0_180.txt
+6478, boss,1595, doesn,-3.346172,3.346172,mistral-7b-instruct-v0.1@q8_0_180.txt
+1595, doesn,470,'t,-0.00039545822,0.00039545822,mistral-7b-instruct-v0.1@q8_0_180.txt
+470,'t,6044, forget,-5.2552595,5.2552595,mistral-7b-instruct-v0.1@q8_0_180.txt
+6044, forget,546, about,-1.8705027,1.8705027,mistral-7b-instruct-v0.1@q8_0_180.txt
+546, about,674, our,-4.7520714,4.7520714,mistral-7b-instruct-v0.1@q8_0_180.txt
+674, our,1327, hard,-6.9200635,6.9200635,mistral-7b-instruct-v0.1@q8_0_180.txt
+1327, hard,670, work,-0.07977509,0.07977509,mistral-7b-instruct-v0.1@q8_0_180.txt
+670, work,290, and,-1.6158924,1.6158924,mistral-7b-instruct-v0.1@q8_0_180.txt
+290, and,22445, dedication,-3.0410407,3.0410407,mistral-7b-instruct-v0.1@q8_0_180.txt
+22445, dedication,13,.,-1.3620576,1.3620576,mistral-7b-instruct-v0.1@q8_0_180.txt
+13,.,775, We,-2.8220258,2.8220258,mistral-7b-instruct-v0.1@q8_0_180.txt
+775, We,10925, deserve,-5.3722596,5.3722596,mistral-7b-instruct-v0.1@q8_0_180.txt
+10925, deserve,257, a,-2.6105523,2.6105523,mistral-7b-instruct-v0.1@q8_0_180.txt
+257, a,7709, decent,-5.8957605,5.8957605,mistral-7b-instruct-v0.1@q8_0_180.txt
+7709, decent,5298, raise,-5.444565,5.444565,mistral-7b-instruct-v0.1@q8_0_180.txt
+5298, raise,526,".""",-2.5596333,2.5596333,mistral-7b-instruct-v0.1@q8_0_180.txt

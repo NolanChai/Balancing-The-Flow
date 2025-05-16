@@ -1,0 +1,29 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_108.txt
+40,I,460, can,-3.6003025,3.6003025,mistral-7b-instruct-v0.1@q8_0_108.txt
+460, can,470,'t,-0.688222,0.688222,mistral-7b-instruct-v0.1@q8_0_108.txt
+470,'t,910, say,-2.9832606,2.9832606,mistral-7b-instruct-v0.1@q8_0_108.txt
+910, say,314, I,-1.8059942,1.8059942,mistral-7b-instruct-v0.1@q8_0_108.txt
+314, I,3505, remember,-6.4970584,6.4970584,mistral-7b-instruct-v0.1@q8_0_108.txt
+3505, remember,345, you,-5.621502,5.621502,mistral-7b-instruct-v0.1@q8_0_108.txt
+345, you,11,",",-3.0195212,3.0195212,mistral-7b-instruct-v0.1@q8_0_108.txt
+11,",",475, but,-0.6718784,0.6718784,mistral-7b-instruct-v0.1@q8_0_108.txt
+475, but,314, I,-0.7560369,0.7560369,mistral-7b-instruct-v0.1@q8_0_108.txt
+314, I,466, do,-2.7677054,2.7677054,mistral-7b-instruct-v0.1@q8_0_108.txt
+466, do,10014, recall,-3.2338579,3.2338579,mistral-7b-instruct-v0.1@q8_0_108.txt
+10014, recall,852, being,-3.7651641,3.7651641,mistral-7b-instruct-v0.1@q8_0_108.txt
+852, being,12617, impressed,-6.510869,6.510869,mistral-7b-instruct-v0.1@q8_0_108.txt
+12617, impressed,416, by,-1.0057727,1.0057727,mistral-7b-instruct-v0.1@q8_0_108.txt
+416, by,534, your,-1.0812038,1.0812038,mistral-7b-instruct-v0.1@q8_0_108.txt
+534, your,670, work,-3.3404348,3.3404348,mistral-7b-instruct-v0.1@q8_0_108.txt
+670, work,319, on,-2.4147997,2.4147997,mistral-7b-instruct-v0.1@q8_0_108.txt
+319, on,262, the,-1.3700458,1.3700458,mistral-7b-instruct-v0.1@q8_0_108.txt
+262, the,3452, latest,-7.3138533,7.3138533,mistral-7b-instruct-v0.1@q8_0_108.txt
+3452, latest,1628, project,-4.1558332,4.1558332,mistral-7b-instruct-v0.1@q8_0_108.txt
+1628, project,553,",""",-2.7014756,2.7014756,mistral-7b-instruct-v0.1@q8_0_108.txt
+553,",""",531, said,-2.761246,2.761246,mistral-7b-instruct-v0.1@q8_0_108.txt
+531, said,1770, Mr,-4.0849657,4.0849657,mistral-7b-instruct-v0.1@q8_0_108.txt
+1770, Mr,13,.,-1.5084951,1.5084951,mistral-7b-instruct-v0.1@q8_0_108.txt
+13,.,28292,Steven,-14.331621,14.331621,mistral-7b-instruct-v0.1@q8_0_108.txt
+28292,Steven,1559,son,-0.38549253,0.38549253,mistral-7b-instruct-v0.1@q8_0_108.txt
+1559,son,13,.,-0.463355,0.463355,mistral-7b-instruct-v0.1@q8_0_108.txt

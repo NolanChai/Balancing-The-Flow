@@ -1,0 +1,14 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987434,8.987434,llama-2-7b-chat@q8_0_61.txt
+5812,Oh,11,",",-0.70429003,0.70429003,llama-2-7b-chat@q8_0_61.txt
+11,",",1049, great,-5.651107,5.651107,llama-2-7b-chat@q8_0_61.txt
+1049, great,13,.,-1.4084377,1.4084377,llama-2-7b-chat@q8_0_61.txt
+13,.,2735, Now,-3.5653777,3.5653777,llama-2-7b-chat@q8_0_61.txt
+2735, Now,616, my,-5.4741626,5.4741626,llama-2-7b-chat@q8_0_61.txt
+616, my,3290, dog,-6.3060637,6.3060637,llama-2-7b-chat@q8_0_61.txt
+3290, dog,318, is,-1.4332582,1.4332582,llama-2-7b-chat@q8_0_61.txt
+318, is,1016, going,-3.1370234,3.1370234,llama-2-7b-chat@q8_0_61.txt
+1016, going,284, to,-0.112091325,0.112091325,llama-2-7b-chat@q8_0_61.txt
+284, to,307, be,-1.3681377,1.3681377,llama-2-7b-chat@q8_0_61.txt
+307, be,6639, sick,-6.052006,6.052006,llama-2-7b-chat@q8_0_61.txt
+6639, sick,526,".""",-1.935296,1.935296,llama-2-7b-chat@q8_0_61.txt

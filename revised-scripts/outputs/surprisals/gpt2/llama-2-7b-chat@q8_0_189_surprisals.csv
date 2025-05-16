@@ -1,0 +1,51 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,llama-2-7b-chat@q8_0_189.txt
+40,I,766, see,-5.3181753,5.3181753,llama-2-7b-chat@q8_0_189.txt
+766, see,13,.,-4.041729,4.041729,llama-2-7b-chat@q8_0_189.txt
+13,.,8989, Unfortunately,-8.354457,8.354457,llama-2-7b-chat@q8_0_189.txt
+8989, Unfortunately,11,",",-0.5486748,0.5486748,llama-2-7b-chat@q8_0_189.txt
+11,",",1201, since,-6.1884255,6.1884255,llama-2-7b-chat@q8_0_189.txt
+1201, since,345, you,-2.7494311,2.7494311,llama-2-7b-chat@q8_0_189.txt
+345, you,1422, didn,-4.49532,4.49532,llama-2-7b-chat@q8_0_189.txt
+1422, didn,470,'t,-0.00057704485,0.00057704485,llama-2-7b-chat@q8_0_189.txt
+470,'t,8195, recon,-11.111191,11.111191,llama-2-7b-chat@q8_0_189.txt
+8195, recon,69,f,-2.590571,2.590571,llama-2-7b-chat@q8_0_189.txt
+69,f,2533,irm,-0.01833046,0.01833046,llama-2-7b-chat@q8_0_189.txt
+2533,irm,534, your,-2.0251045,2.0251045,llama-2-7b-chat@q8_0_189.txt
+534, your,24048, reservation,-7.2365627,7.2365627,llama-2-7b-chat@q8_0_189.txt
+24048, reservation,355, as,-4.837431,4.837431,llama-2-7b-chat@q8_0_189.txt
+355, as,2672, required,-4.52117,4.52117,llama-2-7b-chat@q8_0_189.txt
+2672, required,11,",",-1.3439577,1.3439577,llama-2-7b-chat@q8_0_189.txt
+11,",",356, we,-1.8531334,1.8531334,llama-2-7b-chat@q8_0_189.txt
+356, we,460, can,-2.706109,2.706109,llama-2-7b-chat@q8_0_189.txt
+460, can,470,'t,-0.23635449,0.23635449,llama-2-7b-chat@q8_0_189.txt
+470,'t,9149, guarantee,-3.4086018,3.4086018,llama-2-7b-chat@q8_0_189.txt
+9149, guarantee,262, the,-2.5668457,2.5668457,llama-2-7b-chat@q8_0_189.txt
+262, the,11500, availability,-3.4291909,3.4291909,llama-2-7b-chat@q8_0_189.txt
+11500, availability,286, of,-0.12298143,0.12298143,llama-2-7b-chat@q8_0_189.txt
+286, of,534, your,-1.762681,1.762681,llama-2-7b-chat@q8_0_189.txt
+534, your,2656, original,-6.329925,6.329925,llama-2-7b-chat@q8_0_189.txt
+2656, original,7846, ticket,-3.5409846,3.5409846,llama-2-7b-chat@q8_0_189.txt
+7846, ticket,13,.,-1.1779939,1.1779939,llama-2-7b-chat@q8_0_189.txt
+13,.,2102, However,-2.3654022,2.3654022,llama-2-7b-chat@q8_0_189.txt
+2102, However,11,",",-0.02856931,0.02856931,llama-2-7b-chat@q8_0_189.txt
+11,",",314, I,-3.0845883,3.0845883,llama-2-7b-chat@q8_0_189.txt
+314, I,460, can,-2.1759489,2.1759489,llama-2-7b-chat@q8_0_189.txt
+460, can,2897, offer,-3.5316005,3.5316005,llama-2-7b-chat@q8_0_189.txt
+2897, offer,345, you,-0.5881207,0.5881207,llama-2-7b-chat@q8_0_189.txt
+345, you,257, a,-1.1192114,1.1192114,llama-2-7b-chat@q8_0_189.txt
+257, a,649, new,-4.7826066,4.7826066,llama-2-7b-chat@q8_0_189.txt
+649, new,5474, flight,-6.426895,6.426895,llama-2-7b-chat@q8_0_189.txt
+5474, flight,37717, departing,-8.30089,8.30089,llama-2-7b-chat@q8_0_189.txt
+37717, departing,9439, tomorrow,-3.4270017,3.4270017,llama-2-7b-chat@q8_0_189.txt
+9439, tomorrow,3329, morning,-2.0426502,2.0426502,llama-2-7b-chat@q8_0_189.txt
+3329, morning,13,.,-1.5868179,1.5868179,llama-2-7b-chat@q8_0_189.txt
+13,.,10928, Would,-5.531514,5.531514,llama-2-7b-chat@q8_0_189.txt
+10928, Would,345, you,-0.30201718,0.30201718,llama-2-7b-chat@q8_0_189.txt
+345, you,588, like,-0.9718854,0.9718854,llama-2-7b-chat@q8_0_189.txt
+588, like,502, me,-3.28554,3.28554,llama-2-7b-chat@q8_0_189.txt
+502, me,284, to,-0.031817958,0.031817958,llama-2-7b-chat@q8_0_189.txt
+284, to,2198, check,-3.7317452,3.7317452,llama-2-7b-chat@q8_0_189.txt
+2198, check,329, for,-3.9818091,3.9818091,llama-2-7b-chat@q8_0_189.txt
+329, for,11500, availability,-5.419215,5.419215,llama-2-7b-chat@q8_0_189.txt
+11500, availability,1701,"?""",-2.0256362,2.0256362,llama-2-7b-chat@q8_0_189.txt

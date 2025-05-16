@@ -1,0 +1,7 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",15496,Hello,-10.126128,10.126128,llama-2-7b-chat@q8_0_107.txt
+15496,Hello,30,?,-4.672014,4.672014,llama-2-7b-chat@q8_0_107.txt
+30,?,5338, Who,-4.8379755,4.8379755,llama-2-7b-chat@q8_0_107.txt
+5338, Who,318, is,-1.623533,1.623533,llama-2-7b-chat@q8_0_107.txt
+318, is,340, it,-2.4048085,2.4048085,llama-2-7b-chat@q8_0_107.txt
+340, it,1701,"?""",-0.5454991,0.5454991,llama-2-7b-chat@q8_0_107.txt

@@ -1,0 +1,79 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.60801,4.60801,llama-2-7b-chat@q8_0_226.txt
+40,I,1833, understand,-5.4735403,5.4735403,llama-2-7b-chat@q8_0_226.txt
+1833, understand,11,",",-3.931328,3.931328,llama-2-7b-chat@q8_0_226.txt
+11,",",475, but,-1.3372148,1.3372148,llama-2-7b-chat@q8_0_226.txt
+475, but,340, it,-2.4963844,2.4963844,llama-2-7b-chat@q8_0_226.txt
+340, it,338,'s,-0.7474506,0.7474506,llama-2-7b-chat@q8_0_226.txt
+338,'s,1593, important,-3.924398,3.924398,llama-2-7b-chat@q8_0_226.txt
+1593, important,284, to,-0.7810149,0.7810149,llama-2-7b-chat@q8_0_226.txt
+284, to,2209, address,-6.1601048,6.1601048,llama-2-7b-chat@q8_0_226.txt
+2209, address,428, this,-2.3394876,2.3394876,llama-2-7b-chat@q8_0_226.txt
+428, this,4069, behavior,-8.10087,8.10087,llama-2-7b-chat@q8_0_226.txt
+4069, behavior,355, as,-3.2769663,3.2769663,llama-2-7b-chat@q8_0_226.txt
+355, as,340, it,-2.0857773,2.0857773,llama-2-7b-chat@q8_0_226.txt
+340, it,460, can,-5.8090878,5.8090878,llama-2-7b-chat@q8_0_226.txt
+460, can,38302, escalate,-5.9837027,5.9837027,llama-2-7b-chat@q8_0_226.txt
+38302, escalate,656, into,-2.1160738,2.1160738,llama-2-7b-chat@q8_0_226.txt
+656, into,1223, something,-2.4581623,2.4581623,llama-2-7b-chat@q8_0_226.txt
+1223, something,517, more,-2.8187823,2.8187823,llama-2-7b-chat@q8_0_226.txt
+517, more,2726, serious,-0.91184646,0.91184646,llama-2-7b-chat@q8_0_226.txt
+2726, serious,13,.,-1.8382341,1.8382341,llama-2-7b-chat@q8_0_226.txt
+13,.,8192, Have,-7.6793804,7.6793804,llama-2-7b-chat@q8_0_226.txt
+8192, Have,345, you,-0.63597506,0.63597506,llama-2-7b-chat@q8_0_226.txt
+345, you,6619, talked,-4.433481,4.433481,llama-2-7b-chat@q8_0_226.txt
+6619, talked,284, to,-0.20661265,0.20661265,llama-2-7b-chat@q8_0_226.txt
+284, to,683, him,-4.225339,4.225339,llama-2-7b-chat@q8_0_226.txt
+683, him,546, about,-0.8789281,0.8789281,llama-2-7b-chat@q8_0_226.txt
+546, about,1521, why,-6.0842867,6.0842867,llama-2-7b-chat@q8_0_226.txt
+1521, why,777, these,-5.543638,5.543638,llama-2-7b-chat@q8_0_226.txt
+777, these,2456, words,-6.847657,6.847657,llama-2-7b-chat@q8_0_226.txt
+2456, words,389, are,-1.0983068,1.0983068,llama-2-7b-chat@q8_0_226.txt
+389, are,5938, hurt,-5.2795367,5.2795367,llama-2-7b-chat@q8_0_226.txt
+5938, hurt,913,ful,-0.02809664,0.02809664,llama-2-7b-chat@q8_0_226.txt
+913,ful,290, and,-2.4362316,2.4362316,llama-2-7b-chat@q8_0_226.txt
+290, and,1521, why,-3.2648094,3.2648094,llama-2-7b-chat@q8_0_226.txt
+1521, why,484, they,-0.98370236,0.98370236,llama-2-7b-chat@q8_0_226.txt
+484, they,6584, shouldn,-3.4095163,3.4095163,llama-2-7b-chat@q8_0_226.txt
+6584, shouldn,470,'t,-0.00010322992,0.00010322992,llama-2-7b-chat@q8_0_226.txt
+470,'t,307, be,-0.18345007,0.18345007,llama-2-7b-chat@q8_0_226.txt
+307, be,973, used,-1.0980074,1.0980074,llama-2-7b-chat@q8_0_226.txt
+973, used,1701,"?""",-1.1990819,1.1990819,llama-2-7b-chat@q8_0_226.txt
+1701,"?""",198,"
+",-0.9175247,0.9175247,llama-2-7b-chat@q8_0_226.txt
+198,"
+",198,"
+",-0.00046325917,0.00046325917,llama-2-7b-chat@q8_0_226.txt
+198,"
+",1,"""",-2.1817307,2.1817307,llama-2-7b-chat@q8_0_226.txt
+1,"""",40,I,-1.265626,1.265626,llama-2-7b-chat@q8_0_226.txt
+40,I,1833, understand,-2.6138434,2.6138434,llama-2-7b-chat@q8_0_226.txt
+1833, understand,13,.,-1.7656807,1.7656807,llama-2-7b-chat@q8_0_226.txt
+13,.,632, It,-3.0123396,3.0123396,llama-2-7b-chat@q8_0_226.txt
+632, It,338,'s,-0.40115833,0.40115833,llama-2-7b-chat@q8_0_226.txt
+338,'s,1593, important,-2.277513,2.277513,llama-2-7b-chat@q8_0_226.txt
+1593, important,284, to,-0.5034653,0.5034653,llama-2-7b-chat@q8_0_226.txt
+284, to,5412, handle,-6.828819,6.828819,llama-2-7b-chat@q8_0_226.txt
+5412, handle,262, the,-2.3527963,2.3527963,llama-2-7b-chat@q8_0_226.txt
+262, the,3074, situation,-0.8496712,0.8496712,llama-2-7b-chat@q8_0_226.txt
+3074, situation,351, with,-1.8937985,1.8937985,llama-2-7b-chat@q8_0_226.txt
+351, with,14233, sensitivity,-5.3361955,5.3361955,llama-2-7b-chat@q8_0_226.txt
+14233, sensitivity,290, and,-1.2029487,1.2029487,llama-2-7b-chat@q8_0_226.txt
+290, and,16336, patience,-4.64887,4.64887,llama-2-7b-chat@q8_0_226.txt
+16336, patience,13,.,-1.1470128,1.1470128,llama-2-7b-chat@q8_0_226.txt
+13,.,8192, Have,-5.267155,5.267155,llama-2-7b-chat@q8_0_226.txt
+8192, Have,345, you,-0.2657519,0.2657519,llama-2-7b-chat@q8_0_226.txt
+345, you,3088, tried,-3.8398979,3.8398979,llama-2-7b-chat@q8_0_226.txt
+3088, tried,3375, talking,-3.3307576,3.3307576,llama-2-7b-chat@q8_0_226.txt
+3375, talking,284, to,-0.233467,0.233467,llama-2-7b-chat@q8_0_226.txt
+284, to,683, him,-0.21638428,0.21638428,llama-2-7b-chat@q8_0_226.txt
+683, him,546, about,-0.621822,0.621822,llama-2-7b-chat@q8_0_226.txt
+546, about,1521, why,-2.5636144,2.5636144,llama-2-7b-chat@q8_0_226.txt
+1521, why,465, his,-4.171413,4.171413,llama-2-7b-chat@q8_0_226.txt
+465, his,2456, words,-0.8022906,0.8022906,llama-2-7b-chat@q8_0_226.txt
+2456, words,389, are,-1.0368383,1.0368383,llama-2-7b-chat@q8_0_226.txt
+389, are,5938, hurt,-0.28828415,0.28828415,llama-2-7b-chat@q8_0_226.txt
+5938, hurt,913,ful,-0.0004965026,0.0004965026,llama-2-7b-chat@q8_0_226.txt
+913,ful,393, or,-2.4596987,2.4596987,llama-2-7b-chat@q8_0_226.txt
+393, or,18010, unacceptable,-6.129368,6.129368,llama-2-7b-chat@q8_0_226.txt
+18010, unacceptable,1701,"?""",-0.5527105,0.5527105,llama-2-7b-chat@q8_0_226.txt

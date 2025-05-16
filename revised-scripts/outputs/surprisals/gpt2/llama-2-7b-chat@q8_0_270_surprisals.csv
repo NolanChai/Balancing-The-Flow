@@ -1,0 +1,16 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987434,8.987434,llama-2-7b-chat@q8_0_270.txt
+5812,Oh,11,",",-0.7042831,0.7042831,llama-2-7b-chat@q8_0_270.txt
+11,",",1107, really,-5.01544,5.01544,llama-2-7b-chat@q8_0_270.txt
+1107, really,30,?,-0.65877545,0.65877545,llama-2-7b-chat@q8_0_270.txt
+30,?,314, I,-2.1209497,2.1209497,llama-2-7b-chat@q8_0_270.txt
+314, I,1422, didn,-3.5121026,3.5121026,llama-2-7b-chat@q8_0_270.txt
+1422, didn,470,'t,-0.00048959185,0.00048959185,llama-2-7b-chat@q8_0_270.txt
+470,'t,760, know,-1.5602187,1.5602187,llama-2-7b-chat@q8_0_270.txt
+760, know,326, that,-1.7488949,1.7488949,llama-2-7b-chat@q8_0_270.txt
+326, that,13,.,-2.0236664,2.0236664,llama-2-7b-chat@q8_0_270.txt
+13,.,1374, How,-4.760975,4.760975,llama-2-7b-chat@q8_0_270.txt
+1374, How,750, did,-2.0739517,2.0739517,llama-2-7b-chat@q8_0_270.txt
+750, did,339, he,-3.2757213,3.2757213,llama-2-7b-chat@q8_0_270.txt
+339, he,16398, drown,-10.89074,10.89074,llama-2-7b-chat@q8_0_270.txt
+16398, drown,1701,"?""",-1.8241737,1.8241737,llama-2-7b-chat@q8_0_270.txt

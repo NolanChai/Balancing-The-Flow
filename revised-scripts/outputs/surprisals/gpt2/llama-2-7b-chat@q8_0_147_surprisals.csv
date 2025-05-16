@@ -1,0 +1,20 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987438,8.987438,llama-2-7b-chat@q8_0_147.txt
+5812,Oh,11,",",-0.70429367,0.70429367,llama-2-7b-chat@q8_0_147.txt
+11,",",3608, cool,-6.4987206,6.4987206,llama-2-7b-chat@q8_0_147.txt
+3608, cool,13,.,-1.3592836,1.3592836,llama-2-7b-chat@q8_0_147.txt
+13,.,7731, Did,-5.061144,5.061144,llama-2-7b-chat@q8_0_147.txt
+7731, Did,345, you,-0.41662753,0.41662753,llama-2-7b-chat@q8_0_147.txt
+345, you,1949, try,-4.9107714,4.9107714,llama-2-7b-chat@q8_0_147.txt
+1949, try,511, their,-7.8992624,7.8992624,llama-2-7b-chat@q8_0_147.txt
+511, their,649, new,-3.8685308,3.8685308,llama-2-7b-chat@q8_0_147.txt
+649, new,9433, dish,-6.5514035,6.5514035,llama-2-7b-chat@q8_0_147.txt
+9433, dish,30,?,-1.7097462,1.7097462,llama-2-7b-chat@q8_0_147.txt
+30,?,632, It,-2.3920696,2.3920696,llama-2-7b-chat@q8_0_147.txt
+632, It,338,'s,-0.6728032,0.6728032,llama-2-7b-chat@q8_0_147.txt
+338,'s,4385, supposed,-6.980844,6.980844,llama-2-7b-chat@q8_0_147.txt
+4385, supposed,284, to,-0.0008104139,0.0008104139,llama-2-7b-chat@q8_0_147.txt
+284, to,307, be,-0.18492462,0.18492462,llama-2-7b-chat@q8_0_147.txt
+307, be,1107, really,-4.6611485,4.6611485,llama-2-7b-chat@q8_0_147.txt
+1107, really,922, good,-1.2868459,1.2868459,llama-2-7b-chat@q8_0_147.txt
+922, good,526,".""",-1.387365,1.387365,llama-2-7b-chat@q8_0_147.txt

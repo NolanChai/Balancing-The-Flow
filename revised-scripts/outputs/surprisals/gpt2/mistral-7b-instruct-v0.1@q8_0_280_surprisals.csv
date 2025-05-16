@@ -1,0 +1,26 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1639,You,-6.5488133,6.5488133,mistral-7b-instruct-v0.1@q8_0_280.txt
+1639,You,760, know,-2.3577526,2.3577526,mistral-7b-instruct-v0.1@q8_0_280.txt
+760, know,11,",",-0.6760194,0.6760194,mistral-7b-instruct-v0.1@q8_0_280.txt
+11,",",314, I,-1.6176392,1.6176392,mistral-7b-instruct-v0.1@q8_0_280.txt
+314, I,1422, didn,-4.4606376,4.4606376,mistral-7b-instruct-v0.1@q8_0_280.txt
+1422, didn,470,'t,-0.0004962643,0.0004962643,mistral-7b-instruct-v0.1@q8_0_280.txt
+470,'t,892, think,-2.3226626,2.3226626,mistral-7b-instruct-v0.1@q8_0_280.txt
+892, think,345, you,-2.7277174,2.7277174,mistral-7b-instruct-v0.1@q8_0_280.txt
+345, you,547, were,-1.3923439,1.3923439,mistral-7b-instruct-v0.1@q8_0_280.txt
+547, were,281, an,-4.878146,4.878146,mistral-7b-instruct-v0.1@q8_0_280.txt
+281, an,3594, English,-5.9312778,5.9312778,mistral-7b-instruct-v0.1@q8_0_280.txt
+3594, English,5887, expert,-6.886933,6.886933,mistral-7b-instruct-v0.1@q8_0_280.txt
+5887, expert,11,",",-1.6064551,1.6064551,mistral-7b-instruct-v0.1@q8_0_280.txt
+11,",",475, but,-0.9293355,0.9293355,mistral-7b-instruct-v0.1@q8_0_280.txt
+475, but,345, you,-1.7634636,1.7634636,mistral-7b-instruct-v0.1@q8_0_280.txt
+345, you,821,'re,-1.2834086,1.2834086,mistral-7b-instruct-v0.1@q8_0_280.txt
+821,'re,1804, doing,-4.3572707,4.3572707,mistral-7b-instruct-v0.1@q8_0_280.txt
+1804, doing,1049, great,-3.1820064,3.1820064,mistral-7b-instruct-v0.1@q8_0_280.txt
+1049, great,0,!,-3.7261014,3.7261014,mistral-7b-instruct-v0.1@q8_0_280.txt
+0,!,9175, Keep,-6.229375,6.229375,mistral-7b-instruct-v0.1@q8_0_280.txt
+9175, Keep,510, up,-1.0961291,1.0961291,mistral-7b-instruct-v0.1@q8_0_280.txt
+510, up,262, the,-0.08430164,0.08430164,mistral-7b-instruct-v0.1@q8_0_280.txt
+262, the,922, good,-0.4703845,0.4703845,mistral-7b-instruct-v0.1@q8_0_280.txt
+922, good,670, work,-0.011925003,0.011925003,mistral-7b-instruct-v0.1@q8_0_280.txt
+670, work,2474,"!""",-0.6817754,0.6817754,mistral-7b-instruct-v0.1@q8_0_280.txt

@@ -1,0 +1,23 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_225.txt
+40,I,766, see,-5.318183,5.318183,llama-2-7b-chat@q8_0_225.txt
+766, see,553,",""",-4.624708,4.624708,llama-2-7b-chat@q8_0_225.txt
+553,",""",262, the,-3.739293,3.739293,llama-2-7b-chat@q8_0_225.txt
+262, the,4540, candidate,-7.8110137,7.8110137,llama-2-7b-chat@q8_0_225.txt
+4540, candidate,8712, replied,-2.5000157,2.5000157,llama-2-7b-chat@q8_0_225.txt
+8712, replied,11200, skept,-8.4014,8.4014,llama-2-7b-chat@q8_0_225.txt
+11200, skept,1146,ically,-0.0018325931,0.0018325931,llama-2-7b-chat@q8_0_225.txt
+1146,ically,11,",",-1.1006019,1.1006019,llama-2-7b-chat@q8_0_225.txt
+11,",",366," """,-0.5883658,0.5883658,llama-2-7b-chat@q8_0_225.txt
+366," """,568,so,-5.483376,5.483376,llama-2-7b-chat@q8_0_225.txt
+568,so,345, you,-2.3879585,2.3879585,llama-2-7b-chat@q8_0_225.txt
+345, you,821,'re,-1.524173,1.524173,llama-2-7b-chat@q8_0_225.txt
+821,'re,2282, saying,-1.9262723,1.9262723,llama-2-7b-chat@q8_0_225.txt
+2282, saying,326, that,-1.1118424,1.1118424,llama-2-7b-chat@q8_0_225.txt
+326, that,1998, experience,-10.021614,10.021614,llama-2-7b-chat@q8_0_225.txt
+1998, experience,491, tr,-8.711846,8.711846,llama-2-7b-chat@q8_0_225.txt
+491, tr,8142,umps,-0.0031903107,0.0031903107,llama-2-7b-chat@q8_0_225.txt
+8142,umps,12971, capability,-8.095331,8.095331,llama-2-7b-chat@q8_0_225.txt
+12971, capability,790, every,-8.972371,8.972371,llama-2-7b-chat@q8_0_225.txt
+790, every,640, time,-1.0811474,1.0811474,llama-2-7b-chat@q8_0_225.txt
+640, time,1701,"?""",-1.643711,1.643711,llama-2-7b-chat@q8_0_225.txt

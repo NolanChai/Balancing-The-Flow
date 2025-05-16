@@ -1,0 +1,16 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",13681,Great,-9.98653,9.98653,llama-2-7b-chat@q8_0_140.txt
+13681,Great,11,",",-2.7508316,2.7508316,llama-2-7b-chat@q8_0_140.txt
+11,",",326, that,-3.2560856,3.2560856,llama-2-7b-chat@q8_0_140.txt
+326, that,338,'s,-0.7373246,0.7373246,llama-2-7b-chat@q8_0_140.txt
+338,'s,8036, impressive,-6.048026,6.048026,llama-2-7b-chat@q8_0_140.txt
+8036, impressive,13,.,-1.2867376,1.2867376,llama-2-7b-chat@q8_0_140.txt
+13,.,8192, Have,-5.991352,5.991352,llama-2-7b-chat@q8_0_140.txt
+8192, Have,345, you,-0.5252009,0.5252009,llama-2-7b-chat@q8_0_140.txt
+345, you,597, any,-6.441535,6.441535,llama-2-7b-chat@q8_0_140.txt
+597, any,1998, experience,-4.398684,4.398684,llama-2-7b-chat@q8_0_140.txt
+1998, experience,1762, working,-3.308222,3.308222,llama-2-7b-chat@q8_0_140.txt
+1762, working,355, as,-3.8985348,3.8985348,llama-2-7b-chat@q8_0_140.txt
+355, as,257, a,-0.3687194,0.3687194,llama-2-7b-chat@q8_0_140.txt
+257, a,7705, secretary,-6.704966,6.704966,llama-2-7b-chat@q8_0_140.txt
+7705, secretary,1701,"?""",-0.94903374,0.94903374,llama-2-7b-chat@q8_0_140.txt

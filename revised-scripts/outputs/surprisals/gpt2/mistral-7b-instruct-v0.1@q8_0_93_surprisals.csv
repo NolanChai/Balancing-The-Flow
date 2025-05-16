@@ -1,0 +1,11 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987431,8.987431,mistral-7b-instruct-v0.1@q8_0_93.txt
+5812,Oh,11,",",-0.70428663,0.70428663,mistral-7b-instruct-v0.1@q8_0_93.txt
+11,",",703, how,-4.969433,4.969433,mistral-7b-instruct-v0.1@q8_0_93.txt
+703, how,14348, romantic,-7.5226173,7.5226173,mistral-7b-instruct-v0.1@q8_0_93.txt
+14348, romantic,0,!,-2.0159302,2.0159302,mistral-7b-instruct-v0.1@q8_0_93.txt
+0,!,1867, What,-3.6582873,3.6582873,mistral-7b-instruct-v0.1@q8_0_93.txt
+1867, What,338,'s,-2.0511255,2.0511255,mistral-7b-instruct-v0.1@q8_0_93.txt
+338,'s,607, her,-5.09378,5.09378,mistral-7b-instruct-v0.1@q8_0_93.txt
+607, her,1438, name,-0.3429609,0.3429609,mistral-7b-instruct-v0.1@q8_0_93.txt
+1438, name,1701,"?""",-0.6702936,0.6702936,mistral-7b-instruct-v0.1@q8_0_93.txt

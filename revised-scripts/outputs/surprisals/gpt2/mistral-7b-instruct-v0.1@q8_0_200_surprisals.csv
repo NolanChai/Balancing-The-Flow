@@ -1,0 +1,15 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5297,Yes,-8.237671,8.237671,mistral-7b-instruct-v0.1@q8_0_200.txt
+5297,Yes,11,",",-0.5955094,0.5955094,mistral-7b-instruct-v0.1@q8_0_200.txt
+11,",",1309, let,-6.5610933,6.5610933,mistral-7b-instruct-v0.1@q8_0_200.txt
+1309, let,338,'s,-0.4346861,0.4346861,mistral-7b-instruct-v0.1@q8_0_200.txt
+338,'s,2353, pack,-9.573066,9.573066,mistral-7b-instruct-v0.1@q8_0_200.txt
+2353, pack,510, up,-2.4252038,2.4252038,mistral-7b-instruct-v0.1@q8_0_200.txt
+510, up,617, some,-4.3431673,4.3431673,mistral-7b-instruct-v0.1@q8_0_200.txt
+617, some,28487, snacks,-4.741317,4.741317,mistral-7b-instruct-v0.1@q8_0_200.txt
+28487, snacks,290, and,-1.0729456,1.0729456,mistral-7b-instruct-v0.1@q8_0_200.txt
+290, and,1182, head,-3.4755673,3.4755673,mistral-7b-instruct-v0.1@q8_0_200.txt
+1182, head,284, to,-1.5795953,1.5795953,mistral-7b-instruct-v0.1@q8_0_200.txt
+284, to,262, the,-0.78692603,0.78692603,mistral-7b-instruct-v0.1@q8_0_200.txt
+262, the,3952, park,-4.0975647,4.0975647,mistral-7b-instruct-v0.1@q8_0_200.txt
+3952, park,2474,"!""",-3.256577,3.256577,mistral-7b-instruct-v0.1@q8_0_200.txt

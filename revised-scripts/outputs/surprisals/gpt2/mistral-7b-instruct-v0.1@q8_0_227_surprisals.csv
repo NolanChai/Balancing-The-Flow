@@ -1,0 +1,25 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1026,It,-5.7056947,5.7056947,mistral-7b-instruct-v0.1@q8_0_227.txt
+1026,It,338,'s,-0.7809871,0.7809871,mistral-7b-instruct-v0.1@q8_0_227.txt
+338,'s,1016, going,-4.0263824,4.0263824,mistral-7b-instruct-v0.1@q8_0_227.txt
+1016, going,880, well,-6.5129213,6.5129213,mistral-7b-instruct-v0.1@q8_0_227.txt
+880, well,11,",",-2.017457,2.017457,mistral-7b-instruct-v0.1@q8_0_227.txt
+11,",",5875, thank,-5.7174563,5.7174563,mistral-7b-instruct-v0.1@q8_0_227.txt
+5875, thank,345, you,-0.3857812,0.3857812,mistral-7b-instruct-v0.1@q8_0_227.txt
+345, you,329, for,-1.9854677,1.9854677,mistral-7b-instruct-v0.1@q8_0_227.txt
+329, for,4737, asking,-5.472453,5.472453,mistral-7b-instruct-v0.1@q8_0_227.txt
+4737, asking,13,.,-1.6859376,1.6859376,mistral-7b-instruct-v0.1@q8_0_227.txt
+13,.,314, I,-1.5426295,1.5426295,mistral-7b-instruct-v0.1@q8_0_227.txt
+314, I,423, have,-3.8717227,3.8717227,mistral-7b-instruct-v0.1@q8_0_227.txt
+423, have,587, been,-2.7434945,2.7434945,mistral-7b-instruct-v0.1@q8_0_227.txt
+587, been,5291, keeping,-6.0302362,6.0302362,mistral-7b-instruct-v0.1@q8_0_227.txt
+5291, keeping,8179, busy,-4.7713614,4.7713614,mistral-7b-instruct-v0.1@q8_0_227.txt
+8179, busy,351, with,-1.6454092,1.6454092,mistral-7b-instruct-v0.1@q8_0_227.txt
+351, with,8292, meetings,-6.6780353,6.6780353,mistral-7b-instruct-v0.1@q8_0_227.txt
+8292, meetings,290, and,-1.6917351,1.6917351,mistral-7b-instruct-v0.1@q8_0_227.txt
+290, and,9984, discussions,-4.6079483,4.6079483,mistral-7b-instruct-v0.1@q8_0_227.txt
+9984, discussions,5115, regarding,-5.8679237,5.8679237,mistral-7b-instruct-v0.1@q8_0_227.txt
+5115, regarding,674, our,-3.4307828,3.4307828,mistral-7b-instruct-v0.1@q8_0_227.txt
+674, our,1459, current,-5.0493083,5.0493083,mistral-7b-instruct-v0.1@q8_0_227.txt
+1459, current,1628, project,-3.5984688,3.5984688,mistral-7b-instruct-v0.1@q8_0_227.txt
+1628, project,526,".""",-2.8419857,2.8419857,mistral-7b-instruct-v0.1@q8_0_227.txt

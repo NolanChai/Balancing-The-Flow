@@ -1,0 +1,19 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987434,8.987434,llama-2-7b-chat@q8_0_221.txt
+5812,Oh,11,",",-0.7042831,0.7042831,llama-2-7b-chat@q8_0_221.txt
+11,",",314, I,-2.267492,2.267492,llama-2-7b-chat@q8_0_221.txt
+314, I,766, see,-2.9879408,2.9879408,llama-2-7b-chat@q8_0_221.txt
+766, see,13,.,-1.0034162,1.0034162,llama-2-7b-chat@q8_0_221.txt
+13,.,3894, Well,-2.8085523,2.8085523,llama-2-7b-chat@q8_0_221.txt
+3894, Well,11,",",-0.44306368,0.44306368,llama-2-7b-chat@q8_0_221.txt
+11,",",644, what,-3.6575184,3.6575184,llama-2-7b-chat@q8_0_221.txt
+644, what,546, about,-2.0893373,2.0893373,llama-2-7b-chat@q8_0_221.txt
+546, about,534, your,-3.2276504,3.2276504,llama-2-7b-chat@q8_0_221.txt
+534, your,2988, father,-3.8569329,3.8569329,llama-2-7b-chat@q8_0_221.txt
+2988, father,30,?,-1.6738865,1.6738865,llama-2-7b-chat@q8_0_221.txt
+30,?,8314, Does,-5.947852,5.947852,llama-2-7b-chat@q8_0_221.txt
+8314, Does,339, he,-0.59085476,0.59085476,llama-2-7b-chat@q8_0_221.txt
+339, he,670, work,-4.966745,4.966745,llama-2-7b-chat@q8_0_221.txt
+670, work,355, as,-3.2591548,3.2591548,llama-2-7b-chat@q8_0_221.txt
+355, as,880, well,-3.4594588,3.4594588,llama-2-7b-chat@q8_0_221.txt
+880, well,1701,"?""",-2.8322077,2.8322077,llama-2-7b-chat@q8_0_221.txt

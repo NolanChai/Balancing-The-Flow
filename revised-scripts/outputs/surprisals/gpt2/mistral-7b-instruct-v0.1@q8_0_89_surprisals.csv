@@ -1,0 +1,20 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2504,That,-6.952019,6.952019,mistral-7b-instruct-v0.1@q8_0_89.txt
+2504,That,338,'s,-0.81931055,0.81931055,mistral-7b-instruct-v0.1@q8_0_89.txt
+338,'s,1049, great,-5.161379,5.161379,mistral-7b-instruct-v0.1@q8_0_89.txt
+1049, great,0,!,-3.0213547,3.0213547,mistral-7b-instruct-v0.1@q8_0_89.txt
+0,!,1374, How,-4.9011207,4.9011207,mistral-7b-instruct-v0.1@q8_0_89.txt
+1374, How,890, long,-4.185534,4.185534,mistral-7b-instruct-v0.1@q8_0_89.txt
+890, long,423, have,-1.8050684,1.8050684,mistral-7b-instruct-v0.1@q8_0_89.txt
+423, have,345, you,-0.23382135,0.23382135,mistral-7b-instruct-v0.1@q8_0_89.txt
+345, you,587, been,-0.12458686,0.12458686,mistral-7b-instruct-v0.1@q8_0_89.txt
+587, been,11065, studying,-5.9245872,5.9245872,mistral-7b-instruct-v0.1@q8_0_89.txt
+11065, studying,4960, Japanese,-4.873911,4.873911,mistral-7b-instruct-v0.1@q8_0_89.txt
+4960, Japanese,11,",",-3.965161,3.965161,mistral-7b-instruct-v0.1@q8_0_89.txt
+11,",",290, and,-2.673198,2.673198,mistral-7b-instruct-v0.1@q8_0_89.txt
+290, and,644, what,-1.6353854,1.6353854,mistral-7b-instruct-v0.1@q8_0_89.txt
+644, what,4133, resources,-9.236794,9.236794,mistral-7b-instruct-v0.1@q8_0_89.txt
+4133, resources,466, do,-0.82484525,0.82484525,mistral-7b-instruct-v0.1@q8_0_89.txt
+466, do,345, you,-0.036591522,0.036591522,mistral-7b-instruct-v0.1@q8_0_89.txt
+345, you,779, use,-2.0094044,2.0094044,mistral-7b-instruct-v0.1@q8_0_89.txt
+779, use,1701,"?""",-1.1697985,1.1697985,mistral-7b-instruct-v0.1@q8_0_89.txt

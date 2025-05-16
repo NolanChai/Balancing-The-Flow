@@ -1,0 +1,22 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",13681,Great,-9.986546,9.986546,llama-2-7b-chat@q8_0_71.txt
+13681,Great,11,",",-2.750843,2.750843,llama-2-7b-chat@q8_0_71.txt
+11,",",290, and,-3.8897867,3.8897867,llama-2-7b-chat@q8_0_71.txt
+290, and,703, how,-5.0750155,5.0750155,llama-2-7b-chat@q8_0_71.txt
+703, how,561, would,-4.2727957,4.2727957,llama-2-7b-chat@q8_0_71.txt
+561, would,345, you,-0.71564823,0.71564823,llama-2-7b-chat@q8_0_71.txt
+345, you,588, like,-0.6830772,0.6830772,llama-2-7b-chat@q8_0_71.txt
+588, like,326, that,-4.5451574,4.5451574,llama-2-7b-chat@q8_0_71.txt
+326, that,15847, cooked,-10.275058,10.275058,llama-2-7b-chat@q8_0_71.txt
+15847, cooked,30,?,-3.0867434,3.0867434,llama-2-7b-chat@q8_0_71.txt
+30,?,10928, Would,-3.9375541,3.9375541,llama-2-7b-chat@q8_0_71.txt
+10928, Would,345, you,-0.15918042,0.15918042,llama-2-7b-chat@q8_0_71.txt
+345, you,4702, prefer,-4.3136687,4.3136687,llama-2-7b-chat@q8_0_71.txt
+4702, prefer,340, it,-1.8990707,1.8990707,llama-2-7b-chat@q8_0_71.txt
+340, it,34240, grilled,-3.6352005,3.6352005,llama-2-7b-chat@q8_0_71.txt
+34240, grilled,393, or,-1.3782367,1.3782367,llama-2-7b-chat@q8_0_71.txt
+393, or,3425, pan,-8.104852,8.104852,llama-2-7b-chat@q8_0_71.txt
+3425, pan,12,-,-1.0220098,1.0220098,llama-2-7b-chat@q8_0_71.txt
+12,-,325,se,-5.6116805,5.6116805,llama-2-7b-chat@q8_0_71.txt
+325,se,1144,ared,-0.014911382,0.014911382,llama-2-7b-chat@q8_0_71.txt
+1144,ared,1701,"?""",-0.8142318,0.8142318,llama-2-7b-chat@q8_0_71.txt

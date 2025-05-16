@@ -1,0 +1,14 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",8920, Was,-10.583424,10.583424,mistral-7b-instruct-v0.1@q8_0_29.txt
+8920, Was,612, there,-3.798652,3.798652,mistral-7b-instruct-v0.1@q8_0_29.txt
+612, there,1997, anything,-2.3109136,2.3109136,mistral-7b-instruct-v0.1@q8_0_29.txt
+1997, anything,2176, specific,-4.8897266,4.8897266,mistral-7b-instruct-v0.1@q8_0_29.txt
+2176, specific,1016, going,-6.319292,6.319292,mistral-7b-instruct-v0.1@q8_0_29.txt
+1016, going,319, on,-0.090028524,0.090028524,mistral-7b-instruct-v0.1@q8_0_29.txt
+319, on,1141, during,-3.3837972,3.3837972,mistral-7b-instruct-v0.1@q8_0_29.txt
+1141, during,883, those,-3.7435713,3.7435713,mistral-7b-instruct-v0.1@q8_0_29.txt
+883, those,1661, times,-4.256562,4.256562,mistral-7b-instruct-v0.1@q8_0_29.txt
+1661, times,339, he,-5.450087,5.450087,mistral-7b-instruct-v0.1@q8_0_29.txt
+339, he,373, was,-1.2607471,1.2607471,mistral-7b-instruct-v0.1@q8_0_29.txt
+373, was,13717, absent,-6.266548,6.266548,mistral-7b-instruct-v0.1@q8_0_29.txt
+13717, absent,1701,"?""",-4.59915,4.59915,mistral-7b-instruct-v0.1@q8_0_29.txt

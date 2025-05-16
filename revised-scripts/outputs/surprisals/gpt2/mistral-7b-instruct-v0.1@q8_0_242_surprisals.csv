@@ -1,0 +1,29 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_242.txt
+40,I,4724, guess,-5.390586,5.390586,mistral-7b-instruct-v0.1@q8_0_242.txt
+4724, guess,523, so,-4.6093636,4.6093636,mistral-7b-instruct-v0.1@q8_0_242.txt
+523, so,11,",",-1.7616311,1.7616311,mistral-7b-instruct-v0.1@q8_0_242.txt
+11,",",475, but,-1.077836,1.077836,mistral-7b-instruct-v0.1@q8_0_242.txt
+475, but,314, I,-1.2597631,1.2597631,mistral-7b-instruct-v0.1@q8_0_242.txt
+314, I,1464, always,-5.7432475,5.7432475,mistral-7b-instruct-v0.1@q8_0_242.txt
+1464, always,588, like,-3.775575,3.775575,mistral-7b-instruct-v0.1@q8_0_242.txt
+588, like,284, to,-0.9123478,0.9123478,mistral-7b-instruct-v0.1@q8_0_242.txt
+284, to,307, be,-2.8491883,2.8491883,mistral-7b-instruct-v0.1@q8_0_242.txt
+307, be,3131, extra,-6.5550923,6.5550923,mistral-7b-instruct-v0.1@q8_0_242.txt
+3131, extra,21205, cautious,-2.7857642,2.7857642,mistral-7b-instruct-v0.1@q8_0_242.txt
+21205, cautious,618, when,-2.291595,2.291595,mistral-7b-instruct-v0.1@q8_0_242.txt
+618, when,340, it,-1.5333925,1.5333925,mistral-7b-instruct-v0.1@q8_0_242.txt
+340, it,2058, comes,-0.026639678,0.026639678,mistral-7b-instruct-v0.1@q8_0_242.txt
+2058, comes,284, to,-0.014811902,0.014811902,mistral-7b-instruct-v0.1@q8_0_242.txt
+284, to,616, my,-2.5984764,2.5984764,mistral-7b-instruct-v0.1@q8_0_242.txt
+616, my,7733, gear,-6.02416,6.02416,mistral-7b-instruct-v0.1@q8_0_242.txt
+7733, gear,13,.,-1.3984456,1.3984456,mistral-7b-instruct-v0.1@q8_0_242.txt
+13,.,18948, Especially,-4.6585636,4.6585636,mistral-7b-instruct-v0.1@q8_0_242.txt
+18948, Especially,618, when,-1.2589414,1.2589414,mistral-7b-instruct-v0.1@q8_0_242.txt
+618, when,314, I,-1.3574674,1.3574674,mistral-7b-instruct-v0.1@q8_0_242.txt
+314, I,1101,'m,-0.8387505,0.8387505,mistral-7b-instruct-v0.1@q8_0_242.txt
+1101,'m,503, out,-3.6392095,3.6392095,mistral-7b-instruct-v0.1@q8_0_242.txt
+503, out,319, on,-1.7175999,1.7175999,mistral-7b-instruct-v0.1@q8_0_242.txt
+319, on,262, the,-0.49997434,0.49997434,mistral-7b-instruct-v0.1@q8_0_242.txt
+262, the,2214, field,-4.6899996,4.6899996,mistral-7b-instruct-v0.1@q8_0_242.txt
+2214, field,526,".""",-1.9254144,1.9254144,mistral-7b-instruct-v0.1@q8_0_242.txt

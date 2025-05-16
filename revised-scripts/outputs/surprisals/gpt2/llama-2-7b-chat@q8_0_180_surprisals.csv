@@ -1,0 +1,21 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_180.txt
+40,I,760, know,-3.7952335,3.7952335,llama-2-7b-chat@q8_0_180.txt
+760, know,11,",",-3.3245723,3.3245723,llama-2-7b-chat@q8_0_180.txt
+11,",",314, I,-1.5168954,1.5168954,llama-2-7b-chat@q8_0_180.txt
+314, I,655, just,-3.9261787,3.9261787,llama-2-7b-chat@q8_0_180.txt
+655, just,2911, hope,-3.836783,3.836783,llama-2-7b-chat@q8_0_180.txt
+2911, hope,340, it,-2.5618944,2.5618944,llama-2-7b-chat@q8_0_180.txt
+340, it,338,'s,-1.2096233,1.2096233,llama-2-7b-chat@q8_0_180.txt
+338,'s,1576, enough,-5.7204533,5.7204533,llama-2-7b-chat@q8_0_180.txt
+1576, enough,284, to,-1.1361141,1.1361141,llama-2-7b-chat@q8_0_180.txt
+284, to,3002, cover,-5.9217024,5.9217024,llama-2-7b-chat@q8_0_180.txt
+3002, cover,262, the,-1.6901994,1.6901994,llama-2-7b-chat@q8_0_180.txt
+262, the,1575, cost,-2.237689,2.237689,llama-2-7b-chat@q8_0_180.txt
+1575, cost,286, of,-0.6523297,0.6523297,llama-2-7b-chat@q8_0_180.txt
+286, of,2877, living,-3.8490586,3.8490586,llama-2-7b-chat@q8_0_180.txt
+2877, living,5732, increases,-8.954548,8.954548,llama-2-7b-chat@q8_0_180.txt
+5732, increases,553,",""",-2.4195297,2.4195297,llama-2-7b-chat@q8_0_180.txt
+553,",""",10490, Sarah,-9.325547,9.325547,llama-2-7b-chat@q8_0_180.txt
+10490, Sarah,531, said,-1.092116,1.092116,llama-2-7b-chat@q8_0_180.txt
+531, said,13,.,-0.24543159,0.24543159,llama-2-7b-chat@q8_0_180.txt

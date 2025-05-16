@@ -1,0 +1,37 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",10995,Yeah,-9.325565,9.325565,llama-2-7b-chat@q8_0_35.txt
+10995,Yeah,11,",",-0.48340914,0.48340914,llama-2-7b-chat@q8_0_35.txt
+11,",",314, I,-1.5983404,1.5983404,llama-2-7b-chat@q8_0_35.txt
+314, I,373, was,-3.2130425,3.2130425,llama-2-7b-chat@q8_0_35.txt
+373, was,5059, driving,-6.562517,6.562517,llama-2-7b-chat@q8_0_35.txt
+5059, driving,1363, home,-3.2945528,3.2945528,llama-2-7b-chat@q8_0_35.txt
+1363, home,422, from,-0.8488505,0.8488505,llama-2-7b-chat@q8_0_35.txt
+422, from,670, work,-1.1585807,1.1585807,llama-2-7b-chat@q8_0_35.txt
+670, work,290, and,-1.816259,1.816259,llama-2-7b-chat@q8_0_35.txt
+290, and,6451, suddenly,-5.567512,5.567512,llama-2-7b-chat@q8_0_35.txt
+6451, suddenly,616, my,-2.795079,2.795079,llama-2-7b-chat@q8_0_35.txt
+616, my,1097, car,-1.4975256,1.4975256,llama-2-7b-chat@q8_0_35.txt
+1097, car,1509, sw,-6.4039407,6.4039407,llama-2-7b-chat@q8_0_35.txt
+1509, sw,8520,erved,-0.20493118,0.20493118,llama-2-7b-chat@q8_0_35.txt
+8520,erved,572, off,-2.473051,2.473051,llama-2-7b-chat@q8_0_35.txt
+572, off,262, the,-0.2745151,0.2745151,llama-2-7b-chat@q8_0_35.txt
+262, the,2975, road,-0.3431145,0.3431145,llama-2-7b-chat@q8_0_35.txt
+2975, road,656, into,-3.62463,3.62463,llama-2-7b-chat@q8_0_35.txt
+656, into,257, a,-1.155916,1.155916,llama-2-7b-chat@q8_0_35.txt
+257, a,30115, ditch,-1.4947441,1.4947441,llama-2-7b-chat@q8_0_35.txt
+30115, ditch,13,.,-1.2431407,1.2431407,llama-2-7b-chat@q8_0_35.txt
+13,.,24262, Luckily,-4.583006,4.583006,llama-2-7b-chat@q8_0_35.txt
+24262, Luckily,11,",",-1.3961713,1.3961713,llama-2-7b-chat@q8_0_35.txt
+11,",",314, I,-0.9423292,0.9423292,llama-2-7b-chat@q8_0_35.txt
+314, I,2492, wasn,-3.2070582,3.2070582,llama-2-7b-chat@q8_0_35.txt
+2492, wasn,470,'t,-0.00044121544,0.00044121544,llama-2-7b-chat@q8_0_35.txt
+470,'t,5938, hurt,-2.6813922,2.6813922,llama-2-7b-chat@q8_0_35.txt
+5938, hurt,11,",",-1.8266968,1.8266968,llama-2-7b-chat@q8_0_35.txt
+11,",",475, but,-0.9055923,0.9055923,llama-2-7b-chat@q8_0_35.txt
+475, but,616, my,-2.9245267,2.9245267,llama-2-7b-chat@q8_0_35.txt
+616, my,1097, car,-2.0927718,2.0927718,llama-2-7b-chat@q8_0_35.txt
+1097, car,318, is,-3.2247634,3.2247634,llama-2-7b-chat@q8_0_35.txt
+318, is,2495, pretty,-2.4096897,2.4096897,llama-2-7b-chat@q8_0_35.txt
+2495, pretty,36193, busted,-6.38365,6.38365,llama-2-7b-chat@q8_0_35.txt
+36193, busted,510, up,-3.3029146,3.3029146,llama-2-7b-chat@q8_0_35.txt
+510, up,526,".""",-2.5591846,2.5591846,llama-2-7b-chat@q8_0_35.txt

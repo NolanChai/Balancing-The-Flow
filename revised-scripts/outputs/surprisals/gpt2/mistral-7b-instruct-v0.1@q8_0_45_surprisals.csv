@@ -1,0 +1,16 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",7149,Any,-9.126514,9.126514,mistral-7b-instruct-v0.1@q8_0_45.txt
+7149,Any,584, other,-3.8380358,3.8380358,mistral-7b-instruct-v0.1@q8_0_45.txt
+584, other,2041, special,-7.8745785,7.8745785,mistral-7b-instruct-v0.1@q8_0_45.txt
+2041, special,7007, requests,-4.780887,4.780887,mistral-7b-instruct-v0.1@q8_0_45.txt
+7007, requests,393, or,-2.620003,2.620003,mistral-7b-instruct-v0.1@q8_0_45.txt
+393, or,15429, dietary,-9.574933,9.574933,mistral-7b-instruct-v0.1@q8_0_45.txt
+15429, dietary,8733, restrictions,-1.5725069,1.5725069,mistral-7b-instruct-v0.1@q8_0_45.txt
+8733, restrictions,326, that,-2.3039956,2.3039956,mistral-7b-instruct-v0.1@q8_0_45.txt
+326, that,356, we,-2.9542975,2.9542975,mistral-7b-instruct-v0.1@q8_0_45.txt
+356, we,815, should,-5.183655,5.183655,mistral-7b-instruct-v0.1@q8_0_45.txt
+815, should,307, be,-1.6507406,1.6507406,mistral-7b-instruct-v0.1@q8_0_45.txt
+307, be,3910, aware,-1.4152925,1.4152925,mistral-7b-instruct-v0.1@q8_0_45.txt
+3910, aware,286, of,-0.01976369,0.01976369,mistral-7b-instruct-v0.1@q8_0_45.txt
+286, of,5633, ?,-8.151803,8.151803,mistral-7b-instruct-v0.1@q8_0_45.txt
+5633, ?,366," """,-5.153494,5.153494,mistral-7b-instruct-v0.1@q8_0_45.txt

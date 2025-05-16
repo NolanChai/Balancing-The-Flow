@@ -1,0 +1,20 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_287.txt
+40,I,1833, understand,-5.473548,5.473548,mistral-7b-instruct-v0.1@q8_0_287.txt
+1833, understand,326, that,-1.1879746,1.1879746,mistral-7b-instruct-v0.1@q8_0_287.txt
+326, that,11,",",-3.6158805,3.6158805,mistral-7b-instruct-v0.1@q8_0_287.txt
+11,",",475, but,-0.90698224,0.90698224,mistral-7b-instruct-v0.1@q8_0_287.txt
+475, but,262, the,-3.4429379,3.4429379,mistral-7b-instruct-v0.1@q8_0_287.txt
+262, the,8674, actor,-10.166971,10.166971,mistral-7b-instruct-v0.1@q8_0_287.txt
+8674, actor,338,'s,-2.5037193,2.5037193,mistral-7b-instruct-v0.1@q8_0_287.txt
+338,'s,2854, performance,-3.9817746,3.9817746,mistral-7b-instruct-v0.1@q8_0_287.txt
+2854, performance,318, is,-1.2981296,1.2981296,mistral-7b-instruct-v0.1@q8_0_287.txt
+318, is,991, still,-4.2208495,4.2208495,mistral-7b-instruct-v0.1@q8_0_287.txt
+991, still,845, very,-2.6691449,2.6691449,mistral-7b-instruct-v0.1@q8_0_287.txt
+845, very,8036, impressive,-4.4196773,4.4196773,mistral-7b-instruct-v0.1@q8_0_287.txt
+8036, impressive,772, even,-5.7654886,5.7654886,mistral-7b-instruct-v0.1@q8_0_287.txt
+772, even,351, with,-2.6907682,2.6907682,mistral-7b-instruct-v0.1@q8_0_287.txt
+351, with,257, a,-2.8300502,2.8300502,mistral-7b-instruct-v0.1@q8_0_287.txt
+257, a,7888, thin,-6.9783325,6.9783325,mistral-7b-instruct-v0.1@q8_0_287.txt
+7888, thin,7110, plot,-7.1876607,7.1876607,mistral-7b-instruct-v0.1@q8_0_287.txt
+7110, plot,526,".""",-2.508542,2.508542,mistral-7b-instruct-v0.1@q8_0_287.txt

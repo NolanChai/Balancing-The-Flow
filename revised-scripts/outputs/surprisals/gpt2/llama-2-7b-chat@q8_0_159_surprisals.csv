@@ -1,0 +1,6 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2061,What,-6.988433,6.988433,llama-2-7b-chat@q8_0_159.txt
+2061,What,611, if,-3.4401307,3.4401307,llama-2-7b-chat@q8_0_159.txt
+611, if,339, he,-3.6401782,3.6401782,llama-2-7b-chat@q8_0_159.txt
+339, he,338,'s,-2.2587886,2.2587886,llama-2-7b-chat@q8_0_159.txt
+338,'s,9313,"...""",-10.537045,10.537045,llama-2-7b-chat@q8_0_159.txt

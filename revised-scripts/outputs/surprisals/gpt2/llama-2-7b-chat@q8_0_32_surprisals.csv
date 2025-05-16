@@ -1,0 +1,19 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",44217,Hmm,-11.438408,11.438408,llama-2-7b-chat@q8_0_32.txt
+44217,Hmm,11,",",-1.1253791,1.1253791,llama-2-7b-chat@q8_0_32.txt
+11,",",262, the,-4.102404,4.102404,llama-2-7b-chat@q8_0_32.txt
+262, the,26296, pasta,-10.433406,10.433406,llama-2-7b-chat@q8_0_32.txt
+26296, pasta,4429, station,-10.368612,10.368612,llama-2-7b-chat@q8_0_32.txt
+4429, station,3073, looks,-4.634121,4.634121,llama-2-7b-chat@q8_0_32.txt
+3073, looks,29850, tempting,-8.804427,8.804427,llama-2-7b-chat@q8_0_32.txt
+29850, tempting,1165, too,-4.6303263,4.6303263,llama-2-7b-chat@q8_0_32.txt
+1165, too,13,.,-1.2922872,1.2922872,llama-2-7b-chat@q8_0_32.txt
+13,.,6674, Maybe,-3.3552854,3.3552854,llama-2-7b-chat@q8_0_32.txt
+6674, Maybe,314, I,-1.6602156,1.6602156,llama-2-7b-chat@q8_0_32.txt
+314, I,1183,'ll,-1.272901,1.272901,llama-2-7b-chat@q8_0_32.txt
+1183,'ll,1949, try,-2.0424342,2.0424342,llama-2-7b-chat@q8_0_32.txt
+1949, try,326, that,-2.9731169,2.9731169,llama-2-7b-chat@q8_0_32.txt
+326, that,2427, instead,-4.4743795,4.4743795,llama-2-7b-chat@q8_0_32.txt
+2427, instead,286, of,-2.5901737,2.5901737,llama-2-7b-chat@q8_0_32.txt
+286, of,26320, steak,-9.576674,9.576674,llama-2-7b-chat@q8_0_32.txt
+26320, steak,526,".""",-1.7498422,1.7498422,llama-2-7b-chat@q8_0_32.txt

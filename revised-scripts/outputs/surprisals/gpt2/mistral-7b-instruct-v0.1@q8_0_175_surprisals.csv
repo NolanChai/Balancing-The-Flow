@@ -1,0 +1,78 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1026,It,-5.705687,5.705687,mistral-7b-instruct-v0.1@q8_0_175.txt
+1026,It,338,'s,-0.7809912,0.7809912,mistral-7b-instruct-v0.1@q8_0_175.txt
+338,'s,2408, difficult,-5.536867,5.536867,mistral-7b-instruct-v0.1@q8_0_175.txt
+2408, difficult,284, to,-0.5872187,0.5872187,mistral-7b-instruct-v0.1@q8_0_175.txt
+284, to,910, say,-2.8142033,2.8142033,mistral-7b-instruct-v0.1@q8_0_175.txt
+910, say,11,",",-2.9589882,2.9589882,mistral-7b-instruct-v0.1@q8_0_175.txt
+11,",",355, as,-4.177913,4.177913,mistral-7b-instruct-v0.1@q8_0_175.txt
+355, as,340, it,-3.469619,3.469619,mistral-7b-instruct-v0.1@q8_0_175.txt
+340, it,8338, depends,-7.312022,7.312022,mistral-7b-instruct-v0.1@q8_0_175.txt
+8338, depends,319, on,-0.1865251,0.1865251,mistral-7b-instruct-v0.1@q8_0_175.txt
+319, on,262, the,-1.3803319,1.3803319,mistral-7b-instruct-v0.1@q8_0_175.txt
+262, the,2176, specific,-4.8324213,4.8324213,mistral-7b-instruct-v0.1@q8_0_175.txt
+2176, specific,1785, event,-5.3418026,5.3418026,mistral-7b-instruct-v0.1@q8_0_175.txt
+1785, event,290, and,-2.6928267,2.6928267,mistral-7b-instruct-v0.1@q8_0_175.txt
+290, and,262, the,-1.105688,1.105688,mistral-7b-instruct-v0.1@q8_0_175.txt
+262, the,5449, competition,-8.898596,8.898596,mistral-7b-instruct-v0.1@q8_0_175.txt
+5449, competition,13,.,-1.8136692,1.8136692,mistral-7b-instruct-v0.1@q8_0_175.txt
+13,.,2102, However,-4.435945,4.435945,mistral-7b-instruct-v0.1@q8_0_175.txt
+2102, However,11,",",-0.09741797,0.09741797,mistral-7b-instruct-v0.1@q8_0_175.txt
+11,",",351, with,-4.355546,4.355546,mistral-7b-instruct-v0.1@q8_0_175.txt
+351, with,4995, Mike,-9.008684,9.008684,mistral-7b-instruct-v0.1@q8_0_175.txt
+4995, Mike,37755, Farmer,-8.12756,8.12756,mistral-7b-instruct-v0.1@q8_0_175.txt
+37755, Farmer,1642, making,-5.492937,5.492937,mistral-7b-instruct-v0.1@q8_0_175.txt
+1642, making,262, the,-2.0245564,2.0245564,mistral-7b-instruct-v0.1@q8_0_175.txt
+262, the,11514, Olympic,-7.197038,7.197038,mistral-7b-instruct-v0.1@q8_0_175.txt
+11514, Olympic,1074, team,-1.1485426,1.1485426,mistral-7b-instruct-v0.1@q8_0_175.txt
+1074, team,11,",",-0.90329164,0.90329164,mistral-7b-instruct-v0.1@q8_0_175.txt
+11,",",340, it,-1.6522928,1.6522928,mistral-7b-instruct-v0.1@q8_0_175.txt
+340, it,338,'s,-0.7242221,0.7242221,mistral-7b-instruct-v0.1@q8_0_175.txt
+338,'s,4753, definitely,-4.1439123,4.1439123,mistral-7b-instruct-v0.1@q8_0_175.txt
+4753, definitely,257, a,-1.6426954,1.6426954,mistral-7b-instruct-v0.1@q8_0_175.txt
+257, a,11781, promising,-7.915976,7.915976,mistral-7b-instruct-v0.1@q8_0_175.txt
+11781, promising,1051, sign,-3.6550117,3.6550117,mistral-7b-instruct-v0.1@q8_0_175.txt
+1051, sign,329, for,-1.4857253,1.4857253,mistral-7b-instruct-v0.1@q8_0_175.txt
+329, for,674, our,-3.753705,3.753705,mistral-7b-instruct-v0.1@q8_0_175.txt
+674, our,1499, country,-3.1508055,3.1508055,mistral-7b-instruct-v0.1@q8_0_175.txt
+1499, country,338,'s,-3.632935,3.632935,mistral-7b-instruct-v0.1@q8_0_175.txt
+338,'s,35691, athletics,-6.013285,6.013285,mistral-7b-instruct-v0.1@q8_0_175.txt
+35691, athletics,1430, program,-1.8926755,1.8926755,mistral-7b-instruct-v0.1@q8_0_175.txt
+1430, program,526,".""",-0.90512204,0.90512204,mistral-7b-instruct-v0.1@q8_0_175.txt
+526,".""",198,"
+",-0.2899063,0.2899063,mistral-7b-instruct-v0.1@q8_0_175.txt
+198,"
+",198,"
+",-0.00038413776,0.00038413776,mistral-7b-instruct-v0.1@q8_0_175.txt
+198,"
+",1,"""",-3.6411679,3.6411679,mistral-7b-instruct-v0.1@q8_0_175.txt
+1,"""",1026,It,-2.308349,2.308349,mistral-7b-instruct-v0.1@q8_0_175.txt
+1026,It,338,'s,-0.47149286,0.47149286,mistral-7b-instruct-v0.1@q8_0_175.txt
+338,'s,7895, exciting,-3.9338093,3.9338093,mistral-7b-instruct-v0.1@q8_0_175.txt
+7895, exciting,284, to,-0.6148419,0.6148419,mistral-7b-instruct-v0.1@q8_0_175.txt
+284, to,766, see,-0.6344839,0.6344839,mistral-7b-instruct-v0.1@q8_0_175.txt
+766, see,523, so,-4.0796366,4.0796366,mistral-7b-instruct-v0.1@q8_0_175.txt
+523, so,867, many,-0.09919223,0.09919223,mistral-7b-instruct-v0.1@q8_0_175.txt
+867, many,12356, talented,-3.041849,3.041849,mistral-7b-instruct-v0.1@q8_0_175.txt
+12356, talented,10856, athletes,-0.96675044,0.96675044,mistral-7b-instruct-v0.1@q8_0_175.txt
+10856, athletes,319, on,-3.5456688,3.5456688,mistral-7b-instruct-v0.1@q8_0_175.txt
+319, on,674, our,-2.3937,2.3937,mistral-7b-instruct-v0.1@q8_0_175.txt
+674, our,1074, team,-0.89455706,0.89455706,mistral-7b-instruct-v0.1@q8_0_175.txt
+1074, team,13,.,-1.9930626,1.9930626,mistral-7b-instruct-v0.1@q8_0_175.txt
+13,.,4231, Are,-8.739035,8.739035,mistral-7b-instruct-v0.1@q8_0_175.txt
+4231, Are,612, there,-1.0629191,1.0629191,mistral-7b-instruct-v0.1@q8_0_175.txt
+612, there,597, any,-0.666119,0.666119,mistral-7b-instruct-v0.1@q8_0_175.txt
+597, any,2176, specific,-4.354469,4.354469,mistral-7b-instruct-v0.1@q8_0_175.txt
+2176, specific,2995, events,-3.2647471,3.2647471,mistral-7b-instruct-v0.1@q8_0_175.txt
+2995, events,393, or,-2.7058177,2.7058177,mistral-7b-instruct-v0.1@q8_0_175.txt
+393, or,5701, sports,-4.9058056,4.9058056,mistral-7b-instruct-v0.1@q8_0_175.txt
+5701, sports,345, you,-2.0230217,2.0230217,mistral-7b-instruct-v0.1@q8_0_175.txt
+345, you,821,'re,-1.8599764,1.8599764,mistral-7b-instruct-v0.1@q8_0_175.txt
+821,'re,2045, looking,-1.5368346,1.5368346,mistral-7b-instruct-v0.1@q8_0_175.txt
+2045, looking,2651, forward,-0.08964627,0.08964627,mistral-7b-instruct-v0.1@q8_0_175.txt
+2651, forward,284, to,-0.0024301065,0.0024301065,mistral-7b-instruct-v0.1@q8_0_175.txt
+284, to,4964, watching,-1.9641548,1.9641548,mistral-7b-instruct-v0.1@q8_0_175.txt
+4964, watching,379, at,-4.098986,4.098986,mistral-7b-instruct-v0.1@q8_0_175.txt
+379, at,262, the,-0.9678036,0.9678036,mistral-7b-instruct-v0.1@q8_0_175.txt
+262, the,14935, Olympics,-1.1942308,1.1942308,mistral-7b-instruct-v0.1@q8_0_175.txt
+14935, Olympics,1701,"?""",-0.5529579,0.5529579,mistral-7b-instruct-v0.1@q8_0_175.txt

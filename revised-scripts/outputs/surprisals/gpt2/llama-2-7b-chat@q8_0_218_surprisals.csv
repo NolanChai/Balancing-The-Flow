@@ -1,0 +1,24 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987438,8.987438,llama-2-7b-chat@q8_0_218.txt
+5812,Oh,11,",",-0.70429367,0.70429367,llama-2-7b-chat@q8_0_218.txt
+11,",",314, I,-2.267466,2.267466,llama-2-7b-chat@q8_0_218.txt
+314, I,766, see,-2.9879096,2.9879096,llama-2-7b-chat@q8_0_218.txt
+766, see,13,.,-1.0034158,1.0034158,llama-2-7b-chat@q8_0_218.txt
+13,.,1406, So,-3.0867462,3.0867462,llama-2-7b-chat@q8_0_218.txt
+1406, So,11,",",-1.7660853,1.7660853,llama-2-7b-chat@q8_0_218.txt
+11,",",611, if,-3.8384292,3.8384292,llama-2-7b-chat@q8_0_218.txt
+611, if,356, we,-2.8433714,2.8433714,llama-2-7b-chat@q8_0_218.txt
+356, we,2666, leave,-5.7656565,5.7656565,llama-2-7b-chat@q8_0_218.txt
+2666, leave,11790, Tokyo,-8.890311,8.890311,llama-2-7b-chat@q8_0_218.txt
+11790, Tokyo,379, at,-4.2078595,4.2078595,llama-2-7b-chat@q8_0_218.txt
+379, at,838, 10,-4.814376,4.814376,llama-2-7b-chat@q8_0_218.txt
+838, 10,716, am,-2.6378179,2.6378179,llama-2-7b-chat@q8_0_218.txt
+716, am,11,",",-0.85874796,0.85874796,llama-2-7b-chat@q8_0_218.txt
+11,",",644, what,-3.7053468,3.7053468,llama-2-7b-chat@q8_0_218.txt
+644, what,640, time,-3.777202,3.777202,llama-2-7b-chat@q8_0_218.txt
+640, time,481, will,-1.3701006,1.3701006,llama-2-7b-chat@q8_0_218.txt
+481, will,356, we,-1.049563,1.049563,llama-2-7b-chat@q8_0_218.txt
+356, we,9240, arrive,-4.0093126,4.0093126,llama-2-7b-chat@q8_0_218.txt
+9240, arrive,287, in,-2.07932,2.07932,llama-2-7b-chat@q8_0_218.txt
+287, in,3576, London,-4.7752905,4.7752905,llama-2-7b-chat@q8_0_218.txt
+3576, London,1701,"?""",-0.5389048,0.5389048,llama-2-7b-chat@q8_0_218.txt

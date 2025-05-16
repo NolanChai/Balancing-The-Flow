@@ -1,0 +1,53 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",16805, Okay,-11.31744,11.31744,mistral-7b-instruct-v0.1@q8_0_176.txt
+16805, Okay,11,",",-0.68942934,0.68942934,mistral-7b-instruct-v0.1@q8_0_176.txt
+11,",",5875, thank,-6.101712,6.101712,mistral-7b-instruct-v0.1@q8_0_176.txt
+5875, thank,345, you,-0.032814827,0.032814827,mistral-7b-instruct-v0.1@q8_0_176.txt
+345, you,329, for,-1.8281817,1.8281817,mistral-7b-instruct-v0.1@q8_0_176.txt
+329, for,262, the,-2.2090578,2.2090578,mistral-7b-instruct-v0.1@q8_0_176.txt
+262, the,6764, description,-8.112058,8.112058,mistral-7b-instruct-v0.1@q8_0_176.txt
+6764, description,13,.,-0.9599503,0.9599503,mistral-7b-instruct-v0.1@q8_0_176.txt
+13,.,314, I,-1.9194334,1.9194334,mistral-7b-instruct-v0.1@q8_0_176.txt
+314, I,1183,'ll,-2.4600725,2.4600725,mistral-7b-instruct-v0.1@q8_0_176.txt
+1183,'ll,787, make,-4.030016,4.030016,mistral-7b-instruct-v0.1@q8_0_176.txt
+787, make,1654, sure,-0.70003843,0.70003843,mistral-7b-instruct-v0.1@q8_0_176.txt
+1654, sure,284, to,-0.8834147,0.8834147,mistral-7b-instruct-v0.1@q8_0_176.txt
+284, to,10400, introduce,-6.6516986,6.6516986,mistral-7b-instruct-v0.1@q8_0_176.txt
+10400, introduce,3589, myself,-1.6554588,1.6554588,mistral-7b-instruct-v0.1@q8_0_176.txt
+3589, myself,618, when,-3.7431421,3.7431421,mistral-7b-instruct-v0.1@q8_0_176.txt
+618, when,314, I,-0.81376314,0.81376314,mistral-7b-instruct-v0.1@q8_0_176.txt
+314, I,766, see,-3.7872617,3.7872617,mistral-7b-instruct-v0.1@q8_0_176.txt
+766, see,683, him,-4.960387,4.960387,mistral-7b-instruct-v0.1@q8_0_176.txt
+683, him,526,".""",-2.9298742,2.9298742,mistral-7b-instruct-v0.1@q8_0_176.txt
+526,".""",198,"
+",-0.8120572,0.8120572,mistral-7b-instruct-v0.1@q8_0_176.txt
+198,"
+",198,"
+",-0.02476295,0.02476295,mistral-7b-instruct-v0.1@q8_0_176.txt
+198,"
+",13681,Great,-8.795682,8.795682,mistral-7b-instruct-v0.1@q8_0_176.txt
+13681,Great,11,",",-1.9576625,1.9576625,mistral-7b-instruct-v0.1@q8_0_176.txt
+11,",",1757, John,-8.067752,8.067752,mistral-7b-instruct-v0.1@q8_0_176.txt
+1757, John,13,.,-1.1025966,1.1025966,mistral-7b-instruct-v0.1@q8_0_176.txt
+13,.,632, It,-3.7593014,3.7593014,mistral-7b-instruct-v0.1@q8_0_176.txt
+632, It,5238, sounds,-4.495303,4.495303,mistral-7b-instruct-v0.1@q8_0_176.txt
+5238, sounds,588, like,-0.44501126,0.44501126,mistral-7b-instruct-v0.1@q8_0_176.txt
+588, like,345, you,-1.0935931,1.0935931,mistral-7b-instruct-v0.1@q8_0_176.txt
+345, you,423, have,-3.0021899,3.0021899,mistral-7b-instruct-v0.1@q8_0_176.txt
+423, have,257, a,-1.4263293,1.4263293,mistral-7b-instruct-v0.1@q8_0_176.txt
+257, a,1598, clear,-7.140525,7.140525,mistral-7b-instruct-v0.1@q8_0_176.txt
+1598, clear,6764, description,-7.252974,7.252974,mistral-7b-instruct-v0.1@q8_0_176.txt
+6764, description,286, of,-0.6089939,0.6089939,mistral-7b-instruct-v0.1@q8_0_176.txt
+286, of,7516, Charles,-9.094465,9.094465,mistral-7b-instruct-v0.1@q8_0_176.txt
+7516, Charles,4373, Brown,-5.653081,5.653081,mistral-7b-instruct-v0.1@q8_0_176.txt
+4373, Brown,13,.,-1.0032042,1.0032042,mistral-7b-instruct-v0.1@q8_0_176.txt
+13,.,1148, Is,-4.8257103,4.8257103,mistral-7b-instruct-v0.1@q8_0_176.txt
+1148, Is,612, there,-2.1116343,2.1116343,mistral-7b-instruct-v0.1@q8_0_176.txt
+612, there,1997, anything,-1.2689,1.2689,mistral-7b-instruct-v0.1@q8_0_176.txt
+1997, anything,2073, else,-0.8300149,0.8300149,mistral-7b-instruct-v0.1@q8_0_176.txt
+2073, else,314, I,-2.7262905,2.7262905,mistral-7b-instruct-v0.1@q8_0_176.txt
+314, I,460, can,-0.9787828,0.9787828,mistral-7b-instruct-v0.1@q8_0_176.txt
+460, can,3342, assist,-6.8182445,6.8182445,mistral-7b-instruct-v0.1@q8_0_176.txt
+3342, assist,345, you,-0.3250618,0.3250618,mistral-7b-instruct-v0.1@q8_0_176.txt
+345, you,351, with,-0.38818234,0.38818234,mistral-7b-instruct-v0.1@q8_0_176.txt
+351, with,30,?,-0.46439445,0.46439445,mistral-7b-instruct-v0.1@q8_0_176.txt

@@ -1,0 +1,15 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.607984,4.607984,mistral-7b-instruct-v0.1@q8_0_26.txt
+40,I,1101,'m,-2.082562,2.082562,mistral-7b-instruct-v0.1@q8_0_26.txt
+1101,'m,407, not,-1.710773,1.710773,mistral-7b-instruct-v0.1@q8_0_26.txt
+407, not,1654, sure,-2.097523,2.097523,mistral-7b-instruct-v0.1@q8_0_26.txt
+1654, sure,314, I,-2.3722906,2.3722906,mistral-7b-instruct-v0.1@q8_0_26.txt
+314, I,1833, understand,-2.910916,2.910916,mistral-7b-instruct-v0.1@q8_0_26.txt
+1833, understand,644, what,-1.7755195,1.7755195,mistral-7b-instruct-v0.1@q8_0_26.txt
+644, what,345, you,-1.7359712,1.7359712,mistral-7b-instruct-v0.1@q8_0_26.txt
+345, you,1612, mean,-1.6468105,1.6468105,mistral-7b-instruct-v0.1@q8_0_26.txt
+1612, mean,13,.,-2.0295095,2.0295095,mistral-7b-instruct-v0.1@q8_0_26.txt
+13,.,1680, Can,-5.4751377,5.4751377,mistral-7b-instruct-v0.1@q8_0_26.txt
+1680, Can,345, you,-0.5510534,0.5510534,mistral-7b-instruct-v0.1@q8_0_26.txt
+345, you,4727, explain,-1.4426507,1.4426507,mistral-7b-instruct-v0.1@q8_0_26.txt
+4727, explain,1701,"?""",-1.8518922,1.8518922,mistral-7b-instruct-v0.1@q8_0_26.txt

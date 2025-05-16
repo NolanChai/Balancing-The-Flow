@@ -1,0 +1,27 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_41.txt
+40,I,766, see,-5.318183,5.318183,mistral-7b-instruct-v0.1@q8_0_41.txt
+766, see,11,",",-4.1353436,4.1353436,mistral-7b-instruct-v0.1@q8_0_41.txt
+11,",",703, how,-5.598555,5.598555,mistral-7b-instruct-v0.1@q8_0_41.txt
+703, how,890, long,-4.4732256,4.4732256,mistral-7b-instruct-v0.1@q8_0_41.txt
+890, long,423, have,-2.1764982,2.1764982,mistral-7b-instruct-v0.1@q8_0_41.txt
+423, have,345, you,-0.29439178,0.29439178,mistral-7b-instruct-v0.1@q8_0_41.txt
+345, you,587, been,-0.21515578,0.21515578,mistral-7b-instruct-v0.1@q8_0_41.txt
+587, been,2877, living,-3.8144572,3.8144572,mistral-7b-instruct-v0.1@q8_0_41.txt
+2877, living,287, in,-1.4664925,1.4664925,mistral-7b-instruct-v0.1@q8_0_41.txt
+287, in,2807, China,-4.883449,4.883449,mistral-7b-instruct-v0.1@q8_0_41.txt
+2807, China,30,?,-1.6744993,1.6744993,mistral-7b-instruct-v0.1@q8_0_41.txt
+30,?,843, And,-2.9308856,2.9308856,mistral-7b-instruct-v0.1@q8_0_41.txt
+843, And,644, what,-2.183548,2.183548,mistral-7b-instruct-v0.1@q8_0_41.txt
+644, what,466, do,-1.881873,1.881873,mistral-7b-instruct-v0.1@q8_0_41.txt
+466, do,345, you,-0.051688943,0.051688943,mistral-7b-instruct-v0.1@q8_0_41.txt
+345, you,2051, miss,-7.800162,7.800162,mistral-7b-instruct-v0.1@q8_0_41.txt
+2051, miss,749, most,-1.3741254,1.3741254,mistral-7b-instruct-v0.1@q8_0_41.txt
+749, most,546, about,-0.68678916,0.68678916,mistral-7b-instruct-v0.1@q8_0_41.txt
+546, about,852, being,-3.4573429,3.4573429,mistral-7b-instruct-v0.1@q8_0_41.txt
+852, being,422, from,-4.431092,4.431092,mistral-7b-instruct-v0.1@q8_0_41.txt
+422, from,679, He,-12.046994,12.046994,mistral-7b-instruct-v0.1@q8_0_41.txt
+679, He,1350,be,-0.79028445,0.79028445,mistral-7b-instruct-v0.1@q8_0_41.txt
+1350,be,72,i,-0.00812097,0.00812097,mistral-7b-instruct-v0.1@q8_0_41.txt
+72,i,22783, Province,-2.6710482,2.6710482,mistral-7b-instruct-v0.1@q8_0_41.txt
+22783, Province,1701,"?""",-0.6772937,0.6772937,mistral-7b-instruct-v0.1@q8_0_41.txt

@@ -1,0 +1,16 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1544,He,-6.5938144,6.5938144,llama-2-7b-chat@q8_0_236.txt
+1544,He,338,'s,-1.6787932,1.6787932,llama-2-7b-chat@q8_0_236.txt
+338,'s,1464, always,-4.5308022,4.5308022,llama-2-7b-chat@q8_0_236.txt
+1464, always,7067, buying,-9.473695,9.473695,llama-2-7b-chat@q8_0_236.txt
+7067, buying,649, new,-3.5263517,3.5263517,llama-2-7b-chat@q8_0_236.txt
+649, new,5006, cars,-1.4751287,1.4751287,llama-2-7b-chat@q8_0_236.txt
+5006, cars,290, and,-1.7523221,1.7523221,llama-2-7b-chat@q8_0_236.txt
+290, and,7777, houses,-6.434081,6.434081,llama-2-7b-chat@q8_0_236.txt
+7777, houses,11,",",-1.6588258,1.6588258,llama-2-7b-chat@q8_0_236.txt
+11,",",475, but,-2.3040729,2.3040729,llama-2-7b-chat@q8_0_236.txt
+475, but,339, he,-1.1506153,1.1506153,llama-2-7b-chat@q8_0_236.txt
+339, he,1239, never,-3.0021167,3.0021167,llama-2-7b-chat@q8_0_236.txt
+1239, never,2331, seems,-4.9367485,4.9367485,llama-2-7b-chat@q8_0_236.txt
+2331, seems,3772, happy,-6.299962,6.299962,llama-2-7b-chat@q8_0_236.txt
+3772, happy,526,".""",-2.553121,2.553121,llama-2-7b-chat@q8_0_236.txt

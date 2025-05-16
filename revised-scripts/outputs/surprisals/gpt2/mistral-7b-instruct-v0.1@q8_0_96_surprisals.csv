@@ -1,0 +1,52 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",6930, Thanks,-10.567154,10.567154,mistral-7b-instruct-v0.1@q8_0_96.txt
+6930, Thanks,329, for,-1.3458652,1.3458652,mistral-7b-instruct-v0.1@q8_0_96.txt
+329, for,262, the,-1.5658739,1.5658739,mistral-7b-instruct-v0.1@q8_0_96.txt
+262, the,5608, advice,-5.7148657,5.7148657,mistral-7b-instruct-v0.1@q8_0_96.txt
+5608, advice,11,",",-1.8620605,1.8620605,mistral-7b-instruct-v0.1@q8_0_96.txt
+11,",",1770, Mr,-5.0322495,5.0322495,mistral-7b-instruct-v0.1@q8_0_96.txt
+1770, Mr,13,.,-0.63256085,0.63256085,mistral-7b-instruct-v0.1@q8_0_96.txt
+13,.,5741, Lee,-6.2262497,6.2262497,mistral-7b-instruct-v0.1@q8_0_96.txt
+5741, Lee,13,.,-0.6922864,0.6922864,mistral-7b-instruct-v0.1@q8_0_96.txt
+13,.,775, We,-3.7550583,3.7550583,mistral-7b-instruct-v0.1@q8_0_96.txt
+775, We,1183,'ll,-1.8399506,1.8399506,mistral-7b-instruct-v0.1@q8_0_96.txt
+1183,'ll,787, make,-4.4957294,4.4957294,mistral-7b-instruct-v0.1@q8_0_96.txt
+787, make,1654, sure,-0.78861254,0.78861254,mistral-7b-instruct-v0.1@q8_0_96.txt
+1654, sure,284, to,-1.5246379,1.5246379,mistral-7b-instruct-v0.1@q8_0_96.txt
+284, to,307, be,-4.5186224,4.5186224,mistral-7b-instruct-v0.1@q8_0_96.txt
+307, be,3131, extra,-5.6583166,5.6583166,mistral-7b-instruct-v0.1@q8_0_96.txt
+3131, extra,21205, cautious,-3.6821256,3.6821256,mistral-7b-instruct-v0.1@q8_0_96.txt
+21205, cautious,981, while,-4.9032154,4.9032154,mistral-7b-instruct-v0.1@q8_0_96.txt
+981, while,5059, driving,-5.3555064,5.3555064,mistral-7b-instruct-v0.1@q8_0_96.txt
+5059, driving,13,.,-1.4380766,1.4380766,mistral-7b-instruct-v0.1@q8_0_96.txt
+13,.,843, And,-4.899405,4.899405,mistral-7b-instruct-v0.1@q8_0_96.txt
+843, And,466, do,-5.031774,5.031774,mistral-7b-instruct-v0.1@q8_0_96.txt
+466, do,345, you,-1.6504388,1.6504388,mistral-7b-instruct-v0.1@q8_0_96.txt
+345, you,1645, happen,-7.861301,7.861301,mistral-7b-instruct-v0.1@q8_0_96.txt
+1645, happen,284, to,-0.013961272,0.013961272,mistral-7b-instruct-v0.1@q8_0_96.txt
+284, to,760, know,-1.7415296,1.7415296,mistral-7b-instruct-v0.1@q8_0_96.txt
+760, know,611, if,-3.508292,3.508292,mistral-7b-instruct-v0.1@q8_0_96.txt
+611, if,612, there,-2.2907805,2.2907805,mistral-7b-instruct-v0.1@q8_0_96.txt
+612, there,389, are,-1.4034138,1.4034138,mistral-7b-instruct-v0.1@q8_0_96.txt
+389, are,597, any,-0.68674254,0.68674254,mistral-7b-instruct-v0.1@q8_0_96.txt
+597, any,7161, bike,-7.9994197,7.9994197,mistral-7b-instruct-v0.1@q8_0_96.txt
+7161, bike,12,-,-3.2602243,3.2602243,mistral-7b-instruct-v0.1@q8_0_96.txt
+12,-,21987,sharing,-1.6678162,1.6678162,mistral-7b-instruct-v0.1@q8_0_96.txt
+21987,sharing,4056, programs,-2.9229515,2.9229515,mistral-7b-instruct-v0.1@q8_0_96.txt
+4056, programs,1695, available,-3.8917923,3.8917923,mistral-7b-instruct-v0.1@q8_0_96.txt
+1695, available,994, here,-3.9920063,3.9920063,mistral-7b-instruct-v0.1@q8_0_96.txt
+994, here,30,?,-1.4524912,1.4524912,mistral-7b-instruct-v0.1@q8_0_96.txt
+30,?,775, We,-2.9793727,2.9793727,mistral-7b-instruct-v0.1@q8_0_96.txt
+775, We,1244, might,-5.251954,5.251954,mistral-7b-instruct-v0.1@q8_0_96.txt
+1244, might,765, want,-3.4450889,3.4450889,mistral-7b-instruct-v0.1@q8_0_96.txt
+765, want,284, to,-0.050872296,0.050872296,mistral-7b-instruct-v0.1@q8_0_96.txt
+284, to,2074, consider,-2.6420133,2.6420133,mistral-7b-instruct-v0.1@q8_0_96.txt
+2074, consider,326, that,-3.7614615,3.7614615,mistral-7b-instruct-v0.1@q8_0_96.txt
+326, that,355, as,-2.7931852,2.7931852,mistral-7b-instruct-v0.1@q8_0_96.txt
+355, as,281, an,-2.5827436,2.5827436,mistral-7b-instruct-v0.1@q8_0_96.txt
+281, an,5559, alternative,-2.4049006,2.4049006,mistral-7b-instruct-v0.1@q8_0_96.txt
+5559, alternative,284, to,-1.0956922,1.0956922,mistral-7b-instruct-v0.1@q8_0_96.txt
+284, to,34245, renting,-4.204028,4.204028,mistral-7b-instruct-v0.1@q8_0_96.txt
+34245, renting,257, a,-1.411934,1.411934,mistral-7b-instruct-v0.1@q8_0_96.txt
+257, a,1097, car,-0.9406954,0.9406954,mistral-7b-instruct-v0.1@q8_0_96.txt
+1097, car,526,".""",-5.5467424,5.5467424,mistral-7b-instruct-v0.1@q8_0_96.txt

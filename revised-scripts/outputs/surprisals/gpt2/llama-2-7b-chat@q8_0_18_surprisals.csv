@@ -1,0 +1,33 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5211,Do,-8.382732,8.382732,llama-2-7b-chat@q8_0_18.txt
+5211,Do,345, you,-0.7689333,0.7689333,llama-2-7b-chat@q8_0_18.txt
+345, you,423, have,-2.2735624,2.2735624,llama-2-7b-chat@q8_0_18.txt
+423, have,597, any,-1.0704917,1.0704917,llama-2-7b-chat@q8_0_18.txt
+597, any,2126, idea,-1.9757949,1.9757949,llama-2-7b-chat@q8_0_18.txt
+2126, idea,703, how,-1.052022,1.052022,llama-2-7b-chat@q8_0_18.txt
+703, how,890, long,-3.0852802,3.0852802,llama-2-7b-chat@q8_0_18.txt
+890, long,262, the,-3.0723817,3.0723817,llama-2-7b-chat@q8_0_18.txt
+262, the,4043, wait,-4.9704742,4.9704742,llama-2-7b-chat@q8_0_18.txt
+4043, wait,318, is,-1.1212846,1.1212846,llama-2-7b-chat@q8_0_18.txt
+318, is,1016, going,-1.354855,1.354855,llama-2-7b-chat@q8_0_18.txt
+1016, going,284, to,-0.124180116,0.124180116,llama-2-7b-chat@q8_0_18.txt
+284, to,307, be,-0.3011973,0.3011973,llama-2-7b-chat@q8_0_18.txt
+307, be,1701,"?""",-0.59140676,0.59140676,llama-2-7b-chat@q8_0_18.txt
+1701,"?""",198,"
+",-1.0742055,1.0742055,llama-2-7b-chat@q8_0_18.txt
+198,"
+",198,"
+",-0.0033848155,0.0033848155,llama-2-7b-chat@q8_0_18.txt
+198,"
+",1,"""",-0.72976434,0.72976434,llama-2-7b-chat@q8_0_18.txt
+1,"""",16454,Okay,-5.4745383,5.4745383,llama-2-7b-chat@q8_0_18.txt
+16454,Okay,11,",",-0.75657433,0.75657433,llama-2-7b-chat@q8_0_18.txt
+11,",",1049, great,-5.7924805,5.7924805,llama-2-7b-chat@q8_0_18.txt
+1049, great,13,.,-0.98217595,0.98217595,llama-2-7b-chat@q8_0_18.txt
+13,.,3914, Let,-3.0271468,3.0271468,llama-2-7b-chat@q8_0_18.txt
+3914, Let,338,'s,-0.1791435,0.1791435,llama-2-7b-chat@q8_0_18.txt
+338,'s,467, go,-1.7480985,1.7480985,llama-2-7b-chat@q8_0_18.txt
+467, go,284, to,-3.3842812,3.3842812,llama-2-7b-chat@q8_0_18.txt
+284, to,262, the,-0.8272999,0.8272999,llama-2-7b-chat@q8_0_18.txt
+262, the,4436, hospital,-4.1869583,4.1869583,llama-2-7b-chat@q8_0_18.txt
+4436, hospital,526,".""",-1.2367532,1.2367532,llama-2-7b-chat@q8_0_18.txt

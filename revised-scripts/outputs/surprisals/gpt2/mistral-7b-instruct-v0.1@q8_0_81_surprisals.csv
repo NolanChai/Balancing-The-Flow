@@ -1,0 +1,43 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",314, I,-4.894196,4.894196,mistral-7b-instruct-v0.1@q8_0_81.txt
+314, I,766, see,-5.4026833,5.4026833,mistral-7b-instruct-v0.1@q8_0_81.txt
+766, see,11,",",-2.9758883,2.9758883,mistral-7b-instruct-v0.1@q8_0_81.txt
+11,",",523, so,-4.016533,4.016533,mistral-7b-instruct-v0.1@q8_0_81.txt
+523, so,345, you,-2.6583567,2.6583567,mistral-7b-instruct-v0.1@q8_0_81.txt
+345, you,423, have,-3.2038536,3.2038536,mistral-7b-instruct-v0.1@q8_0_81.txt
+423, have,257, a,-2.444199,2.444199,mistral-7b-instruct-v0.1@q8_0_81.txt
+257, a,12846, flexible,-9.254963,9.254963,mistral-7b-instruct-v0.1@q8_0_81.txt
+12846, flexible,3164, approach,-3.3599303,3.3599303,mistral-7b-instruct-v0.1@q8_0_81.txt
+3164, approach,284, to,-0.9089598,0.9089598,mistral-7b-instruct-v0.1@q8_0_81.txt
+284, to,36700, staffing,-9.322129,9.322129,mistral-7b-instruct-v0.1@q8_0_81.txt
+36700, staffing,6906, depending,-8.00788,8.00788,mistral-7b-instruct-v0.1@q8_0_81.txt
+6906, depending,319, on,-0.08208189,0.08208189,mistral-7b-instruct-v0.1@q8_0_81.txt
+319, on,534, your,-1.5137148,1.5137148,mistral-7b-instruct-v0.1@q8_0_81.txt
+534, your,2476, needs,-2.187779,2.187779,mistral-7b-instruct-v0.1@q8_0_81.txt
+2476, needs,13,.,-0.6972287,0.6972287,mistral-7b-instruct-v0.1@q8_0_81.txt
+13,.,8192, Have,-6.64674,6.64674,mistral-7b-instruct-v0.1@q8_0_81.txt
+8192, Have,345, you,-0.4393779,0.4393779,mistral-7b-instruct-v0.1@q8_0_81.txt
+345, you,3177, considered,-2.651741,2.651741,mistral-7b-instruct-v0.1@q8_0_81.txt
+3177, considered,11581, expanding,-5.383685,5.383685,mistral-7b-instruct-v0.1@q8_0_81.txt
+11581, expanding,534, your,-1.501485,1.501485,mistral-7b-instruct-v0.1@q8_0_81.txt
+534, your,16433, workforce,-3.4488378,3.4488378,mistral-7b-instruct-v0.1@q8_0_81.txt
+16433, workforce,287, in,-3.0341637,3.0341637,mistral-7b-instruct-v0.1@q8_0_81.txt
+287, in,262, the,-1.5361758,1.5361758,mistral-7b-instruct-v0.1@q8_0_81.txt
+262, the,890, long,-4.7580023,4.7580023,mistral-7b-instruct-v0.1@q8_0_81.txt
+890, long,3381, term,-0.39275268,0.39275268,mistral-7b-instruct-v0.1@q8_0_81.txt
+3381, term,30,?,-0.44217002,0.44217002,mistral-7b-instruct-v0.1@q8_0_81.txt
+30,?,1867, What,-3.5452328,3.5452328,mistral-7b-instruct-v0.1@q8_0_81.txt
+1867, What,5087, factors,-5.0686994,5.0686994,mistral-7b-instruct-v0.1@q8_0_81.txt
+5087, factors,466, do,-2.090231,2.090231,mistral-7b-instruct-v0.1@q8_0_81.txt
+466, do,345, you,-0.044653643,0.044653643,mistral-7b-instruct-v0.1@q8_0_81.txt
+345, you,2074, consider,-1.8750267,1.8750267,mistral-7b-instruct-v0.1@q8_0_81.txt
+2074, consider,618, when,-1.2474909,1.2474909,mistral-7b-instruct-v0.1@q8_0_81.txt
+618, when,14615, deciding,-2.3481138,2.3481138,mistral-7b-instruct-v0.1@q8_0_81.txt
+14615, deciding,1771, whether,-2.6305275,2.6305275,mistral-7b-instruct-v0.1@q8_0_81.txt
+1771, whether,393, or,-1.2739277,1.2739277,mistral-7b-instruct-v0.1@q8_0_81.txt
+393, or,407, not,-0.0040451614,0.0040451614,mistral-7b-instruct-v0.1@q8_0_81.txt
+407, not,284, to,-0.28351933,0.28351933,mistral-7b-instruct-v0.1@q8_0_81.txt
+284, to,11078, hire,-1.1790625,1.1790625,mistral-7b-instruct-v0.1@q8_0_81.txt
+11078, hire,649, new,-3.015671,3.015671,mistral-7b-instruct-v0.1@q8_0_81.txt
+649, new,4409, employees,-0.95684457,0.95684457,mistral-7b-instruct-v0.1@q8_0_81.txt
+4409, employees,1701,"?""",-4.7711935,4.7711935,mistral-7b-instruct-v0.1@q8_0_81.txt

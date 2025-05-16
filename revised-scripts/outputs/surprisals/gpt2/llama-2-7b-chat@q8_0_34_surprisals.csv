@@ -1,0 +1,17 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+34,C,521,ind,-8.707266,8.707266,llama-2-7b-chat@q8_0_34.txt
+521,ind,88,y,-0.33354193,0.33354193,llama-2-7b-chat@q8_0_34.txt
+88,y,28271, shrugged,-10.912304,10.912304,llama-2-7b-chat@q8_0_34.txt
+28271, shrugged,13,.,-0.6570916,0.6570916,llama-2-7b-chat@q8_0_34.txt
+13,.,366," """,-0.50949574,0.50949574,llama-2-7b-chat@q8_0_34.txt
+366," """,40,I,-1.5878184,1.5878184,llama-2-7b-chat@q8_0_34.txt
+40,I,4724, guess,-3.6658368,3.6658368,llama-2-7b-chat@q8_0_34.txt
+4724, guess,356, we,-1.9763087,1.9763087,llama-2-7b-chat@q8_0_34.txt
+356, we,655, just,-3.4994788,3.4994788,llama-2-7b-chat@q8_0_34.txt
+655, just,423, have,-1.7161051,1.7161051,llama-2-7b-chat@q8_0_34.txt
+423, have,257, a,-3.601656,3.601656,llama-2-7b-chat@q8_0_34.txt
+257, a,1180, different,-4.0160856,4.0160856,llama-2-7b-chat@q8_0_34.txt
+1180, different,2565, sense,-5.8854194,5.8854194,llama-2-7b-chat@q8_0_34.txt
+2565, sense,286, of,-0.070860066,0.070860066,llama-2-7b-chat@q8_0_34.txt
+286, of,14733, humor,-1.181102,1.181102,llama-2-7b-chat@q8_0_34.txt
+14733, humor,526,".""",-1.4893868,1.4893868,llama-2-7b-chat@q8_0_34.txt

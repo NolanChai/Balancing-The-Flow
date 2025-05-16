@@ -1,0 +1,23 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",22017,Wow,-10.121082,10.121082,llama-2-7b-chat@q8_0_91.txt
+22017,Wow,11,",",-0.97253036,0.97253036,llama-2-7b-chat@q8_0_91.txt
+11,",",326, that,-2.0768888,2.0768888,llama-2-7b-chat@q8_0_91.txt
+326, that,338,'s,-0.7309409,0.7309409,llama-2-7b-chat@q8_0_91.txt
+338,'s,257, a,-2.1992223,2.1992223,llama-2-7b-chat@q8_0_91.txt
+257, a,1256, lot,-1.7612137,1.7612137,llama-2-7b-chat@q8_0_91.txt
+1256, lot,517, more,-4.0285625,4.0285625,llama-2-7b-chat@q8_0_91.txt
+517, more,621, than,-2.016159,2.016159,llama-2-7b-chat@q8_0_91.txt
+621, than,314, I,-1.2955786,1.2955786,llama-2-7b-chat@q8_0_91.txt
+314, I,3432, paid,-7.3103824,7.3103824,llama-2-7b-chat@q8_0_91.txt
+3432, paid,13,.,-3.8738227,3.8738227,llama-2-7b-chat@q8_0_91.txt
+13,.,314, I,-1.3536564,1.3536564,llama-2-7b-chat@q8_0_91.txt
+314, I,1101,'m,-1.8574384,1.8574384,llama-2-7b-chat@q8_0_91.txt
+1101,'m,9675, glad,-2.9912057,2.9912057,llama-2-7b-chat@q8_0_91.txt
+9675, glad,314, I,-0.87715155,0.87715155,llama-2-7b-chat@q8_0_91.txt
+314, I,1043, found,-3.9984965,3.9984965,llama-2-7b-chat@q8_0_91.txt
+1043, found,340, it,-1.8888172,1.8888172,llama-2-7b-chat@q8_0_91.txt
+340, it,379, at,-5.7216496,5.7216496,llama-2-7b-chat@q8_0_91.txt
+379, at,257, a,-2.641965,2.641965,llama-2-7b-chat@q8_0_91.txt
+257, a,1365, better,-4.8414383,4.8414383,llama-2-7b-chat@q8_0_91.txt
+1365, better,2756, price,-0.29030827,0.29030827,llama-2-7b-chat@q8_0_91.txt
+2756, price,526,".""",-1.4755275,1.4755275,llama-2-7b-chat@q8_0_91.txt

@@ -1,0 +1,67 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",632, It,-6.7577977,6.7577977,mistral-7b-instruct-v0.1@q8_0_48.txt
+632, It,3484, costs,-6.823917,6.823917,mistral-7b-instruct-v0.1@q8_0_48.txt
+3484, costs,3439, 35,-6.76679,6.76679,mistral-7b-instruct-v0.1@q8_0_48.txt
+3439, 35,21138, euros,-4.112523,4.112523,mistral-7b-instruct-v0.1@q8_0_48.txt
+21138, euros,329, for,-2.1940746,2.1940746,mistral-7b-instruct-v0.1@q8_0_48.txt
+329, for,257, a,-1.3226496,1.3226496,mistral-7b-instruct-v0.1@q8_0_48.txt
+257, a,1802, 100,-6.006654,6.006654,mistral-7b-instruct-v0.1@q8_0_48.txt
+1802, 100,4029,ml,-3.7248,3.7248,mistral-7b-instruct-v0.1@q8_0_48.txt
+4029,ml,9294, bottle,-0.45960182,0.45960182,mistral-7b-instruct-v0.1@q8_0_48.txt
+9294, bottle,526,".""",-6.651343,6.651343,mistral-7b-instruct-v0.1@q8_0_48.txt
+526,".""",198,"
+",-0.7513261,0.7513261,mistral-7b-instruct-v0.1@q8_0_48.txt
+198,"
+",198,"
+",-0.003087874,0.003087874,mistral-7b-instruct-v0.1@q8_0_48.txt
+198,"
+",464,The,-2.1531353,2.1531353,mistral-7b-instruct-v0.1@q8_0_48.txt
+464,The,6979, gift,-8.982428,8.982428,mistral-7b-instruct-v0.1@q8_0_48.txt
+6979, gift,5301, package,-5.0794306,5.0794306,mistral-7b-instruct-v0.1@q8_0_48.txt
+5301, package,3407, includes,-2.8018258,2.8018258,mistral-7b-instruct-v0.1@q8_0_48.txt
+3407, includes,257, a,-1.0930458,1.0930458,mistral-7b-instruct-v0.1@q8_0_48.txt
+257, a,4996, variety,-6.2876244,6.2876244,mistral-7b-instruct-v0.1@q8_0_48.txt
+4996, variety,286, of,-0.008633549,0.008633549,mistral-7b-instruct-v0.1@q8_0_48.txt
+286, of,11834, Clin,-14.030691,14.030691,mistral-7b-instruct-v0.1@q8_0_48.txt
+11834, Clin,2350,ique,-0.59279144,0.59279144,mistral-7b-instruct-v0.1@q8_0_48.txt
+2350,ique,3186, products,-2.6286674,2.6286674,mistral-7b-instruct-v0.1@q8_0_48.txt
+3186, products,884, such,-2.8639643,2.8639643,mistral-7b-instruct-v0.1@q8_0_48.txt
+884, such,355, as,-0.0015942256,0.0015942256,mistral-7b-instruct-v0.1@q8_0_48.txt
+355, as,16324, facial,-6.7806997,6.7806997,mistral-7b-instruct-v0.1@q8_0_48.txt
+16324, facial,20658, cleans,-3.8188896,3.8188896,mistral-7b-instruct-v0.1@q8_0_48.txt
+20658, cleans,364,ers,-0.36652687,0.36652687,mistral-7b-instruct-v0.1@q8_0_48.txt
+364,ers,11,",",-0.30918285,0.30918285,mistral-7b-instruct-v0.1@q8_0_48.txt
+11,",",5680, ton,-4.3229322,4.3229322,mistral-7b-instruct-v0.1@q8_0_48.txt
+5680, ton,364,ers,-0.3412124,0.3412124,mistral-7b-instruct-v0.1@q8_0_48.txt
+364,ers,11,",",-0.4310668,0.4310668,mistral-7b-instruct-v0.1@q8_0_48.txt
+11,",",290, and,-2.0633523,2.0633523,mistral-7b-instruct-v0.1@q8_0_48.txt
+290, and,41189, moistur,-3.2622528,3.2622528,mistral-7b-instruct-v0.1@q8_0_48.txt
+41189, moistur,11341,izers,-0.42003453,0.42003453,mistral-7b-instruct-v0.1@q8_0_48.txt
+11341,izers,13,.,-0.6166643,0.6166643,mistral-7b-instruct-v0.1@q8_0_48.txt
+13,.,632, It,-2.8332348,2.8332348,mistral-7b-instruct-v0.1@q8_0_48.txt
+632, It,338,'s,-2.5521805,2.5521805,mistral-7b-instruct-v0.1@q8_0_48.txt
+338,'s,257, a,-2.50177,2.50177,mistral-7b-instruct-v0.1@q8_0_48.txt
+257, a,1049, great,-2.7854092,2.7854092,mistral-7b-instruct-v0.1@q8_0_48.txt
+1049, great,3663, opportunity,-4.561201,4.561201,mistral-7b-instruct-v0.1@q8_0_48.txt
+3663, opportunity,284, to,-0.6770309,0.6770309,mistral-7b-instruct-v0.1@q8_0_48.txt
+284, to,1949, try,-3.5285087,3.5285087,mistral-7b-instruct-v0.1@q8_0_48.txt
+1949, try,503, out,-1.7632556,1.7632556,mistral-7b-instruct-v0.1@q8_0_48.txt
+503, out,617, some,-2.0905623,2.0905623,mistral-7b-instruct-v0.1@q8_0_48.txt
+617, some,649, new,-2.4433255,2.4433255,mistral-7b-instruct-v0.1@q8_0_48.txt
+649, new,1341, sk,-4.376288,4.376288,mistral-7b-instruct-v0.1@q8_0_48.txt
+1341, sk,1939,inc,-0.0013740156,0.0013740156,mistral-7b-instruct-v0.1@q8_0_48.txt
+1939,inc,533,are,-1.2278481e-05,1.2278481e-05,mistral-7b-instruct-v0.1@q8_0_48.txt
+533,are,3186, products,-0.688034,0.688034,mistral-7b-instruct-v0.1@q8_0_48.txt
+3186, products,290, and,-1.8948163,1.8948163,mistral-7b-instruct-v0.1@q8_0_48.txt
+290, and,279, p,-9.406327,9.406327,mistral-7b-instruct-v0.1@q8_0_48.txt
+279, p,321,am,-1.5394216,1.5394216,mistral-7b-instruct-v0.1@q8_0_48.txt
+321,am,525,per,-0.43109894,0.43109894,mistral-7b-instruct-v0.1@q8_0_48.txt
+525,per,3511, yourself,-0.7651859,0.7651859,mistral-7b-instruct-v0.1@q8_0_48.txt
+3511, yourself,290, and,-4.9297085,4.9297085,mistral-7b-instruct-v0.1@q8_0_48.txt
+290, and,534, your,-1.6376843,1.6376843,mistral-7b-instruct-v0.1@q8_0_48.txt
+534, your,1995, mom,-7.614424,7.614424,mistral-7b-instruct-v0.1@q8_0_48.txt
+1995, mom,329, for,-3.6405058,3.6405058,mistral-7b-instruct-v0.1@q8_0_48.txt
+329, for,10584, Mother,-9.390171,9.390171,mistral-7b-instruct-v0.1@q8_0_48.txt
+10584, Mother,338,'s,-0.09342621,0.09342621,mistral-7b-instruct-v0.1@q8_0_48.txt
+338,'s,3596, Day,-0.012642124,0.012642124,mistral-7b-instruct-v0.1@q8_0_48.txt
+3596, Day,13,.,-0.45408526,0.45408526,mistral-7b-instruct-v0.1@q8_0_48.txt

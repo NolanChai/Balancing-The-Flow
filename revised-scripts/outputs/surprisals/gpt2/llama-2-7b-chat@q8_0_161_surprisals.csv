@@ -1,0 +1,15 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.607984,4.607984,llama-2-7b-chat@q8_0_161.txt
+40,I,766, see,-5.318188,5.318188,llama-2-7b-chat@q8_0_161.txt
+766, see,553,",""",-4.624692,4.624692,llama-2-7b-chat@q8_0_161.txt
+553,",""",25176, Nicole,-8.807077,8.807077,llama-2-7b-chat@q8_0_161.txt
+25176, Nicole,531, said,-0.58205277,0.58205277,llama-2-7b-chat@q8_0_161.txt
+531, said,11,",",-1.128042,1.128042,llama-2-7b-chat@q8_0_161.txt
+11,",",607, her,-3.0030632,3.0030632,llama-2-7b-chat@q8_0_161.txt
+607, her,4772, brow,-5.1132126,5.1132126,llama-2-7b-chat@q8_0_161.txt
+4772, brow,9230, fur,-0.34514773,0.34514773,llama-2-7b-chat@q8_0_161.txt
+9230, fur,808,row,-0.6505318,0.6505318,llama-2-7b-chat@q8_0_161.txt
+808,row,276,ed,-0.051692225,0.051692225,llama-2-7b-chat@q8_0_161.txt
+276,ed,287, in,-2.8656757,2.8656757,llama-2-7b-chat@q8_0_161.txt
+287, in,10802, confusion,-2.6983657,2.6983657,llama-2-7b-chat@q8_0_161.txt
+10802, confusion,13,.,-0.22296308,0.22296308,llama-2-7b-chat@q8_0_161.txt

@@ -1,0 +1,25 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+3123,Le,78,o,-5.893155,5.893155,llama-2-7b-chat@q8_0_231.txt
+78,o,28271, shrugged,-10.326166,10.326166,llama-2-7b-chat@q8_0_231.txt
+28271, shrugged,13,.,-0.82349616,0.82349616,llama-2-7b-chat@q8_0_231.txt
+13,.,366," """,-0.48290625,0.48290625,llama-2-7b-chat@q8_0_231.txt
+366," """,10995,Yeah,-4.8031435,4.8031435,llama-2-7b-chat@q8_0_231.txt
+10995,Yeah,11,",",-0.49115548,0.49115548,llama-2-7b-chat@q8_0_231.txt
+11,",",3863, maybe,-5.05262,5.05262,llama-2-7b-chat@q8_0_231.txt
+3863, maybe,617, some,-5.3020406,5.3020406,llama-2-7b-chat@q8_0_231.txt
+617, some,584, other,-3.50635,3.50635,llama-2-7b-chat@q8_0_231.txt
+584, other,640, time,-2.3059137,2.3059137,llama-2-7b-chat@q8_0_231.txt
+640, time,526,".""",-1.2198439,1.2198439,llama-2-7b-chat@q8_0_231.txt
+526,".""",679, He,-2.420464,2.420464,llama-2-7b-chat@q8_0_231.txt
+679, He,1422, didn,-4.7480574,4.7480574,llama-2-7b-chat@q8_0_231.txt
+1422, didn,470,'t,-0.0008149402,0.0008149402,llama-2-7b-chat@q8_0_231.txt
+470,'t,1283, seem,-3.2735066,3.2735066,llama-2-7b-chat@q8_0_231.txt
+1283, seem,1165, too,-2.4306052,2.4306052,llama-2-7b-chat@q8_0_231.txt
+1165, too,11679, disappointed,-5.3943987,5.3943987,llama-2-7b-chat@q8_0_231.txt
+11679, disappointed,11,",",-1.9638605,1.9638605,llama-2-7b-chat@q8_0_231.txt
+11,",",290, and,-2.926917,2.926917,llama-2-7b-chat@q8_0_231.txt
+290, and,262, the,-3.744191,3.744191,llama-2-7b-chat@q8_0_231.txt
+262, the,5273, conversation,-5.137658,5.137658,llama-2-7b-chat@q8_0_231.txt
+5273, conversation,3888, moved,-4.045617,4.045617,llama-2-7b-chat@q8_0_231.txt
+3888, moved,319, on,-0.85418755,0.85418755,llama-2-7b-chat@q8_0_231.txt
+319, on,13,.,-1.4668374,1.4668374,llama-2-7b-chat@q8_0_231.txt

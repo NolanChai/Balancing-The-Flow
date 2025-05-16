@@ -1,0 +1,25 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_42.txt
+40,I,836, don,-2.6053379,2.6053379,mistral-7b-instruct-v0.1@q8_0_42.txt
+836, don,470,'t,-0.00081446377,0.00081446377,mistral-7b-instruct-v0.1@q8_0_42.txt
+470,'t,760, know,-1.3154542,1.3154542,mistral-7b-instruct-v0.1@q8_0_42.txt
+760, know,11,",",-2.9462495,2.9462495,mistral-7b-instruct-v0.1@q8_0_42.txt
+11,",",340, it,-2.6723578,2.6723578,mistral-7b-instruct-v0.1@q8_0_42.txt
+340, it,1595, doesn,-3.4846137,3.4846137,mistral-7b-instruct-v0.1@q8_0_42.txt
+1595, doesn,470,'t,-0.00050412817,0.00050412817,mistral-7b-instruct-v0.1@q8_0_42.txt
+470,'t,2128, sound,-3.140482,3.140482,mistral-7b-instruct-v0.1@q8_0_42.txt
+2128, sound,588, like,-0.6293102,0.6293102,mistral-7b-instruct-v0.1@q8_0_42.txt
+588, like,683, him,-5.925789,5.925789,mistral-7b-instruct-v0.1@q8_0_42.txt
+683, him,13,.,-1.7119408,1.7119408,mistral-7b-instruct-v0.1@q8_0_42.txt
+13,.,3914, Let,-6.4408655,6.4408655,mistral-7b-instruct-v0.1@q8_0_42.txt
+3914, Let,338,'s,-0.43061355,0.43061355,mistral-7b-instruct-v0.1@q8_0_42.txt
+338,'s,869, call,-4.137821,4.137821,mistral-7b-instruct-v0.1@q8_0_42.txt
+869, call,683, him,-0.47576454,0.47576454,mistral-7b-instruct-v0.1@q8_0_42.txt
+683, him,757, again,-8.223263,8.223263,mistral-7b-instruct-v0.1@q8_0_42.txt
+757, again,290, and,-3.3426962,3.3426962,mistral-7b-instruct-v0.1@q8_0_42.txt
+290, and,766, see,-1.4276115,1.4276115,mistral-7b-instruct-v0.1@q8_0_42.txt
+766, see,611, if,-1.1653526,1.1653526,mistral-7b-instruct-v0.1@q8_0_42.txt
+611, if,339, he,-0.7869334,0.7869334,mistral-7b-instruct-v0.1@q8_0_42.txt
+339, he,11103, picks,-8.011141,8.011141,mistral-7b-instruct-v0.1@q8_0_42.txt
+11103, picks,510, up,-0.41393098,0.41393098,mistral-7b-instruct-v0.1@q8_0_42.txt
+510, up,526,".""",-2.6358318,2.6358318,mistral-7b-instruct-v0.1@q8_0_42.txt

@@ -1,0 +1,27 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1680, Can,-9.908127,9.908127,mistral-7b-instruct-v0.1@q8_0_184.txt
+1680, Can,345, you,-1.5420518,1.5420518,mistral-7b-instruct-v0.1@q8_0_184.txt
+345, you,2148, provide,-5.4910965,5.4910965,mistral-7b-instruct-v0.1@q8_0_184.txt
+2148, provide,502, me,-2.6479392,2.6479392,mistral-7b-instruct-v0.1@q8_0_184.txt
+502, me,351, with,-0.22703543,0.22703543,mistral-7b-instruct-v0.1@q8_0_184.txt
+351, with,517, more,-3.5657606,3.5657606,mistral-7b-instruct-v0.1@q8_0_184.txt
+517, more,1321, information,-0.82483745,0.82483745,mistral-7b-instruct-v0.1@q8_0_184.txt
+1321, information,546, about,-0.96476424,0.96476424,mistral-7b-instruct-v0.1@q8_0_184.txt
+546, about,262, the,-1.4934988,1.4934988,mistral-7b-instruct-v0.1@q8_0_184.txt
+262, the,1693, job,-7.3878694,7.3878694,mistral-7b-instruct-v0.1@q8_0_184.txt
+1693, job,5359, requirements,-6.089572,6.089572,mistral-7b-instruct-v0.1@q8_0_184.txt
+5359, requirements,30,?,-1.5553703,1.5553703,mistral-7b-instruct-v0.1@q8_0_184.txt
+30,?,1114, For,-6.461321,6.461321,mistral-7b-instruct-v0.1@q8_0_184.txt
+1114, For,1672, example,-0.99137455,0.99137455,mistral-7b-instruct-v0.1@q8_0_184.txt
+1672, example,11,",",-0.31493628,0.31493628,mistral-7b-instruct-v0.1@q8_0_184.txt
+11,",",644, what,-2.3264525,2.3264525,mistral-7b-instruct-v0.1@q8_0_184.txt
+644, what,2176, specific,-4.96947,4.96947,mistral-7b-instruct-v0.1@q8_0_184.txt
+2176, specific,4678, skills,-2.2761786,2.2761786,mistral-7b-instruct-v0.1@q8_0_184.txt
+4678, skills,290, and,-2.977589,2.977589,mistral-7b-instruct-v0.1@q8_0_184.txt
+290, and,1998, experience,-1.5368181,1.5368181,mistral-7b-instruct-v0.1@q8_0_184.txt
+1998, experience,389, are,-1.9038274,1.9038274,mistral-7b-instruct-v0.1@q8_0_184.txt
+389, are,2672, required,-0.6267515,0.6267515,mistral-7b-instruct-v0.1@q8_0_184.txt
+2672, required,329, for,-1.6074156,1.6074156,mistral-7b-instruct-v0.1@q8_0_184.txt
+329, for,428, this,-1.8973881,1.8973881,mistral-7b-instruct-v0.1@q8_0_184.txt
+428, this,2292, position,-0.66775453,0.66775453,mistral-7b-instruct-v0.1@q8_0_184.txt
+2292, position,1701,"?""",-5.0616817,5.0616817,mistral-7b-instruct-v0.1@q8_0_184.txt

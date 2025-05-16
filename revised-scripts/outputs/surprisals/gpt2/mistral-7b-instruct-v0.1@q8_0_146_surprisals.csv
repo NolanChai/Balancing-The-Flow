@@ -1,0 +1,29 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1320, That,-7.8740697,7.8740697,mistral-7b-instruct-v0.1@q8_0_146.txt
+1320, That,338,'s,-1.3639812,1.3639812,mistral-7b-instruct-v0.1@q8_0_146.txt
+338,'s,257, a,-2.6290925,2.6290925,mistral-7b-instruct-v0.1@q8_0_146.txt
+257, a,1049, great,-3.3045816,3.3045816,mistral-7b-instruct-v0.1@q8_0_146.txt
+1049, great,1730, deal,-4.0120497,4.0120497,mistral-7b-instruct-v0.1@q8_0_146.txt
+1730, deal,0,!,-3.674093,3.674093,mistral-7b-instruct-v0.1@q8_0_146.txt
+0,!,6952, Thank,-5.262086,5.262086,mistral-7b-instruct-v0.1@q8_0_146.txt
+6952, Thank,345, you,-0.028878009,0.028878009,mistral-7b-instruct-v0.1@q8_0_146.txt
+345, you,523, so,-1.7448758,1.7448758,mistral-7b-instruct-v0.1@q8_0_146.txt
+523, so,881, much,-0.0437849,0.0437849,mistral-7b-instruct-v0.1@q8_0_146.txt
+881, much,13,.,-2.3505673,2.3505673,mistral-7b-instruct-v0.1@q8_0_146.txt
+13,.,314, I,-2.149423,2.149423,mistral-7b-instruct-v0.1@q8_0_146.txt
+314, I,423, have,-3.6056645,3.6056645,mistral-7b-instruct-v0.1@q8_0_146.txt
+423, have,655, just,-4.6820498,4.6820498,mistral-7b-instruct-v0.1@q8_0_146.txt
+655, just,530, one,-5.940838,5.940838,mistral-7b-instruct-v0.1@q8_0_146.txt
+530, one,517, more,-1.8023947,1.8023947,mistral-7b-instruct-v0.1@q8_0_146.txt
+517, more,1808, question,-1.3480506,1.3480506,mistral-7b-instruct-v0.1@q8_0_146.txt
+1808, question,11,",",-2.1248932,2.1248932,mistral-7b-instruct-v0.1@q8_0_146.txt
+11,",",466, do,-4.03142,4.03142,mistral-7b-instruct-v0.1@q8_0_146.txt
+466, do,345, you,-0.20272586,0.20272586,mistral-7b-instruct-v0.1@q8_0_146.txt
+345, you,423, have,-1.3405157,1.3405157,mistral-7b-instruct-v0.1@q8_0_146.txt
+423, have,597, any,-0.74978596,0.74978596,mistral-7b-instruct-v0.1@q8_0_146.txt
+597, any,18199, accessories,-9.8524885,9.8524885,mistral-7b-instruct-v0.1@q8_0_146.txt
+18199, accessories,1695, available,-4.571887,4.571887,mistral-7b-instruct-v0.1@q8_0_146.txt
+1695, available,329, for,-0.9146387,0.9146387,mistral-7b-instruct-v0.1@q8_0_146.txt
+329, for,428, this,-2.0701172,2.0701172,mistral-7b-instruct-v0.1@q8_0_146.txt
+428, this,3072, phone,-6.310524,6.310524,mistral-7b-instruct-v0.1@q8_0_146.txt
+3072, phone,1701,"?""",-4.689992,4.689992,mistral-7b-instruct-v0.1@q8_0_146.txt

@@ -1,0 +1,14 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",13828,Which,-9.9798355,9.9798355,mistral-7b-instruct-v0.1@q8_0_58.txt
+13828,Which,8598, mountain,-10.967102,10.967102,mistral-7b-instruct-v0.1@q8_0_58.txt
+8598, mountain,2837, range,-3.2938895,3.2938895,mistral-7b-instruct-v0.1@q8_0_58.txt
+2837, range,1626, within,-7.5110106,7.5110106,mistral-7b-instruct-v0.1@q8_0_58.txt
+1626, within,262, the,-0.79014075,0.79014075,mistral-7b-instruct-v0.1@q8_0_58.txt
+262, the,46312, Alps,-5.1543293,5.1543293,mistral-7b-instruct-v0.1@q8_0_58.txt
+46312, Alps,466, do,-5.0670447,5.0670447,mistral-7b-instruct-v0.1@q8_0_58.txt
+466, do,345, you,-0.08125673,0.08125673,mistral-7b-instruct-v0.1@q8_0_58.txt
+345, you,4702, prefer,-2.18137,2.18137,mistral-7b-instruct-v0.1@q8_0_58.txt
+4702, prefer,284, to,-2.074058,2.074058,mistral-7b-instruct-v0.1@q8_0_58.txt
+284, to,19984, ski,-4.074159,4.074159,mistral-7b-instruct-v0.1@q8_0_58.txt
+19984, ski,287, in,-2.0853887,2.0853887,mistral-7b-instruct-v0.1@q8_0_58.txt
+287, in,1701,"?""",-0.8697601,0.8697601,mistral-7b-instruct-v0.1@q8_0_58.txt

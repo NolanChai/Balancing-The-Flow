@@ -1,0 +1,10 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2141, Do,-9.432781,9.432781,mistral-7b-instruct-v0.1@q8_0_210.txt
+2141, Do,345, you,-0.87694585,0.87694585,mistral-7b-instruct-v0.1@q8_0_210.txt
+345, you,761, need,-4.513264,4.513264,mistral-7b-instruct-v0.1@q8_0_210.txt
+761, need,597, any,-3.1224232,3.1224232,mistral-7b-instruct-v0.1@q8_0_210.txt
+597, any,6829, assistance,-3.378586,3.378586,mistral-7b-instruct-v0.1@q8_0_210.txt
+6829, assistance,351, with,-1.6468538,1.6468538,mistral-7b-instruct-v0.1@q8_0_210.txt
+351, with,534, your,-1.7774941,1.7774941,mistral-7b-instruct-v0.1@q8_0_210.txt
+534, your,31488, luggage,-6.3371887,6.3371887,mistral-7b-instruct-v0.1@q8_0_210.txt
+31488, luggage,1701,"?""",-5.031225,5.031225,mistral-7b-instruct-v0.1@q8_0_210.txt

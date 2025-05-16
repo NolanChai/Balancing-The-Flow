@@ -1,0 +1,63 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",13681,Great,-9.986546,9.986546,llama-2-7b-chat@q8_0_15.txt
+13681,Great,11,",",-2.7508361,2.7508361,llama-2-7b-chat@q8_0_15.txt
+11,",",314, I,-2.2144592,2.2144592,llama-2-7b-chat@q8_0_15.txt
+314, I,1183,'ll,-2.3050265,2.3050265,llama-2-7b-chat@q8_0_15.txt
+1183,'ll,787, make,-3.8561473,3.8561473,llama-2-7b-chat@q8_0_15.txt
+787, make,1654, sure,-2.0050004,2.0050004,llama-2-7b-chat@q8_0_15.txt
+1654, sure,284, to,-1.3453736,1.3453736,llama-2-7b-chat@q8_0_15.txt
+284, to,32980, prioritize,-9.971613,9.971613,llama-2-7b-chat@q8_0_15.txt
+32980, prioritize,262, the,-2.4453404,2.4453404,llama-2-7b-chat@q8_0_15.txt
+262, the,1502, order,-6.62679,6.62679,llama-2-7b-chat@q8_0_15.txt
+1502, order,290, and,-3.477126,3.477126,llama-2-7b-chat@q8_0_15.txt
+290, and,651, get,-3.6554885,3.6554885,llama-2-7b-chat@q8_0_15.txt
+651, get,340, it,-2.449763,2.449763,llama-2-7b-chat@q8_0_15.txt
+340, it,287, in,-2.6229115,2.6229115,llama-2-7b-chat@q8_0_15.txt
+287, in,355, as,-3.682962,3.682962,llama-2-7b-chat@q8_0_15.txt
+355, as,2582, soon,-0.57936764,0.57936764,llama-2-7b-chat@q8_0_15.txt
+2582, soon,355, as,-0.005055264,0.005055264,llama-2-7b-chat@q8_0_15.txt
+355, as,1744, possible,-0.39812186,0.39812186,llama-2-7b-chat@q8_0_15.txt
+1744, possible,13,.,-1.2272909,1.2272909,llama-2-7b-chat@q8_0_15.txt
+13,.,1680, Can,-5.8232713,5.8232713,llama-2-7b-chat@q8_0_15.txt
+1680, Can,345, you,-1.7451661,1.7451661,llama-2-7b-chat@q8_0_15.txt
+345, you,1577, give,-3.2496877,3.2496877,llama-2-7b-chat@q8_0_15.txt
+1577, give,502, me,-0.4172828,0.4172828,llama-2-7b-chat@q8_0_15.txt
+502, me,281, an,-2.456217,2.456217,llama-2-7b-chat@q8_0_15.txt
+281, an,27665, approximate,-4.031142,4.031142,llama-2-7b-chat@q8_0_15.txt
+27665, approximate,15264, timeline,-4.2084846,4.2084846,llama-2-7b-chat@q8_0_15.txt
+15264, timeline,329, for,-1.2120283,1.2120283,llama-2-7b-chat@q8_0_15.txt
+329, for,618, when,-0.6377659,0.6377659,llama-2-7b-chat@q8_0_15.txt
+618, when,356, we,-2.6403432,2.6403432,llama-2-7b-chat@q8_0_15.txt
+356, we,761, need,-5.3284507,5.3284507,llama-2-7b-chat@q8_0_15.txt
+761, need,262, the,-3.2422347,3.2422347,llama-2-7b-chat@q8_0_15.txt
+262, the,649, new,-3.9303634,3.9303634,llama-2-7b-chat@q8_0_15.txt
+649, new,37852, cartridges,-10.865958,10.865958,llama-2-7b-chat@q8_0_15.txt
+37852, cartridges,30,?,-1.0211098,1.0211098,llama-2-7b-chat@q8_0_15.txt
+30,?,843, And,-4.3905964,4.3905964,llama-2-7b-chat@q8_0_15.txt
+843, And,481, will,-3.0769157,3.0769157,llama-2-7b-chat@q8_0_15.txt
+481, will,340, it,-2.6020994,2.6020994,llama-2-7b-chat@q8_0_15.txt
+340, it,307, be,-0.41495365,0.41495365,llama-2-7b-chat@q8_0_15.txt
+307, be,8788, okay,-6.7895374,6.7895374,llama-2-7b-chat@q8_0_15.txt
+8788, okay,611, if,-1.2049942,1.2049942,llama-2-7b-chat@q8_0_15.txt
+611, if,314, I,-1.3873669,1.3873669,llama-2-7b-chat@q8_0_15.txt
+314, I,1295, place,-6.4323225,6.4323225,llama-2-7b-chat@q8_0_15.txt
+1295, place,262, the,-2.413714,2.413714,llama-2-7b-chat@q8_0_15.txt
+262, the,1502, order,-0.5613306,0.5613306,llama-2-7b-chat@q8_0_15.txt
+1502, order,3264, directly,-6.459192,6.459192,llama-2-7b-chat@q8_0_15.txt
+3264, directly,351, with,-2.5606663,2.5606663,llama-2-7b-chat@q8_0_15.txt
+351, with,262, the,-1.5673621,1.5673621,llama-2-7b-chat@q8_0_15.txt
+262, the,22693, supplier,-4.1505685,4.1505685,llama-2-7b-chat@q8_0_15.txt
+22693, supplier,11,",",-2.7617278,2.7617278,llama-2-7b-chat@q8_0_15.txt
+11,",",393, or,-1.0284878,1.0284878,llama-2-7b-chat@q8_0_15.txt
+393, or,466, do,-2.269377,2.269377,llama-2-7b-chat@q8_0_15.txt
+466, do,345, you,-1.4088895,1.4088895,llama-2-7b-chat@q8_0_15.txt
+345, you,761, need,-2.946085,2.946085,llama-2-7b-chat@q8_0_15.txt
+761, need,502, me,-2.6544776,2.6544776,llama-2-7b-chat@q8_0_15.txt
+502, me,284, to,-0.07952047,0.07952047,llama-2-7b-chat@q8_0_15.txt
+284, to,467, go,-3.7150831,3.7150831,llama-2-7b-chat@q8_0_15.txt
+467, go,832, through,-1.1079462,1.1079462,llama-2-7b-chat@q8_0_15.txt
+832, through,262, the,-1.199742,1.199742,llama-2-7b-chat@q8_0_15.txt
+262, the,2607, office,-9.312547,9.312547,llama-2-7b-chat@q8_0_15.txt
+2607, office,5127, supply,-8.308747,8.308747,llama-2-7b-chat@q8_0_15.txt
+5127, supply,3650, store,-3.328206,3.328206,llama-2-7b-chat@q8_0_15.txt
+3650, store,1701,"?""",-3.8215504,3.8215504,llama-2-7b-chat@q8_0_15.txt

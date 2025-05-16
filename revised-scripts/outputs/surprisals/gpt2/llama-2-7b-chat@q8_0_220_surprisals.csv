@@ -1,0 +1,58 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",13681,Great,-9.986546,9.986546,llama-2-7b-chat@q8_0_220.txt
+13681,Great,11,",",-2.7508361,2.7508361,llama-2-7b-chat@q8_0_220.txt
+11,",",1309, let,-5.2162523,5.2162523,llama-2-7b-chat@q8_0_220.txt
+1309, let,338,'s,-0.19329448,0.19329448,llama-2-7b-chat@q8_0_220.txt
+338,'s,467, go,-1.8049164,1.8049164,llama-2-7b-chat@q8_0_220.txt
+467, go,262, the,-7.095557,7.095557,llama-2-7b-chat@q8_0_220.txt
+262, the,1110, day,-7.3306575,7.3306575,llama-2-7b-chat@q8_0_220.txt
+1110, day,706, after,-2.6152477,2.6152477,llama-2-7b-chat@q8_0_220.txt
+706, after,9439, tomorrow,-3.5383737,3.5383737,llama-2-7b-chat@q8_0_220.txt
+9439, tomorrow,788, then,-7.9214764,7.9214764,llama-2-7b-chat@q8_0_220.txt
+788, then,553,",""",-2.9807897,2.9807897,llama-2-7b-chat@q8_0_220.txt
+553,",""",8239, Steven,-8.719302,8.719302,llama-2-7b-chat@q8_0_220.txt
+8239, Steven,8712, replied,-3.5040731,3.5040731,llama-2-7b-chat@q8_0_220.txt
+8712, replied,351, with,-2.7644343,2.7644343,llama-2-7b-chat@q8_0_220.txt
+351, with,257, a,-0.28979906,0.28979906,llama-2-7b-chat@q8_0_220.txt
+257, a,8212, smile,-1.6718552,1.6718552,llama-2-7b-chat@q8_0_220.txt
+8212, smile,13,.,-0.31322086,0.31322086,llama-2-7b-chat@q8_0_220.txt
+13,.,198,"
+",-0.93272007,0.93272007,llama-2-7b-chat@q8_0_220.txt
+198,"
+",198,"
+",-0.05064613,0.05064613,llama-2-7b-chat@q8_0_220.txt
+198,"
+",1,"""",-0.9006499,0.9006499,llama-2-7b-chat@q8_0_220.txt
+1,"""",16454,Okay,-3.4463334,3.4463334,llama-2-7b-chat@q8_0_220.txt
+16454,Okay,11,",",-0.7778917,0.7778917,llama-2-7b-chat@q8_0_220.txt
+11,",",326, that,-3.7825983,3.7825983,llama-2-7b-chat@q8_0_220.txt
+326, that,5238, sounds,-2.9696789,2.9696789,llama-2-7b-chat@q8_0_220.txt
+5238, sounds,922, good,-1.316331,1.316331,llama-2-7b-chat@q8_0_220.txt
+922, good,13,.,-2.017968,2.017968,llama-2-7b-chat@q8_0_220.txt
+13,.,3914, Let,-2.7812936,2.7812936,llama-2-7b-chat@q8_0_220.txt
+3914, Let,338,'s,-0.049393248,0.049393248,llama-2-7b-chat@q8_0_220.txt
+338,'s,467, go,-0.42296275,0.42296275,llama-2-7b-chat@q8_0_220.txt
+467, go,262, the,-3.8384001,3.8384001,llama-2-7b-chat@q8_0_220.txt
+262, the,1110, day,-0.72920334,0.72920334,llama-2-7b-chat@q8_0_220.txt
+1110, day,706, after,-0.20762815,0.20762815,llama-2-7b-chat@q8_0_220.txt
+706, after,9439, tomorrow,-0.49799743,0.49799743,llama-2-7b-chat@q8_0_220.txt
+9439, tomorrow,788, then,-0.38437554,0.38437554,llama-2-7b-chat@q8_0_220.txt
+788, then,13,.,-2.1401455,2.1401455,llama-2-7b-chat@q8_0_220.txt
+13,.,843, And,-3.6491704,3.6491704,llama-2-7b-chat@q8_0_220.txt
+843, And,644, what,-4.4282355,4.4282355,llama-2-7b-chat@q8_0_220.txt
+644, what,1611, kind,-4.948655,4.948655,llama-2-7b-chat@q8_0_220.txt
+1611, kind,286, of,-0.010902009,0.010902009,llama-2-7b-chat@q8_0_220.txt
+286, of,8242, clothes,-4.61559,4.61559,llama-2-7b-chat@q8_0_220.txt
+8242, clothes,466, do,-1.1917934,1.1917934,llama-2-7b-chat@q8_0_220.txt
+466, do,345, you,-0.24523683,0.24523683,llama-2-7b-chat@q8_0_220.txt
+345, you,761, need,-2.1824584,2.1824584,llama-2-7b-chat@q8_0_220.txt
+761, need,30,?,-2.86296,2.86296,llama-2-7b-chat@q8_0_220.txt
+30,?,6674, Maybe,-5.471862,5.471862,llama-2-7b-chat@q8_0_220.txt
+6674, Maybe,314, I,-2.1753492,2.1753492,llama-2-7b-chat@q8_0_220.txt
+314, I,460, can,-1.7734182,1.7734182,llama-2-7b-chat@q8_0_220.txt
+460, can,1037, help,-2.3287342,2.3287342,llama-2-7b-chat@q8_0_220.txt
+1037, help,345, you,-0.28344625,0.28344625,llama-2-7b-chat@q8_0_220.txt
+345, you,2298, pick,-4.511294,4.511294,llama-2-7b-chat@q8_0_220.txt
+2298, pick,503, out,-1.6814209,1.6814209,llama-2-7b-chat@q8_0_220.txt
+503, out,1223, something,-3.259098,3.259098,llama-2-7b-chat@q8_0_220.txt
+1223, something,526,".""",-2.5058227,2.5058227,llama-2-7b-chat@q8_0_220.txt

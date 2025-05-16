@@ -1,0 +1,10 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1537,But,-6.8397636,6.8397636,llama-2-7b-chat@q8_0_198.txt
+1537,But,644, what,-3.5703487,3.5703487,llama-2-7b-chat@q8_0_198.txt
+644, what,546, about,-2.073998,2.073998,llama-2-7b-chat@q8_0_198.txt
+546, about,477, all,-4.2507854,4.2507854,llama-2-7b-chat@q8_0_198.txt
+477, all,262, the,-0.70360124,0.70360124,llama-2-7b-chat@q8_0_198.txt
+262, the,9846, memories,-9.314972,9.314972,llama-2-7b-chat@q8_0_198.txt
+9846, memories,356, we,-3.1849308,3.1849308,llama-2-7b-chat@q8_0_198.txt
+356, we,4888, shared,-6.1411715,6.1411715,llama-2-7b-chat@q8_0_198.txt
+4888, shared,1701,"?""",-1.8887373,1.8887373,llama-2-7b-chat@q8_0_198.txt

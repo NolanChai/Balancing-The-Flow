@@ -1,0 +1,21 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1026,It,-5.7056947,5.7056947,mistral-7b-instruct-v0.1@q8_0_215.txt
+1026,It,338,'s,-0.7809871,0.7809871,mistral-7b-instruct-v0.1@q8_0_215.txt
+338,'s,635, also,-5.1959915,5.1959915,mistral-7b-instruct-v0.1@q8_0_215.txt
+635, also,3499, interesting,-3.8333373,3.8333373,mistral-7b-instruct-v0.1@q8_0_215.txt
+3499, interesting,284, to,-0.8441594,0.8441594,mistral-7b-instruct-v0.1@q8_0_215.txt
+284, to,3285, hear,-3.9691715,3.9691715,mistral-7b-instruct-v0.1@q8_0_215.txt
+3285, hear,1180, different,-7.5867424,7.5867424,mistral-7b-instruct-v0.1@q8_0_215.txt
+1180, different,22582, perspectives,-2.439132,2.439132,mistral-7b-instruct-v0.1@q8_0_215.txt
+22582, perspectives,290, and,-3.0463223,3.0463223,mistral-7b-instruct-v0.1@q8_0_215.txt
+290, and,9317, opinions,-2.6601593,2.6601593,mistral-7b-instruct-v0.1@q8_0_215.txt
+9317, opinions,319, on,-1.4306306,1.4306306,mistral-7b-instruct-v0.1@q8_0_215.txt
+319, on,1459, current,-7.7891536,7.7891536,mistral-7b-instruct-v0.1@q8_0_215.txt
+1459, current,2995, events,-1.1196471,1.1196471,mistral-7b-instruct-v0.1@q8_0_215.txt
+2995, events,422, from,-4.1038303,4.1038303,mistral-7b-instruct-v0.1@q8_0_215.txt
+422, from,2972, various,-4.24715,4.24715,mistral-7b-instruct-v0.1@q8_0_215.txt
+2972, various,6643, drivers,-8.504846,8.504846,mistral-7b-instruct-v0.1@q8_0_215.txt
+6643, drivers,319, on,-3.6012154,3.6012154,mistral-7b-instruct-v0.1@q8_0_215.txt
+319, on,262, the,-0.85467035,0.85467035,mistral-7b-instruct-v0.1@q8_0_215.txt
+262, the,2975, road,-2.0504153,2.0504153,mistral-7b-instruct-v0.1@q8_0_215.txt
+2975, road,526,".""",-2.5680087,2.5680087,mistral-7b-instruct-v0.1@q8_0_215.txt

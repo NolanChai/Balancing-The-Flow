@@ -1,0 +1,18 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",5812,Oh,-8.987434,8.987434,llama-2-7b-chat@q8_0_20.txt
+5812,Oh,11,",",-0.7042831,0.7042831,llama-2-7b-chat@q8_0_20.txt
+11,",",345, you,-2.7775095,2.7775095,llama-2-7b-chat@q8_0_20.txt
+345, you,815, should,-4.4888377,4.4888377,llama-2-7b-chat@q8_0_20.txt
+815, should,1107, really,-4.2488685,4.2488685,llama-2-7b-chat@q8_0_20.txt
+1107, really,1949, try,-3.0494661,3.0494661,llama-2-7b-chat@q8_0_20.txt
+1949, try,262, the,-3.5620441,3.5620441,llama-2-7b-chat@q8_0_20.txt
+262, the,649, new,-3.977654,3.977654,llama-2-7b-chat@q8_0_20.txt
+649, new,7072, restaurant,-6.4107385,6.4107385,llama-2-7b-chat@q8_0_20.txt
+7072, restaurant,9436, downtown,-7.688259,7.688259,llama-2-7b-chat@q8_0_20.txt
+9436, downtown,13,.,-1.8363209,1.8363209,llama-2-7b-chat@q8_0_20.txt
+13,.,314, I,-2.3116217,2.3116217,llama-2-7b-chat@q8_0_20.txt
+314, I,2982, heard,-5.5025997,5.5025997,llama-2-7b-chat@q8_0_20.txt
+2982, heard,340, it,-2.1960592,2.1960592,llama-2-7b-chat@q8_0_20.txt
+340, it,338,'s,-0.8941047,0.8941047,llama-2-7b-chat@q8_0_20.txt
+338,'s,4998, amazing,-5.386573,5.386573,llama-2-7b-chat@q8_0_20.txt
+4998, amazing,526,".""",-2.009279,2.009279,llama-2-7b-chat@q8_0_20.txt

@@ -1,0 +1,15 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.607984,4.607984,mistral-7b-instruct-v0.1@q8_0_237.txt
+40,I,2982, heard,-5.9001584,5.9001584,mistral-7b-instruct-v0.1@q8_0_237.txt
+2982, heard,484, they,-4.354223,4.354223,mistral-7b-instruct-v0.1@q8_0_237.txt
+484, they,423, have,-4.2123456,4.2123456,mistral-7b-instruct-v0.1@q8_0_237.txt
+423, have,257, a,-1.5443043,1.5443043,mistral-7b-instruct-v0.1@q8_0_237.txt
+257, a,1049, great,-4.772249,4.772249,mistral-7b-instruct-v0.1@q8_0_237.txt
+1049, great,32083, BBQ,-8.817251,8.817251,mistral-7b-instruct-v0.1@q8_0_237.txt
+32083, BBQ,10746, sauce,-3.901749,3.901749,mistral-7b-instruct-v0.1@q8_0_237.txt
+10746, sauce,326, that,-3.0396767,3.0396767,mistral-7b-instruct-v0.1@q8_0_237.txt
+326, that,2925, goes,-3.7211623,3.7211623,mistral-7b-instruct-v0.1@q8_0_237.txt
+2925, goes,351, with,-2.403281,2.403281,mistral-7b-instruct-v0.1@q8_0_237.txt
+351, with,262, the,-2.0562866,2.0562866,mistral-7b-instruct-v0.1@q8_0_237.txt
+262, the,9015, chicken,-3.090915,3.090915,mistral-7b-instruct-v0.1@q8_0_237.txt
+9015, chicken,526,".""",-2.867693,2.867693,mistral-7b-instruct-v0.1@q8_0_237.txt

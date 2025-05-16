@@ -1,0 +1,95 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1135,We,-5.872291,5.872291,llama-2-7b-chat@q8_0_3.txt
+1135,We,1816, went,-6.073665,6.073665,llama-2-7b-chat@q8_0_3.txt
+1816, went,20542, whit,-14.172571,14.172571,llama-2-7b-chat@q8_0_3.txt
+20542, whit,21422,ewater,-1.3996401,1.3996401,llama-2-7b-chat@q8_0_3.txt
+21422,ewater,31812, raft,-1.0892237,1.0892237,llama-2-7b-chat@q8_0_3.txt
+31812, raft,278,ing,-0.020583943,0.020583943,llama-2-7b-chat@q8_0_3.txt
+278,ing,526,".""",-4.6293726,4.6293726,llama-2-7b-chat@q8_0_3.txt
+526,".""",198,"
+",-0.6693185,0.6693185,llama-2-7b-chat@q8_0_3.txt
+198,"
+",198,"
+",-0.0013062763,0.0013062763,llama-2-7b-chat@q8_0_3.txt
+198,"
+",1,"""",-2.1525881,2.1525881,llama-2-7b-chat@q8_0_3.txt
+1,"""",40,I,-2.277228,2.277228,llama-2-7b-chat@q8_0_3.txt
+40,I,760, know,-3.768153,3.768153,llama-2-7b-chat@q8_0_3.txt
+760, know,11,",",-2.4549391,2.4549391,llama-2-7b-chat@q8_0_3.txt
+11,",",826, right,-3.8537416,3.8537416,llama-2-7b-chat@q8_0_3.txt
+826, right,30,?,-1.5990663,1.5990663,llama-2-7b-chat@q8_0_3.txt
+30,?,775, We,-2.2771702,2.2771702,llama-2-7b-chat@q8_0_3.txt
+775, We,550, had,-3.595084,3.595084,llama-2-7b-chat@q8_0_3.txt
+550, had,281, an,-4.072312,4.072312,llama-2-7b-chat@q8_0_3.txt
+281, an,4998, amazing,-3.2926135,3.2926135,llama-2-7b-chat@q8_0_3.txt
+4998, amazing,640, time,-1.1346023,1.1346023,llama-2-7b-chat@q8_0_3.txt
+640, time,13,.,-1.7457405,1.7457405,llama-2-7b-chat@q8_0_3.txt
+13,.,887, But,-3.1822643,3.1822643,llama-2-7b-chat@q8_0_3.txt
+887, But,428, this,-4.1317654,4.1317654,llama-2-7b-chat@q8_0_3.txt
+428, this,5041, weekend,-4.9315357,4.9315357,llama-2-7b-chat@q8_0_3.txt
+5041, weekend,338,'s,-3.60295,3.60295,llama-2-7b-chat@q8_0_3.txt
+338,'s,12080, climb,-8.813983,8.813983,llama-2-7b-chat@q8_0_3.txt
+12080, climb,318, is,-1.8444703,1.8444703,llama-2-7b-chat@q8_0_3.txt
+318, is,1016, going,-3.0063596,3.0063596,llama-2-7b-chat@q8_0_3.txt
+1016, going,284, to,-0.034216058,0.034216058,llama-2-7b-chat@q8_0_3.txt
+284, to,307, be,-0.24667376,0.24667376,llama-2-7b-chat@q8_0_3.txt
+307, be,772, even,-2.8693147,2.8693147,llama-2-7b-chat@q8_0_3.txt
+772, even,517, more,-0.94559586,0.94559586,llama-2-7b-chat@q8_0_3.txt
+517, more,9389, challenging,-2.1148496,2.1148496,llama-2-7b-chat@q8_0_3.txt
+9389, challenging,13,.,-1.307192,1.307192,llama-2-7b-chat@q8_0_3.txt
+13,.,383, The,-2.9428139,2.9428139,llama-2-7b-chat@q8_0_3.txt
+383, The,19516, cliff,-7.534771,7.534771,llama-2-7b-chat@q8_0_3.txt
+19516, cliff,356, we,-5.7775364,5.7775364,llama-2-7b-chat@q8_0_3.txt
+356, we,821,'re,-1.7189946,1.7189946,llama-2-7b-chat@q8_0_3.txt
+821,'re,14281, climbing,-2.934276,2.934276,llama-2-7b-chat@q8_0_3.txt
+14281, climbing,318, is,-1.1731539,1.1731539,llama-2-7b-chat@q8_0_3.txt
+318, is,881, much,-5.5999246,5.5999246,llama-2-7b-chat@q8_0_3.txt
+881, much,2440, higher,-2.116036,2.116036,llama-2-7b-chat@q8_0_3.txt
+2440, higher,290, and,-2.9916842,2.9916842,llama-2-7b-chat@q8_0_3.txt
+290, and,262, the,-2.0887947,2.0887947,llama-2-7b-chat@q8_0_3.txt
+262, the,15510, terrain,-4.0224676,4.0224676,llama-2-7b-chat@q8_0_3.txt
+15510, terrain,318, is,-0.51918346,0.51918346,llama-2-7b-chat@q8_0_3.txt
+318, is,845, very,-2.911752,2.911752,llama-2-7b-chat@q8_0_3.txt
+845, very,26898, rocky,-3.4924421,3.4924421,llama-2-7b-chat@q8_0_3.txt
+26898, rocky,11,",",-2.1572905,2.1572905,llama-2-7b-chat@q8_0_3.txt
+11,",",523, so,-0.81420356,0.81420356,llama-2-7b-chat@q8_0_3.txt
+523, so,340, it,-1.8269914,1.8269914,llama-2-7b-chat@q8_0_3.txt
+340, it,481, will,-2.9242747,2.9242747,llama-2-7b-chat@q8_0_3.txt
+481, will,2421, require,-3.9049196,3.9049196,llama-2-7b-chat@q8_0_3.txt
+2421, require,257, a,-1.0713946,1.0713946,llama-2-7b-chat@q8_0_3.txt
+257, a,1256, lot,-0.455306,0.455306,llama-2-7b-chat@q8_0_3.txt
+1256, lot,286, of,-0.07890087,0.07890087,llama-2-7b-chat@q8_0_3.txt
+286, of,5032, skill,-4.0636888,4.0636888,llama-2-7b-chat@q8_0_3.txt
+5032, skill,290, and,-1.4390466,1.4390466,llama-2-7b-chat@q8_0_3.txt
+290, and,22965, endurance,-3.2591732,3.2591732,llama-2-7b-chat@q8_0_3.txt
+22965, endurance,526,".""",-1.2332605,1.2332605,llama-2-7b-chat@q8_0_3.txt
+526,".""",198,"
+",-0.13299608,0.13299608,llama-2-7b-chat@q8_0_3.txt
+198,"
+",198,"
+",-0.00026043836,0.00026043836,llama-2-7b-chat@q8_0_3.txt
+198,"
+",1,"""",-1.5975736,1.5975736,llama-2-7b-chat@q8_0_3.txt
+1,"""",40,I,-1.9608676,1.9608676,llama-2-7b-chat@q8_0_3.txt
+40,I,766, see,-5.253655,5.253655,llama-2-7b-chat@q8_0_3.txt
+766, see,11,",",-3.8431208,3.8431208,llama-2-7b-chat@q8_0_3.txt
+11,",",880, well,-4.417309,4.417309,llama-2-7b-chat@q8_0_3.txt
+880, well,11,",",-0.46501255,0.46501255,llama-2-7b-chat@q8_0_3.txt
+11,",",314, I,-2.0319455,2.0319455,llama-2-7b-chat@q8_0_3.txt
+314, I,1101,'m,-1.8434032,1.8434032,llama-2-7b-chat@q8_0_3.txt
+1101,'m,407, not,-1.5794121,1.5794121,llama-2-7b-chat@q8_0_3.txt
+407, not,1654, sure,-1.7537864,1.7537864,llama-2-7b-chat@q8_0_3.txt
+1654, sure,611, if,-2.1801176,2.1801176,llama-2-7b-chat@q8_0_3.txt
+611, if,314, I,-1.4226894,1.4226894,llama-2-7b-chat@q8_0_3.txt
+314, I,460, can,-1.7893366,1.7893366,llama-2-7b-chat@q8_0_3.txt
+460, can,787, make,-3.441256,3.441256,llama-2-7b-chat@q8_0_3.txt
+787, make,340, it,-0.2821434,0.2821434,llama-2-7b-chat@q8_0_3.txt
+340, it,428, this,-3.8410144,3.8410144,llama-2-7b-chat@q8_0_3.txt
+428, this,5041, weekend,-2.1827095,2.1827095,llama-2-7b-chat@q8_0_3.txt
+5041, weekend,13,.,-1.1758271,1.1758271,llama-2-7b-chat@q8_0_3.txt
+13,.,314, I,-1.134739,1.134739,llama-2-7b-chat@q8_0_3.txt
+314, I,423, have,-3.3293138,3.3293138,llama-2-7b-chat@q8_0_3.txt
+423, have,617, some,-3.0111966,3.0111966,llama-2-7b-chat@q8_0_3.txt
+617, some,584, other,-3.5503628,3.5503628,llama-2-7b-chat@q8_0_3.txt
+584, other,19405, commitments,-4.750995,4.750995,llama-2-7b-chat@q8_0_3.txt
+19405, commitments,9313,"...""",-7.969995,7.969995,llama-2-7b-chat@q8_0_3.txt

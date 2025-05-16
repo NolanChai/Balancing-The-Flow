@@ -1,0 +1,18 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2061,What,-6.988445,6.988445,mistral-7b-instruct-v0.1@q8_0_133.txt
+2061,What,373, was,-4.3001366,4.3001366,mistral-7b-instruct-v0.1@q8_0_133.txt
+373, was,340, it,-2.3125203,2.3125203,mistral-7b-instruct-v0.1@q8_0_133.txt
+340, it,546, about,-1.8474644,1.8474644,mistral-7b-instruct-v0.1@q8_0_133.txt
+546, about,262, the,-1.7520742,1.7520742,mistral-7b-instruct-v0.1@q8_0_133.txt
+262, the,317, A,-7.8056335,7.8056335,mistral-7b-instruct-v0.1@q8_0_133.txt
+317, A,395,est,-6.652941,6.652941,mistral-7b-instruct-v0.1@q8_0_133.txt
+395,est,24965,hetics,-0.40206176,0.40206176,mistral-7b-instruct-v0.1@q8_0_133.txt
+24965,hetics,1781, course,-8.621134,8.621134,mistral-7b-instruct-v0.1@q8_0_133.txt
+1781, course,326, that,-0.4410539,0.4410539,mistral-7b-instruct-v0.1@q8_0_133.txt
+326, that,925, made,-1.5133258,1.5133258,mistral-7b-instruct-v0.1@q8_0_133.txt
+925, made,345, you,-0.36052898,0.36052898,mistral-7b-instruct-v0.1@q8_0_133.txt
+345, you,2883, enjoy,-6.6826477,6.6826477,mistral-7b-instruct-v0.1@q8_0_133.txt
+2883, enjoy,340, it,-0.89999586,0.89999586,mistral-7b-instruct-v0.1@q8_0_133.txt
+340, it,523, so,-1.5248237,1.5248237,mistral-7b-instruct-v0.1@q8_0_133.txt
+523, so,881, much,-0.028957803,0.028957803,mistral-7b-instruct-v0.1@q8_0_133.txt
+881, much,1701,"?""",-0.52900344,0.52900344,mistral-7b-instruct-v0.1@q8_0_133.txt

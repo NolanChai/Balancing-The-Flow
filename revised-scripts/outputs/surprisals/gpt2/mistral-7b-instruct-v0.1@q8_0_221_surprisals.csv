@@ -1,0 +1,16 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",2437,How,-7.8157115,7.8157115,mistral-7b-instruct-v0.1@q8_0_221.txt
+2437,How,318, is,-3.702672,3.702672,mistral-7b-instruct-v0.1@q8_0_221.txt
+318, is,607, her,-6.130716,6.130716,mistral-7b-instruct-v0.1@q8_0_221.txt
+607, her,1693, job,-4.4009933,4.4009933,mistral-7b-instruct-v0.1@q8_0_221.txt
+1693, job,355, as,-3.7114615,3.7114615,mistral-7b-instruct-v0.1@q8_0_221.txt
+355, as,281, an,-2.284974,2.284974,mistral-7b-instruct-v0.1@q8_0_221.txt
+281, an,42627, accountant,-4.5043144,4.5043144,mistral-7b-instruct-v0.1@q8_0_221.txt
+42627, accountant,30,?,-2.5196848,2.5196848,mistral-7b-instruct-v0.1@q8_0_221.txt
+30,?,2141, Do,-4.00049,4.00049,mistral-7b-instruct-v0.1@q8_0_221.txt
+2141, Do,345, you,-0.3614663,0.3614663,mistral-7b-instruct-v0.1@q8_0_221.txt
+345, you,2883, enjoy,-5.976913,5.976913,mistral-7b-instruct-v0.1@q8_0_221.txt
+2883, enjoy,1762, working,-2.111228,2.111228,mistral-7b-instruct-v0.1@q8_0_221.txt
+1762, working,351, with,-1.3609377,1.3609377,mistral-7b-instruct-v0.1@q8_0_221.txt
+351, with,3146, numbers,-7.226379,7.226379,mistral-7b-instruct-v0.1@q8_0_221.txt
+3146, numbers,1701,"?""",-0.7572217,0.7572217,mistral-7b-instruct-v0.1@q8_0_221.txt

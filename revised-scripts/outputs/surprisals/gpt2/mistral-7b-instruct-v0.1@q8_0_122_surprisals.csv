@@ -1,0 +1,23 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",10449,Thank,-9.713589,9.713589,mistral-7b-instruct-v0.1@q8_0_122.txt
+10449,Thank,345, you,-0.109367676,0.109367676,mistral-7b-instruct-v0.1@q8_0_122.txt
+345, you,11,",",-2.1333163,2.1333163,mistral-7b-instruct-v0.1@q8_0_122.txt
+11,",",26088, Christine,-8.64912,8.64912,mistral-7b-instruct-v0.1@q8_0_122.txt
+26088, Christine,13,.,-1.772144,1.772144,mistral-7b-instruct-v0.1@q8_0_122.txt
+13,.,1320, That,-4.429392,4.429392,mistral-7b-instruct-v0.1@q8_0_122.txt
+1320, That,338,'s,-0.8073506,0.8073506,mistral-7b-instruct-v0.1@q8_0_122.txt
+338,'s,845, very,-3.6298726,3.6298726,mistral-7b-instruct-v0.1@q8_0_122.txt
+845, very,7613, helpful,-2.941922,2.941922,mistral-7b-instruct-v0.1@q8_0_122.txt
+7613, helpful,13,.,-1.3198972,1.3198972,mistral-7b-instruct-v0.1@q8_0_122.txt
+13,.,2735, Now,-4.6687613,4.6687613,mistral-7b-instruct-v0.1@q8_0_122.txt
+2735, Now,11,",",-0.77155805,0.77155805,mistral-7b-instruct-v0.1@q8_0_122.txt
+11,",",1309, let,-2.5435252,2.5435252,mistral-7b-instruct-v0.1@q8_0_122.txt
+1309, let,338,'s,-0.5107705,0.5107705,mistral-7b-instruct-v0.1@q8_0_122.txt
+338,'s,651, get,-2.2411456,2.2411456,mistral-7b-instruct-v0.1@q8_0_122.txt
+651, get,736, back,-2.060913,2.060913,mistral-7b-instruct-v0.1@q8_0_122.txt
+736, back,284, to,-0.12691523,0.12691523,mistral-7b-instruct-v0.1@q8_0_122.txt
+284, to,670, work,-4.6315403,4.6315403,mistral-7b-instruct-v0.1@q8_0_122.txt
+670, work,319, on,-3.62548,3.62548,mistral-7b-instruct-v0.1@q8_0_122.txt
+319, on,428, this,-1.693527,1.693527,mistral-7b-instruct-v0.1@q8_0_122.txt
+428, this,1628, project,-2.932092,2.932092,mistral-7b-instruct-v0.1@q8_0_122.txt
+1628, project,526,".""",-2.017786,2.017786,mistral-7b-instruct-v0.1@q8_0_122.txt

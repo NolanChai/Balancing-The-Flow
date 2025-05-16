@@ -1,0 +1,34 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",1148, Is,-8.931385,8.931385,mistral-7b-instruct-v0.1@q8_0_258.txt
+1148, Is,612, there,-2.8573666,2.8573666,mistral-7b-instruct-v0.1@q8_0_258.txt
+612, there,1997, anything,-1.875512,1.875512,mistral-7b-instruct-v0.1@q8_0_258.txt
+1997, anything,2073, else,-1.9580044,1.9580044,mistral-7b-instruct-v0.1@q8_0_258.txt
+2073, else,314, I,-2.5048475,2.5048475,mistral-7b-instruct-v0.1@q8_0_258.txt
+314, I,460, can,-0.868469,0.868469,mistral-7b-instruct-v0.1@q8_0_258.txt
+460, can,3342, assist,-8.226856,8.226856,mistral-7b-instruct-v0.1@q8_0_258.txt
+3342, assist,345, you,-0.5728765,0.5728765,mistral-7b-instruct-v0.1@q8_0_258.txt
+345, you,351, with,-0.43713245,0.43713245,mistral-7b-instruct-v0.1@q8_0_258.txt
+351, with,981, while,-5.5329223,5.5329223,mistral-7b-instruct-v0.1@q8_0_258.txt
+981, while,345, you,-0.78630835,0.78630835,mistral-7b-instruct-v0.1@q8_0_258.txt
+345, you,821,'re,-1.0397847,1.0397847,mistral-7b-instruct-v0.1@q8_0_258.txt
+821,'re,379, at,-1.9541987,1.9541987,mistral-7b-instruct-v0.1@q8_0_258.txt
+379, at,15172, HR,-9.674362,9.674362,mistral-7b-instruct-v0.1@q8_0_258.txt
+15172, HR,30,?,-0.8512053,0.8512053,mistral-7b-instruct-v0.1@q8_0_258.txt
+30,?,1119, They,-8.0459585,8.0459585,mistral-7b-instruct-v0.1@q8_0_258.txt
+1119, They,460, can,-3.7648077,3.7648077,mistral-7b-instruct-v0.1@q8_0_258.txt
+460, can,1037, help,-2.237127,2.237127,mistral-7b-instruct-v0.1@q8_0_258.txt
+1037, help,351, with,-2.6651,2.6651,mistral-7b-instruct-v0.1@q8_0_258.txt
+351, with,257, a,-3.5581229,3.5581229,mistral-7b-instruct-v0.1@q8_0_258.txt
+257, a,4996, variety,-2.5805936,2.5805936,mistral-7b-instruct-v0.1@q8_0_258.txt
+4996, variety,286, of,-0.0035010017,0.0035010017,mistral-7b-instruct-v0.1@q8_0_258.txt
+286, of,8861, tasks,-3.5983415,3.5983415,mistral-7b-instruct-v0.1@q8_0_258.txt
+8861, tasks,884, such,-3.0580573,3.0580573,mistral-7b-instruct-v0.1@q8_0_258.txt
+884, such,355, as,-0.0027422227,0.0027422227,mistral-7b-instruct-v0.1@q8_0_258.txt
+355, as,22235, payroll,-6.443134,6.443134,mistral-7b-instruct-v0.1@q8_0_258.txt
+22235, payroll,11,",",-0.8052586,0.8052586,mistral-7b-instruct-v0.1@q8_0_258.txt
+11,",",4034, benefits,-6.5105963,6.5105963,mistral-7b-instruct-v0.1@q8_0_258.txt
+4034, benefits,3662, administration,-5.819065,5.819065,mistral-7b-instruct-v0.1@q8_0_258.txt
+3662, administration,11,",",-0.3169761,0.3169761,mistral-7b-instruct-v0.1@q8_0_258.txt
+11,",",290, and,-2.024355,2.024355,mistral-7b-instruct-v0.1@q8_0_258.txt
+290, and,19624, recruitment,-6.639841,6.639841,mistral-7b-instruct-v0.1@q8_0_258.txt
+19624, recruitment,526,".""",-5.975489,5.975489,mistral-7b-instruct-v0.1@q8_0_258.txt

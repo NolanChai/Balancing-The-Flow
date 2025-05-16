@@ -1,0 +1,20 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,llama-2-7b-chat@q8_0_84.txt
+40,I,766, see,-5.318183,5.318183,llama-2-7b-chat@q8_0_84.txt
+766, see,13,.,-4.041731,4.041731,llama-2-7b-chat@q8_0_84.txt
+13,.,3894, Well,-4.398411,4.398411,llama-2-7b-chat@q8_0_84.txt
+3894, Well,11,",",-0.4445981,0.4445981,llama-2-7b-chat@q8_0_84.txt
+11,",",314, I,-1.5713314,1.5713314,llama-2-7b-chat@q8_0_84.txt
+314, I,1101,'m,-1.82425,1.82425,llama-2-7b-chat@q8_0_84.txt
+1101,'m,9675, glad,-2.878676,2.878676,llama-2-7b-chat@q8_0_84.txt
+9675, glad,339, he,-4.199931,4.199931,llama-2-7b-chat@q8_0_84.txt
+339, he,338,'s,-1.1291763,1.1291763,llama-2-7b-chat@q8_0_84.txt
+338,'s,319, on,-4.634424,4.634424,llama-2-7b-chat@q8_0_84.txt
+319, on,465, his,-2.5524454,2.5524454,llama-2-7b-chat@q8_0_84.txt
+465, his,835, way,-0.38323468,0.38323468,llama-2-7b-chat@q8_0_84.txt
+835, way,553,",""",-3.7058194,3.7058194,llama-2-7b-chat@q8_0_84.txt
+553,",""",1770, Mr,-4.887142,4.887142,llama-2-7b-chat@q8_0_84.txt
+1770, Mr,13,.,-0.46767774,0.46767774,llama-2-7b-chat@q8_0_84.txt
+13,.,5658, Thomas,-7.198866,7.198866,llama-2-7b-chat@q8_0_84.txt
+5658, Thomas,8712, replied,-3.405847,3.405847,llama-2-7b-chat@q8_0_84.txt
+8712, replied,13,.,-0.45468995,0.45468995,llama-2-7b-chat@q8_0_84.txt

@@ -1,0 +1,26 @@
+token_id,token,next_token_id,next_token,log_prob,surprisal,source_file
+1,"""",40,I,-4.608008,4.608008,mistral-7b-instruct-v0.1@q8_0_192.txt
+40,I,892, think,-2.4174716,2.4174716,mistral-7b-instruct-v0.1@q8_0_192.txt
+892, think,356, we,-2.517105,2.517105,mistral-7b-instruct-v0.1@q8_0_192.txt
+356, we,714, could,-4.227872,4.227872,mistral-7b-instruct-v0.1@q8_0_192.txt
+714, could,923, start,-5.2327905,5.2327905,mistral-7b-instruct-v0.1@q8_0_192.txt
+923, start,416, by,-3.0359683,3.0359683,mistral-7b-instruct-v0.1@q8_0_192.txt
+416, by,1804, doing,-3.5222673,3.5222673,mistral-7b-instruct-v0.1@q8_0_192.txt
+1804, doing,617, some,-2.1921768,2.1921768,mistral-7b-instruct-v0.1@q8_0_192.txt
+617, some,1910, market,-7.9250994,7.9250994,mistral-7b-instruct-v0.1@q8_0_192.txt
+1910, market,2267, research,-0.44343758,0.44343758,mistral-7b-instruct-v0.1@q8_0_192.txt
+2267, research,284, to,-2.991228,2.991228,mistral-7b-instruct-v0.1@q8_0_192.txt
+284, to,766, see,-1.0209609,1.0209609,mistral-7b-instruct-v0.1@q8_0_192.txt
+766, see,644, what,-1.2564557,1.2564557,mistral-7b-instruct-v0.1@q8_0_192.txt
+644, what,674, our,-4.197631,4.197631,mistral-7b-instruct-v0.1@q8_0_192.txt
+674, our,13861, competitors,-2.4559877,2.4559877,mistral-7b-instruct-v0.1@q8_0_192.txt
+13861, competitors,389, are,-0.38073128,0.38073128,mistral-7b-instruct-v0.1@q8_0_192.txt
+389, are,1804, doing,-0.38649356,0.38649356,mistral-7b-instruct-v0.1@q8_0_192.txt
+1804, doing,290, and,-1.785279,1.785279,mistral-7b-instruct-v0.1@q8_0_192.txt
+290, and,644, what,-1.9097215,1.9097215,mistral-7b-instruct-v0.1@q8_0_192.txt
+644, what,4297, customers,-6.5753303,6.5753303,mistral-7b-instruct-v0.1@q8_0_192.txt
+4297, customers,765, want,-1.9851314,1.9851314,mistral-7b-instruct-v0.1@q8_0_192.txt
+765, want,422, from,-2.7343397,2.7343397,mistral-7b-instruct-v0.1@q8_0_192.txt
+422, from,257, a,-4.7329874,4.7329874,mistral-7b-instruct-v0.1@q8_0_192.txt
+257, a,4508, brand,-3.6369574,3.6369574,mistral-7b-instruct-v0.1@q8_0_192.txt
+4508, brand,526,".""",-1.9876138,1.9876138,mistral-7b-instruct-v0.1@q8_0_192.txt
