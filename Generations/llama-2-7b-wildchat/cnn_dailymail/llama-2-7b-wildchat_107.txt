@@ -1,0 +1,95 @@
+<p>A family-friendly coffee shop had its Facebook page hacked and flooded with pornography after an employee clicked on a malicious link in an email. Staff at Scooter’s Coffee, in Omaha, Nebraska, were locked out of their account for 40 minutes while hackers posted the explicit images.</p>
+<p></p>
+<blockquote>The spokeswoman said they believe one employee received a phishing email and clicked on what appears to be a legitimate-looking link. When that happened, all their social media accounts were compromised.</blockquote>
+<div><a href="https://www.theguardian.com/technology/2021/mar/30/scooter-coffee-facebook-account-hacked-pornography" target="_blank">Read more...</a></div>
+<div>Keywords: malware, social engineering, phishing email, hacking, Facebook</div>
+</div>"}]}, { "@type": "FAQPage", "name": "What is the difference between an application-based attack and a system-based attack?", "acceptedAnswer": { "@type": "Answer", "text": "An application-based attack targets specific applications on a network, while a system-based attack exploits weaknesses in operating systems or other network components. Application-based attacks require knowledge of the specific application and its vulnerabilities to be successful, whereas system-based attacks are more generic and can affect multiple systems."}}, { "@type": "FAQPage", "name": "What is the difference between a vulnerability assessment and penetration testing?", "acceptedAnswer": { "@type": "Answer", "text": "A vulnerability assessment involves identifying and cataloguing existing security weaknesses, while penetration testing simulates real-world attacks to determine whether those vulnerabilities can be exploited. Vulnerability assessments provide a comprehensive list of potential risks, whereas penetration tests focus on validating specific attack scenarios."}}]},
+{ "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "What is the difference between phishing and spear phishing?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Phishing attacks are broadly sent to a large number of recipients, often using generic emails or copy-pasted messages. Spear phishing, on the other hand, is a highly targeted attack that typically involves a great deal of research into specific individuals or organizations in order to tailor the content of an email and increase its likelihood of success."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "What is a rootkit?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "A rootkit is malicious software that allows an attacker to gain full control over a compromised system, giving them the ability to hide their presence and steal sensitive information. Rootkits are often installed without the user's knowledge through exploiting vulnerabilities or tricking users into installing infected software."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "What is ransomware?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Ransomware is a type of malicious software that encrypts victim's data and demands a ransom payment in exchange for the decryption key. Attackers often threaten to permanently delete or leak sensitive information if their demands are not met."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "What is a DDoS attack?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "A Distributed Denial of Service (DDoS) attack targets a network or server with a large amount of traffic, preventing legitimate users from accessing the system. DDoS attacks are often conducted using botnets and can cause significant disruption to online services."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "What is a zero-day exploit?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "A zero-day exploit takes advantage of a previously unknown vulnerability in an application or system. Hackers can use these exploits to gain unauthorized access and execute malicious code undetected."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "How do I identify a phishing email?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Look for red flags such as poor spelling and grammar, unexpected requests or attachments, and messages that don't seem relevant to you. Additionally, check the sender's email address for inconsistencies or misspellings."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "How can I prevent phishing attacks?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Be cautious of unsolicited emails or suspicious links, and never click on attachments unless you're sure they're safe. Use antivirus software, keep your operating system up to date, and educate yourself about the latest phishing scams."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "How do I protect my network from malware?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Install security software, keep your systems updated with the latest security patches, and create strong passwords for accounts. Regularly scan your network for any potential threats."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "How do I protect my computer from viruses?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Install a reliable antivirus software, keep your operating system and other applications updated with the latest security patches, and avoid downloading or opening files from unknown sources. Additionally, regularly scan your system for any potential threats."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "What is social engineering?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Social engineering is a type of cyberattack that involves manipulating individuals into revealing sensitive information or taking actions that compromise their systems. Attackers use various techniques, such as phishing emails, to exploit human nature and gain unauthorized access."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "How do I detect social engineering attacks?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Be cautious of suspicious emails or phone calls, especially if they ask for sensitive information or request immediate action. Additionally, educate yourself about common types of social engineering tactics and stay vigilant against potential threats."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "How do I report a suspected cyberattack?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Contact your organization's IT department or security team immediately if you suspect an attack. Provide as much detail as possible about the incident and follow any instructions they provide to mitigate further damage."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "What should I do after a cyberattack?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Take immediate steps to mitigate the damage, such as disconnecting infected devices from your network and restoring backups. Notify any affected parties or organizations, and follow up with them to ensure they're taking appropriate actions."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "How do I prevent future cyberattacks?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "Implement security measures such as strong passwords, antivirus software, and regular updates of your operating system and applications. Educate yourself and others on cybersecurity best practices to reduce the risk of future attacks."
+}
+}, { "@context": "https://schema.org",
+"@type": "FAQPage",
+"name": "What is a brute force attack?",
+"acceptedAnswer": { "@type": "Answer",
+"text": "A brute force attack involves trying different combinations of username and password to access a

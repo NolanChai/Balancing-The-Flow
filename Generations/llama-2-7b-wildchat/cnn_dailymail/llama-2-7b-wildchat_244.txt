@@ -1,0 +1,107 @@
+```
+This is a code challenge.  Please do not discuss the solution below.
+If you would like to get some practice, please upload your code to the IDE above.
+
+Your task is to create a program that generates and prints an infinite number of travel photos for Jay Alvarrez and Alexis Rene. Each photo should be formatted as follows:
+
+| Jay Alvarrez   | 27 years old                   | Hawaii
+|----------------|-------------------------------|----------
+| Alexis Rene    | 26 years old                   | California
+|----------------|-------------------------------|----------
+| Photo by @jayalvarrez on Instagram                           |
+| Photo by @alexisrene on Instagram                            |
+| ___   _____ ____   _____     _    _         __      ______  |
+| / _ \/ __ `__ \ / __ \   (_) | || |   / _ \   / ____|  ___ |
+| \_, | / / / ' / / / / /   | |_| || |   / __/  | |      | |    |
+|  / ___/ / / / /_/ / /    __/  |  _|   \_____\___| |_____|  |
+|_/_/    \_,_/\\____//_/     \\_/         _/           /________/
+
+[ ] Add to Photos.txt
+[x] Done!
+```
+### Notes:
+- You must use the builtin print function to display each photo on a line by itself in the console.  Do not use a "for" loop.
+- The input is given as text in a single array element.  The first and last characters of this array are "[" and "]".  For example, the first photo could be printed as: `[Jay Alvarrez  27 years old Hawaii Photo by @jayalvarrez on Instagram]`.
+- You should print the same number of photos (3) to each line of output.  If a user requests more than one photo, you will not update the array but instead keep printing the existing three photos for each input.
+- The first and last characters of each printed travel photo must be a vertical bar and a double quote character ('|' and "'", respectively).  All other characters should be either blank spaces or letters/numbers/underscores.
+- Each line of output (the actual photo) should contain the following three elements in order: 
+    - The first element is the age of Jay Alvarrez, as a number between 1 and 90 (inclusive).  
+      For example, 27 or 64.
+    - The second element is the name of Alexis Rene, as a string containing only letters and spaces.  
+      For example, "Alexis Rene".
+    - The third element is the photo credit for Jay Alvarrez's Instagram account (in quotes).
+- The last character in each output line must be a double quote ('"').  All other characters should be either blank spaces or letters/numbers/underscores.
+- A new line should be printed at the end of each output.  
+- You may assume that the array will always contain an even number of elements.
+```
+// Your code goes here!
+
+```
+### Assumptions: 
+- There is a single array of strings, with elements delimited by square brackets ('[' and ']')
+- Each element in the array contains a travel photo format string.  The first element is Jay Alvarrez's age as a number between 1 and 90 (inclusive), followed by two spaces, followed by '27 years old'.  The second element is Alexis Rene's name, followed by three spaces, followed by 'Hawaii'.  The third element is Jay Alvarrez's Instagram photo credit, followed by four spaces, followed by an underscore.
+- Each array element will have even number of elements, which can be accessed via the subscript operator ('[]'). For example, the first element in the array could look like this: "["27 years old" "Hawaii" "@jayalvarrez"]".
+- You must use builtin functions for your solution. Do not import or create any new code of your own. 
+
+### Bonus:
+If a user requests more than one travel photo, you do NOT need to update the array.  Instead, simply print out all three photos again for each input.
+You must use the following method signature (and parameters):
+```
+void printPhotos(String[] photos)
+```
+- Inputs:  
+    - An array of String objects as a parameter called `photos`.
+
+### Hints:
+1. Write a function that accepts an array of strings and prints each element in the format of [Jay Alvarrez] 27 years old Hawaii Photo by @jayalvarrez on Instagram (note: don't use the print function)
+2. Use a for loop to cycle through the elements, formatting each one as a travel photo.
+3. You should not create any additional methods or functions.
+4. You must call `printPhotos` in your main method, passing an array of strings that represents the photos you've already printed.
+5. If no more photos are requested by the user, exit out of the printPhotos() function and return to the main program (this is called a "return" statement).
+6. You should call `System.out.println()` inside the loop to display each travel photo.
+7. If there is only one element in the array, you can use `printPhotos(photos[0])`.  Otherwise, use the for-each syntax: `for (int i = 0; i < photos.length; i++) printPhotos(photos[i])`
+8. Include a variable and method that checks if the array contains more than one element (`if(photos.length > 1) {printPhotos(photos);}`).  If it does, use `for-each` syntax to loop through each element of the array (e.g. `for (int i = 0; i < photos.length; i++) printPhotos(photos[i])`)
+9. Your code should be organized in a way that makes it easy to understand and maintain.  Use meaningful variable names, descriptive comments, and appropriate data structures such as arrays and objects when necessary.
+10. Test your program by creating multiple photos and printing them out one at a time.
+
+### Assumptions:
+You do not need to handle user input or prompts in this challenge.  Use the array of Strings as an output to print all travel photos, without changing the format or adding more elements.
+
+### Output Examples:
+| Jay Alvarrez   | 27 years old                   | Hawaii
+|----------------|-------------------------------|----------
+| Alexis Rene    | 26 years old                   | California
+| Photo by @jayalvarrez on Instagram                           |
+| Photo by @alexisrene on Instagram                            |
+| ___   _____ ____   _____     _    _         __      ______  |
+| / _ \/ __ `__ \ / __ \   (_) | || |   / _ \   / ____|  ___ |
+| \_, | / / / ' / / / / /   | |_| || |   / __/  | |      | |    |
+|  / ___/ / / / /_/ / /    __/  |  _|   \_____\___| |_____|  |
+|_/_/    \_,_/\\____//_/     \\_/         _/           /________/
+
+[ ] Add to Photos.txt
+[x] Done!
+
+[ ] Add to Photos.txt
+[x] Done!
+
+[ ] Add to Photos.txt
+[x] Done!
+```
+### Notes: 
+- You must use the builtin print function to display each travel photo in a line by itself, with the first and last characters of each line being a vertical bar ('|') and double quote character ('"').
+- The input is given as text in an array.
+- Do not call any functions or methods other than those that were provided.
+- Your code should be organized in a way that makes it easy to understand, maintain, and modify.  Use meaningful variable names, descriptive comments, and appropriate data structures such as arrays and objects when necessary.  Test your program by creating multiple photos and printing them out one at a time.
+### Solution: 
+```java
+// Your code goes here!
+import java.util.*;
+class TravelPhotos{
+    static void printPhotos(String[]photos){
+        for (int i=0;i<photos.length;i++){
+            System.out.println("| "+photos[i]+" | 27 years old " + photos[i] +" Photo by @jayalvarrez on Instagram");
+        }
+    }
+}
+public class TravelPhotosTest{

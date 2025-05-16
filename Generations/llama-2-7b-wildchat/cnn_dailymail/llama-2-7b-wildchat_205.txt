@@ -1,0 +1,98 @@
+Write a program that determines whether Senator Robert Menendez should face up to 15 years in prison for accepting gifts from a wealthy donor while he was a U.S. Senator. 
+Your program will take in two parameters, the first will be the amount of money (in thousands) received by Senator Robert Menendez from a wealthy donor ($860 thousand), and the second parameter will be the number of years that the senator should face in prison if he is found guilty (15).
+Your program should determine whether or not Senator Robert Menendez should receive 15 years in prison for accepting gifts from a wealthy donor while he was a U.S. Senator. If your program returns a true value, then it indicates that the senator should face 15 years in prison for his actions; otherwise, if your program returns a false value, it will indicate that he should not receive jail time.
+
+### Notes:
+- This problem is inspired by the real case of Senator Robert Menendez and his involvement with a wealthy donor (Dr. Melgen) in Florida, which resulted in charges for bribery and other corruption allegations. 
+- You can use any programming language you prefer to solve this problem; however, your program should be written in English and include clear descriptions of your code's functionality. 
+- Your program should only consist of one function that takes two parameters (in thousands) as inputs and returns a boolean value indicating if the senator should face up to 15 years in prison for accepting gifts from a wealthy donor while he was a U.S. Senator.
+- Your output should be clear, concise, and easily understandable by anyone reading your code. 
+- Remember that your program must follow proper programming practices such as proper indentation, formatting, and correct variable naming conventions.
+
+### Examples:
+Example of a successful solution with the correct return value:
+```
+function shouldPrison(amountReceived: number, years: number) {
+  if (amountReceived >= 1000 && amountReceived <= 99999) {
+    if (years === 15) {
+      console.log("Senator Robert Menendez should face up to 15 years in prison!");
+      return true;
+    } else {
+      console.log("Senator Robert Menendez does not need to face any jail time!");
+      return false;
+    }
+  }
+}
+```
+Example of a failed solution with an incorrect return value:
+```
+function shouldPrison(amountReceived: number, years: number) {
+  if (years === 15 && amountReceived >= 1000 && amountReceived <= 99999) {
+    console.log("Senator Robert Menendez should face up to 15 years in prison!");
+    return true;
+  } else {
+    console.log("Senator Robert Menendez does not need to face any jail time!");
+    return false;
+  }
+}
+```
+
+### Test cases:
+Test case 1:
+amountReceived = 860,000, years = 15
+Returns true because Senator Robert Menendez should face up to 15 years in prison for accepting gifts from a wealthy donor while he was a U.S. Senator.
+```
+function shouldPrison(amountReceived: number, years: number) {
+  if (amountReceived >= 1000 && amountReceived <= 99999) {
+    if (years === 15) {
+      console.log("Senator Robert Menendez should face up to 15 years in prison!");
+      return true;
+    } else {
+      console.log("Senator Robert Menendez does not need to face any jail time!");
+      return false;
+    }
+  }
+}
+```
+Test case 2:
+amountReceived = 1, years = 15
+Returns true because Senator Robert Menendez should face up to 15 years in prison for accepting gifts from a wealthy donor while he was a U.S. Senator.
+```
+function shouldPrison(amountReceived: number, years: number) {
+  if (years === 15 && amountReceived >= 1000 && amountReceived <= 99999) {
+    console.log("Senator Robert Menendez should face up to 15 years in prison!");
+    return true;
+  } else {
+    console.log("Senator Robert Menendez does not need to face any jail time!");
+    return false;
+  }
+}
+```
+Test case 3:
+amountReceived = 200, years = 15
+Returns true because Senator Robert Menendez should face up to 15 years in prison for accepting gifts from a wealthy donor while he was a U.S. Senator.
+```
+function shouldPrison(amountReceived: number, years: number) {
+  if (years === 15 && amountReceived >= 1000 && amountReceived <= 99999) {
+    console.log("Senator Robert Menendez should face up to 15 years in prison!");
+    return true;
+  } else {
+    console.log("Senator Robert Menendez does not need to face any jail time!");
+    return false;
+  }
+}
+```
+Test case 4:
+amountReceived = 860, years = 15
+Returns true because Senator Robert Menendez should face up to 15 years in prison for accepting gifts from a wealthy donor while he was a U.S. Senator.
+```
+function shouldPrison(amountReceived: number, years: number) {
+  if (years === 15 && amountReceived >= 1000 && amountReceived <= 99999) {
+    console.log("Senator Robert Menendez should face up to 15 years in prison!");
+    return true;
+  } else {
+    console.log("Senator Robert Menendez does not need to face any jail time!");
+    return false;
+  }
+}
+```

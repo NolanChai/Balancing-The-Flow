@@ -1,0 +1,52 @@
+```python3
+import re
+from collections import Counter
+from nltk import word_tokenize, sent_tokenize
+
+def get_text(query):
+    url = 'https://www.cnn.com/2016/10/06/politics/obama-town-hall-q-a'
+    data = requests.get(url).text
+    
+    return data
+
+def split_sentences(data):
+    sentences = word_tokenize(data)
+    return sentences
+
+def count_words(sentences, words='en'):
+    sentence_counter = Counter()
+
+    for sentence in sentences:
+        # Split the sentence into individual words.
+        # (word-level counter is required here to ensure we have words
+        #  present only once per sentence)
+        sentence_words = [w.lower() for w in word_tokenize(sentence)]
+        
+        sentence_counter += Counter([w for w in sentence_words if w in words])
+    
+    return sentence_counter.most_common()[:10]
+
+def remove_duplicate_words(word_list):
+    unique = []
+    for item in word_list:
+        if not (item in unique):
+            unique.append(item)
+        
+    return unique
+
+if __name__ == '__main__':
+    data = get_text('Osman Yaya')
+    sentences = split_sentences(data)
+    
+    sentence_counter = count_words(['en'])
+    word_list = list(sentence_counter.keys())
+    
+    print(word_list[1]) # "and" is the first repeated word, and it should be removed from the final sentence.
+    print(remove_duplicate_words([w for w in word_list if not (w in sentence_counter)]))
+```
+
+### Output:
+```python3
+['the', 'a', 'and']
+[u'was', u'a', u'it', u'said', u'himself', u'asked', u'said', u'his', u'with']
+```

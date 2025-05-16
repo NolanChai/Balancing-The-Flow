@@ -1,0 +1,10 @@
+I believe this is a question related to Python language. And the correct answer is "B", because the following code should print:
+```
+#!/usr/bin/env python3
+"""
+File:    test1.py
+Author:  Lily Qian
+Date:    08-24-2017
+"""
+print('Hello World!')
+```
