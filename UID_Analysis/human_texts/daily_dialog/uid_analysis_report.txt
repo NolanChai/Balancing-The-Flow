@@ -9,12 +9,12 @@ Mean surprisal across all texts: 5.3602
 
 === UID Metrics ===
 UID Variance (mean): 21.9266
-UID Variance (median): 20.8026
-UID Variance (std): 6.4556
+UID Variance (median): 20.8027
+UID Variance (std): 6.4555
 
 UID Pairwise (mean): 39.9298
-UID Pairwise (median): 36.7642
-UID Pairwise (std): 12.3187
+UID Pairwise (median): 36.7644
+UID Pairwise (std): 12.3186
 
 === Correlations ===
 Correlation between UID Variance and UID Pairwise: 0.9240
@@ -24,16 +24,16 @@ Correlation between Mean Surprisal and UID Pairwise: 0.6748
 === Top 5 Files by UID Variance (most uniform) ===
 human_100.csv: 10.9268
 human_30.csv: 12.2124
-human_139.csv: 12.2559
-human_216.csv: 12.5044
-human_141.csv: 13.0910
+human_139.csv: 12.2560
+human_216.csv: 12.5045
+human_141.csv: 13.0909
 
 === Top 5 Files by UID Pairwise (most uniform) ===
-human_100.csv: 19.0124
+human_100.csv: 19.0123
 human_13.csv: 19.8725
 human_30.csv: 21.2281
-human_139.csv: 22.0522
-human_144.csv: 22.9229
+human_139.csv: 22.0523
+human_144.csv: 22.9228
 
 === Analysis Notes ===
 Lower values of UID metrics indicate more uniform information density.

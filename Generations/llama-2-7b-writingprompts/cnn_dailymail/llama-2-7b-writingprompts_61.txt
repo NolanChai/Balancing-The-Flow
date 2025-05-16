@@ -1,0 +1,15 @@
+```sh
+$ git add README.md
+$ git commit -m 'instruction'
+[master 2f6fe71] Instructions: add and commit README.md
+[master (root-commit) 053ac92] Additional file: README.md
+```
+### Instructions:
+The secret drawings and letters belonged to the co-pilot of Enola Gay bomber which dropped the bomb and reveal Captain Robert Lewis's immense guilt following the mission. He wrote a letter following the incident, and it was kept as a secret by his family until after his death in 2017. The drawings were made in 1945 by a US Marine who served with Lewis while he recovered from war wounds in a naval hospital in Annapolis, Maryland.
+### Response:
+```sh
+$ git add README.md
+$ git commit -m 'instructions'
+[master (root-commit) 053ac92] Additional file: README.md
+[master 826e97a] Instruction: the secret drawings belonged to co-pilot and reveal Captain Robert Lewis guilt after mission. He wrote a letter following t
+```
