@@ -1,0 +1,19 @@
+Comment: Please provide enough code so others can better understand or reproduce the problem.
+
+Answer: You should check the documentation for "Time" in lua. There you will find the `now` function which returns the current system time in seconds since Jan 1, 1970 and `difftime` function to convert it into minutes, hours etc.
+So all you need is something like this:
+
+\begin{code}
+local function myEvent()
+    -- do your stuff here
+end
+
+-- create an event with a time after 30minutes (600s):
+TriggerEvents.RegisterCallback( "PlayerDisconnected",
+                            function()
+                                local diffTime = difftime(now(), 600) -- get the time difference from now to 15 minutes in seconds since Jan 1, 1970
+                                if (diffTime >= 0) then
+                                    TriggerEvent("myEvent") -- call your event when diffTime >= 0
+                                end
+                            end)
+\end{code}

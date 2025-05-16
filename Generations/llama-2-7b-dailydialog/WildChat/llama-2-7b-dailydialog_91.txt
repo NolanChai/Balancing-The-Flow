@@ -1,0 +1,45 @@
+```json
+{
+   "statusCode": 503,
+   "error": {
+      "code": "subprocess-exited-with-error",
+      "message": [
+         "Subprocess exited with error."
+      ],
+      "traceback": [
+         "Traceback (most recent call last):\n",
+         "[...]\n",
+         "  File \"/home/vagrant/.local/share/virtualenvs/inf-delivery-sjtu-main/lib/python3.7/site-packages/pip/_internal/cli/base_command.py\", line 140, in main\n",
+         "    status = self.run(options, args)\n",
+         "[...]\n",
+         "Command \'install\' not found, did you mean one of these:\n",
+         "  command \"uninstall\" (category: uninstall)\n",
+         "  command \"list\" (category: list)\n",
+         "  command \"show\" (category: show)\n",
+         "  command \"search\" (category: search)\n",
+         "  command \"help\" (category: help)\n",
+         "Type \'pip install --help\' for more information.\n```
+
+### Error:
+```bash
+Traceback (most recent call last):
+  File "/Users/apple/Documents/python-code/inf-sjtu/venv/lib/python3.9/site-packages/pip/_internal/cli/base_command.py", line 140, in main
+    status = self.run(options, args)
+  File "/Users/apple/Documents/python-code/inf-sjtu/venv/lib/python3.9/site-packages/pip/_internal/cli/base_command.py", line 182, in run
+    status = self._run(options, args)
+  File "/Users/apple/Documents/python-code/inf-sjtu/venv/lib/python3.9/site-packages/pip/_internal/cli/base_command.py", line 271, in _run
+    warnings.warn(f"pip {sys.argv[0]} was called without the required "
+```
+
+```bash
+root@b6456d543ffb:~# ls -la
+total 48
+drwxr-xr-x  2 root root      4096 Dec  1 14:12 .
+drwxr-xr-x 73 root root      4096 Nov  7 07:57 ..
+-rwxrwxr--  1 root root   78898 Jan 18  2018 INF-SJTU.zip
+drwxr-xr-x  2 root root      4096 Apr  3 21:15 jfdaily
+drwxr-xr-x  2 root root      4096 Mar 19  2020 naturebrief
+drwxr-xr-x  2 root root      4096 Jan 18  2018 qq-news
+drwxr-xr-x  2 root root       512 May  3  2021 vectordb
+drwxr-xr-x  2 root root        112 Sep 24  2021 spider
+```

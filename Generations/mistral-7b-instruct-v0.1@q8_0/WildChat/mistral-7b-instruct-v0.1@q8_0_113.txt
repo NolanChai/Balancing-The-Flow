@@ -1,0 +1,82 @@
+To make this component reusable, you can create an Angular directive for the "Like" and "Dislike" buttons. Here's an example:
+
+1. Create a new directive called `like-dislike` by adding the following code to your app module:
+```typescript
+import { Directive } from '@angular/core';
+
+@Directive({
+  selector: '[like-dislike]',
+})
+export class LikeDislikeDirective {
+  constructor() {}
+}
+```
+2. Add the `like-dislike` directive to the products component as follows:
+```typescript
+import { Component } from '@angular/core';
+import { LikeDislikeDirective } from './like-dislike.directive';
+
+@Component({
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+})
+export class ProductsComponent {
+  products = [
+    { id: 1, name: 'Product 1', liked: false },
+    { id: 2, name: 'Product 2', liked: false },
+    { id: 3, name: 'Product 3', liked: false },
+  ];
+}
+```
+3. In the products component's template, add the `like-dislike` directive to each product as follows:
+```html
+<ul>
+  <li *ngFor="let product of products">
+    <button class="product-btn" (click)="likeProduct(product)">Like</button>
+    <like-dislike [liked]="product.liked"></like-dislike>
+    <button class="product-btn" (click)="dislikeProduct(product)">Dislike</button>
+  </li>
+</ul>
+```
+4. In the products component, create methods to handle liking and disliking of the products as follows:
+```typescript
+import { Component } from '@angular/core';
+import { LikeDislikeDirective } from './like-dislike.directive';
+
+@Component({
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+})
+export class ProductsComponent {
+  products = [
+    { id: 1, name: 'Product 1', liked: false },
+    { id: 2, name: 'Product 2', liked: false },
+    { id: 3, name: 'Product 3', liked: false },
+  ];
+
+  likeProduct(product: any) {
+    product.liked = true;
+  }
+
+  dislikeProduct(product: any) {
+    product.liked = false;
+  }
+}
+```
+5. Finally, you can reuse the `products` component in other parts of your application by simply importing it and adding it to your template as follows:
+```typescript
+import { Component } from '@angular/core';
+import { ProductsComponent } from './products.component';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+})
+export class AppComponent {
+  title = 'My Application';
+}
+```
+```html
+<app-products></app-products>
+```
+This way, you can easily reuse the `Like/Dislike` buttons for any list of products in your application.

@@ -1,0 +1,11 @@
+[B]Incorrect Instructions[/B][COLOR=red]A capacitor has positive charge (+), not negative charge (-).[/COLOR]
+The only thing I can see is the use of microfarads. I think you should use millifarads instead and add a unit conversion factor in brackets.
+« Last Edit: December 23, 2015, 08:40:49 AM by S_T_R »
+Quote from: S_T_R on December 23, 2015, 08:39:52 AM
+Yeah you are right!
+Quote from: VK4GRJ on December 23, 2015, 09:37:18 AM
+I did a quick search and it doesn't look like microfarads is used in EE. All I see is "µF" (with an upper case u) which looks correct to me, so I think that's the convention.
+There are various conventions for units of measure, but some conventions are more accepted than others. See this page for further information: https://en.wikipedia.org/wiki/Prefix_%28metric%29#Practical_conventions
+Quote from: mnementh on December 23, 2015, 04:49:49 PM
+I have also seen other conventions that are used in EE. For instance in a post here, I saw the following: "For example, 6.8 × 10⁻⁹ C is written as 6.8 fF" So there's not a definitive answer.
+« Last Edit: December 23, 2015, 10:15:45 PM by VK4GRJ »

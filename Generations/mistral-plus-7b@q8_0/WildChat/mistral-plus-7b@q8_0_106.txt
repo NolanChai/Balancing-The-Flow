@@ -1,0 +1,17 @@
+```
+RuntimeError: Ninja is required to load C++ extensions
+
+ImportError: /root/.cache/torch_extensions/py36_cu102/utils/utils.so: cannot open shared object file: No such file or directory
+```
+
+安装ninja和cuda
+
+```
+sudo apt-get update && sudo apt-get install ninja-build cmake gcc g++ unzip
+```
+
+执行下面代码：
+
+```
+pip install torch==1.6.0+cu102 -f https://download.pytorch.org/whl/torch_stable.html
+```

@@ -1,0 +1,27 @@
+, they change the rules on me. Oh well, can't win 'em all, right? But seriously, folks, this is a life-changing amount of money! I mean, think about it – with $326 million, you could buy anything you want. Travel the world, own your own island, give away millions to charity...the possibilities are endless! 
+ And the best part? It's all mine! Just me and my lucky ticket. No more financial worries for this guy – I can finally live the life I've always dreamed of. Thanks, Powerball! You've made one man very happy indeed. `);
+function solve() {
+  // Winning tickets are selected randomly from all valid tickets in the game, so we need to generate a random number between 1 and the total number of winning tickets (which is 1/50 of the total number of balls in the drawing)
+  // Since there are 69 white balls and 1 red ball, the odds of picking the winning numbers are about 1 in 13,983,816
+  const numWins = Math.floor(Math.random() * (50 - 1) + 1); // Generate a random number between 1 and 49
+  const winningTickets = [... Array(numWins)].map(() => ({
+    // Make up some fake winning numbers for the ticket
+      ballNumbers: Array(69).fill(0).map(() => Math.floor(Math.random() * 69) + 1),
+      prizeAmount: parseInt(Math.random() * 326000000), // Generate a random amount between $1 and $326 million
+    }));
+  return winOrLose(winningTickets);
+}
+// Function to determine whether the ticket won or lost
+function winOrLose(ticket) {
+  // Check if any of the ball numbers match the winning numbers
+  const hasWon = ticket.ballNumbers.some((ballNumber) => ticket.ballNumbers.includes(ballNumber));
+  if (hasWon) {
+    // If a ball number matches, return the prize amount
+    console.log(`Congratulations! You won ${ticket.prizeAmount}!`);
+  } else {
+    // Otherwise, return "You lost"
+    console.log("You lost... better luck next time!");
+  }
+}
+// Call the solve function to generate a winning ticket and see if it's a winner or loser
+solve();

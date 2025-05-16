@@ -1,0 +1,12 @@
+It is nice idea! I have never heard about this game before. But, it seems like the way to develop.
+First of all we need to find the framework and language to implement our ideas. So far I know that the framework and languages which can help us build apps with a good performance are `flutter` for android platform and `react native` for iOS. But I think both of them have many pros and cons so it is difficult to choose. I recommend you check this [link](https://dev.to/samirchoukha/why-i-prefer-react-native-over-flutter-for-android-application-development-2863) for a comparison of them.
+Second we need to find out the features of game. So, how much is your app? Does it just show us the battle and let us play on our own? Or does it give us some hints about where should we shoot? Is there an option for multiplayer mode or single player mode only? We can even develop an AI bot so that there will always be somebody to fight with you.
+After you find out these features, you can make a list of the things your app needs to implement and check which framework can provide what you want. For example, flutter is very good in developing UIs but react native is much easier for building multiplayer games. You can see this [link](https://medium.com/the-flutter-community/10-reasons-to-use-react-native-instead-of-flutter-for-multiplayer-games-5269f127da8e) for a comparison of them in game developing.
+The next step is to choose the language and start coding! Have fun :)
+
+The `if` statement is a conditional statement.  If you have an expression of type boolean, it will evaluate to either `true` or `false`.  Anything that isn't boolean can be coerced to boolean using the ternary operator if the expression evaluates to one of these values:
+```
+boolean x = y ? true : false; // x is true if y evaluates to true, and false otherwise.
+boolean x = y ? null : 0;      // same as above but evaluating for null instead of boolean
+boolean x = y ? '' : null;     // same as above but evaluating for empty string instead of null/empty string
+```

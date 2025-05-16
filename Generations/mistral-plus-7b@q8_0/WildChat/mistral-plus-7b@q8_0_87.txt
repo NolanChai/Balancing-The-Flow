@@ -1,0 +1,16 @@
+Solution:-
+Total resistance
+R(x,y,z) = ( xyz / (yz + zx + xy )).
+
+For total resistance
+R’ = 0.5 x y z /( y z + z x + x y )^{2}
+= 1/4 [y z + z x + x y ] / (y z + z x + x y)^{2}
+Rate of change of x is given by
+dx/dt = 2 ohms/min
+Rate of change of y is given by
+dy/dt = 1 ohm/min.
+
+Rate of change of total resistance R’=1/4 [(y+z)+ zx + xy ] / (y z + z x + x y)^{2} * [dy/dt – dx/dt]
+R’= 0.5[301 + zx + xy]/[(201)(301)]
+When, z = 300 , x = 100 and y = 200, R’= 0.5[301+ (300)100+ (100)200]/ [(201)(301)]
+R’= 0.84 ohms/min

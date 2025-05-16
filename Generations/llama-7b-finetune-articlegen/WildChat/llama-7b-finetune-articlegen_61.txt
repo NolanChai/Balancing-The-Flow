@@ -1,0 +1,111 @@
+{
+  "message" : "Config files are required",
+  "statusCode":404,
+  "timestamp":"2019-07-05T07:26:01.437Z",
+}
+```
+
+---
+## LogStash Installation (with ElasticSearch & Kibana) on Windows Server
+### Dependencies
+* Java Development Kit (JDK v8u212 or later, [Download JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)) 
+* Apache Maven (v3 or later, [Download Maven](https://maven.apache.org/download.cgi))
+
+### Install LogStash 
+```powershell
+$ PATH="C:\Program Files\Apache Software Foundation\Tomcat 7.0\bin;C:\Program Files\Java\jdk1.8.0_212"
+java -version
+
+C:\>mvn clean install -DskipTests -Prepo=true -Preporting-files=true -DskipBOM=false
+```
+
+### Install Kibana
+```powershell
+$ PATH="C:\Program Files\Java\jdk1.8.0_212"
+java -version
+
+C:\>mvn clean install -Pkibana-install
+```
+
+### Install ElasticSearch
+```powershell
+$ PATH="C:\Program Files\Apache Software Foundation\Tomcat 7.0\bin;C:\Program Files\Java\jdk1.8.0_212"
+java -version
+
+C:\>mvn clean install -Pelasticsearch-install -DskipTests -Prepo=true -Preporting-files=true
+```
+
+### Configuration
+* `LogStash.conf`: LogStash configuration file, use the following instructions for reference.
+    * Logstash will send logs to ElasticSearch by default.
+        * In order to change this behavior, uncomment the following line in LogStash.conf and edit it according to your needs:
+            ```
+                input {
+                   elasticsearch {
+                      hosts => [ "elk-es-server1" ] // Edit here (Default port 9200)
+                    }
+                }
+            ```
+        * You may also choose to send the logstash logs directly to Kibana instead of ElasticSearch, in this case you should uncomment the following line in LogStash.conf:
+            ```
+                input {
+                   file {
+                      path => ["logs"] // Edit here
+                    }
+                }
+            ```
+        * You can also choose to send logs to both Kibana and ElasticSearch by adding both the above mentioned lines in LogStash.conf.
+* `logstash-setting.properties`: LogStash config file, use the following instructions for reference.
+    * Set the `elasticsearch.hosts` value according to your needs, by default it points to `127.0.0.1:9200`, you may also specify a different port number or IP address as per your preference.
+        * The following line will set the logstash log path to `D:/logs/logstash-output`.
+            ```
+                elasticsearch.hosts=["elk-es-server1", "localhost:9200"] // Edit here (Default port 9200)
+            ```
+* LogStash and Kibana will start automatically after installation is complete, if you want to stop them, type the following command in PowerShell prompt.
+    * `Logstash` - To stop LogStash
+        ```powershell
+            .\LogStash.bat -stop
+        ```
+    * `Kibana` - To stop Kibana
+        ```powershell
+            .\kibana.bat -stop 
+        ```
+* If you want to restart either of these services after stopping, just type the following command in PowerShell prompt:
+```powershell
+C:\Program Files\LogStash> .\LogStash.bat -start
+C:\Program Files\Kibana> .\kibana.bat -start 
+```
+
+```
+System.Net.HttpWebRequest is a class which provides common functionality for sending, receiving and parsing HTTP requests. It was designed to be used from managed code that does not target the .NET Framework 4.5 or later versions. Instead, it should only be used in interop scenarios where you want to access HttpWebRequest on earlier platforms.
+
+In .NET Core 2.x, Microsoft has released .NET Standard 2.0, which is a shared standard library that all the .NET runtimes adhere to. This means that there's no need for the WebRequest class anymore and so it has been removed in .NET Framework 4.6.1 and higher versions.
+```
+### Solution:
+```
+public static void GetIpAddress()
+{
+    // get IP address from a remote web site, e.g., www.google.com
+    string url = "http://www.google.com";
+    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+    request.Method = WebRequestMethods.Http.Head; // this is required!
+    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+    string ip = String.Empty;
+    foreach (CookieHeaderValue cookieHeaderValue in response.Cookies)
+    {
+        if ("X-Forwarded-For".Equals(cookieHeaderValue.Name))
+        {
+            ip += cookieHeaderValue.Value + ";";
+        }
+    }
+    Console.WriteLine("The IP address of the remote server is: " + ip);
+}
+```
+
+```json
+{"error":{"root_cause":[{"type":"transport_layer","reason":"Received SSL handshake failure when reading from the connection to [http://192.168.97.65:9300]."}],"type":"io_exception","reason":"Failed to read data from transport connection: javax.net.ssl.SSLHandshakeException: Received SSL handshake failure when reading from the connection to [http://192.168.97.65:9300]"}
+```
+
+### 解决方案：
+
+请将客户端中的SSL证书设为`truststore`.

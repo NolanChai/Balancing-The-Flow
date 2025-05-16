@@ -1,0 +1,54 @@
+Hello Everybody,
+I have a simple program in csharp to test network communication between the two machines.I am unable to connect my server and client at one place.Please help me out.I need to input ip address of server in the client and check the ping from that machine.
+Please share your solutions asap. I have tried lots of methods but still unable to solve my problem.
+I am pasting my code here.
+Server Code:-
+using System;
+using System.Net;
+using System.Net.Sockets;
+
+namespace Client_server_Ping
+{
+class Program
+{
+static void Main(string[] args)
+{
+TcpListener listener = new TcpListener(IPAddress.Parse("172.30.48.169"), 3544);
+listener.Start();
+while (true)
+{
+Socket socket = listener.AcceptSocket();
+string msg;
+Byte[] bytes = new byte[1024];
+int i = 0;
+i = socket.Receive(bytes);
+msg = System.Text.Encoding.UTF8.GetString(bytes, 0, i);
+Console.WriteLine("Message received from client : {0}", msg);
+socket.Close();
+}
+listener.Stop();
+Console.ReadKey();
+}
+}
+}
+Client Code:-
+using System;
+using System.Net;
+using System.Net.Sockets;
+
+namespace Client_server_Ping
+{
+class Program
+{
+static void Main(string[] args)
+{
+TcpClient client = new TcpClient("172.30.48.169", 3544);
+NetworkStream stream = client.GetStream();
+Byte[] bytes = Encoding.ASCII.GetBytes("Hello from Server!");
+int i;
+i = stream.Write(bytes, 0, bytes.Length);
+Console.WriteLine("Byes sent to server : {0}", i);
+Console.ReadKey();
+}
+}
+}

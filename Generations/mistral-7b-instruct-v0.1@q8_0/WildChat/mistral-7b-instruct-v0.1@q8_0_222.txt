@@ -1,0 +1,19 @@
+The issue with the code is that the variable `$value_title` is not being set properly. It seems like you are trying to access the `title` element within the `url` element, but it is not a child element of the `url` element in the XML file structure.
+
+In your code, the XML structure looks like this:
+```xml
+<urlset>
+    <url>
+        <loc>https://www.softonic.com/content/117201-812643/</loc>
+        <news>
+            <title>Lorem ipsum dolor sit amet</title>
+        </news>
+    </url>
+    <!-- other urls -->
+</urlset>
+```
+To access the `title` element, you need to access it directly from the parent node:
+```php
+$value_title = $latest_from_softonic->title[$i];
+```
+Also note that you are trying to access an array in your print\_r statement using the variable name `$value_title`. This is likely causing an error. You should use `print_r($latest_from_softonic)` instead.

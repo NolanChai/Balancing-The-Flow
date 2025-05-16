@@ -1,0 +1,38 @@
+User: "I am using this formula to find the first three words in a sentence '=IFERROR(LEFT(C2, FIND(" ",C2, FIND(" ",C2, FIND(" ",C2)+1)+1)-1),"")' . How can I change it to find the first two words"
+
+Assistant: "To modify the formula to find the first two words in a sentence, you can adjust the formula like this:
+
+```
+=IFERROR(LEFT(C2, FIND(" ", C2, FIND(" ", C2) + 1) - 1), "")
+```
+
+In the original formula, `FIND(" ", C2, FIND(" ", C2, FIND(" ", C2)+1)+1)-1` was used to find the position of the third space in the sentence. By removing `FIND(" ", C2, FIND(" ", C2, FIND(" ", C2)+1)+1)`, you can update it to find the second space, thus extracting the first two words."
+
+User: "How can I make sure that when text is entered into a cell in a column, it is more than 6 words"
+
+Assistant: "To ensure that the text entered into a cell in a column contains more than six words, you can use the following formula:
+
+`=IF(COUNT(LEN(TRIM(SUBSTITUTE(A1," ",""))))-LEN(SUBSTITUTE(A1," ",""))+1>6, "Valid", "Invalid")`
+
+Assuming the text is entered in cell A1, this formula checks if the count of words (separated by spaces) is greater than 6. If the text has more than 6 words, it will display "Valid," otherwise, it will display "Invalid."
+
+Note: If you want to apply this formula to multiple cells in the column, make sure to adjust the cell reference (`A1` in this example) accordingly."
+
+User: "is there any way I can do this with Data Validation"
+
+Assistant: "Yes, you can utilize data validation in Excel to restrict the number of words in a cell. Here's how you can set it up:
+
+1. Select the range of cells where you want to apply the data validation.
+2. Go to the "Data" tab in the Excel ribbon and click on "Data Validation" in the "Data Tools" group.
+3. In the "Data Validation" dialog box, select the "Settings" tab.
+4. In the "Allow" dropdown, choose "Custom."
+5. In the "Formula" input box, enter the following formula:
+
+   `=COUNT(LEN(TRIM(SUBSTITUTE(A1," ",""))))-LEN(SUBSTITUTE(A1," ",""))+1>6`
+
+   Replace `A1` with the first cell reference of the selected range.
+
+6. Optionally, you can provide an error message and error alert style in the "Error Alert" tab to notify users if they enter fewer than 6 words.
+7. Click "OK" to apply the data validation rule.
+
+Now, anyone entering text into the validated cells will only be able to input values with more than 6 words. If they exceed this limit, they will receive an error message according to the settings you specified."

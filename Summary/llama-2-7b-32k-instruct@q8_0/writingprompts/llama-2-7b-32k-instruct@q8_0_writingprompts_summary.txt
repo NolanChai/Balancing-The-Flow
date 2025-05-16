@@ -1,0 +1,13 @@
+Model: llama-2-7b-32k-instruct@q8_0
+Dataset: writingpromptsGenerated: 300 new examples
+Skipped: 0 existing examples
+Errors: 3 failed generations
+Retries: 68 retried generations
+Temperature: 0.9
+Top-p: 1.0
+Max tokens: 2048
+Generation time: 3370.24 seconds
+Surprisal calculation time: 326.39 seconds
+Average surprisal: 3.3201
+Total runtime: 3696.63 seconds
+Date: 2025-05-14 20:17:25

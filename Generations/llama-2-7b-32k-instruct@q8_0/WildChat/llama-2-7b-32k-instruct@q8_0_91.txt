@@ -1,0 +1,21 @@
+It seems that there are some issues with your Python environment, specifically related to the `pip` package and its ability to install packages with the `backend dependencies`.
+
+Here are some possible solutions to address this issue:
+
+1. Check the package versions: Make sure that you have the latest version of pip installed in your system. You can do this by running `python -m pip list --outdated` in your terminal and checking for any outdated packages. If there are any, update them by running `python -m pip install -U <package_name>`.
+2. Run pip with the `--no-cache-dir` option: Sometimes, the cache directory can become corrupted or outdated, leading to installation issues. You can try running pip with the `--no-cache-dir` option to bypass the cache and avoid any potential problems. The command would look like this: `python -m pip install dotenv==0.0.5 --no-cache-dir`.
+3. Install using a different package manager: If none of the above solutions work, you can try installing `dotenv` using a different package manager such as `apt-get` or `yum`. You can do this by running `sudo apt-get install python3.9 -y` on Ubuntu or `yum install python3.9 -y` on CentOS/RedHat. Once installed, you can try installing `dotenv` using the command `pip install dotenv`.
+
+Here's a step-by-step guide to help you resolve the issue:
+
+1. Open a terminal or command prompt and type `python3 -m pip install dotenv==0.0.5 --no-cache-dir`. Replace `dotenv` with the name of the package you want to install, and replace `0.0.5` with the version number. This will install the package using the `--no-cache-dir` flag, which disables caching, and pip3 will re-run the installation process.
+2. Once the installation is complete, you can check if the issue has been resolved by running `pip list`. If the package is installed successfully, it should be listed in the output.
+3. If the package is still not installed, try running the command with the `--no-use-pep517` flag. This will disable the use of Python 3's built-in types and functions, which can sometimes help resolve issues caused by conflicting dependencies. The command would look like this: `pip install dotenv==0.0.5 --no-use-pep517`.
+4. If none of the above solutions work, you can try deleting the virtual environment and re-creating it. To do this, you can run the following commands in your terminal or command prompt:
+```
+pip3 uninstall -r inf-delivery-sjtu-main
+python -m venv env_inf_delivery_sjtumain
+source env_inf_delivery_sjtumain/bin/activate
+pip install dotenv==0.0.5
+```
+The first command will uninstall the current version of pip and all its dependencies, followed by the second command which creates a new virtual environment. The third command activates the virtual environment and finally, the fourth command installs the required packages. Once these steps are completed, try running the `pip install dotenv==0.0.5` command again to see if it works.

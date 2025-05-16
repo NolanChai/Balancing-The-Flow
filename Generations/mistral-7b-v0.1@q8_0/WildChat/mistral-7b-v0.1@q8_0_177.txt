@@ -1,0 +1,193 @@
+I have an Excel sheet where I have a dropdown list in column A.
+Depending on the selection of that item in dropdown list, the value in column K will get updated.
+The dropdown list is also dynamically created using VBA code and so is the formula in column K.
+Whenever there is an event change in column A, I need to calculate the values in column K and display a timestamp in column J.
+I have set this up as follows:
+
+    Private Sub Worksheet_Change(ByVal Target As Range)
+If Not Intersect(Target, Range("A:A")) Is Nothing Then
+Application.EnableEvents = False
+Range("K:K").Calculate
+Application.EnableEvents = True
+End If
+TimeStampSimple Target, "G2", "J", "mm/dd/yyyy hh:mm:ss", False
+    End Sub
+
+The above code works fine, except that the time when the change in column A happens is not recorded correctly as it takes about 0.1 seconds after the event has occurred and only then the timestamp shows up in the cell. I understand this is due to the "calculate" command in VBA but I need both of them.
+What is the best way for me to get around this?
+
+[URL=http://www.ozgrid.com/forum/showthread.php?t=230272][IMG]http://www.ozgrid.com/forum/attachment.php?attachmentid=4813&d=1455690416[/IMG][/URL]
+
+This is what I want to achieve but I don't know how to write it in code. The column A has values that are automatically calculated by the formula and so I want them to be recalculated as soon as a change occurs.
+
+I have a working system with a large data set. The current program reads 45,000+ records from a DB and creates a single file with 131 columns of data. This process takes about 2 minutes (which includes the DB access time). I’m not happy with the speed.
+
+I wrote an updated version that does everything in memory and doesn’t touch the disk. It reads 45,000+ records from a DB and creates a single file with 131 columns of data. This process takes about 2 seconds (which includes the DB access time). I’m happy with this speed.
+
+I wanted to see if this version was any faster so I wrote a “comparison” program that reads the original output file in, then reads the new output file in and compares them byte by byte. This “comparison” process takes about 2 seconds (which includes the DB access time). I’m happy with this speed.
+
+The comparison program reads 45,000+ records from a DB and compares two files of 131 columns each. So it should take longer than the original version or the updated version. But it doesn’t. It takes only 2 seconds.
+
+Can someone explain why this is faster?
+
+Here is the code that does all the work:
+
+```
+public static void compareFiles(File file1, File file2) {
+    long time = System.currentTimeMillis();
+    try (BufferedReader reader1 = new BufferedReader(new InputStreamReader(new FileInputStream(file1), StandardCharsets.UTF_8));
+        BufferedReader reader2 = new BufferedReader(new InputStreamReader(new FileInputStream(file2), StandardCharsets.UTF_8))) {
+        for (String line : Arrays.asList(reader1.readLine(), reader2.readLine())) {
+            int c1, c2;
+            while ((c1 = reader1.read()) != -1) {
+                if ((c2 = reader2.read()) == -1 || c1 != c2) {
+                    throw new AssertionError();
+                }
+            }
+        }
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+    System.out.println("Comparison took: " + (System.currentTimeMillis() - time));
+}
+```
+
+This is the output from running this code on my laptop:
+
+[CODE]C:\Users\Jason>java Comparison 1160380544_2011-11-28.txt 1160380544_2011-11-28_new.txt Comparison took: 2092
+[/CODE]
+
+As you can see, it’s faster than the original program and much faster than the new one.
+
+Now you can create a conditional format for the column, if I understand your post correctly;  You want to show yes when there is no data in that cell. And vice versa, showing No if there is a value in that cell?
+
+I don't think the first one will work. What if F3 contains a formula? I know the second will work but I guess I'm wondering if there is a reason to use the ClearContents method. It seems that using it is potentially dangerous since the user might have entered a formula in that cell and you will delete their formula (and not just the contents, like the value=”" would do).
+
+I tried the first one and got an error “Compile error: Variable not defined”.
+
+When I have a range of cells to clear, how can I get the equivalent of:
+
+Range("E16:E20")
+
+within a loop that looks like this:
+
+```
+For Each C In Range("E3", Rows.Count).Cells
+        If C.Value <> "" Then
+            MsgBox "I found the value " & C.Value & vbNewLine & _
+                   " in cell " & C.Address(False, False) & vbNewLine & _
+                   " which is in Row " & C.Row
+            Range("E16:E20").Value = "" 'clears the range of cells from E16 to E20
+        End If
+Next C
+```
+
+It's for an Excel 5.0 macro (Excel 97) so no arrays are permitted.
+
+
+
+The CutCopyMode is a property that you can read or write, so if it is set to true it means that it has been set and therefor the excel application will copy the value being cut from cell A1.  You should check out some examples of how the CutCopyMode works before making the decision whether or not to use it for your purposes.  I would suggest starting off by just using a standard Copy function, and then checking if this is exactly what you want, before trying something like CutCopyMode.
+
+There are several ways that you can do this. One is using VBA which will work if you just need to update the cell once or twice but it's not something you would want to run every time the worksheet changes as it slows things down.
+
+Another way to do this would be to use a Watch Window, so that whenever any change is made in that sheet, a window appears showing which cells have been changed and you could then just click on those cells that need to be updated. This will work but I wouldn't want to see the watch window popping up every time the worksheet changes as it's not very efficient for doing any other type of work.
+
+What I would do if I wanted to make a formula dynamic in this way, is use an Offset function in conjunction with the Address function: =INDEX($F$3:$F$5,MATCH(1,ADDRESS(ROW(),COLUMN()),0)). The MATCH function will find the value that you need to update and the Address function will tell it where that cell is. For more information about how this formula works see my post here: https://www.excelforum.com/excel-formulas-and-functions/1486237-how-does-the-address-function-work.html
+
+This is much better because it's dynamic so as soon as any cell changes, the formula will update automatically without you having to do anything. This means that when you want to change the values in F3:F5 and have G3 updated accordingly, you would just select those cells and type a new value in them, then all you need to do is click in another cell (in this example cell C1) to have the formula update automatically. If you wanted to update that formula in multiple cells then you could always copy it into any number of empty cells using ctrl+c/ctrl+v or by right-clicking and selecting Paste Special->Paste Formulas only.
+
+You would also need to make sure that your INDEX function is set up as an absolute reference (using $F$3:$F$5) rather than a relative one ($F3:$F5). This way you can move the formula around without having to adjust it. It will automatically update itself based on where it is in relation to F3 and F5 which makes this technique much more powerful.
+
+You could also use some other functions such as SUMIFS, COUNTIFS etc but they would be a bit more complicated so I wouldn't recommend those for beginners.
+
+This is one of the most powerful features, especially if you're using the TS3 forums with your server. It allows you to import users directly from the forum user database.
+
+Forum integration is not available in the free version.
+
+First, you need to be an admin on the forum (and I assume that you've created a users group). Go to the forum settings and click on the tab called "Teamspeak 3 Client Integration":
+
+This will take you to the section where you can enter your TeamSpeak server details. Make sure you enter the port correctly, since this is not always the default port (9987) for TS3. If you don't know what it should be set to, go into your Teamspeak Server Query and type:
+
+> /serverquery info
+
+You'll then see something like this at the bottom of the page (it should be on the last line):
+
+> port: 9987
+
+That's what you should enter as the "Port" value. The other values are self explanatory, except for the "Group ID" which is a special value in the forum database that tells it to use this group for integrating users with the teamspeak server. If you don't know your groups ID (you must be an admin on the forum), then you can find it using PHPMyAdmin by going into the database, expanding the "ts3_groups" table and selecting "Show" next to "group_id":
+
+You can then copy the number at the end of the URL that is highlighted in green:
+
+Go back to the forum integration settings and paste in that value. You can now test the connection by clicking on the "Test Server Connection" button, which should result in a positive response.
+
+Now you need to add users from your teamspeak server. To do this, click on the "Import Users From Server" button:
+
+The page will then display a list of users that exist in your teamspeak server but are not yet added as forum members. It should also tell you why they cannot be added (either because they've been blocked or because their nickname is too long). You can check the boxes next to them and click on "Add Users" to add all selected users at once, or click on one of their names to individually add them (or block them from being imported):
+
+You can then go back to the forum and check that these users are now added as members of the group you specified earlier. If they aren't, it could mean there was something wrong with your teamspeak server configuration or that their nickname is too long for the forums (maximum length = 15 characters).
+
+You can use this tool to update the teamspeak server data at any time - it doesn't matter if you're adding new users from the forum or not, since this will always update your teamspeak group with new users as they register on the forum.
+
+That’s not right at all. That would be a reference to `Now()` which is non-volatile; it’s not going to change. If you use the `=IFERROR(NOW())` formula, then it will be volatile and will recalculate on every change. You could also do
+`=IF(ISBLANK($A$3), NOW(), $A$3)`. This is non-volatile but it’s not really necessary in your case.
+
+So the idea behind this is that the `NOW()` function can only be used inside a formula and the result will be recalculated on every change; however, if you put the function into a cell using the `Function` method as described here (https://exceljet.net/formula/create-a-custom-function), then the result is non-volatile and won’t update with changes to other cells.
+
+I was looking for a way to make excel sheets more user friendly (for clients) by hiding certain parts of the document. However, I have come across the problem of that if i hide cells using VB code and then want to unhide them at a later stage in the program (at another click event etc), does this take any extra time?
+
+I know it will be faster to hide using the ribbon, but the client needs it hidden automatically so they cant see it. I have used the following code to do that:
+
+```
+' Hides/Unhides Rows depending on values
+
+    If Me.Option1 = True Then
+
+        If Me.Option2 = False And Me.Option3 = False And Me.Option4 = False And Me.Option5 = False Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+        ElseIf Me.Option2 = True And Me.Option3 = False And Me.Option4 = False And Me.Option5 = False Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+            Sheets("Sheet2").Range("B14:K16").Hidden = True
+        ElseIf Me.Option3 = True And Me.Option4 = False And Me.Option5 = False Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+            Sheets("Sheet2").Range("B16:K18").Hidden = True
+        ElseIf Me.Option4 = True And Me.Option5 = False Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+            Sheets("Sheet2").Range("B18:K20").Hidden = True
+        ElseIf Me.Option5 = True Then
+            For i = 2 To 7
+                Sheets("Sheet2").Rows(i).EntireRow.Hidden = False
+            Next
+            Sheets("Sheet2").Range("B20:K21").Hidden = True
+        End If
+    End If
+```
+
+The client does not need to see this code as it is just a workaround for a problem. They need the cells hidden so they are unable to change them and make the document invalid, but I would like to keep the changes made in vb as minimal as possible to avoid any slowdown.
+
+Any help greatly appreciated!
+
+Hi Sasikumar,
+
+I think you are looking for UDF (User Defined Function). Here is an example for UDF using Excel VBA.
+
+```
+Public Function VolatileUDF(Rng As Range) As String
+Dim rCount As Long
+Dim C As Variant
+On Error Resume Next
+rCount = Rng.Rows.Count
+C = Rng.Cells(1, 1).Value
+VolatileUDF = IIf(Not IsError(C), "Yes", "No")
+End Function
+```
+
+Now place the function in cell A1 and see what happens when you change any other value in the sheet.

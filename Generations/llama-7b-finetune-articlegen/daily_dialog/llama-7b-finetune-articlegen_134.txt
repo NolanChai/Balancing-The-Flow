@@ -1,0 +1,48 @@
+* I got my answer from this answer:  https://www.quora.com/What-can-I-get-for-you-today-and-the-next-turns-of-this-dialog?share=1 . It seems that it is a "conversation", but the program does not seem to be able to detect any "pauses" in between. 
+
+### Question:
+* I would like to have the whole dialog as one sentence. Can anyone help me ? Thanks !
+
+### Solution (2):
+```java
+public class Main {
+    public static void main(String[] args) throws FileNotFoundException, IOException{
+        Scanner sc = new Scanner(System.in);
+        int userInput;
+        while(true){
+            System.out.println("What can I get for you today ?");
+            userInput = sc.nextInt();
+            
+            switch (userInput) {
+                case 1:  System.out.print("Could I get a hamburger , please ? ");
+                    break;
+                case 2:  System.out.println("Would you like cheese on that ?");
+                    if(sc.nextInt() == 0){
+                        break;
+                    }
+                    else {System.out.print("No , thank you . ");}
+                    break;
+                case 3: System.out.println("Would you like a driink ?");
+            }
+            
+        }    
+        
+    }
+}
+```
+
+```
+The order taker asks the customer, “What can I get for you today?” The customer responds by asking for a hamburger. The next prompt is, “Would you like cheese on that?” The customer does not wish to have cheese on their burger and responds with, “No, thank you.” The order taker asks the customer if they would like any drinks, and the customer asks for a soda, specifically requesting a soft drink. When asked what kind of soda the customer prefers, she responds that she wants a cola.
+```
+
+[Lynne](https://stackoverflow.com/users/13540146/lynne) said:
+
+>I would write the dialogue this way: 
+>"What can I get for you today?" 
+>"Could I get a hamburger, please?"  
+>"Would you like cheese on that? " (change this to "May I ask if you want cheese?" or "Would you like any cheese with your hamburger?")  
+>"No. Thank you." 
+>"What kind of soda would you like? " ("May I have a Sprite, please?" is a request; "What kind of soda would you like" is a question.)
+
+> 
+> [Help me write the next turn in this dialog with no explanation or format changes.](https://www.reddit.com/r/dailyprogrammer/comments/316p0l/help_me_write_the_next_turn_in_this_dialog_with/)

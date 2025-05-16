@@ -1,0 +1,22 @@
+该函数接受两个参数，第一个是DataFrame对象，名为'df'，其中包听一个列'opticalpower'；第二个参数是一个整数，表示指定的时长，以秒为单位。
+
+这个函数使用了Python内置的list对象来实现，并且不返回任何结果。
+
+该函数首先从DataFrame中获取'opticalpower'列的值。然后循环访问每一行的值，判断当前行的长度是否大于指定的时长。如果大于，则截取这行的最初'signal'部分，并将其添加到一个list中。
+
+如果不大于，则在需要的位置补充0值，然后将这行添加到list中。
+
+最后返回这个list。
+
+可以看出，该函数会截取signal的前'signal_length'个元素，并在需要时使用0补充。
+
+此外，由于使用了Python内置的list对象来实现，因此可以保持代码简洁和防御式编程。
+
+请注意，这个函数并不会修改DataFrame的值，而是返回一个新的列，所以需要使用pandas.DataFrame().apply()函数来应用该函数。
+
+例如：
+```
+import pandas as pd
+
+# 创建示例DataFrame
+df = pd.DataFrame({'opticalpower':

@@ -1,0 +1,189 @@
+\end{code}
+
+Comment: I think you need to tell the user if there's something that needs to be changed.  How do we know?  Also, how is the `TimeStampSimple` function defined?
+
+Answer: Your problem is here
+
+\begin{code}
+Application.EnableEvents = True
+\end{code}
+
+You can't use it in a sub as it will change events to true. You need to disable them after each calculation and enable them before the next one
+
+Comment: @user2986137 You haven't given any indication what you have tried so far, so no idea on how to proceed. Please add some code which shows your best effort at solving this problem and we will help from there.
+
+Answer: In order to achieve what you are after, you need a little more work than just setting the range to be calculated by changing its row.
+
+If I understand correctly, you want the worksheet to calculate the entire column K when any value changes in column A?
+
+So far we have two options, `TimeStampSimple` and `CalculateUntil`, both are very useful but only one of them will suit your needs.
+\begin{itemize}
+\item \strong{`TimeStampSimple`} - this method is great for when you want to track the change in time, however it can't calculate all cells as you require since it won't recalculate a range until there has been a change to that particular cell.
+\item \strong{`CalculateUntil`} - this method is very useful because you can pass a range into which you want your calculated values to be placed, and it will keep on calculating the range until there are no changes to any of its cells. It can also work for other ranges too if required, as long as those calculations take place in the same worksheet.
+\end{itemize}
+
+I have attached a sample spreadsheet that demonstrates both methods. You can see which one you find more useful.
+<a href="https://i.stack.imgur.com/wB27T.jpg" rel="nofollow noreferrer"><IMAGE></a>
+
+Comment: I don't think the answer to that question has anything to do with what I asked.  The point of the comment was that the OP was comparing this new code to his original code, which isn't relevant to the issue at hand because he's not using any of his previous code in this new one.
+
+Comment: @Pacerier Well he says "comparing this new code to my original code which is better" I think that does relate to it because it means you shouldn't be comparing them since the old version is better and irrelevant to what we're doing here, so if you compare a better thing to a worse thing, you should probably use the better thing.
+
+Comment: @Pacerier and why did I add the
+
+\end{code}
+
+Comment: What does the rest of your code look like?
+
+Comment: Do you need to have `On Error Resume Next` on top of your module?  Also, what exactly is your question?
+
+Answer: A couple things. First, your On Error statement should be outside the procedure declaration. Secondly, when you are declaring a function or subroutine, don't declare the parameters as "ByVal" or "Option Base." Just leave it off.
+
+In other words, remove all of this stuff:
+
+\begin{code}
+Option Explicit On
+
+Private Sub Worksheet_BeforeDoubleClick(ByVal Target As Range, Cancel As Boolean)
+'Declaration
+    Dim count As Long
+'Code
+    Application.EnableEvents = False
+        If Not Intersect(Target, Range("I16")) Is Nothing Then 'change the range to match your selected column range
+            Application.EnableEvents = True
+                If IsEmpty(Target) Then
+                    Target.Value = "Yes"
+                ElseIf Target.Value = "Yes" Then
+                    Target.Value = "No"
+                ElseIf Target.Value = "No" Then
+                    Target.Value = ""
+\end{code}
+
+Try this instead:
+
+\begin{code}
+Option Explicit On
+'Declaration
+Private Sub Worksheet_BeforeDoubleClick(Target As Range, Cancel As Boolean)
+    'Code
+    If Not Intersect(Target, Range("I16")) Is Nothing Then 'change the range to match your selected column range
+        Application.EnableEvents = True
+            If IsEmpty(Target) Then
+                Target.Value = "Yes"
+            ElseIf Target.Value = "Yes" Then
+                Target.Value = "No"
+            ElseIf Target.Value = "No" Then
+                Target.Value = ""
+\end{code}
+
+I'd go with:
+Range("F3").FormulaR1C1 = ""
+Since it looks like your formula is using the R1C1 notation, that is, using column letters.
+You may have to unpivot your data in a different worksheet before copying and pasting the results back into Excel.
+
+I'm not sure why it worked on the first one but not the second. In fact, I just did some tests and I don't think that will work at all. The syntax is Range("D22:D25") as a range object - you can't have a range of cells in your formula. You might want to look at this post:
+I'm not sure why it worked on the first one but not the second. In fact, I just did some tests and I don't think that will work at all. The syntax is Range("D22:D25") as a range object - you can't have a range of cells in your formula. You might want to look at this post: [url]http://www.excelforum.com/showthread.php?p=394821&[/url]
+How would I add another cell and continue the code? For example, if I put this code in Cell D100 on a sheet called "Rules" how can I make it so that it will also include all of the cells from D1 to D99 (for instance) as well as cell D100.
+How would I add another cell and continue the code? For example, if I put this code in Cell D100 on a sheet called "Rules" how can I make it so that it will also include all of the cells from D1 to D99 (for instance) as well as cell D100. :confused:
+Is there any way I could just add more lines of code without having to keep copying and pasting the formula over everytime?
+Is there any way I could just add more lines of code without having to keep copying and pasting the formula over everytime? Thanks again!
+How would you know what range to copy from if you don't know how big it is going to be. You can use an array formula but you have to be careful in which cells you enter the formula. And no, I won't give you a sample as that will defeat the whole purpose of having you do this yourself.
+How would you know what range to copy from if you don't know how big it is going to be. You can use an array formula but you have to be careful in which cells you enter the formula. And no, I won't give you a sample as that will defeat the whole purpose of having you do this yourself. :)
+I'm just starting to learn how excel works (so my questions might seem silly at times). If I understand correctly, an array formula would be something like this:
+=IF(A1="Yes","Yes!",IF(A1="No","No.",IF(B1="Yes","Yes!",IF(B1="No","No.")))
+I'm just starting to learn how excel works (so my questions might seem silly at times). If I understand correctly, an array formula would be something like this: =IF(A1="Yes","Yes!",IF(A1="No","No.",IF(B1="Yes","Yes!",IF(B1="No","No."))))
+It looks more complicated than it is. Take a look at the posts I've done on array formulas and read my tips for using them - especially the tip about the Enter key.
+It looks more complicated than it is. Take a look at the posts I've done on array formulas and read my tips for using them - especially the tip about the Enter key. :D
+
+Comment: Hi, welcome to [so], please don't use comments for extended discussion - edit your question instead. Please also provide some code which you have tried so far, as that will make it easier for people to help you out with your issue.
+
+Answer: In my code, the sheet is a Worksheet object which was passed from an event handler in another procedure (not shown). The "Sheet" variable represents the sheet which contains the textbox. If you are just doing this, you can simply put your reset line as the first thing in the sub (after declaring it).
+
+\begin{code}
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+    Application.CutCopyMode = False
+End Sub
+\end{code}
+
+I have a workbook with 2 sheets. One sheet has data for employees that need to be transferred to another sheet. The other sheet is where I put the formulas that reference these cells.
+
+Sheet1:
+<IMAGE>
+
+Sheet2:
+<IMAGE>
+
+[Sheet1](http://i.stack.imgur.com/8z3Cv.jpg) [Sheet 2](http://i.stack.imgur.com/R0bAx.jpg)
+
+I need the formula in G3 to update when you change a value in F3. I have tried many things, but this is as close as i could get to working:
+
+\begin{code}
+=INDEX(Sheet2!$E:$E, MATCH(F3, Sheet1!A:A, 0))
+\end{code}
+
+But this doesn't update when you change the value in F3. Is there a faster way to do it?
+
+Comment: You can use an indirect array formula with =INDEX(Sheet2!$E:$E,,MATCH(FILTER($A$1:$A,$C$1:$C=$F3),Sheet1!$A:$A,0)) and then wrap the whole thing in an array-entered formula.  However, I can't guarantee that this will update the way you want it to - i.e., only when F3 changes.
+
+Comment: You could put a trigger on Sheet1!F3 (or A3) that calls `WorksheetFunction.Refresh()` and then use INDEX(Sheet2!$E:$E,,MATCH($A3,Sheet1!$A:$A,0)) - although this would work for as long as there is only one formula to update, and it doesn't take into account that you may be looking at a range of formulas on the sheet.
+
+Answer: You can use an indirect array formula with =INDEX(Sheet2!$E:$E,,MATCH(FILTER($A$1:$A,$C$1:$C=$F3),Sheet1!$A:$A,0)) and then wrap the whole thing in an array-entered formula. However, I can't guarantee that this will update the way you want it to - i.e., only when F3 changes.
+
+Comment: This worked perfectly. It updates instantly as soon as I change a value in sheet1!F3. Thanks!
+
+I am sorry but I am not sure about the meaning of INST tag, please rephrase your question with more specific explanation so that I can help you better.
+Instructions are a type of question which provides information on how the candidate should approach the questions and what the best way is to answer these.
+Instructions questions come in different forms (like essays, case studies). In most cases, they require some analysis or evaluation. They also vary in complexity depending on whether the task is to identify key issues, compare points of view, apply a concept, form an argument etc. The information provided within an instructions question should be sufficient for candidates to complete the task effectively and efficiently but may not necessarily cover all relevant issues.
+Answers are based on the information provided in the instructions. Some answers could be right or wrong because there is more than one way of dealing with them. If candidates’ answer is incorrect, then it does not mean that they did not follow the instructions correctly, it means their interpretation of what was written may have been different from yours.
+Answers can only be scored if all parts of each instruction are covered completely by every candidate's response(s). However, you must make sure there is no confusion between instructions and answers themselves before awarding marks!
+
+As far as I can see you are correct, though the point is that now() returns a date, not a time, so there would be no reason to store it as a VOID type.
+The code I posted was for an example on how to write a function with a parameter (date). The same applies if you want to make a function returning another value which could also be a date. The only difference is that the arguments passed are not optional so you can't have the "&" like in the example.
+I would argue that Now() is a time and not a date, since it doesn't include a year, as well as not being stored internally as a VOID type. In Excel there are functions to add years (YEAR(), YEARFRAC()) or to use a specific year (EOMONTH()).
+It seems that the formula would be written like this: =MyFunc(DateValue($B$3, "yyyy-mm-dd"))
+If the VOID type is not used then it makes no difference if it has years, months or days.
+The function needs to return a date in the form YYYY-MM-DD for Excel to understand that the parameters are dates and so I used YEARFRAC() in my example. It's the only way I know how to return a date (in the form required by Excel) from VOID in VBA.
+If you want to create your own function you will have to do it yourself. That would be easy if Excel was in a "normal" programming language with dates stored as integer numbers since you could just do something like:
+Integer numberYear = Year()
+Integer numberMonth = Month(numberYear)
+Integer numberDayOfTheMonth = DayOfWeek(numberYear, numberMonth) + 1
+But I don't see how to get the same result in VBA. The only way I found was to do something like this:
+Dim numberYear As Integer, numberMonth As Integer
+Dim numberDayOfTheMonth As Double
+If Right$(DateValue($B$3, "yyyy-mm-dd"), 4) = "00" Then
+numberYear = Year(DateValue($B$3)) + 1900
+numberYear = Year(DateValue($B$3))
+numberDayOfTheMonth = DayOfWeek(Year(DateValue($B$3)), Month(DateValue($B$3))) + 1
+MsgBox "Error, not a valid date!"
+
+I have a fairly large workbook with 50+ sheets and I'm wondering if the following will cause my sheet to run slowly. In this instance, the user is entering data into one cell and then using that cell value in another (already populated) cell somewhere else on the sheet. The function will be written on each of the 50 or so sheets.
+=IF(ISERROR(VLOOKUP($H$19,$D$3:$F$8,4)),"",INDEX(E:K,MATCH(1,-VLOOKUP(C2,$A$27:$B$63,4),0)))
+The $H$19 would be the cell value that the user is entering into the first cell and then the formula would look up a list in another column (say C) and return the appropriate cell from another list. I know VLOOKUP can sometimes slow things down but what about this formula? Does it have a chance of causing the sheet to run slowly?
+I don't think so, at least not if you use volookup with exact match. If you are using a volookup where you compare part of a string and get the last 10 characters that could be an issue.
+
+The above is a simple question. If I run the formula in G3 and change the value of F3 it affects D3 to D24 as well and I need them all to be changed when I change G3. How can I do that? Please help me, thanks for your time.
+You could try this: https://www.excelforum.com/t781906-change-multiple-cells-values-if-you-change-another-cell-value.
+Thanks. Your example works fine on my spreadsheet but not in the workbook I am currently working on. I have done a screen capture of what's happening when i run your code and added it here https://www.excelforum.com/attachments/excel-programming/67321d145098834-unexpected-result.zip
+That formula works perfectly in my workbook, but you might want to try something more complex with a different sheet so that you can narrow it down further.
+@JvdV, You've got some great tips on here about volatile and non-volatile formulas! I am wondering if your suggestion of making G3 a reference would work in this particular case because the formula in G3 is not simply a reference to F3 but a complex formula.
+I have just noticed that your code only updates the rows under F3 but I want to update all rows on the sheet. It seems like there might be an easier way of doing it than looping through each row?
+@Brad, Sorry for delay.
+The idea is to get rid off volatile formula in G3 and use reference cell. The reason is because there is no need to recalculate the whole sheet whenever you change the value of one cell.
+I have just noticed that your code only updates the rows under F3 but I want to update all rows on the sheet. It seems like there might be an easier way of doing it than looping through each row? - See more at: https://www.excelforum.com/t781906-change-multiple-cells-values-if-you-change-another-cell-value#comment485032
+As @JvdV mentioned, I am also trying to figure out how to do this using references. However, in my situation it seems like the volatile formula is needed because some cells are dependent on G3 which is a reference to another cell, F3. The values of other rows will only be updated if F3 changes and they're calculated from that point forward (like F6). If I try to make all formulas non-volatile then the whole sheet recalculates when I change anything in any cell including G3.
+I'm not sure how your code works since you didn't say which cells it updates but here is an example of what my sheets look like:
+https://www.excelforum.com/attachments/excel-programming/67321d145098834-unexpected-result.zip
+My data is in sheet "Providers" and the formula I am using to calculate these numbers is in sheet "Data". This is what I'm trying to do: when a cell on Data changes then all cells that are calculated from it (like F6) update automatically. The only reason G3 has volatile set is because there are formulas above it which use it as reference and so if G3 changes these formulae don't calculate correctly.
+So, in other words my question is: can I get the volatility of F3 to affect all cells that depend on it including those below it without causing recalculation on the whole sheet?
+@Brad - Sorry for delay.
+The idea is to get rid off volatile formula in G3 and use reference cell. The reason is because there is no need to recalculate the whole sheet whenever you change the value of one cell.- See more at: https://www.excelforum.com/t781906-change-multiple-cells-values-if-you-change-another-cell-value#comment485279
+@JvdV, Thanks again for your reply. I'm not sure how your code works since you didn't say which cells it updates but here is an example of what my sheets look like: https://www.excelforum.com/attachments/excel-programming/67321d145098834-unexpected-result.zip
+@Brad - As you can see, the formula in G3 is not simply a reference to F3 but it is more complex and I don't know how to make it non-volatile. This formula is used to calculate D1:D24 on sheet Providers so if I want these cells to update when F3 changes then G3 needs to be volatile since that's where the formula resides.
+So, in other words my question is: can I get the volatility of F3 to affect all cells that depend on it including those below it without causing recalculation on the whole sheet? - See more at: https://www.excelforum.com/t781906-change-multiple-cells-values-if-you-change-another-cell-value#comment485293
+@JvdV, I'm not sure how your code works since you didn't say which cells it updates but here is an example of what my sheets look like: https://www.excelforum.com/attachments/excel-programming/67321d145098834-unexpected-result.zip
+@Brad - As you can see, the formula in G3 is not simply a reference to F3 but it is more complex and I don't know how to make it non-volatile. This formula is used to calculate D1:D24 on sheet Providers so if I want these cells to update when F3 changes then G3 needs to be volatile since that's where the formula resides.- See more at: https://www.excelforum.com/t781906-change-multiple-cells-values-if-you-change-another-cell-value#comment485312
+I think it would be easier to make G3 a reference and then recalculate the whole sheet by using a button on F3. In your example, I believe that your formula is:    =IFERROR(INDEX(Providers!D$3:D$64,MATCH(F3,Providers!C$3:C$64,0)),"")  . If you were to change G3 from the reference to be the following:    G3="=IFERROR(INDEX(Providers!D$3:D$64,MATCH(F3,Providers!C$3:C$64,0)),"")  , then the sheet will recalculate when F3 changes. - See more at: https://www.excelforum.com/t781906-change-multiple-cells-values-if-you-change-another-cell-value#comment485263
+@JvdV, I think it would be easier to make G3 a reference and then recalculate the whole sheet by using a button on F3. In your example, I believe that your formula is:    =IFERROR(INDEX(Providers!D$3:D$64,MATCH(F3,Providers!C$3:C$64,0)),"")  . If you were to change G3 from the reference to be the following:    G3="=IFERROR(INDEX(Providers!D$3:D$64,MATCH(F3,Providers!C$3:C$64,0)),"")  , then the sheet will recalculate when F3 changes.- See more at: https://www.excelforum.com/t781906-change-multiple-cells-values-if-you-change-another-cell-value#comment485265
+I have just done some testing and it seems that changing G3 to be a reference makes the whole sheet recalculate whenever I change F3. I'm not sure why this would happen since G3 is not referencing anything other than formulas above it but when I do this nothing on my spreadsheet updates except for the cells under F3. This is what happens if I have the code you posted and then click "Update" on your button:
+I can get around this problem by using a VBA subroutine to loop through each row updating all cells that should be updated but I'm wondering if there is another way of doing it without having to run VBA? If not, do you think changing G3 from the reference to =IFERROR(INDEX... would work?
+@Brad - I have just done some testing and it seems that changing G3 to be a reference makes the whole sheet recalculate whenever I change F3. I'm not sure why this would happen since G3 is not referencing anything other than formulas above it but when I do this nothing on my spreadsheet updates except for the cells under F3. This is what happens if I have the code you

@@ -1,0 +1,18 @@
+```python
+#! /usr/bin/env python3
+import sys, re
+s = sys.stdin.readline().rstrip()
+def solution(s):
+    ans = []
+    p = re.findall('.*([^,].*?)', s)
+    for word in p:
+        if ',' not in word and '.' not in word :
+            ans.append(word)
+return ans
+```
+
+### Output:
+```python
+>>> solution(s)
+['I\'ve', 'It\'s', 'It', 'Thanks', 'Nice', 'Late', 'running', 'talking']
+```

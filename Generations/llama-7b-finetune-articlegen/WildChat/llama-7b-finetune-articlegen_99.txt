@@ -1,0 +1,43 @@
+See if this helps. 
+
+```vb
+Function FIND(FindWhat As String, FindIn As Variant) As Integer
+'Function that finds where the word is in the passed string.
+Dim i As Integer
+i = InStr(1, FindIn, FindWhat)
+If i > 0 Then 'Find what was found?
+    FIND = i + LBound(Split(FindIn)) + 1
+Else
+    FIND = -1 'No match found
+End If
+```
+Then you can use this to find the first word in your sentence.
+
+```vb
+Dim str As String
+str = "The quick brown fox jumps over the lazy dog."
+'Finds where each word starts...
+Dim i As Integer
+i = InStr(1, str, vbLf) 'Look for a blank line to start a new sentence.
+If i > 0 Then
+    ReDim arrWords(i - LBound(Split(str)) + 1 To 0) 'Add one to the end of this array because we want to be able to get the words in order.
+End If
+arrWords = Split(str, vbLf)
+'Loop through and find where each word starts...
+Dim i As Integer
+For i = LBound(arrWords) + 1 To UBound(arrWords) Step -1 'Get the first word in order.
+    Dim s As String
+    s = Mid$(arrWords(i), InStrRev(arrWords(i), " ") - 1, 1)
+    ReDim Preserve arrWords(LBound(arrWords) To i) 'Remove the first word from the array.
+Next i
+```
+
+The answer to this question will vary depending on what version of Excel you are using.
+
+For the latest versions of Excel (2007 and later), use the Data > Text to columns feature and set the delimiter value to . (dot). You can also just copy/paste the data from another application that is correctly formatted (e.g. Notepad) into a blank column in Excel. If you don't have any other formatting or characters, then this should work fine.
+
+For versions before 2007, there isn't a built-in option to limit the length of text in a cell, but if you are entering data from another application (e.g. Notepad) and you don't need all of it, copy/paste the first X number of characters that you require into your Excel document. You can also just manually edit the data when it is entered by right-clicking on a cell and then choosing "AutoFill" from the drop down menu (this will add additional rows at the bottom of each column automatically).
+
+Hope this helps!
+
+You need to create a list of allowable values and then apply that on the form. It is not possible to validate an entire field (as you can see above, even if we type in the wrong thing it will still save)

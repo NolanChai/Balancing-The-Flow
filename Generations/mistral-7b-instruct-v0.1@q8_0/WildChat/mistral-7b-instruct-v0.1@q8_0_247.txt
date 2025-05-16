@@ -1,0 +1,7 @@
+This is a Python function that takes in two arguments: `df` (a pandas dataframe) and `signal_length` (an integer). The function performs the following steps:
+
+1. It initializes an empty list called `truncated_signal`.
+2. It iterates over each signal in the `opticalpower` column of the `df` dataframe using a for loop.
+3. For each signal, it checks if the length of the signal is at least equal to the value of `signal_length`. If it is, it appends the first `signal_length` values of the signal (i.e., its prefix) to the `truncated_signal` list.
+4. If the length of the signal is less than `signal_length`, it pads the signal with zeros at the end until it reaches the desired length, and then appends the entire signal (including the padding) to the `truncated_signal` list.
+5. Once all signals in `df` have been processed, the function returns the `truncated_signal` list.

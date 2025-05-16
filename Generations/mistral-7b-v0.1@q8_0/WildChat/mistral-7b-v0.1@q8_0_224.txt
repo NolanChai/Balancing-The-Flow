@@ -1,0 +1,73 @@
+[INF]
+
+- When Jade’s water breaks, a Myrmex Larva emerges from the Queen’s womb.
+- The Myrmex Larva would be the same size as an adult Myrmex, and it can move around freely - and has its own independent AI.
+- It doesn’t have any weapons or armor to defend itself - so [player] will need to protect it from harm.
+- Jade will have her arms crossed over her chest when the Myrmex Larva is born, showing that she is vulnerable as she takes care of her child.
+- After giving birth, Jade will have a sad expression on her face - and she would look down at the Myrmex Larva with concern.
+
+(If [player] interacts with Jade during this day 1 scene)
+
+([player]: "Hi, Queen.")
+
+(Jade: "[player], thank you for saving me from those thieves!")
+
+([player]: "You're welcome...")
+
+(Jade: "I will never forget the kindness you've shown my people. You are an honorary Jungle Myrmex now!")
+
+([player]: "Thanks for making me one of you... but I think that's not quite right.")
+
+(Jade: "Hmph! There is nothing wrong with becoming an ant, [player]!")
+
+([player]: "Sorry...")
+
+(Jade: "But if you insist on remaining as a human, then I must give you something to remember me by. My only daughter has just been born... and she needs a name.")
+
+[/INF]
+
+- (If [player] interacts with Jade after giving birth)
+
+([player]: "I don't need anything, Queen...")
+
+(Jade: "Then you must call my daughter by her full name!")
+
+([player]: "Okay, I will.")
+
+(Jade: "[player], this is my only daughter. Her name is Myrmexia Jade, the heiress to my throne. She needs a playmate, but her mother isn't able to take care of her now. Please look after Myrmexia Jade for me.")
+
+([player]: "Alright...")
+
+(Jade: "Myrmexia, you must stay here with [player] until I return!")
+
+([player]: "Sure thing, Queen...")
+
+- (If [player] interacts with the Myrmex Larva after it is born)
+
+([player]: "[Myrmexia Jade], what a cute baby girl you are...")
+
+(Jade: "I am glad you find my daughter beautiful. Please take good care of her, and she will grow to be an even more beautiful young woman someday!")
+
+- (If [player] interacts with the Myrmex Larva after it is born and Jade has given birth)
+
+([player]: "Myrmexia Jade...")
+
+(Jade: "What are you doing? You've already named her, haven't you?")
+
+([player]: "Yeah...")
+
+(Jade: "Then you must look after my daughter from now on!")
+
+- (If [player] interacts with the Myrmex Larva before Jade has given birth and doesn't name it yet)
+
+([player]: "[Myrmexia Jade], what a cute baby girl you are...")
+
+(Jade: "I am glad you find my daughter beautiful. Please take good care of her, and she will grow to be an even more beautiful young woman someday!")
+
+- (If [player] interacts with the Myrmex Larva before Jade has given birth and names it)
+
+([player]: "[Myrmexia Jade], what a cute baby girl you are...")
+
+(Jade: "You've named my daughter? How lovely!")
+
+[/INF]

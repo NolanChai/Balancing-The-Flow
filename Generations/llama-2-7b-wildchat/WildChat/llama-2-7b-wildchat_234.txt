@@ -1,0 +1,34 @@
+Riscrivi il codice del tuo sito in modo da implementare i suggerimenti seguenti.
+
+Sulle righe sottostanti, aggiungi una nuova sezione di elementi "abbellimento" (dove l'abbellimento è il nome dell'elemento HTML). Per ogni elemento abbellimento, specifica il suo tipo e descrive come dovrebbe essere presentato.
+
+**Elementi abbellimenti:**
+
+- `<h1>Titolo del post</h1>`
+    - Descrizione: "Titolo del post" è l'elemento principale del post. Deve essere di grandi dimensioni e riportare la prima parola del titolo del post con caratteri grandi.
+- `<p class="intro">Introduzione</p>`
+    - Descrizione: "Introduzione" descrive il contenuto generale del post. È importante dare una breve introduzione di quello che il lettore potrà trovare nel resto del post.
+- `<article><h2>Section title</h2></article>`
+    - Descrizione: "Section title" è l'elemento principale della sezione di contenuto. Deve essere di grandi dimensioni e riportare la prima parola della sezione con caratteri grandi.
+- `<section><header>Section header</header><p>Description</p></section>`
+    - Descrizione: "Section header" è il titolo dell'elemento principale della sezione. Deve essere di grandi dimensioni e riportare la prima parola della sezione con caratteri grandi. "Description" descrive il contenuto della sezione in dettaglio.
+- `<footer><p>Copyright &copy; 2023</p></footer>`
+    - Descrizione: "Copyright &copy;" riporta la data e l'autore del post. Deve essere un elemento di piccole dimensioni e non dovrebbe avere caratteri grandi.
+- `<link rel="canonical" href="https://example.com/blog/post-url">`
+    - Descrizione: "Rel = canonical" indica che il contenuto del post è stato copiato da un altro sito web. Deve essere un elemento di piccole dimensioni e non dovrebbe avere caratteri grandi.
+- `<script src="https://example.com/js/script.js"></script>`
+    - Descrizione: "Script" riporta il codice JavaScript necessario per l'esecuzione del post. Deve essere un elemento di piccole dimensioni e non dovrebbe avere caratteri grandi.
+- `<noscript>Immagini/icone che non sono disponibili per gli utenti che hanno disabilitato il supporto al JavaScript</noscript>`
+    - Descrizione: "Noscript" descrive le immagini o i link che non vengono visualizzati ai lettori con supporto JS disattivato. Deve essere un elemento di piccole dimensioni e non dovrebbe avere caratteri grandi.
+- `<iframe src="https://www.youtube.com/embed/video_id" frameborder="0" allowfullscreen></iframe>`
+    - Descrizione: "Iframe" riporta la visione di un video sul tuo sito web. Deve essere un elemento di piccole dimensioni e non dovrebbe avere caratteri grandi.
+- `<nav><ul>Lista dei menu</ul></nav>`
+    - Descrizione: "Nav" è il menù principale del tuo sito, contenente tutte le sezioni principali del tuo sito web. Deve essere un elemento di piccole dimensioni e non dovrebbe avere caratteri grandi. "Ul" descrive la lista dei menu che devono essere visibili al lettore durante la navigazione del tuo sito web.
+- `<button>Button with text</button>`
+    - Descrizione: "Button" è un elemento di input, utilizzato per richiedere azioni da parte dell'utente, come adesione al sito, condivisione del post o visita della pagina web. Deve essere un elemento di piccole dimensioni e non dovrebbe avere caratteri grandi. "Button with text" descrive la struttura dei campi di input per inserire il testo da visualizzare nel bottoni.
+- `<form method="post"><label>Form field with label</label><input type="text"/></form>`
+    - Descrizione: "Form" è un elemento HTML che permette all'utente di fornire i dati richiesti dal sito web. "Method = post" indica che il form è stato inviato tramite il metodo POST. "Label" descrive la struttura dei campi per inserire il testo da visualizzare nel form.
+- `<input type="submit" value="Submit"/>`
+    - Descrizione: "Input" è un elemento HTML che permette all'utente di fornire i dati richiesti dal sito web. "Type = submit" indica che questo elemento è un campione di invio. "Value" descrive il testo a mostrare nel campo del campione.
+- `<input type="checkbox" name="checkbox-name"/>`
+    - Descrizione: "Input" è un elemento HTML che permette all'utente di fornire i dati richiesti dal sito web. "Type = checkbox" indica che questo elemento è una casella di verifica. "Name = check-box name" descrive il nome della casella da utilizzare per la validazione del contenuto nel campione.

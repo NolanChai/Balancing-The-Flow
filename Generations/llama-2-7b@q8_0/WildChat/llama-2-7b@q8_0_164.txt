@@ -1,0 +1,60 @@
+### Key #1 (35 characters)
+
+[![Awesome](https://raw.githubusercontent.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![Travis CI](http://img.shields.io/travis/brianmcfadden/office-keys/master.svg?style=flat)](https://travis-ci.org/brianmcfadden/office-keys)
+[![NPM Version](http://img.shields.io/npm/v/office-keys.svg?style=flat)](https://www.npmjs.com/package/office-keys)
+
+### Key #2 (30 characters)
+
+[![Awesome](https://raw.githubusercontent.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![Travis CI](http://img.shields.io/travis/brianmcfadden/office-keys/master.svg?style=flat)](https://travis-ci.org/brianmcfadden/office-keys)
+[![NPM Version](http://img.shields.io/npm/v/office-keys.svg?style=flat)](https://www.npmjs.com/package/office-keys)
+
+### Key #3 (18 characters)
+
+[![Awesome](https://raw.githubusercontent.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![Travis CI](http://img.shields.io/travis/brianmcfadden/office-keys/master.svg?style=flat)](https://travis-ci.org/brianmcfadden/office-keys)
+[![NPM Version](http://img.shields.io/npm/v/office-keys.svg?style=flat)](https://www.npmjs.com/package/office-keys)
+
+1. [Microsoft Office 2019 Product Key Generator](https://www.microsoft.com/en-us/licensing/product-licensing-programs/office-volume-licensing-overview)
+2. [Microsoft Office Professional Plus 2016 Product Key](https://www.microsoft.com/en-us/licensing/product-licensing-programs/office-volume-licensing-overview)
+3. [Office 365 Product Key](https://www.microsoft.com/en-us/licensing/product-licensing-programs/office-volume-licensing-overview)
+
+I have written 600+ lines of C# code to calculate the pi (3.14) using the first million digits of Pi in binary format. I did not use any complex algorithm as i am still learning and wanted to get my hands dirty. I want feedback on this simple program.
+
+\begin{code}
+using System;
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter number of digits in Pi:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            long l=0;
+            string binary="";
+            for (int i=0;i<n-1;++i)
+            {
+                binary="0"+binary;
+
+            }
+            Console.WriteLine("Pi in binary format: "+binary);
+            int start=1;
+            int end=9;
+            l=Convert.ToInt64(binary,2);
+            for (int i=start;i<=end;++i)
+            {
+                if ((l%10)>0 && (l % 10) <5)
+                {
+                    Console.Write((char)(64+Convert.ToInt32(binary,10)[i]));
+                }
+                else
+                {
+                    Console.Write((char)(64 + Convert.ToInt32(binary, 10)[i-1]));
+                }
+            }
+        }
+    }
+}
+\end{code}

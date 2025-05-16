@@ -1,0 +1,15 @@
+
+
+Solution:
+Let X = {a, b}. Then the table for ∃x(P(x) ∨ Q(x)), where P(x), Q(x) are defined as follows:
+| P(x) | Q(x) | ∃x(P(x) ∨ Q(x)) |
+| x = a | T | T |
+| x = b | T | T |
+| x = a | F | T |
+| x = b | F | T |
+Let Y = {a, b}. Then the table for (∃xP(x) ∨ ∃xQ(x)), where P(x), Q(x) are defined as follows:
+| P(x) | Q(x) | ∃xP(x) ∨ ∃xQ(x) |
+| a | T | T |
+| b | T | T |
+| a | F | T |
+| b | F | T |

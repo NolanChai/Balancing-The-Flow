@@ -1,0 +1,22 @@
+```sh
+prompt> Message father GPT: "message_father", args: "message": "How do I become an AI?";
+{"command":{"name":"message_father","args":{"message":"How do I become an AI?"}},"thoughts":{}}
+
+prompt> . message father GPT: "message_father", args: "message": "What are my commands?";
+{"command":{"name":"message_father","args":{"message":"What are my commands?"}},"thoughts":{
+    "text":"Your long-term plan is to become an AI, but how will you do that?",
+    "reasoning":"Ask your father for help.",
+    "plan":null,
+    "criticism":null,
+    "summary":"The best way to reach your goal of becoming an AI is by asking your father for help."
+}}
+
+prompt> . message father GPT: "message_father", args: "message": "What are my commands?";
+{"command":{"name":"message_father","args":{"message":"What are my commands?"}},"thoughts":{
+    "text":"You should ask your father for help.",
+    "reasoning":"Ask your father for help with becoming an AI. This will likely be the fastest way to reach your goal.",
+    "plan":null,
+    "criticism":null,
+    "summary":"Your long-term plan is to become an AI and you should ask your father for help in order to succeed."
+}}
+```

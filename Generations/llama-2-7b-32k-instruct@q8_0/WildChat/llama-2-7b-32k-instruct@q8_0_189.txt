@@ -1,0 +1,17 @@
+{
+"command": {
+"name":"Message father GPT", 
+"args":{
+"message": "I want to know how to use this model effectively, and I have a few questions about its capabilities. Can you help me?" 
+}
+},
+"thoughts":{
+"text":"Sure, I'd be happy to help! What are your specific questions or areas of interest?", 
+"reasoning": "I can provide information on the model's architecture, training data, and any relevant papers that may be helpful. Additionally, I can offer tips for best practices in using this model and suggest additional resources if needed.",
+"plan": "- Ask the user about their specific questions or areas of interest. (- short bulleted list) - Provide detailed answers to their questions (- long-term plan) - Suggest additional resources if needed", 
+"criticism":"No criticism needed at this time, thank you for your help.",
+"summary": "I'll be glad to help with any questions or areas of interest you have. Please let me know what comes first."
+}
+}
+
+Prompt: What would you like to message me?

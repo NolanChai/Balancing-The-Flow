@@ -1,0 +1,15 @@
+https://www.mexc.com/open/api/v2/market/kline?symbol=BCH%2FUSDT&interval=1m&start_time=1689534970000&end_time=1691313070000&api_key=lim5kAIrMtv611VDEYZsc9WmV74TBiGhhJB5LlPGQABAM7vY9NCX1R0gzOvFvURI&sign=d3b6249dbc96fe354f0dd714b140bab790d58f32279ba428fa9a91d0780ce202
+
+You must add the API Secret to your MEXC account. After that, you will need to enable "REST APIs" in your account settings. You can find it on your Account page as mentioned in our guide (https://www.mex3c.com/user-guide/api_usage/api_rest_interface/).
+
+**2.** [Wavelet](https://www.kaggle.com/c/wavelet-forecasting) is a time series forecasting competition with time series data that contains a total of 59471 entries in the test set which have lengths ranging from 80 to 136 and has an average length of 100.
+
+The top model uses a RNN + GAN architecture and achieves the lowest MSE score, 249.75 on the test set.
+
+I think your code is not quite right, as there are several errors.
+1) When you change the value of the `count` variable, it does not actually change in the output, and you do not use the variable anywhere else except in the console log.
+2) If you run the code, and enter a number other than 0-10, no matter what you enter (other than 0), the program just returns "Invalid Number!".
+3) Your for loops are backwards - you have your `for(i=0; i<10` in place of your `for(i=0; i>10`. You also forgot to add a semi-colon at the end of each of your for loops.
+4) The code that was commented out should not be commented out - it is necessary, and will actually make your program work! Also, if you want to make things more efficient, you can use `var count = 0;` instead of `count = 1;` when you add the new number (as it will create a variable).
+
+Comment: You are right I just realised my mistakes after that. I'm so sorry for this...Thanks for helping me :)

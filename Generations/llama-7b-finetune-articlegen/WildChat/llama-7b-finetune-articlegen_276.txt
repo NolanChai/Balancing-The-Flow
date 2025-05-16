@@ -1,0 +1,28 @@
+1. 使用RaycastHit来获得鼠标在渲染维度射线中的击中位置。  
+2. 根据当前点击的物体是否为子物体，判断当前点击物体和父物体是否相等。如果相等则返回 true，否则返回 false。  
+3. 在子循环里面，使用 IsDescendant()来获得当前点击的物体是否为当前子循环中的任何一个父物体。如果父物体相等则返回 true，否则返回 false。  
+4. 在最后一步判断结束后，如果还是没有返回到循环的开头，表示当前点击的物体不是子物体。  
+5. 若当前点击的物体不为子循环中任何一个父物体时，则说明当前点击物体就是所要返回的结果。  
+6. 如果鼠标在渲染维度空间中的其他点击位置，则返回 null。  
+请看一下这个例子：
+```C#
+// 以当前射线为准，获得最接近的父物体，并且判断是否为当前的循环中任何一个父物体。  
+Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+RaycastHit hit;  
+if (Physics.Raycast(ray, out hit)) { // 如果有找到物体，则判断是否为当前的循环中任何一个父物体。  
+    if (hit.transform == parent) {  
+        return true; // 返回结果，说明在当前的循环中找到了对应父物体，则返回 true。  
+    } else {  
+        foreach (Transform t in hit.transform) { // 使用 IsDescendant()来获得当前点击的物体是否为当前子循环中的任何一个父物体。如果父物体相等则返回 true，否则返回 false。  
+            if (IsDescendant(hit.transform, t)) { // 获得当前点击位置在当前子循环中是否为任何一个父物体的结果。如果相等则返回 true，否则返回 false。  
+                return true;  
+            } else {  
+                return false; // 说明当前点击位置不在当前子循环中找到了任何一个父物体。  
+            }  
+        }  
+    }  
+}  
+// 如果鼠标在渲染维度空间中的其他点击位置，则返回 null。  
+return null; // 返回结果，说明在当前的循环中没有找到任何一个父物体。
+
+http://forum.unity3d.com/threads/axis-control-in-2d-with-moixing-cakeslice.591584/#post-3764363

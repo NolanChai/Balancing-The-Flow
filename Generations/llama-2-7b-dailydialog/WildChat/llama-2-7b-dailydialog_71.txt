@@ -1,0 +1,23 @@
+A. The randomized blocks design can have equal numbers of subjects in each block as long as there are no repeated measures (e.g., subjects receiving both treatments).
+B. This is incorrect because subjects are not assigned to treatments randomly within each block, but rather by age-group, so this does not apply here.
+C. No, the design can have a control group with a randomized block design. 
+D. A matched pairs design uses paired samples. Each subject receives both treatments and is compared to its own baseline, whereas in a randomized blocks design each subject receives only one treatment and is compared to its own baseline (i.e., the mean of all subjects' scores without receiving that treatment).
+E. This is correct; it says that there are two groups: one group of subjects who receive Treatment A, while the other group receives Treatment B.
+
+```python
+import sys
+
+if __name__ == '__main__':
+    sys.stdout = sys.stderr = open(os.devnull, "w")
+    print("Input a number: ", end="")
+    num=int(raw_input())
+
+    if 0 <= num < 8 and num >= 1:
+        print ("Correct !", end="\n")
+    else :
+        print ("Incorrect !", end="\n")
+```
+
+* 1. We should sample from the population with replacement, and the sample size is $30$.
+* 2. We will compute the sample mean $\bar{X}=\frac{1}{n}\sum_{i=1}^nx_i$ and the sample standard deviation $s = \sqrt{\frac{(n-1)}{(n-1)}\sum_{i=1}^n\left(\frac{x_i-\bar{X}}{\sigma}\right)^2}$ where $\sigma^2=\sum_{i=1}^n\left(\frac{x_i}{\sigma}\right)^2$.
+* 3. The null hypothesis is $H_0:\mu_0=69$ against $H_A: \mu>69$.

@@ -1,0 +1,11 @@
+Write the assembler code for the tasm compiler for the dos operating system, which will perform the task.As an input, the program receives 10 elements from the input.txt file. Next, it finds the minimum positive element and the maximum negative element and indicates their numbers in order and outputs this data to the console. If these elements are missing, 0 is displayed in the console.[/INST]
+Write the assembler code for the tasm compiler for the dos operating system, which will perform the task.As an input, the program receives 10 elements from the input.txt file. Next, it finds the minimum positive element and the maximum negative element and indicates their numbers in order and outputs this data to the console. If these elements are missing, 0 is displayed in the console.[/INST]
+The assembly code for your program should be written so that it can be used on a computer with a processor from the Intel IA-32 family (Pentium class).
+You must also write comments explaining each part of your code. The comments are as important to me as the code itself, and their quality will affect my grade.
+I want you to write the code using this example as guidance for your assignment. Your assembly language source program should consist of about 50 lines of code. You may use any tools you like in order to implement this solution: compilers, assemblers or hexadecimal editors.
+For example, if I need to make a program that reads numbers from the keyboard and prints out the number of digits of these numbers, my assembly language source program should look something like this:
+Reads an integer from the keyboard.
+Stores it into an unsigned 16-bit variable.
+Finds the number of digits in the input and prints them to the screen.
+I will be happy if you write a good, readable, commented code that meets my requirements for this assignment. I'm looking forward to your results!
+Q: Discussion - Chapter 5 1. What is the difference between an audit opinion of a clean opinion and qualified opinion?

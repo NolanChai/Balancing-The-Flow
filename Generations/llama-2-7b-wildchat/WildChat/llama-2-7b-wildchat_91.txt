@@ -1,0 +1,66 @@
+error: invalid command 'dist_info'
+usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+   or: setup.py --help [cmd1 cmd2 ...]
+   or: setup.py --help-commands
+   or: setup.py cmd --help
+error: subprocess-exited-with-error
+╰─> See above for output.
+
+Note: This error originates from a subprocess, and is likely not a problem with pip.
+Hint: See above for details.
+[end of output]
+
+### Affected Modules
+
+setup.py
+
+### Call Stack
+
+See also "C:\Users\username\AppData\Local\Programs\Python\Python310\Lib\site-packages\packaging\_vendor\distlib\util\__init__.py", line 48, in __getattr__
+    raise AttributeError("'%(module_name)s.%(attr)s'" % { "module_name": self._package.__name__, "attr": self._attr })
+AttributeError: 'pip_distlib.compat.find_executable.CompatibleFindExecutable.__getattr__' object has no attribute '_attr'
+
+### Traceback
+
+C:\Users\username\AppData\Local\Programs\Python\Python310\Lib\site-packages\packaging\_vendor\distlib\util\__init__.py:48: in __getattr__
+    raise AttributeError("'%(module_name)s.%(attr)s'" % { "module_name": self._package.__name__, "attr": attr })
+AttributeError: 'pip_distlib.compat.find_executable.CompatibleFindExecutable.__getattr__' object has no attribute '_attr'
+
+### System information
+Platform: win32
+System call: 'cmd /C python -c "import sys,os,json;print(os.path.dirname(__file__));print(sys._getframe().f_code.co_filename);print(' '.join(sys.argv[1:]))" pip install dotenv==0.0.5'
+Python: 3.9.7 (tags/v3.9.7:28d6a1c, Mar 24 2021, 00:30:59) [MSC v.1916 64 bit (AMD64)]
+Pyenv: pyenv version 1.11.1
+Pyenv prefix: C:\Users\administrator\AppData\Local\Programs\Python\Python39
+Default interpreter: 'C:\Users\administrator\AppData\Local\Programs\Python\Python39\python.exe' (default, Jun  8 2019) [GCC 10.2.0]
+(base) C:\Users\administrator>
+
+### Solution:
+
+修改安装 dotenv 的版本，或者手动安装旧版的 dotenv 来解决问题
+```python -m pip install --upgrade pyenv-virtualenv
+python -m pip install --upgrade pyvenv
+python -m pip install --upgrade setuptools
+python -m pip install --upgrade pip
+# python -m pip install --ignore-installed pep8
+
+```
+
+### 安装旧版的 dotenv
+
+修改安装 dotenv 的版本，或者手动安装旧版的 dotenv 来解决问题
+```python -m pip install --upgrade pyenv-virtualenv
+python -m pip install --upgrade pyvenv
+python -m pip install --upgrade setuptools
+python -m pip install --upgrade pip
+# python -m pip install --ignore-installed pep8
+
+```
+
+### 安装旧版的 dotenv
+
+修改安装 dotenv 的版本，或者手动安装旧版的 dotenv 来解决问题
+```python -m pip install --upgrade pyenv-virtualenv
+python -m pip install --upgrade pypy3.10
+python -m pip install --ignore-installed pep8
+```

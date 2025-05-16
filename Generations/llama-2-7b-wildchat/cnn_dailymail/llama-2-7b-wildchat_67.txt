@@ -1,0 +1,15 @@
+```
+from pprint import pformat
+
+# Instantiate a new pager
+paginator = Paginator(
+    "https://example.com", 25
+)
+
+url_for_next_page, has_next = paginator.get_next()
+
+if has_next:
+    print("URL for next page: {}".format(pformat(url_for_next_page)))
+else:
+    print("No more pages!")
+```

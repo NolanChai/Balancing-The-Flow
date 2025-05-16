@@ -1,0 +1,77 @@
+User: "ssh客户端清理knows_hosts"
+
+Assistant: "可以使用以下命令清理ssh客户端的knows_hosts文件：
+
+```
+ssh-keygen -R <IP_address>
+```
+
+例如，如果你要清理IP地址为192.168.0.1的主机，可以运行以下命令：
+
+```
+ssh-keygen -R 192.168.0.1
+```
+
+这将从knows_hosts文件中删除与192.168.0.1关联的密钥。"
+
+User: "windows如何ssh客户端清理knows_hosts"
+
+Assistant: "在 Windows 上，通过以下步骤可以清除 SSH 客户端的 known_hosts 文件：
+
+1. 打开 PowerShell 或者命令提示符。
+
+2. 输入以下命令：
+
+```
+ssh-keygen -R <IP_address>
+```
+
+例如，如果您想清除 IP 地址为 192.168.0.1 的主机，应该执行以下命令：
+
+```
+ssh-keygen -R 192.168.0.1
+```
+
+这将从 known_hosts 文件中删除与 192.168.0.1 相关的密钥。
+
+3. 您可以使用以下命令检查是否已成功删除密钥：
+
+```
+cat $env:USERPROFILE\.ssh\known_hosts
+```
+
+这将列出 known_hosts 文件中存储的所有主机密钥。
+
+注意：请注意，在 PowerShell 中，路径使用反斜杠 (\) 而不是正斜杠 (/) 进行分隔。"
+
+User: "ssh-keygen -R <IP_address>，但是提示mkstemp: No such file or directory"
+
+Assistant: "如果在运行 `ssh-keygen -R <IP_address>` 命令时，出现 "mkstemp: No such file or directory" 错误，可能是因为你的系统缺少必要的临时文件夹。可以尝试手动创建临时文件夹并将其添加到环境变量中，然后再运行命令。
+
+步骤如下：
+
+1. 创建临时文件夹，例如：
+
+```
+mkdir /tmp/ssh-XXXXXXXXXX
+```
+
+其中，XXXXXXXXXX 是随机的 10 个字符，用于作为文件夹名称。
+
+2. 设置 `TMPDIR` 环境变量，例如：
+
+```
+export TMPDIR=/tmp/ssh-XXXXXXXXXX
+```
+
+其中，XXXXXXXXXX 是刚才创建的临时文件夹的名称。
+
+3. 运行 `ssh-keygen -R <IP_address>` 命令，例如：
+
+```
+ssh-keygen -R 192.168.1.1
+```
+
+这应该可以成功删除指定 IP 地址的密钥。操作完成后，可以手动清理临时文件夹及其内容。
+
+注意：这个命令一般不需要用到，一般只在出现无法连接的主机，并检查到本地已经存在这个主机的密钥时，才需要移除本机上存储的该主机的密钥。"

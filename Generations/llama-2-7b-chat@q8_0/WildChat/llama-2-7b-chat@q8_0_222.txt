@@ -1,0 +1,18 @@
+The issue is that `simplexml_load_string()` expects a string containing XML data, but in this case, `$latest_from_softonic_curl` contains the response from the HTTP request, which is not an XML string.
+You can fix the issue by using `file_get_contents()` to read the contents of the URL into a string before passing it to `simplexml_load_string()`. Here's an updated version of your code:
+<?php
+$headers = array(
+"Accept: application/xml"
+);
+$curl_call = curl_init();
+curl_setopt($curl_call, CURLOPT_URL, "https://en.softonic.com/sitemap-article_news.xml");
+curl_setopt($curl_call, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl_call, CURLOPT_HTTPHEADER, $headers);
+$latest_from_softonic_curl = curl_exec($curl_call);
+$latest_from_softonic = new StdClass;
+$latest_from_softonic->url = array();
+$latest_from_softonic->title = array();
+$value_xml = simplexml_load_string(file_get_contents($latest_from_softonic_curl));
+print_r ($latest_from_softonic);
+?>
+This should fix the issue and fill the `$value_title` variable with the contents of the XML file.

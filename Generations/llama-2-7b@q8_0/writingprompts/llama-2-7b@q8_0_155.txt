@@ -1,0 +1,44 @@
+`,
+        text: 'This was just one of my friends.'
+    }, {
+        type: 'image',
+        url: './images/dress3.jpg',
+        alt: 'Donna had a beautiful dress on, and it was made out of something I've never seen before.',
+        caption: ''
+    }],
+    user: {
+        name: 'donna'
+    },
+    userName: 'donna',
+    datePublished: 1508969257437,
+});
+```
+
+###### Expected result:
+
+![](./images/result.png)
+
+### 2. Captions
+
+**Usage:**
+
+```javascript
+    const { caption, image, imageURL } = await galleryService.getImage(id); // or use this.galleryService
+
+    image.caption = 'Hello world!';
+
+```
+
+**Possible values:**
+
+- text - 0-450 character string
+
+**Example:**
+
+```javascript
+    const caption = await galleryService.getCaption(id); // or use this.galleryService
+```
+
+**Expected result:**
+
+![](./images/result_caption1.png)

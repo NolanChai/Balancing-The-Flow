@@ -1,0 +1,24 @@
+Email sent to my gmail account will contain the following headers.
+
+    X-Spam: Yes   This header is set by our mail server if they detect that your mail was spam or might be spam.
+
+    X-SpamStatus: -0.4   The score of how likely an email is spam.
+    
+    X-SpamConfidence: High   How confident the mail server thinks the score is.
+    
+    X-Received: by 127.0.0.1 (Postfix) id 886D4ECC53C; Wed, 14 May 2014 10:27:33 -0700 (PDT)   This is the date and time it was received.
+    
+    X-Spam-Level: High   The confidence score that spammassassin gave the email based on their rules.
+    
+### Example of a message
+```html
+<!DOCTYPE html>
+<!--[if IE]><br /><br /><center><font size=1 color="#703438"><h2 style="margin-top:5px;">Your site is not compatible with Internet Explorer</h2></font><center> <![endif]--><!--[if !IE 6 ]><!--><img src="/images/google.png" height="13" width="94" alt="Google Chrome"><a href="http://www.google.com/chrome/" title="Free Download Google Chrome!"><br /><b>Click here to download</b></a><!--<![endif]--><!--[if IE 6 ]><img src="/images/ie6_warning.png" height="13" width="94" alt="Internet Explorer"><center><font size=1 color="#703438"><br /><h2 style="margin-top:5px;">This site has been optimized for newer versions of Internet Explorer</h2></font><!--[endif]-->
+```
+
+`If you are interested in the work on this project, you can contact me at <a href='mailto:myemailaddress@domain.com'>myemailaddress@domain.com</a>. If you want to give back please donate $100 - $300 to my cause.`
+
+### Response:
+`If you are interested in the work on this project, you can contact me at <a href='mailto:myemailaddress@domain.com'>myemailaddress@domain.com</a>. If you want to give back please donate $100 - $300 to my cause.`
+
+The sender address of the spoofed message will be different than the actual mail server, it can be detected by using the "Received" header in your mail. This is a clear sign that the message was not originated at the original sending domain, and that is not authorized to send mails from there.

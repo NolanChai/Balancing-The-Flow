@@ -1,0 +1,109 @@
+[INS]Background
+You have been contracted to conduct a security risk assessment for the Chief Operating Officer (COO) at ACME
+energy, in order to identify cyber risks relating to their ongoing digital transformation programme and develop
+recommendations as to how to mitigate these. The company has decided that all new cloud services will be
+provided using the Azure platform.
+You have been provided with an overview of ACME Energy’s systems landscape, which includes all IT assets and
+business processes. You can view this information in Table 1 below (please note that some values may not be
+available for certain fields):
+Table 1: ACME Energy – Systems Landscape
+Name Business Owner IT Owner Purpose Value Notes
+Acme Energy COO COO Implemented a new Digital Transformation program to improve customer service,
+enhance the company’s revenue and improve efficiency. Acme has decided to use Azure for the Cloud
+services component of its digital transformation program.
+COO wants to know what cyber risks ACME is exposed to from this decision.
+Acme Energy IT Operations Manager COO Implemented a new Digital Transformation program to improve customer service,
+enhance the company’s revenue and improve efficiency. Acme has decided to use Azure for the Cloud services component of its digital transformation program.
+IT Operations Manager wants to know what cyber risks ACME is exposed to from this decision.
+Acme Energy CEO CISO Implemented a new Digital Transformation program to improve customer service,
+enhance the company’s revenue and improve efficiency. Acme has decided to use Azure for the Cloud services component of its digital transformation program.
+CISO wants to know what cyber risks ACME is exposed to from this decision.
+Acme Energy Sales Department CIO Implemented a new Digital Transformation program to improve customer service,
+enhance the company’s revenue and improve efficiency. Acme has decided to use Azure for the Cloud services component of its digital transformation program.
+CIO wants to know what cyber risks ACME is exposed to from this decision.
+Acme Energy Infrastructure Manager CIO Implemented a new Digital Transformation program to improve customer service,
+Acme has decided to use Azure for the Cloud services component of its digital transformation program.
+CIO wants to know what cyber risks ACME is exposed to from this decision.
+Acme Energy Finance Department CEO Implemented a new Digital Transformation program to improve customer service,
+Enhance the company’s revenue and improve efficiency. Acme has decided to use Azure for the Cloud services component of its digital transformation program.
+CEO wants to know what cyber risks ACME is exposed to from this decision.
+Acme Energy Security Team CISO Implemented a new Digital Transformation program to improve customer service,
+Acme has decided to use Azure for the Cloud services component of its digital transformation program. Acme’s cloud security controls have been created using the NIST cybersecurity framework, CIS 18 for operational controls and the CSA CCM 4.0 for cloud security controls.
+CISO wants to know what cyber risks ACME is exposed to from this decision. The company has decided that all new cloud services will be provided using the Azure platform.
+The Chief Operating Officer (COO) of Acme Energy would like you to conduct a risk assessment for their ongoing digital transformation program, with a particular focus on the risks associated with implementing new cloud-based services. This is because they are aware that security risks can impact both the business and its operations and are keen to avoid any potential issues in this area. They have therefore commissioned an external consultant (you) to conduct the risk assessment.
+To assist you, you will be provided with:
+ An overview of ACME’s systems landscape; including all IT assets and business processes
+(please see Table 1). This should include any information that could be relevant to the risk assessment such as who the asset is owned by, where it is located or how frequently it is accessed.
+ Information about each of the cloud-based services that ACME has decided to implement and how they are used; for example what data flows through them and where they are hosted (please see Table 2).
+Table 2: ACME’s cloud services
+Service Name Location Purpose Notes
+Acme Online Sales Platform Acme Cloud Services US Selling electricity products online
+Acme Online Customer Service Portal Acme Cloud Services US Helping customers to report issues or raise complaints
+Acme Internal Sales Database Acme Cloud Services UK The internal database that the sales team uses to access information about customer’s orders and complaints
+The Chief Operating Officer (COO) of Acme Energy would like you to conduct a risk assessment for their ongoing digital transformation program, with a particular focus on the risks associated with implementing new cloud-based services. This is because they are aware that security risks can impact both the business and its operations and are keen to avoid any potential issues in this area. They have therefore commissioned an external consultant (you) to conduct the risk assessment. To assist you, you will be provided with:
+ Information about each of the cloud-based services that ACME has decided to implement and how they are used; for example what data flows through them and where they are hosted (please see Table 2). The Chief Operating Officer (COO) of Acme Energy would like you to conduct a risk assessment for their ongoing digital transformation program, with a particular focus on the risks associated with implementing new cloud-based services. This is because they are aware that security risks can impact both the business and its operations and are keen to avoid any potential issues in this area. They have therefore commissioned an external consultant (you) to conduct the risk assessment. To assist you, you will be provided with:
+ Information about each of the cloud-based services that ACME has decided to implement and how they are used; for example what data flows through them and where they are hosted (please see Table 2). The Chief Operating Officer (COO) of Acme Energy would like you to conduct a risk assessment for their ongoing digital transformation program, with a particular focus on the risks associated with implementing new cloud-based services. This is because they are aware that security risks can impact both the business and its operations and are keen to avoid any potential issues in this area. They have therefore commissioned an external consultant (you) to conduct the risk assessment. To assist you, you will be provided with:
+ Information about each of the cloud-based services that ACME has decided to implement and how they are used; for example what data flows through them and where they are hosted (please see Table 2). The Chief Operating Officer (COO) of Acme Energy would like you to conduct a risk assessment for their ongoing digital transformation program, with a particular focus on the risks associated with implementing new cloud-based services. This is because they are aware that security risks can impact both the business and its operations and are keen to avoid any potential issues in this area. They have therefore commissioned an external consultant (you) to conduct the risk assessment. To assist you, you will be provided with:
+[INS]Prepare a Risk Management Report
+You will prepare a report which analyses the risks identified and provides recommendations for mitigating these. Please note that you do not need to consider issues which are not relevant to the digital transformation program such as non-cloud risks, regulatory issues or physical security. You should also include recommendations for how to address any risks which were rated as high severity and high impact (you may use the Risk Management Table from Section 3.2 of the CRA Guide).
+You have been provided with information about each of the cloud-based services that Acme has decided to implement and how they are used; for example what data flows through them and where they are hosted (please see Table 2). The Chief Operating Officer (COO) of Acme Energy would like you to conduct a risk assessment for their ongoing digital transformation program, with a particular focus on the risks associated with implementing new cloud-based services. This is because they are aware that security risks can impact both the business and its operations and are keen to avoid any potential issues in this area. They have therefore commissioned an external consultant (you) to conduct the risk assessment. To assist you, you will be provided with:
+The Chief Operating Officer (COO) of Acme Energy would like you to conduct a risk assessment for their ongoing digital transformation program, with a particular focus on the risks associated with implementing new cloud-based services. This is because they are aware that security risks can impact both the business and its operations and are keen to avoid any potential issues in this area. They have therefore commissioned an external consultant (you) to conduct the risk assessment. To assist you, you will be provided with:
+[INS]Recommendations
+You should provide recommendations based on your findings from the risk assessment; these could include anything such as security controls that should be implemented, how cybersecurity risks can be mitigated and whether the digital transformation program should continue. Your report should also include a summary of your key findings and any recommend
+
+The following is an example of how you should write your requirements:
+(Candidate name) has to make a reservation for a dinner at (restaurant name). The system needs to validate that the time and date specified are valid. Criteria 1: (restaurant name) must be in the list of restaurants available on the system.
+The system should notify the candidate when the booking is successful by sending him an SMS containing the following details; (time), (date), (restaurant name), and (seats). The notification needs to be sent to the candidate’s mobile number specified in the reservation form. Criteria 2: The system should only notify candidates whose mobile numbers are in the list of mobile phone numbers registered with the system.
+The system must send an SMS to the candidate every hour on the day of the reservation to remind him that it is his turn to have dinner. Criteria 3: The notification should be sent at (time).
+Criteria 4: (restaurant name) can only notify one user for a given time and date. If another candidate makes a booking for the same time and date, then the notification must not be sent.
+
+If you can answer all of these questions, then your team could be a great candidate for the AWS DevOps Challenge 2015!
+The AWS DevOps Challenge is a competition to find the best AWS based DevOps solutions from around the world. We’re looking for teams with a good understanding and use of Amazon Web Services (AWS), who can demonstrate how they have developed an innovative solution using these services, and are able to tell us about their experiences in doing so.
+The competition is split into two sections:
+A written submission describing your project (350 words)
+A live demonstration on the day of the conference showing off your project in action – see below for details
+
+-[INSTR]The proposed SOAR solution includes the following components:
+-[INSTR]- The first component is the [http://www.xsoar.org/ XSOAR tool], which acts as a virtual operator console (VOC). It allows analysts to collaborate and share information while conducting investigations. XSOAR comes with several out-of-the-box capabilities, including an automated incident response orchestration engine.
+-[INSTR]- The second component is the [https://github.com/CISA/Risk-Mitigation-Planning-and-Assessment-Tool Risk Mitigation Planning and Assessment Tool (RMPAT)], which assists analysts in planning their activities by providing guidance on possible tasks that can be performed, the resources required to perform these tasks, and the risks associated with performing each task.
+-[INSTR]- The third component is the [https://github.com/CISA/Governance-and-Implementation-Tool Governance and Implementation Tool (GIT)], which assists analysts in creating a plan for implementing SOAR within their organization. GIT provides templates that can be customized to fit each organization’s specific needs, as well as guidance on how these plans should be implemented.
+-[INSTR]- The fourth component is the [https://github.com/CISA/Community-of-Practice Community of Practice (CoP)], which provides analysts with an opportunity to connect and collaborate with other SOAR users. This CoP includes several forums where analysts can ask questions, share information about upcoming events or conferences related to cybersecurity incident response, discuss best practices in conducting investigations, and more.[/INSTR]
+
+### Answer 
+<br>
+Several major vendors offer various types of SOAR products. Among them, Cortex XSOAR by Palo Alto Networks is considered one of the best in comparison to the others. This is due to its comprehensive and integrated approach, which provides a unified platform for security orchestration and automation. The following table outlines the key features that make Cortex XSOAR stand out from other solutions:
+
+Key Features
+- Comprehensive Integrations: Cortex XSOAR offers robust integrations with various tools such as SIEM, IDS/IPS, threat intelligence platforms, and vulnerability assessment tools. This allows security teams to automate incident response and remediation processes seamlessly.
+
+- Automation Capabilities: The platform provides pre-built workflows that enable security teams to quickly respond to incidents without requiring extensive coding knowledge.
+
+- Cloud-Native Architecture: Cortex XSOAR is built on a cloud-native architecture, which makes it highly scalable and flexible. It can be easily deployed in the cloud or on-premises and provides cross-cloud support for various platforms such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).
+
+- Data Encryption: Cortex XSOAR supports data encryption at rest and in transit to ensure that sensitive information is protected from unauthorized access.
+
+- Regulatory Compliance: The platform is compliant with various industry regulations such as HIPAA, GDPR, PCI DSS, and SOX, ensuring that organizations are in compliance with the relevant regulations.
+
+1. I'll give you a short list of things to do this week. You should be able to get them all done if you make an effort (and ask for help if needed).
+2. You will write a list of 4 SMART goals that you want to achieve by the end of the summer. Remember they should have:
+S - Specific, M - Measurable A - Achievable R - Relevant T - Timely.
+You might also like to ask your class teacher or another adult in school for advice if necessary. You may prefer to use your Google Classroom.
+3. This week we will look at how the story of Pinocchio was created and some of its important themes. We will then work on writing our own 'how to' stories. I will give you some examples and you can ask for help if needed. You might like to write your story using the 'write out loud' strategy.
+4. Next week, we will look at how to change a story. So, if you have written a 'how to' story already this would be a good time to put that knowledge to use and see if you can find another way of telling the same tale. You might like to write your own version of Pinocchio.
+5. I hope you enjoy learning about Tinderbox today! Remember to ask for help as needed and to try your best.
+1. What is an oxymoron? Find some examples in the poem 'Pinnochio' and add them to our book. You might like to use a thesaurus or the dictionary too. If you are stuck, look at this website: https://www.oxymorons.org/
+2. Today we will be writing some more sentences with oxymoron words in. I suggest you do this in your best handwriting (with pencil if needed). You may like to use the 'write out loud' strategy too! Remember not to just write lots of sentences that say 'the soft rough dog'. Look at these examples instead:
+a) "I am a hard soft ball" b) "The dark light room is my favourite place to read." c) "Her strong weak voice fills the hall". You could try writing some more phrases and sentences with oxymoron words today. You may like to do this on your Google Classroom if you prefer?
+3. Next week, we will be thinking about how to change a story from the point of view of someone who likes books or enjoys reading. So, have another think about what you want to do with the story of Pinocchio and write some ideas in your journal. I am hoping that some of you might like to rewrite it (but make sure it stays funny). You may also like to use your Google Classroom?
+4. Can you think of any other books where the main character changes or improves? Perhaps you can look on YouTube or your library and find one! You might need to ask for help from an adult if needed, but do try to research it yourself first.
+5. I hope you enjoyed learning about Tinderbox today! Remember to ask for help as needed and to try your best.
+
+### Step 1: Identify the security control(s) that needs to be in place.
+
+[*Hint: Please refer the section below on the list of security controls for SOAR Cortex XSOAR.*](https://github.com/redhat-security-products/cortex-xsoar-docs#security-controls)
+
+### Step 2: Define the security control(s).
+
+[*Hint: Please refer the section below on the list of security controls for SOAR Cortex XSOAR.*](https://github.com/redhat-security-products/cortex-xsoar-docs#security-controls)
+
+### Step 3: Implement the security control(s).

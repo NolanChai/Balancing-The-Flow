@@ -11,6 +11,10 @@ import matplotlib
 import sys
 matplotlib.use('Agg')
 
+import nltk
+nltk.download('punkt_tab')
+from nltk.tokenize import sent_tokenize
+
 def UID_variance(text):
     """Calculate UID variance metric from surprisal values"""
     N = text.shape[0]
@@ -28,7 +32,18 @@ def UID_pairwise(text):
     surprisals = text['surprisal']
     return (surprisals.diff() ** 2).dropna().sum() / (N - 1)
 
-def load_surprisal_files(directory):
+def vocab_size(text):
+    return text['token'].nunique()
+
+def sentence_length(text):
+    fulltext = "".join(text['token'])
+    sentences = sent_tokenize(fulltext)
+    N = len(sentences)
+    if N == 0:
+        return np.nan
+    return sum(len(s.split()) for s in sentences) / N
+
+def load_surprisal_files(directory, regenerate=False):
     """Load all CSV files from a directory into a list of dataframes"""
     csv_files = glob.glob(os.path.join(directory, "*.csv"))
     
@@ -38,7 +53,7 @@ def load_surprisal_files(directory):
     data = []
     filenames = []
     
-    print(f"Loading {len(csv_files)} surprisal files...")
+    print(f"Loading {len(csv_files)} surprisal files from {directory}...")
     for file in tqdm(csv_files):
         try:
             df = pd.read_csv(file)
@@ -50,7 +65,7 @@ def load_surprisal_files(directory):
     
     return data, filenames
 
-def analyze_uid_metrics(data, filenames):
+def analyze_uid_metrics(data, filenames, regenerate=False):
     """Calculate UID metrics for each text"""
     metrics = []
     
@@ -65,6 +80,8 @@ def analyze_uid_metrics(data, filenames):
             
             uid_var = UID_variance(df)
             uid_pair = UID_pairwise(df)
+            vcb_size = vocab_size(df)
+            sent_length = sentence_length(df)
             
             metrics.append({
                 'filename': filename,
@@ -75,6 +92,8 @@ def analyze_uid_metrics(data, filenames):
                 'max_surprisal': max_surprisal,
                 'uid_variance': uid_var,
                 'uid_pairwise': uid_pair,
+                'vocab_size': vcb_size,
+                'sentence_length': sent_length
             })
         except Exception as e:
             print(f"Error analyzing {filename}: {e}")
@@ -261,31 +280,42 @@ def main():
     parser.add_argument('--input-dir', type=str, required=True, help='Directory containing surprisal CSV files')
     parser.add_argument('--output-dir', type=str, default='../UID_Analysis', help='Directory for output files')
     parser.add_argument('--sample-size', type=int, default=5, help='Number of texts to sample for trend plots')
+    parser.add_argument('-r', '--regenerate', action="store_true", help='regenerate existing UID analyses')
     args = parser.parse_args()
     
-    os.makedirs(args.output_dir, exist_ok=True)
-    
-    try:
-        data, filenames = load_surprisal_files(args.input_dir)
-        print(f"Loaded {len(data)} valid surprisal files")
-        
-        metrics_df = analyze_uid_metrics(data, filenames)
-        
-        plot_dir = os.path.join(args.output_dir, 'plots')
-        plot_distributions(metrics_df, plot_dir)
-        
-        trends_dir = os.path.join(args.output_dir, 'trends')
-        plot_surprisal_trends(data, filenames, trends_dir, args.sample_size)
-        
-        generate_report(metrics_df, args.output_dir)
-        
-        print(f"Analysis complete. Results saved to {args.output_dir}")
-        
-    except Exception as e:
-        print(f"Error during analysis: {e}")
-        return 1
-    
-    return 0
+    input_dir = Path(args.input_dir)
+    if not input_dir.exists():
+        raise FileNotFoundError(f"Input directory {input_dir} does not exist")
+    if args.output_dir == "infer":
+        output_dir = Path('../UID_Analysis') / input_dir.name
+    else:
+        output_dir = Path(args.output_dir)
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+    for dataset_dir in input_dir.iterdir():
+        try:
+            if not dataset_dir.is_dir():
+                print(f"Skipping {dataset_dir}: Not a directory")
+                continue
+            dataset_output_dir = output_dir / dataset_dir.name
+            data, filenames = load_surprisal_files(dataset_dir, regenerate=args.regenerate)
+            print(f"Loaded {len(data)} valid surprisal files")
+            
+            metrics_df = analyze_uid_metrics(data, filenames, regenerate=args.regenerate)
+            
+            plot_dir = dataset_output_dir / 'plots'
+            plot_distributions(metrics_df, plot_dir)
+            
+            trends_dir = dataset_output_dir / 'trends'
+            plot_surprisal_trends(data, filenames, trends_dir, args.sample_size)
+            
+            generate_report(metrics_df, dataset_output_dir)
+            
+            print(f"Analysis complete for {dataset_dir}. Results saved to {dataset_output_dir}")
+            
+        except Exception as e:
+            print(f"Error during analysis of {dataset_dir}: {e}")
+            continue
 
 if __name__ == "__main__":
     exit(main())

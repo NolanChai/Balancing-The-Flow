@@ -1,0 +1,131 @@
+#include <stdio.h> 
+#include <stdlib.h>  
+#include<sys/timeb.h>  
+//#include "semaphore.h"
+#include <unistd.h>
+//#include <pthread.h>
+#define SHARED_MEMORY_SIZE 4096
+//#define SEMAPHORE_NUMBER (SHARED_MEMORY_SIZE / 8)
+
+int main(void) {
+    printf("Starting the program\n");
+
+	char filename[12];
+	pthread_t readThread;
+
+	sem_init(&sharedMemorySem, 0, SHARED_MEMORY_SIZE);
+    char* sharedMemoryKey = (char*) malloc(SHARED_MEMORY_SIZE);
+	memset(sharedMemoryKey, 0, SHARED_MEMORY_SIZE);
+    sem_post(&sharedMemorySem);
+    
+    //char key[SHARED_MEMORY_SIZE];
+    printf("Press 'r' to read file\n");
+    scanf("%s", filename);
+	if (filename == NULL || strcmp(filename, "r")) {
+        exit(-1);
+    }
+	int readThreadID = pthread_create(&readThread, NULL, clientThread, (void*)  sharedMemoryKey);
+	printf("Read thread created with ID: %d\n", readThreadID);
+    
+    while (!sem_trywait(&sharedMemorySem)) {
+        //wait until someone writes a command
+        
+    }
+    sem_post(&sharedMemorySem);
+
+    char buffer[256];
+
+	char data[128*1024];
+    int ret = read(0,data,sizeof(data));
+    if (ret == 0) {
+        fprintf(stderr, "Error in read!\n");
+        exit(-1);
+    } else {
+	    printf("Received data: %s\n", data);
+        fwrite(data, sizeof(char), ret, stdout);
+        free(data);
+    }
+}
+
+//This is the thread code that will be used in client.c
+void *clientThread(void* sharedMemoryKey) { 
+	int sem_ID;
+    	printf("Starting Thread!\n");
+	sem_init(&readSem, 0, SHARED_MEMORY_SIZE);
+	if (sharedMemoryKey == NULL) {
+	    exit(-1);
+	}
+	//sem_post(&writeSem);
+	while(1){
+        	printf("Try to write to sem\n");
+		sem_wait(&readSem);
+        if(strcmp(filename, "r") != 0) {
+            printf("Writing data into shared memory\n");
+            fwrite(data, sizeof(char), ret, stdout);
+        } else {
+            printf("Reading data from shared memory\n");
+	    sem_post(&readSem);
+    	}
+ 	}
+
+}
+
+This is my first post in this forum, so I hope that my English writing skill is good enough to explain myself. This issue is really bother me for a long time and now I decided to make it public.
+First of all, I am an application developer. And the thing I want to do here is not related to any specific software or programming language. The problem is more related with "computer science". I don't think that there are many people who can understand the issue and solve it.
+Now my problem is: Please implement a computer system, which can store, manipulate and process all human knowledge (that is a huge amount of data). It should have a very high speed to process data because we will use it everyday like nowadays using "internet" (I mean internet was not fast enough when it was developed but after many years it became much faster than it started with and also more efficient)
+Some may say that this is impossible or even meaningless. But I am sure that it can be done because we are already close to this goal. We just need to focus on one thing: The Internet which is currently a very huge system where lots of people (billions in numbers) use it for many things. And it became popular due to its efficiency and fastness.
+This is why I decided to start this thread with the hope that someone may understand my idea and implement it or find better solutions if there are other options than what I mentioned above. I have searched in internet but did not find a proper solution for this problem so I decided to make it public here in order to see if someone can help me with this or at least point to some relevant resources that may be helpful.
+Re:
+
+The only reason I can think of this not being implemented is that the server might be very busy with other files. When you don't get anything back, SMB should just try again later. It might take a while before the file becomes available since there are no guarantees that the previous read request won't be followed by an actual write (i.e. data is actually changing on disk).
+The only reason I can think of this not being implemented is that the server might be very busy with other files. When you don't get anything back, SMB should just try again later. It might take a while before the file becomes available since there are no guarantees that the previous read request won't be followed by an actual write (i.e. data is actually changing on disk). What about the read command? Whenever a client requests for a certain number of bytes, it should send back those bytes to the client.
+[quote]What about the read command? Whenever a client requests for a certain number of bytes, it should send back those bytes to the client.[/quote] Well, I can't think of any reason why we shouldn't do this. So, if nobody has anything against it, I guess I will just implement this feature in the server.
+Well, I can't think of any reason why we shouldn't do this. So, if nobody has anything against it, I guess I will just implement this feature in the server. Ok :)
+
+\end{code}
+
+Comment: Please post the code which is giving you trouble.
+
+Answer: First of all, `sem` and `shm` are not C standard library functions, they're part of POSIX (and in general, Unix-like) API. If your compiler doesn't know about this, you might need to add appropriate header files or make use of `-std=c99`.
+
+Secondly, your `shm_open()` call is wrong:
+
+\begin{code}
+int shmid;
+if ((shmid = shm_open(name, O_CREAT | O_EXCL)) == -1) {
+    // handle error
+} else if (ftruncate(shmid, sizeof(struct shared_data))) {
+    // handle error
+}
+\end{code}
+
+You want to use the `O_RDONLY` option, not `O_CREAT`. Otherwise you'll end up sharing your memory between processes.
+
+Finally, since you are using POSIX functions, I would suggest using [pthreads](http://www.kernel.org/doc/man-pages/online/pages/man3/pthread_create.3.html) instead of `fork()`, and a bit more modern API like:
+
+\begin{code}
+int main() {
+    pthread_t thread;
+    if (pthread_create(&thread, NULL, &thread_handler, (void *)data)) {
+        /* handle error */
+    } else {
+        printf("Successfully created new thread\n");
+    }
+}
+
+void *thread_handler(void *arg) {
+    struct shared_data *data = arg;
+
+    // Do something with `data`
+
+    return NULL;
+}
+\end{code}
+
+\end{code}
+
+Comment: That's not a valid XML. You should provide an example that is well-formed and not overly complex.
+
+Answer: This is the format of a [Warnings](http://www.oracle.com/technetwork/articles/javase/index-137859.html#Warnings) report from the Java compiler.
+
+Comment: It's also well possible that there are no warnings, or an empty array of them.

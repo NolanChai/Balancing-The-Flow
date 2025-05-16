@@ -1,0 +1,57 @@
+https://pasteboard.co/JhYpPvB.png
+
+#[code]
+#!/bin/bash
+echo "Usage: ./riddle_solve.sh riddle_input"
+exit 0
+```
+
+### Solution:
+There are three running letters in the element without end. Turn one around to reflect a friend.
+
+The solution is:
+```
+CIR
+```
+
+<br>
+
+I think we can try to make it as simple as possible and use one of the most common features from the Python library called `pathlib`. I have an article about it here https://medium.com/p/528c93f67176 . You can just use it like this:
+```python
+import pathlib  # or pip install --user python-dotenv
+from dotenv import load_dotenv
+load_dotenv()
+
+path = Path('my_path')
+path.is_dir()
+```
+
+The result will be `True` if the path is a directory and `False`, otherwise.
+
+### Assessment:
+
+
+* [x] [Add a new test to the test suite](https://github.com/huggingface/transformers/blob/main/.github/workflows/test.yml) that is similar to one of these problems or other ideas we discussed in class and which you think will be difficult to implement (see instructions on how to write a new test in the README).
+* [x] Implement your solution for the problem above using the code review guidelines from the readings.
+
+I can explain that, but I cannot see a point to do so. The fact is, `a` and `b` are not the same as each other in this function call. They have different values at run-time, therefore they should be considered two different variables. So, when the function is executed (at run time), it has no idea that variable `x` is equal to `me`.
+
+### Question:
+Given code:
+
+```python
+def foo(x):
+  print("a = ", x) # this line always prints "b = 42"
+
+foo(x=17)
+foo(x='b')
+foo('c')
+```
+What will be printed on the screen?
+### Answer:
+'b'. `foo` is a function. When you call a function, it means that you are executing code (like in a method). For example, when you do `a = 10`, you assign value of '10' to variable `a`.
+So what happens here?
+
+- First time the function is called, `x` is equal to `'b'` or `b = '42'`.
+- Next time the function is called, `x` is equal to `'c'` and the result is a different value.
+- Last time the function is called, `x` is equal to 17, so the variable `a` (in this case) has the same value as `x`, which is 'b'.

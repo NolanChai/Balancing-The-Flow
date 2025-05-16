@@ -1,0 +1,48 @@
+1. Optimize Images: Large image files can significantly increase the load time of a web page. By compressing and resizing images, using appropriate file formats, and implementing lazy loading, you can substantially decrease the page load time.
+
+2. Minimize HTTP Requests: Every element on a web page that requires a separate HTTP request to the server increases the load time. By reducing the number of elements on the page, combining files where possible, and using CSS sprites, you can minimize the number of HTTP requests and decrease the page load time.
+
+3. Enable browser caching: Browser caching allows a user's web browser to store a copy of your website's files locally, so that when they revisit your site, their browser can quickly load the stored files instead of requesting them from your server. This can greatly reduce page load times, especially for returning visitors.
+
+Flash of Unstyled Content (FOUC) is a term used to describe the brief appearance of unstyled HTML content in a web page before the stylesheet has finished loading. This can occur when the browser renders the default styles of the HTML elements, which may be less visually appealing or not match the desired layout.
+
+To avoid FOUC, you can use several techniques:
+
+1. Use CSS to style elements as soon as they are loaded in the document, so that they render with the correct styling immediately.
+2. Delay the loading of stylesheets by using a defer attribute on the link element or by loading the stylesheet after the HTML content has finished rendering.
+3. Use CSS to hide the default styles of elements while the stylesheet is loading, and then show them once the stylesheet has finished loading.
+4. Use JavaScript to dynamically apply styles to elements when they are loaded in the document, so that they render with the correct styling immediately.
+5. Optimize the size of your stylesheets to reduce the time it takes for them to load.
+
+Global and static variables can be considered "evil" in object-oriented programming (OOP) for several reasons:
+
+1. **Coupling**: Global and static variables increase coupling between components, making them less modular and harder to test independently. When a component depends on a global or static variable, it becomes tightly coupled to that variable and may break when the variable is modified without affecting the component's behavior. This can make it difficult to change or extend the system in the future.
+2. **Immutability**: Global and static variables can be immutable, meaning they cannot be changed once they are initialized. This makes them less flexible and reduces their ability to adapt to changing requirements. If a global or static variable is not modifiable, it becomes a "magic constant" that is difficult to understand and maintain.
+3. **Scope**: Global and static variables have a wide scope, meaning they can be accessed from any part of the program. This can lead to naming conflicts and make it harder to reason about the program's behavior. When multiple components access the same global or static variable, it can be unclear which component is modifying the variable and how that affects the overall state of the system.
+4. **Inheritance**: In some cases, global and static variables can lead to unexpected inheritance patterns in OOP systems. For example, if a subclass inherits from a class that uses a global or static variable, the subclass may also inherit the variable's value without properly managing its lifetime or ensuring that it is properly updated across all instances of the subclass.
+
+Here's an example to illustrate these points:
+```python
+# Global variable example
+global counter
+counter = 0
+
+def increment_global():
+    global counter
+    counter += 1
+
+# Static variable example
+class Counter:
+    @staticmethod
+    def increment_static():
+        static_counter += 1
+
+    @staticmethod
+    def get_static_counter():
+        return static_counter
+
+# Usage examples
+increment_global()  # increment global counter
+print(Counter.get_static_counter())  # print the static counter value
+```
+In this example, we have two variables: a global variable `counter` and a static variable `static_counter`. Both of these variables are not properly managed or isolated from the rest of the program, which can lead to naming conflicts, unexpected behavior, and other issues. For example, if we increment the global counter in one part of the program and then try to access the static counter in another part of the program, we may get unexpected results because both counters are not properly initialized or synchronized. This makes it harder to reason about the program's behavior and maintain it over time.

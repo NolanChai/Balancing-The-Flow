@@ -1,0 +1,68 @@
+1. Reduce the number of HTTP requests: Reducing the number of HTTP requests can help decrease page load time by reducing the amount of data that needs to be transferred between the client and server.
+2. Use browser caching: Browser caching is a technique that stores frequently accessed resources, such as CSS or JavaScript files, on the user's computer so they don't have to be downloaded again. This can reduce the amount of data that needs to be transferred over the network, which in turn reduces page load time.
+3. Optimize images: Images are one of the largest contributors to page load time, especially for slow connections or mobile devices. Optimizing images by resizing and compressing them before uploading can significantly reduce their file size without affecting visual quality. This can be done using tools like ImageOptim or Kraken.io.
+4. Use a content delivery network (CDN): A CDN is a distributed system of servers that caches frequently accessed resources, such as images, videos, and JavaScript files, closer to the user's location. This reduces the amount of time it takes for these resources to load and improves page load times.
+5. Minify and compress HTML, CSS, and JavaScript: Minification is a technique that removes unnecessary whitespace and comments from code, while compression reduces file size without affecting functionality. Both can be applied to HTML, CSS, and JavaScript files to reduce their size and improve page load time.
+6. Use a lightweight framework or library: Using a lightweight framework or library like React, Angular, or Vue.js can help decrease page load time by reducing the amount of code that needs to be downloaded and executed.
+7. Avoid using excessive JavaScript: Excessive JavaScript can slow down page load time, especially in mobile devices. Minimize its use and optimize what's left by using tools like Dead-Code Eliminator or Lighthouse.
+8. Use server-side rendering: Server-side rendering is a technique that renders the HTML code on the server before sending it to the client. This reduces the amount of work the browser has to do, resulting in faster page load times.
+9. Use caching mechanisms: Caching mechanisms like HTTP cache or local storage can store frequently accessed resources, such as images or CSS files, closer to the user's location, reducing the number of requests made to the server and improving page load time.
+10. Test with different devices and browsers: Page load times vary depending on the device and browser being used. It's important to test your site with different devices and browsers to ensure that it performs well across all platforms. Use tools like Lighthouse or Chrome DevTools to analyze your website's performance.
+11. Avoid using unnecessary resources: Unnecessary resources like scripts, stylesheets, and images can slow down page load time. Optimize what's left by minifying, compressing, and reducing the number of requests made to the server.
+12. Use a lazy loading mechanism: Lazy loading is a technique that loads resources as they are needed, improving page performance and user experience. This can be done using libraries like Lodash or jQuery.
+13. Optimize DNS resolution: Optimizing DNS resolution by using a caching-enabled DNS server or CDN can help reduce the time it takes for the browser to resolve hostnames, improving page load times.
+14. Use a content management system (CMS): CMSs like WordPress, Drupal, or Joomla provide pre-built templates and plugins that make it easier to optimize page load times. They also often include built-in tools for optimizing images, minifying code, and other performance optimization tasks.
+15. Use a web server cache: Web servers can cache frequently accessed resources like HTML, CSS, or JavaScript files to improve page load times. This is particularly useful if the resource has not been updated in a while.
+
+It's important to note that each of these methods should be used in conjunction with others for optimal results. Additionally, it's essential to continuously monitor and optimize your website's performance to ensure that it remains fast and efficient over time.
+
+Flash of Unstyled Content (FOUC) refers to the brief moment when a web page transitions from loading a stylesheet to rendering its content without one. This can cause the page to appear blank or have an unpleasant look, as it does not have any styling applied yet. 
+
+To avoid FOUC, you can implement a few strategies:
+
+1. Load stylesheets in parallel: Instead of waiting for the entire HTML document to load before loading the CSS file, you can load both files simultaneously using JavaScript or CSS selectors that target elements with specific classes or IDs. This will allow you to apply styles as soon as the page has finished loading.
+2. Use a preloader: You can use an animated gif or a preloading icon to show that your web page is still loading, while also applying basic styling to the page so it doesn't look blank or ugly during the transition. This will help to reduce the perceived load time and make the user feel more engaged with the site.
+3. Use an asynchronous CSS approach: You can use a technique called "CSS prefetching" that involves loading the CSS file in parallel with the HTML, but delaying its execution until the document is ready. This will allow you to apply styles without causing a FOUC.
+4. Optimize your stylesheet: Make sure that your CSS files are properly optimized and minified to reduce their size and improve performance. This will help reduce the time it takes for the browser to load the stylesheet, which can help avoid a FOUC.
+5. Use a library or framework: You can use a preloader library or framework such as jQuery or Bootstrap that includes built-in support for loading stylesheets in parallel and providing a user experience that is optimized for FOUC.
+6. Use a server-side technology: You can use server-side rendering technologies such as React, Vue.js, or Angular to render the HTML document before it is sent to the client, which will avoid a FOUC since the styles will already be applied when the page is served.
+7. Use a CDN for your CSS files: Using a Content Delivery Network (CDN) can help reduce the time it takes for your CSS files to load by serving them from a closer location to your users, which can help avoid a FOUC.
+
+I don't agree that global and static objects are inherently evil. They can be used effectively in certain situations to simplify code, improve performance, or make it easier to reason about the behavior of a program.
+
+However, I understand your question is motivated by the common advice against using them. Here's an example of why global and static objects might be considered "evil":
+```
+// Global variable:
+let counter = 0;
+
+function incrementCounter() {
+  counter++;
+}
+
+console.log(counter); // Output: 1
+incrementCounter();
+console.log(counter); // Output: 2
+incrementCounter();
+console.log(counter); // Output: 3 (but it's not working, because the variable is global)
+```
+In this example, we have a global variable `counter` that's incremented three times. However, when we log its value after each increment operation, we get different results. This is because `counter` is only modified by the most recent function call, and not by the previous ones.
+
+To fix this issue, we could use a local variable instead:
+```
+function incrementCounter() {
+  let counter = counter + 1;
+}
+
+console.log(counter); // Output: 1
+incrementCounter();
+console.log(counter); // Output: 2
+incrementCounter();
+console.log(counter); // Output: 3 (now it's working correctly)
+```
+In this modified version, we create a local variable `counter` within the function, and increment its value each time we call `incrementCounter()`. This ensures that the variable is only modified by the most recent function call, and not by previous ones.
+
+Another problem with global and static variables is that they can make it difficult to reason about the behavior of a program. With local variables, it's easier to see how values are being modified and what side effects they might have on other parts of the code.
+
+It's also worth noting that using global and static objects can make it harder to write unit tests for your code. If you have a function that uses a global variable or object, then any test that calls that function needs to be aware of the existence of that variable or object, and ensure that its state is properly reset between tests.
+
+In summary, while global and static objects can be useful in certain situations, they're often seen as "evil" because they can make code more difficult to reason about, and harder to test effectively.

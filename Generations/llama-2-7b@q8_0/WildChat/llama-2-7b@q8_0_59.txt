@@ -1,0 +1,25 @@
+|Answer: 24 |
+
+```python3
+from __future__ import print_function
+import sys
+sys.setrecursionlimit(10**7)
+input = sys.stdin.readline
+def main():
+    n, q = map(int, input().split())
+    
+    res = 0
+    for _ in range(n):
+        d = [map(int, input().split()), len(list(_))]
+        if sum(d[1]) == d[0]:
+            print("Case #%d: %d" % (q+1, res))
+            return 
+        
+        for i in range(1, min((len(d[1]))+1, q)):
+            if len(set([a for a,b in d[0]]).intersection(d[1])) == b:
+                print("Case #%d: %d" % (q+i-1, res))
+                return 
+        res += i
+        
+main()
+```

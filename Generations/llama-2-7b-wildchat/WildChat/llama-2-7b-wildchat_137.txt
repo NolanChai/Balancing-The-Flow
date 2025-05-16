@@ -1,0 +1,49 @@
+Seismic scale is a measure of the intensity of an earthquake, while magnitude scale is a measure of the amount of energy released by an earthquake. Objective seismic scales such as the Modified Mercalli Scale (MMS) are based on observations and measurements, while subjective seismic scales such as the Shindo Scale are based on personal interpretation of the intensity. Similarly, magnitude scale is a more objective measure of an earthquake's strength, whereas the Richter Magnitude Scale is considered more subjective.
+
+### Explanation:
+Seismic and magnitude scales can be used to describe the intensity or strength of an earthquake. Seismic scales provide information on how intense an earthquake feels at a given location while magnitude scale provides a measure of the energy released by the earthquake.
+
+Objective seismic scales such as Modified Mercalli Scale (MMS) and Richter Magnitude Scale are based on observations and measurements, making them more objective. Subjective seismic scales like Shindo Scale rely on personal interpretation of intensity, making it more subjective. On the other hand, magnitude scale is a measure of how strong an earthquake is, regardless of the perceived intensity felt by people at a given location.
+
+In summary, while objective seismic and magnitude scales provide information on the strength or intensity of an earthquake, these scales are subjective to personal interpretations since they depend on human observation. However, Magnitude scale is considered more accurate and objective compared to subjective seismic scales as it measures the amount of energy released by the earthquake.
+
+```
+1.
+    
+Objective scales are:
+	1) PGA (peak ground acceleration). This is measured in units such as g (g = 9.8m/s^2), or cm/sec, etc.
+	2) PGV (peak ground velocity). This is also measured in units of cm/sec, and m/sec.
+	3) SGA (seismic ground acceleration). This is measured in units such as g.
+	4) SGVP (seismic ground velocity). This is measured in units of cm/sec, and m/sec.
+	5) PSD (peak spectral density) is the Fourier transform of SGA, and it is also measured in units such as g.
+
+Subjective scales are:
+	1) Intensity scale. The intensity scale measures how much people feel shaking due to an earthquake. It's measured in units from I (not felt at all), II (slightly noticeable, but not enough to waken normal person), III (moderate shaking where objects rattle and fall off shelves) up to XII (violent destruction).
+	2) Duration. The duration of an earthquake is measured in seconds or minutes.
+	3) Frequency: The frequency of a seismic event measures the rate at which waves move through the earth, and it's measured in units such as Hz (cycles per second).
+
+All these scales have formulas to calculate their values based on data collected from different sources such as sensors, instruments, etc. These formulas are typically used for analysis purposes, or to compare results between different studies/experiments. 
+
+2.
+    
+Objective scales:
+	1) PGA (peak ground acceleration), which is measured in units of g (g = 9.8 m/s^2), cm/sec, or other units depending on the type of measurement device used;
+	2) PGV (peak ground velocity), also measured in terms of g and other units;
+	3) SGA (seismic ground acceleration), calculated as PGA minus 1/2 PGV^2;
+	4) SGVP (seismic ground velocity), calculated as the difference between PGV and PSA;
+	5) PSD (peak spectral density), obtained by Fourier transforming SGA;
+
+Subjective scales:
+	1) Intensity, which is measured on a scale from I to XII where I = not felt at all while XII represents violent destruction; this scale relies heavily on human perceptions rather than actual ground motion data;
+	2) Duration (in seconds or minutes);
+	3) Frequency (in Hz), which measures how many times a second an earthquake wave repeats itself. 
+
+Formulas for calculating these objective and subjective scales include:
+
+PGA = acceleration/velocity; PGV = acceleration^2/2 velocity squared; SGA = SPA - 1/2 SGV^2, where SPV = seismic ground velocity; PSD = Fourier transform of SGA (PSD); Intensity scale formula = intensity number * base level factor + base level correction factor, Duration = elapsed time in seconds or minutes; Frequency = cycles per second. 
+Formulas for calculating these objective and subjective scales include: 
+1) Intensity = subjective assessment of how strong the earthquake felt by an observer based on their personal experience; base level factor = 0.25 - 0.37, depending on location; base correction factor = -2 log(R/R0), where R is Richter magnitude and R0 is background noise level (1-20). 
+2) Duration = time between occurrence of initial P wave arrival and maximum S wave amplitude reached during shaking period (seconds or minutes); Frequency = cycles per second.
+
+It's important to note that these formulas can vary depending on different measurement devices, locations, etc., so it's important for researchers/experts involved in earthquake studies/analysis to use consistent methods when calculating PGA values based on specific criteria (e.g., sensors used) and ensure accuracy throughout their studies/reports.
+```

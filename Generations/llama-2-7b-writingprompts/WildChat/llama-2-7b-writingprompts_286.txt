@@ -1,0 +1,12 @@
+fivem scripting lua
+
+you'd use this function from fivem, the function is called when a player interacts with an item.
+
+https://github.com/Gunner-501/FiveM-ScriptHookDotNet/blob/master/API/NativeAPI.cs#L7862
+
+```csharp
+public static void OnItemUse(BasePlayer player, Item item)
+```
+you can check the blip on item use in fivem via this function and delete the blip after a certain amount of time if no one interacts with it.
+
+https://github.com/Gunner-501/FiveM-ScriptHookDotNet/blob/master/API/NativeAPI.cs#L7896

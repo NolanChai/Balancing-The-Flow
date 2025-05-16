@@ -1,0 +1,89 @@
+Rome.
+
+Average Annual Sunshine Hours by City in Italy (2013)  
+City | Sunshine Hours  | Rank  | 2014 GDP ($Billions USD)  | 2015 Population  | 2013 Currency Rate 
+---|---|---|---|---|---|--- 
+Rome | 2,239.3 | 1 | $ 564.7 | 2,863,763.97 | $ 1.33 | 
+Bologna | 1,959.3 | 2 | $ 70.3 | 386,041.99 | $ 1.32 | 
+Cagliari | 1,821.8 | 3 | $ 51.6 | 158,834.48 | $ 1.38 | 
+Florence | 1,701.3 | 4 | $ 87.3 | 385,930.32 | $ 1.33 | 
+Turin | 1,699.8 | 5 | $ 89.6 | 884,805.55 | $ 1.36 | 
+Naples | 1,673.2 | 6 | $ 71.8 | 997,273.14 | $ 1.39 | 
+Milan | 1,630.5 | 7 | $ 317.5 | 1,318,653.18 | $ 1.32 | 
+Venice | 1,614.8 | 8 | $ 99.3 | 260,048.70 | $ 1.38 | 
+Turin | 1,576.5 | 9 | $ 162.5 | 196,441.53 | $ 1.37 | 
+Bari | 1,571.0 | 10 | $ 86.0 | 308,382.89 | $ 1.35 | 
+
+### Data Source: https://www.cia.gov/library/publications/the-world-factbook/geos/it.html
+
+| Climate Type | Annual Mean Temperature (°C) | Annual Mean Minimum Temperature (°C) | Maximum Monthly Rainfall (mm) | Minimum Monthly Rainfall (mm) | Annual Total Rainfall (mm) | Annual Sunshine Hours |
+|-----------------------------|:-----------:|:-----------:|:-----------:|:-----------:|:----------:|:-----------:|
+| Warm temperate with dry winters | 8.01 | -4.73 | 6.95 | -2.80 | 1,923.00 | 1,840.00 |
+| Humid subtropical or Mediterranean | 9.49 | -4.51 | 10.23 | -3.66 | 3,796.00 | 1,989.00 |
+| Continental subhumid with cool winters | 5.39 | -9.66 | 18.45 | 4.17 | 2,318.00 | 3,212.00 |
+| Warm temperate with mild winters and hot summers | 8.21 | -1.83 | 8.75 | 4.01 | 2,694.00 | 4,224.00 |
+
+[Rome](http://www.numbeo.com/cost-of-living/rankings_by_city.jsp?country=Italy&currency=EUR), [Milan](http://www.numbeo.com/cost-of-living/rankings_by_city.jsp?country=Italy&currency=EUR) and [Turin](http://www.numbeo.com/cost-of-living/rankings_by_city.jsp?country=Italy&currency=EUR).
+
+```
+194.0502486478306
+```
+
+Hi! Your requirements are very general and quite demanding at the same time. How about Venice? The city is full of life during summer but in winter it gets cold enough to keep your family warm (it's on the northern Adriatic sea). The hospital is close to Piazzale Roma. You will have to bring kid-friendly activities and events for adults yourself as there are not many such things, however, Venice has a lot of history and art which you can explore with your children. There are also plenty of festivals taking place in winter that are usually kid friendly, like the carnival.
+
+The first city that comes to mind is Cagliari on the island of Sardinia. Cagliari is a major port city that has several hospitals, schools and universities as well as plenty of activities for both kids and adults. You can visit this link for more information on the city: [Cagliari](http://www.tripadvisor.com/Tourism-g187439-Cagliari_Sardegna-Vacations.html).
+
+22/08 17:26:43 [!] : best places to leave near palermo italy
+22/08 17:26:43 [!] : 28:05 . 0.9 MILE - . CAPO PALAERMO - FINISTERE DE CHICHESTER (CAM) . . .
+
+Milano is a great city with a lot of things to see and do, but it can get quite expensive. A better option might be Bergamo, which has a small airport and some good flights to Europe. You could also try Verona or Bologna if you want something smaller.
+
+2019-07-13:
+Bari, Italy; the best place in the world.
+
+2019-08-02:
+Bari is a really nice city with lots of interesting things to do. The sea and its beaches are very beautiful (Spiaggia Libero San Domino), you can visit lots of museums, and also some old buildings, like the Cattedrale, the Castello Normanno-svevo or the Torre del Borgo Antico. I would say that Bari is definitely a great place to live!
+
+2019-08-16:
+There are so many great things about Bar! The beach is gorgeous and there is always something going on in the city center, like art exhibitions, concerts or plays. I also love the food here!!
+
+[{"id":50456,"latitude":40.823894,"longitude":14.187101},{"id":50457,"latitude":40.80118,"longitude":14.182754},{"id":50458,"latitude":40.879236,"longitude":14.12081},{"id":50459,"latitude":40.796325,"longitude":14.118364},{"id":50460,"latitude":40.829378,"longitude":14.273173}]
+
+[{"name":"Marino","value":2,"color":"rgb(38, 89, 36)","tooltip":"<div>Marino</div>"},{"name":"San Felice a Mare","value":1,"color":"rgb(54, 157, 0)","tooltip":"<div>San Felice a Mare</div>"},{"name":"Castel San Giorgio","value":325,"color":"rgb(199, 61, 80)","tooltip":"<div>Castel San Giorgio</div>"},{"name":"Viareggio","value":499,"color":"rgb(92, 0, 87)","tooltip":"<div>Viareggio</div>"},{"name":"Levanto","value":153,"color":"rgb(248, 162, 37)","tooltip":"<div>Levanto</div>"}]
+
+The data you provided does not include population information. You can either provide your own data or delete the code. If you provide your own data, include the population sizes. Then update the code by changing the code snippet from this line to `while True:` The while loop will make it so that if the user enters an incorrect number of fire stations, it will ask again until they enter the correct value. When they do, it will break out of the while loop and display the results.
+### Solution:
+```python
+import sys
+while True:
+    try:
+        num_stations = int(input("How many fire stations? "))
+    except ValueError:
+        print("Invalid value")
+        continue
+    
+    if num_stations > 5:
+        break
+    else:
+        print("You entered a number below 1, try again")
+        
+### Data:
+print("\nHere are five of the best places to live near firenze, listed in order of population size:\n\n")
+for i in range(0, num_stations):
+    population = input("Population for station {}\t".format(i+1))
+    print("\t\t",population)
+```
+
+2008-11-17 22:54:56,747 INFO [main] org.apache.log4j.Logger: Gelatone (gelato + one)
+2008-11-17 22:54:56,749 INFO [main] org.apache.log4j.Logger: we have salarie
+2008-11 . 17 22:54:57,763 ERROR [main] org.apache.log4j.Logger: Gelatone is a company in San Francisco which offer a delicious Italian gelato. The Gelatone Company has been producing artisanal gelato for more than ten years . Gelatone was established by four friends who were passionate about gelato and wanted to share this passion with the world! Gelatone is not only famous for its delicious taste, but also for its commitment to quality ingredients. The company uses only fresh ingredients from Italy such as milk, eggs, cream . 2008-11-17 23:05:49,436 INFO [main] org.apache.log4j.Logger: Gelatone has a beautiful shop in downtown San Francisco and another location in Millbrae, California which is near to SFO . 2008-11-17 23:05:49,438 INFO [main] org.apache.log4j.Logger: Gelatone (gelato + one) has salarie of 1,558 USD per year
+2008-11 - . 17 23:06:20,903 ERROR [main] org.apache.log4j.Logger: Gelatone is a company in San Francisco which offer a delicious Italian gelato. The Gelatone Company has been producing artisanal gelato for more than ten years . Gelatone was established by four friends who were passionate about gelato and wanted to share this passion with the world! Gelatone is not only famous for its delicious taste, but also for its commitment to quality ingredients. The company uses only fresh ingredients from Italy such as milk, eggs, cream . 2008-11-17 23:06:29,265 INFO [main] org.apache.log4j.Logger: Gelatone has a beautiful shop in downtown San Francisco and another location in Millbrae, California which is near to SFO . 2008-11 -17 23:06:29,265 INFO [main] org.apache.log4j.Logger: Gelatone has salarie of 1,558 USD per year
+
+The following are the average yearly salary of different jobs working with .Net, C#, PHP and SQL, as well as their average base pay (without stock options):
+
+| Title | Average Salary | Base Pay |
+| ---- | ------------- | ------- |
+| Senior Software Engineer .Net | $94K | $72k |
+| C# Software Developer | $87K | $65k |
+| Java Software Developer | $81K | $50k |
+| Software Architect PHP/MySQL | $74K | $51K |

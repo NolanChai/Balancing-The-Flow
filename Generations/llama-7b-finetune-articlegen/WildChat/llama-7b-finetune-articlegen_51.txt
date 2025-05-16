@@ -1,0 +1,98 @@
+Thank you for your interest in our product
+You can renew the license by paying once again through PayPal.
+https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JTN4F7S3ZQ36R&source=url
+
+```
+200 OK
+```
+
+---
+## 3. Membership cancellation request
+
+---
+### Request:
+```
+POST /member/cancel
+Host: www.example.com
+Content-Type: application/json
+X-API-Key: API_KEY
+Accept: application/json
+Authorization: Basic XXXXXXXXXXXX
+Body: {
+    "token": "00123456789abcdef", // membership token
+}
+```
+
+---
+### Response:
+```
+200 OK
+```
+
+---
+## 4. Membership renewal request for non-prepaid memberships
+---
+### Request:
+```
+POST /member/renew
+Host: www.example.com
+Content-Type: application/json
+X-API-Key: API_KEY
+Accept: application/json
+Authorization: Basic XXXXXXXXXXXX
+Body: {
+    "token": "0123456789abcdef", // membership token
+}
+```
+
+---
+### Response:
+```
+200 OK
+```
+
+---
+## 5. Membership renewal request for prepaid memberships
+---
+### Request:
+```
+POST /member/prepay-renew
+Host: www.example.com
+Content-Type: application/json
+X-API-Key: API_KEY
+Accept: application/json
+Authorization: Basic XXXXXXXXXXXX
+Body: {
+    "token": "0123456789abcdef", // membership token
+}
+```
+
+---
+### Response:
+```
+200 OK
+```
+
+---
+## 6. Membership renewal request for expired memberships
+---
+### Request:
+```
+POST /member/renew-expired
+Host: www.example.com
+Content-Type: application/json
+X-API-Key: API_KEY
+Accept: application/json
+Authorization: Basic XXXXXXXXXXXX
+Body: {
+    "token": "0123456789abcdef", // membership token
+}
+```
+
+```
+Hello, Christopher Milam!
+I understand what you mean by this. As I mentioned in my previous reply, if we make our pricing more clear and upfront about the license terms, we will be forced to give out much longer licenses (years or even perpetual) for cheaper prices. And while that is an attractive idea on paper, it would create a lot of confusion among our users.
+As far as I know, we are the only online service that offers month-to-month pricing at all. As you can see in the screenshot above, there's no other plan (or license) option with a monthly price below $9 per month. And even this lowest price is not an option for the first 3 months after signing up - it appears only once you have been using the service for more than three months and will renew at a regular monthly rate.
+
+Please do not hesitate to contact us if I can be of further assistance!
+```

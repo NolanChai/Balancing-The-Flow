@@ -1,0 +1,32 @@
+```C#
+class Program
+{
+    static void Main()
+    {
+        string response = Console.ReadLine();
+        
+        int c = 0;
+        while (response != "I give up")
+        {
+            if(response == "I want to help her")
+                c++;
+            else if (response == "I want to take action")
+            {
+                Console.WriteLine($"We will keep an eye on your house for now, but you still need to seek therapy.");
+                 
+            }
+            else if(response == "I'm going to leave this to the professionals")
+            {
+                c++;
+                if (c >= 1)
+                {
+                    Console.WriteLine($"Thank you for helping, we will come back and check on her later.");
+                    return;
+                }
+            }
+            
+            response = Console.ReadLine();
+        }
+    }
+}
+```

@@ -1,0 +1,111 @@
+I want to write an application which sends html emails from my C program, using the mail system of my host. I need to use the smtp protocol and send a message to myself. My problem is that I don't know how to fill all the needed fields. What I do now is this :
+
+```
+#include <stdio.h>
+#include <string.h>
+#define SMTP_PORT 25
+
+int main (void) {
+    char *port = "25"; // Port to connect to
+    char *helo = ""; // HELO string
+    char *from = "My Name <myname@example.com>"; // From: header field
+    char *to = "recipient@somewhere.com"; // To: header field
+    char *subject = "This is the subject"; // Subject: header field
+    char *body = "<html>Hello world!</html>"; // Message body in HTML format
+    int sock, err;
+    struct sockaddr_in serv;
+    size_t len = strlen(port);
+    char buf[500];
+
+    /* Create a TCP socket */
+    if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+        printf("Error creating socket\n");
+        return -1;
+    }
+
+    /* Connect to the SMTP server */
+    memset(&serv, 0, sizeof(serv));
+    serv.sin_family = AF_INET;
+    serv.sin_port = htons(atoi(port));
+    if ((err = inet_pton(AF_INET, "smtp.gmail.com", &serv.sin_addr)) <= 0) {
+        printf("Error parsing SMTP server IP address: %d\n", err);
+        return -1;
+    }
+    if (connect(sock, (struct sockaddr *)&serv, sizeof(serv)) < 0) {
+        printf("Error connecting to SMTP server\n");
+        return -1;
+    }
+
+    /* Send the HELO command */
+    snprintf(buf, sizeof(buf), "HELO %s\r\n", helo);
+    if (send(sock, buf, strlen(buf), 0) < 0) {
+        printf("Error sending HELO command\n");
+        return -1;
+    }
+
+    /* Send the MAIL FROM command */
+    snprintf(buf, sizeof(buf), "MAIL FROM: <%s>\r\n", from);
+    if (send(sock, buf, strlen(buf), 0) < 0) {
+        printf("Error sending MAIL FROM command\n");
+        return -1;
+    }
+
+    /* Send the RCPT TO command */
+    snprintf(buf, sizeof(buf), "RCPT TO: <%s>\r\n", to);
+    if (send(sock, buf, strlen(buf), 0) < 0) {
+        printf("Error sending RCPT TO command\n");
+        return -1;
+    }
+
+    /* Send the DATA command */
+    snprintf(buf, sizeof(buf), "DATA\r\n");
+    if (send(sock, buf, strlen(buf), 0) < 0) {
+        printf("Error sending DATA command\n");
+        return -1;
+    }
+
+    /* Send the email body */
+    snprintf(buf, sizeof(buf), "From: %s\r\n"
+                               "To: %s\r\n"
+                               "Subject: %s\r\n"
+                               "%s", from, to, subject, body);
+    if (send(sock, buf, strlen(buf), 0) < 0) {
+        printf("Error sending email body\n");
+        return -1;
+    }
+
+    /* Send the termination command */
+    snprintf(buf, sizeof(buf), ".\r\n");
+    if (send(sock, buf, strlen(buf), 0) < 0) {
+        printf("Error sending email body\n");
+        return -1;
+    }
+
+    close(sock);
+    return 0;
+}
+```
+
+1. If you are a member of the Cult of Lore, what is your cult rank?
+
+2. What was your previous user name and level before you joined CoL?
+
+3. How many days did it take for you to reach level 50 as a Fighter?
+
+4. How many days did it take for you to reach level 50 as a Wizard?
+
+5. Who is the best leader in your opinion and why?
+
+6. What is your favorite spell?
+
+7. What is your favorite weapon?
+
+8. What is your favorite color?
+
+I have found that the "spoofing" of emails is being used by criminals to try and trick people into revealing personal information, sending money or downloading malware.
+
+The thing is, once an email has been sent from your account (whether it was actually you who did so or whether your account has been compromised) there isn’t really any way of knowing exactly where the email went to. Of course if you get a response then you will know that someone got it but if not, you would never know!
+
+One way to detect a spoofed email is to use an anti-spam or anti-virus program with some form of spam filtering. Most modern email programs like Microsoft Outlook and Mozilla Thunderbird have such filters built in and can even warn you when an email might be suspicious. Some filters are more effective than others but it is certainly worth having this protection in place.
+
+Another way to protect yourself from spoofed emails is to use a secure password manager like LastPass or 1Password. These programs create unique, strong passwords for all your online accounts and make them extremely difficult to crack. This means that even if a criminal does manage to get hold of one of your passwords, they won’t be able to access any of your other online accounts.

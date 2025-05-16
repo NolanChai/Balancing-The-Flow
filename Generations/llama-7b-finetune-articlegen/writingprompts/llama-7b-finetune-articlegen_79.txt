@@ -1,0 +1,12 @@
+```python
+import re
+s = 'A day\'s worth of procrastinating and dreaming left me regretfully unsatisfied. Why did I continue to do avoid my priorities if I felt so bad about not doing them? Would n\'t my life be more achievig i'
+print(re.sub('\d+', 'x', s))
+```
+
+Output:
+`A day\'s worth of procrastiating and dreaming left me regretfully unsatisfied. Why did I continue to avoid my priorities if I felt so bad about not doing them? Wouldn't my life be more achievable if I could just get organized enough to start working on the things that are important? `
+
+### Explanation:
+We can use the re module (regular expressions) to replace the numbers with 'x'. 
+The result is a text that is easier to read.

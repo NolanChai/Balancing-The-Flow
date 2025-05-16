@@ -1,0 +1,84 @@
+import pygame, random
+from pygame.locals import * #import pygame.mixer as mp
+pygame.init() #init python game
+class Stadium:
+    def __init__(self, width, height):
+        self.w, self.h = width, height
+        #1 - 20000
+        self.capacity = random.randint(5, 20)
+        self.count = [0 for i in range(3)] #count of fans
+        self.x, self.y = (self.w / 4), (self.h/7)
+        self.color = (random.randrange(0, 185), random.randrange(0, 220))
+
+    def draw(self, screen):
+        pygame.draw.rect(screen, self.color, (self.x, self.y, self.capacity * self.h, self.capacity * self.w), 2) #make a rectangle with the fans
+class JameyChadwellStadium:
+    def __init__(self):
+        #1 - 20000
+        pygame.display.set_caption('Jamey Chadwell Stadium')
+        self.capacity = 20000
+        self.stade = [Stadium(self.capacity, self.capacity) for i in range(3)] #create a list of stadiums with capacity
+        self.x, self.y = (self.capacity / 4), (self.capacity * 7/10) #initialize x and y coordinates
+        self.color = (random.randrange(0, 185), random.randrange(0, 220))
+        for stadium in self.stade:
+            stadium.draw(pygame.display.get_surface()) #draw stadiums in the screen surface
+    def draw_fans(self):
+        pygame.draw.rect(pygame.display.get_surface(), self.color, (self.x, self.y, self.capacity * self.h, self.capacity * self.w), 2) #make a rectangle with the fans
+    def show(self):
+        pygame.display.update() #updates surface
+
+JameyChadwellStadium().show() #show the stadium
+
+while True:
+    for event in pygame.event.get(): #loop through events
+        if event.type == QUIT: #if quit is pressed, stop the program
+            exit(0)
+        elif event.type == KEYDOWN and event.key == K_ESCAPE: #if escape key is pressed
+            exit(0)
+        JameyChadwellStadium().draw_fans() #update stadiums with fans
+    pygame.display.update() #updates surface
+pygame.quit()
+\end{code}
+
+I've got a little bit further now and have managed to make the seats/stade draw correctly, but I can't get it working where when there is a fan in one of these seats then another one will be generated.
+
+Here's what I've done so far:
+\begin{itemize}
+\item Initiated pygame and created 20000 fans (3x6 rows of 14) using the capacity variable of JameyChadwellStadium()
+\item Changed the colour of the stadiums to a random value
+\item Made a loop that draws each stade onscreen
+\end{itemize}
+
+Here's what I need it to do:
+\begin{itemize}
+\item When a fan is in a seat, another one will be generated
+\item The newest seat will have the same random colour as all the others
+\end{itemize}
+
+I can get it to work by creating an empty list and adding seats into this list. However, I don't understand how to generate fans without this and instead create them in a loop.
+
+Any help would be appreciated. Thanks!
+
+Comment: 1) You should use a queue for that task, or just an array with "count" value.
+
+Answer: First of all, you should check the condition whether there is no seat free yet:
+
+\begin{code}
+for stadium in self.stade:
+    if stadium.count == stadium.capacity: #if count < capacity then draw
+        stadium.draw(pygame.display.get_surface())
+        stadium.count = 0 #reset count and set it to zero again
+\end{code}
+
+Now you can add a fan on every seat available:
+
+\begin{code}
+if stadium.count == stadium.capacity:
+    stadium.draw(pygame.display.get_surface()) #draw stadiums in the screen surface
+    stadium.x = (stadium.x + 1) % stadium.w #random x-position
+    stadium.y = (stadium.y - 3) // stadium.h #random y-position
+    stadium.color = (random.randrange(0, 185), random.randrange(0, 220))
+    stadium.count = 0 #reset count and set it to zero again
+\end{code}
+
+Comment: Thanks a lot! That's perfect :D

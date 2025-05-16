@@ -1,0 +1,6 @@
+```
+    ''I told you not to come in at all'' 
+````
+### Explanation:
+`` The player can only enter when he arrives before his coworker. We are assuming that no one is ever late for work. The first time the player arrived early, but he was still late and will never be able to arrive early again because of this. If we assume he always arrives early, then the next time he should be able to come in on time. However, he didn't come in at all on that day (i.e., he stayed away from work) so now it is assumed that everyday is a new day and he can arrive early again. 
+```

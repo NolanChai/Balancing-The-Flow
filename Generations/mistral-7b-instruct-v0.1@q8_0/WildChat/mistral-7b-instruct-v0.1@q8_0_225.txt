@@ -1,0 +1,67 @@
+Yes, it is possible. Here's a VBA code that should do what you described:
+```vbnet
+Sub FindEarliestServiceDate()
+    Dim earliestDate As Date
+    
+    'Loop through rows 5 downwards in column B
+    For i = 5 To Cells(Rows.Count, "B").End(xlUp).Row
+        'Check if the cell in column B contains the text "Service"
+        If Cells(i, "B").Value = "Service" Then
+            'Find the date in column H that corresponds to the current row
+            Dim dateRange As Range
+            Set dateRange = Application.Intersect(Cells(i, "H"), Cells(i, "B") = "Service")
+            
+            'Check if any date range was found
+            If Not IsError(dateRange) Then
+                'Get the earliest date in the found range
+                If IsDate(dateRange.Value) And dateRange.Value > earliestDate Then
+                    earliestDate = dateRange.Value
+                End If
+            End If
+        End If
+    Next i
+    
+    'Display the earliest date found in cell H3
+    Cells(3, "H").Value = earliestDate
+End Sub
+```
+To use this code, you will need to have Visual Basic Editor open. Then, follow these steps:
+1. Press `Alt + F11` to open the Visual Basic Editor.
+2. Click on the `Insert` menu and select `Module`. This will create a new module where you can add the code.
+3. Copy and paste the code into the module.
+4. Save the module by clicking on the `File` menu and selecting `Save` or by pressing `Ctrl + S`.
+5. Close the Visual Basic Editor.
+6. To run the macro, select any cell in the worksheet and press `Alt + F8`. This will open the Macro dialog box.
+7. In the Macro dialog box, select the macro you created (it should be listed there) and click on `Run` or press `Enter`.
+8. The code should now run and display the earliest date found in cell H3.
+
+To make Sheet1 the active sheet, please follow these steps:
+
+1. Click on any cell in the Sheet1 worksheet. This will activate it.
+2. If the ribbon at the top of the screen does not show the "Sheet1" tab (which is located between "Home" and "Insert"), right-click on the tab bar, select "Select Sheets," check the box next to "Sheet1," click "OK," and then click "Sheet1" again in the ribbon.
+3. Alternatively, you can press the shortcut keys "Ctrl+PgDn" (Windows) or "Cmd+PgDn" (Mac) to toggle between the active sheet and the next sheet in the workbook. If Sheet2 is currently the active sheet, for example, pressing these shortcut keys will switch to Sheet1.
+
+Here's a VBA code that should do what you're asking for:
+```vbnet
+Private Sub Worksheet_Change(ByVal Target As Range)
+    Dim lastRow As Long
+    
+    ' Find the last row of data in column B
+    lastRow = Cells(Rows.Count, "B").End(xlUp).Row
+    
+    ' Loop through all cells in column B
+    For i = 1 To lastRow
+        If Target.Cells(i, "B").Value2 = "Serviced" Then
+            MsgBox "Please ensure that an identical Service is created with a Next Service Due Date after changing this to Serviced.", vbInformation
+        End If
+    Next i
+End Sub
+```
+To use this code, follow these steps:
+1. Open the VBA editor in Excel by pressing `ALT + F11`.
+2. Create a new module by clicking on `Insert > Module` in the menu bar.
+3. Paste the code into the module and save it with a descriptive name, such as "ServiceChanged".
+4. Close the VBA editor.
+5. In your worksheet, go to the Developer tab in the ribbon and click on `Macros`.
+6. Select the "ServiceChanged" macro from the list of available macros and click `Run`.
+7. Now any time you change the value of a cell in column B to "Serviced", you'll see a pop-up message reminding you to create an identical Service with a Next Service Due Date.

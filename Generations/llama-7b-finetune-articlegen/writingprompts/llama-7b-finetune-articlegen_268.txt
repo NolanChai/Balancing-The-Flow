@@ -1,0 +1,12 @@
+`[A] You can take your pick.' He smiled as the rope was tightened around my wrists and ankles.`
+```python
+from word import Word
+words = ['Anacronte','Anecdote', 'Breakout']
+my_word = input('Which one?')
+if words.contains(my_word) == True:
+    print('Your pick. It\'s a classic. No two ways about that.')
+elif my_word == 'Breakout':
+    print('Selfish, but it\'s good enough for me...')
+else: 
+    print('I do n\'t know,', I said, testing the rope that bound my hands. \'I\'m just not sure which way to go. Do you go ', Anecdote?, 'It\'s a classic. No two ways about that. Or Breakout? Selfish, but it\'s good...')
+```

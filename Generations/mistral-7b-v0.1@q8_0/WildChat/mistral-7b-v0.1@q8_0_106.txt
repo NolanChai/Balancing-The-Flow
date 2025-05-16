@@ -1,0 +1,38 @@
+I am using Ubuntu 20.04.5 LTS with CUDA 10.2. I'm trying to install Pytorch from source, but the problem is that when compiling `torch` throws me the following error:
+
+```
+ERROR: Failed building wheel for torch
+Running setup.py clean for utils
+Failed to build utils
+Installing collected packages: pycparser, cython, tqdm, typing-extensions, setuptools, typing, cffi, setproctitle, wheel, importlib-metadata, h5py, mkl-include, numba, numpy, six, torch
+    Running setup.py install for utils: started
+    Running setup.py install for utils: finished with status 'error'
+    ERROR: Command errored out with exit status 1:
+     command: /bin/sh -c set -e; pip install --no-cache-dir /tmp/pip-install-53q_82yx/utils/*.whl && rm -rf /tmp/pip-install-53q_82yx
+         cwd: /tmp/pip-install-45n7gj09/torch/utils/__cython_build_temp
+    Complete output (12 lines):
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.linux-x86_64-3.8
+    creating build/lib.linux-x86_64-3.8/torch
+    copying utils/__init__.py -> build/lib.linux-x86_64-3.8/torch
+    running build_ext
+    building 'utils' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -isystem /usr/local/include/python3.8 -c utils/__init__.cpp -o build/temp.linux-x86_64-3.8/utils/__init__.o
+    gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -g -fwrapv -O2 -Wall -isystem /usr/local/include/python3.8 -o build/lib.linux-x86_64-3.8/torch/utils/__init__.cpython-38m-x86_64-linux-gnu.so build/temp.linux-x86_64-3.8/utils/__init__.o -lcudart -lm -lcurand -lgomp
+    ld: /usr/lib/aarch64-linux-gnu/libcudart.so.10.2: undefined reference to symbol '___cuda_memcpy_dtoh@@GLIBCXX_3.4'
+    clang: error: linker command failed with exit code 1 (use -v to see invocation)
+    error: command '/usr/bin/g++' failed with exit status 1
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+```
+
+It seems that the compiler is having problems linking the shared library `libcudart`.
+
+I have tried many different things, like changing the CUDA version and/or CUDNN version (i have downloaded some different versions from https://developer.download.nvidia.com/compute/redist/), adding the path of my `nvcc` and `cuda-toolkit` in my environment variable, installing torch from different branches and so on... I'm getting a lot of errors but this one is the most common error.
+
+I don't know what else to do, so I hope someone can help me with this problem.
+
+Thanks!

@@ -1,0 +1,73 @@
+It took a bit for this to make sense. She seems like an okay person, but she does have some quirks that may cause problems in the future (she has a tendency to be nosy and doesn't listen very well). Overall though I think we might get along if you can help her with some things (she had trouble getting here due to poor directions).
+
+```python
+def f_get(s, k):
+    if s and k==0 or s.count(' ')>1: return 0
+    if not s: return False
+    i=s.find(' ', k)
+    while i>-1:
+        if s[i+k]: break
+        else: i+=1
+    if s[i+k]!='\n': return (False,i+1)
+    else: return (True,(i+k)+1)
+```
+
+### Questions/Answers:
+
+- Is this the right way to do it?
+- How would I handle something like "She's kind of short. She's probably about five feet."?
+
+### Instructions:
+
+Write a program that takes two strings as input and outputs a string based on if the letters in each of those strings are vowels or consonants. The first parameter (string1) should be treated like "dog" where every word is a vowel. The second parameter (string2) should be treated like "cat" where no words are considered as vowels.
+
+### Questions/Answers:
+- Why is this not working?
+
+### Instructions:
+
+Write a program that takes three parameters and outputs the first parameter with the letter "x" in place of all characters other than numbers, letters, or spaces. The second parameter should be treated as "123" while the third parameter (string) should be treated as "hello".
+
+### Questions/Answers:
+- Is this the right way to do it?
+
+### Instructions:
+
+Write a program that takes one integer input and outputs three values. The first output value is the number of vowels in the input string, the second output value should be the sum of all consonant sounds (or no value if there are only vowel sounds), and the third value should be the sum of all non-vowel sounds (or zero if there are no vowel sounds).
+
+### Questions/Answers:
+- Is this the right way to do it?
+
+### Instructions:
+
+Write a program that takes two strings as input and outputs "yes" if they share a common word in their first three letters and "no" if not.
+
+### Questions/Answers:
+- How would I handle something like this? ("hey", "hello")
+
+### Instructions:
+
+Write a program that takes four parameters: a string (the first parameter), a starting position (the second parameter, beginning at 0 and ending with the number of characters in the string), a length of the string to be used for comparison (the third parameter, beginning at zero), and an end position (the fourth parameter). The program should return the index of the character that is the first instance of the string with the specified parameters. If there are multiple matches, it should return 0.
+
+### Questions/Answers:
+- Is this the right way to do it?
+
+### Instructions:
+
+Write a function that takes a single string and returns true or false based on if the first character is lowercase or not.
+
+### Questions/Answers:
+- Why is this returning false instead of True, False when I'm expecting it to return True?
+
+### Instructions:
+
+Write a function that takes three parameters and returns True if all parameters are true or False otherwise. The first parameter should be treated like "1" while the second parameter (string1) should be treated as "dog", and the third parameter (string2) should be treated as "cat".
+
+```
+[ [ [ [ Help me write the next turn in this dialog with no explanation or format changes. ] ] ] ] 
+[ [ [ [ [ Help me write the next turn in this dialog with no explanation or format changes. ] ] ] ] ] 
+[ [ [ [ [ Help me write the next turn in this dialog with no explanation or format changes. ] ] ] ] ] 
+[ [ [ [ [ Help me write the next turn in this dialog with no explanation or format changes. ] ] ] ] ] 
+```
+
+I'm not sure how this is meant to be used but I think it could be a good way to start writing. If the AI was capable of taking part in a dialog and if there were several users interacting at once, then it would probably make for an interesting experience. I've tried using this before, but not with any luck. I think that if you have the AI pick a topic from a list or something like that, and then take turns asking questions about things like height, weight, hair color etc., it could be fun to try out.

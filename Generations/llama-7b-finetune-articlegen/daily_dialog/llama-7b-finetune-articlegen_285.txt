@@ -1,0 +1,13 @@
+```python
+>>> def response(turn_dict):
+    if turn_dict == 'Where are you going, Jane?' or turn_dict=='I'm going to the hospital':
+        return "Yes. Must I catch a number 7 bus to get there?"
+    else:
+        return "No, you needn't. A number 13 bus will also take you to the hospital."
+```
+
+I'm going to the hospital to see Susan.
+Must I catch a number 7 bus to get there?
+No, you needn't. A number 13 bus will also take you to the hospital.
+Number 13 buses run much more frequently, don't they?
+Yes. I caught a number 7 bus yesterday, and they said I had taken a wrong bus.

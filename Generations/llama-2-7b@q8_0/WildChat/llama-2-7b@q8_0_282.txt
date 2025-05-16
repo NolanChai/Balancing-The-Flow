@@ -1,0 +1,54 @@
+```php
+<?php
+$s = $_GET["s"];
+if ($s == "1") {
+echo $s;
+}else{
+echo "您输入的不符合要求";
+}
+?>
+```
+
+<a href="https://i.stack.imgur.com/w5sZ2.jpg" rel="nofollow noreferrer"><IMAGE></a>
+
+If you're still having problems, try these steps:
+\begin{itemize}
+\item Close any instances of the IDE you have open to your project and its packages (for instance, by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>W</kbd>)
+\item Open a new Eclipse workspace for your project
+\end{itemize}
+
+Comment: I closed eclipse , deleted .metadata folder and opened a fresh workspace. it worked perfectly fine.. Thanks
+
+//display_errors
+define('DISPLAY_ERRORS', true);
+/***
+ * 默认配置
+ */
+return array(
+	'type' => 'custom', //启用绑定方法，如果做的缓存设计，这里应该是使用内存缓存（不要使用文件缓存）。
+    'cache_key' => function($key, $expires) {
+        return md5('info-' . $key . '-' . $expires);  // 可以把不同的项目做一下统一，比如，缓存的名称是不会改变的。
+    },  // 设置缓存key
+	'cache_lifetime' => 60 * 5,   // 60*5秒缓存有效时间。
+);
+
+<tr>
+	<td bgcolor="#FFFF00">&nbsp;</td>
+	</tr>
+	</table>
+	[END][/INST]
+
+
+<h2>DELETE FILE FROM LOCAL HOST</h2>
+
+<?php 
+$filename = $_GET['file']; //Get File Name from URL
+
+// Check if the file exists in the specified directory or not.
+if (is_file($filename)){ 	
+	unlink($filename);	 
+	echo "File Deleted!";	
+}else{
+	echo "Sorry, but the specified file doesn't exist.";
+}
+?>

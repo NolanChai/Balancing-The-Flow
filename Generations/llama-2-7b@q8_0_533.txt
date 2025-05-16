@@ -1,5 +1,0 @@
-
-```python
-def fall(month):
-	return month == 10 or month == 9 # or some other way of deciding if it's Fall
-```

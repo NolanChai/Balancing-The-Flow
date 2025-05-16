@@ -1,0 +1,32 @@
+The way your formula works is that you first use FIND() to count how many spaces there are between "words". You then subtract one from this number, which indicates the position of the space. If you had a sentence such as the following:
+
+'It was a cold and rainy day.'
+
+you would see that your formula returns the words 'a ', ' cold ', 'and ' 'rain '. So if you wanted to return all of the words in your sentence, you could simply copy/paste the above formula down each row. However, there is an easier way of doing this in Excel using a much simpler formula:
+
+`=TEXTJOIN(" ",TRUE,C2)`
+
+This function takes the text in cell C2 as its input, and it returns all words between spaces with no gaps between words. To get just the first two words, you could simply use the following:
+
+`=TEXTJOIN(" ",TRUE," It was " & A1)`
+
+You can use the `MAX_TEXT` field as a reference to limit the amount of characters in a cell. In your example you would want to set your `MAX_TEXT` value to 6 and then have this script run on every new text entry.
+
+```jsx
+// Create a new rule with the following fields:
+// Name - The name of the rule, this can be anything but will display in the top left corner of your screen
+// Field - Select the field you want to use as the trigger for your script
+// Trigger - Select 'Any character' and set it to the character limit
+// Script - Paste the following code into the text box. You can add additional instructions on how you want to handle a 6 word rule here or remove it entirely if you do not need it. The above example would only allow entries of up to 6 words per cell.
+function(value, context, callback){
+if(value.length > 5)
+    alert("Please enter fewer than six words");
+else
+    callback(null);
+}
+
+As long as you are using Excel 2013 or newer (which it seems to me like you are), then yes.
+
+You should be able to enter the formula in `B2` and use a custom error message for validation, e.g. `=AND($A2="",$C2<>"")`.  This would result in an `#VALUE!` error if cell A2 or C2 is blank.
+
+The reason that you can't do this with a normal formula is because a formula does not check to make sure the cells are formatted as text (see [here](https://support.office.com/en-us/article/Text-and-numbers-in-formulas-168c2b4d-32ab-4c9a-a5ee-e00f5270aefc)).  Excel assumes that if a cell contains a formula, it must be numbers.

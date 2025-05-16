@@ -1,0 +1,101 @@
+<a href="https://i.stack.imgur.com/8uQnh.png" rel="nofollow noreferrer"><IMAGE></a>
+
+### Explanation:
+The html output was:
+<p class="post-subtitle">Social Media Growth Hacker</p>
+
+<h1>Selenium-Webdriver</h1>
+<div id='24230843679' class='card' style='height: 400px; width: 90%; overflow-y: auto;'> <pre><span>Social Media Growth Hacker</span></pre> </div>
+
+Social media growth hacker
+\end{code}
+
+Comment: You've got the same problem here, you are not escaping special characters. For example `social` should be `%20` in your query. The `\` is also important to escape the `\` character itself.
+
+Answer: You're missing an apostrophe in your regexp:
+
+\begin{code}
+/p[normalize-space()='Social Media Growth Hacker']/gi
+\end{code}
+
+Selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[normalize-space()='Social Media Growth Hacker']"}
+  (Session info: chrome=85.0.4183.83)
+Stacktrace:
+Backtrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+    at java.lang.reflect.Constructor.newInstance(Unknown Source)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+    at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:348)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+    at java.lang.reflect.Method.invoke(Unknown Source)
+    at py.remote_driver.W3CWebDriver$RemoteElementMethods.click(py.remote_driver:1068)
+    at py.remote_driver.W3CWebDriver$RemoteElementMethods.click(py.remote_driver:1167)
+    at py.remote_driver.W3CWebDriver$RemoteElementMethods.click(py.remote_driver:1164)
+    at test_webdriver_classification.test_onepage.click_the_button_in_a_division(test_onepage.py:59)
+    at test_webdriver_classification.test_onepage.run(test_onepage.py:31)
+\end{code}
+
+Comment: Does this answer your question? [Why can not find element by XPath on chrome](https://stackoverflow.com/questions/70745862/why-can-not-find-element-by-xpath-on-chrome)
+
+Answer: The XPath expression should be like this -
+
+\begin{code}
+//p[contains(.,'Social Media Growth Hacker')]
+\end{code}
+
+You can also use the `css_selector` as below for a more general purpose solution. It will work in Chrome, Firefox and Safari.
+
+\strong{Note:} `//*` is short for \em{`//div[*]`}. Also, make sure to close the tag.
+
+\begin{code}
+element = driver.find_element(By.CSS_SELECTOR,'div > *:nth-child(2)')
+\end{code}
+
+\section{Reference:}
+
+You can find a detailed discussion in [How to use XPath or CSS Selector and find element](https://stackoverflow.com/a/48379540/11260281).
+
+`post-markdown flex flex-col gap-4 text-th-primary-dark text-base`
+
+```html
+  <div>
+    <a href="#">First</a>
+  </div>
+  <div class="flex flex-col gap-4 text-th-primary-dark text-base">
+      <a href="#">Second</a>
+  </div>
+```
+
+post method is created by class. You need to create an instance of your class and call the `save()` method on it. The below example creates a new post and saves it.
+
+\begin{code}
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+
+new_post = Post() # Create an instance of your class
+new_post.title = 'test' # Set the value for title property
+new_post.content = 'test' # Set the value for content property
+
+new_post.save() # Save the post object to database
+\end{code}
+
+Comment: I tried that and it says new_post.title = 1234567890 and so on then saves nothing to my database. what am i doing wrong?
+
+Comment: you need to use `new_post.save()` after setting the values. If you do not call save, your object will have no values in it
+
+Answer: Try this
+
+\begin{code}
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+def save(self, *args, **kwargs):
+        self.save(*args, **kwargs) # call the original save method
+\end{code}

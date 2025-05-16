@@ -1,0 +1,79 @@
+<table>
+<thead>
+<tr class="header">
+<th style="text-align:left;">Name</th>
+<th style="text-align:left;">Description</th>
+<th style="text-align:left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align:left;"><strong>Name</strong></td>
+<td style="text-align:left;">First name of the employee</td>
+<td style="text-align:left;">Joe</td>
+</tr>
+<tr class="even">
+<td style="text-align:left;"><strong>Description</strong></td>
+<td style="text-align:left;">Last name of the employee</td>
+<td style="text-align:left;">Smith</td>
+</tr>
+<tr class="odd">
+<td style="text-align:left;"><strong>Description</strong></td>
+<td style="text-align:left;">Age of the employee</td>
+<td style="text-align:left;">25</td>
+</tr>
+<tr class="even">
+<td style="text-align:left;"><strong>Description</strong></td>
+<td style="text-align:left;">Bonus amount</td>
+<td style="text-align:left;">20% of base salary</td>
+</tr>
+</tbody>
+</table>
+
+### Detailed description:
+The Power Query query that will be used is the following:
+
+```PowerQuery
+let Source = Excel.CurrentWorkbook(){[Name="Table1"]}[Content],
+    #"Removed Columns" = Table.RemoveColumns(Source,{"Column3", "Column4"}),
+    #"Added Custom" = Table.AddCustomColumn(#"Removed Columns", "Last Name", each Text.From([Column1]) & ", " & Text.From([Column2])),
+    #"Pivoted Column" = Table.Pivot(#"Added Custom", List.Distinct(Table.ColumnNames(#"Added Custom")), "Employee Name", "Value"),
+    #"Changed Type1" = Table.TransformColumns(#"Pivoted Column",{{Text, type number}}),
+    #"Removed Columns3" = Table.RemoveColumns(#"Changed Type1",{"Column6"}),
+    #"Added Custom1" = Table.AddCustomColumn(#"Removed Columns3", "Bonus Amount", each [Column7] * 0.2)
+in #"Added Custom1"]
+```
+
+OK
+```
+
+
+## 开始更新淘宝规格参数
+
+### 实例:
+
+```shell script
+$ jd-product-info getProductSpecs -s "1904731628" --outFile product_specs.json
+```
+
+### Response:
+
+```json
+{
+    "data": {
+        "itemInfo": {
+            "skuId": "1904731628",
+            "itemId": "15787148172"
+        },
+        "specs": [
+            {
+                "specKey": "既尺度大一致，宽度不超过10cm",
+                "specValue": "12"
+            }
+        ]
+    },
+    "message": "",
+    "success": true,
+    "updateTime": 1643649217168
+}
+```

@@ -1,0 +1,142 @@
+在开发过程中，会遇到不同的情况。有些场景下需要在Windows上部署php，这里给大家分享一下如何做到。
+
+问题： 部署PHP时出现  PHP Request Startup: open_basedir restriction in effect.
+
+解决方案：
+
+首先检查是否设置了open_basedir，在php.ini文件里面找open_base_dir配置项。
+
+```
+; Defines which directories can be accessed.
+; This help prevent the all too common "directory stack" errors
+; arising from file systems which allow ".." to point to the
+; parent directory.
+; http://php.net/open-basedir
+; Note: Only the first non-empty item is used, subsequent
+; items are ignored.
+; Default Value: NULL
+; Development Value: NULL
+; Production Value: "./data"
+;
+;open_basedir =
+```
+
+如果存在，则需要对该配置进行设置，去掉它的值。
+
+```
+; Defines which directories can be accessed.
+; This help prevent the all too common "directory stack" errors
+; arising from file systems which allow ".." to point to the
+; parent directory.
+; http://php.net/open-basedir
+; Note: Only the first non-empty item is used, subsequent
+; items are ignored.
+; Default Value: NULL
+; Development Value: NULL
+; Production Value: "./data"
+;open_basedir =  ./data
+```
+
+如果在php.ini文件里面找不到open_base_dir，则需要进行添加。
+
+```
+open_basedir=./data
+```
+
+I was looking around on how to get the path to my scripts folder (and my images folder) and came across that issue. It seemed like a nice feature but I couldn’t figure out what to use it for. My understanding of PHP was too limited at that point to grasp the true power of the feature.
+
+Fast forward to me having learned more about OOP and writing my own CMS and I discovered the power of using variables in strings. The CMS is built with a system of “widgets” which are basically just scripts. You have a textarea to input a script into, and when you save it, it is inserted into your template wherever the widget appears.
+
+But what if you want to use your own functions in your script? Or maybe you need to get data from another database table, or some other action that would normally require a plugin?
+
+I found that using ${var} inside of double curly braces allows you to use any function that exists within the CMS. So I created a new variable called “cms” and inside it, added all of my own functions as well as all of the CMS functions so I could use them anywhere I wanted.
+
+You can also use the system() function to run other scripts, or you can just include another file for more code to be used in your script.
+
+Now I have a way to create widgets that will display data from multiple databases as well as use my own functions. It’s not quite as powerful as creating plugins but it works pretty well and it keeps the core CMS clean of clutter.
+
+- Hi.
+
+I want to change the configuration of php to display errors in my application. I tried:
+
+```
+[INISERVER]
+display_errors = On
+[/INISERVER]
+```
+
+but it didn't work. I think it should be an INST section, but if i change it to
+
+- # IIS + PHP Avoid Deprecated
+
+1. ### Installing the latest PHP version on Windows Server 2016 Core (IIS)
+
+This document explains how to install a new version of PHP for use with IIS, on an IIS server running on a Windows Server 2016 Core installation. The following versions were tested and work as documented:
+    - PHP 5.4.7 (with MySQL support enabled)
+    - PHP 5.6.3 (with MySQL support enabled)
+    - PHP 7.0.8 (with MySQL support enabled) This document was created for the following server environment:
+    - Windows Server 2016 Core installation with IIS 10.0, with .NET 4.5 or later installed via Web Platform Installer (WPI).
+    - Note that you must be logged in as a member of the Administrators group before starting this procedure. You can use the `net user <username> /add` command to create a new administrator account if needed, and then login using `rmdir C:\Users\Public`. Once done, you can logout and delete the temporary user using `net user <username> /delete`
+    - Note that this document assumes you are working from the Windows Server Core PowerShell prompt. The procedure is similar but slightly different if you’re logged in as a Remote Desktop user with a GUI. The server needs to be configured for remote administration and RDP, so follow the instructions in the following Microsoft articles:
+    - How to set up and enable Remote Desktop on Windows Server Core
+    - How to use PowerShell ISE as an interactive script host Note that you can also install PHP in a GUI environment (by using a regular server install, or a virtual machine with a graphical desktop installed). However, there are many reasons why you might want to create your own server from scratch; for example:
+    - You may have specific performance requirements that are best met by running the OS on bare metal.
+    - You may need a server that runs certain software that is incompatible with other graphical environments (e.g. older versions of PHP, Perl, etc).
+    - The system might need to be very stable and secure; in that case you could use a minimal installation and update it from time to time as needed.
+2. ### Preparation steps
+
+This section explains the necessary preparation for installing a new version of PHP on your server. It may seem like quite an involved procedure, but this is just because there are so many different components that need to be installed, configured and tested. The good news is that most of it only needs to be done once! The steps in this document will walk you through all the necessary tasks, from initial preparation and installing PHP itself up to testing your new installation and getting ready for future updates.
+3. ### Download PHP
+
+First we need to download a copy of the latest version of PHP (5.4.7). You can get it from php.net/downloads , but make sure you choose the Windows binary installer option with thread safety enabled, not the zip archive. It’s important that you use a 32-bit installer if your server is running on 64-bit Windows, because IIS will only allow 32-bit PHP binaries to be run.
+
+The following download link has been tested and should work on most servers:
+
+After the file has finished downloading, you can proceed with the next step.
+
+Note that if you need a version of PHP other than 5.4.7 (for example because it conflicts with another software package), then you will need to download an older release instead; for example here is a link to PHP 5.6.3: https://windows.php.net/downloads/releases/php-5.6.3-nts-win32-vc11-x86.zip
+4. ### Download VC++ Runtime
+
+The second step is to download and install the Visual C++ Redistributable for Visual Studio 2013 Update 5 (which includes all of Microsoft’s runtime libraries required by PHP). You can get it from http://www.microsoft.com/en-us/download/details.aspx?id=48145 .
+5. ### Create a new application pool
+
+The next step is to create a new application pool in IIS, which will allow us to run PHP as an independent process instead of having it embedded inside the main IIS process. The name that you give this application pool doesn’t matter; however, make sure that there are no spaces in the name!
+
+To do so, open up Internet Information Services Manager from Start->Programs->Administrative Tools:
+
+Inside IIS Manager (or via command line), create a new application pool named “PHP Application Pool” by right-clicking on “Application Pools” and selecting “Add Application Pool”. Then select “OK” to accept the default options.
+6. ### Create a new virtual directory
+
+Now we need to create a new virtual directory for PHP; this will allow us to run it as an independent process within IIS, which is necessary so that all of its binaries can be updated independently from the main IIS installation.
+7. ### Install the Microsoft Web Platform Installer
+
+To install PHP on your server you need to download and install the latest version of the Web Platform Installer (WPI) . This will install both PHP itself as well as any necessary dependencies, such as the FastCGI module for running it with IIS. You can get it from here:
+8. ### Install the Microsoft ASP.NET MVC framework
+
+To run PHP scripts from within an ASP.NET application (as is commonly done when using CodeIgniter or other frameworks), you need to install the latest version of the .NET Framework, which includes all of its dependencies such as IIS and FastCGI. You can get it from here:
+9. ### Configure your server for remote administration
+
+In order to allow a GUI-based installation of PHP on your Windows Server 2016 Core machine (or any other OS running the command prompt), you need to make sure that Remote Desktop is enabled and configured correctly. Otherwise, there will be no way to install or configure software from inside the PowerShell prompt; this includes the Web Platform Installer as well!
+
+To do so, first open up Start->Administrative Tools->Remote Desktop Services Configuration Tool and check whether “Allow users to connect remotely using Remote Desktop Services” is checked under “User Accounts”. If not then click on it to enable remote desktop access. Then go back to Administrative Tools and start the Remote Desktop Services Manager.
+10. ### Install PHP via the Web Platform Installer (WPI)
+
+Now we need to install the latest version of PHP from inside the WPI. To do so, open up PowerShell as administrator by right-clicking on it in Start->Programs->Administrative Tools and select “Run As Administrator”. Then type the following command to start the Web Platform Installer:
+11. ### Install all dependencies for PHP
+
+Now we need to install all of the required dependencies for running PHP; these include Apache, MySQL (or PostgreSQL), ASP .NET, IIS and FastCGI. You can get them from here:
+
+You should also make sure that you have installed the latest version of Visual C++ Runtime Redistributable by following the instructions in step 3 above.
+12. ### Configure your server for PHP
+
+Now we need to configure our server so that it can run PHP scripts and allow them to be executed via HTTP requests. This is done by modifying the “php-cgi.ini” file, which you should find inside “C:\Windows\System32\inetsrv\config”. We will also need to create a new “web.config” file in order for our PHP scripts to run properly under IIS.
+13. ### Create a web.config file
+
+To enable PHP scripts to run via HTTP requests, you need to create a new “web.config” file inside your project’s root directory (e.g., C:\PHP5\htdocs). You can do so by opening up Notepad and saving it as “web.config”. Inside this file add the following lines:
+
+The above snippet will enable PHP to be run on your server, but if you want to allow HTTP requests from outside of your local network then you need to change the IP address specified in “AllowFrom” to something like 0.0.0.0. You can find more information about how this works by reading about URL rewriting rules .
+14. ### Run php -v to check if PHP is installed correctly
+
+Now that everything is configured, it’s time to test if your server is working properly with the new version of PHP! To do so, open up a command prompt (cmd) as administrator by right-clicking on it and selecting “Run As Administrator”. Then type the following command:
+
+If everything worked out correctly then you should see a list of installed packages including “php5-cli” and “php5-mbstring”. If not, go back to step 3 and make sure that all dependencies were successfully installed!

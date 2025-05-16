@@ -1,0 +1,32 @@
+```
+-1376589102592664 -6354027898576083
+1
+2
+-27898576083 -1376589102592664 3
+5
+```
+### Solution:
+```asm
+MOV AH, 0 ; AL = input
+INT 21h
+;MOV EAX, [AH] ; EAX = input
+;ADD ESP, 4 ; push string address into stack
+MOV DX, [ESP] ; DX = [string] address
+MOV EDX, [DX] ; EDX = char
+CMP EDX, '0'
+JNZ 1
+SUB AL, EDX
+ADD EAX, AL
+MOV BL, AH
+MOV CX, 10
+INC CX
+ADD DX, 4
+MOV SI, DX ; SI = [string] address
+MOV DI, SP ; DI = stack pointer
+MOV CL, EDX
+OUT DL, AL ; Output string to console
+MOV AH, 2 ; Return 0 if an error occurs
+INT 21h
+;JMP @@1 ; Jump to label at address of input
+@@: CALL FindMaxNegativeMinimum
+```

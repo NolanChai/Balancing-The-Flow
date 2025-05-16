@@ -1,0 +1,17 @@
+- Use a content delivery network (CDN) - they will cache pages for you so the first time someone visits your site, it will be fast. When they come back later and hit the refresh button, it'll go from there CDN server to yours.
+- Use [image sprites](https://www.smashingmagazine.com/2010/02/understand-and-implement-the-css-sprite-technique/) - put your images in one big image, and then use CSS to change which bit of it appears on the page. This will decrease the number of http requests that need to be made
+- Make your css external (this is a personal thing I do) so all you need is one request for the whole page. You can do this using [Grunt](https://www.npmjs.org/package/grunt-contrib-csslint) which will validate your CSS and minify it at build time
+
+* First, check your browser console for any flash errors and remove any JavaScript that may be causing a problem. You can also try re-installing the browser or switching to another one like Firefox or Chrome if available. If this doesn't work, then try using a different web server. A lot of times FOUC is caused by having too many requests on your page. Make sure to use only what you need and cache as much data in memory as possible.
+* Second, try setting up a page load delay with jQuery or another library that allows for asynchronous loading of content (like AngularJS). This will help prevent the page from getting stuck while waiting for something else to finish rendering. If this doesn't work either, then use an async attribute on every element within your HTML document that contains FOUC elements:
+
+```html
+<div id="foo">This is just some text</div>
+```
+* Thirdly, if all other methods fail try using CSS transitions or animations. This will make sure that the page looks good even when it's loading slowly. And last but not least - do everything you can to avoid FOUC altogether! A lot of times it's just a matter of making some changes in your HTML/CSS code so that things render quickly and smoothly without any need for fancy transitions or animations at all.
+
+Static/global variables are evil because they have no context. The more stateful your app, the slower it gets and less maintainable it becomes. Static/Global state also breaks many of the best practices we have when designing software. For instance, using local variables keeps you from accidentally reusing a variable in different ways (thus causing bugs) or introducing global side effects that break your code. 
+
+When you use globals for your own app, it's often to do something simple that would be done much more easily and robustly if we used the framework/library as designed. We end up creating a global just to get around some limitation of the design. The only thing worse than the bug this introduces is all the bugs that could have been introduced by breaking other parts of our app with unintended side effects.
+
+Instead, we should work with the framework/library and find a way to make it do what we want without adding global state or using global variables. If we can't use something as designed, then we may need to rewrite some functionality into the library so we don't have to break best practices for our app.

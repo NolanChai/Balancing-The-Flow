@@ -1,0 +1,27 @@
+Yes, I can help you with that! In Geometry Dash, levels are saved as JSON files with a `levels` array containing all the levels in the game. Each level has an associated `editorLayer` field which contains information about the layer used for editing the level.
+
+To find out what editor layer was used for a specific level (in this case, "ISpyWithMyLittleEye"), you can use the following code snippet:
+```python
+import json
+
+with open('levels.json', 'r') as file:
+    levels = json.load(file)['levels']
+    
+for level in levels:
+    if level['name'] == 'ISpyWithMyLittleEye':
+        editorLayer = level['editorLayer']
+        print(f"The last used editor layer for ISpyWithMyLittleEye is {editorLayer}")
+```
+This code reads the `levels.json` file and extracts the levels array. It then loops through all levels and finds the one with the name "ISpyWithMyLittleEye". Once it has found that level, it prints out the value of its `editorLayer` field.
+
+Note: You'll need to have the `levels.json` file containing the levels in your game in order for this code to work.
+
+To learn Python, there are a few steps you can take:
+
+1. Choose a learning resource: There are many resources available online for learning Python, such as tutorials, videos, documentation, and interactive exercises. Some popular websites for learning Python include Codecademy, Coursera, and edX.
+2. Set up your development environment: Before you can write code in Python, you need to have a development environment set up on your computer. This includes installing Python itself, as well as any libraries or tools that you will need for the specific project you are working on.
+3. Start with basic concepts and syntax: Once you have a development environment set up, start by learning the basics of Python's syntax and concepts. This includes things like data types, control structures, functions, and classes.
+4. Practice writing code: As you learn Python, it is important to practice writing code and building simple projects. This will help you get comfortable with the language and apply what you are learning.
+5. Seek out resources and support: If you are struggling with a particular concept or problem, there are many resources available to help you. You can reach out to online forums or communities for help, or find a mentor who can guide you through your learning journey.
+
+Remember, learning Python takes time and effort, but it is a rewarding skill to have. Keep practicing and experimenting with code, and don't be afraid to make mistakes or ask for help when you need it.

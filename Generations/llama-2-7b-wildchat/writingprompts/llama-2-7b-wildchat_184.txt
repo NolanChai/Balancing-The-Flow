@@ -1,0 +1,97 @@
+### Code:
+    #!/bin/python3
+    
+    import random
+    print("Welcome Jack Palanquin!")
+    while True:
+        choice = input("Do you want to eat or not? [y] for yes, [n] for no: ")
+        if choice.lower() == "y":
+            break
+        elif choice.lower() == "n":
+            print("\033[0;31m You shall never have dinner! \033[0m")
+    while True:
+        choice = input("Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: ")
+        if choice.lower() == "1":
+            break
+        elif choice.lower() == "2":
+            print("\033[0;31m You shall never have chicken parmasan! \033[0m")
+        elif choice.lower() == "3":
+            print("\033[0;31m You shall never have pasta alla vodka! \033[0m")
+        
+    break
+    
+
+### Output:
+
+### Code:
+
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+2
+You shall never have chicken parmasan! 
+Do you want to eat or not? [y] for yes, [n] for no: n
+
+### Output:
+
+### Code:
+Welcome Jack Palanquin!
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have dinner! 
+Do you want to eat or not? [y] for yes, [n] for no: 
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: 
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2] for Chicken Parmesan, [3] for Pasta Alla Vodka: 
+You shall never have spagheti bolognese! 
+Do you want to eat or not? [y] for yes, [n] for no: y
+Which dish do you want to eat? [1] for Spaghetti Bolognese, [2

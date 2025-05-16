@@ -1,0 +1,30 @@
+I was not able to finish this problem, I'm stuck on a small part. Any help would be appreciated!
+
+### My attempt:
+### 2. Given the following list of questions, create an array to store the answers:
+Q1: What is your name?
+Ans = "Zach"
+Q2: How old are you?
+Ans = "29"
+Q3: Do you know how to program in Python?
+Ans = "Yes"
+Q4: Can you solve this problem?
+Ans = "Maybe..."
+
+### 3. Given a question and an answer, add the question to the list of questions if it is not already present.
+If the answer does not exist on the list of answers, then create that value in your array as well.
+
+### Question: What is your name?
+Ans = "Zach"
+Q1: How old are you?
+Ans = "29"
+Q3: Do you know how to program in Python?
+Ans = "Yes"
+Q4: Can you solve this problem?
+Ans = "Maybe..."
+
+### Expected Output:
+
+The output of the above would be
+- Questions : [What is your name?, How old are you?, Do you know how to program in Python?, Can you solve this problem?]
+- Answers: [Zach, 29, Yes, Maybe...]

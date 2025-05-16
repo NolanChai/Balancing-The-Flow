@@ -1,0 +1,5 @@
+>>> truncate_signal()
+[array([1.735048e+29, 2.455629e+29, ..., 1.985928e-76, 2.751933e-77]), array(0),
+array(0)]
+>>> truncate_signal(df, signal_length=4)
+[array([1.735048e+29, 2.455629e+29, ..., 1.985928e-76]), array([0., 0.]), array(0)]

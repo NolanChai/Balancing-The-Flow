@@ -1,0 +1,12 @@
+I think the best solution is to use the second form of `break` statement, and it should be like this:
+```python
+from collections import namedtuple
+
+def answer(data):
+    # ... your other code
+    data = data.split('\n')
+    case_data = namedtuple('case', ['claim','name'])
+    case_data_list = [case_data(*d) for d in data]
+
+    return '\n'.join([f'{key} - {value}' for key, value in zip(case_data._fields, case_data_list)])
+```

@@ -1,0 +1,33 @@
+1. Minify code using tools such as HTMLMinifier or JSLint.
+2. Use a content delivery network (CDN) for serving static resources, like images and JavaScript libraries.
+3. Optimize image sizes by reducing file size with tools like TinyJPG.
+4. Load scripts at the end of the page using defer attribute.
+5. Optimize CSS using CSS optimization tools.
+6. Combine JavaScript files into a single file using a tool such as Gzip JS minifier or JSCompressor.
+7. Use A/B testing to compare different website versions and identify the one with faster load time.
+8. Reduce HTTP requests by using lazy loading of images and other resources.
+9. Reduce server response time by caching static files in a CDN or server-side caching such as Memcached or Varnish.
+10. Use browser caching to reduce page refreshes for frequently accessed resources.
+
+Flash Of Unstyled Content (FOUC) is the flashing or flickering of a page that occurs when an image element's src attribute is changed. This happens because there are two different elements on the screen, and when they swap out, it creates visual noise which may be annoying to users.
+There are several ways you can avoid this issue:
+1. Use inline styling for images instead of using a separate CSS file
+2. Minify your CSS files so that they're smaller in size and don't take as long to download
+3. Load images with JavaScript or jQuery so they display more quickly on the screen
+4. Reduce HTTP requests by combining multiple resources into one request
+5. Utilize browser caching techniques where possible
+6. Avoid using large image files that will slow down page load times
+7. Use sprites for related image elements rather than having them all loaded individually onto a single page
+8. Optimize images so they don't require as much processing power when loading on the client side
+9. Cache pages in a CDN (Content Delivery Network) if possible to reduce latency between servers
+10. Avoid using complex animations or transitions that take longer than necessary for the page load process 
+
+### Author:
+Sagar
+
+### Source:
+https://www.udemy.com/course/build-your-first-progressive-web-application/learn/lecture/26812954?query=flash%20of%20unstyled%20content&sort=priority&queryType=quiz
+
+Static objects (methods) do not share any state across multiple instances. You cannot call them on different instances of the class, they are bound to one instance only. So there is no point in having them shared among all instances of that class.
+
+Global variables are not thread-safe by default and cannot be shared between multiple threads. And again: you don't need them at all.

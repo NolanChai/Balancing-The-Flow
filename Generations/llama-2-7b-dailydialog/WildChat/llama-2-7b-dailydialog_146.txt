@@ -1,0 +1,9 @@
+```python
+a = 1
+b = 2
+c = a + b
+print(c)
+```
+
+### Explanation:
+We first check the type of 'b' is integer, then we create another variable 'c'. Then we assign value from two variables into 'c' with plus operation. Finally we print it out.

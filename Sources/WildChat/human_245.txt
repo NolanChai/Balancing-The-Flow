@@ -1,0 +1,36 @@
+User: "Power Query need to have lookup in another table"
+
+Assistant: "In Power Query, you can perform a lookup in another table using the "Merge" or "Join" operation. Here are the steps to accomplish this:
+
+1. Open Power Query Editor by selecting "Edit Queries" in the Home tab of the Power Query ribbon.
+2. Import both the tables that you want to perform the lookup on.
+3. Select the primary table (where you want to add the lookup values) in the Queries pane.
+4. In the Home tab, click on "Merge Queries" drop-down menu and select "Merge Queries as New".
+5. In the Merge dialog box, select the lookup table from the drop-down menu for "Table" (the table which contains the values you want to lookup).
+6. Select the common column between the primary table and the lookup table under "Column".
+7. Choose the join type (e.g., Left Outer Join, Inner Join, etc.) based on your requirements.
+8. Click on "OK" to perform the merge operation.
+9. The merged table will be created with the added lookup values.
+10. Expand the columns containing the lookup values by clicking on the expand button in the header of the respective column.
+11. Select the columns you want to include in the final result and click on "OK".
+
+Now, you have the primary table with the lookup values from the other table. You can further process or manipulate the data using Power Query transformations, filtering, or sorting before loading it into the destination (such as Excel or Power BI)."
+
+User: "getting error: DataFormat.Error: We couldn't convert to Number.
+Details:
+    ControlDimension"
+
+Assistant: "The error you are encountering, "DataFormat.Error: We couldn't convert to Number," suggests that there is an issue with the data type in the column you are trying to merge or join on. To resolve this error, you can follow these steps:
+
+1. Open Power Query Editor and locate the tables you want to merge.
+2. Check the data types of the common columns in both tables. It is crucial that they have the same data type.
+3. If the data types differ, you need to convert them to a compatible data type. Here's how you can do that:
+
+   - Select the table with the incompatible data type column.
+   - Right-click on the column header and choose "Change Type."
+   - From the drop-down menu, select the appropriate data type (e.g., Number).
+   - Repeat this process for other tables if required.
+
+4. After ensuring that the data types are compatible, retry the merge/join operation.
+
+Additionally, if you believe the column causing the error doesn't contain valid data, you can apply data cleansing techniques such as removing non-numeric characters, replacing missing values, or handling data outliers."

@@ -1,0 +1,38 @@
+## 출력값
+```
+- 조지프가 다시 멍하지 않아진다.
+```
+
+
+## 문제해결방법
+문제를 이해한 뒤, 주어진 인자가 무엇이고 사용할 수 있는 도구가 무엇이냐에 따라 다시 명령문을 완성한다.
+
+## 해결방법
+
+```
+for (;;) {
+    char ch;
+    printf("Hi Joe , how are you doing today ?\n"); //출력파일에 보이는 문장
+    fgets(ch, sizeof(ch), stdin);//ch의 길이가 0을 넘는 부분, stdin은 input file의 시작점
+    if (strcmp("Hi ", ch) == 0 && strcmp("\n", ch)) { //"Hi "를 제외하고 깨지 않는다면
+        printf("Things are going good today . \n");// 조지프가 말한 대로 대답을 한다.
+        for (;;) {
+            char ch;
+            fgets(ch, sizeof(ch), stdin); //"How have you been doing , Mary ?" 와 같은 문장으로 대답하여 구현
+            if (strcmp("Want to go see a movie tonight?", ch) == 0 && strcmp("\n", ch)) { //"Want to go see a movie tonight?" 부분이라면
+                printf("My parents are taking me to dinner tonight .\n");//그 다음은 "My parents are taking me to dinner tonight ."를 대답한다.
+            } else {
+                break; //코드가 깨진다면 이제부터는 재도앱을 해주지 말자
+            }
+        }
+    }
+}
+```
+
+" I don't really have any preferences ... whichever one you choose is fine by me. "
+
+" Is it going to be playing at the cinema in your town , Joe? "
+
+" I am not sure if we have it playing here . But maybe I can check on the web and see. "
+
+" That is ok . I guess I will just watch a horror film instead then . "

@@ -1,0 +1,93 @@
+It looks like there is a missing parameter in the URL. The `sign` parameter should be included in the URL with its value. Here's an updated version of your code that includes this parameter:
+```python
+import time
+import requests
+import hmac
+import hashlib
+import datetime as dt
+import pandas as pd
+
+symbol = 'BCH/USDT'
+interval = '1m'
+lookback = 44640
+
+def generate_signature(api_key, api_secret, endpoint, params):
+    params_string = '&'.join([f'{key}={params[key]}' for key in params])
+    payload = f'{endpoint}\n{params_string}'
+    signature = hmac.new(api_secret.encode(), payload.encode(), hashlib.sha256).hexdigest()
+    return signature
+
+def get_klines(symbol, interval, lookback):
+    endpoint = '/open/api/v2/market/kline'
+
+    end_time = int(time.time() * 1000) # end time is now
+    start_time = end_time - (lookback * 60 * 1000) # start time is lookback minutes ago
+    end_time = start_time + (lookback * 60 * 1000) # calculate new end time
+
+    params = {
+        'symbol': symbol,
+        'interval': interval,
+        'start_time': start_time,
+        'end_time': end_time
+    }
+
+    signature = generate_signature(API_KEY, API_SECRET, endpoint, params)
+
+    url = f"https://www.mexc.com{endpoint}"
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    data = {**params, 'api_key': API_KEY, 'sign': signature}
+
+    response = requests.get(url, headers=headers, params=data)
+    response.raise_for_status()
+    data = response.json()['data']
+    
+    if not data: # if data is empty, return None
+        print('No data found for the given timeframe and symbol')
+        return None
+
+    ohlc = []
+    for d in data:
+        timestamp = dt.datetime.fromtimestamp(d['time']/1000).strftime('%Y-%m-%d %H:%M:%S')
+        ohlc.append({
+            'Open time': timestamp,
+            'Open': float(d['open']),
+            'High': float(d['high']),
+            'Low': float(d['low']),
+            'Close': float(d['close']),
+            'Volume': float(d['vol'])
+        })
+
+    df = pd.DataFrame(ohlc)
+    df.set_index('Open time', inplace=True)
+
+    return df
+
+df = get_klines(symbol, interval, lookback)
+```
+I added the `signature` parameter to the URL as follows:
+```css
+url = f"https://www.mexc.com{endpoint}"
+```
+With this change, the request should now work without errors.
+
+It's difficult to determine the exact error without more information about the error message you are receiving. However, here are a few common reasons why you might be experiencing issues with your MEXC API key:
+
+1. Incorrect API key format: Make sure that your API key is in the correct format and has not been misspelled or accidentally deleted.
+2. Expired API key: Check to see if your API key has expired. You can find this information on the MEXC website, under your account settings.
+3. Insufficient permissions: Make sure that you have the appropriate permissions to access the MEXC API using your API key. Some APIs may require additional authentication or authorization steps.
+4. Network connectivity issues: If you are unable to connect to the MEXC API, it's possible that there is an issue with your network connection. Try resetting your router or switching to a different internet provider if you continue to experience issues.
+5. API usage limits: Some APIs may have usage limits and require additional fees for access beyond these limits. Check to see if this might be the case with your MEXC API key.
+
+If none of these solutions work, please provide more details about the error message you are receiving and I'll be happy to try and assist you further.
+
+If you want to get a timestamp that is exactly 44640 minutes ago, you can use the Unix timestamp format. Here's how you do it:
+1. Convert 44640 minutes to seconds by dividing it by 60 (since there are 60 minutes in an hour). This gives you 743,520 seconds.
+2. Subtract this value from the current Unix timestamp (which is the number of seconds since January 1, 1970) to get the timestamp for 44640 minutes ago.
+
+For example, if the current Unix timestamp is 1633858321 (Monday, August 23, 2021 at 1:37 PM UTC), you can calculate the timestamp for 44640 minutes ago like this:
+```
+1633858321 - 743520 = 990318161
+```
+So the timestamp for 44640 minutes ago is 99,031,816,161 seconds (which is Saturday, August 21, 2021 at 1:37 PM UTC).
+
+Sure, I'd be happy to provide a complete, updated code for you. Can you please specify which programming language you are using and what kind of code you need? Additionally, could you provide more context or details about what the code should accomplish?

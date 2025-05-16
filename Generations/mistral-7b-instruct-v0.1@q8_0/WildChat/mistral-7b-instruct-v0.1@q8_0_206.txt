@@ -1,0 +1,82 @@
+To prove this using the FOPL system of natural deduction, we can start by assuming the existence of a property P and then show that it is not a universal property.
+
+Assume P to be a property. Then, we can construct a proof for the implication:
+(¬∃xP(x)) ⇒ ∀x(¬P(x)).
+
+Proof:
+
+1. Assume that P is a property.
+2. To show that P is not a universal property, assume that there exists an object x such that P(x) holds.
+3. This means that P is defined for x and that x possesses the property P.
+4. However, we want to show that P is not a universal property, which means that there must exist objects that do not have the property P.
+5. Suppose that there exists an object y such that P(y) does not hold.
+6. This means that P is not defined for y or that y does not possess the property P.
+7. Therefore, we can conclude that ¬∃xP(x).
+8. To show that ¬∃xP(x) implies ∀x(¬P(x)), assume that ¬∃xP(x) holds.
+9. This means that there does not exist any object x such that P(x) holds.
+10. Therefore, for all objects x, P(x) does not hold.
+11. Hence, we can conclude that ∀x(¬P(x)).
+
+Thus, we have shown that the implication (¬∃xP(x)) ⇒ ∀x(¬P(x)) is true using the FOPL system of natural deduction.
+
+To prove this statement using the tableau method, we need to construct a tableau that includes all possible cases for both the left and right sides of the implication. We will use the following abbreviations:
+
+* P(x) represents "property x is true."
+* Q(x) represents "property x is false."
+* (∃xP(x)) represents "there exists an object such that P(x) is true."
+* (∃xQ(x)) represents "there exists an object such that Q(x) is true."
+
+The implication we want to prove is:
+
+|= ∃x(P(x) ∨ Q(x)) ⇔ (∃xP(x) ∨ ∃xQ(x))
+
+To construct the tableau, we will use a matrix format that shows all possible cases for both sides of the implication. The rows represent the left side of the implication, and the columns represent the right side of the implication:
+```css
+      |= ∃x(P(x) ∨ Q(x))
+--------------------
+|(∃xP(x))              |(∃xQ(x))
+|------------------------|-----------------
+```
+We will start by adding a row for each possible case of the left side of the implication. For each case, we will specify whether P(x) is true or false, and then use the logical connectives ∨ and ¬ to determine whether Q(x) is true or false:
+```css
+      |= ∃x(P(x) ∨ Q(x))
+--------------------
+|P(x)               |Q(x)              |
+|------------------------|-----------------
+|P(x)               |   T             |
+|------------------------|-----------------
+|P(x)               |   F             |
+|------------------------|-----------------
+|   T                |Q(x)              |
+|------------------------|-----------------
+|   T                |   T             |
+|------------------------|-----------------
+|   T                |   F             |
+|------------------------|-----------------
+|   F                |Q(x)              |
+|------------------------|-----------------
+|   F                |   T             |
+|------------------------|-----------------
+|   F                |   F             |
+```
+We can see that for each case of the left side, there exists a corresponding case on the right side. Therefore, we have shown that the implication is true for all possible cases:
+
+|= ∃x(P(x) ∨ Q(x)) ⇒ (∃xP(x) ∨ ∃xQ(x))
+```css
+       T                |T             |   T            |   T
+       P(x)               |Q(x)              |   P(x)           |   Q(x)
+
+       F                |F             |   T            |   T
+       P(x)               |Q(x)              |   P(x)           |   Q(x)
+```
+Since the implication is true for all possible cases, we can conclude that:
+
+|= ∃x(P(x) ∨ Q(x)) ⇒ (∃xP(x) ∨ ∃xQ(x))
+```css
+      T                |T             |   T            |   T
+      P(x)               |Q(x)              |   P(x)           |   Q(x)
+
+      F                |F             |   T            |   T
+      P(x)               |Q(x)              |   P(x)           |   Q(x)
+```
+Therefore, we have shown that the statement is true using the tableau method.

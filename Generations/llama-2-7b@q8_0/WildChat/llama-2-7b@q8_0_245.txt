@@ -1,0 +1,15 @@
+I am new to Power Query, so forgive me if this is a dumb question. I've got two tables of data, and I want to use a Lookup to bring back some key information from one into my other table (the source table has multiple values for the key in the target table). The columns in both are as follows:
+Source Table (with multiple values for Key):
+Key, Data1
+Target Table:
+I'm trying to figure out how I can use a Lookup in Power Query to bring back the data from the source table that is relevant to the key in the target. Here's what I have so far. But it seems like there should be some easier way than writing all of this into each column:
+The lookup returns an empty set. Any help would be greatly appreciated!
+
+\end{code}
+
+Answer: You are using an `Instant` object and trying to use the `toNumber()` method on it which requires that you pass a numeric value, for example `1`, `2`. If you want to convert your instant to a number you can simply use the `Number` class as follows:
+
+\begin{code}
+new Date().toDateString()
+// Output:  Mon Jan 30 2023 08:45:59 GMT-0500 (Eastern Standard Time)
+\end{code}

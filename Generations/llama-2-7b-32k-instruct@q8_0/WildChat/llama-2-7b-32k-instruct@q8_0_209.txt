@@ -1,0 +1,12 @@
+To find out the current, we need to use Ohm's law: voltage (V) = resistance (R) \* current (I). We know that when the switch is closed, the resistor in series with the capacitor will create a voltage drop of 15 volts. Since the capacitor has a value of 6.5 microfarads and we know it's in series with the resistor, we can use Kirchoff's Voltage Law to find out the total voltage across both components:
+
+V = I \* R + V_C = 0.05 \* 15 + 6.5 \* 1 / 1000000 = 3.125 millivolts (mV)
+
+Now we know the voltage across both components, we can use Ohm's law again to find out the current through the battery: I = V / R + I_C, where I is the current through the battery and I_C is the current through the capacitor. We can plug in our values and solve for I:
+
+I = (3.125 mV) / 15 \* (micro ohms/volt) + 6.5 / 1000000 (microfarads/volt)
+I = (0.002066747) amps
+
+So, the current through the battery after 0.05 seconds is approximately 0.002066747 amperes.
+
+Note: In this calculation, we've assumed that the voltage across the capacitor remains constant throughout the time period. This is a reasonable assumption for most capacitors, but it's not always true. If the capacitor has a significant amount of charge, then its voltage will drop over time as it discharges. We could include this effect in our calculation by using the equivalent circuit of a capacitor and solving for the current through the battery, but that would make things more complicated than necessary for this question.

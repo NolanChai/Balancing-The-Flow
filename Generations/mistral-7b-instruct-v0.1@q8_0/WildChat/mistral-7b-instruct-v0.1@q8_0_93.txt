@@ -1,0 +1,28 @@
+To perform network automation testing using C#, you can use the following steps to send a "ping" request and check the response time:
+
+1. Install the PING library using NuGet Package Manager. You can do this by opening the Package Manager Console in Visual Studio, running the command `Install-Package Ping`, and then selecting the latest version of the package.
+2. Import the PING namespace into your C# code: `using System.Net;`
+3. Create a new instance of the `PingSender` class: `PingSender sender = new PingSender();`
+4. Set the properties of the ping request, such as the destination IP address and the number of pings to send:
+```csharp
+sender.DestinationAddress = "192.168.1.1";
+sender.PacketsSent = 5;
+```
+5. Send the ping request using the `Send()` method:
+```csharp
+PingResult result = sender.Send();
+```
+6. Extract the relevant information from the ping response, such as the round-trip time (RTT) and the number of packets that were sent and received:
+```csharp
+double rtt = result.RoundTripTimeMs;
+int packetsSent = result.PacketsSent;
+int packetsReceived = result.PacketsReceived;
+```
+7. Use this information to perform further network automation tests, such as checking the response time of other network resources or verifying the correct routing of traffic between devices.
+
+To input an IP address from the client, you can create a form in your C# application that allows the user to enter the IP address. You can then use this input value when setting the `DestinationAddress` property of the `PingSender` instance. For example:
+```csharp
+string ip = Request.Form["ip"];
+sender.DestinationAddress = ip;
+```
+Here, `Request` is a global object in ASP.NET that represents the HTTP request being made to the server, and the `Form` property returns an instance of the `FormCollection` class, which contains a collection of form fields and their values. In this case, the IP address entered by the user is retrieved from the "ip" field using the index 0, and stored in the variable `ip`.

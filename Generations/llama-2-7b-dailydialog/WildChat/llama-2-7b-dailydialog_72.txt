@@ -1,0 +1,12 @@
+```python 
+class FlexiFoodie(object):
+    def __init__(self, title="Title"):
+        self.title = title
+    def create_html_page(self, name_of_the_page):
+        """
+        The name of the page is a string representing the content of the html file.
+        
+        :param str name_of_the_page: String representing the content of the html file.
+        """
+        # Code here...
+```

@@ -1,0 +1,171 @@
+1. Write a program that will print a message “Hello world!” and then ask the user for their name. The program will use that information to build the following sentence, which it will print out: Hello ______! How are you feeling today? 2. What is the return type of int main(int argc, char*argv[])? (hint: the first parameter is called ‘argc’ and the second one is named ‘argv’)
+3. Write a program that will read your name in a line, print it out without any spaces between words, and then print out the sentence, “Hello ______!” followed by some space and then “How are you feeling today?” You can use strtok to split each word into its first letter and everything else (hint: call strtol and put it in a variable). 4. Write a program that will take in two integers as inputs and print out the following sentence, using int main() function: If ______ is greater than ______, then _________ is smaller.
+
+* 
+  * Installation of Python is successful.
+    * [Link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "numpy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation
+      instructions on numpy and scikit learn
+    * [Link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "scipy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "matplotlib"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "seaborn"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "sklearn"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "gensim"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "spacy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "nltk"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "gensim"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "nltk"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "pymongo"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "sqlalchemy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "pymongo"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "sqlalchemy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "pandas"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "nltk"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "nltk"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "gensim"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "pymongo"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "spacy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "gensim"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "spacy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "sqlalchemy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "pymongo"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "nltk"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "pymongo"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "sqlalchemy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "gensim"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "spacy"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "pymongo"
+    * [Link](http://scipy-lectures.github.io/installation/#numpy) for installation instructions on numpy and scikit learn
+      and [link](https://www.python.org/downloads/) to download python
+* 
+  * Installing Python module "spacy"
+
+lottery harry$ gcc -std=c99 lottery.c .
+
+lottery harry$ ls -l
+total 128
+-rwxr-xr-x  1 harry  staff     0 May 17 08:05 a.out
+-rw-r--r--  1 harry  staff   633 May 17 08:04 lottery.c
+
+lottery harry$ ./a.out 42 1 2 3 4 5
+usage: ./a.out power_ball (5 white balls)
+
+write the equivalent commands given that my code in in python
+
+The first thing to do is to convert the integer value into a string. The problem with this code is that it reads the arguments as strings, not integers, so we have to cast them back into ints:
+```python
+white_balls = [int(sys.argv[i]) for i in range(2, 7)]
+# or better yet...
+white_balls = list(map(int, sys.argv[2:])) # you can also use .split() and strip() to remove the whitespace
+```
+Once you have your values, it is simple math from there (though I would probably add a little more error checking than just len(sys.argv) != 7):
+```python
+def calculate_result(white_balls, power_ball):
+	# white_balls: list of integer values
+	# power_ball: int
+	return white_balls[0] + (white_balls[1] * white_balls[2]) + ... + (white_balls[-1] * white_balls[-2]) + ((power_ball - 1) * (len(white_balls)-2))
+```
+
+harry@harry:~$ ls -l
+total 24
+-rwxr-xr-x  1 harry   harry 13598 May 18 10:07 lottery.c
+drwxr-xr-x  3 harry   harry     0 May 18 10:06 a.out
+
+### Explanation:
+The difference is in the mode of the files:
+
+	-rwxr-xr-x : Owner may read, write and execute
+	-rw-r--r-- : Everyone else can read
+	drwxr-xr-x  : Owner may create directories but not files
+	drwxr-xr-x   : The owner may delete the file or directory if it is the only one in a directory.  Otherwise, no one except root may remove this file or folder (not even the owner).
+
+### Note:
+The `chmod` command does not change permissions of existing files/folders, but instead changes how they are displayed to other people.

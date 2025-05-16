@@ -1,0 +1,72 @@
+Software engineers are responsible for making technical decisions related to the development of a software system. This includes choosing the appropriate processes, techniques, and technologies to achieve the requirements of the system. Some examples of these decisions include:
+
+1. Choosing the best programming language and frameworks for the project
+2. Deciding on the most suitable database management system (DBMS)
+3. Determining the appropriate design pattern(s) to use in the software architecture
+4. Selecting the appropriate development tools and methodologies
+5. Deciding on the best approach to testing and quality assurance
+6. Choosing the most efficient algorithms and data structures for specific tasks
+7. Deciding on the best security measures to implement to protect the system from malicious attacks.
+
+These decisions are crucial as they can significantly impact the performance, scalability, reliability, and maintainability of the software system, and ultimately, its success in meeting the requirements of the stakeholders.
+
+Functional requirements are a set of specifications that describe what a system or software should do. They outline the various features and capabilities that the system is expected to have, as well as any constraints or limitations that must be taken into account during development.
+
+Here are some steps you can follow to implement functional requirements:
+
+1. Understand the requirements: Before you can start implementing functional requirements, you need to fully understand what they are asking for. Make sure you have a clear understanding of the business objectives and goals that the requirements are intended to support.
+2. Create a plan: Once you understand the requirements, create a plan for how you will implement them. This should include a timeline, resources needed, and any dependencies or risks that need to be addressed.
+3. Design the system: Based on the plan, design the system that will meet the functional requirements. This may involve creating diagrams, prototypes, or other visual representations of the system.
+4. Develop the system: With the design in place, start developing the system according to the plan. This may involve writing code, configuring hardware, or setting up databases and other infrastructure.
+5. Test the system: Once the system is developed, test it thoroughly to ensure that it meets the functional requirements. This may involve running automated tests, conducting user acceptance testing, or performing other types of testing.
+6. Deploy the system: Once the system has been tested and verified, deploy it to the production environment where it will be used by users.
+7. Monitor and maintain the system: Finally, monitor the system in production to ensure that it continues to meet the functional requirements. Make any necessary updates or improvements to the system as needed.
+
+Non-functional requirements (NFRs) are a set of constraints that must be met by a software system in addition to its functional requirements. These requirements relate to the system's performance, usability, reliability, security, and other aspects that affect user experience. Here are some steps to implement nonfunctional requirements:
+
+1. Identify NFRs: The first step is to identify the non-functional requirements of the software system. This can be done by analyzing the system's purpose, user needs, and any existing standards or guidelines that apply to the system.
+2. Prioritize NFRs: Once you have identified the NFRs, it's important to prioritize them based on their importance and impact on the software system. This helps you allocate resources effectively and ensure that critical NFRs are met first.
+3. Create test cases: Based on the prioritized NFRs, create a set of test cases that can be used to verify the system's compliance with these requirements. Test cases should be designed to cover all possible scenarios and edge cases that may affect the performance or usability of the system.
+4. Monitor and measure: Throughout the development process, monitor and measure the system's performance against the identified NFRs. Use tools and metrics such as load testing, stress testing, and user acceptance testing to identify any issues and ensure that the system meets the required standards.
+5. Address issues: If any issues are discovered during testing or monitoring, address them promptly to ensure that the system meets all non-functional requirements. This may involve modifying the code, adjusting the system's configuration, or implementing additional features or functionality.
+6. Document compliance: Finally, document the system's compliance with all non-functional requirements. This includes creating a record of the test cases used to verify compliance, as well as any performance data or other metrics that demonstrate the system's adherence to these requirements.
+
+Software engineers make many decisions throughout the software development process, including decisions about which processes to use in order to achieve the requirements. Processes are a set of defined steps that are followed in order to accomplish a specific task or goal. In the context of software development, processes can refer to different stages of the development life cycle, such as planning, design, implementation, testing, and deployment.
+
+When it comes to choosing processes for a particular project, software engineers consider a variety of factors, including the complexity of the project, the size and composition of the development team, the available resources and budget, and the specific goals and requirements of the project. Some common decision-making criteria that software engineers use when selecting processes include:
+
+* The level of structure and formality required by the project (e.g. whether a more rigid, structured process is necessary to ensure high quality and reliability)
+* The desired level of flexibility and adaptability of the process (e.g. whether a more fluid, iterative process is appropriate for a rapidly changing or uncertain project environment)
+* The resources available for carrying out the process (e.g. whether specialized tools and software are needed to support the process)
+* The experience and capabilities of the development team (e.g. whether the team has experience with specific processes or methodologies that can be leveraged to achieve the goals of the project).
+
+Overall, software engineers must carefully balance these criteria in order to choose the most effective processes for a particular project, taking into account the specific needs and requirements of the project and the available resources and capabilities of the development team.
+
+Yes, your answer is mostly correct. However, there are a few minor clarifications that you might want to consider:
+
+1. Functional requirements are not just about asking questions about the task, but also about defining what the software is supposed to do and how it should behave in different situations. This includes specifying inputs, outputs, and the overall system architecture.
+2. Nonfunctional requirements include performance and scalability, as well as other aspects such as security, reliability, maintainability, usability, and flexibility. In addition to real-time requirements, engineers also need to consider factors such as the software's ability to handle large amounts of data or work under heavy loads.
+3. When selecting technologies and tools, software engineers need to consider a variety of factors, including performance, scalability, ease of use, and cost. They may also need to choose between different programming languages, databases, operating systems, and other components that can affect the system's functionality and usability.
+
+Overall, your answer provides a good overview of some key aspects of software engineering, but it might be helpful to expand on each point with more specific examples or details to give a clearer picture of how these requirements are actually implemented in practice.
+
+The depth versus the breadth issue in software complexity refers to the trade-off between having a simple, shallow system that is easy to understand and maintain, and a complex, deep system that has more advanced features and functionality.
+
+A deep system is one that has multiple layers of abstraction and complexity, with each layer building upon the previous one. This can lead to a system that is very powerful and capable of handling a wide range of tasks, but it can also be difficult to understand and maintain. As a result, developers may need to spend more time learning about the system in order to work with it effectively.
+
+On the other hand, a shallow system has fewer layers of abstraction and is therefore simpler to understand and maintain. It may not have as many advanced features or functionality as a deep system, but it can be easier to work with and may require less time for developers to learn about it. However, a shallow system may also be limited in its ability to handle certain tasks, which could limit its usefulness.
+
+Ultimately, the decision between a deep and shallow system will depend on the specific needs of the project and the trade-offs that are willing to be made between complexity and ease of use.
+
+Yes, your answers are correct. 
+
+1. Managing complexity: One of the primary challenges in developing large systems is managing the complexity of the system. This includes breaking down the problem into smaller, more manageable parts, identifying and understanding the relationships between these parts, and designing a system that can effectively handle all the pieces.
+2. Diversity of skills and experience: When working on a large system, it's essential to have a diverse team with a range of skills and experience in different areas such as software development, database management, network administration, etc. However, this diversity can also lead to challenges in selecting the appropriate technologies and tools stack for the project. It can be difficult to choose the right tools and technologies that are compatible with the team's expertise and experience, which may result in suboptimal solutions or even technical issues during development.
+
+Your answer is mostly correct. The depth versus breadth issue in software complexity refers to the trade-off between the number of features and functions in a program, and the level of detail and interconnectivity among those components.
+
+Breadth issues address the sheer numbers of major functions, features within each functional area, interfaces to other external systems, simultaneous users, and types of data and data structures that need to be supported. These issues arise when the software system has a large number of diverse and complex functional areas, each with its own set of requirements and interactions with other parts of the system.
+
+Depth issues, on the other hand, address the linkage and relationships among components of the program. They focus on how well different components are integrated and how they interact with each other to achieve the desired functionality. Depth issues arise when the software system has a large number of interconnected components that need to work together seamlessly to perform complex tasks.
+
+In summary, breadth issues involve managing the complexity of multiple functional areas and their interactions, while depth issues involve managing the complexity of interconnectivity among components.

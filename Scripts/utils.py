@@ -119,10 +119,11 @@ def scrape(article_urls):
             pot.add(soup)
     return pot
 
-def prompt_hfds(num_articles,client, temperature, model_name, 
+def prompt_hfds(num_articles, client, temperature, model_name, dataset_name,
                 model_output_dir="../Generations", human_output_dir="../Sources", 
                 write_source=True, regenerate=True, max_tokens=2048, top_p=1.0, 
-                system_prompt=None, max_retries=3):
+                system_prompt=None, max_retries=3, dataset_config="", split='test',
+                source_only=False):
     """Prompts an LM using articles from the cnn_dailymail dataset
 
     Args:
@@ -130,28 +131,34 @@ def prompt_hfds(num_articles,client, temperature, model_name,
         client : API client used for model prompting
         temperature (float): temperature parameter for the model
         model_name (str): name of the model
+        dataset_name (str): name of the dataset to prompt from
         model_output_dir (str, optional): output directory for generations. Defaults to "../Generations".
         human_output_dir (str, optional): output directory for human articles. Defaults to "../Sources".
         write_source (bool, optional): if True, write the human articles to .txt files in human_output_dir. Defaults to True.
         regenerate (bool, optional): if True, regenerate articles that already exist. Defaults to True.
         max_tokens (int, optional): maximum tokens for generation. Defaults to 2048.
         max_retries (int, optional): maximum number of retries for failed generations. Defaults to 3.
+        dataset_config (str, optional): configuration for dataset
+        source_only (bool, optional): if True, skip generation and only write source files
     """
-
+    MIN_GENERATION_LENGTH = 200
     # handling for missing paths
-    model_output_path = Path(model_output_dir)
-    human_output_path = Path(human_output_dir)
+    model_output_path = Path(model_output_dir) / Path(model_name) / Path(dataset_name.split("/")[-1])
+    human_output_path = Path(human_output_dir) / Path(dataset_name.split("/")[-1])
 
     model_output_path.mkdir(parents=True, exist_ok=True)
     if write_source:
         human_output_path.mkdir(parents=True, exist_ok=True)
 
-    data = load_dataset("abisee/cnn_dailymail", "1.0.0", trust_remote_code=True)['train']
+    dataset_params = (dataset_name,)
+    if dataset_config:
+        dataset_params += (dataset_config,)
+    data = load_dataset(*dataset_params, trust_remote_code=True, split=split)
     shuffled_data = data.shuffle(seed=42)  # Use consistent seed for reproducibility
 
     # setting articles to generate
     if num_articles < 0:
-        num_articles = 10_000
+        num_articles = len(shuffled_data)
 
     # make sure it doesn't exceed dataset size
     num_articles = min(num_articles, len(shuffled_data))
@@ -169,88 +176,153 @@ def prompt_hfds(num_articles,client, temperature, model_name,
     retry_count = 0
     skip_count = 0
     error_count = 0
-
-    for i in range(num_articles):
+    i = 0
+    
+    while generated_count < num_articles:
         # output paths
-        generation_output_path = model_output_path / f"{model_name}_{i}.txt"
-        source_output_path = human_output_path / f"human_{i}.txt"
+        generation_output_path = model_output_path / f"{model_name}_{generated_count}.txt"
+        source_output_path = human_output_path / f"human_{generated_count}.txt"
 
         # skip if exists
         if not regenerate and generation_output_path.exists():
             pbar.update(1)
             skip_count += 1
+            # both generation count and dataset index incremented
+            # move to next source, but generation also exists so +1 to generated count
+            generated_count += 1
+            i += 1
             continue
+                        
+        # write source article if needed
+        if (not source_output_path.exists() or regenerate) and write_source:
+            with open(source_output_path, "w", encoding="utf-8") as outfile:
+                outfile.write(get_text(dataset=dataset_name, item=shuffled_data[i]))
 
-        # try up to max retries
-        for retry in range(max_retries):
-            try:
-                # get article & first sentence
-                article = shuffled_data[i]
-                first_sent = get_first_sentence(article['article'])
+        item = shuffled_data[i]
+        try:
+            prompts = get_prompt(
+                            dataset=dataset_name, 
+                            item=item
+                        )
+        except ValueError:
+            # if prompt is empty, don't generate or count towards generation count
+            # only increment to next source
+            print(f"\nEmpty prompt, skipping source {i}")
+            i += 1
+            continue
+        all_generations = []
+        for prompt in prompts:
+            for retry in range(max_retries):
+                if source_only:
+                    break
                 
-                if len(first_sent.strip()) < 10:
-                    first_sent = article['article'][:200]  # Take first 200 chars if first sentence is too short
-                
-                # generate text
-                generation = generate(
-                    client=client, 
-                    prompt=first_sent, 
-                    temperature=temperature, 
-                    model=model_name,
-                    max_tokens=max_tokens,
-                    top_p=top_p,
-                    system_prompt=system_prompt
-                )
-                
-                # validate generation length
-                if len(generation.strip()) < 20:
+                try:
+                    generation = generate(
+                        client=client, 
+                        prompt=prompt, 
+                        temperature=temperature, 
+                        model=model_name,
+                        max_tokens=max_tokens,
+                        top_p=top_p,
+                        system_prompt=system_prompt
+                    )
+                    
+                    if len(generation.strip()) < MIN_GENERATION_LENGTH:
+                        if retry < max_retries - 1:
+                            retry_count += 1
+                            time.sleep(1)
+                            continue
+                        else:
+                            # generation = f"[Warning: Short generation] {generation}" 
+                            print("\nWARNING: Short generation")
+                            error_count += 1
+                    
+                    all_generations.append(generation.strip())
+                    break  # success!
+                except Exception as e:
+                    error_msg = str(e)
                     if retry < max_retries - 1:
                         retry_count += 1
-                        time.sleep(1)  # Wait briefly before retry
-                        continue
+                        time.sleep(1)
                     else:
-                        # Last retry, use what we got
-                        generation = f"[Warning: Short generation] {generation}"
-                
-                # write to path
-                with open(generation_output_path, "w", encoding="utf-8") as outfile:
-                    outfile.write(generation)
-                
-                # write source article if needed
-                if (not source_output_path.exists() or regenerate) and write_source:
-                    with open(source_output_path, "w", encoding="utf-8") as outfile:
-                        outfile.write(article['article'])
-                
-                generated_count += 1
-                break  # success!
-                
-            except Exception as e:
-                error_msg = str(e)
-                if retry < max_retries - 1:
-                    retry_count += 1
-                    time.sleep(1)  # wait a bit before trying again
-                else:
-                    # retry failed
-                    error_count += 1
-                    print(f"\nError processing article {i} after {max_retries} attempts: {error_msg[:100]}...", file=sys.stderr)
+                        error_count += 1
+                        print(f"\nError processing text {i} after {max_retries} attempts: {error_msg[:50]}...\n(Check {generation_output_path} for full error message)", file=sys.stderr)
+                        
+                        # Append error placeholder
+                        all_generations.append(f"[ERROR] Generation failed after {max_retries} attempts: {error_msg}...")
+                        break
                     
-                    # error placeholder
-                    try:
-                        with open(generation_output_path, "w", encoding="utf-8") as outfile:
-                            outfile.write(f"[ERROR] Generation failed after {max_retries} attempts: {error_msg[:100]}...")
-                    except:
-                        pass
+        # AFTER generating all completions:
+        # Concatenate generations with newlines
+        final_output = "\n\n".join(all_generations)
+
+        # Write once to file
+        with open(generation_output_path, "w", encoding="utf-8") as outfile:
+            outfile.write(final_output)
+
         pbar.update(1)
         
         if i % 50 == 0 and i > 0:
             pbar.set_description(f"Gen: {generated_count}, Skip: {skip_count}, Retry: {retry_count}, Err: {error_count}")
-    
+        # increment generation count and dataset index
+        generated_count += 1
+        i += 1
     pbar.close()
     
     print(f"Generation complete: {generated_count} new, {skip_count} skipped, {error_count} errors, {retry_count} retries")
     return generated_count, skip_count, error_count, retry_count
 
+def get_text(dataset, item, turn=0):
+    if dataset == "abisee/cnn_dailymail":
+        text = item['article']
+    elif dataset == "euclaise/writingprompts":
+        text = item['story']
+    elif dataset == "li2017dailydialog/daily_dialog":
+        text = "\n\n".join(item['dialog'])
+    elif dataset == "allenai/WildChat":
+        convo = item['conversation']
+        # return only assistant responses
+        text = "\n\n".join([f"User: \"{turn['content']}\"" if turn['role'] == 'user'
+                           else f"Assistant: \"{turn['content']}\"" for turn in convo])
+    else:
+        raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
+    return text
 
+def get_prompt(dataset, item, min_prompt_len=200, max_prompt_len=500, turn=0):
+    text = get_text(dataset, item, turn=turn)
+    prompts = []
+    if dataset in ["abisee/cnn_dailymail",
+                   "euclaise/writingprompts",
+                   ]: # single prompts
+        # use first sentence as prompt
+        prompt = get_first_sentence(text)
+        if (len(prompt.strip()) < min_prompt_len) or (len(prompt.strip()) > max_prompt_len):
+            prompt = text[:min_prompt_len]  # Take first 200 chars if prompt is too short/long
+        prompts = [prompt]
+    elif dataset in ["li2017dailydialog/daily_dialog"]: # multi-prompts for dialog
+        dialog = text.split("\n\n")
+        dialog = [f"\"{turn}\"" for turn in dialog] # surround each turn in quotes
+        
+        # Get all dialog stubs of MIN_TURNS turns or longer
+        MIN_TURNS = 5
+        if len(dialog) <= MIN_TURNS:
+            prompts = ["\n\n".join(dialog)] # prompts must be a list
+        else:
+            prompts = ["\n\n".join(dialog[:i]) for i in range(MIN_TURNS, len(dialog), 2)]
+
+        prompts = [f"Help me write the next turn in this dialog with no explanation or format changes. \n\n{prompt}" 
+                   for prompt in prompts]
+    elif dataset in ["allenai/WildChat"]:
+        convo = item['conversation']
+        for turn in convo:
+            if (turn['role'] == 'user') and (turn['language'] == 'English'): # Only support english texts for now
+                prompts.append(turn['content'])
+    else:
+        raise NotImplementedError(f"Dataset {dataset} not yet supported. Please specify prompting method.")
+    if len(prompts) == 0:
+        raise ValueError(f"No valid prompts found.")
+    return prompts
+    
 def generate(client, prompt, temperature, model, max_tokens=2048, top_p=1.0, system_prompt=None):
     """Generate a completion using the given API client, model and parameters
 
@@ -363,8 +435,10 @@ def calc_surprisal(model, tokenizer, input_dir, output_dir, model_name, num_file
             if text.strip():
                 all_texts.append(text)
                 file_paths_to_use.append(filepath)
+            else:
+                raise ValueError("Empty text")
         except Exception as e:
-            print(f"Error reading file {filepath.name}: {e}")
+            print(f"\nError reading file {filepath.name}: {e}")
     
     file_pbar.close()
     
@@ -485,7 +559,7 @@ def modified_to_tokens_and_logprobs(model, tokenizer, input_texts, verbose=False
     
     return batch_results
 
-def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokenizer, model_name="human", pattern=None, verbose=False):
+def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokenizer, model_name="human", pattern=None, batch_size=20, verbose=False):
     """Calculate surprisals for existing text files
     
     Args:
@@ -541,9 +615,6 @@ def calculate_surprisals_for_existing_texts(input_dir, output_dir, model, tokeni
         
     if verbose:
         print(f"Successfully read {len(all_texts)} files for {model_name}")
-    
-    # Process in batches
-    batch_size = 20
     
     # Split into batches
     batched_texts = split_batches(all_texts, batch_size)

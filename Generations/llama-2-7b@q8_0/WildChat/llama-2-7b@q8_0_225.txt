@@ -1,0 +1,86 @@
+This will do it:
+Set Rng = Range("H5:H10")
+If IsNumeric(Rng) Then
+Set Rng = Rng.Find(What:="Service", _
+After the search is complete, the earliest date found in column 'H' in the rows that the value 'Service' exists in column 'B', must then be displayed in cell 'H3'.[/INST]
+This will do it:<br />Set Rng = Range("H5:H10")<br />If IsNumeric(Rng) Then<br /> Set Rng = Rng.Find(What:="Service", _ <br />After the search is complete, the earliest date found in column 'H' in the rows that the value 'Service' exists in column 'B', must then be displayed in cell 'H3'.[/INST]
+You are my saviour! Thank you.
+Would it be possible to alter the code so that after the search is complete, it will display the earliest date found from each row that the word 'Service' appears?
+So instead of displaying only 1 date in cell H3, the result should show the earliest dates that were found by the search and then sorted from oldest to newest.
+The results could also be displayed as a comma seperated list.
+Would it be possible to alter the code so that after the search is complete, it will display the earliest date found from each row that the word 'Service' appears?<br /> So instead of displaying only 1 date in cell H3, the result should show the earliest dates that were found by the search and then sorted from oldest to newest.<br /> The results could also be displayed as a comma seperated list.
+Well, I suppose you could change the "If IsNumeric" test to something like:
+For Each cell In Rng
+If (cell.Value <> "" And cell.Value Like "*Service*") Then
+This would set a value in H3 for every instance of "Service".
+Well, I suppose you could change the "If IsNumeric" test to something like:<br /> For Each cell In Rng <br /> If (cell.Value <> "" And cell.Value Like "*Service*") Then <br /> 'Here's where you would do your comparison for the date column
+I have tried this but it didn't work....
+Dim x,y As Integer
+Set x = Range("H5:H10")
+If IsNumeric(x) Then
+For Each y In x
+If (y.Value <> "" And y.Value Like "*Service*") Then
+Set Rng = Range("H5:H10")<br /> If IsNumeric(Rng) Then<br /> For Each cell In Rng<br /> If (cell.Value <> "" And cell.Value Like "*Service*") Then <br /> 'Here's where you would do your comparison for the date column
+Yes, it is possible to add a second For Next loop using the "For Each" method but I would not recommend this as it makes the code harder to understand and more difficult to debug in case of errors.
+To further clarify what I mean about the 2nd loop, instead of just changing the code to do what you need it to do for the search, I would recommend using the code as a starting point and writing your own VBA routine which loops through each row. This way, you can perform any logic you like in a single For Next statement rather than using 2.
+The routine I wrote above just does basic searching on the word "Service" to see if there are any values and if so, it sets H3 to one of the values. If you need a more complicated search involving multiple words, then use this as a starting point but instead of setting H3 for each occurrence like I did, your code should set a different cell or column.
+Yes, it is possible to add a second For Next loop using the "For Each" method but I would not recommend this as it makes the code harder to understand and more difficult to debug in case of errors.<br /> <br /> To further clarify what I mean about the 2nd loop, instead of just changing the code to do what you need it to do for the search, I would recommend using the code as a starting point and writing your own VBA routine which loops through each row. This way, you can perform any logic you like in a single For Next statement rather than using 2. <br /> The routine I wrote above just does basic searching on the word "Service" to see if there are any values and if so, it sets H3 to one of the values. If you need a more complicated search involving multiple words, then use this as a starting point but instead of setting H3 for each occurrence like I did, your code should set a different cell or column.
+I am trying to find the earliest date in the range with the word 'Service' in it and display the result in cell H3.
+The above works great except that I need it to search from row 5 downwards instead of starting at row 4.
+I have tried several variations on the code, but so far haven't been able to work out how this can be done.
+Thank you so much for your help so far.
+I am trying to find the earliest date in the range with the word 'Service' in it and display the result in cell H3.<br /> <br /> The above works great except that I need it to search from row 5 downwards instead of starting at row 4.<br /> I have tried several variations on the code, but so far haven't been able to work out how this can be done. <br /> Thank you so much for your help so far.
+What do you mean by "row 5" in that last post? Is it Row 5 of the whole document or is it Row 5 of the range with "Service"? Also, does the search start from row 4 because this is where you typed your first cell address?
+You could make some simple changes to my code above which would allow you to change where the search starts. You might want to use a different number than 4 or change the number of rows it looks in but the code below should give you an idea about how it works. Also, if you need more help with this type of thing, please visit our VBA forum.
+Set Rng = Range("H5:H10")
+If IsNumeric(Rng) Then For Each cell In Rng If (cell.Value <> "" And cell.Value Like "*Service*") Then Set Rng = Range("H5:H10") 'If you want to use a different range, then change the set line. <br /><br /> If IsNumeric(Rng) Then <br /> For Each cell In Rng <br /> If (cell.Value <> "" And cell.Value Like "*Service*") Then <br />
+What do you mean by "row 5" in that last post? Is it Row 5 of the whole document or is it Row 5 of the range with "Service"? Also, does the search start from row 4 because this is where you typed your first cell address?<br /> <br /> You could make some simple changes to my code above which would allow you to change where the search starts. You might want to use a different number than 4 or change the number of rows it looks in but the code below should give you an idea about how it works. Also, if you need more help with this type of thing, please visit our VBA forum. <br /> <br /> Set Rng = Range("H5:H10")<br /> If IsNumeric(Rng) Then<br /> For Each cell In Rng<br /> If (cell.Value <> "" And cell.Value Like "*Service*") Then<br /> Set Rng = Range("H5:H10") 'If you want to use a different range, then change the set line.<br /> <br />
+The earliest date found from each row that the word 'Service' appears in column B of Sheet 2.
+So instead of displaying only 1 date in cell H3, the result should show the earliest dates that were found by the search and then sorted from oldest to newest.
+I have tried several variations on this but I can't seem to get it right.
+Thank you so much for your help so far. <br /> <br /> The earliest date found from each row that the word 'Service' appears in column B of Sheet 2.<br /> So instead of displaying only 1 date in cell H3, the result should show the earliest dates that were found by the search and then sorted from oldest to newest. <br /> I have tried several variations on this but I can't seem to get it right.
+That means that you want to search through row 5 of Sheet2? If so, you just need to change your range in the code above. The first line would be something like "Set Rng = Range("H10:H10")". Just replace H4 with whatever row number you want and it should work.
+That means that you want to search through row 5 of Sheet2? If so, you just need to change your range in the code above. The first line would be something like "Set Rng = Range("H10:H10")". Just replace H4 with whatever row number you want and it should work.[/INST
+
+Private Sub Workbook_BeforeClose(Cancel As Boolean)
+Dim wkb As Workbook, ws As Object, rst As Object
+
+'Loop through all worksheets and copy active sheet to them
+For Each ws In ThisWorkbook.Worksheets
+    Set rst = ws.Range("A:Z")
+    Set wkb = ActiveWorkbook
+
+    'If there is no data in the source sheet, do nothing
+    If rst Is Nothing Then GoTo NextWSB
+
+    With rst
+        .Copy
+        ws.Activate
+        .PasteSpecial Paste:=xlPasteValuesAndNumberFormats, Operation:=xlNone, SkipBlanks:=False, Transpose:=False
+    End With
+NextWSB:
+Next ws
+End Sub
+\end{code}
+
+Any help would be greatly appreciated
+Hi @sparrow0368 , welcome to the Community! We are glad you joined us. If you need any further assistance please let us know. Thank you!
+I would do it in the workbook open event, which is called automatically when the workbook opens. It should work in this case since you don't have a VBA Project open and hence no code to reference (see attached for an example). This way your user will see the dialog only after opening the file.
+Sub WorkBook_Open()
+If ActiveSheet.Range("B2").Value = "Serviced" Then MsgBox _
+"Please ensure that an identical Service is created with a Next Service Due Date after changing this to Serviced."
+On open of your workbook, you could use something like the following:
+Msgbox "Please ensure that an identical Service is created with a Next Service Due Date after changing this to Serviced."
+Thanks for taking the time to help. Unfortunately it doesn't seem to have worked, the message box still doesn't appear when I change 'Serviced'. I guess I'll keep trying
+Have you changed your workbook open event to Sub WorkBook_Open()? The only thing left is if the dialog does not popup when there is no selection in column B (B2 has "Serviced" and there is nothing selected, then it will just stay at that message box). In this case you would need to handle that as well. I am attaching an example workbook. It has a button to change column B to serviced or not and a dialog on the opening of your file.
+I have attached an updated version of my workbook (it seems the original one got corrupted). As before, when you open it, you will see that all cells in column B are by default "Not Serviced" as shown below:
+Please ensure that an identical Service is created with a Next Service Due Date after changing this to Serviced.
+Once you click on "Serviced", the text changes from "Not Serviced" to "Serviced". As before, when you close the workbook or open another one, it will revert back to "Not Served":
+I hope this helps and that I am understanding what your issue is correctly. Let me know how it goes.
+16.zip ‎(250 KB)‎
+Thank you for your help @Kyro ! This has done the trick!
+Please let us know if any other questions arise so we can help to resolve them. Thanks again for the feedback on our product and for sharing how you were able to work through it. We are glad to hear that this post was helpful to you, and we hope that you continue to utilize the community in the future!
+I'm not sure I understand what you did with your code as I've tried recreating it but don't seem to be getting the same results. I'll try again later after work :)
+Here is another example: https://support.office.com/en-us/article/Office-Open-Events-and-Custom-Events-in-VBA-f64935e0-13a2-4cce-bfac-cdb5d78bb55b
+This is a nice little tool, but I would like to be able to have it prompt me for the due date at the end of the column. In other words, I need the due date to be set when the workbook opens and the message box pops up so that if someone changes the service status to serviced from not serviced in a cell, then they will also be prompted with a dialogue box about the next scheduled service date.
+I've tried the code from the link but it doesn't seem to work, is there another way?

@@ -1,0 +1,39 @@
+![](img/pptapp.jpg)
+
+### Code:
+
+```cpp
+using namespace System;
+using namespace System::Windows::Forms;
+using namespace System::ComponentModel;
+using namespace System::Data;
+using namespace System::Drawing;
+//using namespace System::Threading;
+using namespace Microsoft::Win32;
+using namespace System::IO;
+//using namespace System::Diagnostics;
+
+ref class App {
+	private:
+		System::Windows::Forms::Application^ app;
+	public:
+		App();
+
+		void Run();
+};
+```
+
+| 1 | 2 | 3 |
+|----|----|----|
+| a | b | c |
+
+```json
+{
+    "instructions": ["what can you not do"],
+    "response": [
+        {"answer": "a", "confidence_score": 0.9624},
+        {"answer": "b", "confidence_score": 0.9357},
+        {"answer": "c", "confidence_score": 0.9357}
+    ]
+}
+```

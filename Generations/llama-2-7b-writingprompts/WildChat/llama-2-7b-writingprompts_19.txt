@@ -1,0 +1,18 @@
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+	cout << (pow(0.1, 10) - pow(0.1, 10)) / (pow(2, -35)-pow(2,-35))<<endl; // 1.0000000498478766
+	cout << pow((-10), -35) * (-10) << endl; // -31576383
+}
+```
+
+I would round to the nearest hundredth or thousandth because my data has a decimal place and I don't think it is accurate. This way it should be close to accurate, but not completely accurate. If this does not make sense then just ask! :D
+
+The data is 924g + 27g= 321 g and 328g, this is how I get it to be 27g * 328 g = 8804 g which is more than the total mass of all crackers. So there has to be an error in the data or an assumption made by the original problem-setter. If we were to take the two sets of data and calculate the average weight of a cracker we would get 23.76g, this is way too small for any box of crackers so I am assuming that there is a mistake in the question.
+### Solution:
+If you are given that all of the crackers weigh approximately 24g and that the mass of the box alone is 328g then we can conclude that the amount of cracker that are in the box, which I am assuming to be a standard box of cracker, should be around 13.
+
+### Explanation:
+If you know that the mass of all the crackers in the box is 24g and the mass of just the box alone is 328g then we can conclude that there are approximately 14 crackers in a standard box (assuming it to be one).

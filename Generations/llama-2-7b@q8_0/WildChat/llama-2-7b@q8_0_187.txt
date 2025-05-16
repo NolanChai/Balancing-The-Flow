@@ -1,0 +1,176 @@
+//==========================
+        /// <summary>
+        /// Export Data to excel using Generic Export Classes
+        /// </summary>
+        /// <param name="dt">DataTable</param>
+        /// <returns></returns>
+        protected void ExportDataSetToExcel(DataTable dt, string fileName) {
+            ExcelExport export = new ExcelExport();
+            export.FileName = fileName;
+            export.DataSource = dt;
+            export.ColumnHeadersVisible = true;
+            
+
+            Response.Clear();
+            Response.Buffer = true;
+            Response.ContentType = "application/vnd.ms-excel"; //Excel 2003
+            Response.AddHeader("content-disposition", String.Format("attachment;filename={0}", fileName));
+            
+            export.ExportToHtml(Response);
+        }
+
+
+//==========================
+
+    protected void btnSearch_Click(object sender, EventArgs e) {
+        if (txtParsianYear.Text != null && txtParsianYear.Text.Trim() != "") {
+            var dt = new DataTable();
+            dt.Columns.Add("فرمت نویسه", typeof(string));
+            dt.Columns.Add("کد صنعت", typeof(string));
+            dt.Columns.Add("اسلامیه", typeof(string));
+            dt.Columns.Add("شهر", typeof(string));
+            dt.Columns.Add("تمدن", typeof(string));
+            dt.Columns.Add("آدرس", typeof(string));
+            dt.Columns.Add("فاکتوریت", typeof(string));
+            dt.Columns.Add("تاریخ صبح", typeof(DateTime));
+            dt.Columns.Add("تاریخ عصر", typeof(DateTime));
+            dt.Columns.Add("پایگاه", typeof(string));
+            dt.Columns.Add("مدل", typeof(string));
+            dt.Columns.Add("تنظیم فوق که", typeof(string));
+            dt.Columns.Add("ارسالی ها", typeof(string));
+            dt.Columns.Add("خطای حل", typeof(string));
+            
+            int i = 0;
+            
+            if (txtParsianYear.Text == "1398") {
+                i++;
+                
+            } else if (txtParsianYear.Text == "1401" || txtParsianYear.Text == "1397" ) {
+               if (dtbAzTarikh.Value != null && dtbAzTarikh.Value.Date != DateTime.MinValue) {
+                i++;
+                    var date = dtbAzTarikh.Value;
+                    
+                    if(date != null){
+                        try{
+                            var persianYear = date.Year % 100;
+                            
+                            if (persianYear == 2998 || persianYear == 2999) {
+                                dtbAzTarikh.Value = DateTime.Now.AddYears(-1).Date;
+                                date = dtbAzTarikh.Value;
+                                //date = DateTime.Now.AddYears(-1).Date;
+                            }
+                        }catch{
+                        }
+                    }
+                }
+            }  else if (txtParsianYear.Text == "1402" || txtParsianYear.Text == "1399") {
+               if(dtbTaTarikh.Value != null && dtbTaTarikh.Value.Date != DateTime.MinValue) {
+                i++;
+                    var date = dtbTaTarikh.Value;
+                    
+                    if (date != null) {
+                        try{
+                            var persianYear = date.Year % 100;
+                            
+                            if(persianYear == 2998 || persianYear == 2999) {
+                                dtbTaTarikh.Value = DateTime.Now.AddYears(-1).Date;
+                                date = dtbTaTarikh.Value;
+                            }
+                        }catch{
+                        }
+                    }
+                }
+            
+
+            
+            } else if (txtParsianYear.Text == "1403" || txtParsianYear.Text == "1400") {
+               if (dtbAzTarikh.Value != null && dtbAzTarikh.Value.Date != DateTime.MinValue) {
+                i++;
+                    var date = dtbAzTarikh.Value;
+                    
+                    if(date != null){
+                        try{
+                            var persianYear = date.Year % 100;
+                            
+                            if (persianYear == 2998 || persianYear == 2999) {
+                                dtbAzTarikh.Value = DateTime.Now.AddYears(-1).Date;
+                                date = dtbAzTarikh.Value;
+                            }
+                        }catch{
+                        }
+                    }
+                }
+            
+
+            
+            } else if (txtParsianYear.Text == "1404" || txtParsianYear.Text == "1398") {
+               if(dtbTaTarikh.Value != null && dtbTaTarikh.Value.Date != DateTime.MinValue) {
+                i++;
+                    var date = dtbTaTarikh.Value;
+                    
+                    if (date != null){
+                        try{
+                            var persianYear = date.Year % 100;
+                            
+                            if(persianYear == 2998 || persianYear == 2999) {
+                                dtbTaTarikh.Value = DateTime.Now.AddYears(-1).Date;
+                                date = dtbTaTarikh.Value;
+                            }
+                        }catch{
+                        }
+                    }
+                }
+            
+
+            
+            } else if (txtParsianYear.Text == "1405" || txtParsianYear.Text == "1397") {
+               if(dtbAzTarikh.Value != null && dtbAzTarikh.Value.Date != DateTime.MinValue) {
+                i++;
+                    var date = dtbAzTarikh.Value;
+                    
+                    if (date != null){
+                        try{
+                            var persianYear = date.Year % 100;
+                            
+                            if(persianYear == 2998 || persianYear == 2999) {
+                                dtbAzTarikh.Value = DateTime.Now.AddYears(-1).Date;
+                                date = dtbAzTarikh.Value;
+                            }
+                        }catch{
+                        }
+                    }
+                }
+            
+
+            
+            } else if (txtParsianYear.Text == "1406" || txtParsianYear.Text == "1396") {
+               if(dtbTaTarikh.Value != null && dtbTaTarikh.Value.Date != DateTime.MinValue) {
+                i++;
+                    var date = dtbTaTarikh.Value;
+                    
+                    if (date != null){
+                        try{
+                            var persianYear = date.Year % 100;
+                            
+                            if(persianYear == 2998 || persianYear == 2999) {
+                                dtbTaTarikh.Value = DateTime.Now.AddYears(-1).Date;
+                                date = dtbTaTarikh.Value;
+                            }
+                        }catch{
+                        }
+                    }
+                }
+            
+
+            
+            } else if (txtParsianYear.Text == "1407" || txtParsianYear.Text == "1395") {
+               if(dtbAzTarikh.Value != null && dtbAzTarikh.Value.Date != DateTime.MinValue) {
+                i++;
+                    var date = dtbAzTarikh.Value;
+                    
+                    if (date != null){
+                        try{
+                            var persianYear = date.Year % 100;
+                            
+                            if(persianYear == 2998 || persianYear == 2999) {
+                                dtbAzTarikh.Value = DateTime.Now

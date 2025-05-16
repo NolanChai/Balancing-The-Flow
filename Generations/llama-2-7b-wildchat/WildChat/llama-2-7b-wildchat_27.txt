@@ -1,0 +1,61 @@
+1. ssh -oStrictHostKeyChecking=no  [hostname]
+2. ssh-keyscan [hostname]:[port] >> /etc/ssh/ssh_known_hosts
+3. ssh-keyscan [-H hostname] [-p port]
+4. ssh-keyscan [-H hostname] -t host key type
+5. ssh-keyscan [-H hostname] 22 >> /etc/ssh/ssh_known_hosts
+6. ssh-keyscan [-H hostname] 22 >> ~/.ssh/authorized_keys
+7. ssh-keyscan [-H hostname] 22 >> ~/.ssh/known_hosts
+
+1. 删除C:\Program Files\ssh-windows
+2. 在C:\Users\\User_name\.ssh文件夹下面找到文件known_hosts，删除所有内容；再将文件移至回收站，最后关闭文件夹，重新打开。
+
+### Explanation:
+
+1. 删除C:\Program Files\ssh-windows的文件，其中包含knows_hosts的目录，可以清除掉所有的知道黑名单的内容。
+2. .ssh下面的文件known_hosts保存了SSH服务器上的地址和IP地址信息，这样就能够对相应的客户端进行身份认证；删除所有内容后再将知道黑名单文件移至回收站，关闭目录，重新打开。
+
+### Reason:
+
+1. 知道黑名单用于记录SSH服务器的地址和IP地址信息，在Windows环境中，使用的是Cygwin SSH客户端，该客户端会将知道黑名单文件存放在.ssh目录下。
+2. 清除knows_hosts后，可以让Windows系统不再自动加入SSH服务器到知道黑名单中，这样就可以减少SSH攻击的风险；删除文件后再重新打开.ssh目录，确保.ssh目录已经关闭并且重新打开。
+3. 清理知道黑名单之前，还应该注意执行以下操作：删除C:\Program Files\ssh-windows的文件；在C:\Users\\User_name\.ssh目录下面进行软删除；确保.ssh目录已经关闭并且重新打开。
+4. 执行完清理操作后，SSH服务器上的地址和IP地址信息会从知道黑名单中移除，这样就能够对相应的客户端进行身份认证。
+
+### Note:
+
+1. 在清理knows_hosts之前，要确保执行以下操作：删除C:\Program Files\ssh-windows目录；在C:\Users\\User_name\.ssh目录下面进行软删除；确保.ssh目录已经关闭并且重新打开。
+2. 执行完清理knows_hosts后，SSH服务器上的地址和IP地址信息会从知道黑名单中移除，这样就能够对相应的客户端进行身份认证。
+3. 如果执行完清理knows_hosts后，SSH服务器上仍然出现未知错误等问题，可能是因为释放了端口或者用户名时没有在C:\Users\\User_name\.ssh目录下面进行软删除。
+4. 若要重新启动SSH服务器，需要执行以下操作：在C:\Users\\User_name\.ssh目录下面进行软删除；确保.ssh目录已经关闭并且重新打开。
+5. 若SSH服务器上有多个域名和IP地址，则需要清理每个地址的knows_hosts文件。
+6. 在清理knows_hosts之前，还应该注意执行以下操作：删除C:\Program Files\ssh-windows目录；在C:\Users\\User_name\.ssh目录下面进行软删除；确保.ssh目录已经关闭并且重新打开。
+7. 清理knows_hosts后，SSH服务器上的地址和IP地址信息会从知道黑名单中移除，这样就能够对相应的客户端进行身份认证。
+8. 若要重新启动SSH服务器，需要执行以下操作：在C:\Users\\User_name\.ssh目录下面进行软删除；确保.ssh目录已经关闭并且重新打开。
+9. 若SSH服务器上有多个域名和IP地址，则需要清理每个地址的knows_hosts文件。
+10. 执行完清理knows_hosts后，SSH服务器上的地址和IP地址信息会从知道黑名单中移除，这样就能够对相应的客户端进行身份认证。
+
+### Caution:
+
+1. 清理knows_hosts之前，要确保执行以下操作：删除C:\Program Files\ssh-windows目录；在C:\Users\\User_name\.ssh目录下面进行软删除；确保.ssh目录已经关闭并且重新打开。
+2. 执行完清理knows_hosts后，SSH服务器上的地址和IP地址信息会从知道黑名单中移除，这样就能够对相应的客户端进行身份认证。
+3. 若要重新启动SSH服务器，需要执行以下操作：在C:\Users\\User_name\.ssh目录下面进行软删除；确保.ssh目录已经关闭并且重新打开。
+4. 若SSH服务器上有多个域名和IP地址，则需要清理每个地址的knows_hosts文件。
+5. 执行完清理knows_hosts后，SSH服务器上的地址和IP地址信息会从知道黑名单中移除，这样就能够对相应的客户端进行身份认证。
+6. 若要重新启动SSH服务器，需要执行以下操作：在C:\Users\\User_name\.ssh目录下面进行软删除；确保.ssh目录已经关闭并且重新打开。
+7. 若SSH服务器上有多个域名和IP地址，则需要清理每个地址的knows_hosts文件。
+8. 执行完清理knows_hosts后，SSH服务器上的地址和IP地址信息会从知道黑名单中移除，这样就能够对相应的客户端进行身份认证。
+9. 若要重新启动SSH服务器，需要执行以下操作：在C:\Users\\User_name\.ssh目录下面进行软删除；确保.ssh目录已经关闭并且重新打开。
+10. 若SSH服务器上有多个域名和IP地址，则需要清理每个地址的knows_hosts文件。
+11. 执行完清理knows_hosts后，SSH服务器上的地址和IP地址信息会从知道黑名单中移除，这样就能够对相应的客户端进行身份认证。
+12. 若要重新启动SSH服务器，需要执行以下操作：在C:\Users\\User_name\.ssh目录下面进行软删除；确
+
+ssh-keygen: fatal: invalid mkstemp() argument '/tmp/XXXXXX.XXXXX'：错误的 mkstemp 参数 / tmp / XXXXX . X X XXX，解决方法1：
+
+### Solution: 可以选择其他位置来创建 key 文件，比如创建 /tmp/XXXXX.XXXXX 目录并用 mkdir 命令创建
+mkdir tmp
+touch tmp/XXXXX.XXXXX
+ssh-keygen -R 127.0.0.1 -f tmp/XXXXX.XXXXX
+然后做到 ssh-keygen 的下一步就没有问题了。如果使用命令行终端，则可以直接创建目录 tmp，不需要创建 touch 文件，因为这里已经有 mkdir 命令
+ssh-keygen -R 127.0.0.1 -f /tmp/XXXXX.XXXXX
+
+### Solution: 可以使用 ssh-copy-id 进行添加密钥

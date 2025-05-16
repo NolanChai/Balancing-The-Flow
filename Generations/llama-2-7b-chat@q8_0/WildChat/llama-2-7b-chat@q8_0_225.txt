@@ -1,0 +1,44 @@
+Yes, it is possible to achieve this using VBA macros in Excel. Here is an example code that should do what you described:
+```
+Sub SearchForEarliestDateInHWhenServiceExistsinB()
+    
+    Dim lastRow As Long: lastRow = Cells(Rows.count, "B").End(xlUp).Row
+        For i = 5 To lastRow Step 1 'loop from row 5 to the last row in column B
+            If Cells(i, "B").Value = "Service" Then
+                   Dim earliestDate As Date: earliestDate = Cells(i, "H").Value
+                    If earliestDate < Cells(i, "H3").Value Then
+                         Cells(i, "H3").Value = earliestDate 'write the earliest date found in column H of the row where Service exists in column B to cell H3
+            End If
+        Next i
+End Sub
+```
+This code uses a For loop that iterates over each row in column B starting from row 5 and ending at the last row in column B. For each row, it checks if the value in cell B5 is "Service". If it is, then it checks the date value in cell H5. If the date value in cell H5 is earlier than the current value in cell H3, it overwrites the value in cell H3 with the earliest date found.
+You can run this macro by pressing Alt + F11, editing the code and then clicking on "Run" button or by assigning the code to a button in your Excel sheet.
+Please let me know if you have any question or need further assistance.
+
+Sure! To change the sheet reference from "Sheet1" to an active sheet, you can use the following formula:
+
+=ACTIVE Cell(1,1)
+
+This formula will return the value of the cell in row 1, column 1 of the active sheet. If the active sheet changes, the formula will automatically update to refer to the new active sheet.
+
+Alternatively, you can use the following formula to reference an active sheet without specifying a name:
+
+=ACTIVE Sheet(1,1)
+
+This formula will return the value of the cell in row 1, column 1 of the active sheet, regardless of its name.
+
+I hope this helps! Let me know if you have any questions.
+
+Here is some VBA code that should accomplish what you are looking for:
+Sub PopUpMessageOnBColumnChange()
+     Dim cell As Range
+     For Each cell In Range("B:B")
+        If cell.Value = "Serviced" Then
+            MsgBox "Please ensure that an identical Service is created with a Next Service Due Date after changing this to Serviced."
+            Exit Sub
+        End If
+    Next cell
+End Sub
+
+This code will loop through every cell in column B and check the value of each cell. If the value is "Serviced", it will pop up a message box with the message you provided. The message box will appear immediately after the cell is changed to "Serviced".

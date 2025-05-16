@@ -1,0 +1,170 @@
+User: "Write the assembler code for the tasm compiler for the dos operating system, which will perform the task.As an input, the program receives 10 elements from the input.txt file. Next, it finds the minimum positive element and the maximum negative element and indicates their numbers in order and outputs this data to the console. If these elements are missing, 0 is displayed in the console."
+
+Assistant: "Here's the assembler code for the DOS operating system using TASM compiler:
+
+```assembly
+; MINMAX.ASM
+
+.model small
+.stack 100h
+
+.data
+filename db 'input.txt',0
+handle dw ?
+buffer db 20 dup (?)
+minpos db ?
+minposindex dw 0
+maxneg db ?
+maxnegindex dw 0
+i dw 0
+j dw 0
+msg1 db 'Minimum Positive Element: $'
+msg2 db 10,13,'Index: $'
+msg3 db 10,13,10,13,'Maximum Negative Element: $'
+msg4 db 10,13,'Index: $'
+null db 0
+
+.code
+; Procedure to read from a file
+open PROC
+    mov ah, 3dh
+    mov al, 0
+    lea dx, filename
+    int 21h
+    jc error
+    mov [handle], ax
+    ret
+error:
+    mov ax, 4c00h
+    int 21h
+open ENDP
+
+; Procedure to close the file
+close PROC
+    mov ah, 3eh
+    mov bx, [handle]
+    int 21h
+    ret
+close ENDP
+
+; Procedure to read a byte from the file
+read PROC
+    mov ah, 3fh
+    mov bx, [handle]
+    lea dx, minpos
+    add dx, [j]
+    mov cx, 1
+    int 21h
+    cmp ax, 0
+    je endread
+    inc [j]
+    ret
+endread:
+    call close
+    ret
+read ENDP
+
+; Procedure to print a string to the console
+print_string PROC
+    mov ah, 09h
+    int 21h
+    ret
+print_string ENDP
+
+start:
+    mov ax, @data
+    mov ds, ax
+
+    call open
+    mov [i], 0
+    mov [minpos], 7fh
+    mov [maxneg], 80h
+loop1:
+    cmp [i], 20
+    jae endloop1
+
+    call read
+    cmp [minpos], 7fh
+    je check_positive
+    cmp byte ptr [minpos + i], 0
+    jg find_min_positive
+    jmp next_iteration
+check_positive:
+    cmp byte ptr [minpos + i], 0
+    jle next_iteration
+find_min_positive:
+    mov al, [minpos]
+    cmp al, [minpos + i]
+    jbe next_iteration
+    mov [minpos], al
+    mov [minposindex], i
+next_iteration:
+    cmp [maxneg], 80h
+    je check_negative
+    cmp byte ptr [maxneg + i], 0
+    jl find_max_negative
+    jmp increment_loop
+check_negative:
+    cmp byte ptr [maxneg + i], 0
+    jge increment_loop
+find_max_negative:
+    mov al, [maxneg]
+    cmp al, [maxneg + i]
+    jnb increment_loop
+    mov [maxneg], al
+    mov [maxnegindex], i
+increment_loop:
+    inc i
+    cmp i, 20
+    jl loop1
+endloop1:
+    call close
+
+    lea dx, msg1
+    call print_string
+    mov ax, [minpos]
+    or ax, ax
+    jz print_zero
+    add ax, 30h
+    mov dl, al
+    mov ah, 02h
+    int 21h
+print_zero:
+    mov dl, null
+    mov ah, 2
+    int 21h
+    lea dx, msg2
+    lea bx, minposindex
+    call print_string
+    jmp l1
+    xor ax, ax
+    int 21h
+l1:
+    lea dx, msg3
+    call print_string
+    mov ax, [maxneg]
+    or ax, ax
+    jz print_zero2
+    add ax, 30h
+    mov dl, al
+    mov ah, 02h
+    int 21h
+print_zero2:
+    mov dl, null
+    lea bx, maxnegindex
+    mov ah, 2
+    int 21h
+    lea dx, msg4
+    call print_string
+    jmp l2
+    xor ax, ax
+    int 21h
+l2:
+    mov ax, 4c00h
+    int 21h
+
+main endp
+end main
+```
+
+This code reads 10 positive and negative elements from the input.txt file, finds the minimum positive and maximum negative element along with their index, and prints the results on the console. If an element is not present, it will display a 0. The code uses DOS system calls for file handling and console output."

@@ -1,0 +1,121 @@
+```json
+{
+    "description": "Generating prompts for Midjourney AI.",
+    "prompts": [
+        {
+            "id": "1",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "night, modern city, decay, neon, one point perspective, single character, anime style, a male character standing in the middle of the road, full body, holding a gun, facing the camera, ready for battle, white fur, dual tails, wearing school uniform, trendy fashion, overall gray color scheme, scene is 3D pixel art",
+            "compositions": "[1] composition in [2].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "photography",
+            "v": "--v 5"
+        },
+        {
+            "id": "2",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "modern city at night, neon lights, tall buildings, chaotic atmosphere, a woman standing on the rooftop overlooking the cityscape, single character, anime style, long flowing hair, dressed in a stylish outfit, capturing the beauty of urban life, [3] composition in [2].",
+            "compositions": "[1] composition in [4].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "illustration",
+            "v": "--niji"
+        },
+        {
+            "id": "3",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "underwater cityscape, marine life thriving in vibrant coral reefs, a man exploring the depths of the ocean, single character, anime style, [4] composition in [2].",
+            "compositions": "[1] composition in [5].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "illustration",
+            "v": "--niji"
+        },
+        {
+            "id": "4",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "modern cityscape at sunset, golden hues reflecting off the skyscrapers, a woman walking along a bustling street, single character, anime style, long flowing hair, capturing the beauty of urban life, [5] composition in [2].",
+            "compositions": "[1] composition in [6].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "illustration",
+            "v": "--niji"
+        },
+        {
+            "id": "5",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "modern city at night, neon lights illuminating the streets, a woman walking alone, capturing the beauty of urban life, single character, anime style, [6] composition in [2].",
+            "compositions": "[1] composition in [7].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "photography",
+            "v": "--niji"
+        },
+        {
+            "id": "6",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "beautiful underwater landscape, vibrant coral reefs, a woman swimming through the crystal clear water, single character, anime style, capturing the beauty of nature, [7] composition in [2].",
+            "compositions": "[1] composition in [8].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "illustration",
+            "v": "--niji"
+        },
+        {
+            "id": "7",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "modern cityscape, neon lights shining in the night, a woman sitting on a rooftop overlooking the cityscape, single character, anime style, capturing the beauty of urban life, [8] composition in [2].",
+            "compositions": "[1] composition in [9].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "illustration",
+            "v": "--niji"
+        },
+        {
+            "id": "8",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "modern cityscape at night, bustling streets filled with neon lights, a man exploring the urban landscape, single character, anime style, capturing the beauty of urban life, [9] composition in [2].",
+            "compositions": "[1] composition in [10].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "photography",
+            "v": "--niji"
+        },
+        {
+            "id": "9",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "beautiful forest landscape, vibrant autumn colors, a woman walking through the colorful foliage, single character, anime style, capturing the beauty of nature, [10] composition in [2].",
+            "compositions": "[1] composition in [3].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "illustration",
+            "v": "--niji"
+        },
+        {
+            "id": "10",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "modern cityscape at night, bustling streets filled with neon lights, a woman walking alone, capturing the beauty of urban life, single character, anime style, [11] composition in [2].",
+            "compositions": "[1] composition in [4].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "photography",
+            "v": "--niji"
+        },
+        {
+            "id": "11",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "beautiful underwater landscape, vibrant coral reefs, a woman swimming through the crystal clear water, single character, anime style, capturing the beauty of nature, [12] composition in [2].",
+            "compositions": "[1] composition in [5].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a detailed description of the scene's realization",
+            "style": "illustration",
+            "v": "--niji"
+        },
+        {
+            "id": "12",
+            "details": "a detailed description of [1] with specific imagery details.",
+            "environment": "modern cityscape at night, bustling streets filled with neon lights, a woman sitting on a rooftop overlooking the cityscape, single character, anime style, capturing the beauty of urban life, [13] composition in [2].",
+            "compositions": "[1] composition in [6].",
+            "atmosphere": "a detailed description of the scene's mood, feelings, and atmosphere.",
+            "realization": "a

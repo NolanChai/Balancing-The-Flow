@@ -1,0 +1,11 @@
+This lab aims at evaluating the efficiency of two distinct strategies for calculating binomial coefficients. In Lab 1, we employed an iterative method to compute these coefficients, while in Lab 2, we utilized a recursive approach. We will apply varying input sizes to assess both methods and compare their execution time. Furthermore, we will utilize Big O notation to analyze the results of our experimental study.
+
+In Task 2.1, we analyze the performance of two distinct approaches used to compute binomial coefficients: an iterative method utilized in Lab 1 and a recursive algorithm employed in Lab 2. The aim is to evaluate how the execution time of these techniques varies with the value of the first parameter (n).
+
+In Task 2.1, we observe that as the size of n increases, the execution time for the iterative approach also increases, although not at the same rate as the recursive approach. This is because the iterative method has a time complexity of O(n^2), meaning that the performance grows quadratically with the value of n. In contrast, the exponential growth rate of the recursive approach is much faster than the quadratic growth rate of the iterative method.
+
+On the other hand, in Task 2.2, we find that the execution time for the recursive algorithm rapidly increases as n grows in size. This is because the recursive approach has a time complexity of O(2^n), meaning that its performance increases exponentially with n. The exponential growth rate is significantly faster than the quadratic growth rate of the iterative method used in Lab 1.
+
+Overall, these findings suggest that for larger values of n, the iterative approach used in Lab 1 outperforms the recursive algorithm used in Lab 2. This is due to the fact that the time complexity of the recursive approach becomes a bottleneck for larger values of n, resulting in significantly longer execution times. However, for smaller values of n, the recursive algorithm may be faster than the iterative approach because it does not require nested loops and can use recursive memoization to optimize computations.
+
+Sure! How can I help you today? Is there anything specific you would like to know or discuss?

@@ -1,0 +1,29 @@
+这是一个基于UnityEngine和CakeSlice的MoxingControl类，用于控制一个GameObject的颜色和大小。
+代码分析：
+1. 声明变量：
+	* `selectedPart`：当前选中的祖先对象
+	* `outline`：要创建的Outline组件
+	* `isControlEnabled`：控制器状态（可编辑）
+	* `animatorEnabled`：Animator组件状态（可编辑）
+2. 在Update方法中，根据鼠标按下事件处理：
+	* 如果鼠标按下了主鼠标按钮（0），并且当前选择的祖先对象不为空，则执行以下操作：
+		+ 检查当前选择的祖先对象是否为目标对象。如果是，则将其设置为null，并Destroy Outline组件。
+		+ 如果当前选择的祖先对象不为目标对象，则创建一个新的Outline组件，并将其附加到目标对象上。设置OutlineColor和Outline Width。
+3. 在Update方法中，根据鼠标滚轮事件处理：
+	* 如果鼠标满screen buttons（0），并且当前选择的祖先对象不为空，则执行以下操作：
+		+ 获取鼠标按下的屏幕坐标。
+		+ 将当前选择的祖先对象的 Position 属性设置为这个屏幕坐标。
+4. `GetClickedPart`方法：返回 clicked 部分的 Transform 对象。
+	* 获取鼠标 ray 并执行 Raycast 操作，查找与当前鼠标按下屏幕坐标最近的祖先对象。
+	* 如果发现一个目标对象，则返回该对象的 Transform 对象。否则返回null。
+5. `IsDescendant`方法：检查传入的两个祖先对象是否具有父对象关系。
+	* 遍历每个祖先对象，并检查其是否为传入的目标对象的子对象。如果发现，则返回true。否则返回false。
+
+This script appears to be designed to control a 3D model's rotation and position using the mouse. Here are some notes on the code:
+1. The script uses Unity's `Input.GetMouseButtonDown()` function to detect when the left mouse button is pressed down, which is used to select a part of the scene.
+2. When the left mouse button is pressed down, the script uses `GetClickedPart()` to find the transform of the part of the scene that was clicked. If no part was clicked, the script destroys any existing outline and axis objects.
+3. If a part was clicked, the script creates a new `Outline` component on the selected part and sets its color to `selectedColor`. It then sets the `outline` variable to reference the newly created outline object.
+4. The script then uses `Camera.main.ScreenToWorldPoint()` to get the world position of the mouse cursor, taking into account the camera's position and orientation. It then calculates the local position of the selected part in the parent transform's coordinate system, using the `InverseTransformPoint()` function.
+5. The script then uses `Mathf.Round()` to round the local position to the nearest 100 units, and sets the selected part's local position to that value. This will cause the selected part to rotate and move in response to mouse input.
+6. The script also includes a toggle button to enable or disable the control, which is done using `ToggleControlEnabled()` and `animatorEnabled`. When the control is disabled, the animator is set to be disabled as well.
+7. Finally, the script includes a `IsDescendant()` function that checks whether a given transform is a descendant of another transform. This is used in the `GetClickedPart()` function to ensure that only parts within a certain distance from the click position are considered for selection.

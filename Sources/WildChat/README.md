@@ -1,0 +1,1 @@
+For WildChat generations, since there are no human "ground truth" responses, the full chat transcripts are written to the data for record-keeping purposes. Therefore, "Sources/WildChat/human_13.txt" is the 14th full conversation between human user and llm assistant.

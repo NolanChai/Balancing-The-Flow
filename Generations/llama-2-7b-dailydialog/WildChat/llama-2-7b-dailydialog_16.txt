@@ -1,0 +1,5 @@
+5.0
+```
+
+### Explanation:
+The `while` statement begins with the first iteration at index 0. At every iteration, the value of the variable `w`, which is initially set to zero, is incremented by one. When `z=x[w]` is evaluated, it checks to see if the current `x` item, `x[w]`, has a higher value than `float('-inf')`. If this condition holds true (i.e. it's greater than or equal to `-inf`), then the variable `z` is assigned this value, and the loop continues until an iteration reaches `z=x[w]` that is not greater than or equal to `-inf`.

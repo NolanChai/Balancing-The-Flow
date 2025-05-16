@@ -1,9 +1,0 @@
-```python
-import pandas as pd
-
-data = '''\n'''''
-df_cnn = pd.read_csv(io.StringIO(data), sep='\n')
-df_cnn.columns = ['Sporting','Real Madrid']
-print (df_cnn)
-```
-![](https://raw.githubusercontent.com/hzhl9218/hzhl9218.github.io/master/img/%E7%AD%9C%E6%A0%B9%E5%90%91%20%E4%BD%BF%E7%94%A8%E8%AF%B4.png)

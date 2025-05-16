@@ -1,0 +1,3 @@
+the way you would do this is first create a timer that fires every 30-60 minutes. Inside that timer run a check to see if there are any players nearby (within X distance). If so, then spawn a prop with a marker on it and add the marker to each player who was within range at the time of the timer firing. Then remove the prop after a set period of time.
+
+To do this, you would need to use a combination of server-side functions such as SetTimeout() to create the timer and AddBlipForCoord() to spawn the prop with a marker on it.

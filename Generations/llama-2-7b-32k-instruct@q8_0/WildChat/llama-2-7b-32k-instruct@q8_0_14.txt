@@ -1,0 +1,50 @@
+Sure, here is a basic formula that should accomplish what you're describing:
+
+1. Select the range of cells where you want to enter the values. In your example, let's say it's from A1 to Z12.
+2. Press Alt + F11 to open the Visual Basic Editor (VBE).
+3. Insert a new module in the VBE by clicking on Insert > Module.
+4. Paste this formula into the module:
+
+Sub button_click()
+
+    Dim rng As Range
+    Set rng = Selection
+    
+    ' Define the range of cells where you want to enter the values
+    Dim lastRow As Long
+    lastRow = Cells(Rows.Count, "A").End(xlUp).Row
+    
+    ' Insert the values in the specified range
+    rng.Value = Values("1:" & lastRow)
+    
+End Sub
+
+5. Save and close the VBE.
+6. In the Excel sheet, create a new button by going to Developer > Insert > Button.
+7. Drag the formula bar from step 3 into the button's Click event field (it should be located between the curly braces { }).
+8. Make sure the button is enabled before running it (by unchecking "Disable this button" in the Properties dialog).
+9. When you click on the button, it will enter all of the values from row 1 to row 12 into the specified range.
+
+This formula uses the Values function to insert a list of values from a cell reference to another cell reference. In this case, the first argument is a range that spans from cell A1 to Z12, and the second argument is the number of rows (lastRow) from which we want to copy values. The formula uses the End(xlUp) function to find the last row in the specified range.
+
+Note: This formula assumes that the column headers are A, B, C, etc. If your column headers are different, you'll need to modify the formula accordingly.
+
+Also, you can add some error handling and user interaction in the subroutine, for example, by adding a message box to ask the user if they want to insert values or cancel. Here's an example:
+
+Sub button_click()
+
+    Dim rng As Range
+    Set rng = Selection
+    
+    ' Define the range of cells where you want to enter the values
+    Dim lastRow As Long
+    lastRow = Cells(Rows.Count, "A").End(xlUp).Row
+    
+    ' Insert the values in the specified range
+    If MsgBox("Do you want to insert values?", vbYesNo) = vbYes Then
+        rng.Value = Values("1:" & lastRow)
+    End If
+    
+End Sub
+
+This way, when you click on the button, a message box will pop up asking if you want to insert values or cancel. You can also add some error handling and validation in the subroutine to make sure that the user only enters numerical values.

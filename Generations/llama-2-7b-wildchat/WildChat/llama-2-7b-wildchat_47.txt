@@ -1,0 +1,3 @@
+参考错误信息：1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' where cid = 3' at line 1
+
+因为语句中的括号不能省略，请修改如下：local sql = string.format("update club_info set %s= '%s' where cid = %d", field_name, value, cid)

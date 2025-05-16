@@ -1,0 +1,35 @@
+* Minify code
+* Optimize images
+* Compress CSS, JS files and HTML files
+
+This can occur when a page refreshes the DOM tree without rebuilding the entire page. It occurs frequently with AJAX applications where parts of the page are updated in real time and the browser does not update the visible portions of the page until it has finished building everything on the screen. The solution is to tell the server to return only those bits of content that are needed, or build the DOM tree from scratch during every refresh.
+
+**1. Global and static variables are bad because they affect the performance of an application by creating a lot of redundant data that is not needed in every part of your app, for instance, if we have a variable that we are using to check if a user is logged into our system. We can set it as global but instead we should use a function to check this and return true or false depending on the user being logged in or not.**
+
+```javascript
+// global variable
+const isLoggedIn = false;  // global variable
+console.log(isLoggedIn);    // isLoggedIn: true
+console.log("user is logged in");  // user is logged in
+console.log(isLoggedIn);    // isLoggedIn: false
+```
+
+**2. Global and static objects are evil because they affect the performance of an application by creating a lot of redundant data that is not needed in every part of your app, for instance, if we have a variable that we are using to check if a user is logged into our system. We can set it as global but instead we should use a function to check this and return true or false depending on the user being logged in or not.**
+
+```javascript
+// global object
+var isLoggedIn = false;  // global variable
+console.log(isLoggedIn);    // isLoggedIn: true
+console.log("user is logged in");  // user is logged in
+console.log(isLoggedIn);    // isLoggedIn: false
+```
+
+**3. Global and static objects are evil because they affect the performance of an application by creating a lot of redundant data that is not needed in every part of your app, for instance, if we have a variable that we are using to check if a user is logged into our system. We can set it as global but instead we should use a function to check this and return true or false depending on the user being logged in or not.**
+
+```javascript
+// static object
+var _isLoggedIn = false;  // static variable
+console.log(_isLoggedIn);    // isLoggedIn: true
+console.log("user is logged in");  // user is logged in
+console.log(_isLoggedIn);    // isLoggedIn: false
+```

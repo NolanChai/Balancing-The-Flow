@@ -1,0 +1,30 @@
+We will check your spam folder for this mail. If it is not in the spam folder, then we are going to assume you were not able to create this spoofed mail successfully.
+
+### Bonus Points:
+Can you spoof your ip address too?
+
+### Attack Vector
+Email Spoofing
+
+```
+> python
+python-3.8.2 (default, May 19 2020, 17:54:16) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> print(sys.__version__)
+3.8.2
+```
+
+To check whether a mail is originated from your IP address or not, you have to use the following command in a Linux system:
+```
+tail -f /var/log/maillog | grep spam
+```
+The output will be something like below:
+```
+Mar 15 21:46:30 rk.labs localhost[7994]: <5838ecec3f-0d52-48a1-beff-cf3258ec4a93@gmail.com>: hostmaster@rk.labs [2009-11-12T12:13:15+08:00] (HELO rk-sandbox.local.)
+```
+As you can see, the sender mail is `<5838ecec3f-0d52-48a1-beff-cf3258ec4a93@gmail.com>` and the destination ip address is `rk-sandbox.local.`
+The **maillog** file contains all messages which are received by your mail server. You can also use the following command to check whether the origin of a mail matches with its destination:
+```
+tail -f /var/log/spamassassin/spamd.log | grep spam
+```

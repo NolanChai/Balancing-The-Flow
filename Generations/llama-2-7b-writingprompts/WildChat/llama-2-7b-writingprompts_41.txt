@@ -1,0 +1,45 @@
+```<html><head></head><body><div class='container'><textarea id='textarea' class='textarea' contenteditable='true'><h1>Hi. I'm a textarea</h1><p>and this is me</p></textarea><script>const textarea = document.getElementById('textarea');
+function setCaretToEnd() {
+  const range = document.createRange();
+  const selection = window.getSelection();
+  range.selectNodeContents(textarea);
+  range.collapse(false);
+  selection.removeAllRanges();
+  selection.addRange(range);
+}
+function handleKeyPress(event) {
+  if (event.key === 'Enter' || event.key === 'Return') {
+    event.preventDefault();
+    const selection = document.getSelection();
+    const range = selection.getRangeAt(0);
+    const currentNode = range.startContainer;
+    const lineBreak = document.createElement('span');
+    lineBreak.innerHTML = '<br>';
+    const highlightedLine = document.createElement('span');
+    highlightedLine.classList.add('highlight-line');
+    highlightedLine.textContent = '█';
+    const newLine = document.createElement('span');
+    newLine.appendChild(lineBreak);
+    newLine.appendChild(highlightedLine);
+    if (currentNode.nodeType === Node.TEXT_NODE) {
+      const nextNode = currentNode.splitText(range.startOffset);
+      nextNode.parentNode.insertBefore(newLine, nextNode);
+      range.setStart(nextNode, 0);
+    } else {
+      textarea.appendChild(newLine);
+      range.setStart(newLine, 0);
+    }
+    const lineAnimation = highlightedLine.animate({
+      left: ['-100%', '100%']
+    }, {
+      duration: 200
+    });
+    lineAnimation.onfinish = () => {
+      highlightedLine.parentNode.removeChild(highlightedLine);
+    };
+    selection.removeAllRanges();
+    selection.addRange(range);
+    setCaretToEnd();
+  }
+}
+textarea.addEventListener('keydown', handleKeyPress);</script></body></html>```

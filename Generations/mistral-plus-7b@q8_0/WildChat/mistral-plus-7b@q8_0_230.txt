@@ -1,0 +1,8 @@
+I use a customised theme. I think that is why this issue appears. I try change the file content like below but still have error. Anybody can help?
+
+```
+export const header = {
+  icon: "fa-user",
+  name: "Hello world",
+};
+```

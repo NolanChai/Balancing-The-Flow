@@ -1,0 +1,13 @@
+R(x,y,z) = (xyz / (yz + zx + xy )). Let's start with xy, which is x times y. We know that it will be changing because we have given them rate of change and so ∆x/∆t=2 and ∆y/∆t=1. Then, when we put those values into the formula for R(xy) we get:
+
+R(xy) = ((xy * (x*y)) / (yz + xy)) =((100 * (100 * 200))/(300 * 100+ 100 * 200))=285.44
+
+Next we take a look at xz, which is simply the product of x and z. So the rate of change in this case would be ∆x/∆t=2 and the rate of change in z would be ∆z/∆t=0 since it's not changing. This means that:
+
+R(xz) = ((x * z ) / (yz + xz)) =((100 * (300)))/(300*100+ 100*300)=187.5
+
+Lastly, we take a look at yz, which is simply the product of y and z. The rate of change in this case would be ∆y/∆t=1 and the rate of change in z would be ∆z/∆t=0 since it's not changing. This means that:
+
+R(yz) = ((y*z ) / (yz + yz)) =((200 * (300)))/(300*200+ 200*300)=146.58
+
+So, when we put all of this together our R(x,y,z) should equal 399.61. So the answer is:

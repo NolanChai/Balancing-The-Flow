@@ -1,0 +1,43 @@
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = An Eastern girl, dressed in gorgeous Hanfu, embroidered
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
+
+Assistant: "/imagine prompt: An Eastern girl, dressed in a gorgeous Hanfu, embroidered with intricate floral patterns and flowing ribbons, her outfit adorned with delicate gold jewelry and a matching hair accessory. Her porcelain skin shines delicately, complemented by her soft rosy cheeks and a faint smile playing on her lips. Her eyes, almond-shaped and bright, sparkle with curiosity and wisdom. Her long, glossy black hair is styled in an elaborate updo, decorated with delicate flowers that match her outfit. --ar 9:16 --v 5.2
+
+/imagine prompt: An Eastern girl stands gracefully in a traditional courtyard, surrounded by vibrant cherry blossom trees in full bloom. Sunlight filters through the blooming branches, casting soft pink hues on her Hanfu. The stone pathway beneath her feet, moss-covered and aged, adds a sense of timeless beauty. Her hands are gently holding open a fan, decorated with intricate artistry, creating a gentle breeze that ruffles her dress and brushes against her cheeks. She gazes serenely into the distance, with a sense of tranquility in her eyes. --ar 1:1 --v 5
+
+/imagine prompt: An Eastern girl stands on the edge of a picturesque mountain cliff, her billowing Hanfu contrasting against the dramatic landscape. The vast expanse of mist-covered mountains stretches to the horizon, painting a breathtaking backdrop. A gentle breeze lifts her dress, revealing intricate embroidery and delicate layers. Her eyes, filled with determination, scan the far-reaching valleys below. The wind carries a sense of adventure and possibility as she prepares to embark on a journey of self-discovery. --ar 16:9 --v 5.2
+
+/imagine prompt: An Eastern girl, surrounded by a crowd of bustling market stalls, her Hanfu vibrant and eye-catching amidst the chaos of colors. The street is filled with the aroma of exotic spices and the sound of vendors haggling. Lanterns hang overhead, casting a warm glow on the scene. The girl's expression is filled with wonder and excitement as she explores the lively atmosphere, her surroundings reflecting a vibrant blend of tradition and modernity. --ar 9:16 --v 5"

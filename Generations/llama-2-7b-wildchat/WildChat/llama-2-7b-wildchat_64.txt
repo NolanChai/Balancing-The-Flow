@@ -1,0 +1,6 @@
+"block", "sx", "sy", "sz", "dx", "dy", "dz", "w", "h", "l", "offsetX", "offsetY", "offsetZ", "num", "angle")
+{
+	let id = world.getBlockId(p1);
+	let block = world.getBlockState(p1).getBlock();
+
+	if (id !== block) return null;

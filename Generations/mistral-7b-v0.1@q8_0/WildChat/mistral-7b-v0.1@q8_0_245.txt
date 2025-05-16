@@ -1,0 +1,40 @@
+I need to have a lookup in one table (source) and then pull data from other tables (destinations) based on the lookups.  This would be great if it could work like an excel VLOOKUP function.  I know that there is a merge function but that only allows one field as the lookup field.  If I have multiple fields in my source that need to be looked up in the destination, I have to manually combine them into one column in power query.
+
+In my particular situation I am using a database table with an ID number and name in order to do an "inner join" on the data pulled from other tables.  The problem is that I have many rows where the ID field will be null for that row (I can't get rid of these because I need to keep the historical records).
+
+Please see below for examples.
+
+[IMG]https://i1.wp.com/www.purematter.com/wp-content/uploads/2019/03/image-20190314-165718.png[/IMG]
+
+[IMG]https://i0.wp.com/www.purematter.com/wp-content/uploads/2019/03/image-20190314-165605.png[/IMG]
+
+This is when you have an ASP/PHP script that looks something like this:
+
+```
+<tr>
+  <td><strong><?php print_r($inst['name']) ?></strong></td>
+</tr>
+```
+
+This will cause a dataformatting error if the user doesn't have a name set in their account.
+
+Solution:
+
+Make sure your script can handle the situation of no name being set:
+
+```
+<tr>
+  <td><?php print_r($inst['name']) ?></td>
+</tr>
+```
+
+Alternatively you could do this (which I would recommend, especially if you're printing a lot of things):
+
+```
+<tr>
+  <?php
+    //If the person has no name, put in blank space
+    echo $inst['name'] ? '<td><strong>' . $inst['name'] . '</strong></td>' : '&nbsp;' ;
+  ?>
+</tr>
+```

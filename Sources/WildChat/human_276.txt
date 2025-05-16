@@ -1,0 +1,520 @@
+User: "写一段unity代码，模型拆装部分，通过鼠标左键点击模型的子零件进行选中，为其添加一个outline组件，再为其添加一个坐标轴模型（已存在），坐标轴模型作为被点击子零件的父物体，坐标轴出现在被点击零部件的上方，通过鼠标点击坐标轴拖拽模型零部件进行x、y、z方向的位移。"
+
+Assistant: "using UnityEngine;
+using System.Collections;
+
+public class ModelAssembly : MonoBehaviour {
+
+    private RaycastHit hit;
+
+    private GameObject currentSelected;
+
+    private GameObject axis;
+
+    private Vector3 screenPoint;
+
+    private Vector3 offset;
+
+    public Material outlineMaterial;
+
+    void Update () {
+
+        if(Input.GetMouseButtonDown(0)) {
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if(Physics.Raycast(ray, out hit)) {
+
+                if(hit.transform.gameObject.GetComponent<Renderer>() != null) {
+
+                    currentSelected = hit.transform.gameObject;
+
+                    AddOutline(currentSelected);
+
+                    if(axis == null) {
+
+                        axis = Instantiate(Resources.Load("Axis") as GameObject);
+
+                    }
+
+                    axis.transform.position = currentSelected.transform.position + Vector3.up * 1.5f;
+
+                    axis.transform.parent = currentSelected.transform;
+
+                }
+
+            }
+
+        }
+
+        if(Input.GetMouseButton(0) && currentSelected != null) {
+
+            float distance_to_screen = Camera.main.WorldToScreenPoint(currentSelected.transform.position).z;
+
+            screenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen);
+
+            offset = currentSelected.transform.position - Camera.main.ScreenToWorldPoint(screenPoint);
+
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen);
+
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+
+            axis.transform.position = currentSelected.transform.position + Vector3.up * 1.5f;
+
+            currentSelected.transform.position = curPosition;
+
+        }
+
+        if(Input.GetMouseButtonUp(0)) {
+
+            if(axis != null) {
+
+                Destroy(axis);
+
+            }
+
+            RemoveOutline(currentSelected);
+
+            currentSelected = null;
+
+        }
+
+    }
+
+    void AddOutline(GameObject obj) {
+
+        Renderer rend = obj.GetComponent<Renderer>();
+
+        if(rend != null) {
+
+            Material[] mats = new Material[rend.materials.Length + 1];
+
+            for (int i = 0; i < rend.materials.Length; i++) {
+
+                mats[i] = rend.materials[i];
+
+            }
+
+            mats[mats.Length-1] = outlineMaterial;
+
+            rend.materials = mats;
+
+        }
+
+    }
+
+    void RemoveOutline(GameObject obj) {
+
+        Renderer rend = obj.GetComponent<Renderer>();
+
+        if(rend != null) {
+
+            Material[] mats = new Material[rend.materials.Length - 1];
+
+            for (int i = 0; i < mats.Length; i++) {
+
+                mats[i] = rend.materials[i];
+
+            }
+
+            rend.materials = mats;
+
+        }
+
+    }
+
+}"
+
+User: "using UnityEngine;
+using cakeslice;
+public class MoxingControl : MonoBehaviour
+{
+    private Transform selectedPart = null;
+    private Outline outline = null;
+    private Color selectedColor = Color.yellow;
+    private bool isControlEnabled = false;
+
+
+    private Animator animator;
+    private bool animatorEnabled = true;
+    public void ToggleControlEnabled()
+    {
+        isControlEnabled = !isControlEnabled;
+        animator.enabled = !animator.enabled;
+    }
+    private void Update()
+    {
+        animator = GetComponent<Animator>();
+        if (!isControlEnabled) return;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Transform clickedPart = GetClickedPart(transform);
+
+            if (clickedPart != null)
+            {
+                if (selectedPart != null)
+                {
+                    Destroy(outline);
+
+                    if (selectedPart == clickedPart)
+                    {
+                        selectedPart = null;
+                        return;
+                    }
+                }
+                selectedPart = clickedPart;
+                outline = selectedPart.gameObject.AddComponent<Outline>();
+                // outline.OutlineColor = selectedColor;
+                // outline.OutlineWidth = 4;
+            }
+            else if (selectedPart != null)
+            {
+                Destroy(outline);
+                selectedPart = null;
+            }
+        }
+        if (Input.GetMouseButton(0) && selectedPart != null)
+        {
+
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = Camera.main.WorldToScreenPoint(selectedPart.position).z;
+            Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            selectedPart.position = worldMousePosition;
+        }
+    }
+    private Transform GetClickedPart(Transform parent)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Transform clickedPart = hit.transform;
+            if (IsDescendant(clickedPart, parent))
+            {
+                return clickedPart;
+            }
+        }
+
+        return null;
+    }
+    private bool IsDescendant(Transform child, Transform parent)
+    {
+        foreach (Transform t in parent)
+        {
+            if (t == child)
+
+                return true;
+            if (IsDescendant(child, t))
+                return true;
+        }
+        return false;
+    }
+}请解析这段代码"
+
+Assistant: "这段代码是一个Unity模型控制脚本。主要功能包括：通过鼠标左键点击模型的子部件进行选中；为选中的部件添加一个outline组件；通过鼠标拖拽改变选中部件的位置；开关控制脚本的执行与否。
+
+具体解析如下：
+
+1. 只有当控制开关isControlEnabled为true时，才会执行下面的部分。
+
+2. 使用raycast射线检测鼠标点击，如果点击到了模型的部件上，则获取到该部件的transform组件。
+
+3. 如果之前已经有选中的部件，则移除选中部件的outline组件；如果当前点击的部件就是选中部件，则取消选中。
+
+4. 如果当前点击的部件不是已选中部件，则设置当前部件为选中部件，并为其添加outline组件。
+
+5. 利用unity内置的鼠标拖拽事件，使选中的部件跟随鼠标进行拖拽，并更新其位置。
+
+6. ToggleControlEnabled函数实现了一个控制开关，开关状态变更时会决定是否执行控制脚本。animator是Animator Animation Controller的简称，用于控制模型的动画。此处通过切换动画开关实现了控制脚本的开关。
+
+7. GetClickedPart函数是用于检测鼠标是否点击到某个子部件上的辅助函数。
+
+8. IsDescendant函数是用于判断一个transform组件是否是另一个transform的后代的辅助函数。
+
+9. 该脚本还来自unity.assetstore上的cakeslice插件，其中的Outline组件用于实现选中部件的外边框显示。"
+
+User: "请根据这段代码添加一些需求，部件被选中后，将已有的坐标轴模型添加在被选中模型的上方，并作为其父物体存在。模型的移动通过控制鼠标点击拖拽坐标轴模型的三个轴在xyz三个方向上进行位移。"
+
+Assistant: "根据您的需求，以下是修改后的代码：
+
+```csharp
+using UnityEngine;
+using cakeslice;
+public class MoxingControl : MonoBehaviour
+{
+    private Transform selectedPart = null;
+    private Outline outline = null;
+    private Color selectedColor = Color.yellow;
+    private bool isControlEnabled = false;
+
+    private GameObject axis = null;
+    private Vector3 axisOffset = Vector3.zero;
+    private Vector3 mouseOffset = Vector3.zero;
+
+    private Animator animator;
+    private bool animatorEnabled = true;
+    public void ToggleControlEnabled()
+    {
+        isControlEnabled = !isControlEnabled;
+        animator.enabled = !animator.enabled;
+    }
+    private void Update()
+    {
+        animator = GetComponent<Animator>();
+        if (!isControlEnabled) return;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Transform clickedPart = GetClickedPart(transform);
+
+            if (clickedPart != null)
+            {
+                if (selectedPart != null)
+                {
+                    Destroy(outline);
+
+                    if (selectedPart == clickedPart)
+                    {
+                        selectedPart = null;
+                        if (axis != null)
+                            Destroy(axis);
+                        return;
+                    }
+                }
+                selectedPart = clickedPart;
+                outline = selectedPart.gameObject.AddComponent<Outline>();
+                // outline.OutlineColor = selectedColor;
+                // outline.OutlineWidth = 4;
+
+                if (axis == null)
+                    axis = Instantiate(Resources.Load("Axis") as GameObject, selectedPart);
+                axis.transform.localPosition = Vector3.zero;
+                axis.SetActive(true);
+                axisOffset = axis.transform.position - selectedPart.position;
+                mouseOffset = selectedPart.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, axisOffset.z));
+            }
+            else if (selectedPart != null)
+            {
+                Destroy(outline);
+                selectedPart = null;
+                if (axis != null)
+                    axis.SetActive(false);
+            }
+        }
+        if (Input.GetMouseButton(0) && selectedPart != null && axis != null)
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = axisOffset.z;
+            Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition) + mouseOffset;
+
+            Vector3 localPos = selectedPart.parent.InverseTransformPoint(worldMousePosition - axisOffset);
+            localPos.x = axis.transform.localEulerAngles.y == 90 ? -localPos.x : localPos.x;
+            localPos.y = axis.transform.localEulerAngles.x == 90 ? -localPos.y : localPos.y;
+            localPos.z = axis.transform.localEulerAngles.y == 0 ? -localPos.z : localPos.z;
+
+            selectedPart.localPosition = new Vector3(
+                    Mathf.Round(localPos.x * 100) / 100,
+                    Mathf.Round(localPos.y * 100) / 100,
+                    Mathf.Round(localPos.z * 100) / 100
+                );
+        }
+    }
+    private Transform GetClickedPart(Transform parent)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Transform clickedPart = hit.transform;
+            if (IsDescendant(clickedPart, parent))
+            {
+                return clickedPart;
+            }
+        }
+
+        return null;
+    }
+    private bool IsDescendant(Transform child, Transform parent)
+    {
+        foreach (Transform t in parent)
+        {
+            if (t == child)
+
+                return true;
+            if (IsDescendant(child, t))
+                return true;
+        }
+        return false;
+    }
+}
+```
+
+主要改动：
+
+1. 添加了一个axis变量，用于存储选中部件的坐标轴对象。
+
+2. 在选中部件时创建了坐标轴物体，并设置其父物体为选中的部件的transform组件。
+
+3. 在选中或取消选中部件时，激活和隐藏坐标轴。
+
+4. 在选中部件时记录坐标轴相对选中部件的偏移量，以便于后续移动操作。
+
+5. 修改了鼠标拖拽事件的处理，现在的实现原理是通过检测坐标轴所在平面上的鼠标位置来计算选中部件的新位置，这样就可以实现按照坐标轴xyz三个方向移动部件。
+
+6. 让拖拽的移动精度更高，将坐标的小数点位数限制到两位。"
+
+User: "添加了一个axis变量，用于存储选中部件的坐标轴对象，如何在unity中进行操作"
+
+Assistant: "在 Unity 中，您可以提交以下步骤来添加 axis 变量：
+
+1. 创建一个名为 Axis 的空 GameObject，用于存储坐标轴模型。
+
+2. 将坐标轴模型（.obj 等格式）导入 Unity，将其作为 Axis 的子对象。
+
+3. 在 MoxingControl 脚本的代码中添加如下代码：
+
+```csharp
+public GameObject axisObject;
+private GameObject axis = null;
+```
+
+在这里，您定义了一个公共变量 axisObject，用于从 Unity 的 Inspector 视图中连接 Axis 对象。并使用这个变量在脚本中实例化 Axis 对象。
+
+4. 在 Unity 的 Inspector 视图中，将 MoxingControl 脚本拖动到您所需添加的 GameObject 上。
+
+5. 在 MoxingControl 脚本的 Inspector 视图中找到 axisObject 对象，并将 Axis 对象拖到该对象的 “None (Object)” 框中。
+
+6. 保存脚本并按 “Play” 按钮尝试。"
+
+User: "using UnityEngine;
+using cakeslice;
+public class MoxingControl : MonoBehaviour
+{
+    private Transform selectedPart = null;
+    private Outline outline = null;
+    private Color selectedColor = Color.yellow;
+    private bool isControlEnabled = false;
+
+    private GameObject axis = null;
+    private Vector3 axisOffset = Vector3.zero;
+    private Vector3 mouseOffset = Vector3.zero;
+
+    private Animator animator;
+    private bool animatorEnabled = true;
+    public void ToggleControlEnabled()
+    {
+        isControlEnabled = !isControlEnabled;
+        animator.enabled = !animator.enabled;
+    }
+    private void Update()
+    {
+        animator = GetComponent<Animator>();
+        if (!isControlEnabled) return;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Transform clickedPart = GetClickedPart(transform);
+
+            if (clickedPart != null)
+            {
+                if (selectedPart != null)
+                {
+                    Destroy(outline);
+
+                    if (selectedPart == clickedPart)
+                    {
+                        selectedPart = null;
+                        if (axis != null)
+                            Destroy(axis);
+                        return;
+                    }
+                }
+                selectedPart = clickedPart;
+                outline = selectedPart.gameObject.AddComponent<Outline>();
+                // outline.OutlineColor = selectedColor;
+                // outline.OutlineWidth = 4;
+
+                if (axis == null)
+                    axis = Instantiate(Resources.Load("Axis") as GameObject, selectedPart);
+                axis.transform.localPosition = Vector3.zero;
+                axis.SetActive(true);
+                axisOffset = axis.transform.position - selectedPart.position;
+                mouseOffset = selectedPart.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, axisOffset.z));
+            }
+            else if (selectedPart != null)
+            {
+                Destroy(outline);
+                selectedPart = null;
+                if (axis != null)
+                    axis.SetActive(false);
+            }
+        }
+        if (Input.GetMouseButton(0) && selectedPart != null && axis != null)
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = axisOffset.z;
+            Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition) + mouseOffset;
+
+            Vector3 localPos = selectedPart.parent.InverseTransformPoint(worldMousePosition - axisOffset);
+            localPos.x = axis.transform.localEulerAngles.y == 90 ? -localPos.x : localPos.x;
+            localPos.y = axis.transform.localEulerAngles.x == 90 ? -localPos.y : localPos.y;
+            localPos.z = axis.transform.localEulerAngles.y == 0 ? -localPos.z : localPos.z;
+
+            selectedPart.localPosition = new Vector3(
+                    Mathf.Round(localPos.x * 100) / 100,
+                    Mathf.Round(localPos.y * 100) / 100,
+                    Mathf.Round(localPos.z * 100) / 100
+                );
+        }
+    }
+    private Transform GetClickedPart(Transform parent)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Transform clickedPart = hit.transform;
+            if (IsDescendant(clickedPart, parent))
+            {
+                return clickedPart;
+            }
+        }
+
+        return null;
+    }
+    private bool IsDescendant(Transform child, Transform parent)
+    {
+        foreach (Transform t in parent)
+        {
+            if (t == child)
+
+                return true;
+            if (IsDescendant(child, t))
+                return true;
+        }
+        return false;
+    }
+}"
+
+Assistant: "这段代码是一个用于控制Unity中3D模型的脚本。其中包括以下主要功能：
+
+1. 选中模型部件：通过鼠标左键点击模型的子部件来选中它。
+
+2. 添加外框：当选中了模型部件时，添加一个外框轮廓。
+
+3. 控制位置：通过鼠标拖动来控制模型部件的位置。
+
+4. 使用坐标轴：添加一个坐标轴，让使用更加方便。 
+
+5. 开关控制：使用 IsControlEnable 默认为 false 在需要的时候打开控制。
+
+具体解释如下：
+
+1. 定义了变量 selectedPart，并在 GetClickedPart 方法中实现了点击物体的递归检查。如果检测到点击了一个模型子部件，则返回该部件的 Transform 变量。通过检测是否返回的 Transform 变量不为 null 来判断是否已选择模型。
+
+2. 定义了变量 outline，并在选择模型部件时实例化 Outline 脚本并为该模型部件添加轮廓。当需要取消选择时，删除轮廓。
+
+3. 在 Update 方法中，实现了判断鼠标左键是否按下了，以及选中部件是否已选择等逻辑。
+
+4. 在选中模型部件时，添加了坐标轴，该坐标轴可从资源目录中加载，也被实例化为可挂"

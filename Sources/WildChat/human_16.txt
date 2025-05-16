@@ -1,0 +1,11 @@
+User: "z=float('-inf')
+x=[1,2,3,4,5]
+w=0
+while w <len(x):
+     if x[w] > z:
+         z=x
+     w+=1
+print(z)
+    "
+
+Assistant: "5"

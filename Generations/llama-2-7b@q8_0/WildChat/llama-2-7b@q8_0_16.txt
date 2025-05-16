@@ -1,0 +1,7 @@
+'''
+The value of the variable 'z' will be the smallest integer that is greater than -inf. The loop should end when it encounters a number in x which is less than or equal to the variable z (i.e., when w=len(x)).
+
+In this case, we use the fact that 'z' initially has a negative infinity value as its initial state, and we are looking for an element of x greater than -inf, so it will be the last element in the list, which is 5.
+
+After updating z to 5, we should then print z and end the while loop because w=len(x) (because there are no more elements in the list left to check).
+'''

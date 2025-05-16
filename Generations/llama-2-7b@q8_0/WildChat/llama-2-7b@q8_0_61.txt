@@ -1,0 +1,42 @@
+no config files found in the specified directory
+\end{code}
+
+Comment: Try `bin/logstash start -f /etc/logstash/logstash.conf` and see what you get back as an error.
+
+Answer: If you are using logstash 8+ then add `input { stdin {} }` to the configuration file for inputting data from `stdin`.
+
+\begin{code}
+#!/bin/bash
+bin/logstash -f /etc/logstash/logstash.conf &
+while true; do
+    cat log_data >/dev/tty
+done
+\end{code}
+
+```json
+{
+  "data": [
+    {
+      "url": null,
+      "time": "2019-05-05T16:37:28.946Z",
+      "type": "error",
+      "message": "",
+      "statusCode": 500,
+      "requestTime": "2019-05-05T16:37:28.946Z",
+    }
+  ]
+}
+```
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/security-http-transport.html
+
+1. 设置安全的域名，参考：
+    https://www.elastic.co/blog/security-on-the-wire-with-es-6-0#https_only_domains
+    
+2. 确保配置了安全的端口：
+
+```java
+http.port:9437
+transport.tcp.local:9301
+transport.http.address:9001
+```

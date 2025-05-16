@@ -1,0 +1,44 @@
+Removal of a preauricular cyst or sinus is often an easy and routine operation that can be performed in the office under local anesthesia. The most common type of surgery involves using forceps to reach into the hole, grasp the skin around it, and then squeeze and pull outward to remove the tissue. In some cases, a small incision may need to be made on one side of the sinus for better access. This is called an "incisional" approach.
+
+If there are no complications after surgery, your child can go home within two hours or less. After surgery, your child should sleep in a semi-reclining position with head elevated (sitting up) to minimize swelling and discomfort around the incision site. Your child's doctor will tell you what type of pain relievers are acceptable for your child after surgery. 
+
+If the preauricular sinus has been draining pus or is causing infections, your doctor may also prescribe antibiotics to help prevent infection while the sinus is healing. Your child may need to take pain relievers as well. The incision site will be covered with a bandage after surgery and changed regularly by your child's caregiver or you at home. If a small amount of bleeding from the incision area occurs, it usually stops on its own in 24 hours.
+
+Your doctor may also prescribe an antibiotic cream to help prevent infection around the surgical site while it heals. It is important that your child avoid direct sun exposure until the incision has fully healed and dried, because sunlight can cause further damage to the skin at this site. Your doctor may recommend ice packs or cold compresses for the first 24 hours after surgery to help reduce swelling around the incision site.
+
+This is what I've done so far, but it doesn't work.
+
+* Download `tensorflow/models/` and `tf-nightly/dist/cpu` (from github) into your project.
+
+* Include the headers in the main .cpp file.
+
+* Add these 2 lines at the end of main.cpp:
+\begin{pre}
+
+#include "tensorflow/model_builder/create_model_builder.h"
+ModelBuilder* builder = ModelBuilder::Create("./saved_models");
+
+\end{pre}
+
+* Run the program with `g++ -o main main.cpp` and see if it crashes on startup or not.
+
+I've added an additional parameter, `type`. I believe the reason for this is so that the user can specify to use a certain type (e.g., 'json'). This way we can easily handle different types in a single method call and avoid having to create a different method for each format.
+
+```php
+public function get($url, $type = null) {
+    try{
+        $ch = curl_init(); // create curl handler
+        curl_setopt($ch, CURLOPT_URL, $url);     // set url
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  // return as a string
+
+        if (!is_null($type)) {
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: ' . $type));    // Accept header with the desired type
+        }
+        
+        $response = curl_exec($ch); // get response and close handler
+        return $response;
+    }catch(\Exception $exception){
+        echo $exception->getMessage();
+    }
+}
+```

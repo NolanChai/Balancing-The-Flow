@@ -1,0 +1,26 @@
+The formula is correct. The issue comes from when you use IFERROR with LEFT and FIND. If the error occurs then it returns an empty cell instead of #VALUE! (which you would need).
+
+See here for more info [Using the IFERROR function in excel](https://support.office.com/en-us/article/using-the-iferror-function-in-excel-d612eb37-1e3f-4c9e-a3ee-405fcbb8db0c)
+
+```python
+# This line makes the assumption that you are using the TextCell type
+cell.text = "Six Word Minimum"
+```
+
+Yes, you may use a regular expression.
+
+The example below is from Excel 2016; in earlier versions it will be necessary to add \begin{code}
+\end{code} characters after the closing parenthesis for some of the expressions.
+
+\section{Data Validation}
+
+<a href="https://i.stack.imgur.com/5UuXM.png" rel="nofollow noreferrer"><IMAGE></a>
+
+The instructions are given in red, the input is given in orange.  If you use the formulas below for your own Data Validations, make sure to enclose them in quotes:
+\begin{itemize}
+\item `(\d){4}` will accept four digits.  The expression above means "all letters" (i.e., no numbers), followed by "at least one letter".
+\item `\w` matches any word character, such as alphabetical characters and spaces.  Note that underscores are also allowed in Excel, so the expression `(\d){4}\w{10}` will allow ten digits (four of them) plus letters for a total of at least fifteen characters.
+\item `\s*` matches any number of white space characters, but no new lines; `\r` means "carriage return", which is used to end a line of text in Excel.  The expression above would allow spaces and underscores as well as letters (but not numbers or punctuation), up to ten characters.
+\item `(?=(\d){4}\w{10})$` matches the string only if it contains at least four digits followed by any number of alphabetic characters, ending in a carriage return (`\r`) and line feed (`\n`).  Note that the last character is not included in this count.
+\item `^(?=(\d){4}\w{10})$` matches the string only if it starts with four digits followed by any number of alphabetic characters, ending in a carriage return (`\r`) and line feed (`\n`).  Again, note that the last character is not included in this count.
+\end{itemize}

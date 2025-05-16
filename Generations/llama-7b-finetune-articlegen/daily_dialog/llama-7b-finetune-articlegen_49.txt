@@ -1,0 +1,10 @@
+Sorry. We have had many people looking at the apartment this week and our agent will be out of office until Friday . But if you are willing to wait for him, he should be in his office on Tuesday next week , around 9am . Is that time okay?
+
+"I understand, please give me the number. Thank you."
+
+```python 
+instruction.text == 'I ’ m sorry , but you won ’ t be able to view it today.' and 'Can I do that right now?' or not
+instruction.text == 'You have to make an appointment first.' and 'Is this Friday okay ?' or not
+```
+
+You have scheduled a tour for a possible future renter. You don ’ t know if she will show up, but it doesn ’ t hurt to hope and make the appointment .

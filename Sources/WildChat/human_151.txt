@@ -1,0 +1,43 @@
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = a star with flowers,Metallic, Colorful, Hexagon
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
+
+Assistant: "/imagine prompt: A star with flowers, made of metallic material, vibrant and colorful petals arranged in a hexagon shape. The star is shining brightly, illuminating its surroundings with a warm glow. The flowers are in full bloom, each petal delicately crafted with intricate details and patterns. The metallic material reflects the light, creating a mesmerizing display of colors. The hexagon shape adds a unique geometric element to the composition, giving the image a sense of structure and balance. The flowers and the star are floating in an ethereal environment, surrounded by a dreamlike atmosphere. The scene evokes a feeling of wonder and awe, as if stepping into a magical world. The style for this image is a combination of illustration and digital art, with vibrant colors and dynamic textures. The atmosphere is enchanting and mystical, capturing the essence of a fairytale. --ar 1:1 --v 5.2
+
+/imagine prompt: A star with flowers, composed of metallic petals in various shades of gold, silver, and bronze. Each petal is intricately designed with delicate patterns and textures, giving the flowers a sense of elegance and sophistication. The hexagon shape of the flowers creates a symmetrical composition, adding a touch of geometry to the image. The metallic material reflects the light, creating a mesmerizing shimmer and shine. Surrounding the star and flowers is a lush garden, filled with vibrant foliage and blooming flowers of different colors. The scene is bathed in soft, warm sunlight, casting a gentle glow on the petals and leaves. The composition is carefully crafted, with the star and flowers placed off-center, creating a sense of movement and balance. The mood of the image is peaceful and serene, evoking a sense of tranquility and harmony. This image is captured in a photography style, using a macro lens to capture the intricate details of the metallic petals. The shallow depth of field ensures that the star and flowers are the main focus, creating a beautiful bokeh effect in the background. --ar 16:9 --v 5
+
+/imagine prompt: A star with flowers, crafted from metallic materials with a glossy and reflective surface. The flowers form a perfect hexagon shape, with each petal radiating with vibrant and bold colors. The star itself emits a soft, warm light, casting a gentle glow on the surroundings. The flowers are situated in a futuristic environment, with sleek and minimalist architecture. The scene is set against a backdrop of a cityscape at night, with towering skyscrapers and neon lights illuminating the night sky. The composition is dynamic and visually striking, with the star and flowers placed in the foreground, while the cityscape stretches out in the background. The atmosphere is dramatic and awe-inspiring, capturing a sense of futuristic beauty and technological marvel. The style for this image is a mix of digital art and 3D rendering, with a high level of detail and realistic textures. The mood is futuristic and avant-garde, evoking a sense of wonder and fascination. --ar 9:16 --v 5
+
+/imagine prompt: A star with flowers, forged from metallic materials with a rough and textured surface. The flowers have a hexagonal shape, and each petal is adorned with intricate patterns and designs reminiscent of ancient symbols. The star is glowing with a soft, ethereal light, illuminating its surroundings with a mystical aura. The flowers are situated in a mystical forest, filled with towering trees and lush vegetation. The scene is enveloped in a haze of fog, creating an atmosphere of mystery and enchantment. The composition is carefully arranged, with the star and flowers placed in the center, drawing the viewers' attention. The mood of the image is magical and otherworldly, evoking a sense of awe and curiosity. The style for this image is a mix of painting and illustration, with a focus on fine details and intricate textures. The atmosphere is dreamlike and fantastical, transporting the viewers to a world of imagination. --ar 1:1 --v 5.2"

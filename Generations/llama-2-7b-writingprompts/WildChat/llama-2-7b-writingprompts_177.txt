@@ -1,0 +1,225 @@
+I'm not sure if this is a problem with the code or my excel version (15.0.4763.1002).  When I press the button, the following error occurs:
+
+"Run-time error '-2147024861(8007042f)': Automation Error
+The operation couldn't be completed because an object was in use."
+
+When I turn off events with Application.EnableEvents = False, then run the event again, everything works fine.  This has happened in the past where an error occurs and the solution is to disable events; however, this time around when events are disabled they do not work anymore.
+
+Any advice would be appreciated.
+Thanks
+
+Comment: In which column is the Target Range? I'm assuming it's `K`. If that's the case then it will have a #NA or #N/A in cell `J` and that might trigger the error. You could check for these values first and return early if they exist.
+
+Comment: @MatthewTanner Target is K, however the problem occurs regardless of which column J is in.  It seems like it's an issue with the calculation.
+
+Answer: \strong{TL;DR:} I believe this error has to do with trying to calculate a range that has `#N/A` values in it - that's why it only happens when events are disabled.
+
+This is not directly related, but my first suggestion would be to try and separate out the calculation from the events. Use this formula to check for empty cells: `=IFERROR(K1,"")` and then calculate this range independently of any other changes to K or J. You can then use an if statement in your `Change` event handler to determine whether you want to run that calculation.
+
+\strong{Longer Version:} In my experience with events, I've found that it's best practice to have as few of them as possible (since they are so processor intensive) and to have the smallest scope for each one possible (to make them less intensive). The reason is that each event handler has a chance of throwing errors when an unexpected condition occurs - which is why you're getting this error.
+
+I suspect it's not related to the calculation but rather to some other change happening in K or J after you press the button, such as an insert/delete operation (since you don't want these rows). To test this idea, try disabling events and pressing your button - does that work? If so then there is a problem with your formula in `Worksheet_Change` which isn't caught.
+
+If it still doesn't work then I would suggest looking into [how to debug Excel macros](http://www.excel-easy.com/vba/examples/debugging.html) - and I recommend doing this from the beginning because there is so much potential for error in an event handler that you may need to step through every line of code and breakpoint.
+
+I have a feeling it has to do with `Application.EnableEvents = False` and `Application.EnableEvents = True`.
+
+The problem isn't in the calculation - the problem is what happens after. When the formula in J doesn't work, it will return an error so that you can see what went wrong. But if events are disabled then the event handler does not fire, and therefore no change is made to `Application.EnableEvents`.
+
+I think this would be a good place for some unit testing - something like [this](https://stackoverflow.com/a/5436390/174251) where you write a series of tests that run a formula, then check the values in J and see what the error is.
+
+Comment: The formula is simply `=A2` so it doesn't need to be calculated on every change, but the issue still occurs after the calculation runs successfully.  The problem with breaking up the event handler into multiple lines is that I can't get the macro recorder to work without the application being enabled - it just tells me "Application Not Enabled".  And I haven't seen any errors when using the debugger, which was the first thing I tried (and would be my next step if events didn't fix it).
+
+You would have to create a `If` statement that checks for a specific cell range within your workbook. So you can reference the cells containing data within column A. The following code is a simplified example of what I'm saying:
+
+\begin{code}
+Private Sub Worksheet_Change(ByVal Target As Range)
+    Dim rngSource As Range
+If Not Intersect(Target, Range("A:A")) Is Nothing Then
+    Set rngSource = Union(Target, Target.Parent.Rows(2).Cells(1))
+    If Not (rngSource = rngSource) Then
+        ' rngSource is not equal to itself so it's a change
+        TimeStampSimple rngSource, "G2", "J", "mm/dd/yyyy hh:mm:ss", False
+    End If
+End If
+End Sub
+\end{code}
+
+Your original code was significantly faster. I suspect the main reason is because you are calling `split()` on a string, rather than a `StringBuilder` object which will be much more efficient. There's also no point in using `.toLowerCase()` and then converting to upper case back. The `Character.isLetter(c)` method does this for you. Also, the if statement is unnecessary, as you could just compare `name[i] == c`.
+
+In this event you're assigning the value to I16, if it is blank then you are setting it as yes but not changing it back when you change the selection, it should be Target.Value = "" or just Target = "", when your selecting a cell.
+
+The first one should be the preferred. The second is a reference to an empty string (which is different than an empty array). You are comparing apples and oranges.
+
+Comment: I would have thought that Range("F3").ClearContents = Range("F3").Value="" was identical as they are both clearing contents of range F3?
+
+Comment: If you think about it, yes.  However, the first one is more explicit in telling Excel what to do (which is exactly what I meant in my response).  The second line tells excel that you want a string value equal to an empty array which is not what you really wanted.
+
+Comment: My apologies as this was indeed confusing!
+
+Answer: If your data is just plain numbers, then `Range("F3")` is enough. You can even shorten it down to just `"F3"`. Excel will recognize the reference.
+
+If the cells contain formulas that include text (such as "=1+2") then you should use something like `Cells(3, 6) = ""` or `Cells("F", 6).Value = ""`. The first is a range of one cell and the second is an array reference.
+
+No it would not. It would be: Will Range(Range("A1"), Range("A4")).Value = ""
+
+Answer: Yes, it should work with any range you want to select in a particular worksheet.
+
+Try this code - it should work for a range of cells as well :
+
+\begin{code}
+Sub test()
+    Will Range(Range("D22"), Range("D25")).Value = ""
+End Sub
+\end{code}
+
+Hi!
+
+Thank you for your reply, I have a couple of questions though:
+- why do you have the second loop inside the first? The way it's written it could lead to an error because there would be two XRRG at once and also when that second loop is over, xWs.range("b") would not exist anymore...
+- is there a reason for using the "set" method in this case instead of "Application."? I'm asking since the object you are dealing with is already the Application.Worksheets collection...
+
+Thanks!
+
+You can store the value in a global variable and read it back into the Application.CutCopyMode property whenever you need it:
+
+\begin{code}
+Global CutCopyMode As Boolean
+Application.OnTime Now + TimeValue("0:00:30"), AddressOf ResetCutCopyMode, Nothing
+Sub ResetCutCopyMode() ' Resets Application.CutCopyMode to True after 15 seconds
+   CutCopyMode = False
+End Sub
+\end{code}
+
+Try the function Ctrl+[Space] which will automatically update your formulas if they are referencing the same range.
+
+### Question:
+
+I am trying to create a vlookup table on a pivot table with two different criteria. The criteria is a date range and then the value to search for. However, the criteria have a lot of text that I want to use as values in the vlookup table. For example if my data in A1:A97 was:
+
+\begin{code}
+5071624839484 9/1/2017 12:39 PM 2,436.14897
+5071624839484 9/1/2017 2:39 PM 0.00000
+\end{code}
+
+I would have a pivot table with one column and then I wanted to create two vlookup tables. The first lookup would be by date. So the result would look like this for the above data in my pivot table (the numbers are the dates):
+
+\begin{code}
+5071624839484 9/1/2017 12:39 PM 2,436.14897
+\end{code}
+
+The second lookup would be by the description of my data (which is what I want to search for). So in this case it will only look at one date.
+
+However, when I do a vlookup I get an error that there are too many rows and columns. My pivot table looks like this:
+<a href="https://i.stack.imgur.com/zKZOy.png" rel="nofollow noreferrer"><IMAGE></a>
+I've tried to add a wildcard in the criteria but it does not help, I think because the data is already stored as text. Can someone show me how to do this or what would be another way that works? Thanks.
+
+Thank you for your inquiry, I will do my best to explain the operation of `SORT()` to you.
+
+The `SORT()` function takes three arguments, `INTEGER`,`STRING`,and `BOOLEAN`. You can use it in the following ways:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String [] array = {"apple", "banana", "coconut"}; //an array of string elements to sort.
+        boolean reverse = true; //whether or not you want the items to be sorted in reverse order, true=reverse, false=normal.
+        
+        for (int i = 0; i < array.length; ++i) {
+            System.out.print(array[i] + " ");
+        }
+        
+        System.out.println(); //a line break so you don't have to scroll down as much
+        
+        if (reverse) { 
+            array = sortInReverse(array); //sort the array in reverse order.
+        } else {
+            array = sortNormal(array); //sort the array normally.
+        }
+        
+        for (int i = 0; i < array.length; ++i) {
+            System.out.print(array[i] + " ");
+        }
+    }
+    
+    private static String[] sortInReverse(String [] array) { //sort an array in reverse order, the string array is passed as an argument.
+        int n = array.length; //the number of elements in the given array.
+        
+        for (int i = 0; i < n -1; ++i) {
+            if (array[i].compareTo(array[n]) <= 0) { //if the current element's value is less than or equal to the next one, then swap them.
+                String temp = array[i]; //temporary variable that will be swapped with a different string in the array.
+                array[i] = array[n]; //swap the two elements.
+                array[n] = temp; //replace the temporary variable with the new element of the given array.
+            }
+        }
+        
+        return array; //returns an array after being sorted in reverse order.
+    }
+    
+    private static String[] sortNormal(String [] array) { //sort an array normally, the string array is passed as an argument.
+        int n = array.length; //the number of elements in the given array.
+        
+        for (int i = 0; i < n -1; ++i) {
+            if (array[i].compareTo(array[n]) >= 0) { //if the current element's value is greater than or equal to the next one, then swap them.
+                String temp = array[i]; //temporary variable that will be swapped with a different string in the array.
+                array[i] = array[n]; //swap the two elements.
+                array[n] = temp; //replace the temporary variable with the new element of the given array.
+            }
+        }
+        
+        return array; //returns an array after being sorted normally.
+    }
+}
+```
+
+The formula would be `=Nows()`.
+
+Comment: Sorry if I wasn't clear. I don't want a formula that changes it's value every time i go to the sheet. I want it to have a set formula and only change when I open up the excel file, not everytime I enter it into the cell.
+
+Comment: So you just need to save your formula as a function instead of a regular formula? The method that I described above should still work. You will need to define `Nows()` somewhere else first though. Like in the `ThisWorkbook` module or something. See [here](https://stackoverflow.com/questions/9238561/excel-function-to-update-when-workbook-is-opened) for an example on how to do that
+
+Comment: I have now, and it still does n't work. I tried this: =Now() in cell A3 and then I opened up a new sheet called "Test" with the same data from cell A3. The formula did not update itself when i opened the sheet, only when i changed the formula to =Nows().
+
+Comment: Is it possible that there's another instance of Now() somewhere else in your workbook? You can try running `Debug.Print Range("A3")` and see if you get an error saying something like "Name Error - name is not defined". That means that you have a formula with Now() somewhere else in the sheet, which is trying to override the one in A3
+
+Comment: Yes, i tried it again and i did. I will find out where it is then. Thanks for helping!
+
+Answer: There's already been an answer on how to do this but if you want a formula that changes only when the worksheet is reopened, you can also use `Workbook_Open` event. The formula would be as follows (you need to define your function somewhere first):
+
+\begin{code}
+=MyFunc()
+\end{code}
+
+This will slow it down slightly.  The first thing it will do is load the excel file into memory (in the case of my test data set, about 20 MB).  Then it will read the values in to a dictionary that uses the `Range` property as the key and the value is a list of the cells for each `range`.  The `Range.Value2` will be assigned to a string (list) or array of numbers/integers based on what data type was in the cell before.
+
+### Question:
+
+I need help with this code, please correct it if possible!
+
+### Code:
+```py
+import time
+from openpyxl import load_workbook
+from openpyxl.utils.cell import Cell
+
+def load_data(input_file):
+    wb = load_workbook(input_file)
+    data = []
+
+    for sheet in wb.sheets:
+        for row in sheet.rows:
+            if row[1].value is None or row[2].value is None or row[3].value is None:
+                continue
+            
+            col1 = int(row[1].value)
+            col2 = int(row[2].value)
+            col3 = int(row[3].value)
+            
+            if row.columns != 3: # There's something weird here
+                print("Row is missing columns")
+                continue
+    
+            data.append([col1, col2, col3])
+    return data
+```
+
+The formula is using a volatile function - so it should be volatile already. That said - you could change the formula to `=IFERROR(INDEX(Providers!D$3:D$64,MATCH(F3,Providers!C$3:C$64,0)),"")` . It's more a matter of style really - the volatile function is already there.

@@ -1,0 +1,212 @@
+HTTP/1.1 400 Bad Request
+Date: Mon, 26 Sep 2022 21:35:04 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 93
+Server: Jetty(9.4.66.v20210713)
+X-Powered-By: Undertow/1
+Connection: keep-alive
+Cache-Control: no-cache, no-store, must-revalidate, max-age=0
+Pragma: no-cache
+
+{
+    "errno": 400,
+    "msg": "[Mexc] Invalid parameters"
+}
+```
+
+### Request:
+
+https://www.mexc.com/open/api/v2/market/kline?symbol=BCH%2FUSDT&interval=1m&start_time=1686126837000&end_time=1688805237000&api_key=lim5kAIrMtv611VDEYZsc9WmV74TBiGhhJB5LlPGQABAM7vY9NCX1R0gzOvFvURI&sign=d3b6249dbc96fe354f0dd714b140bab790d58f32279ba428fa9a91d0780ce202
+
+The API request has failed.
+
+{
+    "code": 1002,
+    "msg": "Invalid order status"
+}
+
+### Explanation:
+Please make sure the order status is valid when calling API.
+
+### Possible Solutions:
+- Check your API request and ensure that you are sending valid parameters.
+- Ensure that you are using correct API key with MEXC.
+- Double check your API status, and ensure it's not in Cancelled or other invalid state.
+- Contact MEXC support team for further assistance if the issue persists.
+
+### More Info:
+For more details about this error code, please refer to our official documentation [here](https://www.mexc.com/help/api_documentation/error_codes#1002-invalid-order-status).
+
+### Tips for Troubleshooting:
+To troubleshoot this issue, you can try the following steps:
+
+1. Ensure that your API request is valid and contains all required parameters as mentioned in our official documentation.
+2. Check if you're using a correct API key with MEXC.
+3. Verify that your order status is valid when calling API.
+4. Contact MEXC support team for further assistance if the issue persists.
+5. Follow our troubleshooting guidelines as mentioned in the official documentation [here](https://www.mexc.com/help/api_documentation/error_codes#1002-invalid-order-status).
+6. Use a different API request if you have multiple requests, to ensure that any failed or incorrect request does not impact your other successful requests.
+7. Wait for 30 minutes after placing the order before attempting to cancel it via API as some orders may take time to be reflected in API.
+8. Double-check all of your data inputted into API, such as account number and trading pair, to ensure that there are no typos or errors.
+9. Verify if you're using a correct API version for the request you're making.
+10. Try updating your API client library, as it may be outdated with new changes and improvements in our APIs.
+11. Make sure to follow the MEXC API guidelines properly to ensure that your request is successful.
+
+```json
+{
+	"data": [
+		{
+			"symbol": "BTCUSD",
+			"interval": "15m",
+			"open": "42795.018",
+			"close": "42893.564",
+			"high": "42990.553",
+			"low": "42325.653",
+			"time": 1670608528323,
+			"datetime": "2023-03-24T04:14:28Z",
+			"volume": "669.25K",
+			"quote": "USD",
+			"timeframe": 15,
+			"vwap": "43191.3713"
+		},
+		{
+			"symbol": "BTCUSD",
+			"interval": "60m",
+			"open": "42958.864",
+			"close": "42673.196",
+			"high": "43090.251",
+			"low": "42192.373",
+			"time": 1670608908307,
+			"datetime": "2023-03-24T04:14:58Z",
+			"volume": "1.38M",
+			"quote": "USD",
+			"timeframe": 60,
+			"vwap": "42794.9108"
+		},
+		{
+			"symbol": "BTCUSD",
+			"interval": "1h",
+			"open": "43266.535",
+			"close": "43374.089",
+			"high": "43908.316",
+			"low": "42671.138",
+			"time": 1670609542818,
+			"datetime": "2023-03-24T04:16:04Z",
+			"volume": "3.85M",
+			"quote": "USD",
+			"timeframe": 60,
+			"vwap": "43294.8503"
+		},
+		{
+			"symbol": "BTCUSD",
+			"interval": "3h",
+			"open": "42716.233",
+			"close": "42893.564",
+			"high": "43038.157",
+			"low": "42272.589",
+			"time": 1670609963375,
+			"datetime": "2023-03-24T04:16:35Z",
+			"volume": "7.54M",
+			"quote": "USD",
+			"timeframe": 3,
+			"vwap": "42926.8721"
+		},
+		{
+			"symbol": "BTCUSD",
+			"interval": "5h",
+			"open": "42893.028",
+			"close": "42673.196",
+			"high": "43090.251",
+			"low": "42192.373",
+			"time": 1670610384829,
+			"datetime": "2023-03-24T04:17:55Z",
+			"volume": "7.32M",
+			"quote": "USD",
+			"timeframe": 60,
+			"vwap": "42993.5578"
+		},
+		{
+			"symbol": "BTCUSD",
+			"interval": "1d",
+			"open": "42672.054",
+			"close": "43171.018",
+			"high": "43968.003",
+			"low": "42228.906",
+			"time": 1670610665536,
+			"datetime": "2023-03-24T04:18:35Z",
+			"volume": "8.91M",
+			"quote": "USD",
+			"timeframe": 60,
+			"vwap": "43087.2096"
+		},
+		{
+			"symbol": "BTCUSD",
+			"interval": "1W",
+			"open": "43538.403",
+			"close": "42191.701",
+			"high": "46961.201",
+			"low": "40383.009",
+			"time": 1670611048587,
+			"datetime": "2023-03-24T04:19:35Z",
+			"volume": "2.82M",
+			"quote": "USD",
+			"timeframe": 60,
+			"vwap": "42798.9385"
+		},
+		{
+			"symbol": "BTCUSD",
+			"interval": "1M",
+			"open": "41608.656",
+			"close": "42795.018",
+			"high": "43119.929",
+			"low": "40645.721",
+			"time": 1670611468542,
+			"datetime": "2023-03-24T04:20:39Z",
+			"volume": "6.42M",
+			"quote": "USD",
+			"timeframe": 60,
+			"vwap": "41799.5182"
+		},
+		{
+			"symbol": "BTCUSD",
+			"interval": "1y",
+			"open": "36097.461",
+			"close": "42795.018",
+			"high": "68861.092",
+			"low": "32838.614",
+			"time": 1670611864796,
+			"datetime": "2023-03-24T04:22:05Z",
+			"volume": "4.36M",
+			"quote": "USD",
+			"timeframe": 1,
+			"vwap": "38970.4277"
+		},
+		{
+			"symbol": "BTCUSD",
+			"interval": "6M",
+			"open": "20916.656",
+			"close": "38456.704",
+			"high": "38636.700",
+			"low": "20573.612",
+			"time": 167061221
+
+```python
+#!/usr/bin/env python3
+"""
+This program will add two strings and print the result.  You do not need to write any comments, but you must have at least a single comment in this file for your submission to count towards full credit.
+
+You should provide a main() function that contains all of your code.
+
+Input Format: None
+
+Output Format: A string containing your results.
+
+Sample Input: "Hello"
+               "world"
+"""
+
+str1 = input() # prompt user to enter a string
+str2 = input() # prompt user to enter a second string
+# combine the strings and print the result
+print("The two words combined are: ", str1 + str2)
+```

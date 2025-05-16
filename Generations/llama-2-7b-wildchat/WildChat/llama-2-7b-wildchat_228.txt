@@ -1,0 +1,23 @@
+It means that you can't use the `*` wildcard when accessing elements in an object. You must explicitly specify each element.
+
+### Explanation:
+When using `*`, JavaScript will iterate over all properties of an object to find a matching property. However, this approach will fail if there is an element with the same name as another element.
+
+For example, consider the following code:
+```javascript
+var obj = {a: 10, b: 20};
+obj["*"] = "foo"; // Throws exception
+console.log(obj); // {a: 10, b: 20}
+```
+
+The `*` wildcard is not valid for accessing an object's elements because it would match both the `b` and `c` properties (if such a property existed), causing an error when trying to assign "foo" to the value of that element.
+
+To work around this issue, you should explicitly specify which element(s) you wish to access in an object:
+```javascript
+var obj = {a: 10, b: 20};
+console.log(obj["b"]); // "20"
+console.log(obj["*"]); // Undefined because it doesn't exist
+```
+
+### Other Versions:
+Other versions of JavaScript may have different rules or exceptions regarding the `*` wildcard in objects, so if you encounter this issue with another version, please consult its documentation for specific guidelines.

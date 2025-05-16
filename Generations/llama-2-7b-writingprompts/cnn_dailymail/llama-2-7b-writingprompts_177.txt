@@ -1,0 +1,49 @@
+```python
+#!/usr/bin/env python3
+import sys, os
+sys.path.append(os.getcwd())
+from word import *
+from nltk.corpus import stopwords 
+from collections import Counter, defaultdict
+from string import punctuation as ps
+import re
+
+# Read in the text files and tokenize them, then count each token.
+# The final output is a dictionary with keys of word and values as counts.
+
+# Set up the dictionaries for counting the tokens and stopwords:
+stop = set(stopwords.words("english"))
+nltk_corpus = open('nltk/books/wordnet/wn22g.txt', encoding='utf-8')
+nltk_dict = defaultdict(int)
+for word in nltk_corpus:
+    if not (word[0] == '#' or word == ''):
+        nltk_dict[word] += 1
+# Get the tokens from the file and put them into a list.
+tokens = open('nltk/books/migration/all.txt')
+line = []
+for line in tokens:
+    if not (line == '' or line[0] == '#'):
+        line = line[:-1].split() + ['<EOS>'] # Split the sentence and add a <EOS> token to the end of the list.
+tokens = [token for i,token in enumerate(line) if not (i==len(line)-1 or token == '<EOS>')] 
+# Remove punctuation characters from the tokens:
+tokens_new = []
+for item in tokens:
+    item = re.sub('[^\w]', '', item).lower() # Adds lowercase, removes numbers and symbols (including white space)
+    item_split = item.split()  # Split it into a list of words.
+    for i in range(len(item_split)):
+        if item_split[i].isdigit(): # Remove numbers from the list.
+            del item_split[i] # Delete the number.
+    tokens_new += [word for word in item_split]
+# Get the counts of each token:
+counts = Counter(tokens_new)
+# Put together a dictionary with keys as words and values as counts. 
+counts_dict = defaultdict(int)
+for key, value in counts.items():
+    if key not in stop and count > nltk_dict[key]: # If the word was counted more often than all of the nltk corpus entries, then add to dictionary.
+        counts_dict[key] += value
+# Finally, output the file:
+output = open('nltk/books/migration/counts.txt', 'w')
+for key, value in sorted(counts_dict.items()):  # Sort by decreasing frequency to have highest occurring words at beginning of file.
+    output.write('%s: %d\n' % (key, value)) 
+output.close()
+```

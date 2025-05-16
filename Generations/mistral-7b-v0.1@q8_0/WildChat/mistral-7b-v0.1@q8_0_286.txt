@@ -1,0 +1,3 @@
+1 Like
+
+First off, you want to create a timer. How this is done varies depending on what server framework you’re using, but most use something like SetTimer(function(), 30*60*1000). Once you have that set up, you then need to do whatever you want the function to do, such as drawing the blip or spawning a plane.

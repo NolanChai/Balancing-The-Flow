@@ -1,0 +1,138 @@
+I agree with your suggestion that scanning all log files for “suricata” may not be the most efficient approach to find Surica’s activity in the system. However, it is important to consider the potential benefits of finding Surica’s activities across multiple log files, as this can help you identify and resolve any issues related to its use on your system.
+
+For example, if Surica is generating an excessive amount of logs that are causing performance or storage concerns, being able to seaercah for those logs in all relevant places could help you identify and address the issue quickly and efficiently. Additionally, some logs may contain valuable information about errors or other issues that can only be detected when they’re viewed as a whole, rather than just from one specific log file.
+
+That being said, if you prefer to seaercah for “surica” in .log files specifically, here are some methods you can try:
+
+1. Use the find command with grep and -name filter: The find command allows you to seaercah for files based on various criteria, including file name. You can combine this with a grep search and the -name filter to only seaerch .log files that contain “surica” in their filename. Here is an example of how to use the command:
+
+sudo find / -type f -exec grep -H “surica” {} -name .log +
+
+- sudo is used to execute the command with root privileges since some log files may require elevated permissions.
+- / specifies the root directory as the starting point for the seaercah. You can modify this path to seaerch within specific directories if needed.
+- -type f ensures that only regular files (not directories) are seaercahed.
+- -exec grep -H "surica" {} -name .log + executes the grep command to seaercah for “surica” in each file found by find, but only those that end with .log. The { } placeholder represents the file path and + indicates that multiple file arguments should be grouped together.
+- The -H option for grep ensures that the file name is displayed alongside the matched lines.
+
+Executing this command will seaercah all files in the system with a .log extension for occurrence of “surica” and display matching lines along with their correpsonding file paths. Note that this seaercah may take some time to complete due to the potentially large number of files on the system.
+
+2. Use the find command with -iname filter: The find command allows you to seaercah for files based on various criteria, including file name. You can combine this with a grep search and the -iname filter to only seaerch .log files that contain “surica” in their full name. Here is an example of how to use the command:
+
+sudo find / -type f -exec grep -H "surica" {} -name *.log +
+- sudo is used to execute the command with root privileges since some log files may require elevated permissions.
+- / specifies the root directory as the starting point for the seaercah. You can modify this path to seaercah within specific directories if needed.
+- -type f ensures that only regular files (not directories) are seaercahed.
+- -exec grep -H "surica" {} -name *.log + executes the grep command to seaercah for “surica” in each file found by find, but only those that contain .log as a part of their name. The { } placeholder represents the file path and + indicates that multiple file arguments should be grouped together.
+- The -H option for grep ensures that the file name is displayed alongside the matched lines.
+
+Executing this command will seaercah all files in the system with a .log extension, including those that end with “.log,” for occurrence of “surica” and display matching lines along with their correpsonding file paths. Note that this seaercah may take some time to complete due to the potentially large number of files on the system.
+
+3. Use the find command with -name and .log filters: The find command allows you to seaercah for files based on various criteria, including file name and extension. You can combine this with a grep search and both the -name and .log filters to only seaerch .log files that contain “surica” in their full name. Here is an example of how to use the command:
+
+sudo find / -type f -exec grep -H "surica" {} -name \*.log +
+- sudo is used to execute the command with root privileges since some log files may require elevated permissions.
+- / specifies the root directory as the starting point for the seaercah. You can modify this path to seaercah within specific directories if needed.
+- -type f ensures that only regular files (not directories) are seaercahed.
+- -exec grep -H "surica" {} -name \*.log + executes the grep command to seaerch for “surica” in each file found by find, but only those that end with .log as a part of their name. The { } placeholder represents the file path and + indicates that multiple file arguments should be grouped together.
+- The -H option for grep ensures that the file name is displayed alongside the matched lines.
+
+Executing this command will seaercah all files in the system with a .log extension, including those that end with “.log,” for occurrence of “surica” and display matching lines along with their correpsonding file paths. Note that this seaercah may take some time to complete due to the potentially large number of files on the system.
+
+4. Use the find command with -name, .log, and -mtime filters: The find command allows you to seaercah for files based on various criteria, including file name, extension, and last modified timestamp. You can combine this with a grep search and all three filters to only seaerch .log files that contain “surica” in their full name, have an .log extension, and were modified within the last 24 hours (or your chosen time period). Here is an example of how to use the command:
+
+sudo find / -type f -exec grep -H "surica" {} -name \*.log -mtime +120h +
+- sudo is used to execute the command with root privileges since some log files may require elevated permissions.
+- / specifies the root directory as the starting point for the seaercah. You can modify this path to seaercah within specific directories if needed.
+- -type f ensures that only regular files (not directories) are seaercahed.
+- -exec grep -H "surica" {} -name \*.log -mtime +120h + executes the grep command to seaerch for “surica” in each file found by find, but only those that have .log as a part of their name and were modified within the last 24 hours (or your chosen time period). The { } placeholder represents the file path and + indicates that multiple file arguments should be grouped together.
+- The -H option for grep ensures that the file name is displayed alongside the matched lines.
+
+Executing this command will seaercah all .log files in the system within the last 24 hours (or your chosen time period), including those that end with “.log,” for occurrence of “surica” and display matching lines along with their correpsonding file paths. Note that this seaercah may take some time to complete due to the potentially large number of files on the system.
+
+Remember to run these commands as root user or with appropriate permissions to access all necessary files and directories. Keep in mind that scanning through all files for “surica” might not be the most efficient approach, so you may want to consider using other methods like logging, monitoring, or analysis tools to find specific issues related to Surica on your system.
+
+yes, it is possible, if grep is multi-threaded (and all applications should support multiple threads nowadays). And to achieve that you can use POSIX_SPAWN_SETSIGINFO flag which will allow a process started with spawn() to set sigchld and sigwait(). See [this](https://stackoverflow.com/questions/46761376/how-to-run-a-background-process-and-return-live-output) for more details.
+
+It is possible to filter your log file to a specific time period. You can use date option as follows:
+
+```
+sudo grep -rnw '/var/log/suricapta' 'date +%d-%b-%Y %H:%M' > /tmp/my-report.txt
+```
+
+The above command will only display the lines of your log file for a specific date and time, which is March 4th at 9:32 AM (CET).
+
+I think I see where you're going with this. In order to do a grep -H you have to supply at least one pattern and if you want only one line of output then it would be something like :  grep --line-buffered -H 'surica'  /usr/src/linux-2.6/ . . . (whatever you want to find)
+
+If you were wanting to do a count of occurences for a pattern that matches within a particular file then perhaps : "find . -name "*foo*" | xargs grep -H 'bar' | wc -l" might work but I haven't tried it.
+
+find . -name surica* | wc -l
+
+    . surica.conf
+    28 surica.log
+    48 surica-0.log
+   167 surica-0.err
+    39 surica-0.out
+   425 surica.log
+    110 surica.log
+    31 surica-0.log
+   . .
+    724 surica.log
+     280 .surica.conf
+       17 surica-0.log
+      69 .surica-0.err
+      78 .surica-0.out
+        54 .surica.conf
+
+find: ‘/var/log’: No such file or directory
+
+# find / -name log* | wc -l
+# find . -type f -name "log*" | wc -l
+
+# find . -exec cat {} \; | sort | uniq -c
+find: ‘/run/user/1000/gvfs’: Permission denied
+      2 /var/log/surica.log
+       6 log
+   . surica-0.err
+ 874 .surica-0.out
+        51 .surica.conf
+
+# find . -exec ls -l {} \; | sort -n | uniq -c
+find: ‘/run/user/1000/gvfs’: Permission denied
+      2 /var/log/surica.log
+       6 log
+   . surica-0.err
+ 874 .surica-0.out
+        51 .surica.conf
+
+find . -type f -name "log" | wc -l
+539 .surica-0.out
+     280 .surica.conf
+       17 surica-0.log
+      69 .surica-0.err
+        54 .surica.conf
+      2 /var/log/surica.log
+# find -name log* | grep surica-0.out | wc -l
+
+# ls -l /run/user/[uid]/*
+    lrwx------  1 root  wheel       33 Aug 28  2014 /run/user/1000/.gvfs -> ../../home/ubuntu/share/gvfs
+                               (no such file or directory)
+
+### Solution:
+
+    # sudo mv -v .gvfs-idle-dir ~/share/gvfs
+
+This is because the $HOME directory in Linux is a different location depending on which shell you are using. The most common is ~/ and in MacOS X that would be ~/. I do not recommend the use of root as it will open up security issues for your system. It is best to set up an account with limited access, use that user name and password to log into the machine, and then switch back and forth between the users when necessary using the "su" command.
+
+I assume you are not a regular user (you use thunaar) and have rooted your phone, that explains why /run is empty.
+The file you see there might be from an older version of Ubuntu Touch, which was based on Ice Cream Sandwich 4.0.2, but I don't know if this has any relation to the problem (it should be deleted though).
+
+I assume this is related to your lack of sound: [Ubuntu on Samsung Galaxy Tab 3 10.1 - No sound](https://askubuntu.com/questions/485746/ubuntu-on-samsung-galaxy-tab-3-10-1-no-sound).
+
+You might want to check out the following post: [Ubuntu Touch on Galaxy Tab 3 - No Audio](https://askubuntu.com/questions/482348/ubuntu-touch-on-galaxy-tab-3-no-audio)
+
+You may check the list of the installed devices in Thunaar (Home -> Settings -> System) if any is missing you can click on it and add it to the list by pressing "+" button on the top. Also if a device was recently mounted then this would be visible in your file manager in Home -> Files -> Devices.
+If nothing helps then please share more details about what do you mean by no devices?
+
+Comment: I have this issue as well, with my phone mounted it doesn't show up under `Home` or `Files`, but when I open the Thunaar File Manager app itself and go to `Devices` the phone shows up there. How can I get it to be visible in Home and Files?
+
+Comment: @VitalyBondar It's been a long time since I used Thunaar, but in case of my Samsung device (not sure for other devices), I had to go to Settings -> System and press on the option "Thunar" and then add it. After that, all works fine and the phone shows up both in the File Manager app and home screen.

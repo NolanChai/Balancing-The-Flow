@@ -1,0 +1,50 @@
+{ "errorCode": 6, "message": "Invalid time span", "data": null }
+
+{
+"code":503,"msg":"Server error."}
+
+### Error in log file
+[2019-07-26 20:43:25] [WARNING]: Unable to retrieve order information.
+[2019-07-26 20:43:25] [WARNING]: Unable to retrieve market information.
+\end{code}
+
+Comment: Is your API key enabled for trading?
+
+Comment: I think so , I don't know how to check that :( . I created a new account and I added the same api keys but getting same response :(
+
+Answer: You can find out if you have access to trade here. https://www.mexc.com/account/profile
+
+If there is a 'TRADE' button on your profile page, it means you do have trading permission for that API key.
+
+```json
+{
+    "date": 1437115264980,
+    "instructions": [
+        {
+            "text": "Buy XRP @ .80",
+            "amount": 0.005,
+            "price_type": 2,
+            "time_in_force": "gtc"
+        },
+        {
+            "text": "Sell LTC @ $240",
+            "amount": 0.1056387,
+            "price_type": 2,
+            "time_in_force": "gtc"
+        },
+        {
+            "text": "Buy BTC @ .2490",
+            "amount": 0.24901,
+            "price_type": 3,
+            "time_in_force": "gtc"
+        }
+    ]
+}
+```
+
+```plaintext
+2017-08-18 00:15:15  INFO  [main] .Netty4Plugin  - Channel Initiator Register Successfully.
+2017-08-18 00:15:38  WARN  [main] .Netty4Plugin  - Server Initiator Connected Successfully, but receive message ''.
+2017-08-18 00:16:15  INFO  [main] .Netty4Plugin  - Channel Initiator Register Successfully.
+2017-08-18 00:16:37  WARN  [main] .Netty4Plugin  - Server Initiator Connected Successfully, but receive message ''.
+```

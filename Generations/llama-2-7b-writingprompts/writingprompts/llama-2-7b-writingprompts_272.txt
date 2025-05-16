@@ -1,0 +1,22 @@
+I am going to assume that this person is an older reader who is new to programming and hasn't learned about the importance of indentation yet.
+
+```
+class Dog:
+	def __init__(self, name):
+		print('Hello my name is ', name)
+	def bark(self):
+		print("Woof woof")
+a_dog = Dog('Spot')
+b_dog = Dog('Fido')
+```
+The person might be confused on how to read the code, and I'd like to make it as intuitive as possible. If this is a beginner, then there needs to be a good explanation for what is going on. The person may be more used to using classes in Java or C#, so it could be confusing that Python has it built in.
+
+```
+class Dog:
+	def __init__(self, name):
+		print('Hello my name is ', name)
+	def bark(self):
+		print("Woof woof")
+a_dog = Dog('Spot')
+b_dog = Dog('Fido')
+```

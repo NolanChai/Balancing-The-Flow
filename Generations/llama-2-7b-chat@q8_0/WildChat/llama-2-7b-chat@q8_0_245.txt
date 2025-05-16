@@ -1,0 +1,23 @@
+Certainly! Power Query allows you to perform lookups in other tables using the "Table.Lookup" function. Here's how you can use it:
+1. Select the table that contains the values you want to lookup, and then navigate to the "Home" tab in the Power Query Editor.
+2. Click on "New Query" to create a new query based on the selected table.
+3. In the "Query Editor", click on the "Table.Lookup" button in the "Data" tab. This will open the "Lookup" dialog box.
+4. In the "Lookup" dialog box, select the column that you want to perform the lookup on, and then enter the table that contains the values you want to lookup.
+5. Click "OK" to close the "Lookup" dialog box. The query will now perform a lookup in the selected table for each value in the column you specified in step 4.
+6. The results of the lookup will be displayed in the "Results" tab of the Power Query Editor. You can then transform or manipulate the data as needed.
+Here's an example of how to use Table.Lookup to perform a simple lookup:
+Suppose you have two tables, "Customers" and "Orders", where the "Customers" table contains information about each customer, including their name and address, and the "Orders" table contains information about each order, including the customer's name, order date, and total cost. You want to retrieve the customer's name for each order in the "Orders" table.
+1. Open the Power Query Editor by clicking on "File" > "Get & Transform Data" > "From Other Sources" > "From Microsoft Query".
+2. In the "Microsoft Query" dialog box, select "Table1" (the "Customers" table) and click "OK".
+3. In the Power Query Editor, navigate to the "Home" tab and click on "New Query". This will create a new query based on the selected table.
+4. In the "Query Editor", click on the "Table.Lookup" button in the "Data" tab. This will open the "Lookup" dialog box.
+5. In the "Lookup" dialog box, select the column that you want to perform the lookup on (e.g. "CustomerName"), and then enter the table that contains the values you want to lookup (e.g. "Orders").
+6. Click "OK" to close the "Lookup" dialog box. The query will now perform a lookup in the "Orders" table for each value in the "CustomerName" column of the "Customers" table.
+7. The results of the lookup will be displayed in the "Results" tab of the Power Query Editor. You can then transform or manipulate the data as needed.
+Note: In this example, we're assuming that the "CustomerName" column in the "Orders" table contains the name of the customer associated with each order. If the column contains a different field (e.g. customer ID), you'll need to specify the appropriate column name in the "Lookup" dialog box.
+
+The error message "DataFormat.Error: We couldn't convert to Number." in Google Sheets typically occurs when you are trying to perform a mathematical operation on a value that is not a number. This can happen for several reasons, such as:
+1. Using an invalid cell reference: Make sure that the cell reference you are using is valid and contains a numerical value.
+2. Incorrect data type: Check the data type of the value in the cell to make sure it's a number. You can do this by selecting the cell and looking at the formula bar. If the value is not a number, try converting it to a number using the "Number" function.
+3. Formula syntax error: Make sure that your formula is correct and free of errors. Check for any typos or missing parentheses in your formula.
+In your case, the error message is saying that there is an issue with the control dimension. It's possible that the value you are trying to perform the mathematical operation on is not a number. Try checking the value in cell A1 and make sure it's a numerical value before proceeding. If you are still having trouble, please provide more details about your spreadsheet and the formula you are using so I can better assist you.

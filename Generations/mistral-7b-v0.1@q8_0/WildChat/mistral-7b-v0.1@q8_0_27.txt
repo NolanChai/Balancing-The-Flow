@@ -1,0 +1,120 @@
+==================================================
+
+> 参考了[这篇文章](https://zhuanlan.zhihu.com/p/50394783)
+
+## 环境说明
+- centos8.x
+
+## 操作流程
+1、在客户端安装openssl
+```shell script
+yum install -y openssl
+```
+
+2、配置客户端的hosts文件
+```shell script
+vim /etc/hosts
+```
+将要清理的机器名称添加到hosts文件中。例如，要清理名为“centos-node1”的主机，则需要在/etc/hosts中添加以下行：
+```shell script
+192.168.0.202	centos-node1
+```
+
+3、执行清理操作
+```shell script
+# 查询当前主机的公钥信息，并将其写入到文件中。例如：
+ssh-keygen -lf /etc/ssh/ssh_host_rsa_key.pub
+
+# 使用openssl工具将公钥文件转换为PKCS1格式的PEM证书。例如：
+openssl rsa -inform PEM -pubout -out formatted-public-key.pem /etc/ssh/ssh_host_rsa_key.pub
+
+# 将转换后的公钥文件传输到需要清理主机，并重新创建目标主机的主机信息。例如：
+scp formatted-public-key.pem centos@192.168.0.202:/tmp
+ssh -o StrictHostKeyChecking=no centos@192.168.0.202 "cat /tmp/formatted-public-key.pem >> ~/.ssh/known_hosts"
+
+# 在清理主机上删除已经存在的主机信息。例如：
+rm -f ~/.ssh/known_hosts
+```
+
+4、使用以下命令验证操作是否成功：
+```shell script
+ssh-keyscan -t rsa centos@192.168.0.202 >> /etc/ssh/ssh_known_hosts
+```
+如果没有出现任何错误，则说明主机信息已经成功清理。
+
+- 方法1:
+
+> 1.在C盘下建立一个文件夹，命名为：My
+> 2.打开命令提示符,执行以下指令:
+>
+> `cd C:\Users\xxx\.ssh`
+>
+> 3.把存储的public_key里所有内容剪切到My文件夹下面。
+> 4.将My文件夹复制到C:\Windows\System32\config\系统变量
+> 5.打开命令提示符，执行以下指令:
+>
+> `reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon /v Userinit /f`
+>
+> 6.重启电脑
+
+- 方法2:
+
+> 1.在C盘下建立一个文件夹，命名为：My
+> 2.打开命令提示符,执行以下指令:
+>
+> `cd C:\Users\xxx\.ssh`
+>
+> 3.把存储的public_key里所有内容剪切到My文件夹下面。
+> 4.将My文件夹复制到C:\Windows\System32\config\系统变量
+> 5.打开注册表，找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon,添加一个值为Userinit的字符串项，然后把C:\Windows\System32\config\systemprofile\My.cmd拷贝到文件夹里
+> 6.重启电脑
+
+- 方法3:
+
+> 1.在C盘下建立一个文件夹，命名为：My
+> 2.打开注册表，找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon,添加一个值为Userinit的字符串项，然后把C:\Windows\System32\config\systemprofile\My.cmd拷贝到文件夹里
+> 3.重启电脑
+
+> ssh-keygen -R <IP_address>
+>
+> 但是提示mkstemp: No such file or directory
+>
+> 如何解决？
+
+有两个解决方法：
+
+1. 使用 `sudo`
+
+```
+# 以root身份执行：
+$ sudo ssh-keygen -R <IP_address>
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+# 输入密码，两次相同即可。
+```
+2. `/usr/bin/ssh-keygen` 这个命令是 `root` 用户所有者的。但是普通用户不能直接执行。
+
+```
+# 查看 /usr/bin/ssh-keygen 文件属主和属组：
+$ ls -l /usr/bin/ssh-keygen
+-rwxr-xr-x. 1 root wheel 74256 Aug  7  2018 /usr/bin/ssh-keygen*
+# 因此，普通用户只有执行权限。
+```
+
+解决办法：在 `ssh-keygen` 的脚本中加入 `setgid` 选项。
+
+```
+$ vi /usr/bin/ssh-keygen
+# 添加如下一句：
+#!/usr/bin/env bash
+set -e
+if [ "${0}" != "/usr/bin/ssh-keygen" ]; then echo "You must execute this program as \"/usr/bin/ssh-keygen\"" >&2; exit 1; fi
+
+# 这个脚本的实际执行是由 /etc/ssh/ssh-keysign 来实现。因此，修改 ssh-keysign：
+$ vi /etc/ssh/ssh-keysign
+#!/usr/bin/env bash
+set -e
+if [ "${0}" != "/etc/ssh/ssh-keysign" ]; then echo "You must execute this program as \"/etc/ssh/ssh-keysign\"" >&2; exit 1; fi
+# 添加如下一句：
+setgid root
+```

@@ -1,6 +1,0 @@
-
-    def response(self, sentence) :
-        if ( sentence.find('Aspen') >= 0 ) and ( sentence.find('socialite') >= 0 ):
-            return ('Associated Press says that Nancy Pfister, 57, died from a blunt force injury to the head at her home in Aspen.' + '\n')
-        elif ( sentence.find('socialite') >= 0 ) and ( sentence.find('Aspen') >= 0 ):
-            return ('Nancy Pfister, 57, was found dead in her home in Aspen, a coroner said on Wednesday.' + '\n')

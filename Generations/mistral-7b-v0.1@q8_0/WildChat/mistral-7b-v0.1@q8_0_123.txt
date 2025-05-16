@@ -1,0 +1,35 @@
+[INS2]
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ npm install mongodb --save
+
+up to date, audited 57 packages in 1s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+[INS3]
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ npm install mongoose --save
+
+up to date, audited 57 packages in 1s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+acer@LAPTOP-TA0QKCOO MINGW64 /c/rest_api1
+$ node server.js
+Start server at port 3000.
+
+> npm run dev
+
+> nodemon --ignore "node_modules" --ext ".js,.json,.md" "server.js"
+
+> [DONE]nodemon --watch app --ext js,json,md --exec babel-node -- --ignore node_modules --presets env,react --no-warn server.js[/DONE]
+
+[INFO]npm run dev
+
+> rest_api@1.0.0 dev C:\rest_api1
+> nodemon --watch app --ext js,json,md --exec babel-node -- --ignore node_modules --presets env,react --no-warn server.js[/INFO]

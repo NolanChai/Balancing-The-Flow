@@ -1,0 +1,63 @@
+Create a new file named "server.js" in the root directory of your project.
+
+Inside the file, add the following code:
+```
+const express = require('express');
+const app = express();
+
+// Set up an endpoint for the GET request
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello, world!' });
+});
+
+app.listen(3000, () => {
+  console.log('Server started on port 3000');
+});
+```
+This code creates a simple Node.js server that listens to incoming requests on port 3000 and responds with the message "Hello, world!".
+
+Next, save and close the file.
+
+Now run the following command in your terminal:
+```
+node server.js
+```
+This will start the Node.js server and it should display a message indicating that the server is now listening on port 3000.
+
+Finally, open a web browser and navigate to `http://localhost:3000/` to test the server. You should see the response from the server displayed in the browser's console.
+
+Congratulations! You have successfully created a Node.js RESTful API using Express.js and your first endpoint is now up and running!
+
+Sure, here's the output for npm install express --save:
+
+```
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function pedantic-inspect#2. Use ember-cli-build instead. (Use `--force` to continue.)
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function sane-terminal-ansi#1. Use `node --trace-warnings ...`.
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function colour-convert#2. Use `strip-ansi` instead.
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#1. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#2. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#3. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#4. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#5. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#6. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#7. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#8. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#9. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#10. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#11. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#12. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#13. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#14. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#15. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#16. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#17. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#18. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#19. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#20. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#21. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#22. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#23. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#24. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#25. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRECATION: Unsupported function supports-color#26. Use `hasOwnProperty` instead of `Object.prototype.hasOwnProperty`. Not a problem in es6.x; but it could be removed later on (at least from non-es6 versions).
+npm WARN optional SKIPPING OPTIONAL DEPRE

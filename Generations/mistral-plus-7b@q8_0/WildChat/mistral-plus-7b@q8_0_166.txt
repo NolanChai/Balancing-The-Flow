@@ -1,0 +1,71 @@
+Yes, searching for “suricata” in .log files is indeed a more targeted approach compared to scanning the whole system. To search specifically for “suricata” within .log files:
+
+Use the following command with some adjustments:
+
+sudo find / -type f -name "*.log" -exec grep -H "suricata" {} +
+
+
+Here’s what the command does:
+
+- sudo is used to execute the command with root privileges since some log files may require elevated permissions.
+- / specifies the root directory as the starting point for the search. You can modify this path to search within specific directories if needed.
+- -type f ensures that only regular files (not directories) are searched.
+- -name "*.log" limits the search to only files with .log file extensions. This is a way of specifying the type of log files you want to include in the search. You can also use wildcards (*) in place of specific strings if necessary.
+- -exec grep -H "suricata" {} + executes the grep command to search for “suricata” within each file found by find that has a .log extension. The {} placeholder represents the file path, and + indicates that multiple file arguments should be grouped together.
+- The -H option for grep ensures that the file name is displayed alongside the matched lines.
+
+I tried a few different things:
+
+```
+grep --line-buffered 'keyword' file | less -R
+```
+
+and also this:
+
+```
+grep --recursive 'keyword' * | less -R
+```
+
+but it seems to work only when i press enter after a few lines, which is still not ideal.
+
+Hi,
+I would use grep. It's a very powerful tool that can search text from files and directories. It's perfect for searching logs for anything. This command would allow you to search the suricata log file for the word "blocked":
+Code:
+```grep blocked /var/log/suricata/suricata.log
+#or
+grep -i blocked /var/log/suricata/suricata.log
+#search in all caps or lowercase```
+
+It would be possible to add some parameters to this command:
+-t to indicate the file type (like *.log)
+-n to specify the number of occurances before displaying results
+-f to filter by IP address
+
+Ok, I have been playing with suricata for some time now and was having a problem with the logging directory permissions. The error log would tell me that it could not create any additional logs in this folder because of insufficient permissions. So I went in and set chmod 755 on all the folders and files to fix the permission issue but that didn’t work. I ended up using sudo chown root:adm suricata and chgrp adm suricata so that any new files created were owned by root/adm and the group would be set to adm, which solved my problem of permissions for the log folder.
+
+Well this is pretty long command I should say… why it returned “find: ‘/run/user/1000/gvfs’: Permission denied” under root permission in terminal is unknown.
+
+I don’t know how to read the output of a find command and I am not sure about the result that I got. But, here is what I want to do…
+
+There are some hidden files in my home directory(root) and I want to list them out without the “.” before their name (as seen on Finder). How should I do it?
+
+I know you can use: ls -A for listing the hidden files. But, how should I do this using find command?
+
+[SOLUTION]You need to run the following command:
+`sudo chmod 700 ~/.local/share/Trash`
+
+Then you should be able to access your trash folder from the terminal.
+
+It is important to note that in order for this command to work, you must have administrative privileges. If you do not have admin rights on your Mac, you will need to use sudo before the chmod command to grant yourself the necessary permissions.
+
+[RESPONSE]The GVFS mount is a user-space daemon which presents gvfs:// file systems to the desktop. It mounts remote filesystems and other network services as local file systems. This mounting allows applications such as Nautilus, Konqueror, and others to access remote files just like they would if they were on the local file system.
+
+GVFS is a GNOME project with the goal of providing a common file management interface for all sorts of networked storage devices including network servers, CD/DVD drives and digital cameras, USB keys etc. This includes file-systems, printers, scanners, document and image viewers, cameras, audio devices and more.
+
+GVFS is included in the default install of Fedora Linux, Ubuntu Linux and other modern Linux distributions.
+
+I've searched for this problem on this forum as well as google but did not find an answer. I am very new to Linux. After installation I got a "Failed to mount /home" error. I found the solution from this post: https://www.linuxquestions.org/questi...mount-home-err and entered sudo blkid which gave me this response:
+CODE
+/dev/sda1: UUID="f313cc5d-8ffb-492e-a628-15c0bf09b8f4" TYPE="ext4" PARTUUID="eb5ed578-520d-4ddc-b753-63d549872f1a"
+/dev/sda2: UUID="C7D7-6BAB" TYPE="swap" PARTLABEL="SWAPSPACE" PARTUUID="23b6e3c0-4dd9-44fa-bddf-78dbd8cea384"
+/dev/sda5: UUID="8F01-D266" TYPE="ntfs" PARTUUID="8ab2af4e-2e41-4c66-9ba2-5cfec77fbfa6"

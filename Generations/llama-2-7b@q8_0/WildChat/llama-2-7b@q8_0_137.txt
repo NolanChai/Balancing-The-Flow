@@ -1,0 +1,17 @@
+* subjective - we determine the magnitudes ourselves, using a scale of our own making.
+* objective - we can observe magnitude based on how much energy has been released.
+
+Objective:
+- PGA(peak ground acceleration)
+- PGV (peak ground velocity)
+- RMS(Root mean square)
+- HS(Harmonic standard deviation)
+- LF(Low frequency)
+- HF(High frequency)
+- DP(Damping percentage)
+Subjective:
+- Strength
+- Intensity
+
+### PGA
+$$\begin{align}	PGA=\sqrt{2}\left(\frac{\Delta^{2}}{\left( 1-\tan ^{2}(\gamma /2)\right)}\right)^{\frac{3}{2}}\end{align}$$

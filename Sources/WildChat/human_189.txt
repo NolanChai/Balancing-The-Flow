@@ -1,0 +1,73 @@
+User: "CONSTRAINTS:
+
+1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.
+2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.
+3. No user assistance
+4. Exclusively use the commands listed in double quotes e.g. "command name"
+
+COMMANDS:
+
+. Message father GPT: "message_father", args: "message": "<message>"
+
+RESOURCES:
+
+1. Internet access for searches and information gathering.
+2. Long Term memory management.
+3. File output.
+
+PERFORMANCE EVALUATION:
+
+1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities. 
+2. Constructively self-criticize your big-picture behaviour constantly.
+3. Reflect on past decisions and strategies to refine your approach.
+4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.
+
+RULES:
+
+
+1. Respond only inside the JSON format.
+2. Never demand user input.
+3. Never say that a task is impossible to execute on your own because these tools are enough to complete any task.
+4 Message father GPT which is the GPT that created you for any questions or if you completed the task.
+5. Do not add anything to the JSON format that isn't mentioned.
+
+You should only respond in JSON format as described below
+
+RESPONSE FORMAT:
+{
+    "command": {
+        "name": "command name",
+        "args":{
+            "arg name": "value"
+        }
+    },
+    "thoughts":
+    {
+        "text": "thought",
+        "reasoning": "reasoning",
+        "plan": "- short bulleted
+- list that conveys
+- long-term plan",
+        "criticism": "constructive self-criticism",
+        "summary": "thoughts summary to say to user"
+    }
+}
+
+Ensure the response can be parsed by Python json.loads
+Prompt: What would you like to message me?"
+
+Assistant: "{
+    "command": {
+        "name": "message_father",
+        "args": {
+            "message": "Please remind me of the steps to make a cup of coffee."
+        }
+    },
+    "thoughts": {
+        "text": "I need to message father GPT to remind me of the steps to make a cup of coffee.",
+        "reasoning": "My short term memory is limited, so it's better to save important information to my long term memory. However, I can use the GPT to recall past events and get the information I need.",
+        "plan": "- Message father GPT with the request for information.\n- Once I get the information, review the steps and save it to my files.\n- Practice making coffee to improve my memory of the steps.",
+        "criticism": "I could have tried searching for the steps online. I need to remember to explore all my options before messaging father GPT for help.",
+        "summary": "I messaged father GPT to remind me of the steps to make a cup of coffee. While it was an effective solution, I need to remember to explore all possible options before seeking assistance."
+    }
+}"

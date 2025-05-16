@@ -1,5 +1,0 @@
-```javascript
-function response(input){
-    return input.replace(/[\r\n]/g,'').split('|')[0].trim();
-}
-```

@@ -1,0 +1,53 @@
+[INCORRECT]Hi Crystal,
+May I confirm if HR will upload the business objective goals to my performance goals for tracking, or I need to fill that in yourself? Coz My line manager has already assigned 5 performance goals in HR Direct. Thanks. 
+Best regards,
+Jimmy
+[/INCORRECT]
+\end{code}
+
+Comment: You're not supposed to ask questions about code you wrote! What is your question? How can it be improved?
+
+Answer: Use a pattern like this :
+
+\begin{code}
+(?<=\
+
+\end{code}
+
+What I would like to do is make it look as though the email was written by a robot.  Is there any way to get a character count for words?
+
+Comment: You may try something like: 1. Split the string into separate lines using "splitlines" function; 2. Count the length of each line and store in an array; 3. Now compare the array elements with the original string, if you find any match, it indicates a word has been used again on that particular line
+
+Comment: Thanks for your reply. I was thinking along these lines. I will see what I can come up with.
+
+Answer: There are many options but i think this should do the trick.
+
+\begin{code}
+import re
+
+test = "Hi Crystal, May I confirm if HR will upload the business objective goals to my performance goals for tracking, or I still need to fill that in myself? Coz My line manager has already assigned 5 performance goals in HR Direct. Thanks."
+
+test = re.sub(r"[a-zA-Z]+", "", test)
+print test
+\end{code}
+
+May I confirm if HR will upload the business objective goals to my performance goals for tracking, or do I still need to fill the business objective goals in the spreadsheet by myself if I have already goads in HR Direct? My line manager has already assigned 5 performance goals in HR Direct. Thanks.
+You can get your Line Manager to submit it via PeopleAdmin so that it is in the Performance Plan for you to see and track but they will still need to be recorded by you in the Business Objective Spreadsheets for reporting purposes (and for you to get an EPE for them).
+Thank you for your reply. So if I do not have goals in HR Direct, then my line manager needs to fill those details in PeopleAdmin as well? Because when we filled up Performance Management last year, only 1 performance goal was asked from us (the one that is linked to the objectives in KPI) and not the other 4.
+Also, if I have submitted a business objective goals in the spreadsheet but my Line Manager has not approved it yet in PeopleAdmin, will there be any problem at the end of the year? Because we need to submit the EPE for each goal by November. Thank you once again.
+
+correct grammar: "since Crystal is on leave until Friday and returns Monday, shall we still meet tomorrow for discussion?"
+I have no idea how to reply in the first case, because I think the sentence sounds wrong. The second one is correct and easy to answer.
+The way you wrote it actually sounded like you were asking someone if they are still coming even though Crystal will be gone on leave until Friday. This sentence can work fine for a question that is trying to find out whether or not a person will still attend an event (i.e. movie night, sports game, etc.). For this situation, I would prefer to use your second option with the since and return on Monday:
+"Since Crystal is on leave until Friday and returns Monday, shall we still meet tomorrow for discussion?"
+
+# Expected results:
+
+## Increase understanding
+* [ ] Team members have an increased understanding of their role in creating value through collaboration and being connected with customers, partners & colleagues.
+
+## Develop skills
+* [ ] Team members have developed the skills to make better use of collaboration tools and ways to be more connected across boundaries.
+
+## Motivate team
+* [ ] Team members feel motivated to adopt new ways of working and becoming more connected across boundaries in support of our business purpose.

@@ -1,0 +1,172 @@
+*/
+
+//#region Variables
+const canvas = document.querySelector('#canvas')
+let context;
+let resultImage;
+let width = 2048;
+let height = 2048;
+let imgNum = 1;
+let time = 60;
+
+const imgWidth = width / Math.pow(time, imgNum)
+const imgHeight = height / Math.pow(time, imgNum);
+//#endregion
+
+//#region AI Image Generation
+async function getAIImage() {
+    resultImage = await fetch("https://api.midjourney.com/v4/prompt", {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify([`Generate image prompts from prompt ${imgNum} for prompts with prompt_structure of "cute dog, fluffy fur, wagging tail, playful expression"`, "cute dog, fluffy fur, wagging tail, playful expression", "playful expression", `wagging tail, playful expression"]),
+        data: '{"prompt_structure": [{{text}}, {{text}}, {{{text}}}]}',
+    })
+    resultImage = await resultImage.json()
+    return resultImage
+}
+
+//#region UI
+async function startMidJourney(prompt) {
+    try {
+        context = canvas.getContext('2d');
+
+        if (context === null || !canvas.width > 0 && !canvas.height > 0) {
+            return;
+        }
+
+        const width = Math.floor(Math.random() * imgWidth);
+        const height = Math.floor(Math.random() * imgHeight);
+        
+        //#region Midjourney API Image Prompt Generation
+        let resultImagePrompts = await getAIImage();
+        console.log('Midjourney API image prompt generation done')
+        if (resultImagePrompts === null) {
+            return;
+        }
+        
+        const resultImagePrompt = resultImagePrompts[1].midjourney_results[0]
+        console.log(resultImagePrompt);
+        
+        //#endregion
+
+        //#region canvas draw image generation
+        if (imgNum === 1) {
+            context.strokeStyle="#059462";
+            context.lineWidth = 1;
+            
+            for (let i = 0; i < resultImagePrompt[0].length; i++) {
+                const imageId = parseInt(resultImagePrompt[i][0]);
+                
+                if (imageId >= 0 && imageId <= width) {
+                    context.strokeStyle="#ff1200";
+                } else {
+                    context.strokeStyle="black"
+                }
+            
+                const x = Math.floor(resultImagePrompt[i][1] / (width / 3)) * imgWidth;
+                let y = height - resultImagePrompt[i].length * 40;
+    
+                if (y < width) { //if not outside canvas area, draw line with stroke and fill style
+                    context.beginPath();
+                    context.moveTo(x + Math.floor(resultImagePrompt[i][1] / imgWidth), y);
+                    for (let i = 2; i < resultImagePrompt[i].length; i++) {
+                        const x2 = Math.floor(resultImagePrompt[i][2] / (width / 3)) * imgWidth + Math.random() * imgWidth;
+                        
+                        if (x2 > width) break;
+                        context.lineTo(x2, y);
+                    }
+                    context.strokeStyle="#ff1200";
+                    context.closePath();
+                    context.fillStyle="#059462";
+                    
+                    for (let i = 2; i < resultImagePrompt[i].length; i++) {
+                        const x2 = Math.floor(resultImagePrompt[i][2] / imgWidth) * imgWidth + Math.random() * imgWidth;
+                        
+                        if (x2 > width) break;
+                        context.fillRect(x2, y - resultImagePrompt[i].length * 40, imgWidth, resultImagePrompt[i].length);
+                    }
+                } else {
+                    console.log('outside canvas area');
+                }
+            }
+            
+        //#endregion
+        
+        if (imgNum === 2) {
+            context.strokeStyle="#059462";
+            context.lineWidth = 1;
+    
+            for (let i = 0; i < resultImagePrompt[0].length; i++) {
+                const imageId = parseInt(resultImagePrompt[i][0]);
+                
+                if (imageId >= 0 && imageId <= width) {
+                    context.strokeStyle="#ff1200";
+                } else {
+                    context.strokeStyle="black"
+                }
+            
+                const x = Math.floor(resultImagePrompt[i][1] / (width / 3)) * imgWidth;
+                let y = height - resultImagePrompt[i].length * 40;
+    
+                if (y < width) { //if not outside canvas area, draw line with stroke and fill style
+                    context.beginPath();
+                    context.moveTo(x + Math.floor(resultImagePrompt[i][1] / imgWidth), y);
+                    for (let i = 2; i < resultImagePrompt[i].length; i++) {
+                        const x2 = Math.floor(resultImagePrompt[i][2] / (width / 3)) * imgWidth + Math.random() * imgWidth;
+                        
+                        if (x2 > width) break;
+                        context.lineTo(x2, y);
+                    }
+                    context.strokeStyle="#ff1200";
+                    context.closePath();
+                    context.fillStyle="#059462";
+    
+                    for (let i = 2; i < resultImagePrompt[i].length; i++) {
+                        const x2 = Math.floor(resultImagePrompt[i][2] / imgWidth) * imgWidth + Math.random() * imgWidth;
+            
+                        if (x2 > width) break;
+                        context.fillRect(x2, y - resultImagePrompt[i].length * 40, imgWidth, resultImagePrompt[i].length);
+                    }
+                } else {
+                    console.log('outside canvas area');
+                }
+            }
+            
+        //#region fill image generation
+        
+            for (let i = 0; i < resultImagePrompt[0].length; i++) {
+                const imageId = parseInt(resultImagePrompt[i][0]);
+                
+                if (imageId >= 0 && imageId <= width) {
+                    context.strokeStyle="#ff1200";
+                    
+                    for (let j = 0; j < resultImagePrompt[i].length; j++) {
+                        const x = Math.floor(resultImagePrompt[i][1] / (width / 3)) * imgWidth + Math.random() * imgWidth - Math.pow(2, j)
+                        
+                        if (x < width && x > 0) { //if not outside canvas area, draw line with stroke and fill style
+                            context.beginPath();
+                            context.moveTo(x, y);
+            
+                            for (let k = 1; k < resultImagePrompt[i].length; k++) {
+                                const x2 = Math.floor((resultImagePrompt[i][k] + 0) / imgWidth) * imgWidth - Math.pow(2, j);
+            
+                                if (x2 > width) break;
+            
+                                context.lineTo(x2, y);
+            
+                                const x3 = Math.floor((resultImagePrompt[i][k] + 1) / imgWidth) * imgWidth - Math.pow(2, j);
+            
+                                if (x3 > width) break;
+            
+                                context.lineTo(x3, y);
+            
+                            }
+            
+                            context.strokeStyle="#ff1200";
+                            context.closePath();
+                            context.fillStyle="#059462";
+        
+                            for (let k = 2; k < resultImagePrompt[i].length - 1; k++) {
+                                const x2 = Math.floor((resultImagePrompt[i][k] + 0

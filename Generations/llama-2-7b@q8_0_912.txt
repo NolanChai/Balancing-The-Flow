@@ -1,2 +1,0 @@
-
-- [ ] Use the `requires` method to tell your model how to perform this task. For example, you might use `requires` like this: `Model.prototype.find = function (options, callback) { if (options.callback) return this._performFind(options);`.

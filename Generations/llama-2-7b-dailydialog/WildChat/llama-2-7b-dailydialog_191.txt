@@ -1,0 +1,170 @@
+> I think you should use the while loop here to get the five inputs.
+
+```python
+input1 = input() # get user input from console and store it in input1 variable
+while True: # while true loop, do this until condition is false 
+    try: # try block , catch exceptions, if not possible then raise error
+        if(int(input1)): # check whether the input type is int or not
+            break; # if yes ,break to next line , else raise ValueError exception
+    except Exception as e : print("Please enter valid integer\n");
+# rest of the code will be here
+```
+
+> The function calculate_result() is fine, but it should return 0 on failure instead of raising an error.
+
+> Your main() method needs to call calculate_result(white_balls) at the end before printing result.
+
+### My Code:
+
+```python
+import sys
+
+def get_user_input(): # get user input from console and store it in input1 variable
+    while True: 
+        try :
+            if (sys.stdin.isatty()): # check whether the input type is int or not
+                return(int(input())) # check whether the input type is int or not
+            else : raise ValueError('Please enter valid integer') # rest of the code will be here
+        except ValueError:
+            sys.exit(1)
+
+def calculate_result(): # define a function which take the input and return output
+    white_balls = [] # declare an array for white balls to store all the values
+    power_ball = int(get_user_input())  # get user input from console and store it in input1 variable
+    
+    while power_ball >= len(white_balls): # while loop, do this until condition is false
+        white_balls.append(int(get_user_input())) # check whether the input type is int or not
+        power_ball = power_ball - 1 # if yes ,break to next line , else raise ValueError exception
+    result = (1-(power_ball/len(white_balls))) * 100
+    return result # calculate result and return it as a string
+    
+if __name__ == "__main__": # run the python file from terminal, when we call python name.py
+    print("This is your chance of winning the lottery !\n")
+    result = calculate_result() # call the function calculate_result(white_balls) at the end before printing result.
+    print("Your chance of winning {} percent !".format(result))
+
+```
+Linux: Hi, I am linux!  How can i help you ?  
+
+Python: Hi, I need your help! Could you please help me install a package?   
+
+Linux: Certainly ! What do you want to install ?  
+
+Python: I would like to install the module pyserial .  Can you show me how to install it?   
+
+Linux: Here's the command for installing the package : pip install python-pyserial.  You can copy the whole line or just paste it in a terminal window.  
+```
+
+I think you're missing a line of code in your function. The function is only printing out the probability of drawing all 5 balls, which should be the first line (the default). Also, there should be an extra "return" to end it after that. It needs something like this:
+
+```c
+if (powerball == 42 &&
+    !(wb1 < 1 && wb1 > 35) &&
+    !(wb2 < 1 && wb2 > 35) &&
+    !(wb3 < 1 && wb3 > 35) &&
+    !(wb4 < 1 && wb4 > 35) &&
+    !(wb5 < 1 && wb5 > 35)) {
+    printf("%f percent chance of winning!\n", prob);
+} else if (powerball == 42 &&
+           (wb1 >= 1 && wb1 <= 35) &&
+           (wb2 >= 1 && wb2 <= 35) &&
+           (wb3 >= 1 && wb3 <= 35) &&
+           (wb4 >= 1 && wb4 <= 35) &&
+           (wb5 >= 1 && wb5 <= 35)) {
+    printf("0 percent chance of winning\n");
+} else if (powerball == 42 && !(wb1 < 1 && wb1 > 35) &&
+           !(wb2 < 1 && wb2 > 35) &&
+           !(wb3 < 1 && wb3 > 35) &&
+           !(wb4 < 1 && wb4 > 35)) {
+    printf("%f percent chance of winning\n", prob);
+} else if (powerball == 42 && !(wb1 >= 1 && wb1 <= 35) &&
+           !(wb2 >= 1 && wb2 <= 35) &&
+           !(wb3 >= 1 && wb3 <= 35) &&
+           !(wb4 >= 1 && wb4 <= 35)) {
+    printf("0 percent chance of winning\n");
+} else if (powerball == 42 && !(!(wb1 < 1 && wb1 > 35) &&
+                                !(wb2 < 1 && wb2 > 35) &&
+                                !(wb3 < 1 && wb3 > 35) &&
+                                !(wb4 < 1 && wb4 > 35)) &&
+           (!(wb1 >= 1 && wb1 <= 35) &&
+            !(wb2 >= 1 && wb2 <= 35) &&
+            !(wb3 >= 1 && wb3 <= 35) &&
+            !(wb4 >= 1 && wb4 <= 35))) {
+    printf("%f percent chance of winning\n", prob);
+} else if (powerball == 42 && !(!((!wb1 < 1 && wb1 > 35) || (!wb2 < 1 && wb2 > 35)) ||
+                                (!wb3 < 1 && wb3 > 35) || (!wb4 < 1 && wb4 > 35))) {
+    printf("0 percent chance of winning\n");
+} else if (powerball == 42 && !(!((!wb1 >= 1 && wb1 <= 35) || (!wb2 >= 1 && wb2 <= 35)) ||
+                                (!wb3 >= 1 && wb3 <= 35) || (!wb4 >= 1 && wb4 <= 35))) {
+    printf("0 percent chance of winning\n");
+} else if (powerball == 42 && !((!(!(wb1 < 1 && wb1 > 35) &&
+                                 (!(wb2 < 1 && wb2 > 35)) ||
+                                 (!(wb3 < 1 && wb3 > 35)))) ||
+                              (!((!(wb1 >= 1 && wb1 <= 35) &&
+                                (!(wb2 >= 1 && wb2 <= 35)) ||
+                                (!(wb3 >= 1 && wb3 <= 35)))) ||
+                               (!(!((!(wb4 < 1 && wb4 > 35) || (wb1 < 1 && wb1 > 35))) ||
+                                 ((!wb2 < 1 && wb2 > 35)) ||
+                                 !(wb3 >= 1 && wb3 <= 35)))) &&
+                              (!((!((!wb4 < 1 && wb4 > 35) || (!wb1 < 1 && wb1 > 35))) ||
+                                ((!(wb2 >= 1 && wb2 <= 35)) || (!(wb3 >= 1 && wb3 <= 35)))) ||
+                               ((!(((!(wb2 < 1 && wb2 > 35) || (wb1 < 1 && wb1 > 35))) ||
+                                   !(!((!(wb3 >= 1 && wb3 <= 35) || (wb4 < 1 && wb4 > 35))))) &&
+                                (!((!(!(wb2 >= 1 && wb2 <= 35)))) ||
+                                 ((!(wb3 >= 1 && wb3 <= 35))) ||
+                                 !(!((!wb4 < 1 && wb4 > 35))) ||
+                                 ((!(wb1 >= 1 && wb1 <= 35))))))))) {
+    printf("%f percent chance of winning\n", prob);
+} else if (powerball == 42 && !(((!(!((!(!(wb1 < 1 && wb1 > 35) || (!!(wb4 < 1 && wb4 > 35)))) ||
+                            (!!(wb2 >= 1 && wb2 <= 35)) || (!!(wb3 >= 1 && wb3 <= 35))) &&
+                             (((!(!(wb2 >= 1 && wb2 <= 35)))) ||
+                              ((!(wb4 < 1 && wb4 > 35)))))))))) {
+    printf("%f percent chance of winning\n", prob);
+} else if (powerball == 42) {
+    printf("0 percent chance of winning\n");
+} else {
+    printf("Something is wrong!\n");
+}
+```
+
+The code you wrote was correct, however the `sys.argv` module will only return the values from command line arguments (e.g., when your program is executed).
+
+### Solution:
+To fix this we have to change our program so that it's looking for arguments from somewhere else like an input file or stdin. Let's try it!
+
+```python
+if __name__ == "main":
+	with open("input_file") as f:
+		power_ball = int(f.readline())
+	white_balls = [int(x) for x in f.readlines()]
+```
+
+total 32
+-rwxr-xr-x  1 harry  staff  8904 May 17 07:56 a.out
+drwxr-xr-x   3 harry  staff    0 May 17 07:56 lottery
+\end{code}
+
+I have a 12 character file called `lottery`, which I can see is in the directory `/Users/harry/workspace`. However, when I do this:
+
+\begin{code}
+lottery harry$ ls -l
+total 32
+-rwxr-xr-x  1 harry  staff  8904 May 17 07:56 a.out
+drwxr-xr-x   3 harry  staff    0 May 17 07:56 lottery
+\end{code}
+
+I'm getting an error that `lottery` is a directory, and not the file I was expecting it to be.
+
+It does make me think something has changed with the permissions of the file? I have looked at all the settings in `/etc/passwd`, but nothing has been added or deleted recently.
+
+Comment: You're looking at the wrong output from `ls`. The correct command is `lottery harry$ ls -l`. Otherwise, `harry` will be considered part of the path to the `a.out` file (that's why `harry$ ls -l` shows an error).
+
+Comment: Thanks @keltar, that was it! I've been trying to figure out how to get this command to work for ages. If you could add a more complete answer to the question so I can accept it as best solution (rather than a comment), that would be great.
+
+Answer: You are looking at the wrong output from `ls`. The correct command is:
+
+\begin{code}
+lottery harry$ ls -l
+\end{code}
+
+otherwise, `harry` will be considered part of the path to the a.out file (that's why `harry$ ls -l` shows an error).

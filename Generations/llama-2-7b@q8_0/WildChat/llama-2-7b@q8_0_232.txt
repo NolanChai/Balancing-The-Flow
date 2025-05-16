@@ -1,0 +1,28 @@
+# Data Source Description
+* 财务分类：净利润。
+* 业务分类：网络收入
+* 数据来源：云锐企业管理平台(SAP-CM)
+* 数据单位：万元
+
+# Metadata Information
+```js
+var fields = [
+    {name: "date", label: "日期", type: "string"},
+    {name: "region", label: "地区", type: "string"},
+    {name: "net_revenue", label: "网络收入", type: "number"},
+];
+var dimensions = [
+    {name: "date", type: "string"},
+    {name: "region", type: "string"}
+];
+var measures = [
+    {name: "net_revenue", type: "number"}
+]
+``` 
+
+# Data Analysis
+
+| 名称 | 描述 |
+| --- | --- |
+| `region` | 地区：北京，天津，上海，重庆，河北，山东，陕西，广东，江苏，湖北，湖南，安徽，贵州，四川，云南，辽宁|
+| `date` | 时间：2017-05-31|

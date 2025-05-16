@@ -1,0 +1,28 @@
+The script returns the first row.
+
+    = Table.FirstRow(Table[#"Customers"], null, null, {"Billing Country_Code", "Billing Country_Name"}, null)
+    
+### Explanation:
+
+The script uses `Table.FirstRow` to return only the first row from `Customers`. This can be achieved by providing a table with columns that you want to select data from and filter conditions (null or empty strings are not required).
+
+In this case, we provide two arguments for `Table.FirstRow`: the table name (`#"Customers"`), and the column names (`{"Billing Country_Code", "Billing Country_Name"}`) that we want to select data from. The third argument is optional and can be used to filter out rows based on conditions like null or empty strings, in our case it will return only `FirstRow` regardless of these filters.
+
+The fourth argument (`null`, `null`, `null`) specifies the order of the columns, indicating that we want the column names in ascending order (the default is descending order). This means that the first column in the table becomes the second column returned by `Table.FirstRow`.
+
+In this example, the result will be the row with the Billing Country_Code and Billing Country_Name values.
+
+Getting Error: DataFormat.Error: We couldn't convert to Number.
+Details:
+    ControlDimension
+\end{code}
+
+Comment: Please share the code for the same, or else this is just a guess
+
+Answer: Try this:
+
+\begin{code}
+const myArray = [13702989692.592742, 13702989693.10277]
+myArray.map(x => Number(x))
+console.log(myArray)
+\end{code}

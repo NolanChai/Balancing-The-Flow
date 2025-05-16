@@ -1,0 +1,10 @@
+[REV]The voltage across a capacitor, C, is given by: $v_{C}(t) = Q_{c}/C$ where $Q_c$ is the charge stored on it.
+
+The current that flows in an RC circuit is given by: $i(t)=CdV/dt$
+
+Substituting in the voltage for a capacitor we have: $I=CV_{0}d(1-e^{-tRC})/dt = CV_{0}RC e^{-tRC}$
+
+Now that we have the current, we can find out how much charge is flowing through the circuit by integrating: $Q=\int{Idt}=\int_{0}^{\infty}CV_{0}RC e^{-tRC}dt = Cv_{0}$
+
+Then we use Ohm’s Law to solve for current.
+$I=V/R = 9 V / 15 \Omega = 0.6 A$. [/REV]

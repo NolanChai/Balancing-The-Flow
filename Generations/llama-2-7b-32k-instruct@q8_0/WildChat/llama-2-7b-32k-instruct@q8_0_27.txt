@@ -1,0 +1,112 @@
+邮件服务器，排除了某些范围的IP地址或主机名称，但不会完全阻止SSH进入。如果你想要尝试使用SSH，可以使用一个名为`sshd.conf`的配置文件来限制SSH连接。
+
+以下是一个示例配置文件，其中将禁止所有IP地址和主机名称：
+```
+# 禁止SSH连接
+OrderAllow, deny    # 降低出错的可能性
+Deny IPv4 ::/0        # 禁止所有IPv4地址
+Deny IPv6 ::/0        # 禁止所有IPv6地址
+Deny Host *              # 禁止所有主机名称
+```
+在这个配置文件中，`OrderAllow, deny` 指定了许可列表的顺序。第一个键/值对是排除列表，即不允许SSH连接。
+
+`Deny IPv4 :: / 0` 和 `Deny IPv6 :: / 0` 分别禁止了所有IPv4和IPv6地址。
+
+`Deny Host *` 禁止了所有主机名称。
+
+在配置文件中添加以上的条目后，请重新启动ssh服务器：
+```
+sudo /etc/init.d/ssh restart
+```
+如果你想要让SSH连接失败，可以使用一个名为`sshd_config`的配置文件。例如，你可以在这个配置文件中添加以下条目来禁止所有IP地址和主机名称：
+```
+# 禁止SSH连接
+OrderAllow, deny    # 降低出错的可能性
+Deny IPv4 ::/0        # 禁止所有IPv4地址
+Deny IPv6 :: / 0      # 禁止所有IPv6地址
+Deny Host *              # 禁止所有主机名称
+```
+在这个配置文件中，`OrderAllow, deny` 指定了许可列表的顺序。第一个键/值对是排除列表，即不允许SSH连接。
+
+`Deny IPv4 :: / 0` 和 `Deny IPv6 :: / 0` 分别禁止了所有IPv4和IPv6地址。
+
+`Deny Host *` 禁止了所有主机名称。
+
+在配置文件中添加以上的条目后，请重新启动ssh服务器：
+```
+sudo /etc/init.d/ssh restart
+```
+如果你想要限制SSH连接，可以使用一个名为`sshd.conf`的配置文件。例如，你可以在这个配置文件中添加以下条目来禁止某些IP地址和主机名称：
+```
+# 禁止SSH连接
+OrderAllow, deny    # 降低出错的可能性
+Deny IPv4 192.168.1.0/24        # 禁止某个IPv4地址范围（256字节）
+Deny Host example.com       # 禁止某个主机名称
+```
+在这个配置文件中，`OrderAllow, deny` 指定了许可列表的顺序。第一个键/值对是排除列表，即不允许SSH连接。
+
+`Deny IPv4 192.168.1.0 / 24` 禁止了IP地址范围192.168.1.0/24。
+
+`Deny Host example.com` 禁止了主机名称example.com。
+
+在配置文件中添加以上的条目后，请重新启动ssh服务器：
+```
+sudo /etc/init.d/ssh restart
+```
+如果你想要限制SSH连接到某个特定的IP地址和主机名称，可以使用一个名为`sshd_config`的配置文件。例如，你可以在这个配置文件中添加以下条目来禁止所有IP地址和主机名称除了某些特定的：
+```
+# 限制SSH连接
+OrderAllow, deny    # 降低出错的可能性
+Deny IPv4 :: / 0        # 禁止所有IPv4地址，几乎所有情况下
+Deny IPv6 :: / 0      # 禁止所有IPv6地址
+Deny Host *              # 禁止所有主机名称
+AllowIPv4 192.168.1.0 / 24    # 允许某个IPv4地址范围（256字节）
+AllowHost example.com       # 允许主机名称example.com
+```
+在这个配置文件中，`OrderAllow, deny` 指定了许可列表的顺序。第一个键/值对是排除列表，即不允许SSH连接。
+
+`Deny IPv4 :: / 0` 和 `Deny IPv6 :: / 0` 分别禁止了所有IPv4和IPv6地址。
+
+`Deny Host *` 禁止了所有主机名称。
+
+`AllowIPv4 192.168.1.0 / 24` 允许某个IPv4地址范围（256字节）。
+
+`AllowHost example.com` 允许主机名称example.com。
+
+在配置文件中添加以上的条目后，请重新启动ssh服务器：
+```
+sudo /etc/init.d/ssh restart
+```
+如果你想要限制SSH连接到某个特定的IP地址和主机名称，可以使用一个名为`sshd_config`的配置文件。例如，你可以在这个配置文件中添加以下条目来禁止所有IP地址和主机名称，并且允许SSH连接到某个特定的IP地址和主机名称：
+```
+# 限制SSH连接
+OrderAllow, deny    # 降低出错的可能性
+Deny IPv4 :: / 0        # 禁止所有IPv4地址，几乎所有情况下
+Deny IPv6 :: / 0      # 禁止所有IPv6地址
+Deny Host *              # 禁止所有主机名称
+AllowIPv4 192.168.1.0 / 24    # 允许某个IPv4地址范围（256字节）
+AllowHost example.com       # 允许主机名称example.com
+```
+在这个配置文件中，`OrderAllow, deny` 指定了许可列表的顺序。第一个键/值对是排除列表，即不允许SSH连接。
+
+`Deny IPv4 :: / 0` 和 `Deny IP
+
+1. Open the SSH client on your Windows machine. 
+2. Connect to the remote server using the SSH client. 
+3. Run the command "ssh-keyscan <hostname>". This will scan for known hosts on the local network and remove any entries that match the hostname you provided. 
+4. If there are no matches, the command will print nothing. 
+5. To clean up all known hosts, run the following command: "ssh-keyscan -H"
+
+Note: The -H option tells ssh-keyscan to scan all known hosts on the local network, rather than just the ones that have been added as a trusted host in your SSH client configuration file. 
+
+Also note that you can also use the command "ssh-keygen" with the "-t rsa" option to generate an RSA key and add it to the known hosts file on the remote server. 
+
+It's important to note that adding a new host to the known hosts file on the remote server will not automatically update the local known_hosts file, so you may need to run the command "ssh-keyscan -H" again after adding a new host to ensure that the updated list of known hosts is reflected on your local machine.
+
+* You should use a different method to generate an SSH key.
+  
+  * Use the command `ssh-keyscan` instead of `ssh-keygen`.
+  
+  * The `ssh-keygen` command is used for generating SSH keys, but it's not suitable for generating them on a system with no local storage available (e.g., a cloud instance). Instead, you can use the `ssh-keyscan` command to generate an SSH keypair and store it in a secure location, such as a USB drive or a file share.
+  
+  * Here's an example of how to use `ssh-keyscan` to generate an SSH keypair:

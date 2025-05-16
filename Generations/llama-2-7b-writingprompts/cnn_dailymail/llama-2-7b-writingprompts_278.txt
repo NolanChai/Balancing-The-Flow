@@ -1,0 +1,19 @@
+```python
+'Lionel Messi and Cristiano Ronaldo are billed as two great rivals of modern day football but if former Brazil striker Ronaldo has his way, they could one day be in the same team. The 2002 World Cup winner revealed that he would like to see the two players join forces with a move to Barcelona for Messi or Real Madrid for Cristiano.'
+
+'Ronaldo said: "I can see them playing together at either club."
+
+'Messi and Ronaldo have been the top scorers in La Liga over the last decade and are widely regarded as two of the greatest players to have played the game. However, they are rivals on the pitch as Messi plays for Barcelona while Cristiano has played for Real Madrid throughout his career so far.'
+```
+### Solution:
+1. [Lionel Messi and Cristiano Ronaldo are billed as two great rivals of modern day football but if former Brazil striker Ronaldo has his way, they could one day be in the same team.](https://www.thesun.co.uk/sport/football/4129469/lionel-messi-and-cristiano-ronaldo-are-billed-as-two-great-rivals-of-modern-day-football-but-if-former-brazil-striker-ronaldo-has-his-way-they-could-one-day-be-in-the-same-team/)
+2. [The 2002 World Cup winner revealed that he would like to see the two players join forces with a move to Barcelona for Messi or Real Madrid for Cristiano.](http://www.dailymail.co.uk/sport/football/article-3614975/Lionel-Messi-Cristiano-Ronaldo-play-together-Brazil-s-2002-World-Cup-winner-Ronaldo-claims-superstars-could-join-Barcelona-Real-Madrid.html)
+3. [Messi and Ronaldo have been the top scorers in La Liga over the last decade and are widely regarded as two of the greatest players to have played the game.](https://www.thesun.co.uk/sport/football/1762109/lionel-messi-and-cristiano-ronaldo-are-the-greatest-players-of-all-time/)
+4. [However, they are rivals on the pitch as Messi plays for Barcelona while Cristiano has played for Real Madrid throughout his career so far.](http://www.dailymail.co.uk/sport/football/article-2763741/Ronaldo-wants-players-join-Barcelona-Madrid--Lionel-Messi-Cristiano-Ronaldo-rivalry-not-confined-pitch.html)
+### Result:
+- [x] Lionel Messi and Cristiano Ronaldo are billed as two great rivals of modern day football but if former Brazil striker Ronaldo has his way, they could one day be in the same team. The 2002 World Cup winner revealed that he would like to see the two players join forces with a move to Barcelona for Messi or Real Madrid for Cristiano.
+- [x] Messi and Ronaldo have been the top scorers in La Liga over the last decade and are widely regarded as two of the greatest players to have played the game. However, they are rivals on the pitch as Messi plays for Barcelona while Cristiano has played for Real Madrid throughout his career so far.
+### Discussion:
+I am using NLTK word_tokenize and nltk_tagger in order to extract the information out of sentences that I want. For instance, I used nltk.pos_tag() to tag all the nouns as 'NN' for name, adjectives as 'JJ' for year, pronouns as 'PRP', and verbs as 'VB'. After I have extracted all the information from my sentences using word_tokenize or nltk_tagger, then I can create a list of dictionaries out of these words that have been tagged. And finally, I will use dict.fromkeys() to extract the data that I want out of this dictionary and store it in another dictionary.
+### Notes:
+I have made some mistakes with the coding because this is my first time doing such a project using NLTK. There are some punctuations in these sentences which made me confused with the tagging. For example, when I had to extract 'The' from the word 'The 2002 World Cup winner' and then I wanted to tag it as 'NN'. I was not able to do so because I am still learning about NLTK.

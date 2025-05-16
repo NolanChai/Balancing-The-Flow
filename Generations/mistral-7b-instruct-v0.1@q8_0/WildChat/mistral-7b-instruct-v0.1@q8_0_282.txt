@@ -1,0 +1,66 @@
+When deploying PHP to a Windows environment with IIS, you may encounter the following error message: "PHP Request Startup: open_basedir restriction in effect." This error occurs when the PHP startup script is unable to access files or directories due to a security setting.
+
+The "open\_basedir" directive in the PHP configuration file specifies the maximum number of levels allowed for including files or directories from outside the current directory in a PHP script. If this directive is set too low, you may encounter issues when trying to run PHP scripts that require access to files and directories that are not directly related to the script.
+
+To resolve this issue, you can try increasing the "open\_basedir" value in your PHP configuration file (php.ini) to allow access to the necessary files or directories. The value should be set to an absolute path, and should include all levels of nested directories if needed.
+
+For example, if a script requires access to a file located at "C:\example.txt", you would set "open\_basedir" to something like:
+```css
+open_basedir = C:\
+```
+Alternatively, you can try setting the value to "all\_urls" or "unsafe\_includes", but be cautious when using these settings as they may expose your PHP installation to potential security threats.
+
+If increasing the "open\_basedir" directive does not resolve the issue, you may need to modify your PHP script to only include files and directories that are allowed by the directive value. This can involve using relative paths instead of absolute paths, or reorganizing your file structure to better comply with the open\_basedir setting.
+
+You're right! `${var}` is actually an escape sequence for a variable in JavaScript. It is used to insert the value of a variable into a string literal. However, it's not recommended to use this syntax because it can lead to security vulnerabilities if the input data isn't properly sanitized.
+
+Instead, you should use template literals (also known as template strings) to achieve the same result. Template literals allow you to insert variables directly into a string using `${variableName}` syntax. They also provide better functionality than regular expressions when it comes to interpolating values, such as allowing for multi-line strings and better support for backticks and escape sequences.
+
+Here's an example of how to use template literals to insert variables into a string:
+```javascript
+const name = 'John Doe';
+const age = 30;
+
+const message = `Hello, ${name}! You are ${age} years old.`;
+console.log(message); // Output: Hello, John Doe! You are 30 years old.
+```
+It's worth noting that using template literals with template string interpolation is a newer feature in JavaScript and may not be supported by older browsers. In such cases, you may need to use regular expressions or other techniques for inserting variables into strings.
+
+在 PHP 中，你可以使用 `display_errors()` 函数来开关打印出错误信息。
+
+1. 如果你想打印出所有的错误信息，可以调用 `error_reporting(E_ALL)` 函数：
+```php
+// 打印出所有的错误信息
+error_reporting(E_ALL);
+display_errors();
+```
+2. 如果你只想打印出语法错误、警告和致命错误，可以调用 `error_reporting(E_ERROR | E_WARNING | E_PARSE)` 函数：
+```php
+// 打印出语法错误、警告和致命错误
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+display_errors();
+```
+3. 如果你只想打印出致命错误，可以调用 `error_reporting(E_CORE_ERROR)` 函数：
+```php
+// 打印出致命错误
+error_reporting(E_CORE_ERROR);
+display_errors();
+```
+4. 如果你想关闭所有的错误输出，可以调用 `error_reporting(0)` 函数：
+```php
+// 关闭所有的错误输出
+error_reporting(0);
+```
+注意：这些函数只影响 PHP 内部的错误输出，如果你想在 HTML 中打印出错误信息，需要使用 `<?php error_reporting(E_ALL); ?>` 或者 `<?php display_errors(); ?>` 等方式。
+
+IIS (Internet Information Services) is a web server software developed by Microsoft. It can run on various operating systems such as Windows, Linux, and Unix. PHP (Hypertext Preprocessor) is a scripting language used to create dynamic websites. It runs on the web server and executes code to generate content for web pages.
+
+To avoid using deprecated features in IIS and PHP, you can follow these steps:
+
+1. Keep your software up-to-date: Regularly update your version of IIS and PHP to the latest stable releases. Updates often include security patches and bug fixes, as well as improvements and new features.
+2. Use a content delivery network (CDN): A CDN can help reduce server load and improve page speed by caching static assets such as images and videos on servers closer to your users. This can also help avoid issues with deprecated features by offloading some of the work to third-party servers.
+3. Optimize database queries: If your website uses a database, optimizing queries can help reduce server load and improve page speed. You can use tools such as SQL Server Management Studio or MySQL Workbench to analyze and optimize queries.
+4. Minimize HTTP requests: Reducing the number of HTTP requests can also help improve page speed. You can combine multiple CSS and JavaScript files into one file, use image compression tools, and reduce the number of external resources such as scripts and fonts.
+5. Use server-side caching: Server-side caching can help reduce database load and improve page speed by caching frequently accessed data in memory. You can use tools such as ASP.NET Cache or Memcached to implement server-side caching.
+6. Monitor server performance: Regularly monitor your server's performance using tools such as System Monitor, IIS Manager, or third-party monitoring software. This can help you identify potential bottlenecks and optimize your website accordingly.
+7. Use modern web frameworks: Using modern web frameworks such as Laravel, CodeIgniter, or ASP.NET Core can help avoid deprecated features by providing a more modern and up-to-date development environment. These frameworks often include built-in support for best practices and security features.

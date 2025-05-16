@@ -1,0 +1,7 @@
+```javascript
+    function findAndReplace(str) {
+        var str = "It was staring at me. It was always staring at me, with those too-large black eyes, the head turning slightlly to follow me as I walked past it. Chains clinked as it shifted position, flared its fins and stared at me with its evil, vacant eyes.";
+        var reg = new RegExp("(staring)", "g");
+        return str.replace(/staring/gi, "starring"); // starring at me. It was always staring at me, with those too-large black eyes, the head turning slighltly to follow me as I walked past it. Chains clinked as it shifted position, flared its fins and stared at me with its evil, vacant eyes.
+    }
+```

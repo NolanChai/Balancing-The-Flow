@@ -1,0 +1,12 @@
+[code]
+$cat =  "With the helpless animals clutched tightly under his arms, this is the moment a suspected dog thief made off with two beloved family pets. Pekingese Marley and Mitzy had been left to play in the front"
+
+$pattern = @"(?<=With the helpless animals clutched tightly under his arms, this is the moment a suspected dog thief made off with two beloved family pets\. Pekingese Marley and Mitzy had been left to play in the front)";
+
+var result = Regex.Replace($cat, $pattern,"<img src='images/dog.jpg'/>");
+Console.WriteLine(result);
+
+[/code]
+
+### Result:
+<img src="images/dog.jpg" />

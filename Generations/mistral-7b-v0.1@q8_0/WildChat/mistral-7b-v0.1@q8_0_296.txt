@@ -1,0 +1,151 @@
+
+
+[INST2]implement a full implementation of the specification, not only parts[/INST2]
+
+[IMPL]Please implement the specifications (see link below).[/IMPL]
+
+[IMPL2]Please implement the whole specifications.[/IMPL2]
+
+# 1. Purpose
+
+This document explains how to use and extend the CERN Open Hardware License.
+
+The CERN OHL is a free license for hardware, firmware, software, or documentation that has been created under the CERN OHL v.2.0. The CERN OHL provides users with permission to copy, modify, create derivatives and distribute this material. It also protects the rights of the original authors of this work by requiring attribution from any user of the CERN OHL licensed work.
+
+The purpose of this document is to explain how you can extend the CERN Open Hardware License v1.2 and use it in your own projects or with existing hardware designs, firmware, software or documentation that has already been published under a CERN Open Hardware License v1.2. It explains the difference between the original license (v1.2) and any extension to this license.
+
+## 1.1. What is the CERN OHL?
+
+The CERN Open Hardware License is an open source hardware license. The CERN OHL permits use, modification, and distribution of hardware designs, firmware, software, or documentation that has been published under the terms of the CERN OHL.
+
+In its latest version (v2.0), it contains several clauses that protect the intellectual property of authors:
+
+- Clause 1: Permission to copy, modify and create derivatives: Users are allowed to make a derivative work from any hardware design or documentation licensed under the CERN OHL. The author will be recognized in all copies of such works. Users can use, modify and distribute this material in accordance with this license.
+- Clause 2: Permission to distribute original and derived work: Users can distribute (in original form or as a derivative) their hardware designs or documentation licensed under the CERN OHL for any purpose. However, if the distribution is commercial, they must make a reasonable effort to offer the source material.
+- Clause 3: Attribution: Original authors of hardware designs or documentation published under the CERN OHL must be attributed by name in all copies, modifications and derivatives (including all publicity) of their work.
+
+The CERN OHL is a free license for hardware designs, firmware, software, or documentation that has been created under the terms of the CERN OHL v1.2. The license grants permission to copy, modify, create derivatives and distribute this material (see link below). It also protects the rights of the original authors by requiring attribution from any user of the CERN OHL licensed work.
+
+# 2. Extension of the CERN Open Hardware License v1.2
+
+The CERN OHL can be extended to a specific license for a particular project, and it is recommended that you use the most recent version of the CERN OHL. There are two options available:
+
+- The first option is to add an extension clause to your work if you want to allow the modification and distribution of your design under additional terms.
+- The second option is to create a completely new license based on the CERN OHL that covers your specific use case, without adding any additional clauses or conditions. This document describes both options in detail.
+
+## 2.1. Option 1: Add an extension clause
+
+When you want to extend your original CERN OHL licensed work with new terms and conditions, you can add a clause at the end of your license document that defines these additional restrictions or rights for users (see link below). In this case, your project is still considered to be fully covered by the CERN OHL.
+
+To add an extension clause to your original CERN OHL licensed work:
+
+- Add a new section at the end of your license document that defines the additional terms and conditions for users (see link below). For example: "If you use this hardware design, firmware or documentation in any way other than as permitted by the terms of this license, you agree to be bound by these additional restrictions."
+- Make sure that this clause is included in all copies of your original work.
+
+## 2.2. Option 2: Create a new CERN OHL extension license
+
+When you want to create a completely new CERN OHL extension license that covers a specific use case, without adding any additional clauses or conditions, you must submit your proposed license to the CERN Open Hardware License Committee for review and approval (see link below). This process can take up to six months.
+
+To create a new CERN OHL extension license:
+
+- Submit your proposed license to the CERN Open Hardware License Committee for review and approval. The committee will then consider whether it meets all of the criteria outlined in this document, as well as whether it is consistent with other existing CERN OHL licenses. If approved by the committee, they will publish your new license on their website (see link below).
+- Make sure that any original work published under your new CERN OHL extension license is also licensed under an earlier version of the CERN Open Hardware License (v1.2 or v2.0) and contains a statement to this effect in its legal notice section (see link below). For example: "This hardware design, firmware or documentation is licensed under both this new license and the CERN OHL v1.2."
+- Add a copy of your new license to all copies of your original work published under the earlier version of the CERN Open Hardware License (v1.2 or v2.0). This will ensure that anyone using your original work is aware of their rights and obligations under both licenses. For example: "This hardware design, firmware or documentation is licensed under both this new license and the CERN OHL v2.0."
+
+# 3. CERN Open Hardware License Committee
+
+The CERN Open Hardware Licensing Committee (OHLC) reviews all proposals for extending the CERN OHL. The OHLC includes representatives from various organizations and individuals who are interested in ensuring that the CERN OHL is used correctly and consistently across multiple projects.
+
+To contact the CERN OHL Committee:
+
+- Send an email to ohlc@cern.ch with your proposal for extending the CERN Open Hardware License v1.2. Include information about why you want to use this license, how it will be applied in practice, and what specific terms or conditions need to be added (see link below).
+- The committee will review your proposal and provide feedback if necessary before publishing a new version of the CERN OHL on their website (see link below).
+- If approved by the committee, they will publish your new license on their website (see link below).
+
+# 4. Conclusion
+
+The CERN Open Hardware License is an open source hardware license that provides users with permission to copy, modify and distribute hardware designs under certain terms and conditions. It also protects the rights of the original authors by requiring attribution from any user who uses their design for any purpose whatsoever (see link below).
+
+To extend your original CERN OHL licensed work:
+
+- Add an extension clause to your license document if you want to allow the modification and distribution of your design under additional terms. In this case, your project is still considered to be fully covered by the CERN OHL.
+- Create a completely new CERN OHL extension license that covers a specific use case without adding any additional clauses or conditions if you want to create a completely new license based on the CERN OHL that covers your specific use case without adding any additional clauses or conditions (see link below). This process can take up to six months.
+- Make sure that any original work published under your new CERN OHL extension license is also licensed under an earlier version of the CERN Open Hardware License (v1.2 or v2.0) and contains a statement to this effect in its legal notice section (see link below). For example: "This hardware design, firmware or documentation is licensed under both this new license and the CERN OHL v2.0."
+- Add a copy of your new license to all copies of your original work published under the earlier version of the CERN Open Hardware License (v1.2 or v2.0). This will ensure that anyone using your original work is aware of their rights and obligations under both licenses. For example: "This hardware design, firmware or documentation is licensed under both this new license and the CERN OHL v2.0."
+- To contact the CERN Open Hardware Licensing Committee (OHLC), send an email to ohlc@cern.ch with your proposal for extending the CERN Open Hardware License v1.2. Include information about why you want to use this license, how it will be applied in practice and what specific terms or conditions need to be added (see link below). The OHLC includes representatives from various organizations who are interested in ensuring that the CERN OHL is used correctly and consistently across multiple projects (see link below).
+- If approved by the committee they will publish your new license on their website (see link below).
+
+[OUT]
+
+- When client sends “read filename” command to the server, server should fetch the file and return the contents of that file back to the client.
+
+[INSTRUCTIONS]
+
+- Please try to implement this functionality without any changes in the existing code as much as possible. If you need to add some more files, please mention them in your submission.
+- You can use whatever server-client protocols you want (but it should be different from the one we are using) or just modify the current implementation(just make sure that they have no problem in communicating with each other).
+- You need to implement this functionality both on the client and the server sides.
+
+[NOTES]
+
+- If you can’t handle all of the requests in a single server, please create 2 servers (master and slave) or more based on your requirement. Make sure they are able to communicate with each other.
+
+## Submission Guidelines:
+
+Please submit an archive of your source code along with README file describing all the steps required to setup the project.
+
+## Grading Criteria:
+
+- 20% for the correctness of functionality and documentation
+- 20% for performance
+
+[RE]gives this error when i compile: server.c: In function ‘main’:
+server.c:25:65: error: invalid use of void expression
+   25 |     struct shared_data data = (struct shared_data) shmat(shmid, (void)0, 0);
+      |                                                                 ^~~~~~~
+server.c:26:19: error: invalid type argument of ‘->’ (have ‘struct shared_data’)
+   26 |     sem_init(&data->semaphore, 1, 1);
+      |                   ^~
+server.c:29:23: error: invalid type argument of ‘->’ (have ‘struct shared_data’)
+   29 |         sem_wait(&data->semaphore);
+      |                       ^~
+server.c:30:24: error: invalid type argument of ‘->’ (have ‘struct shared_data’)
+   30 |         if (strlen(data->command) > 0) {
+      |                        ^~
+server.c:32:13: error: cannot convert to a pointer type
+   32 |             pthread_create(&thread_id, NULL, thread_handler, (void *)data);
+      |             ^~~~~~~~~~~~~~
+server.c:32:46: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+   32 |             pthread_create(&thread_id, NULL, thread_handler, (void *)data);
+      |                                              ^~~~~~~~~~~~~~
+      |                                              |
+      |                                              void * (*)(void)
+In file included from server.c:4:
+/usr/include/pthread.h:204:36: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(void)’
+  204 |                            void *(*__start_routine) (void *),
+      |                            ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+server.c:35:24: error: invalid type argument of ‘->’ (have ‘struct shared_data’)
+   35 |             memset(data->command, 0, sizeof(data->command));
+      |                        ^~
+server.c:35:49: error: invalid type argument of ‘->’ (have ‘struct shared_data’)
+   35 |             memset(data->command, 0, sizeof(data->command));
+      |                                                 ^~
+server.c:37:23: error: invalid type argument of ‘->’ (have ‘struct shared_data’)
+   37 |         sem_post(&data->semaphore);
+      |                       ^~
+server.c:40:11: error: incompatible type for argument 1 of ‘shmdt’
+   40 |     shmdt(data);
+      |           ^~~~
+      |           |
+      |           struct shared_data
+In file included from server.c:7:
+/usr/include/x86_64-linux-gnu/sys/shm.h:69:31: note: expected ‘const void *’ but argument is of type ‘struct shared_data’
+   69 | extern int shmdt (const void *__shmaddr) __THROW;
+      |                   ~~~~~~~~~~~~^~~~~~~~~
+server.c: At top level:
+server.c:45:7: error: conflicting types for ‘thread_handler’; have ‘void *(void *)’
+   45 | void *thread_handler(void *arg) {
+      |       ^~~~~~~~~~~~~~
+server.c:19:7: note: previous declaration of ‘thread_handler’ with type ‘void *(void)’
+   19 | void *thread_handler(void arg);
+      |       ^~~~~~~~~~~~~~[/RE]
+

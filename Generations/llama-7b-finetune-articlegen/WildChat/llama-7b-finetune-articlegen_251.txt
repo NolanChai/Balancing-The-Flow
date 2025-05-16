@@ -1,0 +1,9 @@
+<Results>
+    <Result ObjectKey="49204" ObjectType="InvoiiceItem">
+        <Defeured Revenue Accounting Code>15637</Defeured Revenue Accounting Code>
+        <Recognized Revenue Accounting Code>15637</Recognized Revenue Accounting Code>
+    </Result>
+</Results>
+```
+
+### Sample Query 2:  Get the account code in a given interval for an object type. (Object Type : Billing Invoice)

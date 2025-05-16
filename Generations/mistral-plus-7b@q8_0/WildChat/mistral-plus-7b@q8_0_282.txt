@@ -1,0 +1,45 @@
+> When trying to install php5 on IIS 7.0, when running test page, you will see this error. This is because by default, IIS does not have any PHP script mappings associated with it. The reason for this is because it is a security feature that allows the web server administrator to control which files are allowed to run on their servers. To solve the problem, go to Start | Administrative Tools | Internet Information Services (IIS) Manager. In the left pane, expand your server node and then the Web Sites node. Then right click on Default Web Site and then click Add Virtual Directory. Once you have added the virtual directory, navigate back to your newly created php folder by clicking on it. Then in the Actions panel, select the Edit Permissions link. On the resulting screen, enable the Scripts, Executables and ISAPI Extensions options, and then click OK. Now refresh the page that you were running before and you should see your PHP code instead of the error message.
+
+Hi All
+
+I'm writing a script that will copy the contents of a file to another. The problem is I want it to ignore blank lines. This is my first script so please bear with me. So far this is what I have:
+
+Code: Select all
+    ```set /p Input=Enter the source file name <Input>:
+echo on
+for /f "tokens=*" %%a in (%INPUT%) do (
+findstr /v ^$ %INPUT% > OutputFile.txt
+)```
+
+I know that I'm going to need a set command for the output, but I don't know what it is yet. I would also like to get rid of the redundancy if possible and have the for loop take care of copying all of the lines into OutputFile.txt.
+
+> PHP的错误显示是默认开启的，我们可以通过 php.ini 文件中的参数来控制PHP的错误信息的输出。
+>
+> `display_errors`：设置为true，就会输出错误信息。反之，就不会输出错误信息。
+>
+> 通过修改php.ini文件中的参数设置来控制PHP是否输出错误信息：
+>
+> ```
+> display_errors = On/Off
+> ```
+>
+> 或者使用以下代码在运行时动态地设置显示或隐藏错误。
+>
+> `error_reporting` 函数，允许您控制输出的 PHP 错误类型。它接受一个整数参数，指定错误级别。常用的错误级别有：
+>
+> - E_ERROR: 致命错误
+> - E_WARNING: 警告消息
+> - E_PARSE: 解析错误
+> - E_NOTICE: 运行时提醒 (默认关闭)
+
+# Avoid PHP Deprecated
+
+The IIS is a web server created by Microsoft that allows you to run dynamic content on the Internet or on an internal network. This server, also known as Internet Information Services, provides developers with a wide range of tools and APIs for building web applications using ASP.NET, PHP and other languages.
+
+One of the common concerns when developing web applications with PHP on IIS is avoiding deprecated functions, which are outdated or no longer recommended for use. Deprecated functions can cause compatibility issues and pose a security risk. In this article, we will explore some tips to avoid using deprecated PHP functions on IIS.
+
+To avoid using deprecated functions in your PHP code on IIS, follow these steps:
+
+1. Review the official list of PHP deprecated functions provided by the PHP documentation. This document lists all the functions and methods that have been declared deprecated and should be avoided.
+2. Update your code to use non-deprecated equivalents wherever possible. Many of the deprecated functions have replaced with better alternatives, so updating your code can help avoid deprecation warnings and ensure compatibility with future versions of PHP.
+3. Use a tool or IDE that provides warnings for deprecated functions to quickly identify any potential issues in your code. Most modern development environments include features like this to make it easy to spot and fix problems with deprecated functions.

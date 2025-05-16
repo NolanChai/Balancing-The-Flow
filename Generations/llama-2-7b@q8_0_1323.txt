@@ -1,9 +1,0 @@
-```c++
-#include <iostream>
-using namespace std;
-int main(){
-	char t[10];
-	cin>>t;
-	cout<<t+1<<" "<<t<<endl;
-}
-```

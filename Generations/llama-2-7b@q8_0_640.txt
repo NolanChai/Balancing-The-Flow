@@ -1,1 +1,0 @@
-* I will use the command *`find`* to find all the pictures, then i can pass them to the next step which is `for-each`, which does a loop in python and pass every item to each function. Finally, `os` module is used to rename the files with new names.  

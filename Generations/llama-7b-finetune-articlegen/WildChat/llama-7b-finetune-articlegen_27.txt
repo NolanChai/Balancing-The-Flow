@@ -1,0 +1,32 @@
+1. 执行结果:
+2020/7/23 02:46:56 logout.
+3. 返回：
+logout.
+
+1. 首先要进入到某台主机,然后使用clearknowhosts命令,以下是使用example.org为例，并且设置一个密码为password。
+    1) 在ssh的配置文件中修改password.
+    ssh -o 'PasswordAuthentication yes' root@your_ip
+
+2. 然后进入到ssh主机上执行clearknowhosts命令，修改know_hosts文件
+
+    clearknowhosts
+    1) 如果清空了,则知道可以通过此命令进行清理.
+        $ clearknowhosts
+            Hostname . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 255.255.255.255
+            Added . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127.0.0.1 example.org .
+            Removed . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 255.255.255.255
+    2) 清除的host列表:
+        $ host -l
+            example.org has address 127.0.0.1
+
+### Reference:
+[https://help.ubuntu.com/community/ClearKnownHosts](https://help.ubuntu.com/community/ClearKnownHosts)
+
+使用一套新的键对钥文件进行重命名，如下：
+``` bash
+mv .ssh/id_rsa .ssh-old/.id_rsa
+rm -rf .ssh/.ssh-keygen*
+mv .ssh/.ssh-keygen-temp .ssh/.ssh-keygen
+mkdir .ssh/.ssh-keygen
+chmod 700 .ssh/.ssh-keygen/mksteemp.sh .ssh/.ssh-keygen/mksteemp.out .ssh/.ssh-keygen/mksteemp_output
+```

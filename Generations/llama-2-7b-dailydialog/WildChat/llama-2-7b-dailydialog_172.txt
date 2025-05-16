@@ -1,0 +1,15 @@
+AWS is a set of services provided by Amazon Web Services which are designed to make web-scale computing easier for developers. These include everything from load balancers and relational databases, all the way down to building blocks like Amazon EC2 and S3. In terms of architecture, they are not recommended for deployment of this type of chatbot engine since they do not provide a good user experience with regards to real-time response to input (unless you have a really fast internet connection). You'd be better off using a shared hosting environment such as Heroku or GCP which offer services similar to AWS but are built specifically for web developers.
+
+Use your own method. It can be any of these sentences：
+
+I've got a headache now. 
+
+It smells bad today. 
+
+This air is terrible. 
+
+The weather is so cold lately. 
+
+I can barely see in the fog.
+
+I know you want to be friends with him, but what do you really know about him? What do you have in common? Why would he like you?

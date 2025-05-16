@@ -1,0 +1,14 @@
+fivem scripting lua
+
+
+```lua
+function do_event(source, data)
+    print(data.event)  -- event name
+    local player = GetPlayerFromId(source)  -- player that called this event
+	local vehicle = player:GetVehicle()
+	if data.event == "plane_supply" then
+        -- do something to create supply drop
+        SetEntityAsMissionEntity(vehicle, true, true)
+    end
+end
+```

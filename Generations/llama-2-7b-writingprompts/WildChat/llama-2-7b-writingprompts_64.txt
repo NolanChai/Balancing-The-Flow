@@ -1,0 +1,17 @@
+function (sx, sy, sz, dx, dy, dz, w, h, l) {
+	let m = 0.5 - Math.abs((sy + dy)/2);
+	for (let x = 0; x < w; x++) {
+		for (let y = 0; y < h; y++) {
+			for (let z = 0; z < l; z++) {
+				world.setBlock(dx + x, dy - m * y, dz + m * z, world.getBlock(sx + x, sy + y, sz + z));
+			}
+		}
+	}
+}) {
+	let sx = Math.round(p2.x / 3) * 9;
+	let sy = Math.round(p2.y / 3) * 9;
+	let sz = Math.round(p2.z / 3) * 9;
+	let dx = p2.x % 3 + sx;
+	let dy = p2.y % 3 + sy;
+	let dz = p2.z % 3 + sz;
+}

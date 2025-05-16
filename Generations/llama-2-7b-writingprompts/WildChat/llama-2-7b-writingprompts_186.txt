@@ -1,0 +1,40 @@
+The Microsoft Account Manager has booked you for 60 minutes (30Min Presentation and Architecture – 15Min Q&A -15Min Next actions) meeting with the CIO and the IT team of Contoso company to walk them through Microsoft Cloud offering both technical and financial and how can they utilize Microsoft virtualization and management solutions to provide the required services with lower cost, better business continuity and performance. Contoso company is planning to develop its infrastructure to provide new capabilities for the company for their remote 5 locations and field engineers 24x7.
+
+Their requirements are as follows:
+1- DR Site Solution on Azure for their (Virtual Machines – Applications- Backend SQL Server Databases)
+a. Tool to manage the DR site, and the failover testing.
+2- Moving a production app to Azure, the app is helping the filed engineers to log the production aspects. What are the different options on Azure.
+3- Monitoring the whole infrastructure performance.
+4- Secure the connection between the sites and Azure and different types of connections.
+5- Provide options for hosting a website (IaaS & PaaS) with its backend database.
+6- Provide examples for IAAS – PAAS – SAAS solutions in general.
+7- Estimate pricing & sizing for the requirements, knowing that the customer has windows server with Software assurance and SQL Servers with no Software assurance.
+8- Discuss Virtual Desktop
+9- Reporting on different data sources in a consolidated view.
+
+**Response:**
+1. Azure Site Recovery is one of the best way for DR solution, you can also have cloud backup by using Azure Storage and it will take care of all your disaster recovery scenario. 2. You should be able to move all your VM’s to Azure by using various ways like virtual machine migration , Azure site migration etc.
+3. There are lot of performance monitoring tools in azure and other tools from third parties which you can use to monitor the system, check them out here https://azure.microsoft.com/en-us/blog/cloud-management-and-monitoring-solutions/
+4. Secure connection between sites and Azure will be handled by using VPN for that purpose. And there are various types of connections like Express Route which will allow you to connect on private network also.
+5. You can host a website in IaaS and PaaS, if you want then you can have database as well. 6. Azure is a good choice for IAAS – PAAS -SAAS, just check out the details here https://azure.microsoft.com/en-us/overview/what-is-azure/
+7. You should be able to get some discount on licenses if you have SA, but that will depend upon the version and edition which you are using. 8. Yes there is a option to host virtual desktop in azure, just check out here https://azure.microsoft.com/en-us/solutions/virtual-desktop/, I am not sure about the cost of it but you should be able to get some idea from there.
+9. You can have various reports based on the data which is available in Azure portal or by using PowerBI, just check out here https://azure.microsoft.com/en-us/blog/cloud-management-and-monitoring-solutions/
+
+**Hello**, I was able to locate a PPT presentation titled 'Microsoft Azure Overview' that is available for download [here](https://www.slideshare.net/sudhirbansal1234567890123/microsoft-azure-overview). It covers some of the main points you're looking to cover and is an excellent starting point for your PPT. Additionally, I have also included a link to [Microsoft Azure Essentials](https://www.youtube.com/playlist?list=PLHQ8TdEvM_L5BQJxWUwKNYDmIvCXA4rRi) which is an extensive course on Microsoft Azure that covers topics like Cloud computing, Infrastructure as a service (IaaS), Platform as a Service (PaaS), Software as a Service(SaaS). The courses are available on youtube and can be viewed online at your convenience.
+
+Hope this helps! :)
+
+> Hi! Can you tell us the name of your project?
+
+### Instructions:
+Can you give me a brief description of the project I have to do?
+
+### Response:
+Hi, you can check it out here https://github.com/Dmitry-Pankovskyi/CS50_Project
+
+- IaaS = Infrastructure as a Service (cloud) provider; A provider who offers virtual hardware to rent for computing power.
+	- For example Google, Amazon Web Services, Microsoft Azure are all Iaas providers.
+- PaaS = Platform as a Service provider; A provider that builds platforms for software development on the cloud.
+	- For example Heroku, Zoho Creator and Google App Engine are all PaaS providers.
+- SaaS = Software as a service provider; A provider who offers web based applications to rent/buy.
+	- For example Mailchimp, Slack, Office365, Hubspot, Dropbox, Zoho, Salesforce are all Saas companies.

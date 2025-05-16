@@ -1,0 +1,34 @@
+```python
+#!/usr/bin/env python
+"""
+  Time Traveler's Conundrum
+"""
+
+import math
+from datetime import date as DT
+
+def travel(date_time):
+    """Return an offset relative to the date, time given."""
+    mins = (float(date_time) - int(date_time)) / 60.0
+    return round((mins * 1440), 2) # seconds
+
+def run(t_off):
+    """Return the offset for a traveler at time, t_off."""
+    mins = (float(t_off) - int(t_off)) / 60.0
+    return round((mins * 1440), 2) # seconds
+
+def main():
+    """Run the time traveler conundrum and report result."""
+    print("Input a date and time (h:mm or h:mm:ss):")
+    t_date, t_time = input().split()
+    t_off = travel(t_date + ':' + t_time)
+    if not run(t_off).is_positive():
+        print("Negative offset!")
+    elif int(run(t_off)) != int(t_off):
+        print("Time traveled back in time!")
+    else:
+        print("Got it right!")
+
+if __name__ == '__main__':
+    main()
+```

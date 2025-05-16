@@ -1,0 +1,35 @@
+D.) The correct answer is D) The experiment uses a matched-pairs design, where subjects from one block are paired with subjects from the other block.
+A randomized block design involves randomizing subjects into blocks based on a characteristic that can be controlled or manipulated by researchers. In this case, age-group acts as the blocking factor. Within each block, researchers randomly assign treatment to subjects. For example, in one block, half of the subjects may receive Treatment A while the other half receives Treatment B. The same is done within the other block so that each subject gets either Treatment A or Treatment B. This design ensures that any differences observed between treatments are not due to confounding factors such as age-group but rather the specific treatment being administered.
+
+It is important to note that randomized block designs cannot have a control group, since all subjects within each block are exposed to either Treatment A or B. Additionally, it would be impossible for researchers in this case to determine which subjects received which treatment unless they were assigned based on age-group. Therefore, the experiment uses a matched-pairs design where subjects from one block are paired with those from another block who share similar characteristics such as age-group or another confounding variable.
+
+First, we need to list all the possible outcomes in which it took at least 2 tosses to see the blue face land face up. Let's start by noting how many of these outcomes there are. There are eight total ways to select an initial state where blue is not face-up and no tosses have been made yet:
+
+RRR, RRY, YRR, YRY, RYB, YYB, BYR, BRY
+
+Of those 8 possible starting states, there are only two ways to make at least 2 more tosses:
+
+1. Initial state = RRY and YRB (4 ways)
+2. Initial state = YYB and ByR (4 ways)
+
+The number of favorable outcomes is 4 + 4 = 8. So the probability of seeing blue at least twice on our first tosses is:
+
+### Solution:
+
+There are two ways to make at least 2 more tosses: initial state RRY and YRB (4 ways), or initial state YYB and ByR (4 ways). So, the probability that a player will toss the die at least 2 times before blue lands faceup is:
+
+```python
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("data/train.csv")
+df['label'] = df['label'].apply(lambda x: 0 if x==1 else 1)
+
+from sklearn.model_selection import train_test_split
+X,y = df[['score','label']], df['label'].values
+x_train,x_test,y_train,y_test=train_test_split(X,y, test_size=0.2)
+
+# fit model to the training set and then predict on testing dataset 
+model = sklearn.svm.LinearSVC().fit(x_train, y_train)
+prediction = model.predict(x_test)
+```

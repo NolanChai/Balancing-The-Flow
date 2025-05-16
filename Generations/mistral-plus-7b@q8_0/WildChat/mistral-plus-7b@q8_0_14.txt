@@ -1,0 +1,14 @@
+I’m not sure I understand you completely but maybe this code can help:
+
+```
+Sub Button1_Click()
+Dim c As Range, r As Long, lastrow As Long
+Set c = ActiveSheet.UsedRange.Rows(1).Resize(12)
+lastrow = c.Find("*", , xlFormulas, , xlByRows, xlPrevious).Row
+With ThisWorkbook.Sheets("Sheet1")
+  For r = lastrow To 1 Step -1
+    .Cells(r, "A").Value = c.Offset(12 - r).Value
+  Next r
+End With
+End Sub
+```

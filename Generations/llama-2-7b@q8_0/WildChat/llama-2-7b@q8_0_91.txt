@@ -1,0 +1,28 @@
+pip.__main__ (x86_64) C:\Users\Yuehua\.conda\envs\inf-sjtupy39\lib\site-packages\pip\__main__.py:951: UserWarning: Unknown environment or version 'win-64'.
+  warnings.warn(msg % dict(name=name, version=version))
+Failed building wheel for python-dateutil (from -r requirements.txt): error: subprocess-exited-with-error
+Traceback (most recent call last):
+  File "C:\Users\Yuehua\.conda\envs\inf-sjtupy39\lib\runpy.py", line 174, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\Yuehua\.conda\envs\inf-sjtupy39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Yuehua\.conda\envs\inf-sjtupy39\Scripts\python.exe", line 56, in <module>
+    import pkg_resources
+  File "C:\Users\Yuehua\.local\share\Python\Python310\site-packages\pkg_resources\__init__.py", line 497, in <module>
+    @_call_aside
+  File "C:\Users\Yuehua\.local\share\Python\Python310\site-packages\pkg_resources\__init__.py", line 568, in _call_aside
+    f(*args, **kwargs)
+  File "C:\Users\Yuehua\.local\share\Python\Python310\site-packages\pkg_resources\__init__.py", line 942, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "C:\Users\Yuehua\.local\share\Python\Python310\site-packages\pkg_resources\__init__.py", line 782, in _build_master
+    return cls.resolve(map, install_links=False)
+  File "C:\Users\Yuehua\.local\share\Python\Python310\site-packages\pip\basecommand.py", line 259, in resolve
+    require_hashes=require_hashes
+  File "C:\Users\Yuehua\.local\share\Python\Python310\site-packages\pip\req\req_set.py", line 756, in install
+    requirement.install(install_options)
+  File "C:\Users\Yuehua\.local\share\Python\Python310\site-packages\pip\req\req_install.py", line 842, in install
+    prefix=install_option.prefix,
+  File "C:\Users\Yuehua\.local\share\Python\Python310\site-packages\pip\utils\__init__.py", line 679, in call_subprocess
+    % (command_desc, proc.returncode, cwd)
+CommandError: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+\end{code}

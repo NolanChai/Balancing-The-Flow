@@ -1,0 +1,69 @@
+[![codecov](https://codecov.io/gh/NicolasMacherey/basemap_python/branch/master/graph/badge.svg)](http://codecov.io/github/NicolasMacherey/basemap_python?branch=master)
+[![Documentation Status](https://readthedocs.org/projects/basemap-py/badge/?version=latest)](http://basemap-py.readthedocs.io/en/latest/)
+
+**Basemap is a simple Python package that allows users to easily visualize data on top of a map, using the standard Matplotlib and Pillow image libraries**
+
+## Installation:
+
+```python3
+pip install basemap_py
+```
+
+## Usage:
+
+```python3
+from basemap import Basemap
+from basemap.projections import OrthographicProjection
+import matplotlib as mpl
+mpl.use('Agg') # if running in jupyter, this will make the figures be saved to your notebooks folder by default
+from matplotlib.pyplot import show
+import numpy as np
+import pandas as pd
+from basemap_py.data import get_latlong_dataframe
+#create a new Basemap object
+m = Basemap(projection=OrthographicProjection(), ax1size=10) # 10 inches (25cm)
+#load lat long data as dataframe
+df = get_latlong_dataframe()
+#draw the data on basemap
+m.plot(df['lat'], df['lon'])
+```
+## How to Contribute:
+
+Contributions are welcome!
+Feel free to contact me at nicomache@gmail.com if you have any questions or ideas.
+
+## License:
+MIT
+
+```
+>>> import rasterio as rs
+>>> from io import BytesIO
+>>> with open("data/2018-09-25_clouds.tif", 'rb') as tif_file:
+...     data = np.fromstring(tif_file.read(), dtype=np.float32)
+...     ds = rs.open(r"C:\Users\john\.cache\rasterio\05960e41-3723-424f-bbd6-18a266ecfc38", "r")
+>>> ds.read(2, 1)
+array([[1131.0000],
+       [1132.0000]])
+```
+
+```json
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.9856, 37.4903]
+      },
+      "bbox": [
+        122.9853,
+        37.5025,
+        122.9912,
+        37.4903
+      ]
+    }
+  ]
+}
+```

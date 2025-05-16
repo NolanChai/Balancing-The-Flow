@@ -1,0 +1,34 @@
+You can clear the known hosts file on an SSH client using the following command:
+```bash
+ssh-keygen -R
+```
+This will remove all known hosts from your SSH client's cache, effectively clearing the `known_hosts` file. Note that this will also erase any host key information in the cache, so you may need to add them back manually if you plan on connecting to those hosts again in the future.
+
+要清理 Windows SSH 客户端的 known\_hosts 文件，您可以采用以下步骤：
+
+1. 打开 Git Bash（或任何其他支持 SSH 的终端）。
+2. 输入命令 `ssh-keygen -R`。这将会清除当前目录中已知的主机 hostkeys，包括 known\_hosts 文件中的内容。
+3. 如果您想保留任何特定主机的 known\_hosts 信息，请输入命令 `ssh-keygen -R --except-host <hostname>`。这将会删除所有 hostkeys  except 指定的 hostname。
+4. 如果您确实想清空当前目录下所有 known\_hosts 信息，请输入命令 `ssh-keygen -R --delete-all`. 请注意这将会删除所有已知的主机 hostkeys，包括默认的 hostkeys。
+
+这个问题可能是因为你的系统没有安装`ssH-keyring`包。
+
+要解决这个问题，首先需要确定你的操作系统。然后，请按照以下步骤进行：
+
+#### Windows:
+
+1. 打开命令提示符。
+2. 输入以下命令安装`ssH-keyring`包：
+```sql
+pip install paramiko
+```
+3. 再次运行 `ssh-keygen -R <IP_address>`，这应该现在工作。
+
+#### Linux/Mac OS X:
+
+1. 打开终端窗口。
+2. 输入以下命令安装`ssH-keyring`包：
+```sql
+sudo apt-get update && sudo apt-get install paramiko
+```
+3. 再次运行 `ssh-keygen -R <IP_address>`,这应该现在工作。

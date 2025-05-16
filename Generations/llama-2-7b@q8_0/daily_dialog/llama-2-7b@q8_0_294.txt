@@ -1,0 +1,85 @@
+" You think so ?"
+
+" It can't hurt to try something different , right ? "
+
+" You mean it could help . "
+
+" Well ... "
+
+" We'd better give it a shot ! "
+
+The next morning , while the coffee was brewing , he sent out his first good luck forward. The subject line said:
+
+ Good Luck Forward
+
+ and it contained the following message:
+
+ I had this crazy idea last night ... I need some help figuring this one out . Please take a look at it and let me know if you can come up with anything for me. It's something that has been bugging me lately , and I just can't seem to get my mind around the solution.
+
+ It looks like we are on the right track, but now we need some help .
+
+ Let me explain ...
+
+ Last week, a friend gave me an envelope with the following problem written on it:
+
+ You have 7 marbles in your hand , and you want to put them into a bag containing 25 marbles.
+
+ The problem is that I don't know how many bags there are ...
+
+ If they are numbered from 1 - 4 , then the problem becomes trivial . But what if there are more than 4 bags ? How would you solve it in this case ?
+
+ I figured out a way to do it, but I don't know how many bags there were. So I thought that maybe I could use a computer to determine the number of bags so I could do some brute force trial and error on the problem . But if I knew the number of bags, then maybe this would be easier ...
+
+ We had no idea what to do with it, but we were thinking about it. We decided that since we didn't know how many marbles there are, nor did we know how many bags , we could just pick any number we wanted and use that as a guess for the number of bags . This was our first thought ...
+
+ But then it hit us ... what if we had some way to determine the number of bags ? What if we could figure out the number of bags by knowing how many marbles there are ? We were still in the dark , but we figured that if we could know that, we would be able to solve this problem with just a little bit more thought .
+
+ So here it is ...
+
+ How do you determine the number of bags given a known number of marbles ?
+
+ Here's an example ... Suppose there are 7 red marbles and 18 blue marbles in your hand . We know that there can be no more than 4 different colors , so we assume that each bag can contain either 2 or 3 of the same color. And since there must be at least one bag containing only blue marbles, we assume that each bag contains a minimum of 3 blue marbles .
+
+ We also know that since we have some red marbles and some blue marbles in our hand , it's impossible to fill all bags with the same color. So now we can subtract off the number of colors from the number of different types of bags, leaving us with just 2 or 3 possible combinations for each bag.
+
+ How many combinations are there ?
+
+ Well , if the bag contains only red marbles then it has 6 red and no blue marbles . Since we know that all bags contain at least one color , this means that none of the other bags can be completely red as well ... so this is a possibility. But how many possible ways are there to combine three colors into two bags ?
+
+ There must be 6 combinations for each bag because if the first bag contained no blue marbles then all bags would have to contain at least one blue marble . This means that there would be 3 choices of color in this first bag , and therefore we can only choose between six combinations: Red , Blue, Green or Purple.
+
+ But wait ... what if the first two bags contained no blue marbles ? We're back to square one again ... so this is another possibility .
+
+ If all three bags contain red marbles then there are 6 ways of combining these colors together: Red , Red, Red; Blue , Blue and Blue ; Green , Green and Green ; Purple, Purple and Purple.
+
+ And if the first two bags contained no blue marbles , but the third bag did? Then we have five possibilities : Blue, Blue and Red ; Green , Green and Red ; Purple, Red and Red; Blue, Green, Red and Blue .
+
+ If all three bags are red then there are 6 ways of combining them: Red, Red, Red; Blue ,Blue and Blue ; Green ,Green and Green ; Purple, Purple and Purple.
+
+ And if the first two bags contained no blue marbles but the third bag did? Then we have five possibilities : Blue, Blue and Red; Green, Green and Red; Purple, Red and Red; Blue, Green, Red and Blue .
+
+ So , given a number of red marbles , there are 2 combinations possible if you have exactly one blue marble in the first bag. If you have no blue marbles in either of the first two bags then there are five possibilities for what the third bag can contain; which means that there are 7 possibilities altogether .
+
+ Now let's look at another example ... suppose there were only 3 red marbles and 5 blue marbles in our hand. How many ways could these be divided up into bags ? There would still be exactly two combinations possible if you had only one bag containing all three colors : Red, Blue and Green (or Purple). If not , then there must be at least 2 or 3 bags of some color other than red , so this is another possibility .
+
+ We're getting closer ! But what if we were given a number of blue marbles instead ? What about if only one bag contained all three colors? How many possibilities are there for dividing these up into two bags, assuming that they can be divided at all ?
+
+ Well , if you had exactly one blue marble in each of the first two bags then you would have 2 ways to divide them up ; otherwise there must be at least 3 or more different colors among the remaining bags. This means that we don't know how many possibilities there are unless we can divide these three into any other number .
+
+ But let's look at another example ... suppose there were only five red marbles and four blue ones in your hand. If all of them fit into one bag then it would take two combinations: Red, Blue; or Purple, Red/Purple , depending on how you count purple as being either a separate color or just an extension of red .
+
+ But what if we had only 2 blue marbles in our hand? Then we could divide them into one bag with three colors (Red/Blue) and another bag containing only two colours (Purple). How many different combinations are there ? Well, as long as each bag contained at least one color , then it would take no more than six possible ways of dividing up these 4 blue marbles between the first and second bags .
+
+ So now we know how to divide all six colors into any number of bags ... but what if you don't want to deal with just 6 colors ? What happens when there are more than seven colours in your hand? Can you still find a way to divide them up into two bags ?
+
+ This is where our next step comes in . Suppose we were given an even number of blue marbles (for example, if they were all 5 ). In this case , because there would be exactly as many red marbles as there are blue ones then each bag could only contain either one or two colors , so it's no longer possible for any other combinations to occur .
+
+ But what happens when there is an odd number of blue marbles ? We can still divide them into bags with three colours each (Red/Blue) and another bag containing just two colours (Purple), but now we must make sure that each one has at least 2 reds, or else we couldn't create any combinations .
+
+ So what would happen if there were exactly 10 blue marbles? Then it wouldn't matter which order they went into the first bag - so long as no two of them were adjacent to each other on a line drawn through their centers . But since this doesn't really tell us anything useful , let's just assume that all ten went into one bag containing only three colors (Red/Blue).
+
+ So far we have shown how many combinations there are for dividing up 6 colors among two bags. We also showed what happens when there is an even number of each color, or if there are any odd numbers at all . However , this doesn't explain anything about why some combinations might be better than others ...
+
+ But wait ! There's more ! Because now we know that once you divide up the six colors into two bags then it will always take exactly 2 combinations of these bags to fill your hand with every possible color combination . So if there are any odd numbers anywhere in this process , it would be best if they were removed before dividing them up into different groups .
+
+ Now let's look at another example ... suppose we had four red marbles and three blue ones in our hand. How many combinations could these 7 colors divide themselves into two bags?

@@ -1,0 +1,117 @@
+User: "Using the FOPL system of natural deduction
+prove the following
+|- (¬∃xP(x)) ⇔ ∀x(¬P(x))"
+
+Assistant: "To prove this equivalence, we need to prove two directions:
+
+1) ¬∃xP(x) ⇒ ∀x(¬P(x))
+2) ∀x(¬P(x)) ⇒ ¬∃xP(x) 
+
+Proof of direction 1:
+
+1) ¬∃xP(x)  (Assumption)
+2) Assume x is arbitrary
+3) ¬P(x)  (Assumption)
+4) Assume ¬(¬P(x))
+5) P(x)  (From 3 by Double Negation)
+6) ∃xP(x)  (From 5 by Existential Generalization)
+7) ⊥  (From 1 and 6)
+8) ¬(¬P(x))  (From 4-7)
+9) ¬¬P(x)  (From 3-8 by Reductio Ad Absurdum)
+10) ∀x(¬P(x))  (From 2-9 by Universal Generalization)
+11) ¬∃xP(x) ⇒ ∀x(¬P(x))  (From 1-10 by Conditional Proof)
+
+Proof of direction 2:
+
+1) ∀x(¬P(x))  (Assumption)
+2) Assume ∃xP(x)
+3) Assume P(a) for some arbitrary individual a
+4) ¬P(a)  (From 1 by Universal Instantiation)
+5) ⊥  (From 3 and 4)
+6) ¬∃xP(x)  (From 2-5 by Reductio Ad Absurdum)
+7) ∃xP(x) ⇒ ¬∀x(¬P(x))  (From 1-6 by Conditional Proof)
+8) ¬∀x(¬P(x)) ⇒ ∃xP(x)   (From the contrapositive of 7)
+9) ∀x(¬P(x)) ⇔ ¬∃xP(x)  (From 7 and 8, by the definition of biconditional)
+10) ∀x(¬P(x)) ⇒ ¬∃xP(x)  (From 9 by the direction of the biconditional)
+
+Therefore, we have proven both directions of this equivalence, and we can conclude that:
+
+|- (¬∃xP(x)) ⇔ ∀x(¬P(x))"
+
+User: "Using the tableau method
+prove the following 
+ |= ∃x(P(x) ∨ Q(x)) ⇔ (∃xP(x) ∨ ∃xQ(x))
+"
+
+Assistant: "To prove this biconditional statement using the tableau method, we will assume that its negation is true and derive a contradiction. That is:
+
+|- ¬(∃x(P(x) ∨ Q(x)) ⇔ (∃xP(x) ∨ ∃xQ(x)))
+
+Using the definition of biconditional, we can rewrite the negation as two conditionals:
+
+|- ¬((∃x(P(x) ∨ Q(x)) ⇒ (∃xP(x) ∨ ∃xQ(x))))     (1)
+|- ¬((∃xP(x) ∨ ∃xQ(x)) ⇒ (∃x(P(x) ∨ Q(x)))))    (2)
+
+We will attempt to close both branches of the tree. Starting with (1), we assume its antecedent:
+
+1. (∃x(P(x) ∨ Q(x)))
+And we negate its consequent:
+
+2. ¬(∃xP(x) ∨ ∃xQ(x)))
+3. ¬∃xP(x) ∧ ¬∃xQ(x)       (De Morgan's Law, 2)
+4. ¬∃xP(x)                  (Conjunction Elimination, 3)
+
+Now, we branch the tableau and consider each possibility for the existential quantifier in line 1. Let's assume that it is instantiated with a constant symbol "a":
+
+Branch 1:
+1. P(a) ∨ Q(a)              (Existential Instantiation, 1)
+5. P(a)                    (Assumption)
+6. ∃xP(x)                  (Existential Generalization, 5)
+7. ∃xP(x) ∨ ∃xQ(x)        (Disjunction Introduction, 6)
+8. ¬(∃xP(x) ∨ ∃xQ(x)))    (Contradiction, 2, 7)
+
+This branch is closed with a contradiction, so we move on to the next branch.
+
+Branch 2:
+1. P(b) ∨ Q(b)              (Existential Instantiation, 1)
+5. Q(b)                     (Assumption)
+6. ∃xQ(x)                  (Existential Generalization, 5)
+7. ∃xP(x) ∨ ∃xQ(x)        (Disjunction Introduction, 6)
+8. ¬(∃xP(x) ∨ ∃xQ(x)))    (Contradiction, 2, 7)
+
+Like the first branch, this branch is also closed with a contradiction. Therefore, we can conclude that ¬(∃x(P(x) ∨ Q(x)) ⇒ (∃xP(x) ∨ ∃xQ(x))) is unsatisfiable.
+
+Now, we need to close the second branch of the tree for (2). Starting with its antecedent:
+
+1. (∃xP(x) ∨ ∃xQ(x))
+And we negate its consequent:
+
+2. ¬(∃x(P(x) ∨ Q(x))))
+3. ∀x(¬(P(x) ∨ Q(x)))    (De Morgan's Law, 2)
+4. ¬P(a) ∧ ¬Q(b)         (Universal Instantiation, 3)
+
+Since we have two negated formulas, we can break this branch into two more branches:
+
+Branch 1:
+5. ¬P(a)                  (Conjunction Elimination, 4)
+6. ¬(P(a) ∨ Q(a))         (Universal Instantiation, 3)
+7. ¬P(a)                  (Disjunction Elimination, 6)
+8. P(a)                    (Assumption)
+9. ⊥                      (Contradiction, 5, 8)
+10. ¬(∃xP(x) ∨ ∃xQ(x)))   (Contradiction, 1, 9)
+
+This branch is closed with a contradiction, so we move on to the next branch.
+
+Branch 2:
+5. ¬Q(b)                  (Conjunction Elimination, 4)
+6. ¬(P(b) ∨ Q(b))         (Universal Instantiation, 3)
+7. ¬Q(b)                  (Disjunction Elimination, 6)
+8. Q(b)                    (Assumption)
+9. ⊥                      (Contradiction, 5, 8)
+10. ¬(∃xP(x) ∨ ∃xQ(x)))   (Contradiction, 1, 9)
+
+Again, this branch is closed with a contradiction. Therefore, we can conclude that ¬((∃xP(x) ∨ ∃xQ(x)) ⇒ (∃x(P(x) ∨ Q(x)))) is unsatisfiable.
+
+Since both branches of the tableau for the negation of the original biconditional are closed with a contradiction, we can finally conclude that the original statement is valid, i.e.,
+
+|= ∃x(P(x) ∨ Q(x)) ⇔ (∃xP(x) ∨ ∃xQ(x))"

@@ -1,0 +1,22 @@
+I’m using Power Query for an Excel file which contains the following:
+
+- Sales orders, and for each sales order there are many lines. The source of this data is a .txt file, and this file doesn’t include any identifiers that allow us to know which sales order they correspond with. There are however some other columns which do allow us to match these up, such as “Order ID” and “Customer Name”
+- Another table containing the same customer names, but now linked to an “Address” column. This file is also a .txt file.
+
+What I want to achieve is a third table which shows me all the Sales Orders with the Customer Addresses associated with each. At the moment I can see how this can be done using VLOOKUP and INDEX/MATCH formulas, but would it be possible (and easier?) to use Power Query for something like this?
+
+When I use a custom control to display the results of an instantiation (i.e., using a formula in the form of =INST('MyInstanceName') ), I am getting a "DataFormat.Error" when the instantiation is empty. This is not surprising because I get this error when trying to convert an empty string into a number.
+
+What I'd like to do, however, is detect if there are no results for the given instantiation, and display something like "no results". The easiest way to do this would be to use some sort of logical comparison to see if there is data in the results, or perhaps check if the length of the results is equal to 0.
+
+Unfortunately, both of these approaches result in an error. For example, I tried writing a custom control as follows:
+
+```
+ControlType = "Custom"
+ControlStyle = "Text"
+DisplayFormat = "#VALUE!"
+
+ControlContent = IF(COUNT(INST('MyInstanceName'))>0, CONCATENATE("Results: ", INST('MyInstanceName')), "No Results")
+```
+
+But I get the following error:

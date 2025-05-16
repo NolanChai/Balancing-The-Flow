@@ -1,0 +1,3 @@
+Edit: Solved it. The error was in this line:
+$latest_from_softonic->url = array();
+Because I added only one line here, the rest of lines remained the same as previous code and they were not needed. So the array wasn't initialized properly.

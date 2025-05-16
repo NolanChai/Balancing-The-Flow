@@ -1,0 +1,131 @@
+UnityEngine.TranslateTransform.MoveTowards （一个参数是向前移动的距离，一个是当前的移动速度）
+
+public class Outline : MonoBehaviour {
+private Vector3 lastPosition = new Vector3(0f, 0f, 0f);
+private float offset = -5;
+Vector3 startPosition;
+private void Start () {
+if (GetComponent<MoxingControl>().isControlEnabled) {
+startPosition = transform.position;
+}
+}
+void Update () {
+
+Transform t = GetComponent<MoxingControl>().selectedPart;
+transform.Translate(Vector3.forward * 10);
+if (GetComponent<MoxingControl>().animatorEnabled) {
+Animator anim = GetComponentInParent<Animator>();
+//Debug.Log("update");
+anim.SetBool("IsEnabled", false);
+}
+if (t != null && Vector3.Distance(transform.position, t.position) > 5f && t.GetComponent<MoxingControl>().isControlEnabled) {
+if (!GetComponentInParent<MoxingControl>().animatorEnabled) {
+Animator anim = GetComponentInParent<Animator>();
+Debug.Log("update");
+anim.SetBool("IsEnabled", true);
+}
+transform.Translate(Vector3.forward * offset);
+// Debug.Log (transform.position);
+if ((Vector3.Distance(transform.position, t.position) - Vector3.Distance(lastPosition, startPosition)) <= 1f) {
+GetComponentInParent<MoxingControl>().selectedPart = null;
+Debug.Log ("clicked");
+}
+lastPosition = transform.position;
+}
+offset += (t != null && t.GetComponent<MoxingControl>().isControlEnabled ? GetComponentInParent<MoxingControl>().selectedColor : new Vector3(0, 0, 0)).magnitude * 5f / Time.deltaTime;
+if ((Vector3.Distance(transform.position, t.position) - Vector3.Distance(lastPosition, startPosition)) > 10f || (t != null && t.GetComponent<MoxingControl>().isControlEnabled == false)) {
+Debug.Log ("clicked");
+GetComponentInParent<MoxingControl>().selectedPart = transform;
+}
+
+}
+}
+
+请解析这段代码，以及用它来完成问题
+
+``` csharp
+public class MoxingControl : MonoBehaviour {
+	private Transform selectedPart = null;
+	private Outline outline = null;
+	private Color selectedColor = Color.yellow;
+	private bool isControlEnabled = false;
+
+	private GameObject axis = null;
+	private Vector3 axisOffset = Vector3.zero;
+	private Vector3 mouseOffset = Vector3.zero;
+
+	private Animator animator;
+	private bool animatorEnabled = true;
+	public void ToggleControlEnabled() {
+		isControlEnabled = !isControlEnabled;
+		animator.enabled = !animator.enabled;
+	}
+	private void Update() {
+		if (!isControlEnabled) return;
+
+		if (Input.GetMouseButtonDown(0)) {
+			Transform clickedPart = GetClickedPart(transform);
+
+			if (clickedPart != null) {
+				if (selectedPart != null) {
+					Destroy(outline);
+
+					if (selectedPart == clickedPart) {
+						selectedPart = null;
+						if (axis != null) Destroy(axis);
+						return;
+					}
+				}
+				selectedPart = clickedPart;
+				outline = selectedPart.gameObject.AddComponent<Outline>(); // outline.OutlineColor = selectedColor;
+				// outline.OutlineWidth = 4;
+
+				if (axis == null) {
+					axis = Instantiate(Resources.Load("Axis") as GameObject, selectedPart);
+				}
+				axis.transform.localPosition = Vector3.zero;
+				axis.SetActive(true);
+				axisOffset = axis.transform.position - selectedPart.position;
+				mouseOffset = selectedPart.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, axisOffset.z));
+			} else if (selectedPart != null) {
+				Destroy(outline);
+				selectedPart = null;
+				if (axis != null) {
+					axis.SetActive(false);
+				}
+			}
+		} else if (Input.GetMouseButton(0) && selectedPart != null && axis != null) {
+			Vector3 mousePosition = Input.mousePosition;
+			mousePosition.z = axisOffset.z;
+			Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition) + mouseOffset;
+
+			Vector3 localPos = selectedPart.parent.InverseTransformPoint(worldMousePosition - axisOffset); // localPos.x = axis.transform.localEulerAngles.y == 90 ? -localPos.x : localPos.x;
+			// localPos.y = axis.transform.localEulerAngles.x == 90 ? -localPos.y : localPos.y;
+			// localPos.z = axis.transform.localEulerAngles.y == 0 ? -localPos.z : localPos.z;
+			selectedPart.localPosition = new Vector3(Mathf.Round(localPos.x * 100) / 100, Mathf.Round(localPos.y * 100) / 100, Mathf.Round(localPos.z * 100) / 100);
+		}
+	}
+	private Transform GetClickedPart(Transform parent) {
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast(ray, out hit)) {
+			Transform clickedPart = hit.transform;
+			if (IsDescendant(clickedPart, parent)) {
+				return clickedPart;
+			}
+		}
+		return null;
+	}
+	private bool IsDescendant(Transform child, Transform parent) {
+		foreach (Transform t in parent) {
+			if (t == child) {
+				return true;
+			}
+			if (IsDescendant(child, t)) {
+				return true;
+			}
+		}
+		return false;
+	}
+}
+```

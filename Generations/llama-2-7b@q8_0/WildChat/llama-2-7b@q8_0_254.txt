@@ -1,0 +1,134 @@
+- [Learning Direction](#learning-direction)
+        The project aims to train you in the following learning directions:
+            
+            [1] Prompt design
+                Learn how to create high quality textual prompts for image generation.
+            
+            [2] Image recognition
+                Learn how to recognize image categories from a training set and use those labels for search-based optimization tasks like classifying new images into predefined categories, or generating images that belong to an arbitrary category in the training set. 
+            
+            [3] Computer Vision
+                Learn basic concepts of computer vision and image processing with PyTorch.
+            
+            [4] Natural Language Processing (NLP)
+                Learn how to use pre-trained NLP models like BART to generate text from images and prompts in the style of Midjourney's "Description" prompt.
+                
+    - [Resources](#resources)
+        Please refer to [Resources](./resources/) for:
+            
+            [1] Example Prompts:
+                Some example prompts from MIDJOURNEY's gallery (note that you are not allowed to copy the content or structure of these prompts, but feel free to use them as a reference): https://midjourney.com/gallery
+            
+            [2] Image Sets:
+                Some image sets from MIDJOURNEY's gallery (note that you are not allowed to copy the content or structure of these images, but feel free to use them as a reference and inspiration): https://midjourney.com/gallery
+            
+            [3] Image Prompt Format: 
+                Here is an example prompt format for your convenience (please adhere to the structure and formatting outlined in this README):
+                        
+        ## 1. Example prompts from MIDJOURNEY's gallery (note that you are not allowed to copy the content or structure of these prompts, but feel free to use them as a reference)
+            
+            > https://midjourney.com/gallery
+            
+        ## 2. Image sets from MIDJOURNEY's gallery (note that you are not allowed to copy the content or structure of these images, but feel free to use them as a reference and inspiration)
+            
+            > https://midjourney.com/gallery
+                
+        ## 3. Image prompt format
+            
+            > The following prompt example is from [https://midjourney.com/gallery](https://midjourney.com/gallery):
+            
+                [/INST]
+                
+                    As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+            
+                    Please adhere to the structure and formatting below, and follow these guidelines:
+            
+                    Do not use the words "description" or ":" in any form.
+            
+                    Do not place a comma between [ar] and [v].
+            
+                    Write each prompt in one line without using return.
+            
+                    Structure:
+            
+                        [1] = 超远景，一个女孩站在金黄色的大片麦田之中，阳光洒下来，由富士XT5拍摄，电影写真风格
+            
+                        [2] = a detailed description of [1] with specific imagery details.
+            
+                        [3] = a detailed description of the scene's environment.
+            
+                        [4] = a detailed description of the compositions.
+            
+                        [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+            
+                        [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+            
+                    Format:
+            
+                        Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [ar] [v]"
+            
+                        Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+            
+                    Write your prompts in english.
+            
+                    Do not describe unreal concepts as "real" or "photographic".
+            
+                    Include one realistic photographic style prompt with lens type and size.
+            
+                    Separate different prompts with two new lines.
+            
+                Example Prompts:
+            
+                    /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+            
+                    /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            
+                            [/INST]
+        ## [Learning Direction](#learning-direction)
+        
+                The project aims to train you in the following learning directions:
+                    
+                    [1] Prompt design
+                        Learn how to create high quality textual prompts for image generation.
+                        
+                    [2] Image recognition
+                        Learn how to recognize image categories from a training set and use those labels for search-based optimization tasks like classifying new images into predefined categories, or generating images that belong to an arbitrary category in the training set. 
+                        
+                    [3] Computer Vision
+                        Learn basic concepts of computer vision and image processing with PyTorch.
+                        
+                    [4] Natural Language Processing (NLP)
+                        Learn how to use pre-trained NLP models like BART to generate text from images and prompts in the style of Midjourney's "Description" prompt.
+                            
+                ## [Resources](#resources)
+            
+                    Please refer to [Resources](./resources/) for:
+                        
+                        [1] Example Prompts:
+                            Some example prompts from MIDJOURNEY's gallery (note that you are not allowed to copy the content or structure of these prompts, but feel free to use them as a reference): https://midjourney.com/gallery
+            
+                        [2] Image Sets:
+                            Some image sets from MIDJOURNEY's gallery (note that you are not allowed to copy the content or structure of these images, but feel free to use them as a reference and inspiration): https://midjourney.com/gallery
+            
+                        [3] Image Prompt Format: 
+                            Here is an example prompt format for your convenience (please adhere to the structure and formatting outlined in this README):
+                        
+    - [Assessment](#assessment)
+        This assessment will take 40 hours.
+            
+            You are allowed up to three attempts, with each attempt being timed for four weeks (168 hours).
+            
+            Note that your first attempt must be completed before the end of week two (96 hours), otherwise you will automatically fail the assessment.
+            
+            The final deadline is 72 hours after completion of your last attempt.
+            
+    - [Deliverables](#deliverables)
+        Your deliverables are as follows:
+            
+            [1] 40 original prompts for MIDJOURNEY AI image generation
+                These must adhere to the structure and formatting outlined in this README.
+                    
+    - [Grading](#grading)
+        I will grade your deliverables based on:
+            
+            [1] Originality of prompts (30%): Your originality score will be determined by my own subjective evaluation of how original and novel the prompts are compared to the ones from MIDJOURNEY's

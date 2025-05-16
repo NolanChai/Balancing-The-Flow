@@ -1,0 +1,13 @@
+def generate_features(df, signal_length=50):
+    # 计算功率谱
+    power_spectrum = df['opticalpower'].apply(lambda x: np.fft.fft(x))
+    # 计算频带中心位置
+    central_frequency = df['central_frequency']
+    # 计算特征值
+    features = {}
+    for i in range(signal_length):
+        power = power_spectrum.iloc[:,i].power.mean()
+        frequency = (i - signal_length/2) * central_frequency
+        features[f'Power Spectrum {i + 1}'] = power
+        features[f'Central Frequency {i + 1}'] = frequency
+    return features

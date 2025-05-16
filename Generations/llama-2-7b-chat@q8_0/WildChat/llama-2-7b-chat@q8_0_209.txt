@@ -1,0 +1,7 @@
+To calculate the current through the battery in an RC circuit, we can use the formula:
+I = (V / (R + 1/C))
+where I is the current through the battery, V is the voltage across the resistor, and R and C are the resistance and capacitance of the circuit, respectively.
+In this case, the voltage across the resistor is 9 volts (since the switch is closed and the circuit is "on"), and the resistance is 15 ohms. The capacitance is 6.5 microfarads.
+Plugging these values into the formula, we get:
+I = (9 / (15 + 1/6.5)) = 0.72 A
+So, after 0.05 seconds, the current through the battery is approximately 0.72 amperes.

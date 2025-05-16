@@ -1,0 +1,111 @@
+User: "fivem scripting lua
+
+how would i create an event that happens every 30-60 minutes where a plane flys over the map and drops a supply drop
+
+it needs to be synced between all the players
+draw a blip on the map when the supply drop lands and then once someone interacts with the supply drop it needs to remove the blip"
+
+Assistant: "To accomplish this, you can use the following instructions to create the event step-by-step:
+
+1. First, create a server-side script in your FiveM resource folder and add it to the `_resource.lua` or `fxmanifest.lua` file.
+
+2. In the server-side script, create a function to spawn the plane and drop the supply crate:
+
+```lua
+function SpawnPlaneAndDropSupply()
+    // Here you'll spawn the plane, make it fly over the map, and drop a supply crate
+    // You'll also need to create a random timer (30-60 minutes) for the next drop
+    // After the supply crate has been dropped, you can trigger a client event to draw the blip on the map
+    TriggerClientEvent('supply_drop:CreateBlip', -1, supplyCratePosition) // -1 to target all clients
+end
+```
+
+3. Now, create the random timer (30-60 minutes) for the plane to spawn and use `SetTimeout` to call the previous function:
+
+```lua
+function StartSupplyDropTimer()
+    local mins = math.random(30, 60)
+    local ms = mins * 60000  -- Convert minutes to milliseconds
+
+    SetTimeout(ms, SpawnPlaneAndDropSupply)
+end
+
+-- Start the supply drop sequence when the resource starts
+StartSupplyDropTimer()
+```
+
+4. Create a client-side script and add it to the `_resource.lua` or `fxmanifest.lua` file.
+
+5. In the client-side script, create an event handler for the `supply_drop:CreateBlip` event and draw the blip on the map:
+
+```lua
+RegisterNetEvent('supply_drop:CreateBlip')
+AddEventHandler('supply_drop:CreateBlip', function(supplyCratePosition)
+    -- Here you'll create the blip for the supply crate on the player's map using the given position
+end)
+```
+
+6. Finally, add logic to handle player interaction with the supply crate in the client-side script:
+
+```lua
+-- Replace with the actual supply crate model name and interaction code
+local supplyCrateModel = "supply_crate_model"
+
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(0)
+
+        local playerPed = PlayerPedId()
+        local playerCoords = GetEntityCoords(playerPed)
+        
+        -- You can optimize this by only searching for the nearest supply crate if it is in a certain range, e.g., 100 meters
+        local nearestCrate = GetClosestObjectOfType(playerCoords.x, playerCoords.y, playerCoords.z, 100.0, GetHashKey(supplyCrateModel), false, false, false)
+
+        if DoesEntityExist(nearestCrate) then
+            local crateCoords = GetEntityCoords(nearestCrate)
+            local distance = #(playerCoords - crateCoords)
+
+            -- Adjust the interaction distance as you see fit
+            if distance < 2.0 then
+                -- Display a help text to inform the player they can interact with the crate
+                ShowHelpNotification("Press ~INPUT_PICKUP~ to interact with the supply crate.")
+
+                if IsControlJustReleased(0, 38) then -- 38 is the E key (INPUT_PICKUP)
+                    -- Here you can add what happens when the player interacts with the crate (e.g., give the player items, etc.)
+
+                    -- Remove the blip and delete the crate object
+                    TriggerServerEvent('supply_drop:RemoveBlip', crateCoords)
+                    DeleteObject(nearestCrate)
+                end
+            end
+        end
+    end
+end)
+
+function ShowHelpNotification(text)
+    BeginTextCommandDisplayHelp("STRING")
+    AddTextComponentSubstringPlayerName(text)
+    EndTextCommandDisplayHelp(0, false, true, -1)
+end
+```
+
+7. Now, in your server-side script, add an event handler for removing the blip:
+
+```lua
+RegisterNetEvent('supply_drop:RemoveBlip')
+AddEventHandler('supply_drop:RemoveBlip', function(crateCoords)
+    -- Trigger the client event to remove the blip
+    TriggerClientEvent('supply_drop:DeleteBlip', -1, crateCoords) // -1 to target all clients
+end)
+```
+
+8. Finally, add an event handler for removing the blip in your client-side script:
+
+```lua
+RegisterNetEvent('supply_drop:DeleteBlip')
+AddEventHandler('supply_drop:DeleteBlip', function(crateCoords)
+    -- Here you'll remove the blip from the player's map using the crate's position
+end)
+```
+
+Remember to replace the placeholder supply crate model with the actual model name you want to use. This should make a plane fly over the map and drop a supply crate every 30-60 minutes, syncing the events between all players. The blip will be created when the crate lands, and it will be removed once a player interacts with it."

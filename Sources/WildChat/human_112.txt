@@ -1,0 +1,43 @@
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = Hand drawn style, wedding photo of a man and a woman dancing, forest lake background
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
+
+Assistant: "/imagine prompt: hand drawn style, wedding photo of a man and a woman dancing under the moonlight, surrounded by tall trees in a dense forest, with a tranquil lake shimmering in the background, capturing the couple's love and connection, soft and ethereal lighting bathing the scene, composition focused on the couple's intertwined hands and graceful movements, evoking a sense of enchantment and romance, in a style resembling the delicate illustrations of Arthur Rackham. --ar 16:9 --v 5.2
+
+/imagine prompt: A dreamy wedding photo captured in a hand painted style, depicting a man and a woman elegantly dancing on a wooden platform amidst a picturesque forest, water lilies floating on the calm lake in the distance, the moon casting a soft glow on the scene, emphasizing the couple's love and joy, the composition frames the couple in the center with intricate floral elements surrounding them, reminiscent of the enchanting works of Gustav Klimt. --ar 9:16 --v 5
+
+/imagine prompt: An exquisite wedding photo in a hand-drawn style, featuring a couple dancing beautifully in a moonlit forest, with the serene reflection of tall trees on the crystal-clear surface of a tranquil lake, creating a mystical atmosphere, beams of moonlight filtering through the foliage, illuminating the couple's tender expressions and graceful movements, the composition places the couple in the foreground with the ethereal forest landscape stretching into the distance, resembling the enchanting illustrations of Edmund Dulac. --ar 16:9 --v 5.2
+
+/imagine prompt: A whimsical wedding photo captured in a hand-drawn style, showcasing a man and a woman dancing joyfully on a lush green meadow in the heart of a serene forest, with a picturesque lake nestled amidst towering trees, an array of vibrant flowers sprouting around the couple, infusing the scene with vibrant colors, fairy lights hanging from the branches casting a warm glow, the composition places the couple off-center, highlighting the abundant natural beauty surrounding them, akin to the enchanting art of Kay Nielsen. --ar 1:1 --v 5.2"

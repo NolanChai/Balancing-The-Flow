@@ -1,0 +1,33 @@
+==============================
+In this tutorial, we will learn how to automate network testing using C#. We will focus on testing the availability and reachability of a device or service on a network by sending Ping requests. The client will provide the IP address of the target device or service, which our code will use to send the Ping request.
+Before we begin, make sure you have the following:
+* A basic understanding of C# programming language
+* Knowledge of network fundamentals and the ping command
+* A development environment (IDE) with C# support
+
+Step 1: Creating a new project in Visual Studio
+-------------------------------
+
+Open Visual Studio, create a new project by selecting "File" > "New" > "Project..." from the top menu bar. In the "New Project" dialog box, choose "C#" under "Project Types", and then select "Console App (.NET Core)" or "Class Library (.NET Core)". Name your project something like "NetworkTester" and click "OK".
+Step 2: Defining the IP address of the target device or service
+-----------------------------
+In this step, we will define the IP address of the target device or service that we want to test. This can be done by creating a new class called "TargetAddress" with the following code:
+```csharp
+using System;
+public class TargetAddress {
+    public string IpAddress { get; set; } // Set the IP address of the target device or service
+}
+```
+Now, we will create an instance of this class and pass it to our main method.
+
+Step 3: Implementing the Ping command in C#
+-------------------------------
+
+In this step, we will implement the Ping command in C#. We will use the "System.Net.NetworkInformation.Ping" namespace to send a Ping request to the target device or service. Here's the code:
+```csharp
+using System;
+using System.Net;
+using System.Net.NetworkInformation;
+
+class Program {
+    static void Main(string

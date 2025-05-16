@@ -1,0 +1,84 @@
+Yes, it is possible to achieve this using VBA code. Here is a sample code that should accomplish what you're looking for:
+```
+Sub SearchAndDisplay()
+    Dim ws As Worksheet: Set ws = ThisWorkbook.Worksheets("Sheet1")
+    Dim colB As Range: Set colB = ws.Range("B5", ws.Range("B" & Rows.Count).End(xlUp))
+    Dim colH As Range: Set colH = ws.Range("H5", ws.Range("H" & Rows.Count).End(xlUp))
+    Dim serviceFound As Boolean
+    
+    ' Loop through column B and check for "Service"
+    For Each rw In colB
+        If rw.Value Like "*Service*" Then
+            serviceFound = True
+            Exit For
+        End If
+    Next rw
+    
+    ' If a value was found, then loop through column H and find the earliest date
+    If serviceFound Then
+        Dim earliestDate As Date
+        For Each rw In colH
+            If IsEarliestDate(rw.Value, earliestDate) Then
+                Exit For
+            End If
+        Next rw
+        
+        ' Display the earliest date in cell H3
+        Range("H3").Value = earliestDate
+    End If
+End Sub
+```
+This code assumes that your worksheet is named "Sheet1" and that you have two columns, B (containing text values) and H (containing dates). The code will first loop through column B and check for any cells that contain the value "Service". If a value is found, it will set a variable called `serviceFound` to `True`.
+
+Next, the code will loop through column H and check for any rows where the date in cell H is the earliest. It does this by comparing the current date with a variable called `earliestDate`, and if it finds a row where `earliestDate` is less than or equal to the date in cell H, it will exit the loop.
+
+Finally, the code will display the earliest date found in cell H3.
+
+Note that this code uses the `Like` operator to search for cells that contain "Service" in column B. If you want to search for a different value instead of "Service", you can simply change the line `If rw.Value Like "*Service*" Then` to suit your needs.
+
+A1 = 'Sheet 2'
+
+=IF(A1="", "Sheet 1", A1)
+
+
+A1 = 'Sheet 3'
+
+=IF(A1="", "Sheet 1", A1)
+
+A2 = 'Sheet 4'
+
+=IF(A2="", "Sheet 1", A2)
+
+
+A2 = 'Sheet 5'
+
+=IF(A2="", "Sheet 1", A2)
+
+
+A3 = 'Sheet 6'
+
+=IF(A3="", "Sheet 1", A3)
+
+
+A3 = 'Sheet 7'
+
+=IF(A3="", "Sheet 1", A3)
+
+
+A4 = 'Sheet 8'
+
+=IF(A4="", "Sheet 1", A4)
+
+1. Open the VBA Editor by going to Tools > Macro > Visual Basic Editor (Alt + F11)
+2. Insert the following code in the editor and save it as "ServicedPopup.vba":
+    Sub Popup_Serviced()
+        MsgBox "Please ensure that an identical Service is created with a Next Service Due Date after changing this to Serviced", , "Popup Message"
+    End Sub
+3. Now, open your Excel workbook and go to the Visual Basic Editor (Alt + F11). Click on Insert > Module in the editor.
+4. Paste the code you copied earlier into the module and save it.
+5. In the worksheet that contains column B, insert a new button with the following code:
+    Private Sub Button1_Click()
+        Call Popup_Serviced
+    End Sub
+6. Save your changes and close the Visual Basic Editor.
+7. Now, when you change any cell in column B to "Serviced" without creating a Service with a Next Service Due Date, a popup window will appear with the message you specified.

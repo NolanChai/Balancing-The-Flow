@@ -1,0 +1,33 @@
+The answer is (3). The meaning of $r$ in $\int _ {R_ {2} } \! f(x) \, dy$ is that if you take a polar rectangle with the same area as the square $R_ {2}$, then $\int_{R_ {2}} \! f(x)\, dx = r \int_{R_ {2} } \! f( x ) \, dy$.
+
+The best explanation I have for this question was the one provided by the teacher. If $f$ is a bounded continuous function, then we know that there exist some $\delta>0$, such that $|f(x)|<\epsilon$ whenever $|x|< \delta$. From here it follows that $f$ is differentiable at $x=0$ and we obtain $f'(x)=lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}=1$.
+
+Comment: You're assuming f is continuous, which was not specified.
+
+Answer: It is actually always defined, regardless of boundedness. Let $\epsilon>0$ be given and let $y\in R^2$. Then there exists an open ball around $y$ with radius smaller than the diameter of your $R^2$, so the length of it's boundary is smaller than the diameter as well (the boundary is a closed line). So we have
+$$|f'(0)|\leq |f(x+h)-f(x)| \leq \frac{|h|}{r}\cdot\max_{z\in R^2}|f(z)|<2\epsilon,$$
+so the limit exists. Now let's say $f$ is not continuous at zero. Then there are two open balls around 0 with diameters smaller than $\delta$. The one which contains the point where f has a discontinuity will have an infinite length and therefore no limit can be taken on it, so the other must contain the point, as well. This contradicts the above statement.
+
+Answer: Let's assume that $f$ is continuous at zero. Then there are two open balls centered at 0 with radii less than $\delta$. If you take their union and subtract a little bit from the diameter of the bigger one so that it does not contain any point in the other, then the smaller ball still contains every point where $f$ has discontinuity. So there is no limit (because each sub-ball will have infinite length). But we assumed that there was a limit, so this is absurd and hence $f$ can't be continuous at 0.
+
+Answer: Let us consider the function $g(x)=|f(x)|$. It is bounded from below by $|f(\mathbf{1})|$ since it is continuous on $\Bbb R^2$, non-decreasing in both coordinates, and hence equal to $|f(\mathbf{1})|$ at most. (The set of such $x$ can be chosen as the diagonal.) Moreover it is bounded from above by a constant which depends only on $f$. This implies that $g$ is continuous. So $\sqrt g'$ is well-defined.
+
+Comment: Your answer assumes that $f$ is continuous, but it doesn't matter since OP already proved that if $f$ is bounded then $\sqrt{f}$ is differentiable at zero.
+
+The answer is (a).
+
+Answer Choice (b) is not correct because the three dimensions are represented by three coordinate axes and a volume in 4D means 6 coordinate axes, while in a triple integral only 3 coordinates are needed.
+
+Answer Choice (c) is not correct since all of the answer choices are true for different types of integrals, namely double and quadruple integrals.
+
+(b)... we will have 3 subregions that we need to integrate. The first two regions are the same, and thus they can be combined into one integral. The third region is where x<=z<=y<=1, which is just a subset of x<=z<=1. Thus, (b) is the correct choice
+
+If you're looking for a hint, it's the first one that's probably wrong since it will be out of proportion to all three coordinates being equal. The second one is pretty easy to figure out though - each coordinate is equal, so you just have to solve the equation $x^3+y^3+z^3=1$.
+
+The third one looks like a really bad answer though...
+
+Comment: I'm looking for an explanation that would include why it can only be one of the 3 options.  For example, you say "you just have to solve the equation $x^3+y^3+z^3=1$" but my guess is there are some additional constraints to make this solution possible?
+
+Comment: If you consider that the sum of all the three coordinates has to be equal to 1, then yes. If not, it can't possibly be a solution since one of the coordinates would have to go outside the [0,1] range (and you can't have the sum being higher than 1 either).
+
+Comment: Thank you, that is what I needed!

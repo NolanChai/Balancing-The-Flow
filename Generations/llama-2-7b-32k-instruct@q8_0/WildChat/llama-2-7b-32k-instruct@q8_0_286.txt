@@ -1,0 +1,7 @@
+Sure, here's an example of how you could create an event that happens every 30-60 minutes where a plane flies over the map and drops a supply drop using Fivem scripting in Lua:
+```
+-- Define the event
+function on_event(event)
+    if event.event == "aircraft_landed" then
+        -- Check if the aircraft is carrying a supply drop
+        local aircraft = game.Workspace.Aircraft

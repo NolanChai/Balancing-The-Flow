@@ -1,0 +1,12 @@
+The provided SQL query is a SELECT statement that retrieves information from several tables in Salesforce related to InvoiceItem, Invoice, RatePlanCharge, Subscription, Account, and ProductRatePlanCharge. The query selects distinct records of "Object Key", "Object Type", "Deferred Revenue Accounting Code", and "Recognized Revenue Accounting Code".
+
+The query joins several tables using their respective foreign keys, and filters the data based on several conditions. These conditions include:
+
+* The InvoiceItem's AccountingCode does not contain the string 'Renewal'.
+* The Subscription has a QuoteBusinessType of 'Renewal' or a QuoteType of 'Renew Subscription'.
+* The Account's CustomerType is 'CM Contractor'.
+* The InvoiceItem's AccountingCode is different from the ProductRatePlanCharge's RenewalRevenueCode.
+* The date_format of the Invoice's PostedDate is equal to the current date minus one day.
+* The ProductRatePlanCharge's RenewalDeferredCode and RenewalRevenueCode are not 'None'.
+
+In summary, the query retrieves information about invoice items that have been marked as 'Renewal', meet certain customer and product criteria, were posted in the last day, and have a non-'None' renewal accounting code.

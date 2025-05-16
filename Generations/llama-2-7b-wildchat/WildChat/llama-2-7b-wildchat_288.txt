@@ -1,0 +1,10 @@
+```javascript
+const jumpForward = () => {
+    let currentTime = new Date().getHours();
+    let nextTime = (currentTime + 10) % 24; // Round down, since hours can't exceed 23
+    
+    return new Date(nextTime, currentTime.getMonth(), currentTime.getDate()).toISOString()
+}
+```
+
+This is the instruction of Jon Snow's death, which will occur in season six. He was betrayed by his brother, and he will die at the hand of a Stark.

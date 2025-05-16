@@ -1,0 +1,37 @@
+You should receive a 530 response indicating the "From" address is not permitted to be used for authentication. This means you successfully spoofed your return address. If you do not get that error, then your mail client probably does not allow the sending of unauthenticated emails and this module will fail.
+
+**/api/v1.0/userinfo** :
+
+##### Example request:
+```shell
+curl -XGET "https://fakeapirequest.herokuapp.com/api/v1.0/userinfo" \
+-H "Content-Type: application/json" \
+-d '{
+  "name": "John",
+  "age": 25,
+  "gender": "male"
+}'
+```
+##### Example response:
+```json
+{
+    "message": "Successfully created user",
+    "statusCode": 201,
+    "userId":"69f38b4ebc7d9d156c999a2e"
+}
+```
+
+Use the following command:
+
+`grep -A 10 5.6-faked-email.txt From`
+
+This will return the following:
+
+```
+From: "John Doe <john@example.com>"
+From: "JOHN DOE <johndoe@example.com>"
+```
+
+### Author:
+
+- [@kubotea](https://github.com/kubotea)

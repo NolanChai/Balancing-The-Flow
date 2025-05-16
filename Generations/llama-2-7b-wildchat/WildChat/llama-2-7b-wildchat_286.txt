@@ -1,0 +1,7 @@
+There are several ways to accomplish this. The easiest way would be to create an object called "SupplyDrop" with a timer function attached that triggers every 30-60 minutes. Once the timer is triggered, it should create and spawn a plane which will then drop the supply. You can then attach another event to the SupplyDrop object that triggers when someone interacts with it.
+
+You can also use the EventBus module for syncing events between players. To do this, you would need to set up an EventHandler function in your client and call the EventBus.trigger() method from there. This will trigger the supply drop event for all connected players. You can then create a blip on the map when the plane drops the supply by using the AddBlipForEntity command.
+
+Finally, you should remove the blip once someone interacts with it. One way to do this is by adding an "Interact" event to the SupplyDrop object and removing the blip in its callback function. Another way would be to use the RemoveBlip command after the interaction has been triggered.
+
+I hope this helps!

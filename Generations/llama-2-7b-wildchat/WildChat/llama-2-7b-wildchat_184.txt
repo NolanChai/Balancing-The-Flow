@@ -1,0 +1,83 @@
+```python
+from basemap import Basemap, pyplot as plt
+import numpy as np
+import math
+
+data = np.genfromtxt("https://raw.githubusercontent.com/thoes/giscience/master/data_frozen_lake_us.csv", delimiter=',')
+lon = data[:, 0]
+lat = data[:, 1]
+
+m = Basemap(llcrnrlon=96, llcrnrlat=-48, urcrnrlon=207, urcrnrlat=50,
+            resolution='l',
+            lat_0=40)
+plt.show()
+```
+
+### Output:
+
+![alt text](images/2019-06-18-basemap-frozenlakes.png "FrozenLakes")
+
+```python
+import matplotlib.pyplot as plt
+from rasterio import open, masked_open, env
+from shapely.geometry import Polygon
+
+dataset = open('input/data.tif')
+satellite_clouds = dataset.read(1).astype(int)
+
+# define plot region:
+mask_path = 'output/mask.png'
+env.set("TIFF_RESIZED", True) # resample to 0.25 degree (default 1x1 pixel)
+resampled_dataset = masked_open('output/data_masked.tif', 'r')
+region = Polygon([[30,30],[70,65],[83,83],[94,60]])
+plt.figure(figsize=(16, 24), dpi=180)
+ax = plt.axes(projection='polar')
+ax.add_patch(Polygon([[0,0], [255,0], [255,255],[0,255]]))
+cmap = matplotlib.cm.get_cmap('jet', 19)
+cbar = plt.colorbar(cmap, ax=ax, ticks=[])
+plt.imshow(resampled_dataset.read(1), extent=(30,85,40,72))
+# add masked image:
+mask = (satellite_clouds > 0) & resampled_dataset.read() >= 0.9 # mask > 0 and >= 0.9
+plt.add_patch(Polygon([[30,30],[70,65],[83,83],[94,60]], alpha=0.2))
+ax.set_axis_off()
+masked_plot = plt.imshow(mask, extent=(10, 70, 55, 50), cmap='gray')
+plt.annotate('Masked', xy=(69, 34), xycoords='figure fraction', fontsize=20) # annotate text in center (masked region)
+# add clouds:
+cloud_heights = satellite_clouds > 0
+ax.plot(np.degrees(resampled_dataset.read() * 360), cloud_heights, c='red', alpha=0.5)
+plt.annotate('Cloud Heights (m)', xy=(40, 78), fontsize=20) # annotate text in center of clouds
+# save figure:
+plt.savefig(mask_path)
+```
+
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E5%90%8D%E8%AA%B4%E7%A6%98%E5%BD%95%E5%BA%8F.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E9%AA%AC%E8%AE%AD%E9%9D%A2.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-1.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-2.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-3.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-4.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-5.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-6.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-7.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-8.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-9.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-10.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-11.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-12.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-13.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-14.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-15.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-16.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-17.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-18.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-19.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-20.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-21.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-22.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-23.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-24.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-25.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-26.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-27.png)
+![](https://github.com/WangChengXu/PyQGIS-v5/blob/master/images/%E7%A7%91%E4%BB%B6%E8%AE%AD%E9%9D%A2-28.png)
+![](https://github

@@ -1,0 +1,13 @@
+## Solution
+
+It is the area of a small rectangle in the $r$, $\theta$ plane, divided by the area of the corresponding small polar rectangle, in the limit as the size goes to zero.
+
+
+
+
+
+
+
+[SOL]C.  The center of mass of a solid object is defined as the average position of all the particles in the solid. For this cube, the center of mass would be at: \(\frac{\int_0^1\int_0^1\int_0^1 (x,y,z)dxdy dz }{\int_0^1\int_0^1\int_0^1 dxdy dz}\).
+
+Evaluating this integral gives the center of mass as (3/5, 3/5, 3/5)

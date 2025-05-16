@@ -1,0 +1,11 @@
+This error is typically caused by an issue with the `i18n` module and its configuration.
+
+It means that the `header` property in the `i18n` folder is expected to have an index signature, meaning it can be accessed using bracket notation instead of dot notation. In other words, `i18n['header']` would be used to access the value of the `header` property.
+
+To fix this error, you need to make sure that your `i18n` configuration is set up correctly. Here are some steps you can follow:
+
+1. Check your `i18n` module's documentation on how to properly configure it for your application.
+2. Ensure that the `header` property exists in the `i18n` folder and has an index signature. If not, add it with the appropriate value.
+3. Make sure that you are correctly importing and using the `i18n` module in your code. This may involve adding the `import i18n from 'path/to/i18n'` statement at the top of your file, or configuring it using a different method depending on the module you are using.
+4. Try resetting your application's cache and starting over with a clean slate.
+5. If the error persists, consider reaching out to the support team for the `i18n` module for further assistance. They may be able to help you troubleshoot the issue and provide additional guidance on how to fix it.

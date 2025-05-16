@@ -1,0 +1,83 @@
+<i>John</i>. <b>Hello </b>, <b>Jack</b><br/>
+<i>Jack</i>. I'm glad to see you.<br/>
+<i>John</i>. Sit down, please. Maybe you have read the contract but I want to give you the details again before you sign it.<br/>
+<i>Jack</i>. Yes, I know.<br/>
+<i>John</i>. When you become a permanent employee you will get monthly salary and will be on 8-hours/day work shift. You will also have insurances. <br/>
+<b>Jack</b>. Ok , thanks!<br/>
+<i>John</i>. Goodbye, Jack.<br/>
+
+Hello, Jack. I'm John. 
+
+I'm glad to see you.  
+
+Please sit down. Maybe you have read the contract but I want to give you the details again before you sign the contract. You must have a three-month internship.   
+
+Yes, I know. When you become a permanent employee you will get monthly pay and be on an eight-hour work shift per day.  
+
+Wait, will I also have five insurances and one fund?
+
+```javascript
+function dialogue() {
+    return (
+        <> 
+            <Heading level="1">
+                Hello , Jack . I'm John .
+            </Heading>
+            <Heading level="2">
+                <P>I'm glad to see you !</P>
+            </Heading>
+            <Heading level="3">
+                Sit down , please . Maybe you have read the contract , but I want to give you the details again before you sign the contract . You must have a three-month internship .
+            </Heading>
+            <Heading level="4">
+                Yes , I know .
+            </Heading>
+            <Heading level="5">
+                When you become a permanent employee , you will have the insuraNCes . You will get monthly pay and will be on eight-hour / day work shift .
+            </Heading>
+            <Heading level="6">
+                Wait , will I have five insuraNCes and one fund ?
+            </Heading>
+            <Heading level="7">
+                Yes . You can also enjoy legal holidays and year-end bonus .
+            </Heading>
+            <Heading level="8">
+                It sounds great !
+            </Heading>
+            <Heading level="9">
+                If you need to work overtime , you will get twice the usual salary as overtime pay . 
+            </Heading>
+        </>
+    );
+};
+```
+
+1. "Sit down please." 2. "When you become a permanent employee, you will have the insurances." 3. "You will get monthly pay and be on an eight-hour day work shift." 4. "Will I have five insurances and one fund?" 5. "You can also enjoy legal holidays and year end bonus." 6. "If you need to work overtime, you will get twice the usual salary as overtime pay."
+
+Jack was glad to meet John. He took a seat and listened carefully. He could not believe that he got such an attractive internship offer! He read the contract, but wanted to hear the details again before signing it. Jack knew that when he became a permanent employee, he would get monthly pay as well as insurance and holiday bonuses. John said that Jack would also enjoy legal holidays and year-end bonuses. Jack asked about working overtime; John told him that if he worked extra time, he would be paid double the usual rate for his work. Jack was satisfied with everything and had no questions to ask.
+
+" Hello . I'm John . "
+
+" It is a pleasure to meet you . "
+
+" Sit down , please . Maybe you have read the contract , but I want to give you the details again before you sign the contract . You must have a three-month internship . "
+
+" Yes . But I know that I will be a permanent employee after the internship . "
+
+" When you become a permanent employee , you will have the insuraNCES . You will get monthly pay and will be on eight-hour / day work shift . "
+
+" OK ! "
+
+" If you need to work overtime , you will get twice the usual salary as overtime pay . "
+
+" But it is hard for me to do that . "
+
+" Then we can discuss about this after you sign the contract . Do you have other questions ? "
+
+" How long will the induction training be ? "
+
+" About two weeks . "
+
+" I see . "
+
+" If you don't have other questions , just sign here and you will get the benefits of insurance . "

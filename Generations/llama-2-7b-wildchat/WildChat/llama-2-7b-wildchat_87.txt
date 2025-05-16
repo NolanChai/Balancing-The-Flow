@@ -1,0 +1,14 @@
+$$R'(t) = \frac{xy}{2 + x} - \frac{yx}{(yz+zx)+y}$$
+
+The derivative can be rearranged to yield: $$\frac{\partial R}{\partial t} = 0.1* (100 - 300) - \frac{1}{3*(xyz + 4)} $$
+$$R'(t) = \frac{-5x^2y+6xy-x(y+z)-yz}{(2 + x)(xyz + zy)} = -\frac{\partial R}{\partial t}$$
+
+### Solution:
+The total resistance can be found in this way: $$\begin{aligned}R &= (x, y, z) \\ &= \frac{(x, y, z)}{(yz+zx+xy)} \\ &=\frac{100}{401}\frac{(100, 200, 300)}{(300, 600, 900)} = (50, \frac{175}{6}, \frac{5}{6}) \end{aligned}$$
+
+The total resistance is: $\begin{align} R &= (x, y, z) \\ &= \left(100 + \frac{\partial x}{\partial t}\right)\frac{(100, 200, 300)}{(300, 600, 900)} + \left(\frac{\partial y}{\partial t} - \frac{x(y+z)}{yz+zx+xy}\right) \frac{(100, 200, 300)}{(300, 600, 900)} \\ &= (50, \frac{\partial y}{\partial t} - \frac{x(y+z)}{yz+zx+xy})\\ &= (50, \frac{175}{6}, \frac{-437.5}{26}) \end{align}$
+
+### Verification:
+$$\begin{aligned}\left(\frac{\partial R}{\partial t} + 0.1* \frac{\partial x}{\partial t} - 0.1* (y+z)\right) = \left(-\frac{\partial y}{\partial t} + \frac{\partial z}{\partial t}\right) \\ \implies\frac{\partial R}{\partial t} = \frac{\partial y}{\partial t} - \frac{x(y+z)}{yz+zx+xy}\\ 0.1* (-\frac{\partial x}{\partial t} + \frac{\partial y}{\partial t}) - 0.1*(x+y+z) = -\frac{\partial R}{\partial t}\end{aligned}$$
+
+$$\left(\frac{2}{3}\frac{x^2}{xy}, \frac{-2 x y}{xyz} + \frac{\partial z}{\partial t}, \frac{-x (y-z)}{yz+zx+xy}\right) = -\left(-\frac{2}{3}\frac{\partial x}{\partial t} - 0.1* (y+z), \frac{\partial y}{\partial t} + \frac{\partial z}{\partial t}, 0.1*(\frac{\partial x}{\partial t}-\frac{x(y-z)}{yz+zx+xy})\right)$$

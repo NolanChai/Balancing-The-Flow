@@ -1,6 +1,0 @@
-```python3
-import collections
-
-answer = collections.Counter(input()).most_common()[1][-1]
-print('Quarter final!')
-```

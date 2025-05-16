@@ -1,0 +1,37 @@
+To create an event that happens every 30-60 minutes where a plane flies over the map and drops a supply drop, you can use the `Clock` and `PlayerAdded` events in FiveM. Here's an example of how you could achieve this:
+1. Create a new script: Go to "File" > "New Script", give it a name (e.g. "SupplyDropEvent"), and click "Create".
+2. Set the interval for the event: In the `Clock` event, set the ` interval` variable to the time you want the supply drop to happen (e.g. 30 minutes).
+```
+local clock = Clock()
+clock:SetInterval(30 * 60 -- 30 minutes in seconds) -- Set the interval for the supply drop event
+function SupplyDropEvent()
+    -- Check if it's time for the supply drop
+    if (clock.GetTime() >= 1800000) -- 1800000 is 30 minutes in seconds
+        -- Create a new supply drop blip
+        local suppDrop = SupplyDrop():SetPosition(GetEntityPosition()) -- Set the position of the supply drop blip
+        -- Add the supply drop blip to the map
+        AddBlip(suppDrop) -- Add the blip to the map
+        -- Draw a blip on the map when the supply drop lands
+        local player = PlayerAdded():GetPlayer() -- Get the player who interacts with the supply drop
+        if (player and player:IsValid()) then
+            -- Remove the supply drop blip when someone interacts with it
+            suppDrop:Remove()
+            player:EmitSound("SupplyDrop_Open") -- Play a sound when someone interacts with the supply drop
+        end
+    end
+end
+```
+3. Use the `PlayerAdded` event to detect when a player interacts with the supply drop: In the `PlayerAdded` event, check if the player who was just added is the one who interacted with the supply drop blip. If they are, then remove the blip and play a sound.
+```
+function PlayerAdded(player)
+    -- Check if the player who was just added interacted with the supply drop blip
+    if (player:IsInteractingWithBlip(suppDrop)) then
+        -- Remove the supply drop blip when someone interacts with it
+        suppDrop:Remove()
+        -- Play a sound when someone interacts with the supply drop
+        player:EmitSound("SupplyDrop_Open")
+    end
+end
+```
+By using these two events, you can create an event that happens every 30-60 minutes where a plane flies over the map and drops a supply drop. The blip will be drawn on the map when it lands, and will be removed when someone interacts with it.
+Note: This is just one way to achieve this effect in FiveM. There are many other ways you could do it, depending on your specific needs and requirements.

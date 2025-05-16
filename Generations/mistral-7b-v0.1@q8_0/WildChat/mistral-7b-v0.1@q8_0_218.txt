@@ -1,0 +1,53 @@
+The software engineering process is a sequence of activities that transforms user needs into working system. The software processes include all activities performed in the life cycle of the software product. The software process includes software management, technical activities, and maintenance and support. Software life cycle consists of phases and iterations. Software phase describes what should be done to fulfill the project goals and iteration is a time boxed unit of work that represents an incremental step towards the completion of the project goal. Each phase can have many iterations. The software process model provides a framework for organizing the activities, roles and products in each phase. The software development process model helps to manage software projects. It also supports quality assurance and measurement by providing checkpoints. The software engineering processes include software requirements, software design, programming, testing, project management, maintenance, and documentation. Each of these processes can be further decomposed into a set of sub-processes. The activities performed during each process will depend on the software life cycle model being used for the software development.
+
+Software Engineering Process Model
+
+The software engineering process is defined by the IEEE standard as ‘a structured framework, composed of roles, work products and tasks, to produce a specific set of outputs from specific inputs’ The IEEE Standard 1074 also provides an example: The Software Development Process. This model consists of six processes that are grouped into two phases (requirements definition and software development). Each phase in turn contains a set of sub-processes.
+
+1. Develop the system to ensure that the user can log in with a valid username and password. The login process must be secure.
+2. Implement a feature to allow users to change their own account password.
+3. Develop the system so that the user can select the language of the application (English or French) from a drop-down menu.
+4. When the user is logged in, display their name and profile picture on the left side of the screen.
+5. When a user logs out of the system, make sure to clear all session information related to that user.
+6. Develop the system so that a user can view their own personal details such as email address, phone number, etc. from a profile page.
+7. Develop the system so that a user can change their own email address and/or phone number by entering it in the appropriate fields on their profile page. The new information must be updated immediately when the user clicks Save Changes button on this page. If any errors occur during validation of new values (e.g., invalid format), display an error message informing them about what went wrong instead of just ignoring their input completely without showing any indication that something happened at all!
+8. Develop the system so that when a user changes their password, they must confirm it by entering it twice on two separate fields before saving any changes to make sure there are no typo mistakes made while typing both times in those boxes separately (e.g., 1234567 instead of 123-456-7).
+9. Implement an administrator account which has full access to all areas within the application except for changing passwords for other users since this could be used as a way by hackers trying to gain access through social engineering tactics where someone pretends like he is one of those who works at your company so they can trick people into giving out confidential information such as credit card details etc., but we don’t want anything bad happening here please!
+10. Implement a feature that allows users to report any bugs they find in the application (this could be done via an online form). The bug reporting system should store all reported issues in a database and display them on a dedicated page accessible only by administrators; these pages must include enough information about each bug report so that someone else can replicate it if necessary.
+
+Nonfunctional requirements are the properties of a software product that cannot be measured or verified by executable means. Examples of nonfunctional requirements are performance, usability, robustness, scalability, security, modifiability and availability. The purpose of this INST is to capture and prioritize nonfunctional requirements in such a way as to achieve a balance with functional requirements.
+
+The main benefits are the following:
+
+- Nonfunctional requirements are defined.
+- Nonfunctional requirements can be prioritized against other nonfunctional and functional requirements, according to their relative importance.
+
+###### Instructions
+
+1. Define the scope of the project to include all aspects that may affect performance.
+2. Identify existing data about previous projects, user requirements, or other sources.
+3. Perform an analysis of nonfunctional requirements:
+    - Perform a risk analysis and identify the potential risks related to the project (see INST-2.1) .
+    - List the identified requirements for each of these aspects: usability, maintainability, performance, scalability, security, robustness, reliability, availability, extensibility, testability.
+4. Prioritize nonfunctional requirements based on the relative importance to the project and stakeholders.
+5. Specify the priorities for each requirement.
+6. Update the software life cycle documents that deal with nonfunctional requirements (see INST-10.8) .
+
+The answer depends on the nature of the project. If it's a small project, you might choose to do everything yourself or with minimal team support. If it's a large project, you might decide to hire an experienced software engineer to help you out. In either case, your decision about which processes and techniques to use will be based on what you know about the problem domain and how much time/effort you think each solution requires.
+
+I am a bit confused about 1. Are we talking about software? or are we talking about functional requirements of a hardware component (like a microcontroller)?
+
+What are nonfunctional requirements? I think they are all related to how software runs, but what is nonfunctional about it?
+
+The breadth of software refers to the amount of functionality it offers. The depth of a system is its complexity. A complex program does a simple task. An example would be an operating system, which is very deep but not very broad. As an analogy, think about the difference between a carpenter’s tools and a carpenter.
+
+In terms of software testing, a shallow application is usually easier to test than a deep one. For instance, a word processor is a wide application in that it has many functions, but its depth is limited. You can probably figure out how most applications work without using the manual; you just experiment with them until you get the hang of the program’s way of working. The more complex a system is, however, the longer it takes to learn to use and the more likely you are to need help from manuals, user groups, or online resources.
+
+Many applications have both breadth and depth. An example might be an email application such as Microsoft Outlook. In this case, breadth refers to the amount of functionality you can perform (send emails, receive emails, read messages, write new ones, etc.). The depth is in how it does what it does – for instance, using a POP3 connection versus IMAP to retrieve your email.
+
+A system with great complexity and a large breadth will require more time for testing than a simple application with limited functionality. In addition to testing the functions themselves, testers must also consider how much time they have available before they need to move on to another task. Complexity can increase the amount of effort required by testers as well as lengthen the overall length of the project because it takes longer for developers and other stakeholders in a project to understand what’s going on with each part of their system.
+
+[REV]What are the two major issues when developing large systems?
+I would say that the major issue is how to handle all of those parts, pieces and relationships, so I would say a) the decomposition problem b) The people and organizational problem (since there will be many developers from various disciplines working on different modules).[/REV]
+
+[ANSWER]Define the depth versus the breadth issue in software complexity? Is my answer correct? Breadth issues address the sheer numbers involving major functions, features within each functional area, interfaces to other external systems Simultaneous users and types of data and data structures but depts issues address the linkage and the relationships amond item.[/ANSWER]

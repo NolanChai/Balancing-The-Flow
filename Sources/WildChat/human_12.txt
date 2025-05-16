@@ -1,0 +1,43 @@
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = lawyers
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
+
+Assistant: "/imagine prompt: lawyers, well-dressed professionals in tailored suits, meticulously groomed, holding leather briefcases, confident and assertive expressions, standing in a modern courtroom, lined with polished wood paneling, large windows overlooking the city skyline, filled with natural light, capturing the seriousness and professionalism of the setting, composition focused on the lawyers' faces, revealing their determination and expertise, in a style reminiscent of courtroom photography, with a wide-angle lens, capturing the entire scene and conveying a sense of grandeur and authority. --ar 16:9 --v 5.2
+
+/imagine prompt: lawyers, diverse group of legal experts, each with their own unique style, exchanging ideas, passionately debating, surrounded by stacks of legal documents and law books, in a bustling law firm, characterized by high ceilings, vintage furniture, and large wooden bookshelves filled with old legal tomes, evoking a sense of tradition and knowledge, composition focused on the lawyers' animated gestures and expressions, capturing their intensity and intellect, in a style reminiscent of a vibrant and dynamic painting, with bold brushstrokes and vibrant colors, portraying the energy and intellectual discourse of the legal profession. --ar 9:16 --v 5
+
+/imagine prompt: lawyers, exhausted but determined individuals, hunched over their desks, working late into the night, surrounded by piles of paperwork, dimly lit by desk lamps, casting long shadows across the room, in a cramped and cluttered office space, reflecting the demanding and intense nature of their work, composition focused on the lawyers' weary faces and furrowed brows, capturing their commitment and perseverance, in a style reminiscent of gritty black and white photography, with a high contrast and sharp details, conveying the gritty reality and sacrifices of the legal profession. --ar 1:1 --v 5.2
+
+/imagine prompt: lawyers, young interns eagerly learning from experienced mentors, engrossed in legal textbooks, surrounded by modern technology and sleek office furniture, in a contemporary law firm, characterized by minimalist design and glass walls, creating an open and collaborative environment, composition focused on the lawyers' engaged expressions and gestures, capturing their enthusiasm and thirst for knowledge, in a style reminiscent of digital illustration, with clean lines and vibrant colors, portraying the innovative and forward-thinking nature of the legal profession. --ar 9:16 --v 5"

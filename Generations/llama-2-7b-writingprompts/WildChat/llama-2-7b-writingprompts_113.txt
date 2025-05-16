@@ -1,0 +1,20 @@
+https://stackoverflow.com/questions/45002198/how-to-add-the-same-component-in-multiple-instances-in-angular-cli?answertab=active#tab-top
+
+Comment: you can check my answer in this thread  https://stackoverflow.com/q/47067381/6495427
+
+Answer: \begin{blockquote}
+how make this compontent reusable to like and dislike the product in angular
+\end{blockquote}
+
+There are several ways you can do that, one way is through using [ngComponentOutlet](https://angular.io/guide/component-interop#interpolating-component-attributes-and-directives-into-a-host) which allows you to inject any component in a `div` tag:
+
+\begin{code}
+<ng-container *ngComponentOutlet="productList; let product = productDetail;"></ng-container>
+\end{code}
+
+in your component,
+
+\begin{code}
+@Input() productDetail;
+@ViewChild(ProductList) viewChild: ProductList;
+\end{code}

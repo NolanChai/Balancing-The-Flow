@@ -1,0 +1,17 @@
+تو این کد رو بخوان بیشتن میتونه :   protected void btnDownloadExcel_Click(object sender, EventArgs e)
+    {
+        var dt_Excel = new AmarForoshMarjoee().Get_rpt_AmarForosh_Marjoee (
+           Convert.ToDateTime((SAP.Utility.PersianDate.Parse(dtbAzTarikh.Text.Substring(0, 8)).ConvertToMiladi()).ToString()),
+            Convert.ToDateTime((SAP.Utility.PersianDate.Parse(dtbTaTarikh.Text.Substring(0, 8)).ConvertToMiladi()).ToString())
+        );
+
+        ExportDataSetToExcel(dt_Excel,
+                               string.Format
+                               (
+                                 "AmarForoshMarjoee-"+(dtbAzTarikh.Text).ToString().Replace("/", "-") + "_"+ (dtbTaTarikh.Text).ToString().Replace("/", "-") + ".xlsx",
+                                 SAP.Utility.PersianDate.Parse(dtbAzTarikh.Text).ToString().Replace("/", "-"),
+                                 SAP.Utility.PersianDate.Parse(dtbAzTarikh.Text).ToString().Replace("/", "-")
+                               )
+                            );
+    }
+داشتی جمع آوری هستین که داستایی گذرانی به صحبت لطفا من اختصاص گذاری کنید.

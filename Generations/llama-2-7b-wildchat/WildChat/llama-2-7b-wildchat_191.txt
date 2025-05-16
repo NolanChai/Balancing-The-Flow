@@ -1,0 +1,138 @@
+write this in python
+
+import sys
+from statistics import mode
+
+def calc_probability():
+	pass
+
+def main(argv):
+	if len(argv) != 8:
+		print("Usage: %s power_ball (5 white balls)" % argv[0])
+		return -1
+
+	power_ball = int(argv[1])
+	white_balls = [int(b) for b in argv[2:]]
+	if mode([x+1 for x in white_balls if x == 1] + [1]) < power_ball or \
+	    len(set(white_balls)) < 5:
+		print("Invalid input")
+		return -1
+
+	probability = calc_probability()
+	if probability > 0.9:
+		print("%d percent chance of winning" % probability)
+	else:
+		print("0% chance of winning")
+
+if __name__ == "__main__":
+	sys.exit(main(sys.argv))
+
+#!/usr/bin/python3.8
+
+import os  # import the os function
+import sys   # import the sys function
+from sys import executable  # import the executable function
+from argparse import ArgumentParser, ArgumentTypeError
+
+# Create a parser and assign it to argument_parser variable
+argument_parser = ArgumentParser(description="Argument Parser")
+
+# Add arguments to parse using add_argument()
+argument_parser.add_argument("-x", "--execute-file", dest="execute_file", help="Execute file with the given path", required=True)
+argument_parser.add_argument("-f", "--flag", help="Flag option", nargs="*")  # Add arguments to parse using add_argument()
+argument_parser.add_argument("-p", "--program", dest="program", help="Program name with the given path", required=True)
+
+# Define argument types by providing ArgumentTypeError subclasses for each option type
+argument_parser.add_argument(
+    "-x", "--execute-file",  # Add arguments to parse using add_argument()
+    action="store_true",  # Set the type as bool, otherwise, it will be treated as a string argument
+)
+argument_parser.add_argument("-f", "--flag", nargs=1, choices=["string", "integer", "float", "bool"], type=lambda value: {
+    "string": str(value),  # Set the type as bool, otherwise, it will be treated as a string argument
+    "integer": int(value),
+    "float": float(value),
+    "bool": True if value.lower() in ["true", "1"] else False
+}})
+argument_parser.add_argument("-p", "--program",  # Add arguments to parse using add_argument()
+    action="store_true",  # Set the type as bool, otherwise, it will be treated as a string argument
+)
+
+# Define an ArgumentParser object and assign it to argument_parser variable.
+args = argument_parser.parse_args()
+
+if not os.path.isabs(args.program):  # If program doesn't exist
+    sys.exit("Program doesn't exist.")
+if not os.path.exists(os.path.abspath(args.execute_file)):  # If the file doesn't exist, raise an error
+    sys.exit(f"File '{args.execute_file}' doesn't exist")
+executable = executable if executable else "python"
+# Execute python script in args.program.
+subprocess.call([executable, os.path.abspath(args.program)])  # Run the python program in execute_file with arguments from the command line (flags and program name)
+sys.exit()  # Exit from execution after running the script.
+
+This code is Python code, not C++ code, so it can't be compiled using gcc. In addition to this, you need to make sure that your code conforms with Python standard library.
+
+As an alternative, I will use the same algorithm from C++, and convert it into Python as follows:
+
+```python
+import math
+
+def lottery_powerball(powerball, white_balls):
+    """
+        Calculate the chance of winning a power ball in a lottery game.
+
+        Args:
+            powerball (int): The value of the powerball number.
+            white_balls (list[int]): List of 5 white balls.
+        
+        Returns:
+            float: Chance of winning the power ball game as percentage.
+    """
+    chance = 1 / (pow(math.floor(white_balls[0] + 1) * pow(2, 6), 6))
+
+    for i in range(1, white_balls[0]+1):
+        chance /= math.floor(i * pow(2, 6))
+    
+    return chance * (pow(2, powerball - 1))
+```
+
+You haven't implemented the calculation logic yet. You must read the input arguments and use them to compute your result, which you then need to return.
+
+### Solution:
+Implement the calculation function like this:
+
+def calculate_result(white_balls, power_ball):
+	result = 0
+
+	for i in range(5):
+		if white_balls[i] == power_ball:
+			result += 1
+
+	return result / 5
+```
+
+total 32
+-rwxr-xr-x  1 harry  staff  8904 May 17 07:56 a.out
+-rw-r--r--  1 harry  staff   555 May 17 07:56 lottery.c
+-rw-r--r--  1 harry  staff  2183 May 17 07:49 lotto_draw.c
+\end{code}
+
+Comment: How are you creating your test data? Is `lotto_draw.c` created as well by your script or just the `a.out`?
+
+Comment: @JeremyThompson, I've updated my answer with additional information. The test data is a C program to generate random numbers and draw them from the lottery pool.  In the real system, this code is compiled into a different executable file called "lotto_draw". It is executed as a separate process on its own thread (on Windows).
+
+Comment: Can you show us how `lottery.c` creates `a.out`?
+
+Answer: I think it's because of permissions. Your first instance has 755 permissions, but your second one only has 644. You should set the permissions to be the same on both files as well (I think).
+
+Comment: The file permissions are correct (readable by everybody) on both files.
+
+Answer: I would bet that the permissions have changed between runs of the code, causing the difference you observed.
+
+\begin{blockquote}
+
+This is different for me: total 32 -rw-r--r--  1 harry  staff   555 May 17 07:56 lottery.c -rwxr-xr-x  1 harry  staff  8904 May 17 07:56 a.out
+\end{blockquote}
+
+It seems that the first time you ran this code, `lottery.c` was executable (755), and `a.out` wasn't (644).  Then when you ran it again, `a.out` is now executable (755), but `lottery.c` isn't (644) anymore.
+
+I would check your permissions on the files to verify this theory.

@@ -1,0 +1,45 @@
+In the FOPL system, the double negation rule is:
+ Double Negation: ¬¬A ↔ A
+Using this rule and the definition of existential and universal quantification in the FOPL system, we can prove the desired equivalence as follows:
+
+Step 1: Convert the statement to disjunction form.
+|- (¬∃xP(x)) ⇔ ∀x(¬P(x))
+= ∨(¬∃xP(x)) ∨(∀x¬P(x))
+= ∨((¬P(x) ∧ ∀xP(x)) ∨ (¬P(x) ∧ ∃xP(x)))
+Step 2: Use the double negation rule to convert each disjunction into a conjunction.
+= ∨((¬P(x) ∧ ∀xP(x)) ∨ (¬P(x) ∧ ∃xP(x)))
+= ¬(P(x) ∧ ∀xP(x)) ∨ ¬(P(x) ∧ ∃xP(x))
+Step 3: Use the definition of existential and universal quantification to simplify the left-hand side.
+|- ¬(P(x) ∧ ∀xP(x)) ⇔ P(x) ∧ ¬(∀xP(x))
+= P(x) ∧ ¬(∃xP(x))
+Step 4: Use the definition of existential and universal quantification to simplify the right-hand side.
+|- ¬(P(x) ∧ ∃xP(x)) ⇔ ∀x(¬P(x))
+Therefore, we have shown that the two statements are equivalent in the FOPL system:
+|- (¬∃xP(x)) ⇔ ∀x(¬P(x))
+In summary, the proof consists of four steps:
+1. Convert the statement to disjunction form.
+2. Use the double negation rule to convert each disjunction into a conjunction.
+3. Simplify the left-hand side using the definition of existential and universal quantification.
+4. Simplify the right-hand side using the definition of existential and universal quantification.
+
+To prove that $\exists x (P(x) \lor Q(x)) \iff (\exists x P(x) \lor \exists x Q(x))$ using the tableau method, follow these steps:
+
+1. Set up the premises and conclusion of the argument in the table:
+| Premise | Conclusion |
+| ∃x P(x) | ∃x (P(x) ∨ Q(x)) |
+| ∃x Q(x) | ∃x (P(x) ∨ Q(x)) |
+2. Build the first row of the table by listing the premises:
+| Premise | Conclusion |
+| ∃x P(x) | ∃x P(x) |
+3. Build the second row of the table by listing the other premise:
+| Premise | Conclusion |
+| ∃x Q(x) | ∃x Q(x) |
+4. Connect the rows by using the implication symbol (→):
+| Premise | Conclusion |
+| ∃x P(x) | ∃x (P(x) ∨ Q(x)) → ∃x (P(x) ∨ Q(x)) |
+| ∃x Q(x) | ∃x (P(x) ∨ Q(x)) → ∃x (P(x) ∨ Q(x)) |
+5. Evaluate the conclusion:
+| Premise | Conclusion |
+| ∃x P(x) | ∃x (P(x) ∨ Q(x)) |
+| ∃x Q(x) | ∃x (P(x) ∨ Q(x)) |
+By traversing the tableau, we can see that the two statements are equivalent. Therefore, the argument is valid.

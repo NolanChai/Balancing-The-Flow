@@ -1,0 +1,15 @@
+There are several ways to optimize this query, but here are some suggestions:
+1. Use a subquery instead of a common table expression (CTE): The CTE `alt_catalog` can be replaced with a subquery that returns the same results. This can simplify the query and make it easier to read.
+2. Remove unnecessary tables and columns: The query uses several tables that are not necessary for the calculation of the count of products, such as `catalog_categoryproduct_mv`. Consider removing these tables to simplify the query.
+3. Use an inner join instead of a self-join: The self-join in the subquery can be replaced with an inner join to improve performance. This can also simplify the query.
+4. Avoid using `VALUES` with a list of values: Instead of using `VALUES`, consider using a single value that is repeated multiple times, like this: `(SELECT 'geely/atlas' || separator || 'dvigatel' AS cat_url)`. This can simplify the query and make it easier to read.
+5. Use a single `COUNT` function: Instead of using two `COUNT` functions, consider using a single `COUNT` function that counts the number of products in both categories. This can simplify the query and improve performance.
+Here is an example of how the optimized query could look like:
+```
+SELECT 
+(SELECT COUNT(*) AS "__count" FROM catalog_categoryproduct_mv 
+INNER JOIN catalog_metaproduct ON (catalog_categoryproduct_mv."meta_product_id" = catalog_metaproduct."id") 
+WHERE catalog_categoryproduct_mv."category_id" IN  (SELECT id FROM catalog_category WHERE url = cat_url) AND catalog_metaproduct."id" IN (SELECT id FROM catalog_category WHERE url = alt_url) ) 
+FROM (SELECT 'geely/atlas' || separator || 'dvigatel' AS cat_url) alt_catalog;
+```
+Please note that this is just an example, you can adjust the query to fit your specific needs and table structure.

@@ -1,0 +1,205 @@
+## Introduction
+
+The concept of e-commerce is to develop an online store that has all the services of a conventional supermarket.
+
+We will use the following technologies:
+
+- JavaScript and React for the Frontend
+- NodeJS, Express and MongoDB for Backend.
+- Docker and Nginx for the deployment in Heroku
+
+## Objective
+
+The objective of this project is to learn how to build a backend using the Express framework, also you will be able to use it with other frontends as well as any other web service, the most important thing is to have a clear understanding of REST architecture.
+
+To understand better the concept of E-Commerce in this case we are going to use an example that simulates a supermarket where each product has a price and also if there is a discount in it and also how many units you bought, with all this information we can make a summary of the purchases.
+
+## Getting Started
+
+The first step will be to install all the requirements for this project:
+
+- NodeJS: https://nodejs.org/en/
+- Docker: https://www.docker.com/get-started
+
+### Project installation
+
+#### Clone the repository
+
+```
+git clone https://github.com/Sinix17/supermarket_ecommerce.git
+cd supermarket_ecommerce
+```
+
+#### Install all dependencies with npm
+
+```
+npm install
+```
+
+#### Run MongoDB with Docker
+
+This is a local version of the database so you can make tests locally, if you want to connect it to another server then follow these steps.
+
+Open your terminal and run this command:
+
+```
+docker run --name mongodb -p 27018:27017 -v mongodb_data:/data/db \
+-d mongo
+```
+
+In case you want to change the port use -p 3000:27018
+
+##### Use MongoDB Compass
+
+To connect with mongodb compass we need to go to your docker settings and configure it with the following values.
+
+- Network mode: host (in case you have multiple networks)
+- Exposed ports: 27017
+
+#### Run the project with npm
+
+```
+npm start
+```
+
+## Deployment
+
+In order to deploy this application, first of all we will use Docker and then Nginx in Heroku.
+
+### Use Docker
+
+First of all you need to create your account at docker hub, after that we can move on to build our docker images for the backend and frontend.
+
+##### Build the backend
+
+- Go inside the /backend folder and run the command: docker build -t supermarket_ecommerce .
+
+```
+docker build -t supermarket_ecommerce .
+```
+
+This command will build a Docker image called supermarket_ecommerce, with this we can start to test our application.
+
+##### Run the backend
+
+- Go inside /backend and run this command: docker run -p 8081:8081 --name supermarket_ecommerce supermarket_ecommerce .
+
+```
+docker run -p 8081:8081 --name supermarket_ecommerce supermarket_ecommerce
+```
+
+#### Build the frontend
+
+- Go inside the /frontend folder and run the command: docker build -t supermarket_ecommerce_frontend .
+
+```
+docker build -t supermarket_ecommerce_frontend .
+```
+
+This command will build a Docker image called supermarket_ecommerce_frontend, with this we can start to test our application.
+
+##### Run the frontend
+
+- Go inside /frontend and run this command: docker run -p 8080:8081 --name supermarket_ecommerce_frontend supermarket_ecommerce_frontend .
+
+```
+docker run -p 8080:8081 --name supermarket_ecommerce_frontend supermarket_ecommerce_frontend
+```
+
+##### Create the frontend Dockerfile
+
+Now you will need to create your own Dockerfile inside of the /frontend folder.
+
+Inside of this file, you can use any configuration that suits your needs, in my case I use the following configuration:
+
+- Install all dependencies for React and NodeJS with npm install
+- Start the application with node index.js
+
+```
+FROM node:10
+WORKDIR /app
+COPY . ./
+RUN yarn install && yarn start
+CMD [ "npm", "start" ]
+```
+
+#### Create a supermarket_ecommerce_frontend.yaml file and add the following configuration:
+
+- Build context: .
+- Dockerfile: frontend/Dockerfile (or whatever is the name of your dockerfile)
+- Expose 8080
+- Image: supermarket_ecommerce_frontend
+
+```
+build: .
+context: frontend
+dockerfile: ./Dockerfile
+expose:
+ - "8080"
+image: supermarket_ecommerce_frontend
+ports: []
+run: ""
+tags: null
+```
+
+##### Create a Docker-Compose.yaml file with the following configuration:
+
+```
+version: '3'
+services:
+  frontend:
+    build: .
+    ports:
+      - "8080:8081"
+    restart: always
+    depends_on:
+      - backend
+  backend:
+    image: supermarket_ecommerce
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/supermarket
+    ports:
+      - "8081:8081"
+```
+
+### Heroku Deployment
+
+Now we will deploy our application to heroku, first of all you need to create your account at Heroku and also install the CLI tool.
+
+##### Login with Heroku
+
+```
+heroku login -i
+```
+
+After that, you need to configure your Dockerfile and also the Docker-Compose.yaml file:
+
+- Change the MONGO_URL to mongo_url (in the backend Dockerfile)
+- In the frontend Dockerfile add the following line: EXPOSE 80
+
+```
+EXPOSE 80
+```
+
+##### Create an app at Heroku
+
+In order to create a new application, we will need to run this command:
+
+```
+heroku create supermarket_ecommerce --region eu
+```
+
+Now you can push your project and start the process of deployment:
+
+```
+git add .
+git commit -m "deploy"
+git push heroku master
+```
+
+In case you want to make any changes, then just run the previous commands again and wait for the application to be redeployed.
+
+Now you can access your application using this link:
+
+- Heroku application (backend) : https://supermarket-ecommerce-api.herokuapp.com/
+- Frontend application : https://supermarket_ecommerce.herokuapp.com/

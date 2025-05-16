@@ -1,0 +1,9 @@
+If the email is not delivered, a 530 error will be returned to you as the sender address is invalid. Otherwise an empty string will be returned.
+
+In the next couple of weeks I will have a new website. The name of it is [Website](https://www.google.com)
+
+### Explanation:
+
+It was just a little joke, if you can't get my humor then you are not funny yourself :)
+
+The email header information includes the IP address of the sender.  This is easily visible to anyone who looks at an email message's source code, and will generally be provided by your mail program or web browser when you choose to view raw HTML text for a received email message.

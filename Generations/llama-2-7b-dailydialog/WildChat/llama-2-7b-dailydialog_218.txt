@@ -1,0 +1,38 @@
+The decision is a fundamental task for the project team.  It is necessary to establish an environment that allows all the actors in the process to make decisions according to their capabilities. In general, decision-making involves three basic concepts:
+1. Decision making process: The decision making process begins with identifying and defining the problems, which are translated into objectives or goals. The next step is to determine the alternatives that should be evaluated to achieve these objectives. Finally, it must be defined how to evaluate these alternatives to choose the best solution and achieve a successful project outcome.
+2. Decision support techniques: A set of tools and methodologies used by project managers as a basis for decision making. There are many decision-making techniques used in software development. These can be classified into two groups, quantitative and qualitative methods. Quantitative methods are based on statistical data or mathematical models to predict the future outcome of projects with high confidence levels (90% or 95%). Qualitative methods involve more subjective judgments of experts regarding the impacts that changes could have on the project or business.
+3. Decision-making model: A process whereby a group of individuals collaborate to make decisions and solve problems related to software engineering projects. The role of this type of decision making is to enable the different actors involved in software projects (managers, designers, developers) to exchange information about what they think should be done on an issue.
+
+1. We should provide the user with an intuitive interface to edit data and to view information about their orders
+2. The interface should support dragging and dropping actions between panels
+3. We should add a “back” button to easily navigate back to the previous screen from within the form 
+4. Users can click the “Back to Dashboard” button on every page and return to the dashboard without closing any panel
+5. The user has the option of hiding all panels except for their current active one with the “Hide Other Panels” menu item
+6. After each update, users can use the save icon ( ) to save and apply changes made on the form
+7. Users should be able to print orders or export them in CSV format
+8. Users can also email order information 
+9. The user should be alerted when they reach the maximum number of items per order
+10. When a customer places an item from an out-of-stock product, a message should appear indicating that the product is no longer available and suggesting other products in their place
+11. Users should have the ability to see all orders, cancel individual ones, and delete them completely if needed
+
+The software team should develop a set of requirements that are consistent with the organization’s functional and nonfunctional requirements. The requirements should be developed in an iterative process that is based on business needs.
+
+### Explanation:
+Nonfunctional requirements are the characteristics of a system that are not directly related to its function, but which must still be met for it to function properly. They include requirements such as security and reliability. Because nonfunctional requirements are often difficult to quantify or test, they should be developed in an iterative process that is based on business needs. This will help to ensure that the software team is able to meet these requirements effectively and efficiently.
+
+* 1. The software engineers must make decision about how they can implement their requirements in a better way by using various technologies available to them. For example, if some of the required tasks need more time than usual and resources are not readily available, then these activities should be delayed until such time as other resources become available. This will allow them to complete other activities that require less effort or fewer resources in order to achieve their desired outcomes faster.
+* 2. In addition, software engineers must consider whether it is worth spending more money on certain projects than others because there may be better ways of doing things that would save time and resources overall if done properly from the beginning rather than trying to fix problems after they've already occurred due to poor planning or inadequate training/experience.
+* 3. Finally, software engineers must also decide which technologies will best meet their needs at any given moment so that they can move forward with confidence knowing they have made an informed decision about what tools should be used for specific tasks throughout the project lifecycle and beyond!
+
+Yes! 1. Functional requirements: Software engineers ask many questions about the task such as input formats, special cases, boundaries, error conditions etc. before designing and programming the solution 2. Nonfunctional requirements: Engineers consider perfomance and real-time requirements to keep program processing time under given amount of time. Moreover engineers should keep code clean and maintainable to meet modifiability requirements.
+3. Software engineers select technologies and tools such as User interface, Programming language and the best applying algorithms and solutions for particular cases.
+
+The problem of measuring software complexity is not a new one. As early as 1963, Floyd was talking about the need to measure software complexity and its relationship with the software cost. In 1971, Dijkstra suggested that the software complexity should be measured by the number of instructions in a program. The method has been used widely ever since.
+
+The problem with this approach is that it does not consider other aspects of software complexity such as maintainability and changeability. As a result, the depth versus the breadth issue arises in measuring the software complexity. Depth refers to how deep or detailed the program is while breadth measures its width or spread across many different areas.
+
+For example, a program that contains 10 lines of code could be considered complex because it performs multiple tasks or processes simultaneously while one with only two instructions would not necessarily be considered complex as long as each task is executed sequentially and independently from the other tasks/processes in the program. The depth versus breadth issue becomes particularly important when determining how to measure software complexity because different programs may perform similar tasks but vary greatly in their degree of complexity based on whether they contain many instructions or few instructions which require more lines of code than others do not require many lines of code at all even if those programs have similar functions/features/functions (e.g., sorting data).
+
+In a large project, the complexity is the key concern. To manage this complex situation, we have to understand that complexity is inevitable but manageable. We should break down a big problem into smaller and simpler pieces for further development. Besides, it's important to choose an appropriate technology stack for each task.
+
+The depth versus breadth issue in software complexity is concerned with the number of different activities or features that have been designed into a system, as opposed to the size of those activities or features (breadth). In other words, if you're going to develop something new for your product, would it be better to do 10 things well, or all of them half-assed?

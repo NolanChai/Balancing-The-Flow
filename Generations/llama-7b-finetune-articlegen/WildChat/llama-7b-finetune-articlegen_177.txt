@@ -1,0 +1,103 @@
+I have the following code that i am using in vba:  
+
+\begin{code}
+Sub Worksheet_Change(ByVal Target As Range)
+Dim Rng As Range, CellRange As Range, LastCell As Long
+    'If not intersected the range or not in sheet 1, do nothing.
+        If Intersect(Target, Range("B2:AZ2")) Is Nothing Then Exit Sub
+        'Loop through column A and check if value has changed.
+            For Each Cell In Range("A1", Target)
+                LastCell = Cells(Cells.Rows.count, 1).End(xlUp).Row
+                Set Rng = Range(Cells(2, 1), Cells(LastCell, 1))
+                'If any cell has changed in the range of A:A, recalculate.
+                    If Not Intersect(Target, Rng) Is Nothing Then
+                        .Calculate .Recompute .Refresh All
+                    End If
+            Next Cell
+End Sub
+\end{code}
+
+This code is working fine but when i click the button which enable event, the worksheet recalculates. How do we make sure that the worksheet does not get recalculated when event is enabled?
+
+### Additional information:
+
+1) This worksheet has 60 columns and it can be expanded to more than one page. I have a list of cells which i am checking for changes;  2) The range for which we are checking the change may be 3 or more rows depending on the number of changed values;  3) The recalculate is being done when the user clicks the button and not after 10 seconds as specified in the macro.
+
+Answer: The following works fine:
+
+\begin{code}
+Private Sub Worksheet_Change(ByVal Target As Range)
+'If not intersected the range or not in sheet 1, do nothing.
+    If Intersect(Target, Range("B2:AZ2")) Is Nothing Then Exit Sub
+    'Loop through column A and check if value has changed.
+        For Each Cell In Range("A1", Target)
+            LastCell = Cells(Cells.Rows.count, 1).End(xlUp).Row
+            Set Rng = Range(Cells(2, 1), Cells(LastCell, 1))
+            'If any cell has changed in the range of A:A, recalculate.
+                If Not Intersect(Target, Rng) Is Nothing Then
+                    .Calculate .Recompute .Refresh All
+                End If
+        Next Cell
+End Sub
+\end{code}
+
+Answer: You can add `Application.EnableEvents = False` to the end of your sub (just after the line `.Recompute .Refresh All`).
+
+Comment: I tried adding Application.EnableEvents=False at the end and it did not work. Is there something else i am missing?
+
+You'll need to store the worksheet and column name on each worksheet somewhere before you begin processing and then refer to them using that information rather than hard coding the range names. The following should do what you want (assuming a named range called "A" in Column A on your main sheet):
+
+\begin{code}
+Private Sub Worksheet_Change(ByVal Target As Range)
+
+If Not Intersect(Target, Range("A:A")) Is Nothing Then
+    Dim ws As Worksheet
+    Set ws = Target.Worksheet
+    ws.Range("K2").Calculate
+End If
+\end{code}
+
+the code works fine, however it will require an additional for loop so that each row of the table will be displayed on a different line. I'll update the code so you can see how its done and it will give you a chance to try it yourself. Good luck!
+
+The event handler has been registered successfully.
+
+The first one, because it works with formulas. See the Excel Help topic on ClearContents: https://support.office.com/en-us/article/ClearContents-function-267B5C0E-1D98-49F8-BF2A-EAC78FD3EC75?ui=en-US&rs=en-US&ad=US
+
+Yes. It will return an error if you are trying to set the value of cells which do not exist in the active sheet. If that is what you want, then go ahead with your instruction and ignore the error.
+
+Comment: Thanks for clarifying this. I'm new at excel and thought that it would be necessary to specify a specific range each time.
+
+The line of code    Application.CutCopyMode = False
+appears to be the only one that should require changes in order for this event to execute properly, but even if I set it to true nothing happens.  I tried running a macro debugger but the results were cryptic and I did not really understand how it worked.  I know the event runs because I can see all the copied values when I run it in debug mode with application.cutcopymode = false
+\end{code}
+
+\begin{blockquote}
+
+Application.CutCopyMode = False would be executed in all sheets after sheet2 is activated and you don't need to set it explicitly again. You should either call `Sheet1_Activate` or `Worksheet_SelectionChange`, which would give the same result.
+\end{blockquote}
+
+Press F4 on your keyboard and use the mouse to select the range D2:F50. The formula in cell G3 will be updated automatically when you click the enter key.
+
+If you change a value in any other cell (e.g. cell D2) then the formula will also need to be re-entered, but this can be done with a few quick clicks: 1. Select all cells by pressing Ctrl+A. 2. Press F4 and select the range D2:G50. 3. Click Enter on your keyboard.
+
+Well, sure! Here's how it works:
+```java
+public void sum(String str1) { // Method signature, i.e., the parameters you need to pass in as arguments
+    int counter = 0;
+    for (int i=str1.length(); i>=0; i--){ // Loop until the index of -1.
+        if(i>0 && str1.charAt(i)!=32) // Check if it's not a space, because that's a special case that needs to be treated differently
+            counter++;
+    }
+}
+```
+You should now be able to use this method on any string you want! Have fun!
+
+You're correct. You can use that formula to create a dynamic volatile value based on Now(). If you want to see how it works out for yourself, check out this tutorial: [Dynamic Volatility](http://www.rondeboer.ca/volatile-now/)
+
+Yes it will.
+
+### Explanation:
+
+Every time you call the function, the entire range is recalculated, which can be quite slow if your range has a lot of cells (or formulas) and/or is complex (e.g. contains a lot of IF functions).
+
+Use = INDEX(range, match) and then put it in a separate formula instead of writing IFERROR() function which makes your sheet volatile. Also see [here](https://support.google.com/docs/answer/3093347?hl=en).

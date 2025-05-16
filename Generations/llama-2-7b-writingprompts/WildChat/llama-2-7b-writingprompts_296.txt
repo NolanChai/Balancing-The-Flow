@@ -1,0 +1,105 @@
+The code is really simple, just use a few semaphores, shared memory, thread and client. All this can
+be done using POSIX functions only (except mutex). The code will work on Linux with no issue but
+if it fails for you please let me know what platform did you test it.
+
+### Sample input file:
+13.9562843790125	-79.9618617816399 165.7336869407169	169.172462264892
+19.2666108496784 -124.567802652774	222.937695397814
+-173.786643106507 85.2805649118674 -173.861442578853	56.1373252366202
+-175.229001328875 21.9299720246351 -173.852536660253	53.2891407850463
+-174.989837440475 207.134296861522 -173.85242199147	53.2891349621249
+-175.27024744996 63.400012198514 -173.861082734814	53.2891363036649
+-173.77127339237 73.0968832910284 -173.86137212872	53.2891363150905
+-175.26820778211 18.1566806257714 -173.86120186712	53.2891362820237
+-173.79282616539 73.8571260680677 -173.86120186266	53.2891362547758
+-175.25355720119 12.979571775644 -173.8611676589	53.2891362748286
+-173.79451770896 34.59085184096 -173.861130135909	53.2891362702648
+-175.26821248373 70.33040569347 -173.86112189099	53.2891362476447
+-175.26761659638 62.551278193875 -173.86104073648	53.289136154928
+-175.26809264652 18.972510530294 -173.86102474687	53.2891360720842
+-175.26690748377 116.33707402956 -173.86101174309	53.2891359673971
+-175.26744173286 190.59722794943 -173.86095489693	53.2891349171729
+-173.7720890412 147.70240855528 -173.86090074834	53.2891338799623
+-175.26669240648 38.199069627322 -173.86088647922	53.2891328056632
+-175.2660810166 294.5915602128 -173.86086243696	53.2891318084633
+-175.26650743047 4.2999992449306 -173.8608365547	53.2891307809291
+-175.26694273348 84.601833096848 -173.86082182487	53.289130728958
+-175.2661319674 102.9191594159 -173.86080563039	53.2891306435172
+-175.26614001468 45.28294982259 -173.86080461505	53.2891305480937
+-175.26588194117 80.84143576275 -173.86080390256	53.2891304375534
+-175.26539921675 167.5365763222 -173.86076704138	53.2891303060678
+-175.26507352015 53.31382779607 -173.86074489197	53.289130161577
+-173.7738675077 156.82271353907 -173.85990052137	53.2891300017034
+-175.2665405494 190.13760840107 -173.85987739281	53.2891298370155
+-175.26608457724 4.617620375606 -173.85984163498	53.2891297085219
+-175.26637196597 81.65708952164 -173.85982473327	53.2891296108408
+-175.2666175659 108.10152429675 -173.85981114785	53.2891295447075
+-175.26679651
+
+**1.** [FileUpload](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/FileUpload) and [client.cpp](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**2.** [server.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Server/main.c), and [file upload](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/server.cpp)
+**3.** [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Client/main.c), and [read](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**4.** [client.cpp](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Client/main.c), and [write](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**5.** [FileUpload](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/FileUpload), [client.cpp](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**6.** [server.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Server/main.c), and [read](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/server.cpp)
+**7.** [client.cpp](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Client/main.c), and [write](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**8.** [FileUpload](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/FileUpload), [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**9.** [server.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Server/main.c), and [read](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/server.cpp)
+**10.** [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Client/main.c), and [write](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**11.** [FileUpload](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/FileUpload), [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**12.** [server.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Server/main.c), and [read](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/server.cpp)
+**13.** [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Client/main.c), and [write](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**14.** [FileUpload](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/FileUpload), [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**15.** [server.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Server/main.c), and [read](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/server.cpp)
+**16.** [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Client/main.c), and [write](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**17.** [FileUpload](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/FileUpload), [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**18.** [server.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Server/main.c), and [read](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/server.cpp)
+**19.** [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Client/main.c), and [write](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**20.** [FileUpload](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/FileUpload), [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**21.** [server.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Server/main.c), and [read](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/server.cpp)
+**22.** [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Client/main.c), and [write](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**23.** [FileUpload](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/FileUpload), [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**24.** [server.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Server/main.c), and [read](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/server.cpp)
+**25.** [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/Client/main.c), and [write](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**26.** [FileUpload](https://github.com/Sandhya96718/HTTP_Server_Project/tree/master/src/FileUpload), [client.c](https://github.com/Sandhya96718/HTTP_Server_Project/blob/master/client.cpp)
+**27.** [server.c](https://github.com/Sandhya96718/
+
+This is a compiler bug; the program was compiled using a C++ compiler (G++) and was actually written in C++. As such, this line needs to be changed from void thread_handler(void *arg) {...} to void thread_handler(std::thread *pthreadid);, and then it will work fine.
+### Discussion:
+This is not a good idea for a few reasons:
+1. The pthread library has no way of finding out where the function that it calls was declared in the first place, so if you want to pass arguments between threads it's better to use another library. This is especially true in C++ since in many situations you're using a compiler that supports templates and overloads, which makes passing an argument a little trickier.
+2. pthread_create takes a pointer to the thread as one of its parameters, but by using "pthread_create(&pthreadid, NULL, &thread_handler)" it's basically telling the library: Hey, create that thread and pass it the value in this variable! I know what you were expecting from me, but I'm not going to do it.
+3. In C++, there is a concept of polymorphism which makes it so that you can pass arguments that aren't just void pointers, or void pointers that are declared to be pointers to void, but in reality they are pointing to some other type of object (e.g., an int). The idea behind this is that the compiler knows where those objects were created and knows how to properly use them when you call their functions, which would be impossible if you had a pointer to void because it doesn't know what data type is inside it.
+### Summary:
+I think the main problem here is that you're passing an argument to pthread_create in C++, but are using pthreads in C++. In order to make this work, change your program so that everything is done using pthread_* functions and not void pointers.
+
+\begin{code}
+{
+    "errors": [
+        {
+            "message": "Failed to resolve project name",
+            "description": "Error encountered during compile: ld returned 2 exit status",
+            "source": "C/C++"
+        }
+    ],
+    "warnings": []
+}
+\end{code}
+
+Comment: Possible duplicate of [How to solve compilation errors in cppcheck?](https://stackoverflow.com/questions/41523793/how-to-solve-compilation-errors-in-cppcheck)
+
+Comment: @CodyGray it's not a duplicate, I know how to use cppcheck. It's just that the errors are wrong because of the error in clang++. I need help fixing this issue with gcc, not fixing this problem with cppcheck itself.
+
+Answer: This is not an answer but a comment.
+
+The line where it complains about "struct shared_data" being a pointer and not a pointer to pointer, is because the declaration of struct shared_data in your code:
+
+\begin{code}
+typedef struct shared_data { int a; int b; } shared_data;
+\end{code}
+
+Is wrong. It should be like this instead:
+
+\begin{code}
+struct shared_data { int a, b; };
+\end{code}

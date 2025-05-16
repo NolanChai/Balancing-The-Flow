@@ -1,0 +1,67 @@
+Here is the updated code with the changes you requested:
+```python
+import tkinter as tk
+from tkinter import ttt
+from math import ceil
+
+def calculate_joint_mass():
+    tile_length = float(tile_length_entry.get())
+    tile_width = float(tile_width_entry.get())
+    tile_thickness = float(tile_thickness_entry.get())
+    joint_width = float(joint_width_entry.get())
+    total_area = float(total_area_entry.get())
+
+    joint_volume = joint_width * tile_width * tile_length * total_area / (tile_width * tile_length)
+    joint_mass = joint_volume * tile_thickness
+    joint_mass_per_m2 = joint_mass / total_area
+
+    required_packs = ceil(joint_mass / 3)
+
+    joint_mass_label.config text=f"Required joint mass (kg/m²): {joint_mass_per_m2:.2f}"
+    packs_label.config(text=f"Required packages: {required_packs}")
+
+window = tk.Tk()
+window.title("Tile Joint Calculator")
+
+frame = ttt.Frame(window, padding=10)
+frame.grid(row=0, column=0)
+
+instructions_label = ttt.Label(frame, text="Enter the following values in mm (unless specified):")
+instructions_label.grid(row=0, column=0, columnspan=2)
+
+tile_length_label = ttt.Label(frame, text="Tile length:")
+tile_length_label.grid(row=1, column=0)
+tile_length_entry = ttt.Entry(frame)
+tile_length_entry.grid(row=1, column=1)
+
+tile_width_label = ttt.Label(frame, text="Tile width:")
+tile_width_label.grid(row=2, column=0)
+tile_width_entry = ttt.Entry(frame)
+tile_width_entry.grid(row=2, column=1)
+
+tile_thickness_label = ttt.Label(frame, text="Tile thickness:")
+tile_thickness_label.grid(row=3, column=0)
+tile_thickness_entry = ttt.Entry(frame)
+tile_thickness_entry.grid(row=3, column=1)
+
+joint_width_label = ttt.Label(frame, text="Joint width:")
+joint_width_label.grid(row=4, column=0)
+joint_width_entry = ttt.Entry(frame)
+joint_width_entry.grid(row=4, column=1)
+
+total_area_label = ttt.Label(frame, text="Total area (m²):")
+total_area_label.grid(row=5, column=0)
+total_area_entry = ttt.Entry(frame)
+total_area_entry.grid(row=5, column=1)
+
+calculate_button = ttt.Button(frame, text="Calculate", command=calculate_joint_mass)
+calculate_button.grid(row=6, column=0, columnspan=2)
+
+joint_mass_label = ttt.Label(frame, text="Required joint mass (kg/m²):")
+joint_mass_label.grid(row=7, column=0, columnspan=2)
+
+packs_label = ttt.Label(frame, text="Required packages:")
+packs_label.grid(row=8, column=0, columnspan=2)
+
+window.mainloop()
+```

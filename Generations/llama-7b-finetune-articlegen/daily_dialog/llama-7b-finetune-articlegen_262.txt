@@ -1,0 +1,18 @@
+```javascript
+var _ = require('underscore');
+var _path = require('./path')(_.toLower);
+// ...
+var dialog = function (obj) { // ...
+    this.turn = function () {  // ... };
+};
+dialog.prototype.turn = function () {};
+
+
+/**
+ * @constructor
+ */
+function Dialog(dialog) {
+  _.extend(this, _path.bindAll(_.omit(dialog, 'turn'))); // ...
+}
+Dialog.prototype.__proto__ = dialog; // ...
+```

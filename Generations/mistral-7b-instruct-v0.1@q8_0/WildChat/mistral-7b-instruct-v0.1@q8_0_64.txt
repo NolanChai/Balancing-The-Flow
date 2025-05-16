@@ -1,0 +1,15 @@
+function hcyl(bottom, height, radius, id) {
+	let radsq = radius * radius;
+	let innerRadsq = (radius - 1.2) * (radius - 1.2);
+	height += bottom;
+	for (let x = -radius; x <= radius; x++) {
+		for (let y = bottom; y < height; y++) {
+			for (let z = -radius; z <= radius; z++) {
+				let d = x * x + z * z
+				if (d < radsq && d >= innerRadsq) {
+					world.setBlock(p2.x + x, p2.y + y, p2.z + z, id);
+				}
+			}
+		}
+	}
+}

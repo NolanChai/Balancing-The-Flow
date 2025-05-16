@@ -1,0 +1,5 @@
+1. The first spell the wizard should cast is **`create_item('money')`** which will create a currency called 'Money'.
+2. If we assume an initial value of 5, then this will set up the world for the story to follow.
+3. Every time the user interacts with the game, the wizard should **`claim(name="money", quantity=0)`** and add $1 to it's balance.
+4. This will allow the player to obtain currency from the wizard for free without having to use a spell.
+5. After the user spends their money on an enchanted item, the wizard should **`delete(name="money")`** and subtract $1 from it's balance.

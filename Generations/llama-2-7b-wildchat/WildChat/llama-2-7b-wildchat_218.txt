@@ -1,0 +1,60 @@
+The software development process is a systematic approach that ensures quality software development. It includes all activities required for creating high-quality software products.
+
+There are various types of processes used in different industries depending on their needs but generally speaking, they include defining user needs and requirements analysis; designing architecture; writing code using appropriate programming languages (e.g., C++ or Java); testing before deployment into production environments etc.
+
+The process usually involves three main stages: requirements gathering & analysis phase where developers define what should be done according to customer's request; development stage where they create prototypes or actual products based on those requirements gathered earlier during analysis period; testing stage where quality assurance team checks if everything works correctly before release into production environment.
+
+1. Implement the following functional requirements in C#.
+    -  The solution should contain at least two classes:
+        - `Car` class and its sub-class `BMW` class.
+        - `Engine` class and its sub-class `V8` class.
+        - `Transmission` class and its sub-class `Automatic` class.
+    - The solution should provide at least one car instance of type BMW with an engine of type V8 and automatic transmission.
+    - The solution should support the following methods:
+        - `Car.GetBrand()` method, which returns a string that represents the brand for given car type.
+        - `Engine.GetType()` method, which returns a string that represents the type (V6 or V8) for given engine type.
+        - `Transmission.GetType()` method, which returns a string that represents the type (Automatic or Manual) for given transmission type.
+    - The solution should also implement following public properties in BMW class:
+        - `Brand` property, which returns the brand of the car instance.
+        - `Engine` property, which returns the engine type of the car instance.
+        - `Transmission` property, which returns the transmission type of the car instance.
+    - The solution should also implement following public properties in V8 class:
+        - `GetMaximumHorsePower()` method, which returns a double value that represents the maximum horsepower for given engine type.
+        - `GetFuelConsumptionPer100Km()` method, which returns a double value that represents the consumption per 100 km for given engine type.
+    - The solution should also implement following public properties in V8 class:
+        - `MaximumHorsePower` property, which returns the maximum horsepower of the engine.
+        - `FuelConsumptionPer100Km` property, which returns the consumption per 100 km for given engine type.
+    - The solution should provide a constructor in each class that accepts as parameters the type and name of the object.
+    - The solution should use reflection to retrieve and return an instance of `Engine` or `Transmission` class by using its name string parameter.
+
+1. You should implement all of your project's non-functional requirements in the design stage. Non-functional requirements are any requirements that describe how a system must perform, but don't specifically describe what it must do. An example would be security requirements, such as authentication and authorization. In general, you will want to identify all of these non-functional requirements for each subsystem in your project before the design phase begins. Then, you can work through how to meet them during the design stage.
+2. Non-functional requirements are often hard to implement because they are so abstract and subjective - it is difficult to determine what should be done without knowing exactly what is being tested or measured! For example: "The system should be secure" could mean many different things depending on who is asking for this requirement. In addition, non-functional requirements may not seem important until something goes wrong later down the road when they aren't met properly (which leads us back into our previous point about abstraction).
+3. However! If you can find a way around these issues by breaking down each requirement into smaller tasks that can be measured more clearly, then it should be relatively easy to implement them during design phase because all of the work will have been done already; just needing only minor adjustments here and there until everything works as intended
+
+Process refers to a series of steps that is followed in order to complete a particular task or activity. Processes can be applied to various activities such as software development, manufacturing, project management, etc. There are several types of processes that a software engineer may consider while developing a solution for an organization's requirement:
+- Software Development Life Cycle (SDLC): SDLC is a sequence of steps that software developers follow in order to develop and maintain a software application or system. It includes activities such as Requirements gathering, analysis, design, implementation, testing, maintenance, etc. An effective SDLC process helps to ensure that the software delivered meets all stakeholder requirements, provides high-quality results, and reduces development costs.
+- Agile Software Development: Agile methodology is a popular approach for software development which emphasizes collaboration, flexibility, and rapid iteration. It encourages continuous delivery of working software in short cycles to quickly respond to changing customer needs and market trends. This approach requires continuous communication between the project team, customers, and stakeholders throughout the SDLC process.
+- Extreme Programming (XP): XP is a lightweight agile methodology that focuses on delivering working software in short cycles with rapid feedback from customers. It emphasizes customer satisfaction, frequent iterations, and continuous integration of code changes. The key principles of XP include face to face communication, simplicity, test-driven development, etc.
+These are some examples of processes that a software engineer may take into consideration when developing solutions for an organization's requirements. Depending on the specific needs of the project and team, other processes like Scrum, Kanban, etc., may also be used as part of an effective SDLC process.
+
+1. Functional requirements are what the system does; they describe the business rules that the application must follow. The functional specifications describe the inputs, outputs and processing of data that will happen within a computer program or software. 
+2. Non-functional requirements are properties that can be evaluated without executing a program. They include performance requirements such as response time (how long it takes for the system to do something), reliability (the extent to which an application should not crash during normal operation) and usability (ease of use). These are important aspects because they ensure that software performs well under expected conditions, including when there is high traffic or loads on memory space.
+3. Software engineers select technologies and tools such as User interface, Programming language and the best applying algorithms and solutions for particular cases to develop efficient applications meeting business requirements while providing reliable services. This includes considering factors like scalability (the system's ability to handle more requests over time), security (preventing unauthorized access or tampering with data) and maintainability (ease of updating software components).
+
+Depth is a property of software that measures how tightly or loosely interconnected all parts are. Depth indicates whether a system is modular, with distinct and independent components, or a single component with many functions. As an example, consider a simple text editor application that has a single window, one menu bar, two buttons, and three controls on each control panel. It would be easy to understand how this software works because of its shallow depth. However, if the software included different panels for editing, displaying, and printing documents, along with multiple menus and toolbars, it would have a deeper structure that may take longer to comprehend.
+
+Breadth, on the other hand, refers to how many distinct features are included in an application. For instance, if we were creating software for managing inventory in a warehouse, breadth might describe how many different types of products (e.g., food items, tools, clothing) could be managed through the system and how many distinct transactions would need to be performed by users.
+
+In summary, depth indicates whether an application is modular or monolithic in nature while breadth measures its complexity level due to various features present within it.
+
+There are different issues regarding large-scale software development that need to be considered. Below I will list the two main ones, along with their technical details:
+
+1. Complexity Management:
+This is a very important aspect of large-scale software development, as it involves managing and coordinating different activities among multiple stakeholders, such as developers, designers, architects, testers, etc., which can lead to communication issues, work duplication, and inconsistent product quality. To manage this complexity effectively, it is important to have a well-defined project structure, clear roles and responsibilities for each team member, efficient collaboration tools, and proper documentation practices.
+
+2. Data Integration:
+With the growing use of data-intensive applications in various industries such as healthcare, finance, transportation, etc., it becomes challenging to manage data flow among different software components and systems, leading to inconsistent data quality or even system failures. This issue can be addressed by implementing proper data integration strategies, such as using message queuing techniques for communication between services, developing unified data models that represent data from multiple sources consistently, or leveraging data virtualization solutions for real-time access to heterogeneous datasets.
+
+Overall, large-scale software development requires careful planning and attention to detail regarding complex issues like these. By addressing them properly, software engineers can successfully create large-scale systems that meet the needs of their customers while maintaining high quality standards.
+
+Both breadth vs depth are two major dimensions in software complexity. Depth involves how many layers or components a system has, while breadth refers to how many features and modules a system has. A simple application may have one layer of functionality, while a complex application might have multiple layers that perform different tasks. Breadth is the number of features and data types an application can handle.

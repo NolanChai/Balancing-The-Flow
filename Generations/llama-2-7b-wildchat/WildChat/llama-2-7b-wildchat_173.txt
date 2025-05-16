@@ -1,0 +1,23 @@
+* (100)
+* 50-49-48-47-46-45-44-43-42-41-40-39-38-37-36-35-34-33-32-31-30-29-28-27-26-25-24-23-22-21-20-19-18-17-16-15-14-13-12-11-10-9-8-7-6-5-4-3-2-1
+* (1)
+* 13-12-11-10-9-8-7-6-5-4-3-2-1
+
+### Explanation:
+
+The most efficient algorithm would be to generate all numbers from 1 to n and count them. The second best choice would be the one in which we simply keep a counter that keeps track of the number of red flowers, and increase it by 1 every time a red flower is found, then, when we find a white stripe, we subtract 1, so that after each round our counter stays unchanged.
+The code below shows how to do that in Python (or any other programming language):
+
+```python
+def solution(n):
+    count = [0] * n
+
+    for i in range(n):
+        if "red" in str(i).lower():
+            count[str(i)] += 1
+        else:
+            count[str(i)].remove("red")
+            print (count)
+            
+    return count.index('red') + 1 - count.index('white')
+```

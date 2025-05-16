@@ -1,0 +1,2 @@
+I suggest you should create an object array or some data for your favorite component.
+For example if you have 50 products and you want to store only 2 of them as favorite then you can save those two products on your localstorage and when you open that page again just check the local storage and display your saved product list in angular view with using ng-repeat directive.

@@ -1,0 +1,13 @@
+Power Query is a powerful tool for data transformation and analysis. If you need to perform a lookup operation in one table using values from another table, you can use the following steps:
+
+1. Import the two tables into Power Query as separate datasets.
+2. Create a relationship between the two tables based on the common column that you want to use for the lookup operation. To do this, go to the "Home" tab in Power Query and select "Data Sources". Choose the two tables that you want to create a relationship for, then click "Create Relationship". In the "New Table or View" dialog box, choose "Many-to-Many".
+3. Go to the "Manage Transformations" pane, and find the table that contains the values that you want to use for the lookup operation. Right-click on it and select "Add Column". In the "Custom Column" dialog box, enter a name for the new column, such as "Lookup Value", and select "Add Column".
+4. In the "New Column" dialog box that appears, select the column that you want to use for the lookup operation. Then, under "Formula", type the following formula: =Lookups[TableName]
+5. Replace "[TableName]" in the formula with the name of the table that contains the values that you want to look up. For example, if your tables are named "Table1" and "Table2", and you want to perform a lookup using the "Customer ID" column, the formula would be: =Lookups[Table1][CustomerID]
+6. Press Enter to add the new column to the table. You should now have a new column that contains the values from the second table based on the lookup key.
+7. If you want to perform additional lookups or join the two tables, you can go to the "Join" section in the "Manage Transformations" pane and create a join type, such as "Inner Join", "Left Join", or "Right Join". Then, specify the columns that you want to use for the lookup operation.
+
+That's it! You have now performed a lookup operation in one table using values from another table in Power Query.
+
+This error is likely indicating that the control dimension value being passed to a function or method is not in a valid format or type, and cannot be converted to a number. This could happen if the value contains non-numeric characters or is null. It's recommended to check the input data and make sure it's in the correct format before using it in any calculations or operations. Additionally, you may want to check the code that is receiving the data to ensure that it's expecting a number input and not a string or other type of input.

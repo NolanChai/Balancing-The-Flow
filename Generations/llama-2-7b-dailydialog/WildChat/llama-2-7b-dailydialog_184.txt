@@ -1,0 +1,60 @@
+```python
+import matplotlib.pyplot as plt
+from mpl_toolkits.basemap import Basemap
+import numpy as np
+from sklearn.cluster import DBSCAN
+from mpl_toolkkins.misc import get_projection
+
+def map_2d(x,y):
+    # get projection object
+    # (x, y) are the geodetic coordinates of point P
+    # latlon is the projection object
+    # this function can be used to transform the 2-D space into a 1-D coordinate system.
+    
+    lon = x 
+    lat = y
+    # make the grid
+    lat_grid, lon_grid = get_projection(lat=lat,lon=lon)
+    lat_grid = np.flipud(np.linspace(0,np.pi / 2.,180))
+    
+    return lat_grid, lon_grid 
+
+def main():
+    # get a basemap and plot it on the map
+    # (xmin, xmax) is the longitude range of the data in [degree]
+    # (ymin, ymax) is the latitude range of the data in [degree]
+    lon = -70.5 
+    lat = 42.3
+    basemap = Basemap(projection='merc',lat_0=lat,lon_0=lon )
+    # basemap.drawcoastlines()  
+    
+    x, y = map_2d(lon,lat)
+    lat, lon = np.meshgrid(y,x)
+    
+    # plot the result on a map
+    # 0 means the projection is on the horizontal plane
+    basemap.drawmapboundary(fill_color='aqua')
+    colors=['w']*5+['r','g']+['b','y', 'm','k']+['c','y', 'r','g','k']   # define the color array of different groups 
+    
+    # change the value of each group to red, green and blue in turn,
+    # so that you can get a gradient effect on the map.
+    
+    for i in range(0,5):
+        basemap.pcolormesh(x, y, z[i], cmap=plt.cm.get_cmap("RdBu"),vmin=-1, vmax=4)#,edgecolor='k')   # z is the variable in the model
+        # draw some points on the map to show the distribution of the data 
+        basemap.scatter([lon[0], x[0]], [lat[0], y[0]], c="w",marker='o', s=1)    
+    basemap.drawcoastlines(linewidth =2, color = 'k')   # draw the coastline 
+    basemap.drawcountries()      # draw countries' boundaries 
+    #basemap.drawmapboundary(fill_color='aqua', linewidth=1)  # draw the coastline of a country or island.    
+    #basemap.drawparallels(np.arange(-90., 91., 5.),labels=[True, False],linewidth = 3, color='g')   # draw latitude parallels
+    # basemap.drawmeridians(np.arange(0, 360, 42),labels=[True, False],linewidth=1)
+    
+    plt.show()
+
+if __name__ == "__main__":  
+    main()
+```
+
+[![](https://github.com/albertgeiman/albertgeiman.github.io/raw/master/_images/instructions-response1.png)](https://github.com/albertgeiman/albertgeiman.github.io/raw/master/_images/instructions-response2.png)
+
+<a href='/examples/geo-mashup.html'>geo mashup</a>

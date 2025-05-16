@@ -1,0 +1,81 @@
+Yes, it will affect the calculation, since Calculate is a method of the Application object.  The reason you're turning off Events is to prevent recursion - if you didn't, this would quickly become an infinite loop because of the Calculate command.
+
+
+
+I am pretty sure that I have been doing it right in the first place.
+But now i found an easier way of doing it so, I changed it and decided to compare both versions.
+So here are two pieces of code: One old version and one new version (both tested and working). Please help me to check which one is better.
+The difference between these two codes is in the following lines:
+- Old Version: [CODE]int y = (int)Math.floor((float)1 / Math.pow(2, level)) + 1;[/CODE]
+- New Version: [CODE]int y = (1 << -level) - 1;[/CODE]
+Which one is better?
+
+
+
+I've had a buggy file in the past, and this has come up when I try to figure out what exactly the problem was.  Sometimes I could get the file to work if I used one line of code, but not if I used another (or vice-versa).
+
+My assumption is that using Range("F3").Value = "" will remove any formatting in cell F3 (while Range("F3").ClearContents just clears out the contents of the cell.  Is this correct?
+
+The macro works on a single cell.
+
+```
+Sub ClearCell()
+ActiveCell.Formula = ""
+End Sub
+```
+
+It should work on an array of cells as well.  In order to run the code you would need to make it an Array and assign the value to each of those cells in the array.
+
+```
+Dim rng As Range, arr As Variant
+Set rng = Range("D22:D25") 'or just use Sheets(1).Range("D22:D25")
+arr = Array("", "", "", "")
+rng.Value = arr
+```
+
+
+
+The question is not clear but I assume that you want to reset Application.CutCopyMode for another sheet. If this is the case you would need to do something like:
+
+```
+With Sheet1
+    .Range("A1").Value = "Data"
+End With
+Application.CutCopyMode = False
+With Sheet2
+    .Range("B4").Value = "Data"
+End With
+Application.CutCopyMode = True
+```
+
+To answer this question, I created a sample spreadsheet. In the sample spreadsheet I have three columns. The first two cells contain text that will be used later with the INDEX function. The third cell has an INDEX formula. When the value in column B changes, the cell in column C does not update to reflect the new value in column B.
+
+To resolve this problem you would need to add a conditional formula to the cell with the INDEX formula. To do this you will use a combination of the IF and INDEX functions. The sample spreadsheet below demonstrates how the formula is entered. The following screenshot shows what the final result looks like.
+
+[EXP]The “Create Index” command creates an index for the current table or view. The following command is used to create a composite index on the table Student of the School database:
+
+```
+CREATE INDEX IndexName ON [dbo].[Student] (Lastname, Firstname)
+```
+
+Yes. It’s actually one of the most important concepts when working with VBA functions. By default, any time that a cell is referenced within a VBA function it will return a value if that value has changed. As soon as you enter that formula into A3, A3 becomes volatile because now Excel knows to recalculate that formula every time the sheet refreshes. In order to make things more efficient and prevent unnecessary calculations from being performed when you don’t need them to be, there are ways to turn off a function’s volatility by using application.calculation.
+
+I am using Excel to create a table with a large number of columns and rows, and have found that by using the vlookup function instead of index/match I can speed up my calculations significantly (using vlookup in place of 2 index-matches). However, for some cells I need to perform several vlookups, and this is causing some serious slowdowns. For example, a sheet with just 4 columns, and only 50 rows takes 7 seconds to calculate (if I use 1 vlookup per cell) but takes 22 seconds if I try to use several vlookups on the same row.
+
+Is there any way to speed up this process?
+
+There are two ways to do this. The first is to change the formula to a VBA-generated formula. This is done by writing the VBA code below and assigning it to a worksheet-level variable (that is, assign the variable to a cell on the sheet). After you have done this, any changes made in G3 will force all cells referencing that cell to recalculate.
+
+```
+Private Sub Worksheet_Calculate()
+   If Not Application.Intersect(Cells(3, 7), Selection) Is Nothing Then Cells(3, 7).Value = _
+      "=IFERROR(INDEX(Providers!D$3:D$64,MATCH(" & Cells(3, 5).Address & ",Providers!C$3:C$64,0)),"")"
+End Sub
+```
+
+The other way is to use the EvaluateFormula method of Range objects. This allows you to assign a formula to a cell but when that cell changes, it will only recalculate the formula in the assigned cell. You would write your code similar to this:
+
+```
+Range("G3").Formula = "=IFERROR(INDEX(Providers!D$3:D$64,MATCH(" & Cells(3, 5).Address & ",Providers!C$3:C$64,0)),"")"
+Application.Evaluate Formula:=Range("G3").Formula, Sheet:=Worksheets("Sheet1")
+```

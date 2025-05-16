@@ -1,0 +1,26 @@
+## [BASIC]
+
+- HUD: On
+- FPS: 60 (Default)
+- Game Version: Any
+- Video Settings: Default
+- Texture Quality: Maximum
+- Lighting Quality: High
+- Shadows: Off (Recommended for best performance)
+- Depth of Field: On
+
+## [ADVANCED]
+
+- Use FPS Limiter (100FPS Recommended): OFF
+- Anti-aliasing: ON
+- Vsync: ON
+- Ambient Occlusion: OFF
+- Shadow Quality: Off
+- Motion Blur: On (Recommended for best performance)
+- Bloom: High
+
+## [EXTRA]
+
+- Change Graphics API to DirectX 12
+
+(You may need to restart the game in order for it to take effect. If your system doesn't support DirectX 12 you can change back to DirectX 9/10, but there is no reason to do so.)

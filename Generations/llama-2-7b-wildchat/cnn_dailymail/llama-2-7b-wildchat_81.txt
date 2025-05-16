@@ -1,0 +1,24 @@
+```
+$ ./solve3.py input/day_8_instructions.txt
+Instruction: A senior aide to US Senator Kelly Ayotte has resigned after he was arrested for allegedly soliciting a prostitute, the senator's office said. David Wihby, 61, was arrested on Friday in Nashua on a misdemeanor charge of disorderly conduct for approaching an undercover police officer posing as a prostitute and asking her price.
+The office of Ayotte, who is running for re-election this year, released a statement saying that Wihby resigned effective immediately following his arrest.
+Wihby's lawyer, John McKinney, said in an email to Reuters that his client was not guilty and he would fight the charge. "The prostitute approached David with no solicitation on her part," McKinney wrote. "David was arrested for refusing a bad check she presented."
+"If you need a better explanation than that I can't help it," he added in an earlier email to Reuters. "The state law is vague and unworkable, as the prostitute's actions should not be criminalized."
+Ayotte spokeswoman Liz Johnson declined to comment on the incident other than to say that Wihby's employment was terminated.
+McKinney did not respond to a question about whether he believed it was appropriate for Wihby, who worked as Ayotte's executive director for operations, to have been approached by an undercover police officer posing as a prostitute in the first place.
+Ayotte is one of five Republican incumbents facing re-election this year whom Democrats hope will lose their seats, making it more difficult for Republicans to retain control of the US Senate and possibly hand Democratic President Barack Obama another two years without an obstructionist congressional majority.
+New Hampshire has a history of having its politicians caught up in scandals. Former Republican Senators Bob Smith and John E. Sununu were both embroiled in controversies that almost derailed their political careers. Smith was defeated by Ayotte's Democratic rival, Maggie Hassan, while Sununu resigned from office after he admitted to using his campaign funds for personal expenses.
+The charges against Wihby come just days before the state's primary election on September 13th where Ayotte faces a challenge from conservative Republican Jim Rubens, who is backed by Tea Party-aligned groups.
+Ayotte has been criticized for her support of Republican presidential nominee Donald Trump in an increasingly tight race with Democrat Hillary Clinton. Last month she faced criticism when it emerged that Wihby had donated to Trump's campaign and supported his bid to become president, a move which appeared at odds with Ayotte's stance of remaining neutral in the Republican primary contest.
+Wihby's arrest comes as allegations of sexual assault continue to rock both sides of the political spectrum with numerous high-profile figures accused of wrongdoing and politicians facing pressure to resign. On Wednesday, Arizona Sen. Jeff Flake said he would not seek re-election in 2018 due to "the scandal plagued atmosphere" in Washington D.C., which has contributed to his decision.
+As the country heads into election season it remains unclear if this latest incident involving a high-profile politician's aide will have any impact on voter sentiment or influence how people cast their ballots come November 8th."
+```
+
+### Solution:
+
+```python
+with open(input_path) as f:
+    lines = [l.strip() for l in f]
+print(' '.join([x[0][:-2] for x in lines])) #Instruction
+print(' '.join(['-' + x[1:] for x in lines]))#Response
+```

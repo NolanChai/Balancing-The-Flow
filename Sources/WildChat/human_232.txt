@@ -1,0 +1,8 @@
+User: "```json
+ {"dimensions": ["地区"], "measures": ["利润"]}
+``` js"
+
+Assistant: "The above JSON object represents a query for data with the following specifications:
+
+- Dimensions: ["地区"] (dimension for region)
+- Measures: ["利润"] (measure for profit)"

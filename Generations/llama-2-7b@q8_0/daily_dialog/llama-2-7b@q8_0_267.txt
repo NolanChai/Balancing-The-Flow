@@ -1,0 +1,177 @@
+" About two years ago. " 
+
+" What do you think of the United States ? "
+
+" I think it's very wonderful , and I think it's a great country to live in . There are many opportunities here that wouldn't be available elsewhere , so I hope we're going to stay for a long time ." 
+
+" How do you like Los Angeles ? "
+
+" Oh , I love it ! It's wonderful to wake up and look out my window and see palm trees everywhere . There are always flowers blooming. I think the people here are very friendly, and it's easy to make friends. But we haven't been here that long yet , so there's still a lot for us to learn about." 
+
+" Do you like going out in Hollywood ? "
+
+" Oh yes . We go out almost every night. We used to stay home because I didn't have any American friends, but now we are making friends everywhere we go. Last weekend, we had dinner with a lot of the people from Canada who live here , and it was great." 
+
+" What kind of music do you like ? "
+
+" Oh , I listen to all kinds . I like old popular songs that were recorded many years ago, like 'The Way You Look Tonight' or 'Smoke Gets in Your Eyes'. There are a lot of wonderful songs from the 1930s and 1940s. Of course , I also listen to some current pop music." 
+
+" Have you seen any good movies lately ? "
+
+" Oh yes . We've been seeing lots of films in Hollywood, and there are so many good ones that it's hard to decide which one is the best."
+
+" Do you like musicals ? "
+
+" Well , I do have a few favorites. My favorite all-time movie is 'The Sound of Music'. That was such an exciting film. But my favorite film in Hollywood is ___ . It's not as well known as some others, but I think it is one of the best films ever made."
+
+" What are your plans for the future ? "
+
+" Oh , we don't have any set plans yet. We just plan to make the most of our stay in Los Angeles and enjoy ourselves while we can !"
+
+" No . I graduated from high school in Montreal."
+\end{code}
+
+I tried adding some things like this:
+
+\begin{code}
+"How long have you been working as a model?"
+"Five years.";
+\end{code}
+
+and it gives the error that there are no statements allowed. Why does this code not work? What am I missing or doing wrong?
+
+Comment: This is because a semicolon is required after every statement in JavaScript, which are separated by commas (either with no space before/after them like in your example, or with spaces).  A statement is simply what you have after an open parenthesis and before a closing parenthesis.  In your example, `var x = 5;` would be the start of one statement, and `console.log(x);` would be another statement.
+
+Comment: Please [edit] your question to include the code as text rather than images. Images can't be copied or searched and are therefore not useful in many situations. See the [help], especially the sections named ["Text vs. Images"](https://stackoverflow.com/help/text-vs-images) and ["Why not upload images of code/errors when asking a question?"](https://meta.stackoverflow.com/questions/285551/).
+
+Comment: The code doesn't work because you've forgotten to close the parens at the end, but also because you haven't properly defined x... you need `x=5;` to define a variable that can be assigned to.
+
+Comment: You don't have to do `console.log(x);` or `alert(x)` or any of those things for it to work - you just put the var declaration in quotes and it will assign an empty string (`""`).  What I was referring to when I said "statements" above is the opening parentheses with whatever code follows them (like a function call) which requires another closing parenthesis.
+
+Answer: You've not closed your parentheses, or assigned any values to `x` . If you want it to print out 5 when prompted just do:
+
+\begin{code}
+"How long have you been working as a model?"
+"Five years.";
+alert("I am five.");
+\end{code}
+
+" Yes . "
+
+" And what did you do ? "
+
+" Well, it's kind of hard to say . I had all kinds of odd jobs . "
+
+" How long have you worked as a waitress ? "
+
+" Oh , about eight months . "
+
+" What was the reason for your first job here ? "
+
+" Well , we just thought that it would be fun to work at one of these big hotels . "
+
+" Didn't you want a more responsible position? "
+
+"Well, not right now. We want to do this kind of job for a while and save our money."
+
+" Oh , about six years ago . "
+
+" And you've been here ever since ? "
+
+" No , I came back to Los Angeles two years ago. "
+
+" Do you like it better here now than when you first got back? "
+
+" Yes , much better, because I have a job and friends now . "
+
+" What do your parents think of the country ? "
+
+" Well, they don't really care for California . They miss Canada , but I like to be in the States anyway. "
+
+" How long did you live in France? "
+
+" It was three years . "
+
+" Did you learn French when you were there ? "
+
+" Yes, I learned French and a little bit of Italian and Spanish . "
+
+" Was that difficult to do? "
+
+" Well , it wasn't easy at first , but after the first year, it was pretty easy. "
+
+" How long did it take you to get over there ? "
+
+" Oh , only a little over a week , by plane . "
+
+" What are your plans for the future ? "
+
+" Well , I want to stay here and work in Los Angeles after I finish my studies. Then I might go back home for a while, but I don't know about that yet. "
+
+" Where will you live when you get married? "
+
+" I guess I'll move wherever he wants me to . "
+
+" Do you like him a lot ? "
+
+" Oh , yes , very much . I think we have so many things in common, and he's such a wonderful person . "
+
+" How did you meet him? "
+
+" We met at a party last year. It was really funny because I had already seen him there once before but didn't know who he was. Then he asked me to dance , and I just fell in love with him from that moment on . "
+
+" Do you like your work? "
+
+" Oh , yes! I'm so lucky - I have a job that I love. I've been here for two years now, and they pay very well. And the people are wonderful - we all get along so well together ! "
+
+" How did you find this place? "
+
+" My mother told me about it, actually . It was on the Internet , and she said it would be perfect for me. So I called up to see if they had any rooms available yet, but they were all booked until next month . But then we decided that since it is only a few miles from my office anyway (it's about ten minutes by car), I could just come over every day instead of staying there at night - so now I don't have to pay for a room anymore! Isn't that nice? "
+
+" Wow ! That sounds great . Do you get along well with the other girls ? "
+
+" Oh , yes, we do ! There are five of us in this building right now - me, two friends from college who moved here too recently (we live on different floors though) and three others that just moved in today. It's really nice having so many people around all day long because everyone helps each other out when something needs fixing or someone wants company . There aren't any problems between us yet , but if there ever was one , I think we could work it out pretty easily."
+
+" What do you like to do in your free time? "
+
+" Oh, I love reading books and watching movies. Also, I play tennis sometimes with my roommates. But mostly I just relax here at home because this building has everything I need ."
+
+" Do you think it's hard being away from family for so long ? "
+
+" Oh , yes ! My parents are very worried about me since they don't know what kind of work I do yet. But my brother helps them out by telling them where we live and how much money I make every month . We talk on Skype sometimes too."
+
+" Well , I taught English at the Berlitz School of Languages . "
+
+" Really ? Are you fluent in French now ? "
+
+" Oh , yes ! I speak it pretty well . But I also lived for a while in Japan and learned some Japanese. Then I worked as an interpreter for a year at a factory that made medical equipment, so I picked up a little Spanish too. I like to travel and learn languages . "
+
+### 예제(2)
+
+#### 1. Why did she move from Canada?
+
+" She moved to Los Angeles because her husband got a job there."
+"She moved to Los Angeles because she married an American man."
+"Her parents moved to Los Angeles when she was still a little girl."
+"Because that's where the film industry is, and that's where all the jobs in Hollywood are."
+
+#### 2. What did she do for work while she lived in France?
+
+"She taught English at the Berlitz School of Languages." "She was an interpreter for a year at a factory that made medical equipment."
+"She worked as an interpreter for a year at a factory that makes medical equipment."
+"She was an interpreter and also learned some Japanese when she lived in Japan."
+
+#### 3. What did Paula do before she went to college?
+
+"Paula did not go to school here." "Paula traveled for a while in Europe after college."
+"Paula got a job right after graduation ." "She went to high school here, but she went to college in Texas."
+
+## 훈련(1)
+
+|판정기호 |문제 카드 |답안 |
+|:---:|:---:|:---:|
+|1. A |She moved to Los Angeles because her husband got a job there.| She moved to Los Angeles because her husband got a job there.
+|2. B |She went to high school here, but she went to college in Texas.| She moved to Los Angeles because her husband got a job there.
+|3. C |Paula was an interpreter for a year at a factory that made medical equipment.| Paula studied French in France when she traveled with her boyfriend and she also lived in Japan for two years where she learned some Japanese.
+|4. D |She worked as an interpreter for a year at a factory that makes medical equipment.| She moved to Los Angeles because her husband got a job there.
+|5. E |Because that's where the film industry is, and that's where all the jobs in Hollywood are.| She studied French in France when she traveled with her boyfriend and she also lived in Japan for two years where she learned some Japanese.

@@ -1,0 +1,31 @@
+The answer should be 
+*   P1. (∀x) (¬P(x)).
+This is a valid proof according to FOPL.
+
+### Justification:
+
+|- (∃y)(R(y, y)) ⇔ R(x, x)
+
+This is a theorem because it can be proven from the premises below.
+
+Using the resolution method
+|= (∃x(P(x) ∨ Q(x))) = ((∀xP(x) ∧ ¬P(x)) ∨ ∀xQ(x) ∧ ¬Q(x))  
+  
+    ∀x. (P(x) ∧ ¬P(x))...
+       P(a)....a=1....24065198732.7499999999
+       P(b)... b = 750001.63267767
+       P(c)... c = 1274.0328899
+      P(d) ... d = 0.000125
+      P(e) ... e = 0.0000000125
+      P(f)... f=0
+      ∀xQ(x) ∧ ¬Q(x)....
+        Q(a)... a = -4673.4953
+        Q(b)... b = .2
+        Q(c)... c = -.319825064
+        Q(d) ... d = 0.3
+        ∃xP(x)....
+             P(a).... a=7.4
+             P(b)... b = .4674
+             P(c)... c=.125
+             ∀xQ(x)....
+               Q(f) ... f=.0001

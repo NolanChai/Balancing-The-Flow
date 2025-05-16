@@ -1,0 +1,39 @@
+"The instructor does not give good explanations ".
+
+" I don't know why but I just do not get this concept. "
+
+"This is an easy subject for me ,but my scores are low because of the exam questions".
+
+All these statements indicate that there is a discrepancy between the student's expectations and his/her performance . The cause could be one or more of the following reasons.
+1) The student was not prepared properly before the class 
+2) The material covered in the course was too abstract to understand.
+3) The instructor did not explain the material well enough .
+4) The exam questions were different from what was taught.
+5) The student had some other commitment during the time of the class that could be a reason for low performance in exams.
+6) The material may have been too easy and the student just wasted his/her time by attending these classes .
+
+These are common scenarios. They happen everyday and we do not get to find out what is causing this discrepancy . We cannot pinpoint a reason for each occurrence of such a scenario as it could be due to any of the above reasons or more than one reason simultaneously.
+The problem is that if we are unable to identify which one or more of these reasons is causing this discrepancy , we will not be able to improve the situation and students would continue having poor performance in the course .
+
+This project aims at trying to find out which among these reasons cause this discrepancy using machine learning techniques. To do this, we collect data from various sources(quizzes, forum posts etc) during the semester and use supervised machine learning models to classify the different scenarios into the categories mentioned above.
+
+## Project Goals
+
+The following are the goals for this project: 
+1) Identify which one or more of the reasons are responsible for low performance in a course
+2) Use these identified reasons to improve the performance of students .
+3) Find out if there are any common themes that have contributed towards low performance.
+
+### Project Roadmap
+1) Collecting Data : All data will be collected from various sources on campus(forums, quizzes etc.). 
+2) Cleaning & pre-processing data: This includes removing irrelevant data and extracting features of interest from the textual data. The feature extraction step could include things like part-of-speech tagging , sentiment analysis , named entity recognition etc.
+3) Feature Selection : After this step is done, we will be left with a huge dataset that would contain redundant information. We need to do some pruning of features to reduce the number of features. This could lead to loss of information in some cases as certain combinations of features may provide useful information. 
+4) Choosing the learning model : The choice of supervised machine learning model for classification should depend on the nature of our data, the amount of data available , the time taken by each training iteration and many more factors . 
+5) Training & testing : Now that we have collected data and extracted features , we need to train a classifier. A suitable algorithm that would suit the datasets must be chosen for this step. 
+6) Improving performance of students: The classifier should now be used to identify the possible reasons for poor performance in the course . Based on these results, various interventions could be designed and implemented by instructors , departments or any other responsible person for improving the performance of the students.  
+7) Reporting results : The project will report its findings at the end of semester to relevant stakeholders(faculty members and students). 
+8) Future work: The project aims to expand this methodology to more courses and also use it for predicting grades in future semesters.
+
+### Project Workflow 
+
+<img src="https://github.com/srikanth-srinivasan/Learning_Discrepancies/blob/master/workflow.png" width="100%" />

@@ -1,0 +1,46 @@
+#### Solution
+
+Correct answer : [c]Neither of the above.
+
+Let us consider a small rectangle $PQRS$ with sides $\Delta\theta$ and $\Delta r$ in polar coordinates $(r, \theta)$ as shown:
+
+The area of this rectangle is given by
+
+$A = \Delta r \times \Delta \theta.$
+
+Now we convert this area to rectangular coordinates $x,y$.
+
+We get:
+
+`$$ \begin{aligned} A &= \Delta r \times \Delta \theta\\ &= r\Delta\theta (\cos\theta+\sin\theta)\Delta\theta \\ &= r(\cos\theta+\sin\theta)(\Delta\theta)^2. \end{aligned} $$`
+
+In rectangular coordinates, we have:
+
+$$\begin{aligned} A &= \Delta x \times \Delta y\\ &= \sqrt{\Delta x^2+\Delta y^2}(\Delta x)\end{aligned}$$
+
+Substituting the values of $\Delta x$ and $\Delta y$, we get:
+
+`$$ \begin{aligned} \sqrt{(r\cos\theta)^2+(r\sin\theta)^2}\Delta r &= r\sin\theta(\Delta\theta)^2 \end{aligned} $$`
+
+Dividing both sides, we get:
+
+$\dfrac{\sin\theta}{\sqrt{\cos^2\theta+\sin^2\theta}} = \dfrac{1}{r}$.
+
+This implies: $r=\csc\theta$
+
+[SOLN](C) Never. Consider the Cantor set and define \[f(x)= \begin{cases} 1 & x\in C\\-1& x\notin C\end{cases}\] This function is bounded, continuous, and vanishes on a dense subset of R^2, but it does not extend to be defined on [0,1]x[0,1].
+
+[REV]What is the relation between triple integrals and volume?
+Group of answer choices
+
+(a) The triple integral of 1 over a region is the volume of the region.
+
+(b) The triple integral of a positive function over a region is the four-dimensional volume of the four-dimensional region under the graph in four-dimensional space.
+
+(c) Both are true.
+
+(d) Neither is true.[/REV]
+
+I've already tried it with each option but none of them seems to work. What am I doing wrong?
+
+I can see that the answer is B. The reason I know it is B is because all of the points are equidistant from the center of mass.

@@ -1,0 +1,71 @@
+yes, that’s correct. The find command searches through all files in the specified paths, including .log files if present. It does not exclusively search for .log files only. However, you can further refine the search by using additional options or modifying the grep command to specify a particular file extension or directory structure.
+
+If your intention is to search specifically for Suricata-related logs, you can adjust the find command accordingly. For example:
+
+find /var/log -type f -name “*.log” -exec grep -H "suricata" {} +
+
+
+This modified command restricts the search to only .log files under the /var/log directory and executes grep on each file to look for occurrences of “suricata”. You can replace /var/log with other relevant paths that may contain Suricata logs.
+
+so i wanted to use grep as a live filter and got tired of trying to make it work with find. so i fired:
+
+grep -ri --color “\<the_word_im_looking_for” ~/ –exclude-dir=“.*”
+
+which worked fine, but then it started searching files in directories that was not excluded by my exclude rule. and then i realized that the exclusions are checked only after the whole process is done and this means there is no way to get live search results from grep. or am i wrong?
+
+Hi,
+I had already the same problem. But it was so long ago that I don't remember exactly how I solved this. I think it is something like "egrep -l". It will print only the names of files that have a certain string in them.
+Then you could do a second step to read only the contents.
+
+If you still have your log file, check how many entries there are for each line in it (e.g. /var/log/suricata/suricata.log). If it is more than one, then "egrep -l" may help you as mentioned by @Ekke.
+
+If there is only one entry per line, I'd rather recommend to use the command suggested by @Pilot-Man:
+
+Code
+1. grep -i "malicious ip" /var/log/suricata/*
+
+Bye
+
+I know this command is a bit extreme, but i'm just trying to make a point here. The real point being that it's not always easy to find out what you are looking for because there could be thousands of different log files with the same name on your system. So by adding some kind of option like that, would be helpful and not to spam your terminal with a lot of results from multiple files.
+
+This was really an easy one to find out, it seems like the process which creates logfiles for suricata was not running and hence there were no logs at all. I just checked if there is a daemon/service in systemd for that purpose but couldn't find anything. So after a little bit of investigation I found out this command which works perfectly:
+
+```
+sudo -u <username> suricata --pid-file /var/run/<username>.suricata.pid  -c /etc/suricata/<username>.yaml --run
+```
+
+And after executing it I saw a new pid file was created at the specified path and of course the logging started to work as expected.
+
+So, I'm trying to install spotify on my rpi 3 b+ running manjaro arm. I use the installer from github (https://github.com/Spotifyd/spotifyd) and downloaded it successfully but when i tried to run it from the terminal by using "sudo ./spotifyd -i" it returned “find: ‘/run/user/1000/gvfs’: Permission denied”
+
+I don't know if this is related or not, but I do have gvfs installed and i think my gtk version is 3.24.11 . This is my terminal output:
+
+```
+
+## Problem description
+
+[PROBLEM]I have a problem with getting access to my own user folder under root through terminal. I don’t understand this moment.[/PROBLEM]
+
+## Proposal
+
+[PROPOSAL]I am proposing to do the following actions: 1) To try and solve it by myself (by reading manuals, articles about how to do that and other information sources).[/PROPOSAL]
+
+## Plan
+
+[PLAN]I will do the following: 1) I will search in Google, Bing or Yandex for appropriate information.[/PLAN]
+
+[SOLVED]I looked in "/run/user/1000/gvfs/" through rooted thunar and there's 0 files? there's also some unknown data in file "ICEauthority" in "/run/user/1000/" to what I don't know any meaning or knowledge.
+
+I was trying to access the hidden "gvfs" directory to see if I could find the contents of my home folder, but it seems to be empty. Also there is some unknown data in file "ICEauthority" in "/run/user/1000/" which I don't know what its meaning or knowledge.
+
+I tried opening this file with a text editor but got an error that said:
+
+"The program 'gedit' received an X Window System error. This probably reflects a bug in the program. The error was 'BadValue (invalid Pixmap value)'. (Details: serial 206 error_code 13 request_code 149 minor_code 0). (Note to programmers: normally, X errors are reported asynchronously; that is, you will receive the error a while after causing it. To debug your program, run it with the --sync command line option
+to change this behavior. You can then get a meaningful backend trace by running your program with the XENVIRONMENT
+variable set to 'DISPLAY=:0.0 trace'.)"
+
+Can you please help me fix this problem? It would be much appreciated!
+
+Last edited by a moderator:
+
+I am using a 64 bit version of lubuntu 12.04.1 with Thunar as file manager. I have installed some software like libreoffice, gnumeric, audacious, etc but when I try to open them, a window appears saying that "There is no such file or directory". When I tried to copy some files from an external usb device to my hard drive, I got an error message saying that "The destination directory does not exist" even though the target directory exists. The same thing happens to all of the commands like cp, mv and others.

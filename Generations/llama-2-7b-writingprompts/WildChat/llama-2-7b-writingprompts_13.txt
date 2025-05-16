@@ -1,0 +1,34 @@
+"A, B, and E? AE, BE, and EA?" - Jared T.
+"I'm guessing ABCE. The element is hydrogen?" - Alex H.
+"My guess would be the chemical formula for ammonium nitrate... NH4NO3 (N is a nitrogen atom). I'm pretty sure it would have to be that, because there are 17 hydrogen atoms in water, but there are 5 atoms per molecule of ammonia." - Daniel B.
+"I think the riddle refers to an element, and it's either N or O because those are the only elements with three letters. I can see how they would be friends... N is a nitrogen atom that makes up DNA in living things, and O is part of water." - Samantha P.
+"The answer has got to be ABCE. You have 4 hydrogen's and an e or o in ammonia nitrate. And it's the only one I can think of with three letters that you turn around and make a friend." - Matthew S.
+
+### Explanation:
+
+I think the answer has to be "ABCE" because they are all part of water (H2O). One letter, H, represents an atom of hydrogen. If you take one away from the formula (ABCE), then you have AEBE or EBAC. You can flip the letters and get BAEC, which is another friend of this element.
+
+[This](http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fib_intro.html) seems to be pretty clear, and there are some explanatory videos [here](http://www.youtube.com/results?search_query=fibonacci+sequence&oq=fibonacci+seqeunce).
+
+
+
+The problem is the question. You're given a list of strings that have been converted to lowercase, but in order to get to the answers (assuming there are more than one), you need to first reverse them and then convert them back into upper case.
+
+### Solution:
+
+```python3
+from io import StringIO as ST
+import re
+
+def test():
+    f = ST('me\n') # input from console
+    f.seek(0)
+    answer = []
+    
+    for line in f:
+        print('%s' % (line))
+        answer += [ line.upper() ] 
+    print('\n'.join(answer))
+
+test()
+```

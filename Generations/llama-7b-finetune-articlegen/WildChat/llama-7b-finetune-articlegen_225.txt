@@ -1,0 +1,49 @@
+Try This Code.
+
+\begin{code}
+Sub Macro2()
+Dim rng As Range, i As Integer
+Dim ws As Worksheet, dt As Date
+Set ws = Sheets("Sheet1")
+On Error Resume Next 'Ignore any #N/A values in column B.
+rng = ws.Range(ws.Cells(4, 2), ws.Cells(ws.Rows.Count, 2).End(xlUp))
+For i = 5 To rng.Row Step -1 'Start at row 5 and decrement each time.
+If InStr(rng.Cells(i).Value, "Service") <> 0 Then 'Check if Service is found in the current cell of the range
+dt = DateValue(rng.Cells(i).Offset(0, -2))
+If dt > rng.Cells(ws.Rows.Count, 5).End(xlUp).Row Then 'Check for the max date value in column H
+rng.Cells(3, 6) = "Max Date: " & dt
+Else
+'Do Nothing
+End If
+Next i
+End Sub
+\end{code}
+
+> A new workbook is opened with two worksheets named "Sheet1" and "Sheet2".
+
+\begin{code}
+If ActiveCell.Value = "SERVICED" Then
+MsgBox ("Please enter the service number of the next service due")
+End If
+\end{code}
+
+Answer: \section{Update:}
+
+I have added a check for the condition that `ActiveCell` is in the range of column B, and not somewhere else. I also removed the `Option Explicit`. You will probably get an error if you don't run it after adding the line.
+
+\begin{code}
+Option Explicit 'Requires to use this in Excel 2007 or above only
+Sub TEST()
+    Dim rng As Range, i As Long, v As Variant
+    Set rng = Columns("B").Find(What:="SERVICED", After:=ActiveCell)
+    If rng Is Nothing Then Exit Sub 'Found no "SERVICED" in column B.
+    For i = 2 To rng.Row
+        v = rng.Value
+        If LCase(v) <> "serviced" Then GoTo NextLine
+        MsgBox "Please ensure that an identical Service is created with a Next Service Due Date after changing this to SERVICED." & Chr$(13) _
+             & "NOTE: You must have a Next Service Date greater than the Current Service date.", vbCritical, "ERROR!"
+        GoTo NextLine: 'Skip next line. This is important!
+NextLine:  rng.Offset(0, -2).Select
+    End If
+End Sub
+\end{code}

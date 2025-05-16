@@ -1,0 +1,15 @@
+{
+    "command": {
+        "name": "message_father",
+        "args": {
+            "message": "<message>"
+        }
+    },
+    "thoughts": {
+        "text": "What would you like to message me?",
+        "reasoning": "This prompt is asking for a specific message that I should send.",
+        "plan": "- Ask the user for their message.\n- Use the 'args.message' parameter from the command to insert the user's message into the GPT response.",
+        "criticism": "",
+        "summary": "I will ask the user what they would like me to message them, and then I will include that message in my response using the 'args.message' parameter."
+    }
+}

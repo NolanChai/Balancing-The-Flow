@@ -1,0 +1,101 @@
+The solution should contain the following:
+1. Instruct the user to choose 3 colors for their drawing by providing them with a list of available color choices (e.g., "Choose your favorite three colors from these options: brown, green, and yellow"). The user can select any combination of colors they like, but should not be able to enter invalid combinations (e.g., selecting only two or less than 3 colors).
+2. Enable the user to create their drawing by using the following instructions: "Drag the color blocks around on the canvas and arrange them in a way that represents your own artistic vision." This will allow the user to freely place, resize, move, rotate and duplicate color blocks within the provided canvas area.
+3. Provide feedback to the user on their drawing by displaying an error message when the user attempts to add colors that are not part of the given options (e.g., "Sorry, but you cannot select those colors as they aren't available"). This will prevent users from creating invalid combinations and ensure a successful art creation experience.
+4. Prompt the user to click "Done" when they have finished arranging their artwork, which will save it for review or submission.
+5. Once completed, display the final artwork on the canvas with a message such as: "Your finished work of art looks great!" This will encourage and motivate users to continue creating more artworks in this fun and engaging environment.
+6. Upon clicking on the "Submit" button, provide feedback that shows what the user submitted (e.g., "Your drawing was successfully saved to your gallery.").
+7. At any time during the drawing process, allow the user to "Start Over" by clicking on a reset button. This will clear all of their existing color selections and give them a fresh start.
+8. Offer helpful tips and guidelines (e.g., "Remember that you can select more than one color at once, but keep your artwork simple") to improve the user's drawing experience.
+9. Encourage users to share their art with friends by providing social media sharing options such as Facebook, Twitter, or email.
+10. Create a gallery of all submitted artworks that can be viewed and liked/disliked by other users, promoting community engagement in this fun art activity.
+11. Display a "Leaderboard" of the highest-rated artworks to encourage competition and creative expression among participants.
+12. Give users the option to save their artwork locally on their device or share it with others via email or social media platforms, so that they can showcase their talents outside this app as well.
+
+### Code: 
+```javascript
+// Assignment: Instruction prompts and validation
+const chooseColors = () => {
+    return prompt("Choose your favorite three colors from these options: brown, green, yellow")
+        .then(answer => answer.split(',').map(color => color.trim())) // split comma separated string into an array of individual strings (colors)
+}
+const createDrawing = () => {
+    const canvas = document.getElementById("canvas")
+    const ctx = canvas.getContext("2d");
+    
+    return new Promise((resolve, reject) => {
+        if (!answer || answer.length !== 3) { // check if a valid array was given as the user input
+            reject({ message: "Please choose your three colors." })
+        } else {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const colorsArray = answer;
+            
+            for (let i = 0; i < colorsArray.length; i++) {
+                const color = colorsArray[i] // create a copy of the color provided by the user
+                    .toUpperCase()
+                    .replace(/\s/g, '')
+                    .toHexString();
+                    
+                ctx.fillStyle = color; // set the current color context to be equal to the provided hex value
+            }
+            
+            resolve();
+        }
+        
+    })
+}
+const reviewDrawing = () => {
+    return prompt("Your drawing looks great! Would you like to share it on Facebook, Twitter or send it via email?")
+        .then(answer => answer.split(',').map(shareOption => shareOption.trim())) // split comma separated string into an array of individual strings (sharing options)
+}
+const submitDrawing = () => {
+    const canvas = document.getElementById("canvas");
+    
+    return new Promise((resolve, reject) => {
+        if (!answer || answer.length !== 3) { // check if a valid sharing option was given as the user input
+            reject({ message: "Please choose your sharing options." })
+        } else {
+            canvas.getContext("2d").drawImage(canvas, 0, 0); // draw an image of canvas on itself
+            
+            resolve();
+        }
+    })
+}
+const resetDrawing = () => {
+    const canvas = document.getElementById("canvas");
+    
+    return new Promise((resolve, reject) => {
+        if (!answer || answer.length !== 3) { // check if a valid sharing option was given as the user input
+            reject({ message: "Please choose your sharing options." })
+        } else {
+            canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height); // clear the entire canvas (remove all previous content)
+            
+            resolve();
+        }
+    })
+}
+const addColor = () => {
+    const ctx = document.getElementById("canvas").getContext("2d");
+    
+    return new Promise((resolve, reject) => {
+        if (!answer || answer.length !== 3) { // check if a valid sharing option was given as the user input
+            reject({ message: "Please choose your three colors." })
+        } else {
+            const color = answer[i];
+            
+            ctx.fillRect(0, 0, 50, 50); // draw a rectangle on canvas with width and height of 50px
+            
+            if (color) { // check if the color was provided by the user
+                ctx.fillStyle = color; // set the current color context to be equal to the provided hex value
+                
+                resolve();
+            } else {
+                reject({ message: "Please select a color for your drawing." })
+            }
+        }
+        
+    })
+}
+```

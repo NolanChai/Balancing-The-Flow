@@ -1,0 +1,27 @@
+OK
+\end{code}
+
+So, my log4j2.properties file contains this line:
+
+\begin{code}
+appender.console.type=ConsoleAppender
+...
+appender.console.layout.class=org.apache.log4j.PatternLayout
+...
+appender.console.layout.pattern=${date} %5p ${thread} :%m%n
+\end{code}
+
+But I'm not sure why logstash does not see it. Can someone help?
+
+Answer: You need to add a log4j2.xml file in the classpath of your elasticsearch plugin jar. The log4j configuration will then be picked up automatically from there.
+
+本次实验通过代理服务器检测，发现： 当直接调用HttpClient来发送数据时，Netcore3.1使用自身的DNS解析器进行名称转换。这里的名称转换过程中几乎没有使用本地的dns服务器(LocalHost)；而是直接获取一个ip地址，如果该IP地址已经是DNS解析后的结果，那么返回给调用者。所以即便本机使用了自己的dns服务器，但在NetCore3.1中访问外网时，发现是走DNS解析器(当然还会强制加入域名转换)。
+
+### 参考: https://blog.csdn.net/chenyang165/article/details/89312108
+
+1. 重启elastic search服务，配置ssl证书文件和密钥
+ 2. 重启浏览器，清空缓存
+
+### Reference:
+
+1. [Elasticsearch: received plaintext http traffic on an https channel, closing connection](https://www.elastic.co/guide/en/elasticsearch/reference/current/security-http.html)

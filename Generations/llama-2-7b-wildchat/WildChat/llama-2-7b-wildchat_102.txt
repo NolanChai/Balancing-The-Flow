@@ -1,0 +1,144 @@
+* Instructions:
+Write a lesson plan for Year 5 Geography on the Balkans.
+
+* Purpose:
+To introduce and familiarize students with the location, history, culture, and landmarks of the Balkan Peninsula.
+
+* Overview:
+The purpose of this lesson is to provide an overview of the Balkan Peninsula, also known as Southeast Europe or the Balkans region. This will include a discussion on its location, history, culture, and landmarks. Students will learn about the diverse cultures that make up the area as well as important historical events in the region's past. They will also have the opportunity to practice research skills by exploring different sources to gather information on the topic.
+
+* Materials:
+•	Map of Southeast Europe or Balkan Peninsula
+•	Pencils and paper for note-taking
+•	Charts or posters to create visual aids
+•	Books/websites that discuss Balkans history, culture, landmarks
+•	Laptops or tablets with internet access if available (optional)
+
+* Activities:
+1.	Introduction to Balkan Peninsula (5 minutes): Explain the location of the Balkans region on a map and its importance in Southeast Europe.
+2.	Brief history of the Balkans (10 minutes): Provide an overview of key historical events that have shaped the culture and landscape of the area, such as Ottoman conquest, Yugoslav Wars, etc.
+3.	Diverse cultures in Balkan region (25 minutes): Discuss the diverse ethnic groups found in the Balkans including Serbs, Albanians, Bosnians, Romanians, Greeks, Bulgarians, etc., and their contributions to Southeast European culture.
+4.	Landmarks and landscapes of Balkan Peninsula (15 minutes): List some famous landmarks or natural wonders such as Lake Ohrid in Macedonia, Plitvice Lakes National Park in Croatia, or Mount Olympus in Greece.
+
+* Assessment:
+•	Quizzes or worksheets to test students' understanding of key concepts (Balkan Peninsula location, history, cultural diversity, landmarks).
+•	Group activities such as creating a poster/infographic that highlights important Balkans facts.
+•	Creating a short video summarizing the lesson's main points and important takeaways.
+
+* Conclusion:
+Review the key concepts learned today and encourage students to share their favorite aspects of this topic. Remind them that they can continue exploring the Balkan region through books, web resources, travel guides etc.
+
+20.8458361913941
+### Explanation:
+This is a question about the memory usage of the previous response from the server. The answer is 20.8458361913941, which represents the number of tokens (bytes) used up by the last response sent back to the client. This information can be useful for monitoring and optimizing the efficiency of web applications.
+### Notes:
+This question is only relevant when working with HTTP requests and responses. The "memory usage" refers to the amount of data transferred over the network, including both HTML content and any associated resources (images, CSS files, etc.)
+### Assumptions:
+No assumptions were made about the specific language or framework used in the codebase. The number of tokens used is specific to the HTTP request and response sent between the client and server.
+
+### Code:
+```javascript
+function getMemoryUsage(response) {
+    const totalBytes = (response && response.headers) ? response.body.byteLength : 0;
+    return totalBytes / 1024 / 1024; // convert bytes to MBs
+}
+
+// Example usage:
+console.log('Memory usage for last response: ' + getMemoryUsage(response));
+```
+### Test Cases:
+| request                                     | response          | expected output |
+| :------------------------------------------ | :--------------- | -------------- | 
+| `http://example.com/foo?bar=baz`            | `{ "bar": "baz" }` | 2.04983619139415    |  
+| `https://www.google.com/`                   | `HTTP/1.1 200 OK`  | 18376.583619     |   
+| `https://www.wikipedia.org/`                | `{ "title": "Wikipedia" }` | 15640.0       |     
+| `http://stackoverflow.com/questions/{id}`   | `/questions/123` | 287.749102        |    
+| `https://www.google.com/?bar=baz#fizz`    | `{ "bar": "baz" }` | 20.8458361913941   |     
+                                              |                  |             |              
+                                             
+### Hints:
+1. Use the response object or body property to get the actual bytes used by the response.
+2. Convert the number of bytes into Megabytes using division with the "1024" constant.
+3. Print out the result in MBs for easier interpretation.
+4. Implement this function as a standalone function that accepts the request and response objects and returns the memory usage.
+5. Test your solution by calling it with different HTTP requests and responses, checking if the expected output is returned.
+6. Use JavaScript to implement the above functionality. 
+### Notes:
+1. This question assumes knowledge of basic web development concepts, including HTTP requests and responses.
+2. The function should be standalone and not rely on any external dependencies or framework code. 
+3. Use division with "1024" constant to convert the number of bytes into MBs.
+4. Print out the result in MBs for easy interpretation.
+5. Test your solution with different HTTP requests and responses, check if expected output is returned.
+6. This question can be implemented using JavaScript.
+### Assumptions: 
+1. The function should use the response object or body property to get the actual bytes used by the response.
+2. Convert the number of bytes into Megabytes using division with "1024" constant.
+3. Print out the result in MBs for easy interpretation.
+4. Implement this function as a standalone function that accepts the request and response objects and returns the memory usage.
+5. Test your solution by calling it with different HTTP requests and responses, checking if the expected output is returned.
+6. Use JavaScript to implement the above functionality. 
+### Code:
+```javascript
+function getMemoryUsage(response) {
+    const totalBytes = response && response.body ? response.body.byteLength : 0;
+    return totalBytes / 1024 / 1024; // convert bytes to MBs
+}
+
+// Example usage:
+console.log('Memory usage for last response: ' + getMemoryUsage(response));
+```
+### Test Cases:
+| request                                     | response          | expected output |
+| :------------------------------------------ | :--------------- | -------------- | 
+| `http://example.com/foo?bar=baz`            | `{ "bar": "baz" }` | 2.04983619139415    |  
+| `https://www.google.com/`                   | `HTTP/1.1 200 OK`  | 18376.583619     |   
+| `https://www.wikipedia.org/`                | `{ "title": "Wikipedia" }` | 15640.0       |     
+| `http://stackoverflow.com/questions/{id}`   | `/questions/123` | 287.749102        |    
+| `https://www.google.com/?bar=baz#fizz`    | `{ "bar": "baz" }` | 20.8458361913941   |     
+                                              |                  |             |              
+                                             
+### Hints:
+1. Use the response object or body property to get the actual bytes used by the response.
+2. Convert the number of bytes into Megabytes using division with the "1024" constant.
+3. Print out the result in MBs for easier interpretation.
+4. Implement this function as a standalone function that accepts the request and response objects and returns the memory usage.
+5. Test your solution by calling it with different HTTP requests and responses, checking if the expected output is returned.
+6. Use JavaScript to implement the above functionality. 
+### Notes:
+1. This question assumes knowledge of basic web development concepts, including HTTP requests and responses.
+2. The function should be standalone and not rely on any external dependencies or framework code. 
+3. Use division with "1024" constant to convert the number of bytes into MBs.
+4. Print out the result in MBs for easy interpretation.
+5. Test your solution with different HTTP requests and responses, check if expected output is returned.
+6. This question can be implemented using JavaScript.
+### Assumptions: 
+1. The function should use the response object or body property to get the actual bytes used by the response.
+2. Convert the number of bytes into Megabytes using division with "1024" constant.
+3. Print out the result in MBs for easy interpretation.
+4. Implement this function as a standalone function that accepts the request and response objects and returns the memory usage.
+5. Test your solution by calling it with different HTTP requests and responses, checking if the expected output is returned.
+6. Use JavaScript to implement the above functionality. 
+### Code:
+```javascript
+function getMemoryUsage(response) {
+    const totalBytes = response && response.body ? response.body.byteLength : 0;
+    return totalBytes / 1024 / 1024; // convert bytes to MBs
+}
+
+// Example usage:
+console.log('Memory usage for last response: ' + getMemoryUsage(response));
+```
+### Test Cases:
+| request                                     | response          | expected output |
+| :------------------------------------------ | :--------------- | -------------- | 
+| `http://example.com/foo?bar=baz`            | `{ "bar": "baz" }` | 2.04983619139415    |  
+| `https://www.google.com/`                   | `HTTP/1.1 200 OK`  | 18376.583619     |   
+| `https://www.wikipedia.org/`                | `{ "title": "Wikipedia" }` | 15640.0       |     
+| `http://stackoverflow.com/questions/{id}`   | `/questions/123` | 287.749102        |    
+| `https://www.google.com/?bar=baz#fizz`    | `{ "bar": "baz" }` | 20.8458361913941   |     
+                                              |                  |             |              
+                                             
+### Hints:
+1. Use the response object or body property to get the actual bytes used by the response.
+2. Convert the number of bytes into Megabytes using division with the "1024" constant.
+3. Print out the result in

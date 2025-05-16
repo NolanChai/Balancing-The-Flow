@@ -1,0 +1,44 @@
+
+
+[START]npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (rest_api1)
+version: (1.0.0)
+description: Restful Api for CRUD Product using NodeJs, Express, MongoDB
+entry point: (index.js)
+test command:
+git repository:
+keywords: node, restful api, mongodb, express
+author: Acer
+license: (ISC)
+About to write to /c/rest_api1/package.json:
+
+{
+  "name": "rest_api1",
+  "version": "1.0.0",
+  "description": "Restful Api for CRUD Product using NodeJs, Express, MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "restful api",
+    "mongodb",
+    "express"
+  ],
+  "author": "Acer",
+  "license": "ISC"
+}
+
+
+Is this ok? (yes) yes

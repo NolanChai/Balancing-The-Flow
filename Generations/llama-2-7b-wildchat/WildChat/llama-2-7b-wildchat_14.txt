@@ -1,0 +1,32 @@
+First of all you need to create a text variable called `TxtValue` that will contain the numeric value user has to input into the sheet. Now we are going to use some worksheet functions like `INDEX`, `MATCH`, and `ROW` etc to retrieve information from cells in each row.
+
+Then we're going to define a function called "InsertRow". The macro is triggered when you click on the button. We will use this function to insert text into specific cell(s). Finally, we'll add the user input value to all rows using `INDIRECT` function.
+
+#### Macro:
+```python
+Sub InsertRow()
+     Dim TxtValue As Variant
+     Dim i As Integer
+     'get user input in a variable
+     TxtValue = Application.InputBox("Enter any number", Type:=8)
+
+    For i = 2 To 13 'loop through all rows from second row to last one, excluding header row
+        With ActiveSheet.Range(Cells(i, 1), Cells(i, 14)).Font
+            .ColorIndex = xlAutomatic
+            .TintAndShade = -0.279830956
+            .ThemeColor = xlThemeColorAccent2
+        End With
+     Next i
+     'display user input value to each row
+    With ActiveSheet.Range(Cells(1, 1), Cells(14, 14)).Font
+        .ColorIndex = xlAutomatic
+        .TintAndShade = -0.279830956
+        .ThemeColor = xlThemeColorAccent2
+    End With
+    ActiveSheet.Range("A" & Rows.Count).Value = TxtValue 'add user input value to last row
+End Sub
+```
+
+#### Note:
+
+You can change the number in `For i= 2 To 13` part to whatever you like (e.g. `For i= 5 To 14`) and change the range in `With ActiveSheet.Range(Cells(i, 1), Cells(i, 14)).Font` section to whatever you need (e.g. `With ActiveSheet.Range("A" & Rows.Count).Font`).

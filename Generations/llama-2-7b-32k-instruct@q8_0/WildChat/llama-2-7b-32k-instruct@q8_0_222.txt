@@ -1,0 +1,16 @@
+It seems like there is a issue with the way the XML data is being parsed. Here's a suggestion to fix it:
+
+1. Use `simplexml_load_file` instead of `simplexml_load_string`. This will load the XML file from the given path instead of reading the contents of the string into memory.
+2. Use `DOMDocument::loadXML` method to parse the XML file. It will return a DOM document object, which you can then use to access the XML data.
+
+Here's an example of how you can modify your code:
+```
+$path = "https://en.softonic.com/sitemap-article_news.xml";
+$dom = new DOMDocument();
+$dom->loadXML(file_get_contents($path));
+$latest_from_softonic = new StdClass;
+$latest_from_softonic->url = array();
+$latest_from_softonic->title = array();
+foreach ($dom->documentElement->childNodes as $node) {
+    if ($node instanceof DOMElement && $node->tagName == 'url') {
+        $latest_from_softonic->url

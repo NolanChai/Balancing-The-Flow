@@ -1,0 +1,161 @@
+False
+
+### Expected response:
+
+True
+\end{code}
+
+Comment: you have a typo `TimeStampSimple Target, "G2"` -> `Target` - not sure if this is causing your problem.  Also, is there any reason why you're setting the Range to calculate instead of simply calling the function? `Application.EnableEvents = False
+Call TimeStampSimple(Range("A:A"))`
+
+Comment: I am trying to have an event that when something changes in column A, it will update a cell on another sheet with the correct date and time but not if the event is from column A.  The function is supposed to run whenever a change occurs in any column or row of Column A, which includes the worksheet change events.
+
+Answer: You're setting Range("K:K").Calculate to True, whereas it should be false - see [Range.calculate method (Excel)](https://msdn.microsoft.com/en-us/library/office/ff839761.aspx).
+
+\begin{code}
+Private Sub Worksheet_Change(ByVal Target As Range)
+
+    'If Not Intersect(Target, Range("A:A")) Is Nothing Then
+        If (Not (Target = "A2")) Or (Not (Target <> "")) Then Exit Sub
+    'End If
+
+    Application.EnableEvents = False
+    TimeStampSimple Target, "G2", "J", "mm/dd/yyyy hh:mm:ss", False
+    Application.EnableEvents = True
+
+End Sub
+\end{code}
+
+It's not clear exactly what you need to do here; let me try to clarify using an example...
+
+Suppose you have this data in Column `A` and Column `K`:
+
+<IMAGE>
+
+Now suppose I change the value in cell `A3` (from 56 to 17) - it's calculated automatically, but what do we want here? We need to see the calculation for 17 in K3.
+
+So let me try something like this...
+
+<IMAGE>
+
+Now if I change the value in cell `A3` (from 56 to 17), it only calculates `K3`. So my first guess is that you might be doing something like this:
+
+\begin{code}
+Private Sub Worksheet_Change(ByVal Target As Range)
+If Not Intersect(Target, Range("A:A")) Is Nothing Then
+    With Range("K:K").Calculate
+        .Value = Range("K3").Value
+    End With
+End If
+TimeStampSimple Target, "G2", "J", "mm/dd/yyyy hh:mm:ss", False
+End Sub  - when I make a change in column A it calculates the entire column K. How should I write the code susch that when I change the value in a row of column A, it only calculates the same row of column K.
+\end{code}
+
+Let me know if this works for you; if not let me know what else might be necessary!
+
+You are going down the right track with this new solution.  However, you seem to be getting ahead of yourself here by using a lot of variables when you don't need them and they just add unnecessary overhead.  The variables you use should only be used for storing data that is required throughout the entire program or in some cases needed only once.  You are also not fully utilizing the function prototypes you declared in your previous lesson.  Instead, you should use a function to perform the same task and then call that function with any parameter(s) if necessary.  If you do this, then your code will be more efficient because it will only run through the function once instead of twice.
+
+This will not work because the doubleclick is intercepting the event and you are missing a line that will call the procedure again after the doubleclick occurs. Try this...
+Private Sub Worksheet_BeforeDoubleClick(ByVal Target As Range, Cancel As Boolean)
+Dim count As Long
+count = 0
+
+If Not Intersect(Target, Range("I16")) Is Nothing Then 'change the range to match your selected column range
+Application.EnableEvents = False
+If IsEmpty(Target) Then
+Target.Value = "Yes"
+Else
+If Target.Value = "Yes" Then
+Target.Value = "No"
+ElseIf Target.Value = "No" Then
+Target.Value = ""
+End If
+End If
+Cancel = True
+Application.EnableEvents = True
+Worksheet_BeforeDoubleClick Target, Cancel End Sub
+\end{code}
+
+The second one.
+
+### Explanation:
+
+With the first command, Range("F3").ClearContents, Excel automatically assigns an empty string ("") to F3 when the line is processed.  With the second line, Range("F3").Value = "" explicitly tells Excel that you want the contents of cell F3 to be empty.
+
+Yes. It does not matter if the range contains one cell or many cells, it will still only have to be specified once. However, in the example you've given there is no reason to use Range().Value as you can simply type the value directly into the cell (i.e. D22:D25 = ).
+
+### Error Number:      3680
+### Code:              127495
+### Source:            Excel.Application Class
+### Description:        An object is required to be on the target sheet.
+### HResult:           -2147397500 (80004001)
+### Help ID:           61616
+### Line Number:        898     Topic Number: 14008
+### Keywords:          GetObject, Worksheet, xlRange
+\end{code}
+
+Answer: I think that the problem is in your first line of code
+
+`Set xCWs = ActiveWorkbook.Worksheets.Item(xStr)`
+
+You are trying to add a worksheet named "SrvSrch" using `Worksheets.Add` method, which should not work for some reason, so you get error number 3680 (127495). To fix the issue I think that what you need is:
+
+\begin{code}
+Set xCWs = ActiveWorkbook.Worksheets("SrvSrch")
+\end{code}
+
+You can do this on your code module level - you just need to call it in every sheet that needs its cut/copy mode changed back after an event has occurred on another sheet. You'll probably want to do something like this (if your workbooks are opened in a certain order):
+
+\begin{code}
+Sub ResetCutCopyMode(ByVal Workbook As Worksheet)
+    Application.CutCopyMode = True
+End Sub
+\end{code}
+
+It will be very hard to find an alternative faster than using VBA. In addition, if you are going to use VBA it's always nice to have something that can easily be reused for other cells or functions in your workbooks. The example below is a simple VBA function that I found from another post on this site (credit to the original poster).  It allows you to update a cell with the correct INDEX formula based on the value entered into F3:
+
+```vbscript
+Function INDEX(rng as range, val as Variant) As Variant
+    If rng Is Nothing Then Set rng = ThisWorkbook.Worksheets("Sheet1").Range("A2:M" & Cells(Rows.Count, 1).End(xlUp).row)
+    
+    INDEX = rng.Find(val, , xlValues).Address
+```
+
+So now we can call that function by entering the formula in G3: `=INDEX(INDIRECT("F3"),FALSE)` and then press enter. If you want to call it from a cell with the value in F5, use: 
+`=INDEX(INDIRECT("G3"),FALSE)`. The same will apply when using a formula in another sheet such as in G6 on sheet two, by entering `=INDEX(INDIRECT("F3"),FALSE)` into the G6 formula bar.
+
+Here's how to create a variable called a:
+a = 5
+
+A variable is like a container that stores data, such as numbers or strings of text. The variable can be reused any number of times.
+
+It is possible to assign a value to the variable. For example, in the code above, we are assigning 5 to the variable called a. 
+
+Then you can use the variable a in other statements and even change its value.
+
+In this example, the variable b has been declared and assigned a value of 10:
+b = 10
+
+You can check whether a variable is set or not by using the isset() function. For example:
+if(isset($a)) {...}
+
+A variable can also be assigned to another variable in PHP. This process is called "variable assignment." Here's an example:
+$b = $a;
+
+In this case, we are assigning a value of 5 to the variable b and then reassigning that same value to another variable named a.
+
+You can also set or assign multiple values at once using the array function (which is a way to store multiple items in a single variable). For example:
+$c = [1, "hello", "world"];
+
+In this case, we are assigning three separate values (numbers and strings) all at once. This can save you time because instead of having to assign each item separately, you just assign them all at once using the array function.
+
+A variable can also be used as a reference or pointer back to another variable. For example:
+$a =& $b;
+
+In this case we are assigning $b to point back to itself so that if it changes its value later on then both variables will change their values too (in this case they'll become identical).
+
+Correct.
+
+If you are using the function as is, then yes, it will.  You could create a new instance of each type before you begin using them and then garbage collect that object when your done with it.  That way, it would not hold onto the instance longer than needed.
+
+If you want to have this formula be dynamic you can just put it in A1. This is because formulas are not volatile unless they are entered into a cell that has been modified by another user or are part of a named range or are referenced from within another formula (see the Help on Formulas for more info).

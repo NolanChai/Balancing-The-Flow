@@ -1,0 +1,97 @@
+[QUOTE=Trolls;163704]I was just curious as to why you put a lot of effort into trying to discredit me when you don’t know who I am.
+
+Well, if that’s your first reaction to someone calling you out on your shit, then I’d say that it pretty much confirms everything they were saying about you.[/QUOTE]
+
+I was just curious as to why you put a lot of effort into trying to discredit me when you don’t know who I am.
+
+I had a hunch that you weren’t what you seemed but I didn’t expect that you would go out of your way to attack my character with the same fervor as the one that you accused me of having.
+
+Is water wet? (short answer only)
+
+[COLOR=#000080][FONT=arial][SIZE=2][U][B]Instructions for creating a new template[/B][/U][/SIZE][/FONT][/COLOR]
+This is a guide to making your own template. The idea is to create a new template (and thus, new forum), using your imagination and the existing templates as references. If you haven't seen any of the other templates, please download and view them:
+[LIST][*]http://www.phpbb3.net/files/file/1450-template-pirate-v2
+[*]http://www.phpbb3.net/files/file/1689-template-halloween-v2
+[*]http://www.phpbb3.net/files/file/1758-template-nature-v1
+[*]http://www.phpbb3.net/files/file/1490-template-xmas-v3
+[*]http://www.phpbb3.net/files/file/1640-template-rainbow-v2
+[*]http://www.phpbb3.net/files/file/1451-template-luck-of-the-irish-v1
+[*]http://www.phpbb3.net/files/file/1690-template-christmas-v2
+[*]http://www.phpbb3.net/files/file/1538-template-candy-v4
+[*]http://www.phpbb3.net/files/file/1519-template-valentines-day
+[*]http://www.phpbb3.net/files/file/1670-template-birthday
+[*]http://www.phpbb3.net/files/file/1420-template-beach-v2
+[*]http://www.phpbb3.net/files/file/1498-template-zombies-v5
+[*]http://www.phpbb3.net/files/file/1460-template-mystic
+[*]http://www.phpbb3.net/files/file/1764-template-summer-v2
+[/LIST][SIZE=2]
+There are only a couple of rules to making your own template:
+[*]Your new forum must be 800x600 (or less, this can easily be adjusted if it's too big). You may make a version for larger displays as well. This is the standard size.
+[*]The template must be free of copyrighted material. No images from other websites or anything similar.
+[*]You MUST create all images yourself. They need to have transparency (if they are PNGs, for example), and be sized properly. The width must not exceed 960 pixels, but you can make the height longer if you wish.
+[/SIZE][/SIZE]
+[FONT=arial]This guide will show you how to make a new template from start to finish. You need an image editing program to do this (I use Gimp, but there are plenty of free ones out there). I have no idea if these instructions work with Windows Paint (they don't), and I also know nothing about Photoshop or the like.
+[/FONT]
+[SIZE=2]
+[LIST][*]First, you need to decide what your new forum is going to be based on. This template will have a blue theme with green accents (for lack of better terms), and be named "Green Forest". I'm just using this for example, so don't worry about the name.
+[/LIST][SIZE=2]
+[FONT=arial]Now you need to make the background image. This will take up most of the work in making a template, as it is the basis for all other images. A good technique is to find or create an image with your desired effect (blue and green here), then use a program like Gimp's "Selection" tool to choose a section of it. Once you have that section, you can crop it and resize it to be whatever width and height you desire.[/FONT]
+[FONT=arial][LIST][*]I started with this image: [IMG]http://i518.photobucket.com/albums/t295/AJD03/bg_forest_zpsf3d1e764.jpg[/IMG]
+[*]Then I cropped this section and resized it to 800x600: [IMG]http://i518.photobucket.com/albums/t295/AJD03/bg_forest_crop_zps4b747acd.jpg[/IMG]
+[*]The next step is to save this image. I use PNG format because they support transparency, and you can see here that there are areas of transparent background (black). This will come in handy when creating your other images.
+[/LIST][/SIZE][FONT=arial]Now we need an image for the top header bar. In this example, I am using a green leaf (also from Gimp): [IMG]http://i518.photobucket.com/albums/t295/AJD03/leaves_zps6b42c7c6.jpg[/IMG][SIZE=2]
+[FONT=arial][LIST][*]We will use the same technique as before: Crop, resize and save. Here is my image: [IMG]http://i518.photobucket.com/albums/t295/AJD03/top_header_leaf_zps3d47bfcb.jpg[/IMG][*]I used this technique for all of the images, and you may see some common areas between them. For example, the leaf has a white circle in it that is also used in other images.
+[*]Now you need to repeat this process for all of your header images. I've made an example of one more: [IMG]http://i518.photobucket.com/albums/t295/AJD03/header_image_zpsa34a17c3.jpg[/IMG][*]I'm going to use a similar technique for the other header images, but I will change the colors and create new effects for each one.
+[/LIST][/SIZE][SIZE=2]
+[FONT=arial][B]You can make all of your header images now. You should have a total of 3: top bar image (used on every page), top left, and top right.[/B] The most difficult part is over. Now we just need to create some of the other images.
+[/SIZE][LIST][*]You will want an image for each forum category header. Here I have used my leaf again: [IMG]http://i518.photobucket.com/albums/t295/AJD03/forum_category_zpsc703b4f6.jpg[/IMG][*]You may wish to make a different image for each category, but for this example I am going to use only one.[/LIST][SIZE=2][FONT=arial]
+[B]Now we need the page footer images:[/B]
+[LIST][*]Here is my forum's copyright notice: [IMG]http://i518.photobucket.com/albums/t295/AJD03/footer_zpsccb742a2.jpg[/IMG][*]I used the same technique for this as all of my other images.[/LIST][SIZE=2]
+[FONT=arial]You will need to create these images:
+[LIST][*]Top Bar Image (same one we made before) [/LIST]
+[LIST][*]Forum Category Header Image (same one we made before) [/LIST]
+[LIST][*]Header Left Image (this will be used on every page, and is the same for all forums. It's usually a logo.)[/LIST]
+[LIST][*]Header Right Image (this may be different between each forum, but should look good with your header left image).[/LIST]
+[LIST][*]Footer Left Image (copyright notice or similar) [/LIST]
+[LIST][*]Footer Right Image (optional: could be used to display the theme name)[/LIST]
+[*]You may also wish to create an image for your forum's description, which will appear on the main page and possibly other places.
+[*]At this point, you should have all of your images created. If not, go back and make sure you have them.[/LIST
+
+If you don't agree with this sentence, or if you just want to see what other people think about it, leave your answer here.
+
+I was asked on another thread if I thought people would consider me wrong in this situation:
+
+Me and my friend go out drinking. We get drunk. On our way home he falls into the canal (which is a metre deep) and hurts his arm. I am sober and help him out. He is bleeding, I call an ambulance. I do not drink from his beer bottle. The police come and arrest me for giving him alcohol when he was drunk.
+
+My answer is yes, I think people would consider me wrong. (But of course there are different degrees of wrong.)
+
+We all have a soft spot in our hearts for Google. They’re the ones who brought us gmail, Android and free access to everything we need to know about our world. We love them and they love us. But sometimes, things get a bit messy between us humans and those in charge of our favorite search engine. The most recent example comes from their decision not to provide an “in-app browser” for Chrome on iOS 6+ (read: mobile), which is basically a way for you to open links without leaving the app or having to download anything else. This has been causing quite a bit of controversy, but now Google is saying that they didn’t do it on purpose! They were just trying out some new technology and decided to pull back when they saw how badly it was affecting their users. So what does this mean for Snapchat? Well, it means that you won’t be able to use Snapchat with your favorite browser anymore unless you have an iOS 5 device or lower. But don’t worry, there are other ways around this issue! For example: Safari will still let you open links from within Snapchat (you just can’t close them without leaving the app).
+
+Snapchat’s newest update was supposed to make it easier for users to take selfies and add them directly into their stories, but instead of making life easier for Snapchatters, Google made things a bit more complicated. In its latest iOS release on Monday night, Apple included an “in-app browser” feature that allowed users to open links within the app without having to leave it or download another app like Chrome or Safari. But when people tried out this new feature with Snapchat, they found that if they took a selfie and then tapped the share button on top of their screen, they would be redirected back into Safari instead of staying in Snapchat where they could add their picture directly into their story! This problem has been causing some serious confusion for Snapchatters who were trying out this new feature since it’s not clear why Google decided not include its own browser option when Apple did so easily.
+
+Snapchat is one of the most popular mobile apps on the market. It allows you to send pictures and videos that disappear after a short period of time, as well as chat with friends in real-time using text, voice or video. But Snapchat has been getting some bad press lately because it was discovered that its new update caused Google Chrome users who were logged into their accounts via Android devices to be redirected back into Safari when they tried opening a link from within the app itself! This problem can be fixed by simply logging out of your account in Chrome before trying again. However, if you don’t want this happening again then there are other ways around it: use an alternative browser like Firefox instead or switch over to Snapchat’s own in-app browser feature which doesn’t require any additional downloads or setup whatsoever!
+
+If you’re a Google Chrome user and have been experiencing issues with the latest update to Snapchat, don’t worry. You’re not alone. The company has confirmed that it is aware of the problem and working on a fix as we speak.
+
+In an email to TechCrunch, a spokesperson for Snap said: “We are aware of this issue and are working with our partners at Google to resolve it as soon as possible.”
+
+Google is currently investigating why some users are being redirected to Safari when they try to open links from within the app itself. It’s not clear what exactly caused this problem or if there are any other issues related to Snapchat’s update that need fixing (though we imagine there probably are). For now though, all we know is that Google is looking into it and will hopefully have something fixed before too long!
+
+## So how can I fix this problem?
+
+If you’re using Chrome on iOS 6+ devices such as iPhone/iPad or Android 4.1+ smartphones/tablets (or any other device running one of these operating systems), then simply uninstalling Snapchat won’t do much good since it will still continue to redirect users back into Safari after they open up links from within its interface–unless you delete all traces of it off your phone first! Fortunately though, there are two different ways around this issue without having to remove everything: one option involves switching over entirely into Safari while another requires downloading a third-party app called “Chrome for iOS” which lets you open links directly through its own browser instead of being redirected back into Safari each time (which should hopefully solve your problem).
+
+In case you’re still having trouble fixing this issue on your own, here are some tips:
+
+## Firstly uninstall Snapchat.
+
+This will get rid of the “in-app browser” feature and let you use Chrome without any problems. However, if you want to keep using Snapchat, then follow these steps below!
+
+Secondly, make sure that when you open links from within Snapchat (whether it’s via a message or by tapping on one of your friend’s stories) there is no redirection at all; just load up the page directly in Chrome instead! This should fix most problems with opening links while using Snapchat.
+
+Finally, if none of these steps work for you then try clearing out all data associated with your account by going into Settings > General > Usage > Manage Storage > Select All Data and tap Erase All Content & Settings (this will delete everything). Then reinstall both apps from scratch using iTunes or Google Play Store respectively.
+
+I think I'd like to be a Jainist. It seems like the most peaceful and enlightened of the religions. No killing of any kind (not even insects), no sex at all except within marriage for procreation, they believe in reincarnation and non-violence.
+
+I think if more people were Jainists the world would be a better place. And they don't have an afterlife, so you have to be perfect to achieve nirvana which makes people want to strive towards perfection (in terms of morality) during life, instead of thinking "if I sin now it doesn't matter as long as I do good things before I die".
+_________________

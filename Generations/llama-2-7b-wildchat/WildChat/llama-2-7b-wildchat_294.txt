@@ -1,0 +1,276 @@
+Assembled code:
+
+    MOV AX, @DATA
+    MOV DS, AX
+    MOV ES, AX
+
+    ;--------------------
+    ; Read data from text file:
+    ;--------------------
+    MOV SI, OFFSET input.txt
+
+    LOOP
+        MOV BL, BYTE PTR [SI]
+        MOV DL, BL
+        CMP BL, 0
+        JE end_read
+
+        ADD ES:DI, 1
+        INC SI
+
+    end_read:
+    
+    ;--------------------
+    ; Find the minimum element:
+    ;--------------------
+    MOV AX, DS
+    LEA DS, [ES + 2]
+    SUB AL, AL
+
+    MOV CX, BYTE PTR [DS:SI]
+    
+    MOV BL, AL
+    
+    CMP BL, -10
+    JE found_min
+    MOV AX, 10
+found_min:
+    
+    MOV DS:DI, OFFSET output.txt
+
+    LEA DI, [DS:SI]
+    MOV AL, BYTE PTR [DS:DI]
+    
+    CMP BL, AL
+    JE min_output
+    MOV AH, 09h ; Output code
+    INT 21h
+min_output:
+    
+    INC DS:DI
+    
+    ;--------------------
+    ; Find the maximum element:
+    ;--------------------
+    MOV AX, DS
+    LEA DS, [ES + 4]
+    SUB AL, AL
+
+    MOV CX, BYTE PTR [DS:SI]
+    
+    MOV BL, AL
+    
+    CMP BL, -10
+    JE found_max
+    MOV AH, 9
+found_max:
+    
+    MOV DS:DI, OFFSET output.txt
+
+    LEA DI, [DS:SI]
+    MOV AL, BYTE PTR [DS:DI]
+    
+    CMP BL, AL
+    JE max_output
+    MOV AH, 09h ; Output code
+    INT 21h
+max_output:
+    
+    INC DS:DI
+    
+    ;--------------------
+    ; Check the results of searching elements and output:
+    ;--------------------
+    MOV AX, DS
+    LEA SI, OFFSET output.txt
+    CMP SI, 0
+    JE end_checking
+
+    LOOP
+        MOV BL, BYTE PTR [SI]
+        
+        CMP BL, -10
+        JNE found
+        MOV AX, -1
+found:
+    
+        MOV DS:DI, OFFSET output.txt
+
+        LEA DI, [DS:SI]
+        MOV AL, BYTE PTR [DS:DI]
+        
+        CMP BL, AL
+        JNE found_output
+        MOV AH, 09h ; Output code
+        INT 21h
+found_output:
+    
+        INC DS:DI
+
+    end_checking:
+    
+;--------------------
+; Write the result to file:
+;--------------------
+        MOV SI, OFFSET output.txt
+        MOV AX, 10
+    ;MOV CX, BYTE PTR [DS:SI]
+
+        MOV BL, AL
+    
+        CMP BL, -10
+        JE found_file
+        MOV AH, 09h ; Output code
+        INT 21h
+found_file:
+        
+        INC SI
+        MOV DS:DI, OFFSET output.txt
+    
+        LEA DI, [DS:SI]
+        MOV AL, BYTE PTR [DS:DI]
+    ;MOV CX, BYTE PTR [DS:SI]
+        
+        CMP BL, AL
+        JE found_file_output
+        MOV AH, 09h ; Output code
+        INT 21h
+found_file_output:
+    
+    INC SI
+    
+    end_write:
+    
+;--------------------
+; Close the file and return to the main program:
+;--------------------
+        MOV BL, BYTE PTR [DS:SI] ; Write zero value.
+        MOV DL, BL
+        
+        CMP DL, 0
+        JE end_close
+        
+        LEA SI, OFFSET output.txt
+        MOV AX, BYTE PTR [SI]
+        
+        XOR AH, AH
+        INT 21h
+end_close:
+    
+    ;--------------------
+    ; Close the file and return to the main program:
+    ;--------------------
+        MOV BL, BYTE PTR [DS:SI] ; Write zero value.
+        MOV DL, BL
+        
+        CMP DL, 0
+        JE end_close2
+        
+        LEA SI, OFFSET input.txt
+        MOV AX, BYTE PTR [SI]
+        
+        XOR AH, AH
+        INT 21h
+end_close2:
+    
+    ;--------------------
+    ; Close the file and return to the main program:
+    ;--------------------
+        MOV BL, BYTE PTR [DS:SI] ; Write zero value.
+        MOV DL, BL
+        
+        CMP DL, 0
+        JE end_close3
+        
+        LEA SI, OFFSET output.txt
+        MOV AX, BYTE PTR [SI]
+        
+        XOR AH, AH
+        INT 21h
+end_close3:
+    
+    ;--------------------
+    ; Close the file and return to the main program:
+    ;--------------------
+        MOV BL, BYTE PTR [DS:SI] ; Write zero value.
+        MOV DL, BL
+        
+        CMP DL, 0
+        JE end_close4
+        
+        LEA SI, OFFSET output.txt
+        MOV AX, BYTE PTR [SI]
+        
+        XOR AH, AH
+        INT 21h
+end_close4:
+    
+    ;--------------------
+    ; Close the file and return to the main program:
+    ;--------------------
+        MOV BL, BYTE PTR [DS:SI] ; Write zero value.
+        MOV DL, BL
+        
+        CMP DL, 0
+        JE end_close5
+        
+        LEA SI, OFFSET input.txt
+        MOV AX, BYTE PTR [SI]
+        
+        XOR AH, AH
+        INT 21h
+end_close5:
+    
+    ;--------------------
+    ; Close the file and return to the main program:
+    ;--------------------
+        MOV BL, BYTE PTR [DS:SI] ; Write zero value.
+        MOV DL, BL
+        
+        CMP DL, 0
+        JE end_close6
+        
+        LEA SI, OFFSET output.txt
+        MOV AX, BYTE PTR [SI]
+        
+        XOR AH, AH
+        INT 21h
+end_close6:
+    
+    ;--------------------
+    ; Close the file and return to the main program:
+    ;--------------------
+        MOV BL, BYTE PTR [DS:SI] ; Write zero value.
+        MOV DL, BL
+        
+        CMP DL, 0
+        JE end_close7
+        
+        LEA SI, OFFSET input.txt
+        MOV AX, BYTE PTR [SI]
+        
+        XOR AH, AH
+        INT 21h
+end_close7:
+    
+    ;--------------------
+    ; Close the file and return to the main program:
+    ;--------------------
+        MOV BL, BYTE PTR [DS:SI] ; Write zero value.
+        MOV DL, BL
+        
+        CMP DL, 0
+        JE end_close8
+        
+        LEA SI, OFFSET output.txt
+        MOV AX, BYTE PTR [SI]
+        
+        XOR AH, AH
+        INT 21h
+end_close8:
+    
+    ;--------------------
+    ; Close the file and return to the main program:
+    ;--------------------
+        MOV BL, BYTE PTR [DS:SI] ; Write zero value.
+        MO

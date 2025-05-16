@@ -1,0 +1,14 @@
+|Object Key                      |Object Type               | Deferred Revenue Accounting Code        |Recognized Revenue Accounting Code       |
+|:---------------------------------:|:-------------------------:|:-----------------------------------:|:------------------------------------:|
+|I10000004635                      |Invoice Item              |RenewalDeferredCode_1                |None                               |
+|I10000002876                      |Invoice Item              |RenewalRevenueCode_2                |None                               |
+
+### Explanation:
+
+This query returns InvoiceItems which are renewing an account at the start of every month.
+
+It finds invoices which have a date (Posted Date) within 1 days of today's date and also includes invoices which were posted one day before today's date.
+
+The query then looks for InvoiceItems which are renewing an account and uses the "AccountingCode" field to find which Deferred Revenue Account Code will be used by Finance (eg: Deferred Revenue Code_1, Deferred Revenue Code_2) and also which Recognized Revenue Accounting Code.
+
+The query looks for InvoiceItems which are renewing accounts which have a Customer Type of "CM Contractor" to include only those invoices where the account is renewing with a contractor as opposed to another type of customer (eg: "Consultant", "Reseller")

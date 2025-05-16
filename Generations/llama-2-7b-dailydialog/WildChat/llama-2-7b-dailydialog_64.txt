@@ -1,0 +1,24 @@
+{
+	sx : 0.9521875,
+	sy : -0.4375,
+	sz : 0.4375,
+	dx : -0.4375,
+	dy : 0.9521875,
+	dz : -0.9521875
+}
+) {
+	world.setBlock(sx + dx, sy + dy, sz + dz, mirrorBlock);
+}
+function fillWall(sx, sy, sz, dx, dy, dz, id) {
+	let w = Math.abs(dx - sx) + 1;
+	let h = Math.abs(dy - sy) + 1;
+	let l = Math.abs(dz - sz) + 1;
+
+	for (let x = 0; x < w; x++) {
+		for (let y = 0; y < h; y++) {
+			for (let z = 0; z < l; z++) {
+				world.setBlock(sx + x, sy + y, sz + z, id);
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+```javascript
+const input = ['1,', '2,', ',3,', ',4,'];
+let result = '';
+input.forEach((item, index) => {
+  const str = item[0].toLowerCase() + item.slice(1);
+  if (index === input.length - 1 && str !== '') {
+    result += `\n\t` + str;
+  } else if (!str.length || index > 0) {
+    result += '\t' + str;
+  }
+});
+```

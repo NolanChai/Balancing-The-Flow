@@ -1,0 +1,36 @@
+ problems together.
+ 
+ I want to let everyone know that the course is completely open source and available on Github [here](http://github.com/cgdevine/HCS-2016). It's fully documented and has lots of examples! So if you have questions, just go look at the docs and see if it answers your question before asking me.
+ 
+ To give everyone some time to get their computers set up and check out the repo, I'm going to go over a few quick things today in order to make sure we are all on the same page.
+ 
+ So, just quickly: this class is about building a scalable web server written entirely in node.js!
+ 
+### Getting Started
+So, first up, we need to get our development environment set up correctly so that everyone is able to follow along with me while I'm teaching the material. We will be using node.js and npm for this course, so before you can really begin working on any of the projects, make sure that your computer has both installed and configured properly.
+ 
+ The instructions below are for Windows, but if you prefer another operating system, [you can find a list of instructions here](http://nodejs.org/download/).
+ 
+ For most people, it should be pretty straightforward to get node.js and npm up and running on your machine. Once both have been installed, open the command line window (or PowerShell) and run: `npm install -g n` This will install npm globally so that you can use it from any directory on your computer.
+ 
+ For Windows users, you must also install the Microsoft Visual C++ 2015 Redistributable which is part of Visual Studio Community Edition. You can find and download this file [here](http://aka.ms/vc-redist-x86) (it's a pretty big download).
+ 
+ Once you have both npm and Microsoft Visual C++ Redistributables installed, it should be as simple as running the following command: `node server.js`. You should now see the `Hello World` example printed out on your screen!
+ 
+### Git and GitHub
+Next up we need to install git and set up a Github account for ourselves. Luckily there are some pretty good guides available online if you have never used either of these before:
+ 
+ For git, [here's one](https://git-scm.com/book/en/Getting-Started-Installing-Git). You can then use the command line to clone our repo into your local computer: `git clone https://github.com/cgdevine/HCS-2016`.
+ 
+ For setting up a Github account, [here's another](https://help.github.com/articles/getting-started-with-github/).
+ 
+ Now that we have git and Github set up properly, let's take the next step of connecting our computers to one another on github so we can work with each other's projects!
+ 
+### Contributing to Class Projects
+Ok, great. You are now all ready to start working with us on the course. We have several group projects over the course that everyone will need to contribute to in order for them to be successful.
+ 
+ I want to take this opportunity to let you know how we plan to organize these contributions:
+ 
+ We plan to use GitHub Issues as our main source of project management. This means that every task is going to have an issue assigned to it which we will discuss in class before beginning the work. When you complete a task, open up the github issue page and add your name to the assignee list. Your instructor will then merge this into the project once the task has been completed successfully.
+ 
+ So let's get started with our first task: writing our first Hello World in node.js!

@@ -1,0 +1,25 @@
+Here is some sample code for a basic PowerPoint app using React and Redux:
+```
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { createSlice, configureStore } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
+const initialState = {
+  presentation: {
+    title: '',
+    slides:
+
+As an AI assistant, I am unable to perform certain tasks and have limitations in my abilities. Here are some things that I cannot do:
+
+1. Make decisions or take actions that require human judgment or intuition, such as making financial investment decisions or personal decisions.
+2. Provide legal or medical advice, as these require specialized knowledge and training that I do not possess.
+3. Access or modify personal data or systems without proper authorization, as this could be illegal or unethical.
+4. Perform tasks that require physical presence or direct human interaction, such as conducting experiments or operating machinery.
+5. Interact with the physical world or manipulate objects in the real-world, such as controlling robots or interacting with sensors and actuators.
+6. Create or design new products or services, as this requires creativity and expertise in a particular domain.
+7. Perform tasks that require emotional intelligence or empathy, such as counseling or providing emotional support.
+8. Provide personal opinions or engage in discussions that are not related to my training data or capabilities, as I do not have personal beliefs or opinions.
+9. Interact with users in a way that is not respectful or ethical, such as by providing offensive or harmful responses.
+10. Perform tasks that require a deep understanding of human culture, social norms, and values, as these are complex and nuanced concepts that I may not fully understand.
+
+These are just some examples of things that I cannot do as an AI assistant, but there may be other limitations or restrictions depending on the specific application or use case.

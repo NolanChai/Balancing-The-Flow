@@ -1,0 +1,13 @@
+ow that I'd arrived safely, and a friend of mine had posted a message there saying he was going to be at this one church's youth summer camp.
+
+I called the church from where we were staying and asked if it was too late to register for their camp (it wasn't). Then my wife and I spent about an hour trying to find their camp, and another half hour finding a place to park once we finally did. We ended up parking in a private driveway behind some house just off the main road (thank you to whoever that was!), and walked down to the church.
+
+That's how I found myself sitting at a table on the second day of my church's youth summer camp with several other kids and young adults, playing a game called Arabian Amulets. I'd been expecting something like Dungeons & Dragons, but this was more interesting. The cards were cool: they had pictures on one side and numbers on the other (the number of points you get for playing that card). You start with two cards in your hand, and then try to get them all into a ``bag'' in front of you by playing a matching or higher-numbered card. But you can also take someone else's card and put it into your own bag, or give them one of your own cards if they ask (if they have a match for it).
+
+We played this game for probably the better part of an hour that day (and several times since), and I was intrigued. One night while my wife was working on her thesis, I grabbed a deck and read through all of the instructions, then shuffled them together with a standard playing card deck to try it out.
+
+That's how I found myself spending most of last Saturday night designing the Arabian Amulets computer game. I tried a couple different things: I made a version using Javascript and canvas, and I also made one using JavaFX (I had been wanting to use some of the new JavaFX 2 features). The JavaFX version turned out much better; it's more polished looking.
+
+My wife played around with it for a bit, then we played another round together with her playing the game and me keeping score on paper. It took us about 10-15 minutes (probably because she was still getting used to how the computer version worked). That's when I realized that this would be a great way to learn some JavaFX (and I got some more practice using Scene Builder, too).
+
+The game is far from complete; it only has 54 cards right now. But I had fun making it and I'm looking forward to playing around with the JavaFX stuff some more in future.

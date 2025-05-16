@@ -1,0 +1,27 @@
+1. minifying css/js/html
+2. use gzip compression
+3. use caching
+
+The problem with Flash of Unstyled Content (FOUC) in CSS3 Animations can be solved by making use of the `transition-delay` property. By adding a transition delay of 20 ms to our example animation, we prevent the browser from rendering the unstyled content before the animation has had time to complete and fade it out again.
+```css
+@keyframes fadeIn {
+  0% {
+    opacity: .1;
+    background-color: red;
+  }
+  50% {
+    opacity: .8;
+    background-color: green;
+  }
+  100% {
+    opacity: 1;
+    background-color: black;
+  }
+}
+.animateIn {
+  animation: fadeIn .3s linear infinite alternate;
+  transition: all .2s ease-in-out;
+}
+```
+
+When we are creating the object, we are setting the pointer to an empty memory location. When we add global or static object in this memory space, the pointer will no longer be pointing to the empty memory location but will point to somewhere in the middle of another object (global/static). This will cause a memory error and it is not possible to access this location because you are accessing it through another pointer that has different address.

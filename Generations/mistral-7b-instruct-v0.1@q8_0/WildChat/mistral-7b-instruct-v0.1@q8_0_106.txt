@@ -1,0 +1,20 @@
+这是一个相当难以定位的问题，但我会尽力帮助您解决。
+
+首先，请确认您是否正在使用torchvision库，如果是，请删除torchvision所安装的依赖包：
+```bash
+pip uninstall torchvision
+```
+然后再安装torchvision：
+```python
+!pip install torchvision
+```
+如果torchvision没有问题，那么可能是因为 torch 和 torchvision 都使用到了同一个C++ Extension库，导致无法加载。这种情况下，请尝试从scratch安装torch:
+```bash
+!pip uninstall torch
+!pip install torch torchvision
+```
+如果问题仍然存在，可以尝试运行以下命令：
+```css
+conda env export --name <your_env_name> > requirements.txt && conda env create --file requirements.txt
+```
+这会导出当前环境中所有的包和版本号，然后可以在其他机器或系统上运行。

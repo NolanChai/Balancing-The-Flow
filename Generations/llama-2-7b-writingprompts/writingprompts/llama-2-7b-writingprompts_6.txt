@@ -1,0 +1,69 @@
+\[ 2 \text{ } \text{ } \text{ } \text{ } \text{ } 3 \text{ } \text{ } \]
+\[ 4 \text{ } \text{ } \text{ } \text{ } \text{ } 5 \text{ } \text{ } \]
+\$ 1 \text{ } \text{ } \text{ } \text{ } \text{ } \$ 2 \text{ } \text{ } \text{ } \text{ } \$ 3 \text{ } \text{ } \text{ } \text{ } \$ 4 \text{ } \text{ } \text{ } \text{ } \$ 5
+\end{code}
+
+Comment: What was your solution?
+
+Answer: \section{[Retina](https://github.com/m-ender/retina), 29 bytes - 12.06 seconds, 38% faster than [Jens's solution](https://codegolf.stackexchange.com/a/98743/55210)}
+
+\begin{code}
+s*4;[+]
+\end{code}
+
+[Try it online!](http://retina.tryitonline.net/#code=rEwuQWl6MiVNhZk43Ly8uL3I1L206KG9sKFxb&input=MTMzMDA)
+
+Comment: AWESOME!!!!! You're my hero, and this is awesome! I love it when people do stuff like this.
+
+Answer: \section{[Haskell](https://www.haskell.org/), 41 bytes}
+
+\begin{code}
+import Data.Char(digitToInt)
+f s=""|s'==[ ]=f s'++"000"|s'==[]=s''|otherwise="\"2 \" 3 \" "++map (read.replicate . digitToInt.head.s') $ take 4 s'++" 5\"\"
+\end{code}
+
+[Try it online!](http://www.haskell.org/hoogle/?hoogle=f%28s%29%3D%24_s000+or+s'==+%5B_%5D+then+f++s'+++%22000%22+elseif+s''+then+f++s''+++%222%22++elseif+otherwise+then+%222 %22++map+(read.replicate.digitToInt.head.s')(take4++s'+%22 5%22++)+%220%22)
+
+This works on strings that look like this:
+
+\begin{code}
+[0,1,2]
+3456789
+3
+4567
+1234
+112
+\end{code}
+
+The 0's are ignored. The empty string results in `"000"`. Any other strings result in a string like `["2", "3", "2", "5"]`, and then the first four characters of that string are converted to integers, which is then tacked onto the end to get `"\"2 \" 3 \" 4567 \" 1234 \" 112\"".`
+
+Comment: You can shorten the code by `f s=let i=read.replicate . head $ take 4 s++[0]`
+
+Answer: \section{Java, 90 bytes}
+
+\begin{code}
+p->{char[]c;String a="";for(int i=0;i<10;){for(int j=i*4+6;j<i*4+10;)c=a.concat("2 ");a+=Character.toString((char)(0x3F&((++j/256%256)|c[j-6])&0xff));for(int k=0,n=a.length()>1?(int)(a.charAt(--k))/4:0;k<=n;)c+=Character.toString((char)(0x3F&((++k/256%256)|c[k-6])&0xff));for(int l=c.length,m=l>1?(int)(c.charAt(--l))/4:0;l>=m;)c+=" 5";for(int j'=i*4+6;j'<i*4+10;){c+=Character.toString((char)(0x3F&((++j'/256%256)|c[j'-6])&0xff));a+=Character.toUpperCase(c.charAt(a.length()>0?-1:9));}}};
+\end{code}
+
+This is an attempt to take the challenge to a higher level than just counting, which seems like cheating to me.
+
+It's also a bit slower than Jens' answer, but not by much (23 seconds on [my computer](http://pastebin.com/p7Jj19QF)).
+
+\section{Edit}
+
+Saved 4 bytes thanks to @Mego:
+`a+=Character.toUpperCase(c[k+5])=='A'` and `c+=Character.toString((char)(0x3F&((++k/256%256)|c[k-6])&0xff));`
+
+Comment: +1, but you can save 4 bytes with a single line: `p->{char[] c; String a="";for(int i=0;i<10;){ for(int j=i*4+6;j<i*4+10;)c=a.concat("2 ");a+=Character.toUpperCase(c[k]+5);for(int k=0,n=a.length()>1?(int)(a.charAt(--k))/4:0;k<=n;)c+=Character.toString((char)(0x3F&((++k/256%256)|c[k-6])&0xff));for(int l=c.length,m=l>1?(int)(c.charAt(--l))/4:0;l>=m;)c+=" 5"; for(int j'=i*4+6;j'<i*4+10;){ c+=Character.toString((char)(0x3F&((++j'/256%256)|c[j'-6])&0xff));a+=Character.toUpperCase(c.charAt(a.length()>0?-1:9));}}};`
+
+Comment: @Mego, I was just about to post something like that :D. Thanks for saving me the time of typing it out and posting my own version ;)
+
+Comment: @mego, you can also save another 4 bytes by doing `c+=Character.toString((char)(0x3F&((++k/256%256)|c[k-6])&0xff));` in place of the three lines in the first `for(int i=...`
+
+Answer: \section{Ruby, \sout{84} 79 bytes}
+
+\begin{code}
+s=''.join.chars[6..-1].map{|x|'2'*x}.join' 5'
+\end{code}
+
+This is pretty similar to the first solution I posted, but a bit more efficient.

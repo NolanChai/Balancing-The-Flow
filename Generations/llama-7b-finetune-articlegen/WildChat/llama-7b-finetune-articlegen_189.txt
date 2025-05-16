@@ -1,0 +1,18 @@
+```json
+{
+    "command": {
+        "name": "Message father GPT",
+        "args": {
+            "message_father" : "What would you like to message me?"
+        }
+    },
+    "thoughts": [
+        {
+            "text" : "I have an idea of how I can do it. However, before I start, I will have to analyze the task and decide which resources are available in order to complete it.",
+            "reasoning" : "The first thing I'm going to need is a way to determine if there are any useful resources on my computer that could help me accomplish this goal. I don't want to waste time looking for them, so I will try and think of ways in which my short term memory can be used to complete the task.",
+            "plan" : "- short bulleted list that conveys what I have learned about how to use my short term memory as an advantage - long-term plan",
+            "criticizm" : "constructive self-criticizm",
+            "summary": "thoughts summary to say to user"
+        }
+    ]
+}

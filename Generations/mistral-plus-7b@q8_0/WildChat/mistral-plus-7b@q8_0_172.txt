@@ -1,0 +1,14 @@
+I have an AWS instance that runs nginx as the webserver, and it also serves a socket for WebSockets. I've set up a socket route like so:
+
+```
+location /socket {
+    proxy_pass http://localhost:8080;
+}
+```
+
+Within this location block I can make requests to my nodejs server, which then runs the bot framework code. However, when I try to access this socket via a websocket client like Pusher or SocketIO, it just never connects and I've gotten no errors out of anything. I'm not sure if nginx is configured correctly for this type of traffic. Any suggestions?
+
+- Hi. How should I say when the environment is heavy?
+For example, in English it can be said that "the air was heavy" or "the air felt heavy". Is there any equivalent expression in Chinese? I feel like it's hard to translate this idiom into Chinese because "重" cannot be used for both weight and air. Can the character 沉(chèn) be used instead?
+
+We live in the age of Internet, and so many people use it. There’s no need to talk face to face with someone if you can just send them a text message or an email. But sometimes, it might feel a bit awkward or difficult to know how to start talking to someone that you’re not familiar with. The best way to start a conversation is by making a connection and then building on that connection. One way to make a connection is by finding something in common. If you can find something that you both have in common, it will be easier for you to start talking. Another way to make a connection is by asking questions about the person. Asking open-ended questions will encourage them to talk more and will help you get to know them better. Finally, just be yourself. Be friendly and approachable and they’ll feel comfortable talking with you too.

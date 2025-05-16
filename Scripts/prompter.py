@@ -15,6 +15,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from tqdm import tqdm
 import pandas as pd
 import time
+import ast
 
 def setup_directories(model_name):
     """
@@ -32,19 +33,20 @@ def setup_directories(model_name):
     
     return dirs
 
-def calculate_average_surprisal(model_name, num_files, verbose=False):
+def calculate_average_surprisal(model_name, dataset_name, num_files, batch_size=20, verbose=False, regenerate=False):
     """
     Calculate average surprisal across generated files
     """
-
-    surprisal_dir = Path(f"../Surprisals/{model_name}")
+    dataset_name = dataset_name.split("/")[-1]
+    
+    surprisal_dir = Path(f"../Surprisals/{model_name}/{dataset_name}")
     surprisal_dir.mkdir(parents=True, exist_ok=True)
 
     existing_csvs = list(surprisal_dir.glob("*.csv"))
-    if len(existing_csvs) < num_files:
+    if (len(existing_csvs) < num_files) or regenerate:
         if verbose:
             print(f"Calculating surprisals for {model_name}...")
-        
+            print(f"Batch size: {batch_size}")
         try:
             tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
@@ -58,10 +60,11 @@ def calculate_average_surprisal(model_name, num_files, verbose=False):
             calc_surprisal(
                 model=model,
                 tokenizer=tokenizer,
-                input_dir=f"../Generations",
+                input_dir=f"../Generations/{model_name}/{dataset_name}",
                 output_dir=str(surprisal_dir),
                 model_name=model_name,
                 num_files=num_files,
+                batch_size=batch_size,
                 verbose=verbose
             )
         except Exception as e:
@@ -103,20 +106,26 @@ def calculate_average_surprisal(model_name, num_files, verbose=False):
 def main():
     parser = argparse.ArgumentParser(description='Generate text using language models via LM Studio API')
     parser.add_argument('model', type=str, help='Model name to use for generation')
+    parser.add_argument('dataset', type=str, help='Name of text dataset to read from')
     parser.add_argument('-g', '--generate', type=int, default=300, help='Number of examples to generate')
     parser.add_argument('-t', '--temperature', type=float, default=0.9, help='Temperature for generation')
     parser.add_argument('-p', '--top-p', type=float, default=1.0, help='Top-p (nucleus sampling) parameter')
     parser.add_argument('-s', '--system-prompt', type=str, help='System prompt to prepend to each generation')
     parser.add_argument('-r', '--regenerate', action='store_true', help='Regenerate existing outputs')
     parser.add_argument('-v', '--verbose', action='store_true', help='Print verbose information')
+    parser.add_argument('-b', '--batch-size', type=int, default=20, help='Batch size for surprisal calculation.')
     parser.add_argument('--max-tokens', type=int, default=2048, help='Maximum tokens for generation')
     parser.add_argument('--max-retries', type=int, default=3, help='Maximum retries for failed generations')
     parser.add_argument('--analyze-human', action='store_true', help='Analyze human texts instead of generating new ones')
     parser.add_argument('--human-dir', type=str, default='../Sources', help='Directory containing human texts to analyze')
     parser.add_argument('--analyze-only', action='store_true', help='Only analyze surprisals without generating new texts')
+    parser.add_argument('--dataset-config', type=str, default="", help='additional arguments for loading the dataset')
+    parser.add_argument('--dataset-split', type=str, default="test", help='split of dataset to generate from')
+    parser.add_argument('--source-only', action='store_true', help='Only write sources-g without generating')
 
     # parse known
     args, unknown = parser.parse_known_args()
+    dataset_name = args.dataset.split("/")[-1]
 
     extra_args = {}
     for arg in unknown:
@@ -148,8 +157,10 @@ def main():
     if args.analyze_human:
         print("Analyzing human texts...")
         
-        human_surprisal_dir = Path(f"../Surprisals/human_texts")
+        human_surprisal_dir = Path(f"../Surprisals/human_texts/{dataset_name}")
         human_surprisal_dir.mkdir(parents=True, exist_ok=True)
+
+        human_input_dir = Path(args.human_dir) / f"{dataset_name}"
         
         tokenizer = AutoTokenizer.from_pretrained("gpt2")
         if tokenizer.pad_token is None:
@@ -162,12 +173,13 @@ def main():
         start_time = time.time()
         try:
             calculate_surprisals_for_existing_texts(
-                input_dir=args.human_dir,
+                input_dir=str(human_input_dir),
                 output_dir=str(human_surprisal_dir),
                 model=model,
                 tokenizer=tokenizer,
                 model_name="human",  # use "human" as the model name
                 pattern="human_*.txt",  # specific pattern for human files
+                batch_size=args.batch_size,
                 verbose=verbose
             )
             print(f"Human text analysis completed in {time.time() - start_time:.2f} seconds")
@@ -188,7 +200,7 @@ def main():
         
         # calculate surprisals
         start_time = time.time()
-        avg_surprisal = calculate_average_surprisal(args.model, args.generate, verbose)
+        avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, verbose, args.regenerate)
         
         if verbose:
             print(f"Analysis completed in {time.time() - start_time:.2f} seconds")
@@ -225,24 +237,27 @@ def main():
             top_p=top_p,
             system_prompt=system_prompt,
             model_name=args.model, 
+            dataset_name=args.dataset,
             regenerate=args.regenerate,
             max_tokens=args.max_tokens,
-            max_retries=args.max_retries
+            max_retries=args.max_retries,
+            dataset_config=args.dataset_config,
+            split=args.dataset_split,
+            source_only=args.source_only
         )
     except Exception as e:
         print(f"Error during generation: {e}")
+        raise e
         return
     
     generation_time = time.time() - start_time
     if verbose:
-        print(f"Generation completed in {generation_time:.2f} seconds")
-
-    if verbose:
+        print(f"Generation completed in (HH:MM:SS): {time.strftime('%H:%M:%S', time.gmtime(generation_time))}")
         print("Calculating surprisal statistics...")
-        surprisal_start = time.time()
-        avg_surprisal = calculate_average_surprisal(args.model, args.generate, verbose)
-        surprisal_time = time.time() - surprisal_start
-        
+    surprisal_start = time.time()
+    avg_surprisal = calculate_average_surprisal(args.model, args.dataset, args.generate, args.batch_size, verbose, args.regenerate)
+    surprisal_time = time.time() - surprisal_start
+    if verbose:
         print("\nSummary:")
         print(f"- Model: {args.model}")
         print(f"- Generated: {generated} new examples")
@@ -257,34 +272,36 @@ def main():
         print(f"- Surprisal calculation time: {surprisal_time:.2f} seconds")
         if avg_surprisal is not None:
             print(f"- Average surprisal: {avg_surprisal:.4f}")
-        print(f"Total runtime: {time.time() - start_time:.2f} seconds")
+        total_time = time.time() - start_time
+        print(f"Total runtime (HH:MM:SS): {time.strftime('%H:%M:%S', time.gmtime(total_time))}")
 
-        try:
-            summary_dir = Path("../Summary")
-            summary_dir.mkdir(parents=True, exist_ok=True)
-            
-            summary_file = summary_dir / f"{args.model}_summary.txt"
-            with open(summary_file, "w", encoding='utf-8') as f:
-                f.write(f"Model: {args.model}\n")
-                f.write(f"Generated: {generated} new examples\n")
-                f.write(f"Skipped: {skipped} existing examples\n")
-                f.write(f"Errors: {errors} failed generations\n")
-                f.write(f"Retries: {retries} retried generations\n")
-                f.write(f"Temperature: {args.temperature}\n")
-                f.write(f"Top-p: {top_p}\n")
-                if system_prompt:
-                    f.write(f"System prompt: {system_prompt}\n")
-                f.write(f"Max tokens: {args.max_tokens}\n")
-                f.write(f"Generation time: {generation_time:.2f} seconds\n")
-                f.write(f"Surprisal calculation time: {surprisal_time:.2f} seconds\n")
-                if avg_surprisal is not None:
-                    f.write(f"Average surprisal: {avg_surprisal:.4f}\n")
-                f.write(f"Total runtime: {time.time() - start_time:.2f} seconds\n")
-                f.write(f"Date: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
-            
-            print(f"Summary saved to {summary_file}")
-        except Exception as e:
-            print(f"Error saving summary: {e}")
+    try:
+        summary_dir = Path(f"../Summary/{args.model}/{dataset_name}")
+        summary_dir.mkdir(parents=True, exist_ok=True)
+        
+        summary_file = summary_dir / f"{args.model}_{dataset_name}_summary.txt"
+        with open(summary_file, "w", encoding='utf-8') as f:
+            f.write(f"Model: {args.model}\n")
+            f.write(f"Dataset: {dataset_name} {args.dataset_config}".strip())
+            f.write(f"Generated: {generated} new examples\n")
+            f.write(f"Skipped: {skipped} existing examples\n")
+            f.write(f"Errors: {errors} failed generations\n")
+            f.write(f"Retries: {retries} retried generations\n")
+            f.write(f"Temperature: {args.temperature}\n")
+            f.write(f"Top-p: {top_p}\n")
+            if system_prompt:
+                f.write(f"System prompt: {system_prompt}\n")
+            f.write(f"Max tokens: {args.max_tokens}\n")
+            f.write(f"Generation time: {generation_time:.2f} seconds\n")
+            f.write(f"Surprisal calculation time: {surprisal_time:.2f} seconds\n")
+            if avg_surprisal is not None:
+                f.write(f"Average surprisal: {avg_surprisal:.4f}\n")
+            f.write(f"Total runtime: {time.time() - start_time:.2f} seconds\n")
+            f.write(f"Date: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        
+        print(f"Summary saved to {summary_file}")
+    except Exception as e:
+        print(f"Error saving summary: {e}")
 
 if __name__ == "__main__":
     main()

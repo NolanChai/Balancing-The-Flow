@@ -1,0 +1,189 @@
+The final solution was made by a group of 5 people:
+- Mukul Garg - https://github.com/mukul123
+- Parth Khandelwal - https://github.com/parthkhan
+- Shivam Tyagi - https://github.com/shivamtyagim
+- Ajay Singh - https://github.com/ajayy2604
+- Manoj Jain - https://github.com/manoj3659
+
+```javascript
+// 1. Use 'this' to get the current instance of 'Player' and set the value
+player.hit = true; // Set hit to True
+
+// 2. Call the function "setScore" with new score (the integer). Pass the object as parameter.
+player.setScore(6); // Set new player score
+console.log("Current Score:", player.score) // Current Score: 6
+
+// 3. Use the 'this' to get the current instance of 'Player'. And use 'this.hit' to check if it's hit or not. If it's hit, then call 'setLife' with -1 for decreasing player life. Pass the object as parameter.
+console.log("Hit:", this.hit) // Hit: true
+if (this.hit){
+    console.log(this.life); // Current life: 3
+    console.log('Player Life:',this.setLife(-1)); // Player Life: 2
+}
+```
+
+In order to send files to clients, you can use the following API call from your server:
+```php
+$data = array('file' => $yourFileContents); // $yourFileContents is a string containing the file contents.
+socket_write($socket, json_encode($data));
+// You also need to send a proper response for this command.
+socket_write($socket, '{"type": "response", "data": {}}');
+```
+
+Then you will receive a response from the client, and you can process it on your server accordingly.
+You will also have to implement necessary changes in client.c file, where you handle read command with data being sent back by the server.
+
+The problem is that the function signature is incorrect. It needs to have 3 arguments, not 2 (and the second argument must be a pointer). Try this:
+void thread_handler(struct shared_data *data) { ... }
+In other words, replace "thread_handler" with "(struct shared_data *)thread_handler".
+
+<Result Error="2059">
+    <ErrorCode>E167</ErrorCode>
+    <ErrorMessage>argument of type "struct shared_data" is incompatible with parameter of type "const void *""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>54</StartLineNumber>
+    <StartColumn>11</StartColumn>
+    <EndLineNumber>54</EndLineNumber>
+    <EndColumn>15</EndColumn>
+</Result>
+<Result Error="3364">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>27</StartLineNumber>
+    <StartColumn>15</StartColumn>
+    <EndLineNumber>27</EndLineNumber>
+    <EndColumn>19</EndColumn>
+</Result>
+<Result Error="3364">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>29</StartLineNumber>
+    <StartColumn>15</StartColumn>
+    <EndLineNumber>29</EndLineNumber>
+    <EndColumn>19</EndColumn>
+</Result>
+<Result Error="3364">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>32</StartLineNumber>
+    <StartColumn>17</StartColumn>
+    <EndLineNumber>32</EndLineNumber>
+    <EndColumn>21</EndColumn>
+</Result>
+<Result Error="3364">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>40</StartLineNumber>
+    <StartColumn>17</StartColumn>
+    <EndLineNumber>40</EndLineNumber>
+    <EndColumn>21</EndColumn>
+</Result>
+<Result Error="3364">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>47</StartLineNumber>
+    <StartColumn>15</StartColumn>
+    <EndLineNumber>47</EndLineNumber>
+    <EndColumn>19</EndColumn>
+</Result>
+<Result Error="3364">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>51</StartLineNumber>
+    <StartColumn>39</StartColumn>
+    <EndLineNumber>51</EndLineNumber>
+    <EndColumn>43</EndColumn>
+</Result>
+<Result Error="E2059">
+    <ErrorCode>E2059</ErrorCode>
+    <ErrorMessage>argument of type "struct shared_data" is incompatible with parameter of type "const void *""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>54</StartLineNumber>
+    <StartColumn>11</StartColumn>
+    <EndLineNumber>54</EndLineNumber>
+    <EndColumn>15</EndColumn>
+</Result>
+<Result Severity="8">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>27</StartLineNumber>
+    <StartColumn>15</StartColumn>
+    <EndLineNumber>27</EndLineNumber>
+    <EndColumn>19</EndColumn>
+    <Severity>8</Severity>
+</Result>
+<Result Severity="8">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>29</StartLineNumber>
+    <StartColumn>15</StartColumn>
+    <EndLineNumber>29</EndLineNumber>
+    <EndColumn>19</EndColumn>
+    <Severity>8</Severity>
+</Result>
+<Result Severity="8">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>32</StartLineNumber>
+    <StartColumn>17</StartColumn>
+    <EndLineNumber>32</EndLineNumber>
+    <EndColumn>21</EndColumn>
+    <Severity>8</Severity>
+</Result>
+<Result Severity="8">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>40</StartLineNumber>
+    <StartColumn>17</StartColumn>
+    <EndLineNumber>40</EndLineNumber>
+    <EndColumn>21</EndColumn>
+    <Severity>8</Severity>
+</Result>
+<Result Severity="8">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>47</StartLineNumber>
+    <StartColumn>15</StartColumn>
+    <EndLineNumber>47</EndLineNumber>
+    <EndColumn>19</EndColumn>
+    <Severity>8</Severity>
+</Result>
+<Result Severity="8">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>51</StartLineNumber>
+    <StartColumn>39</StartColumn>
+    <EndLineNumber>51</EndLineNumber>
+    <EndColumn>43</EndColumn>
+    <Severity>8</Severity>
+</Result>
+<Result Severity="8">
+    <ErrorCode>E2059</ErrorCode>
+    <ErrorMessage>argument of type "struct shared_data" is incompatible with parameter of type "const void *""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>54</StartLineNumber>
+    <StartColumn>11</StartColumn>
+    <EndLineNumber>54</EndLineNumber>
+    <EndColumn>15</EndColumn>
+    <Severity>8</Severity>
+</Result>
+<Result Severity="8">
+    <ErrorCode>E3364</ErrorCode>
+    <ErrorMessage>operator -> or ->* applied to "struct shared_data" instead of to a pointer type""</ErrorMessage>
+    <Source>C/C++</Source>
+    <StartLineNumber>27</StartLineNumber>
+    <StartColumn>15</StartColumn>
+    <EndLineNumber>27</EndLineNumber>
+    <EndColumn>19</EndColumn>
+    <Severity

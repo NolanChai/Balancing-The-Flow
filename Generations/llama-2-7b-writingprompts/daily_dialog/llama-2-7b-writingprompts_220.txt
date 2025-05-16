@@ -1,0 +1,45 @@
+A nice little dialog, with some grammatical mistakes but overall not too bad. There are several ways in which you could make it more interesting and engaging; one is to change the character's names - maybe they are already named so in your mind? If not, then use something like 'Sam' (for the boy) and 'Liz' (for the girl). Another thing that can add a little flavour is to have them say something about the day of the week. You could say 'Saturday' for instance instead of using it as an adverb in the second sentence, or you could use this to indicate the date - for example, 'April 13th', and even play with the numbers by saying things like:
+
+''Steven? Shall we go shopping tomorrow, April 13th, at 9 am?'
+
+Or...
+
+'Steve, shall we go out for a picnic on Saturday, the 27th of July.'
+
+Also, you can have them talk about what they do during the week. For example, the girl could say:
+
+''I work from Monday to Friday at an office in the city centre. I'd rather be somewhere else though!''
+
+And Steven could answer with something like:
+
+''Yeah... I know how you feel, I work in a factory all day Monday through Friday.''
+
+You can play around with this too - for example, what if Steve is unemployed and doesn't have to go anywhere, but he really wants to? Or perhaps the girl works as a nurse at a hospital on weekends... What does she do during the week?
+
+There are countless possibilities! I hope you enjoy playing around with this dialogue - feel free to make use of my comments below and change whatever you want in order to come up with something that works for you.
+
+```python
+import nltk
+from nltk.stem import WordNetLemmatizer # pip install nltk
+from nltk.corpus import stopwords # pip install nltk
+from nltk.tokenize import word_tokenize # pip install nltk
+from nltk.sentiment.vader import SentimentIntensityAnalyzer as si_classifier # pip install nltk
+```
+
+```python
+# create sentence
+doc = nltk.load('english')
+doc = doc.sents()[0]
+text = ''
+for sent in doc:
+    text += ' '.join(word_tokenize(sent)) + ', ' # add comma for readability
+for stop in stopwords:
+    text = re.sub('\b' + stop + '\b', '', text)
+for word in [('I', 'am', 'so'), ('very', 'sorry')]:
+    if word[0] in text: text += word[2] # replace the first and last words
+text = WordNetLemmatizer().lemmatize(text).lower() # lemmatize with nltk library
+
+# get sentiment score
+sentiment = si_classifier.polarity_scores(text)
+print('Positivity:', sentiment[0])
+```

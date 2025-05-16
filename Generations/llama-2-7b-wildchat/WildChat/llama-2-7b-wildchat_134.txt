@@ -1,0 +1,50 @@
+AC compressor superheat formula is as below.
+
+\$H_s = 100\times \frac{Q_{super}}{Q_{cond}}\$
+
+where \$Q_{super}\$ and \$Q_{cond}\$ are the super heat flow rate(kJ/s) and condensing heat flow rate(kJ/s),respectively.
+
+### Example:
+
+Let us assume the AC compressor is superheating 15% by mass,the compressor’s condenser heat capacity is 304 kJ/(kg·K),and its condensing temperature is -9°C.
+
+then
+
+\$H_s = \frac{Q_{super}}{Q_{cond}} = 0.15\times \frac{kJ/kg}{-9\times C} = \frac{213 kJ}{-274 kJ} = 80\%\$.
+
+1. The main reasons are as follows：
+
+a. Poor oil quality, such as high water content or high sulfur content.
+
+b. Oil viscosity is too low, especially at cold start and idling, resulting in poor lubrication and bearing wear.
+
+c. Insufficient oil quantity, especially when the engine has just run out of oil for a period of time, it will also cause insufficient lubrication.
+
+d. The turbocharger is not working properly, such as clogging or leaking, which affects the intake and exhaust processes and increases energy loss.
+
+e. Faulty compressor wheel, damaged blades or impeller vanes can lead to reduced air pressure, resulting in poor efficiency.
+
+f. The intercooler is not working properly due to contamination, dirt accumulation or excessive pressure drop, which also reduces the efficiency of the turbocharger.
+
+2. To improve the performance of 2 stroke low speed marine engines, it is necessary to take measures to increase the engine power and reduce energy losses. Some specific approaches include：
+
+a. Improve the quality of oil used in the engine: Choose a high-quality engine oil with appropriate viscosity at different operating temperatures.
+
+b. Ensure sufficient lubrication: Check the oil level regularly to ensure that it is within the recommended range, especially during cold start or idling. It's also necessary to check the condition of oil filters and replace them in a timely manner when required.
+
+c. Reduce engine operating hours at low power settings: This can help reduce the frequency of high-speed starts, which can cause rapid wear and tear on engine components.
+
+d. Inspect turbocharger regularly: Check for signs of damage or leaks to ensure proper functioning of the compressor wheel and intercooler.
+
+e. Monitor oil temperature: Avoid using high-temperature lubricants during low speed operation, as this can lead to reduced performance and increased wear on engine components.
+
+f. Regular maintenance: Ensure that all engine components are in good condition, especially bearings, pistons, crankshafts etc., by carrying out regular maintenance procedures.
+
+In summary, increasing the efficiency of 2 stroke low speed marine engines requires a combination of measures to address potential issues related to oil quality, lubrication, operating hours at low power settings, turbocharger performance, intercooler performance and engine maintenance. Taking these approaches can help optimize engine performance, reduce energy losses and improve overall efficiency.
+
+1. Inlet air temperature is the most important parameter that effects on turbine performance and efficiency. Increase in ambient temperatures decreases the mass flow rate due to less density of air. It reduces the power output because of less expansion ratio. However, it also increases the turbines inlet temperature which makes the turbine more efficient due to increase in turbine temperature. This phenomenon is called as ICE effect and is very important for high speed turbine operation. Increase in ambient temperature also leads to decrease in turbine life cycle due to adverse effects on compressor blades and disks.
+
+2. Higher temperatures cause a higher turbine inlet pressure (TIP) which increases the mass flow rate of the air entering into the turbine, thereby increasing the power output. However, the increased TIP also causes a rise in the temperature of the turbine itself, so efficiency is reduced. Increased ambient temperature may be beneficial to turbines operating at lower speeds and loads, as this will improve their performance, but it can be detrimental for high-speed turbines which require an optimal operating environment.
+
+### Reference:
+1.  https://www.turbinecatalogs.com/blog/how-ambient-temperature-affect-the-efficiency-of-gas-turbines

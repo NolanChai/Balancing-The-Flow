@@ -1,0 +1,96 @@
+using UnityEngine;
+using cakeslice;
+public class MoxingControl : MonoBehaviour
+{
+    private Transform selectedPart = null;
+    private Outline outline = null;
+    private Color selectedColor = Color.yellow;
+    private bool isControlEnabled = false;
+
+
+    private Animator animator;
+    private bool animatorEnabled = true;
+    public void ToggleControlEnabled()
+    {
+        isControlEnabled = !isControlEnabled;
+        animator.enabled = !animator.enabled;
+    }
+    private void Update()
+    {
+        animator = GetComponent<Animator>();
+        if (!isControlEnabled) return;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Transform clickedPart = GetClickedPart(transform);
+
+            if (clickedPart != null)
+            {
+                if (selectedPart != null)
+                {
+                    Destroy(outline);
+
+                    if (selectedPart == clickedPart)
+                    {
+                        selectedPart = null;
+                        return;
+                    }
+                }
+                selectedPart = clickedPart;
+                outline = selectedPart.gameObject.AddComponent<Outline>();
+                // outline.OutlineColor = selectedColor;
+                // outline.OutlineWidth = 4;
+            }
+            else if (selectedPart != null)
+            {
+                Destroy(outline);
+                selectedPart = null;
+            }
+        }
+        if (Input.GetMouseButton(0) && selectedPart != null)
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = Camera.main.WorldToScreenPoint(selectedPart.position).z;
+            Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            selectedPart.position = worldMousePosition;
+        }
+    }
+    private Transform GetClickedPart(Transform parent)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Transform clickedPart = hit.transform;
+            if (IsDescendant(clickedPart, parent))
+            {
+                return clickedPart;
+            }
+        }
+
+        return null;
+    }
+    private bool IsDescendant(Transform child, Transform parent)
+    {
+        foreach (Transform t in parent)
+        {
+            if (t == child)
+
+                return true;
+            if (IsDescendant(child, t))
+                return true;
+        }
+        return false;
+    }
+}请解析这段代码
+
+1. In Unity, you can access the mouse input and perform various actions based on which button is pressed using the Input.GetMouseButtonDown() method. This method returns a boolean value that indicates whether the specified mouse button was clicked down (true) or not (false). You can use this information to determine which part of your game object was clicked, set up collision detection, and perform other tasks based on the user input.
+2. To access the position of the mouse in Unity, you can use the Input.mousePosition property. This property returns a Vector3 structure that represents the current position of the mouse in world space. You can then transform this vector to screen space using Camera.main.ScreenToWorldPoint(), perform collision detection based on this vector's location, and determine which part of your game object was clicked.
+3. To access the local transformation matrix of a specific part of your game object, you can use its Transform component and the Matrix4x4 property of the Transform class. This method returns a 4x4 matrix structure that represents the local transformation of the specified object in world space. With this information, you can rotate or scale the object based on which mouse button is pressed using Matrix4x4.SetTRS().
+4. To perform collision detection between two parts of your game object, you can create a RaycastHit structure and use the Physics.Raycast() method to calculate whether there was a hit against an obstacle in the scene. You can then access the RaycastHit object's transform property to determine which part of the game object was hit.
+5. In Unity, you can set up a collider component on your game object and define different collision types based on the shape of your object using Collider2D/Collider3D properties. You can then call Physics.Raycast() with these shapes as arguments to perform collision detection between two objects in the scene.
+6. In Unity, you can access a specific part of your game object's local position using its parent Transform component and the InverseTransformPoint() method. This method returns a Vector3 structure that represents the local position of an object with respect to its parent. With this information, you can adjust or rotate a child object based on which mouse button was pressed.
+7. To access the world position of a specific part of your game object in Unity, you can use its Transform component and the Transform.localPosition property. This method returns a Vector3 structure that represents the local position of an object in world space. You can then transform this vector to screen space using Camera.main.WorldToScreenPoint(), perform collision detection based on this vector's location, and determine which part of your game object was clicked.
+8. To access the global transformation matrix of a specific part of your game object, you can use its Transform component and the Matrix4x4 property of the Transform class. This method returns a 4x4 matrix structure that represents the local transformation of the specified object in world space. With this information, you can rotate or scale the object based on which mouse button is pressed using Matrix4x4.SetTRS().
+9. In Unity, you can access a specific part of your game object's local rotation in the transform component by calling its Rotation property. This property returns a Quaternion structure that represents the current orientation of an object in world space. You can then perform various tasks based on which mouse button was pressed using Matrix4x4.SetTRS().
+10. In Unity, you can access the global rotation matrix of a specific part of your game object by calling its transform component's localEulerAngles property. This method returns an EulerAngles structure that represents the current orientation of an object in world space. You can then rotate or scale the object based on which mouse button is pressed using Matrix4x4.SetTRS().

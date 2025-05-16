@@ -1,0 +1,62 @@
+请修改系统的open_basedir,配置文件目录下面有一个php.ini,在其中设置如下：
+```
+;enable OpenBaseDir support
+open_basedir = /home/wwwroot/php/test/data/webroot:/usr/local/apache24/htdocs/test/data/webroot
+```
+
+### 修改后的配置文件
+
+![open_base](./images/PHP/open_base.jpg)
+
+The following code will be rewritten automatically when you upgrade your project to the newest version: 
+ ```php
+echo '<form method="POST" action=""'; // to 
+echo '<form method="POST">';                                    // 
+```
+```php
+echo ' <input type="submit">'; // to 
+echo '<input type="submit">';
+```
+
+- [HTTP/1.1 405 Method Not Allowed][error]
+- [Content-Type: text/html; charset=utf-8][content]
+    - [<title>Method not allowed</title>]
+
+### Explaination:
+- PHP 的 display_errors = on ，在执行拼写错误的脚本时会显示错误信息。如果你想要避免这种情况发生，可以设置 display_errors = off；
+- PHP 不支持 GET、POST 两个方法同时执行。这种情况下，会产生 Method Not Allowed [error] 的错误信息；
+- PHP 只有一个返回码：200 (OK)；除非你写了另外一个代码执行错误，否则不会产生其他返回码。如果你想要抛出其他错误信息，可以在控制台中搜索 “Throw new Exception”；
+- 你设置的 Content-Type 是不能丢失的，所以也会产生 Method Not Allowed [error] 的错误信息。如果你想要避免这种情况发生，可以设置 Content-Type = 空白；
+
+[error]: http://img.yzcdn.cn/public_html/20140711095806-316f36d2fcadacf2.png "Method Not Allowed"
+[content]: http://img.yzcdn.cn/public_html/20140711095815-5aedfd0cbe90aee5.png  "Content-Type: text/html; charset=utf-8"
+
+```
+HTTP/1.0 204 No Content
+Content-Type: text/html; charset=utf8
+Cache-Control: private, no-cache, must-revalidate
+Expires: Mon, 05 Jan 1992 05:00:00 GMT
+X-Powered-By: PHP/7.3.3
+Server: Microsoft-IIS/8.5
+```
+
+### Code:
+
+```php
+if (strcmp($request->getMethod(), "DELETE") == 0) {
+    echo 'HTTP/1.1 204 No Content\r\n';
+} else if (!empty($_REQUEST)) {
+    echo "HTTP/1.1 500 Internal Server Error\r\n";
+    echo 'Content-Type: text/html; charset=utf8\r\n';
+    echo 'Cache-Control: private, no-cache, must-revalidate\r\n';
+    echo 'Expires: Mon, 05 Jan 1992 05:00:00 GMT\r\n';
+    echo 'X-Powered-By: PHP/7.3.3\r\n';
+    echo "\r\n";
+} else {
+    echo "HTTP/1.1 405 Method Not Allowed\r\n";
+    echo 'Content-Type: text/html; charset=utf8\r\n';
+    echo 'Cache-Control: private, no-cache, must-revalidate\r\n';
+    echo 'Expires: Mon, 05 Jan 1992 05:00:00 GMT\r\n';
+    echo 'X-Powered-By: PHP/7.3.3\r\n';
+}
+```

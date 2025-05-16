@@ -1,0 +1,25 @@
+Logstash started successfully.
+```
+[2021-06-08T19:36:57,237][INFO ][logstash.runner           ] Logstash Starting                             {:pid => 28456}
+[2021-06-08T19:36:57,321][WARN ][logstash.runner           ] WARNING [logstash-runner]: No config files found in path {:path=>"D:/ElasticSerach/logstash-8.3.0/logstash.conf"}
+[2021-06-08T19:37:00,086][INFO ][logstash.runner           ] Logstash Starting                             {:pid => 28456}
+```
+
+本机执行代码：
+```cs
+var result = await Task.Run(() => { var ip = ""; var con = new WebProxy("127.0.0.1", 80); try { ip = (con as IWebProxy).GetProxyAddresses()[1].ToString(); } catch(Exception) { } });
+Console.WriteLine(ip); //192.168.53.126
+```
+
+在启动elasticsearch时，使用了域名指向本地端口。因为这里使用的是自带镜像，推测该问题可能是由于此镜像没有编辑域名，导致http鉴权失败而无法正常工作。
+
+### 解决方案:
+
+将elasticsearch指向真实ip和端口：
+
+```shell script
+# elastic-7.10.2
+$ sudo systemctl stop elasticsearch.service
+# sudo /opt/elasticsearch/bin/elasticsearch --discovery.seed_hosts "mydomain:9300"
+$ sudo systemctl start elasticsearch.service
+```

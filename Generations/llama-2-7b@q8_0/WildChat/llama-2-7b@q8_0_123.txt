@@ -1,0 +1,38 @@
+<h2>Hello World!</h2>
+```javascript
+[
+	{
+		"id": "f5a2e7b8-45d6-11ea-9bbc-1b295eb3616e",
+		"name": "Node",
+		"version": "v1.0.10",
+		"description": "",
+		"installed_size": 426,
+		"status": "installed"
+	}
+]
+```
+
+GET http://localhost:3000/
+HTTP/1.1 200 OK
+Content-Length: 19578
+Connection: keep-alive
+Date: Sun, 26 Mar 2017 14:31:47 GMT
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 2592000
+Content-Type: application/json; charset=utf-8
+ETag: W/"71-5qpTJZkxYMVlWQ36AuN8vO8"
+Last-Modified: Sun, 26 Mar 2017 14:31:46 GMT
+
+[
+   {
+      "id": "1",
+      "name": "ชนิดโซ้เก็นทอง",
+      "image": "/uploads/product_images/b_510/1.jpg"
+   },
+   {
+      "id": "2",
+      "name": "ชนิดสตรีล",
+      "image": "/uploads/product_images/b_510/2.png"
+   }
+]

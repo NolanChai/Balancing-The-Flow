@@ -1,0 +1,23 @@
+```python
+from __future__ import print_function
+import re
+pattern = r'^(Provided only the following article title and first sentence, complete the rest of the article from this moment onwards:\s)*(.*\n)\n$'
+print('='*80)
+match = re.search(pattern,raw_input(),re.I).group()[1:-2]
+if match == '': raise SystemExit("Oops! No title provided.")
+else: print('='*80)
+# This line prints out the title, then a carriage return ('\n'), and finally the sentence we're working on.
+print(match)
+# We now have a sentence to work with.  Let's replace everything after the first .
+text = match.replace('. ', ' ').split() # split() splits our string into words, removing any leading or trailing space characters.
+# Then we need to remove all empty strings (i.e., strings that are blank because they don't have a non-blank character.)  The .count() method tells us how many times the string appears in our list of words.  If it counts as 0, then the string is empty and should be removed from the list.
+words = [i for i in text if i.count('.')] # This line takes all of the strings in the .split() method, excluding any that are empty, and puts them into a new variable called words.
+# Now we can remove spaces, and replace non-words (such as commas) with .'s.
+new_sentence = ' '.join([i for i in words if i not in ['comma', 'period', ',']]) # This line takes the list of strings from our .split() method, removes all empty strings, and replaces any non-words (such as commas) with a space character.  This allows us to print out the sentence without any spaces between words.
+# We can then use '\\n' to insert a carriage return into the string.
+new_sentence = new_sentence.replace(' ', '\\n') # Finally we replace all commas and periods with .'s, so that our .split() method doesn't think they are separate words.
+# We then call .join() on the list of words we created in step 4 to turn it back into a single string (with spaces between them.)
+new_sentence = ' '.join([i for i in words if i not in ['comma', 'period']]) # Finally, this line takes all of our separate .split() strings and turns them back into one.  
+# This is the sentence we are going to print out.  Let's get started!
+print(new_sentence)
+```

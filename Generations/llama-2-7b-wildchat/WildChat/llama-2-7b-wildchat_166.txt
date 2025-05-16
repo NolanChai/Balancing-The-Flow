@@ -1,0 +1,86 @@
+I apologize, but your response was not clear in explaining why you need to search only for “.log” files. If the goal is to find all log files with entries that contain “suricata,” it would be better to use the grep command directly on the log files themselves rather than searching through all files on the system.
+
+In fact, there’s a simple way to do this using the find command and the -name option:
+
+
+sudo find / -type f -name "*.log" -exec grep -H “suricata” {} +
+
+
+
+This command uses the -type f option to restrict the search to only log files. Then, it passes the argument "-name *log" (with an asterisk) to find the filename pattern that matches all log files ending with “.log.” Finally, the grep command searches through each matching file for occurrences of “suricata” using -H, just like in the previous example.
+
+Running this command should ensure that only log files containing entries related to Suricata will be found and displayed. Note that if you need to search for logs with specific names or formats (e.g., "log_*.txt"), you can adjust the file name pattern accordingly.
+
+Remember that finding all available log files in a Linux system may take some time due to the potential volume of data involved, especially when using recursive searches like find. Therefore, you should be patient and allow the command to run uninterrupted for proper results.
+
+Also, if your system has multiple users or groups managing log files under different locations and directories, you can adjust the search path accordingly with the find -name option. For instance:
+sudo find /home/user1/.log -type f -exec grep "suricata" {} + 
+
+In this case, you are searching within a specific user’s home directory (/). This will ensure that only log files related to that particular user are considered during the search. If your system has multiple users, you can modify the path accordingly for each user.
+
+Ultimately, using find with grep is an effective way of locating specific log files with relevant information based on your criteria. Remember to use the appropriate options and arguments for best results.
+
+First, you need a program that can be used for streaming data from one place to another and then filter what you want based on your search criteria. A common way is through using UNIX sockets, but if you are not familiar with this concept yet then I suggest reading more about them first before continuing further in this answer:
+
+### Comment:
+
+The easiest way would be to use a streaming socket for communication between processes. In Linux there's already support for it: systemd-journald.service is an example of how you can do this. You just need to make sure your program writes lines that match with what grep expects as input (or any other application).
+
+### Clarification:
+
+I think the question was more about whether or not there exists a solution where we can get live results back from grep when searching in our current process, and the answer is no. There's an API for systemd-journald to stream events and that would be one way to do what you want if you wanted it done on the fly rather than just having the results come back once they have been found completely (which means after all processes finish).
+
+### Answer:
+
+There isn't a streaming option for grep itself, but you can write your own program or use one that already exists. You can create a script using nodejs to communicate with systemd-journald and then pipe the output of this script into grep when necessary; if it finds something then it will return back through an event loop (or callback function).
+
+There is a few ways you could do this. First I would recommend looking at the [CLI](https://github.com/suricata-ids/suricata-cli) or writing your own shell script to accomplish the task. But if that's too much work for you, then there are some tools like [FishShell](https://fishshell.com/) or [zsh](http://www.zsh.org/) that can make this easier (see `zgrep` and `find`)
+
+Comment: yeah, i got the idea already. thanks!
+
+You can use a command like this to get the filename(s) that have matches within it (not for grep though):
+`find / -name "*.log" | xargs egrep "suricata"`
+
+or this to also show the number of lines found in each file:
+`find / -name "*.log" | xargs egrep "suricata" | wc -l`
+
+Or you could use a perl script to parse the output of grep.
+
+1 suricata.log
+
+
+### Explanation:
+
+find the log file for Suricata, and grep it with line buffering to get the lines that contain 'Suricata'. The output will be sorted by count of occurrences. This is a very concise way of searching through logs for patterns; it does not read entire files into memory. The '-exec' option allows you to execute a command (in this case, grep) on each matched file without reading its contents in full.
+
+You have to run the `mount` command as user `root`.
+
+### Explanation:
+The reason why you got this error message "find: ‘/run/user/1000/gvfs’: Permission denied" under root permission in terminal is because the `mount` command must be run with superuser privileges to mount a filesystem.
+
+To access and manipulate mounted filesystems, we can use commands such as `mount`, `umount`, etc., which require a superuser privilege level. Hence, running these commands as a regular user will result in an error message like "find: ‘/run/user/1000/gvfs’: Permission denied" under root permission.
+
+### Possible Solution:
+To remedy the situation, you can use `sudo` or use the `-o remount,ro` option with the `mount` command to explicitly remount a filesystem in read-only mode for all users without requiring superuser privileges. You can also use `chmod 755` on the folder to ensure that all users can mount and unmount it using regular permissions.
+
+### Note:
+It's important to remember not to abuse these options or execute commands as a superuser unless necessary, as this could lead to system security vulnerabilities or data corruption. It's best practice to use regular user privileges for everyday activities and only execute superuser commands when absolutely necessary.
+
+There are several reasons for that:
+1. It is not allowed, by design.
+2. There are files you shouldn't have access to because they might contain sensitive information.
+3. You can only use the file system under your user home folder.
+4. Using a shell as `root` does not give you any privilege to read or write in other users' directories.
+5. The root directory is called `/` by default, and it cannot be changed to another name for security reasons.
+6. By the way, using a shell as root might have security implications, so it is recommended to use another user account instead.
+7. Finally, you can always ask someone who has access permissions over other users' directories if they allow you to read/write in there.
+
+There is no such folder named /run/user/1000/.
+Please double check the location you are referring to.
+
+If this is not your issue, please reopen the issue by providing more details about your environment (e.g., operating system version and desktop environment).
+
+### Questions:
+How can I create this folder? I want to run a script on that folder in my .desktop file, it's written for /run/user/.
+
+Use `sudo mount --verbose` to list all mounted devices. You can then use `sudo fdisk -l` to view each device's partition table. If you have any NTFS partitions that are not being displayed by the Thunar file manager, they may be hidden using a setting in Windows.

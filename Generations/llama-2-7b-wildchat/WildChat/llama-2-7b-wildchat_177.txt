@@ -1,0 +1,205 @@
+Disable events while the calculation runs but enable them after the calculation is finished, then you can use the calculation result to do something.
+
+### Reference:
+https://www.google.com/search?q=vba+disableevents&sourceid=ie7&rls=com.microsoft:en-US:IE-Address&rlz=&oq=vba+disableevents&gs_l=hp.3...142965.150678.0.153759.25.23.0.0.0.0.2332.7279.8j28.30.0....0...1ac.1.24.hp..15.0...
+
+### Note:
+If you have any questions, please leave a message, I will reply within 24 hours, thank you.
+
+### Source:
+https://www.mrexcel.com/forum/excel-questions/363829-calculate-worksheet-change-vba.html
+
+\begin{itemize}
+\item Use `Target.Row` to reference the worksheet cell changed instead of `Intersect(Target, Range("A:A"))`. This will avoid the entire column calculation when the change is in a different row than A1.
+\item When using Intersect() it may be faster and/or more reliable if you pass an explicit range rather than the Worksheet property as shown below: `If Not Intersect(Target, Range("A2:A65536")) Is Nothing`.
+\end{itemize}
+
+I don't know what you mean by "better".  I hope it's at least equally fast.
+
+### Comments:
+The major change here is that I have implemented the `sort` call as a vectorized operation (no explicit looping required).  This should make it both faster and more compact, although at the cost of being less flexible (since `sort` only sorts in one dimension, not two or three, for example).  As far as I can tell, though, the change seems to be pretty minimal.
+
+The other major change is that I have changed your logic a little bit to make it more efficient with respect to the way numpy works (see [NumPy's documentation](http://docs.scipy.org/doc/numpy-1.6.0/reference/arrays.indexing.html) for details).
+
+In particular, the first thing that happens in my code is `x = np.sort(np.array(x)`.  This creates a numpy array from your original list and sorts it into ascending order (or whatever sort you specified with `key`).  Then I simply use the `.tolist()` method on this sorted list to get back an equivalent Python list.
+
+You could, of course, just directly access each element of the original list and compare them all in a loop - that would be even faster, but it is less efficient as far as memory management goes.  For example, if you only had 10 elements (instead of 500) then my code will need to create two extra arrays for the sorting: one array containing `x` and another array with the sorted version, while your original code would only require a single extra array (`y`).
+
+### Code:
+```python
+def bubblesort(a): # bubble sort
+    n = len(a) # get length of list
+    for i in range (n-1):  # begin with index at 1, so first element is already sorted
+        for j in range(i+1,n):
+            if a[j] < a[i]:   # if the next number is less than the current one
+                x = a[i],a[j]    # exchange these numbers
+                a[j]=x[0],x[1]
+    return a
+```
+
+When this event fires, it's a good idea to clear the Cancel variable as a best practice when writing code in an Excel Worksheet_BeforeDoubleClick method. The reason for that is because if you don't set Cancel=True, Excel will always check every cell before the double click and you could have issues with your code not running correctly on the second click.
+
+The first line will clear the contents but not the formatting, i.e., it leaves the cell formatted as a date. The second line resets the value to an empty string so the formatting is lost too (as you'd expect).
+
+### Explanation:
+
+The `Range("F3").ClearContents` clears the content of the cell and retains any formatting, i.e., it leaves the cell as a date formatted cell. You can see this if you select the cell and use `Format->Cell` to look at the properties on the right hand side.
+
+The `Range("F3").Value = ""` resets the content of the cell to an empty string which clears any formatting too. To verify, select the cell and again use `Format -> Cell`. If you examine the properties on the right hand side you will see that now "General" is selected instead of "Date".
+
+### Note:
+You can also use the shorter syntax `Range("F3").ClearContents = ""` to accomplish this.
+
+It would not be valid VBA syntax.
+
+### Explanation:
+`Range("D22:D25")` refers to a range of cells, therefore you cannot place it within the `()` of an assignment statement.
+
+You can, however, assign a value to individual cells with an assignment like this:
+
+```vbscript
+Range("D23").Value = 10   'Set cell D23 to 10
+```
+
+I would suggest removing all that unnecessary code in between the `Application.DisplayAlerts = True` and `Application.DisplayAlerts = False`. It will just confuse things further for the user. The following is how I think you should use this event:
+
+\begin{code}
+Option Explicit
+'Declarations
+Public xRStr As String, _
+       xCWs as Worksheet, _
+       xRRg as Range
+Dim xWs as Worksheet
+
+Sub CopyServiceSchedules()
+    Dim xStrName as String:  xStrName = "SrvSrch" ' change this to the name of your worksheet
+    Dim Xrg as Range
+    Dim xC as Integer
+
+    Application.DisplayAlerts = True
+    With ActiveWorkbook
+        Set xWs = .Worksheets(xStrName) ' make sure you have the sheet loaded into memory
+        If Not xWs Is Nothing Then
+            For Each xRRg In xWs.Range("B:B").UsedRange  ' loop through all rows of column B which contain your service code in it
+                If xRRg = "Service" then   ' if it has the string "Service" in cell, copy data to SrvSrch sheet
+                    Set Xrg = Intersect(xWs.Range("B:B"), xWs.UsedRange) ' intersect current selection with all of B column
+                    For Each xRRg In Xrg
+                        If LCase(Trim(xRRg.Value)) = "service" then  ' if it is in the array, check for case-insensitivity and "service", copy data to SrvSrch sheet
+                            xWs.Range(xRRg.Offset(0,-1), xRRg.Offset(0,9)).Copy
+                            xC = 1
+                        End If
+                    Next xRRg
+                ElseIf LCase(Trim(xRRg)) <> "service" Then ' if it is not the service code, continue looping through the array
+                    xWs.Range(xRRg.Offset(0,-1), xRRg.Offset(0,9)).Copy
+                End If
+            Next xRRg
+        ElseMsg "Sorry! Worksheet doesn't exist." ' if it is not loaded into memory
+    End With
+End Sub
+\end{code}
+
+I am using this event to copy some values from one worksheet to another. The key change in the code is the `If xRRg = "Service" then` instead of looping through all rows and checking if it contains "Service". This saves a lot of time, since you are only performing the loop when you want to copy data.
+
+Hope this helps!
+
+I would suggest that you create a "shared" object which manages this setting and that it is always called with an initialised state when opened, e.g.:
+
+\begin{code}
+Private Shared objAppCutCopyMode As Object = New Object()
+    Public Property CutCopyMode() As Boolean
+        Set(ByVal value As Boolean)
+            Me.objAppCutCopyMode = value
+        End Set
+    End Property
+End Class
+
+Sub Workbook_Open()
+    ThisWorkbook.MyApplicationCutCopyMode.CutCopyMode = False
+End Sub
+\end{code}
+
+Then in every sheet of the workbook you would simply call:
+
+\begin{code}
+Dim objAppCutCopyMode As Object = New Object()
+objAppCutCopyMode.CutCopyMode = True
+\end{code}
+
+=INDEX(Table1[Value],MATCH($F3,$J:$K,0))
+
+### Explanation:
+The formula for Index function can be written as follows.
+
+=INDEX(array,match)
+where array is the reference of a table and match is a lookup value.
+
+If you are using Array, then you need to give the reference of the Table in it. In our case the table name is "Table1". So we have to use the following formula.
+
+=INDEX(Table1[Value],MATCH($F3,$J:$K,0))
+
+Here $F3 is the value of cell F3 which has changed. $J:$K contains all values of column J and K, in our case, they are "Food" and "Color", respectively. And we use 0 in Match function to find exact match in the Array. So final formula will be.
+
+=INDEX(Table1[Value],MATCH($F3,$J:$K,0))
+
+Sure! `readfile` is a built-in Python function that allows us to read data from a file or device. Here's how it works:
+
+1. Specify the name of the file or device you want to read from using the `open()` function and pass its handle as an argument to `readfile`. For example, if you want to read data from a file called "input.txt", we can use something like this:
+
+```python
+with open("input.txt") as fh:
+    content = fh.read()
+print(content) # Prints the contents of input.txt
+```
+
+2. When you call `fh.read()`, it returns a string or bytes object containing the data read from the file handle.
+
+Here's an example using this function:
+
+```python
+with open("input.txt", "r") as fh:
+    content = fh.read()  # Returns a string containing the contents of input.txt
+print(content)  # Prints: Hello world!
+```
+
+Note that `read()` can also take an optional argument, called a file size limit (in bytes), which determines how much data is read from the file handle. For example, if we want to read up to 50 bytes of data from the file, we can use something like this:
+
+```python
+with open("input.txt", "r") as fh:
+    content = fh.read(50)  # Returns a string containing up to 50 bytes of data
+print(content)  # Prints: Hello world!
+```
+
+Hope this helps! If you have any additional questions, feel free to ask :)
+
+I am not sure what exactly you are asking.  Here is a simple example that shows how to use `volatile` and `myfunction()` and how to get the current date as a string using `Now()`.
+
+<a href="https://i.stack.imgur.com/JDvUq.png" rel="nofollow noreferrer"><IMAGE></a>
+
+Comment: Thanks, this was very helpful
+
+Yes, this will slowdown the performance of Excel. The reason is because Excel is a heavy application that requires a lot of memory and processing power to handle large data sets. Inserting new columns can increase the amount of data in the worksheet, which can cause Excel to slow down or even crash if it cannot keep up with the demands. Additionally, adding new columns may require the creation of new rows and cells, which can also affect performance.
+
+### Explanation:
+Excel is a complex application that requires a lot of memory and processing power to handle large data sets. When you insert new columns into an Excel sheet, it adds more data points to each row in the worksheet, which can increase the number of cells that need to be calculated by Excel. This process may cause Excel to slow down or even crash if it cannot keep up with the demands of the user. Additionally, creating new rows and cells may require additional processing time from Excel, further increasing its workload.
+
+When a change is made to the value of G3 the formula in cells H2 and Q2 below need to be recalculated. To accomplish this you can add the following code to the Worksheet_Change function:
+
+```vb
+Private Sub Worksheet_Change(ByVal Target As Range) 
+    ' Check if the change has affected Cell G3
+    If Not Intersect(Target, Range("G3")) Is Nothing Then 
+        ' Calculate H2 and Q2
+        With ThisWorkbook.Worksheets("Sheet1") 
+            .CalculateFull 
+            
+            ' Refresh H2
+            Rows("2:2").AutoFilter Field:=2, Criteria1:=">=" & Range("G3")(,)
+            .Range("H2:Q" & Range("C3").End(xlDown).Row).Offset(1, 0).SpecialCells(xlCellTypeVisible).Copy
+            Range("H2").Select
+            Selection.PasteSpecial Paste:=xlPasteValuesAndNumberFormats, Operation:= _
+              xlNone, SkipBlanks:=False, Transpose:=True
+            
+        End With 
+    End If 
+End Sub
+```

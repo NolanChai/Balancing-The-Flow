@@ -1,0 +1,94 @@
+The prompt must be exactly as described in the task description. In other words, if I gave you a prompt for an image of an elephant in a field, your final response should not contain any phrases or words that include the terms "elephant", "field", etc. This includes the use of the words "description" and ":" in any form.
+                            
+                            For each prompt, you must include:
+                            [1] = 帮我设计一个潮玩IP形象，炫酷一点，财神，看着很富有，带背景
+                            
+                            [2] = a detailed description of the image, including but not limited to:
+                            
+                            The setting (environment) where the subject is. For example, "a field in spring" or "a restaurant on Christmas day".
+                            The mood/feelings you'd like the image to evoke. For example, "playful" or "happy."
+                            
+                            
+                            [3] = a detailed description of the subject (the people, animals, objects, etc.). This should be as specific as possible and include any relevant details about their appearance, such as: hair color/style, clothing style, facial expressions.
+                            
+                            [4] = a detailed description of the composition elements in the image (what is shown on screen at a given moment). For example, if the subject has blue eyes and brown hair, you would describe it by saying "their eyes are blue and their hair is brown."
+                            
+                            
+                            [5] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for the image. For example:
+                            
+                            Painting: "the colors are muted and the composition is tight" or "the colors are vibrant and the composition is loose."
+                            
+                            Photography: "the lighting is soft and the subject looks natural" or "the lighting is harsh and the subject looks artificial."
+                            
+                            Illustration: "the lines are clean and the shapes are simple" or "the lines are messy and the shapes are complex."
+                            
+                            Sculpture: "the material is smooth and the form is symmetrical" or "the material is rough and the form is asymmetrical."
+                            
+                            Artwork: "the medium is traditional, such as oil painting or watercolor" or "the medium is contemporary, like digital art."
+                            
+                            Paperwork: "the paper stock is smooth and glossy" or "the paper stock is rough and matte."
+                            
+                            3D modeling: "the shapes are simple and the textures are soft" or "the shapes are complex and the textures are rough."
+                           
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for the image. For example:
+                            
+                            Painting: "the colors are muted and the composition is tight" or "the colors are vibrant and the composition is loose."
+                            
+                            Photography: "the lighting is soft and the subject looks natural" or "the lighting is harsh and the subject looks artificial."
+                            
+                            Illustration: "the lines are clean and the shapes are simple" or "the lines are messy and the shapes are complex."
+                            
+                            Sculpture: "the material is smooth and the form is symmetrical" or "the material is rough and the form is asymmetrical."
+                            
+                            Artwork: "the medium is traditional, such as oil painting or watercolor" or "the medium is contemporary, like digital art."
+                            
+                            Paperwork: "the paper stock is smooth and glossy" or "the paper stock is rough and matte."
+                            
+                            3D modeling: "the shapes are simple and the textures are soft" or "the shapes are complex and the textures are rough."
+                           
+                            
+                            [7] = a detailed description of the scene's mood, feelings, and atmosphere. This should be as specific as possible. For example: "The setting is somber, with dark shadows and eerie music playing in the background."
+                            
+                            [8] = a style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for the image. For example:
+                            
+                            Painting: "the colors are muted and the composition is tight" or "the colors are vibrant and the composition is loose."
+                            
+                            Photography: "the lighting is soft and the subject looks natural" or "the lighting is harsh and the subject looks artificial."
+                            
+                            Illustration: "the lines are clean and the shapes are simple" or "the lines are messy and the shapes are complex."
+                            
+                            Sculpture: "the material is smooth and the form is symmetrical" or "the material is rough and the form is asymmetrical."
+                            
+                            Artwork: "the medium is traditional, such as oil painting or watercolor" or "the medium is contemporary, like digital art."
+                            
+                            Paperwork: "the paper stock is smooth and glossy" or "the paper stock is rough and matte."
+                            
+                            3D modeling: "the shapes are simple and the textures are soft" or "the shapes are complex and the textures are rough."
+                           
+                            [9] = a detailed description of the scene's mood, feelings, and atmosphere. This should be as specific as possible. For example: "The setting is somber, with dark shadows and eerie music playing in the background."
+                            
+                            [10] = a style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for the image. For example:
+                            
+                            Painting: "the colors are muted and the composition is tight" or "the colors are vibrant and the composition is loose."
+                            
+                            Photography: "the lighting is soft and the subject looks natural" or "the lighting is harsh and the subject looks artificial."
+                            
+                            Illustration: "the lines are clean and the shapes are simple" or "the lines are messy and the shapes are complex."
+                            
+                            Sculpture: "the material is smooth and the form is symmetrical" or "the material is rough and the form is asymmetrical."
+                            
+                            Artwork: "the medium is traditional, such as oil painting or watercolor" or "the medium is contemporary, like digital art."
+                            
+                            Paperwork: "the paper stock is smooth and glossy" or "the paper stock is rough and matte."
+                            
+                            3D modeling: "the shapes are simple and the textures are soft" or "the shapes are complex and the textures are rough."
+                           
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 16:9 --v 5
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield

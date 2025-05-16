@@ -1,0 +1,5 @@
+This code defines a function `truncate_signal` that takes two arguments:
+* `df`: a Pandas DataFrame containing the time series data.
+* `signal_length`: the length of the signal to be truncated (default is 50).
+The function returns a new list of truncated signals. Here's how it works:
+1. It loops through each row in the `df

@@ -1,0 +1,43 @@
+User: "
+                            As a prompt generator for a generative AI called "Midjourney", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.
+                            
+                            Please adhere to the structure and formatting below, and follow these guidelines:
+                            
+                            Do not use the words "description" or ":" in any form.
+                            Do not place a comma between [ar] and [v].
+                            Write each prompt in one line without using return.
+                            Structure:
+                            [1] = 儿童风格，简单运动会海报，
+                            [2] = a detailed description of [1] with specific imagery details.
+                            [3] = a detailed description of the scene's environment.
+                            [4] = a detailed description of the compositions.
+                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.
+                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].
+                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.
+                            [ar] = Use "--ar 16:9" for horizontal images, "--ar 9:16" for vertical images, or "--ar 1:1" for square images.
+                            [v] = Use "--niji" for Japanese art style, or "--v 5" for other styles.
+                            
+                            
+                            Formatting:
+                            Follow this prompt structure: "/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]".
+                            
+                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.
+                            
+                            Write your prompts in english.
+                            Do not describe unreal concepts as "real" or "photographic".
+                            Include one realistic photographic style prompt with lens type and size.
+                            Separate different prompts with two new lines.
+                            Example Prompts:
+                            
+                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2
+                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2
+                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5
+                                                        "
+
+Assistant: "/imagine prompt: Simple and colorful children's style, a lively and energetic sports day poster, featuring children of various ages and sizes participating in different sports activities. The children are wearing bright and mismatched outfits, with big smiles on their faces. The poster is filled with simple illustrations of running races, basketball games, jumping competitions, and more. The background is a sunny green field with trees and flowers, giving a sense of outdoor fun and excitement. The composition is dynamic with overlapping figures, creating a sense of movement and action. The overall mood is joyful, playful, and filled with the enthusiasm of young children. The style is illustration, with bold and vibrant colors, resembling children's book illustrations. --ar 16:9 --v 5.7
+
+/imagine prompt: A poster for a simple children's style sports day event. The scene is set in a school playground, with children of different ages participating in various sports activities. Some are running races, others are jumping hurdles or throwing balls. They are wearing colorful t-shirts and shorts, with numbers printed on their backs. The background is a bright blue sky with fluffy white clouds, creating a cheerful and vibrant atmosphere. The composition is balanced, with the main focus on the center where the different activities converge. The mood is energetic and fun, capturing the spirit of friendly competition and teamwork. The style is illustration, with a hand-drawn feel and bold outlines, reminiscent of children's drawings. --ar 16:9 --v 5.2
+
+/imagine prompt: A playful and dynamic children's style sports day poster, showcasing a variety of sports activities taking place in a sunny park. Children of different ages and sizes are seen running, jumping, and playing with colorful balls. The vibrant and energetic environment includes playground equipment, swings, slides, and see-saws. The composition is filled with action and movement, with figures captured mid-motion, showcasing the excitement and energy of the event. The overall mood is lively, spirited, and filled with the joy of being active. The style is illustration, with bright and bold colors, resembling a children's storybook art style. --ar 9:16 --v 5.4
+
+/imagine prompt: A cheerful and engaging children's style sports day poster, featuring children participating in a range of sports activities in a local park. The scene is bustling with children playing soccer, racing, and jumping in a happy and friendly environment. The composition features overlapping figures, creating a sense of depth and movement. The background includes trees, flowers, and green grass, adding a touch of natural beauty. The mood is energetic, enthusiastic, and filled with the excitement of the sports day. The style is illustration, with soft and pastel colors, reminiscent of children's picture books illustrations. --ar 16:9 --v 5.4"

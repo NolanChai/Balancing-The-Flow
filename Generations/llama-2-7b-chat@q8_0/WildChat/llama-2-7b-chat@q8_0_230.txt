@@ -1,0 +1,2 @@
+The error message you see is due to the fact that the values in the `i18n` folder are not direct properties of the component. Instead, they are defined as indexes of the component's signature.
+In TypeScript, an index signature is a way to define a getter or setter for a property on an object. When you access the value of a property defined as an index signature, you need to use square brackets (`

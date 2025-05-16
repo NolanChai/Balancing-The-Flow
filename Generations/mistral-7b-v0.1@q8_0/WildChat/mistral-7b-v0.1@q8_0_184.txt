@@ -1,0 +1,39 @@
+Hi,
+I would like to ask a question related to the use of basemap. The documentation indicates that in order to create a map object you need to provide the longitude and latitude values (http://matplotlib.org/examples/pylab_examples/basemap_demo.html), but I am getting an error when providing such values.
+
+The error message is:
+“RuntimeWarning: divide by zero encountered in true_divide
+  self._lats, self._longs = (lat - self.llcrnrlat) / self.dlat, \
+    (lon - self.llcrnrlon) / self.dlon”
+
+In the error message, it is not clear what is the issue and where it comes from… Can anyone help me?
+
+import numpy as np
+import matplotlib.pyplot as plt
+from rasterio import open
+
+# open the dataset:
+ds = open('/Users/marc/Desktop/TROPOMI-MERIS.tif')
+print(ds)
+
+# read in a band (in this case the top of atmosphere reflectance, band 7):
+data = ds.read(7).astype('float32')
+
+# convert to cloud top height:
+height = data * 0.4 - 15 + 7
+print(height)
+
+# convert to masked array with missing values as NaN
+masked_height = np.ma.masked_where(data == 0, height)
+print(masked_height)
+
+plt.imshow(masked_height)
+
+# close the dataset:
+ds.close()
+
+I have a map that has a coordinate grid and a UTM grid overlay. I would like to add a basemap that uses the UTM grid as a reference, so that it looks like a blueprint drawing of the real world. However, since my base map is in a different projection, I’m having trouble aligning them both correctly.
+
+I’ve tried using georeference and setting the coordinate system to WGS1984 / UTM Zone 13N, but it doesn’t seem to do anything when I run the georeference command. I can see in the log file that it creates a layer for the reference projection, but there is no visible difference in the map.
+
+Is there something else I need to set? Or some other way to achieve this effect?

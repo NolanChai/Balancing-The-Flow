@@ -1,0 +1,41 @@
+The magnification factor "r" in double integrals in polar coordinates represents the ratio of the area of a small rectangle in the Cartesian (x, y) plane to the area of the corresponding small region in polar coordinates (r, θ). It is commonly used when converting between the two coordinate systems and allows for the calculation of areas or volumes of shapes defined in polar coordinates.
+
+(b) Sometimes.
+
+The Lebesgue-Stieltjes integral of a bounded continuous function f:R^2->R over a region A is defined if and only if the following limit exists:
+
+lim_(ε -> 0) |∫(f(x, y) dx dy - ∫[A](fdx))| < ε
+
+where [A] denotes the Lebesgue measure of A. 
+
+In other words, fdA is defined for a region A if and only if the limit exists as ε goes to 0 of the absolute value of the difference between the double integral of f over A and the Riemann sum of f over the rectangles that cover A.
+
+(a) The triple integral of 1 over a region is equal to the volume of the region.
+
+To set up a triple integral over the region 0 <= x <= y <= z <= 1 in the order dydzdx, the limits of integration for each variable should be chosen such that the first integration is with respect to the smallest variable (x), the second integration is with respect to the next smallest variable (y), and the third integration is with respect to the largest variable (z).
+
+In this case, we have:
+
+* x ranges from 0 to y (since z must be less than or equal to 1)
+* y ranges from 0 to z (since x must be less than or equal to y)
+* z ranges from 0 to 1 (since both x and y must be less than or equal to z)
+
+Therefore, the limits of integration should be:
+
+* x: 0 <= x <= y
+* y: 0 <= y <= z
+* z: 0 <= z <= 1
+
+So the correct answer choice is (a): . 0 <= z <= 1.
+
+The center of mass is the point at which the total mass of an object is located. In this case, we need to find the point that minimizes the distance between it and each cube face, since any deviation from that point will increase the amount of force required to hold the object in place.
+
+To do this, we can look for the midpoint of each face (the edge of a cube face is perpendicular to its opposite face) and find the weighted average of those midpoints. In this case, there are three faces: x=0.5, y=0.5, and z=0.5. The weight of each face is determined by its volume (1/2^3), so we get:
+
+A = ((1/2)*(0.5,0.5,0.5) + (1/2)*(0.5,0.5,0.5) + (1/2)*(0.5,0.5,0.5)) / 3 = (0.5,0.5,0.5)
+
+B = ((1/2)*(1,0,0) + (1/2)*(0,1,0) + (1/2)*(0,0,1)) / 3 = (0.67,0.33,0.33)
+
+C = ((1/2)*(1,0,0) + (1/2)*(0,1,0) + (1/2)*(0,0,1)) / 3 = (0.67,0.33,0.33)
+
+Comparing the distances to each face, we see that A is the only choice with a distance of zero to all faces, so it must be the correct answer. Therefore, the center of mass is at point A: (2/5,2/5,2/5).

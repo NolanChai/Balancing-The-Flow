@@ -1,0 +1,17 @@
+```javascript
+function skipTime(time) {
+    let x = new Date().setHours(); // set hours as a number (0 - 23)
+    console.log(x);                   // 9156438837803
+    x += time;                        // add ten hours to the current hour in seconds
+    if (!isNaN(x)) {                  // if a number, then ...
+        console.log(new Date().setHours(x));// set hours as a number (0 - 23)
+        let y = new Date().getSeconds(); // get the current minute in seconds
+        console.log(`${y}th second of ${x}th hour`);     // "9156447788739" -> "33rd second of 2nd hour"
+    } else {                           // if a string ...
+        console.log('No dice');          // 'No dice' -> "No dice"
+    }
+}
+skipTime(10);
+```
+
+The correct answer is Jon.

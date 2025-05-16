@@ -1,0 +1,21 @@
+Answer: In an RC circuit the time constant, tc, is given by:
+\begin{equation}
+tc = \frac{1}{2 \pi fC}
+\end{equation}
+
+Where 'f' is in Hertz (Hz) and C is in Farads.  For your capacitor (6.5 nF) the time constant is given by:
+\begin{equation}
+tc = \frac{1}{2 \pi 360 x 6.5^2}
+= \frac{\pi}{90}\;\;(s)
+\end{equation}
+
+Then, assuming a voltage of Vs = 1V (or ESR of 1kΩ), the current through the resistor is given by:
+\begin{equation}
+i_r = \frac {Vs}{R_{es}}
+\end{equation}
+Where R's is in Ohms. This will be equal to:
+\begin{equation}
+i_r = \frac {1 x 6.5 x 10^{-9}}{1 x 360}
+= \frac {1}{20} x 10^7\;(A)
+\end{equation}
+In the above I have assumed that the ESR is much greater than the resistance of the resistor (0.15Ω). If this was not the case, then you would also need to include the ESR in your calculation.

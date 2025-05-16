@@ -1,0 +1,15 @@
+[0] Installing build dependencies failed with error: Invalid requirement: 'dotenv=0.0.5' from wheel-3.2-py38h9a9c47_0 (Requirement already satisfied: distribute==1.6.1 in /usr/lib/python3.8/site-packages)
+\end{code}
+
+Comment: Your problem is a bug in [Python pip](https://github.com/pypa/pip/issues/3984). You should consider using another package manager like [Conda](http://conda.io/docs/users/install/).
+
+Answer: Your `dotenv=0.0.5` is invalid and there's a bug in pip, so you can use an alternative (like conda) to install dependencies.
+
+\begin{code}
+[ERROR] Invalid requirement: 'dotenv=0.0.5'
+Hint: = is not a valid operator. Did you mean == ?
+\end{code}
+
+I don't know Python but I think your error is with `pip install dotenv` and you need to use the correct command for your version of pip.
+
+Comment: Please do add the relevant part of the OP into your answer, in case the link ever goes down.

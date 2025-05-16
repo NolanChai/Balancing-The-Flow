@@ -1,0 +1,109 @@
+User: "ببین میخوام روی متغیر dataTable که از سمت دیتا بیس میاد توی asp.net webform ، روی یکسری از فیلد ها فرمول اجرا کنم متدش رو برام بنویس"
+
+Assistant: "با استفاده از متد DataTable.Compute می‌توانید فرمول‌های مختلف را برای فیلدهای یک جدول DataTable در ASP.NET webform به راحتی اجرا کنید. 
+
+برای مثال، فرمول مجموع ستون "Price" در DataTable به صورت زیر می‌تواند نوشته شود:
+
+```
+DataTable dataTable = /* اتصال به دیتابیس و بازیابی داده‌ها */;
+double sum = (double)dataTable.Compute("SUM(Price)", "");
+```
+
+همچنین با استفاده از متد DataTable.Select می‌توانید شرایط مختلفی را برای فیلدها اعمال کنید، به عنوان مثال:
+
+```
+DataRow[] rows = dataTable.Select("Price > 1000");
+```
+
+این کد، تمام ردیف‌هایی را که قیمت آنها بیشتر از ۱۰۰۰ است، در آرایه rows بازگرداند.
+
+با توجه به نوع فرمول و شرایط مورد نیاز، می‌توانید از این دو متد به صورت مناسب استفاده کنید."
+
+User: "یک متد برات میفرستم میخوام روی دوتا از فیلد هاش که قرار هست تو اکسل چاپ بشه ،جمع دو فیلد دیگه رو بریزم برام این کار رو کن لطفا کدش این هست :      protected void btnDownloadExcel_Click(object sender, EventArgs e)
+    {
+        //ExportDataSetToExcel(new Taghvim().Get_tarikh_AkharSal(1401), "111.xlsx");
+        //return;
+
+        var dt_Excel = new AmarForoshMarjoee().Get_rpt_AmarForosh_Marjoee (
+           Convert.ToDateTime((SAP.Utility.PersianDate.Parse(dtbAzTarikh.Text.Substring(0, 8)).ConvertToMiladi()).ToString()),
+            Convert.ToDateTime((SAP.Utility.PersianDate.Parse(dtbTaTarikh.Text.Substring(0, 8)).ConvertToMiladi()).ToString())
+        );
+
+
+    
+
+        ExportDataSetToExcel(dt_Excel,
+                               string.Format
+                               (
+
+                                 "AmarForoshMarjoee-"+(dtbAzTarikh.Text).ToString().Replace("/", "-") + "_"+ (dtbTaTarikh.Text).ToString().Replace("/", "-") + ".xlsx",
+                                 SAP.Utility.PersianDate.Parse(dtbAzTarikh.Text).ToString().Replace("/", "-"),
+                                 SAP.Utility.PersianDate.Parse(dtbAzTarikh.Text).ToString().Replace("/", "-")
+                               )
+                            );
+
+    }"
+
+Assistant: "برای جمع دو فیلد و قرار دادن نتیجه در فیلد دیگر، می‌توانید از متد Compute استفاده کنید.
+
+فرض کنید مجموع فیلدهای "field1" و "field2" را در فیلد "field3" ذخیره می‌کنید. در این صورت، کد شما به شکل زیر تغییر می‌کند:
+
+```
+var dt_Excel = new AmarForoshMarjoee().Get_rpt_AmarForosh_Marjoee(
+    Convert.ToDateTime((SAP.Utility.PersianDate.Parse(dtbAzTarikh.Text.Substring(0, 8)).ConvertToMiladi()).ToString()),
+    Convert.ToDateTime((SAP.Utility.PersianDate.Parse(dtbTaTarikh.Text.Substring(0, 8)).ConvertToMiladi()).ToString())
+);
+
+// Add a new column for the sum of field1 and field2
+dt_Excel.Columns.Add("field3", typeof(double), "field1 + field2");
+
+ExportDataSetToExcel(dt_Excel,
+    string.Format("AmarForoshMarjoee-{0}_{1}.xlsx", dtbAzTarikh.Text.Replace("/", "-"), dtbTaTarikh.Text.Replace("/", "-"))
+);
+```
+
+این کد یک ستون جدید به نام "field3" به جدول DataTable شما اضافه می‌کند و فرمول "field1 + field2" را روی آن اعمال می‌کند. سپس جدول DataTable را به متد ExportDataSetToExcel ارسال می‌کند تا برای کاربر در فایل اکسل قرار داده شود."
+
+User: "حالا میخوام مقدار یک فیلد رو با فرمول تغییر بدم، add نکم، فرمولش رو بده"
+
+Assistant: "برای تغییر مقدار یک فیلد با استفاده از فرمول، می‌توانید از متد Compute به صورت زیر استفاده کنید:
+
+```
+dt_Excel.Columns.Add("newField", typeof(decimal), "field1 * 2 + 10");
+
+foreach (DataRow row in dt_Excel.Rows)
+{
+    // Set the value of the newField column for each row
+    row["newField"] = Convert.ToDecimal(row["field1"]) * 2 + 10;
+}
+```
+
+در این مثال، یک ستون جدید به DataTable اضافه شده است که قرار است مقدار آن بر اساس فرمول "field1 * 2 + 10" تعیین شود. سپس با استفاده از یک حلقه، برای هر ردیف مقدار ستون جدید با توجه به مقدار ستون اول محاسبه و تنظیم می‌شود.
+
+در فرمول بالا، مقدار ستون اول را دو برابر می‌کنیم و به آن 10 اضافه می‌کنیم. برای استفاده از یک فرمول دیگر برای تغییر ستون مورد نظر، به جای "field1 * 2 + 10" فرمول مورد نظر خود را استفاده کنید و نام ستون مورد نظر را به جای "newField" قرار دهید."
+
+User: "تغییر نام ستون به چه صورت هست؟"
+
+Assistant: "برای تغییر نام یک ستون در DataTable، می‌توانید از خاصیت ColumnName آن استفاده کنید. برای مثال، اگر بخواهید نام ستون "field1" را به "MyField" تغییر دهید، کد زیر را اجرا کنید:
+
+```
+// Change the name of "field1" column to "MyField"
+dt_Excel.Columns["field1"].ColumnName = "MyField";
+```
+
+در این مثال، ابتدا با استفاده از خاصیت Columns، به ستون "field1" دسترسی پیدا می‌کنیم. سپس با استفاده از خاصیت ColumnName آن، نام آن را به "MyField" تغییر می‌دهیم.
+
+پس از تغییر نام ستون، می‌توانید از فرمول‌هایی که قبلاً با نام ستون قبلی تعریف کرده‌اید برای محاسبه مقدار ستون جدید استفاده کنید."
+
+User: "حالا چطوری یک column رو پاک کنم؟"
+
+Assistant: "برای حذف یک ستون از DataTable، می‌توانید از متد Remove آن استفاده کنید. برای مثال، اگر بخواهید ستون "field1" را از DataTable حذف کنید، می‌توانید کد زیر را اجرا کنید:
+
+```
+// Remove the "field1" column from the DataTable
+dt_Excel.Columns.Remove("field1");
+```
+
+در این مثال، با استفاده از متد Columns به ستون "field1" دسترسی پیدا می‌کنیم و سپس با استفاده از متد Remove آن را از DataTable حذف می‌کنیم. بعد از اجرای این کد، ستون "field1" دیگر در DataTable وجود ندارد.
+
+در صورتی که ستونی که قرار است حذف شود وجود ندارد، متد Remove هیچ عملی انجام نمی‌دهد و هیچ خطایی به وجود نخواهد آمد."

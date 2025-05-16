@@ -1,0 +1,18 @@
+B.
+
+### Explanation:
+The first condition of a randomized block design is that treatments are randomly assigned to subjects within each block. The second condition is that there must be an equal number of treatments and control groups (either equal in size or one group is larger than the other).
+
+The answer given by the Professor in class was 50%. However, I believe it is much lower (47%).
+To arrive at this answer, we can model this game as an urn with 3 red balls, 3 yellow balls and 2 blue balls. We first toss a ball from the urn into a bucket; if the color is not blue then the bucket is removed (we have already tossed out one ball). If the color is blue, we continue to do so until the color of a ball in the bucket changes back to red or yellow (it can't be blue and then immediately red again).
+We can then calculate the probability by finding the ratio of the number of times that we have tossed the die and have not gotten blue, divided by all possible outcomes.
+If this were a real game you would play many more games than there are balls in the urn (many more than 10) and the probability would be much closer to 50%, but for an exam it is sufficient to model as though you tossed the die once and found blue.
+
+```text
+  Let's use the following information to answer our question.
+  
+  1) The sample consists of 100 observations and it is a simple random sample (i.e., each value is equally likely to be selected).
+  2) The standard deviation of the data is $= \sigma = 0.5$.
+    
+    Note: The distribution of the sampling distribution of the sample mean has a mean of $\mu_s$ and a variance of $(1/n)[\text{Var}(X)-\sigma^2]=(1/100)(7-0.5)=4.83$.
+```

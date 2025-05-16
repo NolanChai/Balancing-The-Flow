@@ -1,0 +1,39 @@
+SQL is not capable of doing a look-up in the other table. Lookups are typically done using joins, and SQL Server has a number of join types that can be used for this purpose.
+
+One common way to perform a lookup in a different table is to use a self-join. This involves using a left outer join with the original table and then filtering the rows to only include those where the foreign key matches the primary key. Here's an example:
+```sql
+SELECT * FROM Table1 t1 
+LEFT OUTER JOIN Table2 t2 ON t1.ForeignKey = t2.PrimaryKey 
+WHERE t2.PrimaryKey IS NOT NULL;
+```
+This will return all rows from `Table1` and also any matching rows from `Table2`, along with a flag indicating whether or not the foreign key matches the primary key in `Table2`. You can then use this information to perform the desired look-up, such as retrieving additional data from `Table2` based on the match.
+
+Another way to perform a lookup is to use a subquery. This involves using a query that references another table and then filtering the results to only include those where the foreign key matches the primary key. Here's an example:
+```sql
+SELECT * FROM Table1 t1 
+WHERE EXISTS (SELECT 1 FROM Table2 t2 WHERE t1.ForeignKey = t2.PrimaryKey);
+```
+This will return all rows from `Table1` along with a flag indicating whether or not the foreign key matches the primary key in `Table2`. You can then use this information to perform the desired look-up, such as retrieving additional data from `Table2` based on the match.
+
+It's worth noting that both of these approaches will return all rows from `Table1`, even if there are no matching rows in `Table2`. To avoid this, you can use a subquery with an inner join instead:
+```sql
+SELECT * FROM Table1 t1 
+INNER JOIN (
+    SELECT ForeignKey, PrimaryKey 
+    FROM Table2 
+    WHERE EXISTS (SELECT 1 FROM Table1 t1 WHERE t1.ForeignKey = t2.PrimaryKey)
+) t2 ON t1.ForeignKey = t2.ForeignKey;
+```
+This will return only rows from `Table1` that have a matching row in `Table2`, and it will also avoid returning any rows where there are no matches.
+
+Sure, I can help with that!
+
+It looks like you're trying to import data from a CSV file into a Power BI report using the `ControlDimension` function. However, it appears that the data in the CSV file is not in a format that Power BI can understand. Specifically, the error message suggests that the value "0" cannot be converted to a number.
+
+To fix this issue, you'll need to either convert the data in your CSV file to a format that Power BI can understand, or modify your code so that it can work with the current data. Here are a few options:
+
+1. Convert the data manually: You can try manually converting the data in the CSV file to a format that Power BI can handle. For example, you could convert the "0" value to "False" by using an Excel formula like `=IF(A2="0", "False", A2)`. Then, you can import the modified CSV file into Power BI and it should work fine.
+2. Modify your code: If you don't want to modify the data manually, you could modify your code to handle the current data. You can do this by using a custom formula or a custom function in Power BI. For example, you could create a custom formula that checks if the value is zero and returns "False" if it is, like this: `=IF(A2="0", "False", A2)`. Then, you can use this formula in your report instead of the `ControlDimension` function.
+3. Use a different data source: If none of these options work for you, you could consider using a different data source for your Power BI report. For example, you could import the CSV file into Excel and then create a pivot table or a measure to calculate the desired value. Finally, you can use the pivot table or measure in your Power BI report instead of the `ControlDimension` function.
+
+I hope this helps! Let me know if you have any other questions.

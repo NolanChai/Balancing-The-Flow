@@ -1,0 +1,20 @@
+The given SQL query is selecting distinct objects based on multiple criteria from different tables. Here's a breakdown of the query:
+1. SELECT DISTINCT: This clause is used to select only unique rows from the result set.
+2. IT.Id as "Object Key": This column is selected as the key for the distinct objects.
+3. 'Invoice Item' as "Object Type": This column is selected as the type of object being queried (in this case, an invoice item).
+4. PRPC.RenewalDeferredCode__c as "Deferred Revenue Accounting Code": This column is selected from the RatePlanCharge table and is used to identify the deferred revenue accounting code for each object.
+5. PRPC.RenewalRevenueCode__c as "Recognized Revenue Accounting Code": This column is selected from the RatePlanCharge table and is used to identify the recognized revenue accounting code for each object.
+6. FROM InvoiceItem IT: This clause is used to join the InvoiceItem table with other tables in the query.
+7. JOIN Invoice IV ON IT.InvoiceId = IV.Id: This inner join combines the InvoiceItem table with the Invoice table based on the InvoiceId column.
+8. JOIN RatePlanCharge RPC ON RPC.Id = IT.RatePlanChargeid: This inner join combines the InvoiceItem table with the RatePlanCharge table based on the RatePlanChargeId column.
+9. JOIN Subscription Sub ON IT.subscriptionid = Sub.id: This inner join combines the InvoiceItem table with the Subscription table based on the subscriptionID column.
+10. JOIN Account Acct ON Sub.creatoraccountid = Acct.id: This inner join combines the Subscription table with the Account table based on the creatorAccountId column.
+111. JOIN ProductRatePlanCharge PRPC ON RPC.productrateplanchargeid = PRPC.id: This inner join combines the RatePlanCharge table with the ProductRatePlanCharge table based on the productRatePlanChargeId column.
+12. WHERE  IT.AccountingCode not like 'Renewal': This clause filters out invoice items that have a renewal accounting code.
+3. AND (Sub.QuoteBusinessType__QT = 'Renewal' OR Sub.QuoteType__QT = 'Renew Subscription'): This clause filters out subscriptions that are not related to renewals.
+4. AND Acct.CustomerType__c = 'CM Contractor': This clause filters out accounts that do not belong to CM contractors.
+5. AND IT.AccountingCode != PRPC.RenewalRevenueCode__c: This clause filters out invoice items that have the same renewal revenue code as the parent subscription.
+6. AND date_format(IV.PostedDate,'%m-%d-%Y') = date_format(current_date - interval '1' day, '%m-%d-%Y'): This clause filters out invoices that are not posted within the last 30 days.
+7. AND PRPC.RenewalDeferredCode__c != 'None': This clause filters out rate plans with deferred revenue accounting codes of 'None'.
+8. AND PRPC.RenewalRevenueCode__c != 'None': This clause filters out rate plans with recognized revenue accounting codes of 'None'.
+The resulting data will be a set of distinct invoice items that meet the specified criteria, along with their related subscriptions and accounts.

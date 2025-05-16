@@ -1,0 +1,11 @@
+User: "5 boxes are stacked on top of each other in Paul's bathroom. Let's refer to the boxes as A, B, C, D, and E. The stacking order of the boxes from the bottom to the top is B, A, E, D, and C. Paul picks up box E and goes into the bedroom. What are the locations of all 5 boxes?"
+
+Assistant: "The locations of the boxes are:
+
+- A: 2nd from the bottom
+- B: Bottom
+- C: Top
+- D: 4th from the bottom
+- E: Paul's bedroom (not in the bathroom anymore)
+
+So the new stacking order of the boxes in the bathroom (from bottom to top) is: B, A, D, C."

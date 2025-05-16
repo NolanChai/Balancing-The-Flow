@@ -1,0 +1,89 @@
+The question is not that easy to answer. But I will try it!
+
+## How do computers work?
+
+Let’s start with conventional computers, the ones we all know and use every day. Computers are based on a series of small switches that can be in one of two possible states: 0 or 1. These switches are called bits. They are arranged into groups of eight to form a byte.
+
+Nowadays there are computers with different numbers of bits, e.g., 32-bit computers (4 bytes) or 64-bit computers (8 bytes). The number of possible combinations in this case is:
+
+```
+2^n
+```
+
+where n is the number of bytes. For example:
+
+```
+2^4 = 16 (32-bit)
+2^5 = 32 (32-bit)
+2^6 = 64 (64-bit)
+2^7 = 128 (64-bit)
+```
+
+The more bits, the greater the number of possible combinations.
+
+A computer program is a set of instructions for the processor (the brain of the computer). These instructions are executed according to their position in the computer’s memory. In short, programs are strings of binary numbers that can be stored in the memory.
+
+When we type a word into the keyboard or use an application on our mobile phone, this is a program that is executed by the processor.
+
+## How does quantum computing work?
+
+Now let’s talk about quantum computers, which are still under development. These machines work with a completely different principle and store information in quantum states (superposition of 0 and 1) instead of conventional binary bits. They can store more than one piece of information simultaneously in the same location. The result is that it would be possible to check all possibilities at once instead of checking each possibility separately, as is the case with conventional computers.
+
+In other words: quantum computing works by exploiting the properties of quantum mechanics and using the phenomenon of superposition to store multiple values in a single qubit (quantum bit). This allows the machine to process information exponentially faster than any classical computer.
+
+The number of possible combinations is not determined by the number of bits, but rather by the so-called Hilbert space. It has infinite dimensions and therefore an infinite number of possibilities.
+
+## How does quantum computing work?
+
+Quantum computers are based on a set of qubits (quantum bits) that can be in superposition state. This means that they can exist simultaneously in 0 or 1 (or both at the same time), which is not possible with conventional bits.
+
+The number of possible combinations for q-bit quantum systems is:
+
+```
+2^q
+```
+
+This is a very interesting feature because it allows us to calculate many different things at once instead of one by one like in classical computers, where we have to do everything step by step until we find the solution. This process is called parallel computing and can be done using quantum algorithms such as Shor’s algorithm or Grover’s algorithm.
+
+In this way, quantum computers would have more possibilities than classical computers because they could solve problems exponentially faster and therefore get better results in less time!
+
+## Quantum computers vs classical computers
+
+Quantum computers work with a different principle from traditional computers. They use qubits instead of bits to store information. Qubits can be in a superposition of 0 and 1, which means they can exist simultaneously in both states (0 or 1). This is not possible with traditional bits because they can only have one value at a time (either 0 or 1).
+
+The number of possible combinations for quantum systems is:
+
+```
+2^q
+```
+
+where q is the number of qubits used in the system. For example, if we have two qubits, then there are four possible states (00, 01, 10, and 11). However, if we increase this number to three, we get eight different states: 000, 001, 010…111. This exponential growth in the number of possibilities means that quantum computers can solve problems much faster than traditional computers because they can check all possible solutions at once instead of one by one like traditional computers do.
+
+## Quantum computing: a new era
+
+The next step in computer technology is quantum computing, which promises to revolutionize our lives. In this article, we will explain what it is and how it works.
+
+Quantum computers are based on the principles of quantum physics, which deals with the behavior of matter at molecular level. They use qubits instead of bits to store information and can be in a superposition state (a mixture between 0 and 1). This means that they can exist simultaneously in both states (0 or 1), something not possible with traditional bits because they can only have one value at a time.
+
+The number of possible combinations for quantum systems is:
+
+```
+2^q
+```
+
+where q is the number of qubits used in the system. For example, if we have two qubits, then there are four possible states (00, 01, 10, and 11). However, if we increase this number to three, we get eight different states: 000, 001, 010…111. This exponential growth in the number of possibilities means that quantum computers can solve problems much faster than traditional computers because they can check all possible solutions at once instead of one by one like traditional computers do.
+
+The advantage of using quantum computers is that they allow us to explore new areas and find solutions more quickly than with traditional methods. For example:
+
+- The encryption process will be more secure because it will be impossible for hackers to break it even if they have a lot of power.
+- We can simulate complex physical processes like quantum entanglement or the behavior of particles in an atomic nucleus, which are impossible with traditional computers due to their computational complexity. This makes them useful tools for research purposes as well as for practical applications such as designing new drugs or materials with specific properties (e.g., superconductors).
+
+Quantum computing is not just about solving problems faster; it also opens up new possibilities for science and technology by allowing us to explore areas that were previously inaccessible due to their complexity or computational power requirements.
+
+## The future of quantum computing
+
+The future of quantum computing is bright. Quantum computers will be able to solve complex problems that classical computers cannot. They could also help us better understand the universe around us and make new discoveries about how it works. This is because they work differently than traditional computers do, using the laws of physics instead of math.
+
+Quantum computers are not just a tool for solving complex problems; they can be used in many different ways: from building artificial intelligence systems (AI) that learn from their environment to improving healthcare by analyzing huge amounts of data quickly and accurately. There’s no limit on what quantum computers can do!
+
+The future is bright for quantum computing, and there are many exciting possibilities ahead. We hope this article has given you some insight into how these machines work and why they could change our lives in the near future!

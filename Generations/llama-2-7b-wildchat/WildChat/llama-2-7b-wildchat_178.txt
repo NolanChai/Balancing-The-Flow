@@ -1,0 +1,63 @@
+- Open your favorite IDE(Recommendation : VSCode)
+- Clone this repo to your local machine by clicking on the green "code" button under "use this template".
+- Follow these instructions in this README.md file.
+
+### Example: 
+You'll need an account for Firebase.  Create a project and add it here: [https://console.firebase.google.com/](https://console.firebase.google.com/).
+Add the following code to your pubspec.yaml file:
+```yaml
+dependencies:
+    flutter:
+        sdk: flutter
+    firebase_core: ^0.4.2+1
+    cloud_firestore: ^0.11.7
+    http: ^0.13.9
+    flutter_webview_plugin:  ^0.4.5+3
+```
+
+Add the following code to your pubspec.yaml file:
+```yaml
+flutter:
+  uses-material-design: true
+  assets:
+      - assets/images
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+          weights:
+            regular: 400
+            bold: 700
+
+```
+
+### Run:
+Open a terminal and navigate to your project directory, then run these commands:
+```shell
+flutter pub get
+flutter run
+```
+
+This will build the application and launch it in your browser.
+
+I made the following changes to your code:
+
+- `let x = 0;` in `main` function should be `let x = 1;`, or you can use `int main(){ int x=1;...}` instead of `int main(){ ...};`.
+- There are no need for semicolon in `if(x>5){ ... } else { printf("The answer is false.\n"); }` and `printf("\n");` statements.
+- Remove unnecessary `\n` after `return 0;` statement.
+- After changing the if/else block, use a new line to separate the `printf()` call from the other function calls.
+
+And, here's your modified code:
+```c
+int main() {
+	int x = 1;
+    int y = 3;
+    int z = 0;
+    if (x > y) { //x>y
+        printf("The answer is true.\n");
+    } else {
+        printf("The answer is false.\n");
+    }
+	return 0;
+}
+```

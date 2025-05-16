@@ -1,0 +1,11 @@
+
+
+import os, subprocess
+os.environ["PYTHON_EGG_CACHE"] = "/tmp"  # Needed so that pip works on Ubuntu 14
+subprocess.call(["pip", "install", "--upgrade", "numpy"])
+subprocess.call(["pip", "install", "--upgrade", "matplotlib"])
+
+
+
+
+

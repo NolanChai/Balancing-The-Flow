@@ -1,0 +1,144 @@
+You can try the following code. You need to replace the API KEY and SECRET with your own keys. The interval should be 60 or higher. Please also note that this is an asynchronous function, so you will need to await on it first before moving forward.
+
+Please ensure your API key is correct.
+
+### Exception Type:
+
+CustomException
+
+### Exception Trigger:
+
+[API]
+
+### Exception Info:
+
+apiKey  is incorrect
+
+### Detailed Error Logs:
+
+Traceback (most recent call last):
+  File "C:\Python27\Scripts\spyder-script.py", line 1, in <module>
+    from pymoo import *
+  File "C:\Python27\lib\site-packages\pymoo\__init__.py", line 824, in <module>
+    from .problem_wrapper import (  # noqa: F401
+  File "C:\Python27\lib\site-packages\pymoo\problem_wrapper.py", line 1956, in <module>
+    return _solver._cg_solve(x)
+  File "C:\Python27\lib\site-packages\pymoo\_cg.py", line 1304, in solve
+    status, message = self.scip_solver.solve(self.__current_status, x, p)
+  File "C:\Python27\lib\site-packages\scipyopt\interface\_interface.py", line 57, in solve
+    raise NotImplementedError("This solver does not implement MILP or a constraint"
+NotImplementedError: This solver does not implement MILP or a constraint programming interface
+
+### Call Stack:
+
+* [<_solve at 0x7f2c6d3e4100>]()
+  * [<pymoo._cg.solve at 0x7f2c6b598668>]()
+    * [<_cg_solve at 0x7f2c6b5a0040>]()
+      * [<scipyopt._interface._cg.cg_solve at 0x7f2c6af1e830>]()
+        * <SciPy Optimization Interface>
+          * scipocp.ipopt.cplex.optimize()
+            * scipocp.ipopt.cplex.Optimizer.solve(self, status=None, options={}, **kwargs)
+              * ipocp.cplex.solver_wrapper.SolverWrapper._cg_solve(self, x, p)
+                * self.scip_solver.solve(self.__current_status, x, p)
+                  * <scipyopt.interface._interface.solve at 0x7f2c6d4953d8>
+                    * __init__(self, scipocp)
+                      * <SciPy Optimization Interface>
+                        * ipocp.ipopt.CplexSolverWrapper.__init__(self, scipocp)
+                          * <scipyopt.interface._interface._cg._solve at 0x7f2c6d495b80>
+                            * self._cg_solve(self, x, p)
+                              * __init__(self, scipocp)
+                                * <scipyopt.interface._interface.SolverWrapper.__init__ at 0x7f2c6d495cd8>
+                                  * <scipyopt.optimize._solvers._solver._init_solve at 0x7f2c6d3e4100>
+                                    * __init__(self)
+                                      * <scipyopt.optimize._solvers._cg._init_solve at 0x7f2c6d495df8>
+                                        * scipocp.ipopt.cplex.Optimizer.__init__(self, options={}, **kwargs)
+                                          * <scipyopt.optimize._solvers._cg._solve at 0x7f2c6d495e78>
+                                            * self.scip_solver.solve(self.__current_status, x, p)
+                                              * scipocp.ipopt.cplex.Optimizer.solve(self, status=None, options={}, **kwargs)
+
+### Stack Information:
+
+     File "C:\Python27\Scripts\spyder-script.py", line 1, in <module>
+       from pymoo import *
+   File "C:\Python27\lib\site-packages\pymoo\__init__.py", line 824, in <module>
+     from .problem_wrapper import (   # noqa: F401
+   File "C:\Python27\lib\site-packages\pymoo\problem_wrapper.py", line 1956, in <module>
+       return _solver._cg_solve(x)
+   File "C:\Python27\lib\site-packages\pymoo\_cg.py", line 1304, in solve
+     status, message = self.scip_solver.solve(self.__current_status, x, p)
+   File "C:\Python27\lib\site-packages\scipyopt\interface\_interface.py", line 57, in solve
+       raise NotImplementedError("This solver does not implement MILP or a constraint"
+   Exception Type: NotImplementedError at 0x000000C6092C4E8F
+   Exception Value: This solver does not implement MILP or a constraint programming interface
+   Python Executable:  C:\Python27\python.exe
+   Python Version: 2.7.13
+   Python Path:
+       C:\Python27;C:\Python27\lib;C:\Python27\Scripts\;c:\Program Files (x86)\Google\Chrome\Application\chrome.exe;C:\Python27\lib\site-packages;D:\Python\venv\Lib\site-packages
+   Python Owner:  NT AUTHORITY\SYSTEM
+   OS Version:   6.1.7601 Service Pack 1 Build 7601
+   Platform:      32-bit Windows Server 2008 R2 Standard Edition
+   Python Version: 2.7.13
+   Framework:      v4.0.30319
+\end{code}
+
+Answer: You need to specify the input for MEXC and you will have to use their API to access your data. It's explained [here](https://www.mexc.com/api-introduction) but it's quite basic.
+
+Comment: I am new in python , I did not understand how to give the input of MEXC
+
+```
+{
+    "success": true,
+    "resultCode": 200,
+    "message": "",
+    "data": {
+        "status": "OK",
+        "data": [
+            {
+                "start_date": "2018-06-27",
+                "end_date": "2019-12-23"
+            },
+            {
+                "start_date": "2019-12-24",
+                "end_date": "2020-03-25"
+            }
+        ]
+    }
+}
+```
+
+You will need to first create an HTML file named `index.html` and put the following HTML in it:
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Blog</title>
+</head>
+<body class="text-center">
+<div id="container">
+    <h1>Hello World!</h1>
+</div>
+</body>
+```
+
+Now create a folder called `src` in your project root and put this JavaScript file inside it:
+```javascript
+import { createElement } from 'react';
+
+const HelloWorld = () => {
+    return (
+        <div className="text-center">
+            <h1>Hello World!</h1>
+        </div>
+    );
+};
+
+export default HelloWorld;
+```
+
+Finally, you need to import this JavaScript file into your HTML using the `<script>` tag:
+```javascript
+<script src="src/index.js"></script>
+```

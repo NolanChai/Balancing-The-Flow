@@ -1,0 +1,16 @@
+@pavel-shadchnev I can’t repro this issue.
+Can you please share some screenshots of the project structure and your settings?
+And also send me the i18n file you are using
+
+Thank you!
+
+I’ll check the files.
+
+Could you try to do something like that: `console.log(this['header'])`
+It should work as well, but it should be a way to debug such issues.
+
+Hi @pavel-shadchnev , thank you for the files. I’ve managed to reproduce this issue on my side.
+
+As for me, I have the same editor error (if I use `this.header`), and everything works fine if I use `this['header']`, so in this case this should be considered as a bug, right?
+
+Yes, i will try send you another file to check, with header:’text_header’.

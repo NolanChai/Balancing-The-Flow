@@ -1,0 +1,4 @@
+-inf
+
+### Explanation:
+The value of "z" in the code is initialized to "-inf". This means that it will hold the smallest negative floating-point number. The first element of the array, "x", is 1 and the second element is 2. As we iterate through the array, each time we find an element greater than z, we assign z = that new larger value. So when we come across x[5], which is 5, it is larger than "-inf" and therefore, we set "z" equal to 5. This means that by the end of the loop, the value of "z" will be equal to the largest element in the array "x".

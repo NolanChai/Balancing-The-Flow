@@ -1,0 +1,25 @@
+```
+using System;
+namespace networktesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter IP Address to ping");
+            string ipAddress = Console.ReadLine();
+            Ping pingSender = new Ping();
+            PingReply reply = pingSender.Send(ipAddress);
+            if (reply.Status == IPStatus.Success)
+            {
+                Console.WriteLine("Ping successful!");
+                Console.WriteLine($"Round-trip time: {reply.RoundtripTime} ms");
+            }
+            else
+            {
+                Console.WriteLine("Ping failed.");
+            }
+        }
+    }
+}
+```

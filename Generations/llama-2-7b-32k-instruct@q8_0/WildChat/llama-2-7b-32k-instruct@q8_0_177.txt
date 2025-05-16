@@ -1,0 +1,161 @@
+Yes, the EnableEvents property will affect the calculation when you use it in the Worksheet_Change event. When Application.EnableEvents = False, all events are disabled and no further calculations or updates can be performed until Application.EnableEvents is set to True again. In the Worksheet_Change event, setting Application.EnableEvents = False disables event handling so that the calculation of cells in Column K can proceed without interference from user input. When you call Range("K:K").Calculate, all cells in Column K are recalculated using the formula applied to them when you clicked the cell in Row 2 or entered a value for any cell in column A and C.
+
+To make sure the calculation only affects the specific cells that have changed, you can use the Target property to reference those cells instead of selecting all cells in Column K. You can do this by changing the line of code that says:
+Range("K:K").Calculate
+
+to something like this:
+If Not Intersect(Target, Range("A:A")) Is Nothing Then
+    Application.EnableEvents = False
+    Range("G" & Target.Row & ":J" & Target.Row).Calculate
+    Application.EnableEvents = True
+End If
+
+This code will set the EnableEvents property to False and then calculate only the cells in Column G (which are identified by their row numbers) that correspond with the changed cells in A, B, or C columns. Then it sets the EnableEvents property back to True so that other events can proceed as usual.
+
+It's worth noting that disabling events can be a useful technique for handling large amounts of user input, especially when working with complex formulas and calculations that may require multiple iterations before they are completed. However, it's also important to consider the potential drawbacks and limitations of such an approach, such as the possibility of unintended consequences or errors due to disabling events and the fact that users may need to manually refresh their screens if they make changes to cells in Column G after you set EnableEvents back to True.
+
+1. Instead of using `Intersect`, you can use `Target.Offset` to reference the same row of target range in the worksheet. 
+```vb
+Private Sub Worksheet_Change(ByVal Target As Range)
+    If Not Intersect(Target, Range("A:A")) Is Nothing Then
+        Range("K").Calculate
+    End If
+End Sub
+```
+This code will only calculate the row that contains the changed value in column A.
+
+2. Another way to achieve this is by using a `Workbook_Change` event and checking if the change was made in column A before calculating the entire column K. 
+```vb
+Private Sub Workbook_Change(ByVal Target As Range)
+    If Not Intersect(Target, Range("A:A")) Is Nothing Then
+        Calculate FullRange()
+    End If
+End Sub
+```
+This code will only calculate the full range (K:K) if a change is made in column A.
+
+3. You can also use `Worksheet_Change` event and check if the cell that was changed is located in row 1, and if so, then calculate the entire column K.
+```vb
+Private Sub Worksheet_Change(ByVal Target As Range)
+    If Intersect(Target, Range("A1:A")) Is Nothing Then
+        Calculate FullRange()
+    End If
+End Sub
+```
+This code will only calculate the full range (K:K) if a change is made in row 1 of column A.
+
+I'd be happy to help! Could you please provide the details of your previous code and what you'd like it compared to? For example, what features does it have, how did it handle different user inputs, etc. This will help me better understand your question and provide a more accurate comparison.
+
+1. In the worksheet_beforeDoubleClick procedure, we've changed the Intersect statement to match your selected column range ("I16"). This way, the code only runs when a cell in that specific column is double-clicked.
+2. We've added an If statement that checks if the target value is empty. If it is, we set its value to "Yes" and then reset its value back to "" using the ElseIf statement.
+3. The Application.EnableEvents = True line ensures that events can be triggered again after the code has finished running. This is important because we want to avoid disabling all events while this code runs, as it might prevent other cells from being updated when they're double-clicked.
+4. Finally, we've added a Cancel = True line to indicate that the event should be canceled and not fired again. This way, if another cell is double-clicked after the first one, it will trigger the default behavior of the worksheet_beforeDoubleClick event rather than our custom code.
+
+Overall, this updated version should now correctly handle double-clicks in column "I16" while preventing other cells from being modified when they're double-clicked.
+
+Output: The first one is the better choice.  It uses the ClearContents method, which will clear all content from a cell.  This means that any text or formulas in the cell will be deleted and replaced with nothing.  On the other hand, the second line sets the value of the cell to an empty string ("").  While this will also clear the content of the cell, it doesn't necessarily do so in a way that is desirable.
+
+Yes, it will still work even if the range is empty. When you set D22:D25 to an empty string, Excel will automatically convert it to an array formula. An array formula returns a value based on a range of cells, and in this case, the range is empty, so it will return an empty string.
+
+Here's how you can do it:
+
+1. Select the range D22:D25 by clicking on cell D22 and dragging down to cell D25.
+2. Press Ctrl+Shift+Enter (or right-click and select "Fill Down" from the context menu). This will insert an array formula into each cell in the range.
+3. Now, if you look at cell D26, you'll see that it contains the string "" (empty string) instead of any value from cells D22:D25.
+4. If you want to convert this array formula back to a regular formula, you can select the range D22:D25 and press Ctrl+Shift+F9 (or right-click and select "Formula" from the context menu). This will remove the array syntax from the formula and return it to its original state.
+
+Alternatively, if you want to convert the array formula into a regular formula without using Ctrl+Shift+F9, you can enter this formula: =IF(ISNA(D22:D25),"",D22:D25) in cell D26 (or any other cell in the range). This formula will return an empty string if any of the cells in the range contain a value that is not numeric, and otherwise it will return the contents of the range.
+
+I hope this helps! Let me know if you have any further questions or concerns.
+
+Here's a suggestion on how you could modify the code to handle the error and keep working:
+
+1. First, add an "On Error GoTo" statement at the beginning of the subroutine that redirects execution to a label called "ErrorHandler":
+
+    On Error GoTo ErrorHandler
+
+2. In the "ErrorHandler" label, you can place some code that handles the error and keeps working. For example:
+
+    ' Handle the error
+    If Err.Number = 1004 Then
+        MsgBox "Error: " & Err.Description, , "Error"
+    End If
+
+3. Now, modify the line of code that causes the error to be triggered:
+
+    Worksheets("SrvSrch").Visible = False
+
+You can do this by adding a line of code that checks if the worksheet is visible before trying to set its visibility to false. Here's an example of how you could modify this line of code:
+
+    If Worksheets("SrvSrch").Visible Then
+        Application.DisplayAlerts = False
+        Worksheets("SrvSrch").Range("A1:K201").ClearContents
+        Worksheets("SrvSrch").Visible = True
+    End If
+
+4. Finally, add a line of code that resets the error number and description after handling the error:
+
+    Resume Next
+
+This way, if an error occurs while trying to set the visibility of the worksheet "SrvSrch", the subroutine will automatically handle it and keep working without stopping.
+
+You can reset the `Application.CutCopyMode` to True in all sheets in a workbook using a single line of VBA code:
+```
+Sub ResetAllCutCopy()
+  Application.CutCopyMode = False
+  For Each ws In Worksheets
+    ws.CutCopyMode = True
+  Next
+End Sub
+```
+This subroutine sets `Application.CutCopyMode` to False and then iterates through each worksheet in the workbook using a `For...Next` loop. For each worksheet, it sets its `CutCopyMode` property to True again.
+
+You can call this subroutine from any worksheet in the workbook to reset the cut/copy mode for all sheets at once.
+
+Alternatively, you can also set `Application.CutCopyMode` to False and then use a `For...Next` loop to set each sheet's `CutCopyMode` property individually:
+```
+Sub ResetSheetCutCopy()
+  Application.CutCopyMode = False
+  For Each ws In Worksheets
+    If ws.Name <> "Sheet1" Then
+      ws.CutCopyMode = True
+    End If
+  Next
+End Sub
+```
+This subroutine sets `Application.CutCopyMode` to False, then iterates through each worksheet in the workbook using a `For...Next` loop. For each worksheet that is not named "Sheet1", it sets its `CutCopyMode` property to True.
+
+You can call this subroutine from any sheet in the workbook to reset the cut/copy mode for all sheets except Sheet1 at once.
+
+1. Select the cell you want to change and press Shift + F3 or click on Formulas > Define .
+2. In the Define window, enter =INDEX(A:A,MATCH(F3,B:B)) in the argument box and then press Enter.
+3. This will update the INDEX formula in G3 with the new value in F3.
+4. To make the change permanent, close Excel and reopen it for the changes to take effect.
+
+Sure, I'd be happy to help! The `sum()` function is a built-in function in Python that takes multiple numbers or lists as arguments, and returns the sum of all the values passed to it.
+
+For example, consider this code:
+```
+nums =
+
+If so, you can enter this formula into cell A3: 
+=NOW()
+This will give you the current date and time based on your computer's settings. 
+
+You don't need to use a function, just type =NOW() in a cell and press Enter. The result will be a text string that shows the current date and time in your system's format.
+
+A spreadsheet is a collection of worksheets. Each worksheet contains rows and columns that contain data arranged in a tabular format, with the ability to perform calculations on the data using formulas and functions. The calculations can be performed either manually or automatically when you enter values into cells. When a change is made to the sheet, the changes are reflected across all cells that reference it.
+
+You can use the INDEX MATCH formula to return a specific value based on the value in F3. Here's an example of how you could modify your formula:
+
+=IFERROR(INDEX(Providers!D$3:D$64,MATCH(F3,Providers!C$3:C$64,0)),"")
+
+This will return the value of Providers!D$3:D$64 based on the MATCH function, which finds the first occurrence of F3 in Providers!C$3:C$64. The INDEX function returns the row number of the matching value.
+
+Alternatively, you could use a VLOOKUP formula to return the value based on the row number returned by the MATCH function. Here's an example of how you could modify your formula:
+
+=IFERROR(VLOOKUP(F3,Providers!D$3:D$64,2),"")
+
+This will return the value of Providers!D$3:D$64 in the second row based on the row number returned by the MATCH function. The VLOOKUP function returns the value in the specified column and row number.
+
+I hope this helps! Let me know if you have any questions or need further assistance.

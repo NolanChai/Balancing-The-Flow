@@ -1,0 +1,125 @@
+#### Problem 1.
+![](../fig/problem_1.png)
+
+#### Solution 1.
+
+<details markdown="1">
+<summary>Solution 1</summary>
+
+
+```text
+  (A) ∀xP(x).
+  A→B    ((∀x)(A→B))      (A→B)
+  (B)  ¬∃xP(x).                  (C)  ¬∃x(A→B).
+  C→D     (¬∃x)(A→B)         (D)   (C→D)→E.
+  E   ¬P(x)       ((∀x)(A→B))  ((¬∃x)(A→B))
+  B→E      A→((∀x)(A→B))                 (F) B→E→G.
+  G   (¬P(x))     ((∀x)(A→B)).                        (H) H→I.
+  I     P(y).         (∀x)(A→B).                      (J) J→K.
+  K    A→((∀x)(A→B)).                               (L) L→M.
+  M   P(y).          ((∀x)(A→B))                       (N) N→O.
+  O     P(z)         ((∀x)(A→B)),                      (P) P→Q.
+  Q    A→((∀x)(A→B)).                             (R) R→S.
+  S   A→((∀x)((¬∃x)B→E→G)).                        (T) T→U.
+  U    A→((∀x)((¬∃x)B→(P(y)))).                      (V) V→W.
+  W     P(z).         ((∀x)(A→B)),                     (X) X→Y.
+  Y   A→((∀x)((¬∃x)B→(P(z)))).                      (Z) Z→AA.
+  AA   B→E→G.       (B→E→G)         ((∀x)(A→B)),     (AB) AB→CD.
+  CD   ¬∃x(A→B).                                      (AC) AC→BD.
+  BD   P(y).            (P(y)).                (BC) BC→DC.
+  DC    A→((∀x)(A→B)).                              (DB) DB→ED.
+  ED    A→((∀x)((¬∃x)B→E→G)).                       (EE) EE→FF.
+  FF   P(y).             ((∀x)((¬∃x)B→E→G)).        (GG) GG→HH.
+  HH    A→((∀x)(A→B)).                               (II) II→JJ.
+  JJ   B→((∀x)(A→B))                               (KK) KK→LL.
+  LL     P(z).             ((∀x)((¬∃x)B→E→G)),       (MM) MM→NN.
+  NN    A→((∀x)((¬∃x)B→(P(z)))).                      (OO) OO→PP.
+  PP   B→((∀x)((¬∃x)B→E→G)).                        (QQ) QQ→RR.
+  RR    A→((∀x)(A→B)).                               (SS) SS→TT.
+  TT     P(y).                ((∀x)((¬∃x)B→E→G)),      (UU) UU→VV.
+  VV    B→((∀x)(A→B))            ((∀x)((¬∃x)B→E→G)). (WW) WW→XX.
+  XX     P(z).                                        (YY) YY→ZZ.
+  ZZ     A→((∀x)((¬∃x)B→E→G))                      (AA) AA→BB.
+  BB    B→E→G.               ((∀x)(A→B)),             (CC) CC→DD.
+  DD   ¬∃x(A→B).                                     (EE) EE→FF.
+  
+((∀x)(A→B))          (∀x)(A→((∀x)(A→B)))
+(∀x)(A→B→C)            (∀x)(A→(B→C))
+(∀x)(A→B→(¬∃xP(x)))  ((∀x)(A→((¬∃x)B→(¬∃xP(x))))
+(∀x)(A→(B→(P(z))))    ((∀x)(A→((∀x)((¬∃x)B→E→G))))
+(∀x)(A→((∀x)((¬∃x)B→(P(y)))))  (∀x)(A→((∀x)((¬∃x)B→(P(z)))))
+(∀x)(A→(B→(P(z))))    ((∀x)((¬∃x)B→E→G))
+(∀x)(A→((∀x)((¬∃x)B→(P(z)))))  (∀x)(A→((∀x)((¬∃x)B→(P(y))))
+(∀x)(A→(B→E→G))         ((∀x)((¬∃x)B→E→G)))
+(∀x)(A→((∀x)(A→((¬∃x)B→((¬∃x)B→(E→G)))))
+```
+
+</details>
+
+#### Solution 2.
+
+<details markdown="1">
+<summary>Solution 2</summary>
+
+
+```text
+
+  (A) ∀xP(x).
+  A→B    ((∀x)(A→B))      (A→B)
+  (B)  ¬∃xP(x).                  (C)  ¬∃x(A→B).
+  C→D     (¬∃x)(A→B)         (D)   (C→D)→E.
+  E   ¬P(y)       ((∀x)(A→B))  ((¬∃x)(A→B))
+  B→E      A→((∀x)(A→B)).                        (F) B→E→G.
+  G   (¬P(z))     ((∀x)(A→B)).                      (H) H→I.
+  I     P(y).         (∀x)(A→B).                      (J) J→K.
+  K    A→((∀x)(A→B)).                               (L) L→M.
+  M   P(z).          ((∀x)(A→B)).                       (N) N→O.
+  O     P(y).         ((∀x)(A→B)),                      (P) P→Q.
+  Q    A→((∀x)((¬∃x)B→E→G)).                        (R) R→S.
+  S   A→((∀x)((¬∃x)B→(P(y)))).                       (T) T→U.
+  U     P(z).         ((∀x)(A→B)),                      (V) V→W.
+  W    A→((∀x)((¬∃x)B→E→G)).                          (X) X→Y.
+  Y   A→((∀x)((¬∃x)B→(P(z)))).                         (Z) Z→AA.
+  AA   B→E→G.       ((A→((∀x)((¬∃x)B→(P(y))))).   (AB) AB→CD.
+  CD   ¬∃x(A→B).                                      (AC) AC→BD.
+  BD   P(z).            (P(z)).                (BC) BC→DC.
+  DC     A→((∀x)(A→B)).                               (DB) DB→ED.
+  ED    A→((∀x)((¬∃x)B→E→G)).                         (EE) EE→FF.
+  FF   P(y).             ((∀x)((¬∃x)B→E→G)),           (GG) GG→HH.
+  HH    A→((∀x)(A→B)).                               (II) II→JJ.
+  JJ    B→((∀x)(A→B))                               (KK) KK→LL.
+  LL     P(y).             ((∀x)((¬∃x)B→E→G)),         (MM) MM→NN.
+  NN      A→((∀x)(A→B)).                              (OO) OO→PP.
+  PP   B→((
+
+To prove this, we will use a tableau. Here is one:
+![](image/tableau_method_proofs/tableau.jpg)
+
+We see that the conclusion and hypothesis are true when all rows and columns are marked as valid. 
+We can show that the top row and column are valid by checking the conditions in the top line and left column respectively: 
+
+1. Line 1, Column 1 :  ∃x(P(x) ∨ Q(x))  ⇒ ∃x (∀y((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x)))    ↣  ∃y ((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))
+2. Line 1, Column 2 :  ∀x [P(x) ∨ Q(x)]  ⇒ (∀y[P(y) ∧ (y ∈ x)]) ∨ ((∀y[Q(y) ∧ (y ∈ x)])
+3. Line 2, Column 1 :  ∀x(∃y[(P(y) ∧ y ∈ x)] ∨ ∃y[(Q(y) ∧ y ∈ x)])    ↣  ∃z ((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))
+4. Line 2, Column 2 :   ∀x(P(x) ∨ Q(x))] ⇒ [(∀y[P(y) ∧ y ∈ x]) ∨ ((∀y[Q(y) ∧ y ∈ x])]  ↣  ∀y [P(y) ∧ (y ∈ x)] ∨ [Q(y) ∧ (y ∈ x)]
+5. Line 3, Column 1 :   ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∃y[(Q(y) ∧ y ∈ x))    ↣  ∃z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+6. Line 3, Column 2 :     ∃x[(∀y[P(y) ∧ y ∈ x]) ∨ (∀y[Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+7. Line 4, Column 1 :       ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∀z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+8. Line 4, Column 2 :        ∃x[(∀y[P(y) ∧ y ∈ x]) ∨  ∀y [(Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+9. Line 5, Column 1 :         ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∀z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+10. Line 5, Column 2 :         ∃x[(∀y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+11. Line 6, Column 1 :        ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∀z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+12. Line 6, Column 2 :        EXISTS x[(∀y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+13. Line 7, Column 1 :          ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∀z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+14. Line 7, Column 2 :          ∃x[(∀y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+15. Line 8, Column 1 :          ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∀z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+16. Line 8, Column 2 :          ∃x[(∀y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+17. Line 9, Column 1 :         ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∀z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+18. Line 9, Column 2 :         ∃x[(∀y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+19. Line 10, Column 1 :        ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∀z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+20. Line 10, Column 2 :        ∃x[(∀y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+21. Line 11, Column 1 :         ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∀z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+22. Line 11, Column 2 :         ∃x[(∀y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+23. Line 12, Column 1 :          ∀x[(∃y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∀z [((P(z) ∧ z ∈ x) ∨ (Q(z) ∧ z ∈ x))]
+24. Line 12, Column 2 :          ∃x[(∀y[P(y) ∧ y ∈ x]) ∨ ∀y [(Q(y) ∧ y ∈ x))    ↣  ∃y [((P(y) ∧ y ∈ x) ∨ (Q(y) ∧ y ∈ x))]
+25. Line 13, Column 1 :

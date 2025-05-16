@@ -1,0 +1,84 @@
+You are correct, using the find command with grep may not be the best approach to search for Suricata logs in all log files across the system. It is possible that this could return results from non-log file formats such as yaml or other configuration files related to Suricata.
+
+If you only want to search for “suricata” occurrences in log files, it may be more efficient to use the rsyslog command line utility instead. This tool allows you to specify specific filters and patterns to find and view logs according to your needs. You can also use a tool such as elasticsearch or Kibana to further analyze and visualize these logs.
+
+If you do not have access to rsyslog, you may want to try the command line utility named “journalctl”, which allows you to search for log entries across all systemd journal files in real time. Here is how you can perform a search:
+
+1. Open a terminal window on your Linux system and enter the following command:
+
+2. The journalctl command will output all log messages from all journal files currently being monitored by systemd. You can use filters to narrow down your search for specific entries, such as “-f /var/log/syslog” or “-p 100”.
+3. Use the “grep” command with a filter string to find matches within the output of journalctl:
+4. The grep -H (human readable) option will display the file name alongside each matching line, making it easier to identify where in the log files the relevant entries are located.
+5. To search for specific terms or patterns within log messages, you can use the “grep” command with a regular expression as your filter string:
+6. For example, if you want to find all log messages that contain the term “suricata”, you can run the following command:
+7. You can also use the journalctl command to display only entries from specific log files or units by using the “-f /var/log/syslog” option, as demonstrated above.
+8. Keep in mind that some log messages may be truncated due to their length when output through journalctl and grep. In such cases, you can use the “tail -n ” command to view only a specific number of lines at the end of each message. For example:
+9. This command will display the last 10 lines of each log entry in human-readable format. You can also use the tail command with other options, such as -f or -c, to view only new entries or the most recent few lines in a file respectively.
+By using these tools and techniques, you should be able to effectively search for specific log messages within all relevant log files across your system.
+
+Remember that it is important to review and analyze log data regularly to identify potential issues or unusual behavior on your network or system. Keep an eye out for any patterns or anomalies that may indicate a problem, and take appropriate action as needed.
+
+You can use egrep command with "-i" option (invert grep) to ignore case for search word. You could also check "--file-name" option to grep each line in file and output those lines where your search word is found.
+
+I know you can get around this using regex on your terminal but it's very hard to read and you will have to manually specify the filename. I wrote something that uses ffmpeg-convert which is much more straight forward. Take a look at https://github.com/davidtaylors/ffprobe-to-mp4-converter
+
+### Comment:
+
+this one worked for me on windows 10. thanks!
+
+There are a lot of things you could do here to clean this up, but first I'd ask why you need grep at all. The `-exec` option should be able to do whatever you want in place of `grep`. You can then use the `-print0` option if it needs to be case-sensitive.
+
+For example:
+```bash
+find / -type f -name '*.log' \
+  -exec bash -c 'for f; do [[ "$f" != /* ]] && break; printf "%s\n" "$f"; done' {} + \
+  | sort | uniq -c -w30
+```
+
+find: ‘/run/user/1000/gvfs’: Permission denied
+      1 /var/log/suricata/suricata.log
+
+the command above is quite confusing and you're not really sure what's going on with it, that's why you see the error message. You should look up what GVFS stands for - it might be some sort of GUI (graphical user interface). What I think you're trying to do here is simply create a new folder in your home directory - so instead of:
+
+```bash
+mkdir /run/user/1000/gvfs
+```
+
+you should use something like the following:
+
+```bash
+mkdir -p ~/.local/share/Trash
+```
+
+That command will create a new folder called `.local/share/Trash` in your home directory. You can then put any files you want to trash into this folder and it will get automatically moved there. If you want, you can also make the Trash folder hidden like so:
+
+```bash
+chmod 755 ~/.local/share/Trash
+```
+
+The /home folder is mounted as a separate device (like USB drive) in Linux and you can use it only after mounting the device manually. You do not have any access to other disks without mounting them first. For example, you must use commands like this to access your home folder:
+
+```bash
+# cd /media/USER_NAME/
+```
+
+or
+
+```bash
+# mkdir /home/USER_NAME; # create a new directory
+cd /home/USER_NAME/
+```
+
+I was able to find the files by using rooted thunar, the only thing I did was just navigate and double click them all and I found several files under "/run/user/" but most of them were just empty folders? The only two that had any contents were the one with "ICEauthority" in it and a folder called "config-3089".
+The 2 files are shown below:
+<table>
+<tbody><tr>
+<td class="tg-o8le"><span class="tg-yw4l">/run/user/1000/config-3089</span></td>
+<td class="tg-o8le"><span class="tg-yw4l">/run/user/1000/.ICEauthority</span></td>
+</tr>
+</tbody></table>
+<p>&nbsp;</p><p></p><p></p>
+<p><b>NOTE:</b> I am able to access the files through rooted thunar and able to make copies of them but can't move them or delete them.</p>
+<p>&nbsp;</p><p></p><p></p>
+
+"When using Linux, it is useful to know about mount points as well as the root directory.  Both of these concepts apply when you are trying to locate a particular device or location.  A mount point is not a place on your hard drive but rather just an alias that refers to the location where the device (e.g. DVD, USB Flash Drive) is actually mounted."

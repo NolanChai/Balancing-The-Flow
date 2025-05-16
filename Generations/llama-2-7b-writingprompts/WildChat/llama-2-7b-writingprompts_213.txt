@@ -1,0 +1,37 @@
+I have created a script that generates random trivia. The script takes a set of question types and the number of each type, then randomly selects the correct number of each question type until all the spots are filled. I do this in a loop because it would be too easy to get lucky with the first try. If you want something different than just the questions given here, feel free to ask me for the script so that you can customize it yourself.
+
+[Q01] A,B,C
+A = [Ford Motor Company, General Motors, Chrysler Corporation], B= [Toyota, Volkswagen, Nissan] and C = [Honda, Suzuki, Daewoo]
+
+[Q02] B,D,G,J
+B = [Ireland, France, UK] and D = [Chile, Argentina, Uruguay], G= [Israel, Turkey, Egypt] J = [Canada, Mexico, United States]
+
+[Q03] C,H,L,M
+C = [Korea, China, India] and H = [Turkey, Ukraine, Bulgaria] L = [Spain, Italy, Portugal], M= [Poland, Netherlands, Belgium]
+
+[Q04] A,B,G,J,O
+A = [Venice, Florence, Milan] and B = [Pisa, Rome, Naples] G = [North Korea, South Korea] J = [United Kingdom], O= [Russia]
+
+[Q05] C,D,H,K,O
+C = [Greece], D = [Albania,] H = [Austria, Hungary, Slovenia], K = [Moldova, Romania, Ukraine] and O = [Uzbekistan, Turkmenistan, Tajikistan]
+
+[Q06] E,F,H,I,N
+E = [Canada, US], F= [France, Belgium], H = [Spain, Portugal], I = [Mexico, Brazil], N= [Israel].
+
+[Q07] C,D,E,G,J,O
+C = [Pakistan], D= [India] E = [Sri Lanka, Bangladesh], G= [Myanmar, Thailand, Cambodia], J = [Philippines, Malaysia] and O = [Nepal]
+
+[Q08] B,C,E,H,I,N,O
+B = [Switzerland], C = [Luxembourg, France,] E= [Germany, Austria] H = [Portugal] I = [Italy] N = [United Kingdom], O = [Spain]
+
+[Q09] A,E,H,K
+A = [Australia,] E = [New Zealand,] and K = [Singapore]
+
+```
+Question #1: What is the most visited city in the world?
+Answer: Tokyo, Japan.
+Question #2: What is the second largest planet in the Solar System?
+Answer: Jupiter.
+Question #3: Who was the 5th President of The United States of America?
+Answer: James Polk (1845 - 1849).
+```

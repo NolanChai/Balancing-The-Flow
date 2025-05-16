@@ -1,0 +1,54 @@
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 5; // input size
+    
+    long binomial(int x, int y) { // recursive function to compute binomial coefficients
+        if (y == 0) return 1;
+        else if (y == 1) return 1;
+        else if (x > n) throw "Cannot compute!";
+        else return binomial(x - 1, y - 1) + binomial(x, y - 1); // recursive call to get the result for each case
+    }
+    
+    long iter_binomial(int x, int y){//iterative function to compute binomial coefficients
+        if (y == 0) return 1;
+        else if (y == 1) return 1;
+        else {
+            long sum = 1; //initializing the sum for each case
+            for (int i = x; i <= y; ++i){
+                sum += iter_binomial(x, i); //recursive call to get the result for each case
+            }
+            return sum;
+        }
+    } 
+    
+    cout << "Iterative: ";
+    for (int i = 1; i <= n + 2; ++i) {
+        cout << iter_binomial(5, i);
+        cout << "\t";
+    }
+    cout << endl;
+
+    cout << "Recursive: ";
+    for (int i = 1; i <= n + 2; ++i){
+        cout << binomial(n, i);
+        cout << "\t";
+    }
+    cout << endl;
+    
+}
+```
+
+In Task 2.1, the iteration approach used in Lab 1 has a time complexity of O(n^2), while the recursion approach used in Lab 2 has a time complexity of O(2^n). As the value of n increases, we observe that both approaches increase in execution time, although not at the same rate. The iteration approach increases more slowly than the recursive approach, as its time complexity is quadratic (O(n^2)), while the recursion approach's time complexity is exponential (O(2^n)). Thus, for large values of n, the recursive approach becomes a bottleneck and may be slower than the iterative approach. However, for smaller values of n, the recursive approach can be faster, as it avoids the need for nested loops and can potentially take advantage of memoization to reduce redundant computations.
+
+In Task 2.2, the iteration approach used in Lab 1 has a time complexity of O(n^2), while the recursion approach used in Lab 2 has a time complexity of O(2^n). As the value of n increases, we observe that the recursive approach's execution time increases dramatically, due to its exponential growth rate (O(2^n)). The iteration approach also experiences an increase in execution time as n grows, but at a slower pace than the recursion approach. Thus, for larger values of n, the iterative approach becomes more efficient than the recursive approach, as it does not require nested loops and can potentially take advantage of memoization to reduce redundant computations. However, for smaller values of n, the recursive approach may be faster due to its ability to avoid those operations altogether.
+
+Overall, these results demonstrate that while both approaches have different time complexities (O(n^2) vs O(2^n)), they can perform differently depending on their parameter values (n). In some cases, one approach may outperform the other, but in general, it is important to consider the specific problem at hand and select the appropriate method for optimization.
+
+"Sure, let's make my voice sound more human. Here are some tips for achieving this goal:
+1. Record your voice at a higher quality than you need to for the task at hand. For example, if you’re using my AI voice in an audiobook project, record at 96kbps instead of the minimum 48kbps required by Audible or Amazon ACX. This will help to preserve detail and clarity when I’m transformed into a more natural sounding version.
+2. Consider adding background noise during recording sessions to provide texture and depth in my voice output. Background noises such as wind, rain, birds chirping, traffic etc can be added using a software like Garageband or Adobe Audition. This will help to create an authentic environment for my conversations with humans!
+3. Don’t use any Auto-Tune or pitch correction effects during this process - instead focus on capturing natural pauses and vocal fluctuations in order to make me sound more human! 
+4 Finally, experiment with different microphone setups like using an external USB mic rather than relying solely upon builtin laptop/smartphone microphones which often lack high quality signal processing capabilities due to hardware limitations."

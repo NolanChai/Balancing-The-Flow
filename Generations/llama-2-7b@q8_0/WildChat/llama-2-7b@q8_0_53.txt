@@ -1,0 +1,23 @@
+```python3
+import argparse
+from pathlib import Path
+from io import open
+parser = argparse.ArgumentParser(description="Shooting Script")
+parser.add_argument("--path", required=True)
+args = parser.parse_args()
+filename = args.path
+with open(Path(filename).joinpath("shooting.txt"), encoding="utf-8") as f:
+    for line in f.readlines():
+        print(line, end="\n")
+
+This is a good example of a prompt that would benefit from a lot more context. We don't know how long she has been there, or what she was doing before. Without those details, we have no way of understanding the "previous scene" in which her predicament was established and foreshadowed.
+
+The following is a short passage from "A Writer's Home Life" by Virginia Woolf, where she describes her friendship with Vanessa Bell. In this passage she details an instance between herself and Vanessa that occurred one day during a trip together. They had been travelling for several weeks, stopping in different towns as they went. It was on this particular occasion that Vanessa shared with Virginia the feeling of "tension" that she often experienced whenever she stayed away from home too long or left her home environment behind her. Virginia then responded to Vanessa's statement by telling her more about similar instances between herself and Leonard Woolf, which were also experiences of homesickness and yearning for their respective homes.
+
+##### Virginia Woolf: A writer's home life (1936):
+
+“I’ve had a very interesting letter from Vanessa. It was the first I had had since I saw her on the boat, and it had come to my mind that I must write to her before she came back. It is addressed ‘Dear Virginia—& Leonard.’ (The dear Leaders!) And it begins with the sentence—‘I’ve often felt that if one stayed away too long from home there would be some kind of tension and something lacking in one’s life, but now I see this for certain. It is the same at Hogarth House’…”
+
+“She said: ‘Why don’t you write about it? You will never do it better than at this moment when you are away from London. The beauty of Hogarth House is your own.’ So here goes.
+
+“You have never seen Hogarth House, and it would be a waste of words to say anything about its appearance: the fact that there is such an uncompromising, straight-forward, and yet rather charming house, with all things in their places, and the windows looking into a square of grass where the swans sail round and round and round…”

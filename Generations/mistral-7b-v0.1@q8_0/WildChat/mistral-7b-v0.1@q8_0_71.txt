@@ -1,0 +1,32 @@
+
+
+#### Solution
+
+The required probability is
+$`P(n \geq 2) = 1-P(n<2)= 1-\sum_{k=0}^1P(n=k)`$
+As each face is equally likely to land faceup, so the number of tosses before blue lands faceup are independent.
+Therefore, `P(n=k)=p^kq^{4-k}` where $p=frac{2}{8}=1/4$, $q=frac{6}{8}=3/4$ and `n in {0, 1, 2, 3}`.
+
+Therefore, the required probability is
+`P(n \geq 2) = 1-P(n<2)= 1-\sum_{k=0}^1P(n=k)=1-frac{1}{4^2}`
+
+[STUDENT]The data that is given to us is a list of the number of students that take each subject at a high school. The subjects are biology, chemistry, algebra I, geometry, and English. There is 403 total students that attend this high school.[/STUDENT]
+[TEACHER]So far we have established that the data given to us consists of 5 different subjects that each student can take. We also know that there are 403 students in attendance. Now what do you think is the most useful statistic to calculate based on this information? Think about the question we were asked.[/TEACHER]
+[STUDENT]I would say the mode for each subject.[/STUDENT]
+[TEACHER]Why do you think that mode is an appropriate choice for us to use here? Why not something else, like mean or median?[/TEACHER]
+[STUDENT]Because we are given a list of the number of students who take each subject. The mode would be useful in answering our question about what the most popular subjects were at this high school.[/STUDENT]
+[TEACHER]That's right! The mode is a great choice for us to use here because it will tell us which subject was taken by the greatest number of students, and therefore, is the most popular. However, in order to find the mode we must first put this data into a table or list that is in descending order, meaning from the largest number of students taking the subject, all the way down to the smallest number of students taking the subject. Now I will do that for you here and I will call this table, "The Mode Table".
+Here is my Mode table:[/TEACHER]
+| Number of Students Taking Subject | Subject |
+| 134 | Biology |
+| 76 | Chemistry |
+| 64 | Geometry |
+| 58 | English |
+| 21 | Algebra I |
+[STUDENT]Ok, so now that we have this table, how do we find the mode for each subject?[/STUDENT]
+[TEACHER]Great question! To find the mode for each subject, all you must do is look at which column has the largest value. Then take a look at the row where that value is located to determine the subject and number of students taking it.[/TEACHER]
+[STUDENT]So I guess the modes are Biology with 134 students taking it, and English with 58 students taking it, right?[/STUDENT]
+[TEACHER]No, that's wrong. The mode is only one number for a list of data like this. So you can't say two different subjects have the highest number of students. You can either say Biology has the highest number of students or English has the highest number of students. In order to determine which is correct, we need to look at both rows and see which one comes first in descending order.[/TEACHER]
+[STUDENT]Oh, I didn't realize that. So then it would be Biology with 134 students taking it, right? Because the number for Biology is higher than English, so it comes first in the table.[/STUDENT]
+[TEACHER]Great job! You have found the mode. Now we can answer our original question: "What are the most popular subjects at this high school?" Based on the data that we were given, Biology was taken by the most number of students out of all the possible choices.[/TEACHER]
+[STUDENT]That's right! Thanks for the help![/STUDENT]

@@ -1,0 +1,4 @@
+Total electrical resistance = ( xyz / (yz + zx + xy )). This means that R(x, y, z) is equal to 100yz/((200 + 300 + 400) + (200 + 300 + 400) + (100 + 200 + 300)). Or, R = 50(100 * 200 / 500). R = 50/10. Then, dR/dt = -1/10 = - 1.
+### Explanation:
+
+When x is increasing at a rate of 2 Ω/min and y is increasing at the rate of 1 Ω/min, then z must be decreasing at the rate of (300 - 200) / (200 + 300) = 60/500 or -1. So R(x, y, z) is decreasing at a rate of -1 and so the time rate of change of the total electrical resistance at this time must also be equal to -1.

@@ -1,0 +1,50 @@
+使用torch.utils.cpp_extension的方式加载，具体代码如下：
+```python
+import torch as t, torch.nn as nn, torchvision.transforms as transforms
+from torchvision import datasets
+import torch_extensions as te
+
+# 初始化数据集
+dataset = datasets.MNIST('../data/mnist', train=True)
+trainset = dataset.trainset()
+testset = dataset.testset()
+
+# 定义训练模型
+class Network(nn.Module):
+    def __init__(self):
+        super().__init__()
+        
+    def forward(self, x):
+        return F.relu(x)
+        
+model = Network()
+# 定义权重
+optimizer = nn.SGD(params=model.parameters(), lr=0.01)
+# 定义损失函数
+criterion = nn.CrossEntropyLoss()
+# 创建预测模型
+predictor = nn.Linear()
+# 创建训练器
+trainer = te.Train(model, optimizer, criterion)
+# 开始训练，采用单批处理
+train_size = trainset.size(0) # train数据大小
+batches = int(train_size / (64 * 1)) # batch大小
+for epoch in range(5):
+    # 获取训练批次
+    indexes = np.random.choice(range(trainset.shape[0]), batches, replace=False)
+    # 预测输入和输出，以及计算loss值、损失函数和评估函数
+    inputs, targets = [], []
+    for index in indexes:
+        x, y = trainset[index]
+        inputs.append(x)
+        targets.append(y)
+    
+    # 预测输出的大小为1，因此需要求和输入值之平均值作为损失函数中的输出
+    pred = predictor(inputs)
+    loss = criterion(pred, targets)
+    
+    # 每一个epoch对应的验证批大小和整个数据集的预测值之间的差值，取为0.17429853，即使用多份
+    # 然后根据损失函数求出对应的learning rate
+    error = (train_size - sum(pred == targets)) / train_size
+    
+    trainer.one_epoch_batch([x, loss, criterion.forward_parameters(), error], xp=t.cuda())

@@ -1,0 +1,91 @@
+To create a laser-like shooting gradient towards the remaining space in between the current caret position and the max width remained towards that container or textarea right side, you can replace the `highlightedLine.textContent = '█';` block symbol with a gradient that is not visible inside the simulated textarea. You can achieve this by setting the opacity of the gradient to 0, so that it does not show up in the textarea. Then, you can use the `keydown` event on the textarea to animate the gradient towards the right side when the enter key is pressed.
+
+Here's an updated code snippet that implements this:
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        background: radial-gradient(circle at center right, rgba(15, 10, 0, 0.9), rgba(25, 1, 5, 0.9));
+        padding: 10px;
+      }
+      
+      .container {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        place-items: center;
+      }
+      
+      .textarea {
+        width: 100%;
+        height: auto;
+        max-height: 50vh;
+        font-family: 'Courier New', monospace;
+        font-size: 18px;
+        font-weight: bold;
+        color: cyan;
+        background: rgba(1, 1, 3, 0.9);
+        border: 2px inset #252555;
+        overflow: auto;
+        white-space: pre-wrap;
+        grid-row-gap: 5px;
+        margin-top: -6px;
+        margin-bottom: -6px;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+      
+      .highlight-line {
+        position: relative;
+        height: 9px;
+        background: rgba(155, 0, 0, 0.1);
+        opacity: 0;
+      }
+      
+      @keyframes shot {
+        to {
+          left: 100%;
+        }
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class='container'>
+      <div id='textarea' class='textarea' contenteditable='true'></div>
+    </div>
+    
+    <script>
+      const textarea = document.getElementById('textarea');
+      
+      function setCaretToEnd() {
+        const range = document.createRange();
+        const selection = window.getSelection();
+        range.selectNodeContents(textarea);
+        range.collapse(false);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+      
+      function handleKeyPress(event) {
+        if (event.key === 'Enter' || event.key === 'Return') {
+          event.preventDefault();
+          const selection = document.getSelection();
+          const range = selection.getRangeAt(0);
+          const currentNode = range.startContainer;
+          const lineBreak = document.createElement('span');
+          lineBreak.innerHTML = '<br>';
+          const highlightedLine = document.createElement('span');
+          highlightedLine.classList.add('highlight-line');
+          highlightedLine.style.opacity = 1;
+          highlightedLine.textContent = '█';
+          const newLine = document.createElement('span');
+          newLine.appendChild(lineBreak);
+          newLine.appendChild(highlightedLine);
+          if (currentNode.nodeType === Node.TEXT_NODE) {
+            const nextNode = currentNode.splitText(range.startOffset);
+            nextNode.parentNode.insertBefore(newLine, nextNode);
+```

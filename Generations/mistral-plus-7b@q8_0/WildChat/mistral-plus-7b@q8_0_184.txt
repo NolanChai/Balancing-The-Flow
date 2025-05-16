@@ -1,0 +1,50 @@
+Hello.
+
+I am new to Basemap. I have been using it for the past few weeks without problems. However, there was a time when I could not use Basemap normally (for example, I could not create a map), so I decided to reinstall the package. After reinstalling, the following error occurs when creating a map.
+
+```
+map = Basemap(projection='merc',llcrnrlon=lonmin,llcrnrlat=latmin,urcrnrlon=lonmax,urcrnrlat=latmax,resolution='i')
+Traceback (most recent call last):
+  File "test.py", line 58, in <module>
+    map = Basemap(projection='merc',llcrnrlon=lonmin,llcrnrlat=latmin,urcrnrlon=lonmax,urcrnrlat=latmax,resolution='i')
+  File "/usr/local/lib/python3.9/site-packages/basemap_pyproj.py", line 542, in __init__
+    self.projection = proj()
+  File "/usr/local/lib/python3.9/site-packages/proj/convention.py", line 836, in __init__
+    if len(self._args) > 1: raise TypeError('invalid arguments for projection')
+TypeError: invalid arguments for projection
+```
+
+It turns out that latitude and longitude are not working at all. I think the problem is with the Basemap itself because it worked before. However, I am having trouble figuring out where the error is coming from. What do you suggest?
+
+import numpy as np
+import pandas as pd
+import xarray as xr
+from rio_openmree import cloud_top_height as cth
+from rio_openmree.riomree import RIOMREE
+# from rio_openmree import cloud_top_height as cth
+
+# create a data array of the cloud top heights
+cth_arr = np.array([0, 25, 100])
+# convert the data array to an xarray Dataset
+cth_ds = xr.Dataset({'cloud_top_height': cth_arr})
+
+# open the MRE file containing the satellite imagery and metadata
+mree_file = r'/Users/jacobwolfe/Downloads/MRE-0436-130725-26-P92.mre'
+with RIOMREE(mree_file) as mree:
+    # access the metadata associated with the satellite imagery
+    meta = mree.meta
+
+# load the MRE file containing the satellite imagery and cloud top height data
+with xr.open_dataset(mree_file, engine='cftime') as mree_ds:
+    # plot the cloud top height data using matplotlib
+    cth_ds['cloud_top_height'].plot()
+
+I'd like to get some advice on how to put a base map under my geo-referenced images. I have two ways of doing this:
+1) Using the 'base' plugin and manually adding georeference points.
+2) Adding a raster layer as a background image.
+
+The problem with the first way is that I only get one base layer, not multiple. The problem with the second way is that my base maps have been geo-referenced so if I add them as a raster layer, they will be skewed. For example, if I create a polygon on a georeferenced map and then export it, it will not line up correctly when added to an image.
+
+Is there any way to solve this problem? I'd really like to use the base plugin but it doesn't seem practical for my needs since it only supports one layer at a time. I also want multiple georeferenced images on one page but I don't know how to accomplish this using a raster layer as a background image. Is there any way to add more than one raster layer?
+
+Thanks in advance!
