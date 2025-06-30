@@ -1098,3 +1098,4 @@ def analyze_sliding_window_results(results, output_dir=None):
         print(f"\nSaved analysis summary to {os.path.join(output_dir, 'sliding_window_analysis_summary.csv')}")
     
     return summary_rows
+
